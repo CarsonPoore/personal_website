@@ -1,0 +1,103 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="foot">
+  <div class="foot-mega-wrap">
+    <span class="foot-mega" aria-hidden="true">CARSON&nbsp;POORE</span>
+  </div>
+
+  <div class="wrap foot-grid">
+    <div class="foot-mark">
+      <span class="cp-block" aria-hidden="true">CP</span>
+      <span>Carson Poore. Indianapolis, IN.</span>
+    </div>
+
+    <div class="foot-meta">
+      <span class="mono">© {year}</span>
+      <span class="mono sep">/</span>
+      <a href="mailto:carsonpoore@gmail.com" class="ulink mono">carsonpoore@gmail.com</a>
+      <span class="mono sep">/</span>
+      <span class="mono mute">A LIVING DOCUMENT</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .foot {
+    padding: 0 0 var(--s-12);
+    background: var(--bone);
+    overflow: hidden;
+    position: relative;
+    border-top: 4px solid var(--ink);
+  }
+  .foot-mega-wrap {
+    overflow: hidden;
+    padding: var(--s-3) 0 0;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: var(--s-8);
+  }
+  .foot-mega {
+    display: block;
+    text-align: center;
+    font-family: var(--f-sans);
+    font-weight: 900;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--ink);
+    font-size: clamp(72px, 14vw, 200px);
+    letter-spacing: -0.05em;
+    line-height: 0.85;
+    white-space: nowrap;
+    transition: color .3s var(--ease), -webkit-text-stroke-color .3s var(--ease);
+  }
+  .foot:hover .foot-mega {
+    color: var(--accent);
+    -webkit-text-stroke-color: transparent;
+  }
+
+  .foot-grid {
+    display: grid;
+    gap: var(--s-4);
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+  @media (min-width: 880px) {
+    .foot-grid { grid-template-columns: auto 1fr; gap: var(--s-12); }
+  }
+  .foot-mark {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-3);
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: -0.01em;
+  }
+  .cp-block {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; height: 30px;
+    background: var(--ink);
+    color: var(--bone);
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+  .foot-meta {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-3);
+    align-items: center;
+    justify-content: flex-start;
+  }
+  @media (min-width: 880px) {
+    .foot-meta { justify-content: flex-end; }
+  }
+  .foot-meta .sep { color: var(--ink-mute); }
+  .foot-meta .mute { color: var(--ink-mute); }
+</style>

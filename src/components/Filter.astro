@@ -1,0 +1,126 @@
+---
+const fits = [
+  'You are launching something new with a real point of view.',
+  'You are willing to be in your own marketing. On camera. In your own voice.',
+  'Your team can deliver the experience we design.',
+];
+const notFits = [
+  "You want results without doing the work to clarify what you're building.",
+  'You want a vendor, not a thinking partner.',
+  "You need bookings this week. My model compounds. It doesn't spike.",
+];
+---
+
+<section class="section bg-paper" id="fit">
+  <div class="wrap">
+    <div class="path">
+      <span class="num">04</span>
+      <span class="label">FIT</span>
+      <span class="slash">/</span>
+      <span>QUALIFICATION / READ HONESTLY</span>
+    </div>
+
+    <div class="section-h" data-reveal>
+      <h2 class="h2" data-zoom>If this is you, we should talk.<br/>If it isn't, save us both the call.</h2>
+    </div>
+
+    <div class="fit-grid">
+      <div class="col col-yes" data-slide-l>
+        <header class="col-head">
+          <span class="badge yes">FIT</span>
+          <span class="mono small">Right side of the line</span>
+        </header>
+        <ul>
+          {fits.map((f, i) => (
+            <li>
+              <span class="qn mono">+0{i + 1}</span>
+              <span>{f}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="col col-no" data-slide-r>
+        <header class="col-head">
+          <span class="badge no">NOT FIT</span>
+          <span class="mono small">Will say no</span>
+        </header>
+        <ul>
+          {notFits.map((f, i) => (
+            <li>
+              <span class="qn mono">−0{i + 1}</span>
+              <span>{f}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-h .h2 br { display: none; }
+  @media (min-width: 720px) { .section-h .h2 br { display: inline; } }
+
+  .fit-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    border: 2px solid var(--ink);
+  }
+  @media (min-width: 880px) {
+    .fit-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .col {
+    padding: var(--s-12) var(--s-8);
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-8);
+    color: var(--bone);
+  }
+  .col-yes { background: var(--teal); }
+  .col-no  { background: var(--rose); border-top: 2px solid var(--ink); }
+  @media (min-width: 880px) {
+    .col-no { border-top: 0; border-left: 2px solid var(--ink); }
+  }
+
+  .col-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: var(--s-4);
+    border-bottom: 2px solid var(--bone);
+  }
+  .badge {
+    font-family: var(--f-mono);
+    font-size: 13.5px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    padding: 8px 14px;
+    background: var(--bone);
+    color: var(--teal-deep);
+  }
+  .col-no .badge { background: var(--bone); color: var(--rose-deep); }
+  .small { font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.8; }
+
+  ul { list-style: none; display: grid; gap: var(--s-6); }
+  li {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: var(--s-4);
+    align-items: start;
+    font-family: var(--f-sans);
+    font-weight: 500;
+    font-size: clamp(17px, 1.35vw, 20px);
+    line-height: 1.45;
+  }
+  .qn {
+    font-size: 13.5px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--bone);
+    padding-top: 4px;
+    opacity: 0.9;
+  }
+</style>

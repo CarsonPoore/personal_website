@@ -1,0 +1,221 @@
+---
+const today = new Date().toLocaleDateString('en-US', {
+  year: 'numeric', month: '2-digit', day: '2-digit',
+}).replace(/\//g, '.');
+---
+
+<section class="hero" id="top">
+  <div class="wrap">
+
+    <div class="path">
+      <span class="num">00</span>
+      <span class="label">CP / HOMEPAGE</span>
+      <span class="slash">/</span>
+      <span>INDIANAPOLIS</span>
+      <span class="slash">/</span>
+      <span>EXPERIENCE-LED BRAND STRATEGY</span>
+      <span class="ts">{today}</span>
+    </div>
+
+    <div class="hero-status" data-reveal>
+      <span class="status-dot"></span>
+      <span class="mono">Currently booking. Q3 2026.</span>
+    </div>
+
+    <h1 class="display hero-h">
+      <span class="line"><span>Marketing systems</span></span>
+      <span class="line"><span>that make you</span></span>
+      <span class="line"><span><span class="swatch warm" data-swatch>inevitable</span> to choose.</span></span>
+    </h1>
+
+    <div class="hero-foot">
+      <p class="hero-sub" data-reveal>
+        I'm <strong>Carson Poore</strong>. Brand strategist. I work
+        upstream of your channels: founder conviction, sharp offer,
+        customer experience. I build the moments your customers can't
+        help repeating. <em>Excellence becomes the marketing.</em>
+      </p>
+      <div class="hero-actions" data-reveal>
+        <a href="#contact" class="btn">Book a discovery call <span class="arr">→</span></a>
+        <a href="#method" class="ulink mono small up">See the method ↓</a>
+      </div>
+    </div>
+
+    <div class="hero-corner mono" aria-hidden="true">
+      <span class="dot">●</span>
+      <span>SCROLL ↓</span>
+    </div>
+
+  </div>
+
+  <div class="hero-ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>GTM STRATEGY</span><span class="sep">▮</span>
+      <span>PRODUCT POSITIONING</span><span class="sep">▮</span>
+      <span>CUSTOMER EXPERIENCE DESIGN</span><span class="sep">▮</span>
+      <span>MARKETING AUTOMATION</span><span class="sep">▮</span>
+      <span>CAMPAIGN MANAGEMENT</span><span class="sep">▮</span>
+      <span>GTM STRATEGY</span><span class="sep">▮</span>
+      <span>PRODUCT POSITIONING</span><span class="sep">▮</span>
+      <span>CUSTOMER EXPERIENCE DESIGN</span><span class="sep">▮</span>
+      <span>MARKETING AUTOMATION</span><span class="sep">▮</span>
+      <span>CAMPAIGN MANAGEMENT</span><span class="sep">▮</span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    background: var(--bone);
+    color: var(--ink);
+    padding-top: 96px;
+    padding-bottom: 0;
+    border-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100vh;
+  }
+  .hero .wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: var(--s-16);
+    position: relative;
+  }
+  .hero .path { margin-bottom: var(--s-16); }
+
+  .hero-status {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-3);
+    padding: 12px 18px;
+    background: var(--bone);
+    border: 2px solid var(--ink);
+    width: max-content;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: var(--s-12);
+  }
+  .status-dot {
+    width: 10px; height: 10px;
+    background: var(--accent);
+    box-shadow: 0 0 0 0 color-mix(in oklab, var(--accent) 70%, transparent);
+    animation: pulse 1.6s ease-out infinite;
+  }
+  @keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 color-mix(in oklab, var(--accent) 70%, transparent); }
+    80%  { box-shadow: 0 0 0 14px transparent; }
+    100% { box-shadow: 0 0 0 0 transparent; }
+  }
+
+  .hero-h {
+    text-transform: none;
+    margin-bottom: var(--s-12);
+    max-width: 18ch;
+  }
+  .hero-h .line {
+    display: block;
+    overflow: hidden;
+    padding-bottom: 0.04em;
+  }
+  .hero-h .line > span {
+    display: inline-block;
+    transform: translateY(110%);
+    will-change: transform;
+  }
+  .hero-h.is-in .line > span {
+    transform: translateY(0);
+    transition: transform 1s var(--ease);
+  }
+  .hero-h.is-in .line:nth-child(1) > span { transition-delay: 0.05s; }
+  .hero-h.is-in .line:nth-child(2) > span { transition-delay: 0.16s; }
+  .hero-h.is-in .line:nth-child(3) > span { transition-delay: 0.27s; }
+
+  .hero-foot {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--s-8);
+    align-items: end;
+  }
+  @media (min-width: 980px) {
+    .hero-foot { grid-template-columns: 1.4fr auto; gap: var(--s-12); }
+  }
+  .hero-sub {
+    font-size: clamp(18px, 1.4vw, 22px);
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: 60ch;
+  }
+  .hero-sub strong { color: var(--ink); font-weight: 700; }
+  .hero-sub em { font-style: italic; color: var(--warm); font-weight: 600; }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--s-6);
+    flex-wrap: wrap;
+  }
+  .hero-actions .small { font-size: 13px; color: var(--ink-mute); letter-spacing: 0.14em; }
+
+  .hero-corner {
+    position: absolute;
+    right: 0; top: 0;
+    transform: translateY(50%) rotate(90deg);
+    transform-origin: right top;
+    display: flex;
+    align-items: center;
+    gap: var(--s-3);
+    font-size: 12.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    pointer-events: none;
+  }
+  .hero-corner .dot { color: var(--accent); animation: blink 1.4s ease-in-out infinite; }
+  @keyframes blink { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+  @media (max-width: 1080px) { .hero-corner { display: none; } }
+
+  .hero-ticker {
+    overflow: hidden;
+    width: 100%;
+    padding: 18px 0;
+    background: var(--ink);
+    color: var(--bone);
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+  }
+  .ticker-track {
+    display: inline-flex;
+    gap: 32px;
+    align-items: center;
+    white-space: nowrap;
+    font-family: var(--f-mono);
+    font-size: 13.5px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    animation: ticker 38s linear infinite;
+  }
+  .ticker-track .sep { color: var(--accent); }
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ticker-track { animation: none; }
+    .status-dot, .hero-corner .dot { animation: none; }
+    .hero-h .line > span { transform: none !important; }
+  }
+</style>
+
+<script>
+  requestAnimationFrame(() => {
+    document.querySelector('.hero-h')?.classList.add('is-in');
+    document.querySelectorAll('[data-swatch]').forEach((el) => {
+      window.setTimeout(() => el.classList.add('is-in'), 600);
+    });
+  });
+</script>

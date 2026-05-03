@@ -1,0 +1,138 @@
+---
+const links = [
+  { href: '#method',    label: 'Method' },
+  { href: '#worldview', label: 'Worldview' },
+  { href: '#fit',       label: 'Fit' },
+  { href: '#contact',   label: 'Contact' },
+];
+---
+
+<header class="nav" id="site-nav">
+  <a href="#top" class="nav-mark" aria-label="Carson Poore, home">
+    <span class="cp-block" aria-hidden="true">CP</span>
+    <span class="nav-name">Carson Poore</span>
+    <span class="nav-tag mono">Marketing Consultant</span>
+  </a>
+
+  <nav class="nav-links" aria-label="Primary">
+    {links.map((l, i) => (
+      <a href={l.href}>
+        <span class="nav-num">{String(i + 1).padStart(2, '0')}</span>
+        <span class="nav-label">{l.label}</span>
+      </a>
+    ))}
+  </nav>
+
+  <a href="#contact" class="nav-cta">
+    <span class="nav-cta-text">Book a call</span>
+    <span class="arr">→</span>
+  </a>
+</header>
+
+<style>
+  .nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 50;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: stretch;
+    background: var(--bone);
+    border-bottom: 2px solid var(--ink);
+    transition: background .2s var(--ease);
+  }
+
+  .nav-mark {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-3);
+    color: var(--ink);
+    justify-self: start;
+    padding: var(--s-3) var(--gutter);
+    border-right: 2px solid var(--ink);
+    transition: background .15s var(--ease);
+  }
+  .nav-mark:hover { background: var(--ink); color: var(--bone); }
+  .nav-mark:hover .cp-block { background: var(--bone); color: var(--ink); }
+  .cp-block {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; height: 30px;
+    background: var(--ink);
+    color: var(--bone);
+    font-family: var(--f-sans);
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    transition: background .15s var(--ease), color .15s var(--ease);
+  }
+  .nav-name {
+    font-family: var(--f-sans);
+    font-weight: 800;
+    letter-spacing: -0.018em;
+    font-size: 17px;
+  }
+  .nav-tag {
+    font-size: 10.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    border-left: 1px solid var(--ink);
+    padding-left: var(--s-3);
+    margin-left: var(--s-2);
+  }
+
+  .nav-links {
+    display: flex;
+    justify-self: center;
+    align-items: stretch;
+  }
+  .nav-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-2);
+    padding: 0 var(--s-4);
+    font-family: var(--f-mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink);
+    border-right: 1px solid var(--ink);
+    transition: background .15s var(--ease), color .15s var(--ease);
+  }
+  .nav-links a:first-child { border-left: 1px solid var(--ink); }
+  .nav-links a:hover { background: var(--accent); color: var(--bone); }
+  .nav-num { color: var(--ink-mute); transition: color .15s var(--ease); }
+  .nav-links a:hover .nav-num { color: var(--bone); }
+
+  .nav-cta {
+    justify-self: end;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-2);
+    padding: var(--s-3) var(--gutter);
+    font-family: var(--f-mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--bone);
+    background: var(--ink);
+    border-left: 2px solid var(--ink);
+    transition: background .15s var(--ease);
+  }
+  .nav-cta:hover { background: var(--warm); }
+  .nav-cta .arr { transition: transform .2s var(--ease); }
+  .nav-cta:hover .arr { transform: translateX(4px); }
+
+  @media (max-width: 960px) {
+    .nav-tag { display: none; }
+  }
+  @media (max-width: 760px) {
+    .nav { grid-template-columns: auto 1fr auto; }
+    .nav-links { display: none; }
+    .nav-cta-text { display: none; }
+  }
+</style>

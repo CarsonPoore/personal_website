@@ -1,0 +1,125 @@
+---
+const filterQs = [
+  'Are you launching something new, or trying to fix what already exists?',
+  'Are you willing to be in your own marketing? On camera. In your own voice.',
+  'If we design an experience your team has to deliver, can you operationalize it?',
+  "What's your honest tolerance for a slow-arc system that compounds vs. a quick spike?",
+  'Are you looking for a vendor, or a thinking partner?',
+];
+---
+
+<section class="section bg-ink" id="contact">
+  <div class="wrap">
+    <div class="path">
+      <span class="num">07</span>
+      <span class="label">CONTACT</span>
+      <span class="slash">/</span>
+      <span>BOOK A DISCOVERY CALL</span>
+    </div>
+
+    <div class="pitch-block" data-zoom>
+      <p class="pitch">
+        I diagnose your business and build the marketing system
+        that makes you <span class="swatch warm">inevitable to choose</span>.
+      </p>
+
+      <div class="actions">
+        <a href="mailto:carsonpoore@gmail.com?subject=Discovery%20call%3A%20Carson%20Poore" class="btn warm">
+          Email me <span class="arr">→</span>
+        </a>
+        <a href="mailto:carsonpoore@gmail.com" class="ulink mono small up">carsonpoore@gmail.com</a>
+      </div>
+    </div>
+
+    <div class="filter">
+      <header class="filter-head" data-reveal>
+        <span class="mono small up">Before you book. Sit with these.</span>
+        <span class="mono small up mute">We will talk through them on the call</span>
+      </header>
+      <ol class="filter-list" data-slide-stagger>
+        {filterQs.map((q, i) => (
+          <li class="fq">
+            <span class="qn mono">Q{String(i + 1).padStart(2, '0')}</span>
+            <span class="qt">{q}</span>
+            <span class="qa" aria-hidden="true">→</span>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </div>
+</section>
+
+<style>
+  .pitch-block {
+    display: grid;
+    gap: var(--s-12);
+    padding-bottom: var(--s-16);
+    margin-bottom: var(--s-16);
+    border-bottom: 2px solid var(--bone);
+  }
+  .pitch {
+    font-family: var(--f-sans);
+    font-weight: 800;
+    font-size: clamp(40px, 5.6vw, 92px);
+    line-height: 0.98;
+    letter-spacing: -0.035em;
+    color: var(--bone);
+    max-width: 24ch;
+  }
+  .pitch .swatch.warm { font-style: italic; background: var(--warm); color: var(--bone); }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: var(--s-6);
+    flex-wrap: wrap;
+  }
+  .actions .ulink { color: rgba(251, 250, 246, 0.85); }
+  .actions .small { font-size: 13px; }
+
+  .filter-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--s-4) 0;
+    border-top: 1px solid rgba(251, 250, 246, 0.32);
+    border-bottom: 1px solid rgba(251, 250, 246, 0.32);
+    flex-wrap: wrap;
+    gap: var(--s-2);
+  }
+  .filter-head .small { color: var(--bone); font-size: 13px; }
+  .filter-head .small.mute { color: rgba(251, 250, 246, 0.6); }
+
+  .filter-list { list-style: none; }
+  .fq {
+    display: grid;
+    grid-template-columns: 100px 1fr 60px;
+    gap: var(--s-4);
+    align-items: center;
+    padding: var(--s-8) 0;
+    border-bottom: 1px solid rgba(251, 250, 246, 0.18);
+    font-family: var(--f-sans);
+    font-weight: 600;
+    font-size: clamp(18px, 1.5vw, 24px);
+    line-height: 1.4;
+    color: rgba(251, 250, 246, 0.86);
+    transition: color .15s var(--ease), padding .15s var(--ease), background .15s var(--ease);
+    cursor: default;
+  }
+  .fq:hover { color: var(--bone); padding-left: var(--s-4); background: rgba(251, 250, 246, 0.05); }
+  .fq:hover .qa { transform: translateX(8px); color: var(--accent); }
+
+  .qn {
+    font-size: 13.5px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+    padding-top: 2px;
+  }
+  .qa {
+    text-align: right;
+    color: rgba(251, 250, 246, 0.45);
+    font-size: 22px;
+    transition: transform .2s var(--ease), color .15s var(--ease);
+  }
+</style>

@@ -1,0 +1,98 @@
+---
+const values = [
+  { tone: 'teal', head: 'Honesty',            body: "I refuse to promise outcomes I can't directly control." },
+  { tone: 'rose', head: 'Stewardship',        body: 'I build compounding systems instead of rented attention.' },
+  { tone: 'rose', head: 'Long-term thinking', body: 'I optimize for repeat purchase, not first conversion.' },
+  { tone: 'teal', head: 'Care for the human', body: 'Humans sit at the center of every marketing decision.' },
+];
+---
+
+<section class="section bg-bone" id="about">
+  <div class="wrap">
+    <div class="path">
+      <span class="num">06</span>
+      <span class="label">ABOUT</span>
+      <span class="slash">/</span>
+      <span>WHAT'S UNDERNEATH THE WORK</span>
+    </div>
+
+    <div class="section-h split" data-reveal>
+      <h2 class="h2" data-zoom>Carson Poore.<br/>Indianapolis.</h2>
+      <div class="head-side">
+        <p class="lead">
+          Brand strategist. I work with founders launching something with
+          real conviction. I think <em>with</em> founders. Not at them.
+          Conviction has to be surfaced. It can't be lectured into existence.
+        </p>
+      </div>
+    </div>
+
+    <p class="lead about-lead" data-reveal>
+      My faith shapes the work through values. Not as a niche. Not as a label.
+      Honesty, stewardship, long-term thinking, care for the human. These
+      aren't philosophical extras. They produce the entire approach.
+    </p>
+
+    <div class="values" data-reveal-stagger>
+      {values.map((v, i) => (
+        <article class={`value value-${v.tone}`} data-zoom>
+          <header>
+            <span class="vn mono">V{String(i + 1).padStart(2, '0')}</span>
+            <h3 class="h3">{v.head}</h3>
+          </header>
+          <p>{v.body}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-h .h2 br { display: none; }
+  @media (min-width: 600px) { .section-h .h2 br { display: inline; } }
+  .head-side .lead em { font-style: italic; font-weight: 700; color: var(--warm); }
+  .head-side .lead { max-width: 50ch; }
+
+  .about-lead {
+    margin: var(--s-12) 0 var(--s-16);
+    max-width: 78ch;
+  }
+
+  .values {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    border-top: 2px solid var(--ink);
+    border-left: 2px solid var(--ink);
+    max-width: 920px;
+    margin: 0 auto;
+  }
+  @media (min-width: 600px) {
+    .values { grid-template-columns: 1fr 1fr; }
+  }
+  .value {
+    padding: var(--s-12) var(--s-8);
+    border-right: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    display: grid;
+    gap: var(--s-4);
+    color: var(--bone);
+    min-height: 240px;
+  }
+  .value-teal { background: var(--teal); }
+  .value-rose { background: var(--rose); }
+
+  .value header {
+    display: flex;
+    align-items: baseline;
+    gap: var(--s-3);
+    color: var(--bone);
+  }
+  .vn {
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    color: rgba(251, 250, 246, 0.7);
+  }
+  .value h3 { color: var(--bone); }
+  .value p { font-size: 17px; line-height: 1.55; opacity: 0.92; max-width: 36ch; }
+</style>
