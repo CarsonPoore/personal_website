@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Investment — Carson Poore Consulting</title>
+<meta name="description" content="Two ways to work together: The Foundation strategy engagement and The Partnership ongoing execution. Honest, written-out figures." />
+<meta property="og:title" content="Investment — Carson Poore Consulting" />
+<meta property="og:description" content="Two ways to work together. Honest pricing, no surprises." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  /* Phase / deliverable list for Foundation */
+  .phase-list { display: flex; flex-direction: column; gap: 32px; }
+  .phase__label {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-style: italic;
+    font-size: 1.15rem;
+    letter-spacing: -0.008em;
+    color: var(--text);
+    margin: 0 0 18px 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line-soft);
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+  }
+  .phase__num {
+    font-family: var(--sans);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: oklch(0.97 0.024 32);
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+  .deliv-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  .deliv-list li {
+    display: grid;
+    grid-template-columns: 38px 1fr;
+    gap: 14px;
+    align-items: start;
+  }
+  .deliv__num {
+    font-family: var(--serif);
+    font-weight: 800;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--slate);
+    letter-spacing: -0.008em;
+    line-height: 1.3;
+  }
+  .deliv__name {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 1.08rem;
+    letter-spacing: -0.008em;
+    color: var(--text);
+    line-height: 1.25;
+    margin: 0 0 6px 0;
+  }
+  .deliv__body {
+    color: var(--text-2);
+    font-size: 0.98rem;
+    line-height: 1.55;
+    margin: 0;
+  }
+  .deliv__format {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    margin: 8px 0 0 0;
+    font-style: italic;
+  }
+
+  /* Chip variant for "choose your modules" and "add a project" — 2-column grid */
+  .inv-list--chips {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  @media (max-width: 540px) { .inv-list--chips { grid-template-columns: 1fr; } }
+  .inv-list--chips li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    background: oklch(0.98 0.008 220);
+    border: 1px solid var(--line-soft);
+    border-radius: 12px;
+    color: var(--text);
+    font-size: 0.96rem;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+  .inv-list--chips li::before {
+    content: "+";
+    color: var(--accent);
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 800;
+    width: 14px; height: auto;
+    background: none;
+    border-radius: 0;
+    margin: 0;
+    flex-shrink: 0;
+    font-size: 1.1rem;
+    line-height: 1;
+  }
+
+  /* Building-your-investment callout */
+  .inv-card__build {
+    background: oklch(0.97 0.024 32);
+    border: 1px solid oklch(0.88 0.04 32);
+    border-radius: 14px;
+    padding: 18px 22px;
+    color: var(--text);
+    font-size: 1.02rem;
+    line-height: 1.55;
+  }
+  .inv-card__build strong {
+    color: var(--accent-strong);
+    font-weight: 700;
+  }
+
+  /* Investment-specific */
+  .inv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(20px, 3vw, 36px);
+    align-items: stretch;
+  }
+  @media (max-width: 900px) { .inv-grid { grid-template-columns: 1fr; } }
+
+  .inv-card {
+    position: relative;
+    background: var(--bg);
+    border: 1px solid var(--line-soft);
+    border-radius: clamp(20px, 2.4vw, 28px);
+    padding: clamp(32px, 4vw, 56px);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(28px, 3vw, 40px);
+    transition: transform .6s var(--ease-out), box-shadow .5s var(--ease-out), border-color .4s var(--ease);
+  }
+  .inv-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-2); }
+
+  .inv-card--featured {
+    background:
+      linear-gradient(180deg, oklch(0.97 0.022 32 / 0.5), transparent 40%),
+      var(--bg);
+    border-color: var(--accent);
+    box-shadow:
+      0 1px 2px oklch(0.55 0.06 32 / 0.06),
+      0 14px 50px oklch(0.55 0.06 32 / 0.12);
+  }
+
+  .inv-card__label {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .inv-card--featured .inv-card__label { color: var(--accent); }
+  .inv-card__label::before {
+    content: "";
+    width: 22px; height: 1px;
+    background: currentColor;
+  }
+
+  .inv-card__name {
+    font-family: var(--serif);
+    font-weight: 800;
+    font-size: clamp(2.2rem, 1.6rem + 1.8vw, 3.4rem);
+    letter-spacing: -0.022em;
+    line-height: 0.98;
+    color: var(--text);
+    margin: 0;
+  }
+
+  .inv-card__price {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: clamp(1.15rem, 0.95rem + 0.6vw, 1.45rem);
+    color: var(--text);
+    letter-spacing: -0.008em;
+    line-height: 1.3;
+  }
+  .inv-card__price strong {
+    color: var(--accent);
+    font-weight: 800;
+    margin-right: 4px;
+  }
+  .inv-card--featured .inv-card__price strong { color: var(--accent-strong); }
+
+  .inv-card__desc {
+    color: var(--text-2);
+    font-size: clamp(1.0rem, 0.94rem + 0.3vw, 1.12rem);
+    line-height: 1.6;
+    max-width: 50ch;
+  }
+
+  .inv-list-title {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--text);
+    margin: 0 0 24px 0;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .inv-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .inv-list li {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    color: var(--text-2);
+    font-size: 1.06rem;
+    line-height: 1.6;
+  }
+  .inv-list li::before {
+    content: "";
+    width: 7px; height: 7px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-top: 10px;
+  }
+
+  .inv-card__terms {
+    font-style: italic;
+    font-family: var(--serif);
+    font-weight: 500;
+    color: var(--text-2);
+    font-size: 1.02rem;
+    line-height: 1.55;
+    padding: 16px 18px;
+    background: oklch(0.97 0.016 220);
+    border-radius: 12px;
+    border-left: 2px solid var(--slate);
+  }
+  .inv-card--featured .inv-card__terms {
+    background: oklch(0.97 0.020 32);
+    border-left-color: var(--accent);
+  }
+
+  .inv-card__closing {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: clamp(1.05rem, 0.98rem + 0.3vw, 1.18rem);
+    color: var(--text);
+    letter-spacing: -0.008em;
+    line-height: 1.35;
+    padding-top: 12px;
+    border-top: 1px solid var(--line-soft);
+    margin-top: auto;
+  }
+
+  .inv-bridge {
+    margin-top: clamp(28px, 4vw, 48px);
+    padding: clamp(22px, 2.5vw, 32px) clamp(24px, 3vw, 40px);
+    background: var(--bg-warm);
+    border: 1px solid var(--line-soft);
+    border-radius: clamp(14px, 1.8vw, 20px);
+    display: flex;
+    align-items: center;
+    gap: clamp(16px, 2.5vw, 28px);
+    color: var(--text-2);
+    font-size: clamp(1.0rem, 0.94rem + 0.3vw, 1.12rem);
+    line-height: 1.55;
+  }
+  .inv-bridge__icon {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--accent-fg);
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-weight: 800;
+    font-style: italic;
+    font-size: 1rem;
+  }
+  .inv-bridge strong { color: var(--text); font-weight: 600; }
+  @media (max-width: 600px) { .inv-bridge { flex-direction: column; align-items: flex-start; } }
+
+  .reassure {
+    background: var(--slate);
+    color: #fff;
+    border-radius: clamp(20px, 2.4vw, 32px);
+    padding: clamp(40px, 6vw, 80px);
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: clamp(28px, 4vw, 64px);
+    align-items: start;
+  }
+  @media (max-width: 800px) { .reassure { grid-template-columns: 1fr; } }
+  .reassure h2 {
+    color: #fff;
+    max-width: 18ch;
+    line-height: 0.98;
+  }
+  .reassure .eyebrow { color: oklch(0.86 0.012 200); }
+  .reassure .eyebrow::before { background: oklch(0.86 0.012 200); }
+  .reassure p {
+    color: oklch(0.90 0.014 200);
+    font-size: clamp(1.05rem, 0.96rem + 0.4vw, 1.20rem);
+    line-height: 1.6;
+    max-width: 56ch;
+  }
+
+  .price-flag {
+    position: absolute;
+    top: clamp(24px, 3vw, 36px);
+    right: clamp(24px, 3vw, 36px);
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--accent);
+    background: oklch(0.97 0.024 32);
+    padding: 6px 12px;
+    border-radius: 999px;
+  }
+</style>
+</head>
+<body class="page">
+
+<header class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="brand/cp-monogram.png" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="method.html">Method</a>
+      <a href="investment.html">Investment</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn--primary nav__cta" href="contact.html">Book a call <span class="arr">→</span></a>
+    </nav>
+    <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu">
+  <a href="index.html">Home</a><a href="services.html">Services</a><a href="method.html">Method</a><a href="investment.html">Investment</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+  <a class="btn btn--primary" href="contact.html">Book a call <span class="arr">→</span></a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero page-hero">
+    <div class="wrap">
+      <span class="eyebrow reveal">Investment</span>
+      <h1 class="reveal mt-md" data-delay="1">Honest about <em style="font-style: italic; color: var(--accent);">what this costs</em>.</h1>
+      <p class="hero__sub reveal mt-md" data-delay="2">Every business is different, so the work is always scoped to fit yours. But you shouldn&rsquo;t have to book a call just to learn whether we&rsquo;re in the same ballpark. There are two ways to work together. Here&rsquo;s both, and where each one starts.</p>
+    </div>
+  </section>
+
+  <!-- OFFER PANELS -->
+  <section class="section section--tight" style="padding-top: 0;">
+    <div class="wrap">
+
+      <div class="inv-grid">
+
+        <!-- FOUNDATION -->
+        <article class="inv-card reveal">
+          <div>
+            <span class="inv-card__label">Strategy and planning</span>
+            <h2 class="inv-card__name mt-sm">The Foundation</h2>
+            <p class="inv-card__price mt-sm"><strong>$4,000</strong> · one time</p>
+          </div>
+
+          <p class="inv-card__desc">A one-time strategy engagement. Every deliverable below is a written artifact you own permanently, compiled into a single organized <strong style="color: var(--text); font-weight: 600;">Marketing Strategy Playbook</strong>, plus one live handoff session.</p>
+
+          <div class="phase-list">
+
+            <div class="phase">
+              <p class="phase__label"><span class="phase__num">Phase 1</span>Discovery &amp; Audit</p>
+              <ol class="deliv-list">
+                <li>
+                  <span class="deliv__num">01</span>
+                  <div>
+                    <p class="deliv__name">Marketing Audit</p>
+                    <p class="deliv__body">A written review of your current marketing: website, social presence, messaging, branding, channels, and lead flow. States plainly what&rsquo;s working, what&rsquo;s underperforming, and where customers are being lost.</p>
+                    <p class="deliv__format">Written assessment · 3&ndash;6 pages</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="deliv__num">02</span>
+                  <div>
+                    <p class="deliv__name">Competitive &amp; Market Snapshot</p>
+                    <p class="deliv__body">A scan of 3&ndash;5 direct competitors covering how they position, price, and message. Identifies the specific gap you can own.</p>
+                    <p class="deliv__format">Written summary with side-by-side comparison</p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <div class="phase">
+              <p class="phase__label"><span class="phase__num">Phase 2</span>Strategy</p>
+              <ol class="deliv-list" start="3">
+                <li>
+                  <span class="deliv__num">03</span>
+                  <div>
+                    <p class="deliv__name">Ideal Customer Profile</p>
+                    <p class="deliv__body">A defined profile of your best-fit customer: who they are, what they want, what they fear, what objections they raise, where they spend attention, and what makes them buy. One primary profile, with a secondary profile if the business genuinely warrants it.</p>
+                    <p class="deliv__format">Written profile(s)</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="deliv__num">04</span>
+                  <div>
+                    <p class="deliv__name">Positioning Statement</p>
+                    <p class="deliv__body">A clear written articulation of who the business is for, what it does best, and why it&rsquo;s the obvious choice over the alternatives. The strategic anchor every other deliverable points back to.</p>
+                    <p class="deliv__format">Defined statement plus supporting rationale</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="deliv__num">05</span>
+                  <div>
+                    <p class="deliv__name">Offer Breakdown</p>
+                    <p class="deliv__body">Your core offer, sharpened: named, structured, and priced with intent. Includes specific recommendations to restructure, bundle, or reprice where needed.</p>
+                    <p class="deliv__format">Written offer document</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="deliv__num">06</span>
+                  <div>
+                    <p class="deliv__name">Messaging Framework</p>
+                    <p class="deliv__body">The core message, value proposition, key talking points, and the actual language to use across all marketing. Includes example headlines and taglines.</p>
+                    <p class="deliv__format">Written framework</p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <div class="phase">
+              <p class="phase__label"><span class="phase__num">Phase 3</span>The Plan</p>
+              <ol class="deliv-list" start="7">
+                <li>
+                  <span class="deliv__num">07</span>
+                  <div>
+                    <p class="deliv__name">Marketing Strategy</p>
+                    <p class="deliv__body">The master document. Pulls the audit, customer, positioning, offer, and messaging into one clear strategy: the priorities, the recommended channels, and the reasoning behind each call.</p>
+                    <p class="deliv__format">Written strategy document</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="deliv__num">08</span>
+                  <div>
+                    <p class="deliv__name">90-Day Action Plan</p>
+                    <p class="deliv__body">A specific, prioritized roadmap of exactly what to do in the first 90 days, in what order, with the reasoning. Concrete tasks, not themes.</p>
+                    <p class="deliv__format">Sequenced action plan</p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <div class="phase">
+              <p class="phase__label"><span class="phase__num">Phase 4</span>Handoff</p>
+              <ol class="deliv-list" start="9">
+                <li>
+                  <span class="deliv__num">09</span>
+                  <div>
+                    <p class="deliv__name">Strategy Presentation &amp; Handoff</p>
+                    <p class="deliv__body">A live walkthrough of the full strategy, by call or in person, with time for questions. You leave understanding the plan, not just holding it.</p>
+                    <p class="deliv__format">One session · 60&ndash;90 minutes</p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+          </div>
+
+          <p class="inv-card__closing">The foundation everything is built on. It stands completely on its own.</p>
+        </article>
+
+        <!-- PARTNERSHIP (featured) -->
+        <article class="inv-card inv-card--featured reveal" data-delay="1">
+          <span class="price-flag">Most clients start here</span>
+          <div>
+            <span class="inv-card__label">Strategy and execution</span>
+            <h2 class="inv-card__name mt-sm">The Partnership</h2>
+            <p class="inv-card__price mt-sm">Starting at <strong>$1,600</strong>/month, plus a one-time <strong>$950</strong> onboarding fee</p>
+          </div>
+
+          <p class="inv-card__desc">This is where I run your marketing with you. Every Partnership is built the same way: a strategic core that every client gets, plus the execution modules your business actually needs. You never pay for work you don&rsquo;t want, and the partnership grows right alongside you.</p>
+
+          <div>
+            <p class="inv-list-title">What every Partnership includes</p>
+            <ul class="inv-list">
+              <li><span>A monthly strategy call to review results and set priorities</span></li>
+              <li><span>A clear monthly performance report</span></li>
+              <li><span>Ongoing strategic direction across all your marketing</span></li>
+              <li><span>One point of contact for everything</span></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="inv-list-title">Choose your monthly modules</p>
+            <ul class="inv-list inv-list--chips">
+              <li><span>Social media management</span></li>
+              <li><span>Email marketing</span></li>
+              <li><span>Paid ad management</span></li>
+              <li><span>Marketing systems and automation</span></li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="inv-list-title">Add a project anytime</p>
+            <ul class="inv-list inv-list--chips">
+              <li><span>Web design and development</span></li>
+              <li><span>Brand identity</span></li>
+              <li><span>Photography</span></li>
+              <li><span>Video production</span></li>
+            </ul>
+          </div>
+
+          <p class="inv-card__build">Your monthly investment is the <strong>core plus the modules you choose</strong>, starting at <strong>$1,600</strong>. Projects are quoted on their own.</p>
+
+          <div>
+            <p class="inv-list-title">What the $950 onboarding covers</p>
+            <ul class="inv-list">
+              <li><span>A full audit of where your marketing stands today</span></li>
+              <li><span>Account, tool, and platform setup</span></li>
+              <li><span>Building out your systems and the game plan we&rsquo;ll run from</span></li>
+              <li><span>The heavy lifting of getting started, handled once</span></li>
+            </ul>
+          </div>
+
+          <p class="inv-card__terms">A three-month minimum, because real marketing needs room to work, then month to month. You&rsquo;ll always know your number up front.</p>
+
+          <p class="inv-card__closing">One partner for the whole picture, scaled to exactly what you need.</p>
+        </article>
+
+      </div>
+
+      <!-- BRIDGE -->
+      <div class="inv-bridge reveal" data-delay="2">
+        <span class="inv-bridge__icon" aria-hidden="true">+</span>
+        <p>Want the deep strategic work too? <strong>The Foundation pairs naturally with The Partnership.</strong> Start there, and your Foundation fee credits toward your Partnership when you move forward within 30 days.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- REASSURANCE -->
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="reassure reveal">
+        <div>
+          <span class="eyebrow">Reassurance</span>
+          <h2 class="mt-md">What you won&rsquo;t find here.</h2>
+        </div>
+        <p>No contracts built to trap you. No vague hourly billing. No surprise invoices. You will always know exactly what you&rsquo;re paying and what it&rsquo;s for. And if I&rsquo;m not the right fit for where your business is right now, I&rsquo;ll tell you, and point you toward someone who is.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="section section--tight">
+    <div class="wrap wrap--narrow" style="text-align: center;">
+      <p class="pull reveal" style="margin-inline: auto;">Not sure where you&rsquo;d land? <em style="color: var(--accent); font-style: italic;">That&rsquo;s exactly what a call is for.</em></p>
+      <div class="row-cta mt-xl reveal" data-delay="1" style="justify-content: center;">
+        <a href="contact.html" class="btn btn--primary">Book a discovery call <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand-mark"><img src="brand/cp-monogram.png" alt="Carson Poore Consulting" width="56" height="56" /></div>
+        <div class="footer__brand">Carson Poore <span style="color: var(--muted);">/ Consulting</span></div>
+        <p class="footer__tag">Full-service marketing for small businesses ready to be the obvious choice.</p>
+        <p style="color: var(--text-2);">Indianapolis, Indiana<br/><a href="mailto:carsonpoore@gmail.com" class="tlink">carsonpoore@gmail.com</a></p>
+      </div>
+      <div><h4>Site</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="method.html">Method</a></li><li><a href="investment.html">Investment</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Start</h4><ul><li><a href="contact.html">Book a discovery call</a></li><li><a href="mailto:carsonpoore@gmail.com">Email Carson</a></li><li><a href="work.html">Work</a></li></ul></div>
+    </div>
+    <div class="footer__meta"><span>© 2026 Carson Poore Consulting</span><span>Indianapolis · Central Indiana</span></div>
+  </div>
+</footer>
+
+<button class="tweaks-toggle" aria-label="Open design tweaks"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button>
+<aside class="tweaks" aria-label="Design tweaks">
+  <div class="tweaks__head"><span class="tweaks__title">Tweaks</span><button class="tweaks__close" aria-label="Close">×</button></div>
+  <div class="tweaks__row"><span class="tweaks__label">Accent color</span><div class="swatches">
+      <button class="swatch" data-accent="copper" aria-label="Brand copper" style="--c: #9f7557;"></button>
+      <button class="swatch" data-accent="rose" aria-label="Brand rose clay" style="--c: #a27164;"></button>
+      <button class="swatch" data-accent="slate" aria-label="Brand slate" style="--c: #617e82;"></button>
+      <button class="swatch" data-accent="black" aria-label="Black" style="--c: #1a1a1a;"></button>
+  </div></div>
+</aside>
+
+<script src="site.js"></script>
+<script src="motion.js"></script>
+</body>
+</html>

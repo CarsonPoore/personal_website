@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The method — Carson Poore Consulting</title>
+<meta name="description" content="Five steps, in an order that actually matters. How the work goes from conviction to compounding word of mouth." />
+<meta property="og:title" content="The method — Carson Poore Consulting" />
+<meta property="og:description" content="Five steps, in an order that actually matters." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" />
+<link rel="stylesheet" href="styles.css?v=1779657868718" />
+<style>
+  /* Method-specific scroll-driven progress rail */
+  .method-rail {
+    position: sticky;
+    top: 108px;
+    align-self: start;
+    display: flex; flex-direction: column;
+    gap: 16px;
+    font-family: var(--sans);
+    font-size: 0.88rem;
+    color: var(--muted);
+    padding-top: 6px;
+  }
+  .method-rail__item {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: 12px;
+    align-items: baseline;
+    padding: 8px 0;
+    opacity: 0.45;
+    transition: opacity .4s var(--ease), color .4s var(--ease);
+    cursor: pointer;
+    color: inherit;
+    border-left: 1px solid transparent;
+    padding-left: 14px;
+    margin-left: -14px;
+    transition: opacity .4s var(--ease), color .4s var(--ease), border-color .4s var(--ease);
+  }
+  .method-rail__item .n {
+    font-family: var(--serif); color: var(--text-2);
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .method-rail__item.is-active {
+    opacity: 1;
+    color: var(--text);
+    border-left-color: var(--accent);
+  }
+  .method-rail__item.is-active .n { color: var(--accent); }
+  .method-grid {
+    display: grid;
+    grid-template-columns: 0.24fr 0.76fr;
+    gap: clamp(40px, 6vw, 100px);
+  }
+  @media (max-width: 900px) {
+    .method-grid { grid-template-columns: 1fr; gap: 32px; }
+    .method-rail { position: static; flex-direction: row; flex-wrap: wrap; gap: 10px; }
+    .method-rail__item { padding: 6px 12px; border: 1px solid var(--line-soft); border-radius: 999px; grid-template-columns: auto auto; margin-left: 0; border-left-color: var(--line-soft); }
+    .method-rail__item.is-active { border-color: var(--accent); }
+  }
+
+  /* Steps */
+  .step {
+    padding-block: clamp(56px, 8vw, 112px);
+    border-top: 1px solid var(--line-soft);
+    scroll-margin-top: 108px;
+  }
+  .step:last-child { border-bottom: 1px solid var(--line-soft); }
+  .step__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+  .step__head {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: clamp(28px, 4vw, 48px);
+    align-items: baseline;
+    margin-bottom: clamp(20px, 3vw, 36px);
+  }
+  .step__num {
+    font-family: var(--serif);
+    font-size: clamp(5rem, 10vw, 9.5rem);
+    font-weight: 900;
+    font-style: italic;
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+    color: var(--slate);
+    margin: 0;
+    font-feature-settings: "lnum";
+  }
+  .step__num em { color: var(--accent); font-style: italic; }
+  .step__label {
+    font-family: var(--serif);
+    font-size: clamp(2.0rem, 1.6rem + 1.6vw, 3.2rem);
+    font-weight: 700;
+    letter-spacing: -0.018em;
+    line-height: 1;
+    color: var(--text);
+    margin: 0;
+    align-self: end;
+    padding-bottom: clamp(8px, 1vw, 16px);
+  }
+  .step__body {
+    color: var(--text-2);
+    max-width: 60ch;
+    font-size: clamp(1.05rem, 0.98rem + 0.4vw, 1.22rem);
+    line-height: 1.6;
+    padding-left: clamp(0px, 8vw, 96px);
+  }
+  @media (max-width: 760px) {
+    .step__head { grid-template-columns: 1fr; gap: 6px; }
+    .step__label { padding-bottom: 0; }
+    .step__body { padding-left: 0; }
+  }
+</style>
+</head>
+<body class="page">
+
+<header class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="brand/cp-monogram.png" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="index.html">Home</a><a href="services.html">Services</a><a href="method.html">Method</a>
+      <a href="investment.html">Investment</a>
+      <a href="about.html">About</a><a href="contact.html">Contact</a>
+      <a class="btn btn--primary nav__cta" href="contact.html">Book a call <span class="arr">→</span></a>
+    </nav>
+    <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu"><a href="index.html">Home</a><a href="services.html">Services</a><a href="method.html">Method</a>
+      <a href="investment.html">Investment</a>
+      <a href="about.html">About</a><a href="contact.html">Contact</a><a class="btn btn--primary" href="contact.html">Book a call <span class="arr">→</span></a></div>
+
+<main>
+
+  <section class="hero page-hero">
+    <div class="wrap">
+      <span class="eyebrow reveal">The method</span>
+      <h1 class="reveal mt-md" data-delay="1">Five steps, in <em style="font-style: italic; color: var(--accent);">an order that actually matters</em>.</h1>
+      <p class="hero__sub reveal mt-md" data-delay="2">Most marketing starts in the middle, with the ads and the posts, then wonders why nothing sticks. We start at the beginning and build forward. Here&rsquo;s how the work goes.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="method-grid">
+
+        <!-- RAIL -->
+        <aside class="method-rail" aria-label="Steps">
+          <a class="method-rail__item is-active" href="#s1"><span class="n">01</span><span><span class="dot"></span>Conviction</span></a>
+          <a class="method-rail__item" href="#s2"><span class="n">02</span><span><span class="dot"></span>Your people</span></a>
+          <a class="method-rail__item" href="#s3"><span class="n">03</span><span><span class="dot"></span>A sharp offer</span></a>
+          <a class="method-rail__item" href="#s4"><span class="n">04</span><span><span class="dot"></span>The experience</span></a>
+          <a class="method-rail__item" href="#s5"><span class="n">05</span><span><span class="dot"></span>Word of mouth</span></a>
+        </aside>
+
+        <!-- STEPS -->
+        <div>
+          <article class="step" id="s1">
+            <div class="step__head">
+              <span class="step__num">01</span>
+              <h2 class="step__label">Conviction</h2>
+            </div>
+            <p class="step__body">We start with you. What you believe about your work, why you built this, what you refuse to compromise on. This sounds soft. It isn&rsquo;t. Your conviction is the one thing no competitor can copy, and it&rsquo;s the foundation everything else stands on.</p>
+          </article>
+
+          <article class="step" id="s2">
+            <div class="step__head">
+              <span class="step__num">02</span>
+              <h2 class="step__label">Your people</h2>
+            </div>
+            <p class="step__body">Next, we get specific about who your marketing is really for. Not &ldquo;everyone.&rdquo; The customers who light up at what you do. Marketing to the right people is calm and effective. Marketing to everyone is expensive and exhausting.</p>
+          </article>
+
+          <article class="step" id="s3">
+            <div class="step__head">
+              <span class="step__num">03</span>
+              <h2 class="step__label">A sharp offer</h2>
+            </div>
+            <p class="step__body">Then we make what you sell impossible to misunderstand. Named, packaged, priced, and pointed. A sharp offer does the selling for you, so you spend less time convincing and more time delivering.</p>
+          </article>
+
+          <article class="step" id="s4">
+            <div class="step__head">
+              <span class="step__num">04</span>
+              <h2 class="step__label">The experience</h2>
+            </div>
+            <p class="step__body">Now the experience itself, every touchpoint from first impression to repeat visit. Here&rsquo;s the truth most marketing misses: your marketing IS the experience of being your customer. We design those moments on purpose, so the business itself does the work.</p>
+          </article>
+
+          <article class="step" id="s5">
+            <div class="step__head">
+              <span class="step__num">05</span>
+              <h2 class="step__label">Word of mouth, on purpose</h2>
+            </div>
+            <p class="step__body">Finally, we engineer the part most businesses leave to chance: people talking about you. Delight is the only marketing that compounds for free. When the first four steps are right, this one starts to take care of itself, and your growth stops depending on your ad budget.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap wrap--narrow" style="text-align: center;">
+      <p class="pull reveal" style="margin-inline: auto;">Five steps. One system. <span style="color: var(--accent);">A business that gets easier to market the longer it runs.</span></p>
+      <div class="row-cta mt-xl reveal" data-delay="1" style="justify-content: center;">
+        <a href="contact.html" class="btn btn--primary">Start with a call <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand-mark"><img src="brand/cp-monogram.png" alt="Carson Poore Consulting" width="56" height="56" /></div>
+        <div class="footer__brand">Carson Poore <span style="color: var(--muted);">/ Consulting</span></div>
+        <p class="footer__tag">Full-service marketing for small businesses ready to be the obvious choice.</p>
+        <p style="color: var(--text-2);">Indianapolis, Indiana<br/><a href="mailto:carsonpoore@gmail.com" class="tlink">carsonpoore@gmail.com</a></p>
+      </div>
+      <div><h4>Site</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="method.html">Method</a></li><li><a href="investment.html">Investment</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Start</h4><ul><li><a href="contact.html">Book a discovery call</a></li><li><a href="mailto:carsonpoore@gmail.com">Email Carson</a></li><li><a href="work.html">Work</a></li></ul></div>
+    </div>
+    <div class="footer__meta"><span>© 2026 Carson Poore Consulting</span><span>Indianapolis · Central Indiana</span></div>
+  </div>
+</footer>
+
+<button class="tweaks-toggle" aria-label="Open design tweaks"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button>
+<aside class="tweaks" aria-label="Design tweaks">
+  <div class="tweaks__head"><span class="tweaks__title">Tweaks</span><button class="tweaks__close" aria-label="Close">×</button></div>
+  <div class="tweaks__row"><span class="tweaks__label">Accent color</span><div class="swatches">
+    <button class="swatch" data-accent="copper" aria-label="Brand copper" style="--c: #9f7557;"></button>
+      <button class="swatch" data-accent="rose" aria-label="Brand rose clay" style="--c: #a27164;"></button>
+      <button class="swatch" data-accent="slate" aria-label="Brand slate" style="--c: #617e82;"></button>
+      <button class="swatch" data-accent="black" aria-label="Black" style="--c: #1a1a1a;"></button>
+  </div></div>
+
+</aside>
+
+<script src="site.js?v=1779657868718"></script>
+<script src="motion.js?v=1779657868718"></script>
+<script>
+  // Method rail: scroll-driven active state
+  (function() {
+    const items = document.querySelectorAll(".method-rail__item");
+    const steps = document.querySelectorAll(".step");
+    if (!items.length || !steps.length || !("IntersectionObserver" in window)) return;
+    const map = new Map();
+    steps.forEach((s, i) => map.set(s.id, items[i]));
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          items.forEach(it => it.classList.remove("is-active"));
+          const el = map.get(e.target.id);
+          if (el) el.classList.add("is-active");
+        }
+      });
+    }, { rootMargin: "-40% 0px -50% 0px", threshold: 0 });
+    steps.forEach(s => io.observe(s));
+  })();
+</script>
+</body>
+</html>
