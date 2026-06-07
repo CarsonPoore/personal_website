@@ -353,6 +353,47 @@
     padding: 6px 12px;
     border-radius: 999px;
   }
+
+  /* Hero split — heading on left, nonprofit note on right */
+  .invest-hero__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: clamp(32px, 5vw, 72px);
+    align-items: start;
+  }
+  @media (max-width: 900px) {
+    .invest-hero__grid { grid-template-columns: 1fr; gap: 36px; }
+  }
+  .invest-hero__note {
+    position: relative;
+    background: var(--bg-warm);
+    border: 1px solid var(--line-soft);
+    border-left: 2px solid var(--accent);
+    border-radius: clamp(14px, 1.8vw, 20px);
+    padding: clamp(22px, 2.4vw, 30px) clamp(24px, 2.6vw, 32px);
+    color: var(--text-2);
+    font-size: clamp(0.98rem, 0.92rem + 0.25vw, 1.08rem);
+    line-height: 1.6;
+    margin-top: clamp(8px, 2vw, 24px);
+  }
+  .invest-hero__note-label {
+    font-family: var(--sans);
+    font-size: 0.74rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 0 0 12px 0;
+  }
+  .invest-hero__note p { margin: 0; }
+  .invest-hero__note strong { color: var(--text); font-weight: 600; }
+  .invest-hero__note a {
+    color: var(--accent-strong);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
 </style>
 </head>
 <body class="page">
@@ -382,9 +423,17 @@
   <!-- HERO -->
   <section class="hero page-hero">
     <div class="wrap">
-      <span class="eyebrow reveal">Investment</span>
-      <h1 class="reveal mt-md" data-delay="1">Honest about <em style="font-style: italic; color: var(--accent);">what this costs</em>.</h1>
-      <p class="hero__sub reveal mt-md" data-delay="2">Every business is different, so the work is always scoped to fit yours. But you shouldn&rsquo;t have to book a call just to learn whether we&rsquo;re in the same ballpark. There are two ways to work together. Here&rsquo;s both, and where each one starts.</p>
+      <div class="invest-hero__grid">
+        <div>
+          <span class="eyebrow reveal">Investment</span>
+          <h1 class="reveal mt-md" data-delay="1">Honest about <em style="font-style: italic; color: var(--accent);">what this costs</em>.</h1>
+          <p class="hero__sub reveal mt-md" data-delay="2">Every business is different, so the work is always scoped to fit yours. But you shouldn&rsquo;t have to book a call just to learn whether we&rsquo;re in the same ballpark. There are two ways to work together. Here&rsquo;s both, and where each one starts.</p>
+        </div>
+        <aside class="invest-hero__note reveal" data-delay="3">
+          <p class="invest-hero__note-label">For nonprofits &amp; purpose-driven businesses</p>
+          <p>I believe good causes deserve good marketing. That&rsquo;s why I take on a select number of nonprofits and purpose-driven businesses at a discounted rate each quarter. If that&rsquo;s you, <a href="contact.html">let&rsquo;s talk</a>.</p>
+        </aside>
+      </div>
     </div>
   </section>
 
