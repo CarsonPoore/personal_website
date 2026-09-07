@@ -33,49 +33,8 @@
     els.forEach(el => el.classList.add("in"));
   }
 
-  // Tweaks persistence
-  const root = document.documentElement;
-  const ACCENTS = {
-    copper:  { hex: "#9f7557", strong: "#7a5841", soft: "#f0e6dd" },
-    rose:    { hex: "#a27164", strong: "#7d544a", soft: "#f1e3df" },
-    slate:   { hex: "#617e82", strong: "#475f63", soft: "#dbe3e4" },
-    black:   { hex: "#1a1a1a", strong: "#000000", soft: "#e8e8e8" }
-  };
-
-  function applyAccent(name) {
-    const a = ACCENTS[name] || ACCENTS.copper;
-    root.style.setProperty("--accent", a.hex);
-    root.style.setProperty("--accent-strong", a.strong);
-    root.style.setProperty("--accent-soft", a.soft);
-  }
-
-  const savedAccent = localStorage.getItem("cp.accent") || "copper";
-  applyAccent(savedAccent);
-
-  // Build tweaks UI if present
-  const tweaks = document.querySelector(".tweaks");
-  const tweaksToggle = document.querySelector(".tweaks-toggle");
-  if (tweaks && tweaksToggle) {
-    tweaks.querySelectorAll(".swatch").forEach(b => {
-      const k = b.dataset.accent;
-      if (k === savedAccent) b.classList.add("is-active");
-      b.addEventListener("click", () => {
-        tweaks.querySelectorAll(".swatch").forEach(x => x.classList.remove("is-active"));
-        b.classList.add("is-active");
-        applyAccent(k);
-        localStorage.setItem("cp.accent", k);
-      });
-    });
-    tweaksToggle.addEventListener("click", () => {
-      tweaks.classList.add("is-open");
-      tweaksToggle.style.display = "none";
-    });
-    const close = tweaks.querySelector(".tweaks__close");
-    if (close) close.addEventListener("click", () => {
-      tweaks.classList.remove("is-open");
-      tweaksToggle.style.display = "";
-    });
-  }
+  // Clear legacy accent override from previous design system
+  try { localStorage.removeItem("cp.accent"); } catch (e) {}
 
   // Active nav link based on path
   const path = (location.pathname.split("/").pop() || "index.html").toLowerCase();

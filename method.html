@@ -9,71 +9,13 @@
 <meta property="og:description" content="Five steps, in an order that actually matters." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" />
-<link rel="stylesheet" href="styles.css?v=1779657868718" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
+<link rel="stylesheet" href="styles.css?v=20260907" />
 <style>
-  /* Method-specific scroll-driven progress rail */
-  .method-rail {
-    position: sticky;
-    top: 108px;
-    align-self: start;
-    display: flex; flex-direction: column;
-    gap: 16px;
-    font-family: var(--sans);
-    font-size: 0.88rem;
-    color: var(--muted);
-    padding-top: 6px;
-  }
-  .method-rail__item {
-    display: grid;
-    grid-template-columns: 32px 1fr;
-    gap: 12px;
-    align-items: baseline;
-    padding: 8px 0;
-    opacity: 0.45;
-    transition: opacity .4s var(--ease), color .4s var(--ease);
-    cursor: pointer;
-    color: inherit;
-    border-left: 1px solid transparent;
-    padding-left: 14px;
-    margin-left: -14px;
-    transition: opacity .4s var(--ease), color .4s var(--ease), border-color .4s var(--ease);
-  }
-  .method-rail__item .n {
-    font-family: var(--serif); color: var(--text-2);
-    font-size: 0.92rem;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-  }
-  .method-rail__item.is-active {
-    opacity: 1;
-    color: var(--text);
-    border-left-color: var(--accent);
-  }
-  .method-rail__item.is-active .n { color: var(--accent); }
-  .method-grid {
-    display: grid;
-    grid-template-columns: 0.24fr 0.76fr;
-    gap: clamp(40px, 6vw, 100px);
-  }
-  @media (max-width: 900px) {
-    .method-grid { grid-template-columns: 1fr; gap: 32px; }
-    .method-rail { position: static; flex-direction: row; flex-wrap: wrap; gap: 10px; }
-    .method-rail__item { padding: 6px 12px; border: 1px solid var(--line-soft); border-radius: 999px; grid-template-columns: auto auto; margin-left: 0; border-left-color: var(--line-soft); }
-    .method-rail__item.is-active { border-color: var(--accent); }
-  }
-
-  /* Steps */
+  /* Method page — layout tweaks on top of the shared step styles */
   .step {
     padding-block: clamp(56px, 8vw, 112px);
-    border-top: 1px solid var(--line-soft);
     scroll-margin-top: 108px;
-  }
-  .step:last-child { border-bottom: 1px solid var(--line-soft); }
-  .step__inner {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 0;
   }
   .step__head {
     display: grid;
@@ -83,33 +25,18 @@
     margin-bottom: clamp(20px, 3vw, 36px);
   }
   .step__num {
-    font-family: var(--serif);
     font-size: clamp(5rem, 10vw, 9.5rem);
-    font-weight: 900;
-    font-style: italic;
     line-height: 0.85;
-    letter-spacing: -0.04em;
-    color: var(--slate);
+    letter-spacing: -0.040em;
     margin: 0;
-    font-feature-settings: "lnum";
   }
-  .step__num em { color: var(--accent); font-style: italic; }
   .step__label {
-    font-family: var(--serif);
     font-size: clamp(2.0rem, 1.6rem + 1.6vw, 3.2rem);
-    font-weight: 700;
-    letter-spacing: -0.018em;
-    line-height: 1;
-    color: var(--text);
     margin: 0;
     align-self: end;
     padding-bottom: clamp(8px, 1vw, 16px);
   }
   .step__body {
-    color: var(--text-2);
-    max-width: 60ch;
-    font-size: clamp(1.05rem, 0.98rem + 0.4vw, 1.22rem);
-    line-height: 1.6;
     padding-left: clamp(0px, 8vw, 96px);
   }
   @media (max-width: 760px) {
@@ -142,7 +69,7 @@
   <section class="hero page-hero">
     <div class="wrap">
       <span class="eyebrow reveal">The method</span>
-      <h1 class="reveal mt-md" data-delay="1">Five steps, in <em style="font-style: italic; color: var(--accent);">an order that actually matters</em>.</h1>
+      <h1 class="reveal mt-md" data-delay="1">Five steps, in <em>an order that actually matters.</em></h1>
       <p class="hero__sub reveal mt-md" data-delay="2">Most marketing starts in the middle, with the ads and the posts, then wonders why nothing sticks. We start at the beginning and build forward. Here&rsquo;s how the work goes.</p>
     </div>
   </section>
@@ -206,10 +133,15 @@
     </div>
   </section>
 
-  <section class="section section--tight">
-    <div class="wrap wrap--narrow" style="text-align: center;">
-      <p class="pull reveal" style="margin-inline: auto;">Five steps. One system. <span style="color: var(--accent);">A business that gets easier to market the longer it runs.</span></p>
-      <div class="row-cta mt-xl reveal" data-delay="1" style="justify-content: center;">
+  <!-- CLOSING CTA — full-bleed cobalt band -->
+  <section class="closing">
+    <div class="closing__inner">
+      <div class="reveal">
+        <span class="eyebrow">Ready when you are</span>
+        <h2>A business that gets easier to <em>market.</em></h2>
+        <p>Five steps. One system. Run it right and your growth stops depending on your ad budget.</p>
+      </div>
+      <div class="reveal" data-delay="1">
         <a href="contact.html" class="btn btn--primary">Start with a call <span class="arr">→</span></a>
       </div>
     </div>
@@ -222,9 +154,9 @@
     <div class="footer__grid">
       <div>
         <div class="footer__brand-mark"><img src="brand/cp-monogram.png" alt="Carson Poore Consulting" width="56" height="56" /></div>
-        <div class="footer__brand">Carson Poore <span style="color: var(--muted);">/ Consulting</span></div>
+        <div class="footer__brand">Carson Poore <span>/ Consulting</span></div>
         <p class="footer__tag">Full-service marketing for small businesses ready to be the obvious choice.</p>
-        <p style="color: var(--text-2);">Indianapolis, Indiana<br/><a href="mailto:carsonpoore@gmail.com" class="tlink">carsonpoore@gmail.com</a></p>
+        <p>Indianapolis, Indiana<br/><a href="mailto:carsonpoore@gmail.com" class="tlink">carsonpoore@gmail.com</a></p>
       </div>
       <div><h4>Site</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="method.html">Method</a></li><li><a href="investment.html">Investment</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
       <div><h4>Start</h4><ul><li><a href="contact.html">Book a discovery call</a></li><li><a href="mailto:carsonpoore@gmail.com">Email Carson</a></li><li><a href="work.html">Work</a></li></ul></div>
@@ -233,20 +165,8 @@
   </div>
 </footer>
 
-<button class="tweaks-toggle" aria-label="Open design tweaks"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button>
-<aside class="tweaks" aria-label="Design tweaks">
-  <div class="tweaks__head"><span class="tweaks__title">Tweaks</span><button class="tweaks__close" aria-label="Close">×</button></div>
-  <div class="tweaks__row"><span class="tweaks__label">Accent color</span><div class="swatches">
-    <button class="swatch" data-accent="copper" aria-label="Brand copper" style="--c: #9f7557;"></button>
-      <button class="swatch" data-accent="rose" aria-label="Brand rose clay" style="--c: #a27164;"></button>
-      <button class="swatch" data-accent="slate" aria-label="Brand slate" style="--c: #617e82;"></button>
-      <button class="swatch" data-accent="black" aria-label="Black" style="--c: #1a1a1a;"></button>
-  </div></div>
-
-</aside>
-
-<script src="site.js?v=1779657868718"></script>
-<script src="motion.js?v=1779657868718"></script>
+<script src="site.js?v=20260907"></script>
+<script src="motion.js?v=20260907"></script>
 <script>
   // Method rail: scroll-driven active state
   (function() {

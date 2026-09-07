@@ -9,392 +9,8 @@
 <meta property="og:description" content="Two ways to work together. Honest pricing, no surprises." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" />
-<link rel="stylesheet" href="styles.css" />
-<style>
-  /* Phase / deliverable list for Foundation */
-  .phase-list { display: flex; flex-direction: column; gap: 32px; }
-  .phase__label {
-    font-family: var(--serif);
-    font-weight: 700;
-    font-style: italic;
-    font-size: 1.15rem;
-    letter-spacing: -0.008em;
-    color: var(--text);
-    margin: 0 0 18px 0;
-    padding-bottom: 12px;
-    border-bottom: 1px solid var(--line-soft);
-    display: flex;
-    align-items: baseline;
-    gap: 14px;
-  }
-  .phase__num {
-    font-family: var(--sans);
-    font-style: normal;
-    font-weight: 600;
-    font-size: 0.7rem;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--accent);
-    background: oklch(0.97 0.024 32);
-    padding: 4px 10px;
-    border-radius: 999px;
-  }
-  .deliv-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-  }
-  .deliv-list li {
-    display: grid;
-    grid-template-columns: 38px 1fr;
-    gap: 14px;
-    align-items: start;
-  }
-  .deliv__num {
-    font-family: var(--serif);
-    font-weight: 800;
-    font-style: italic;
-    font-size: 1.1rem;
-    color: var(--slate);
-    letter-spacing: -0.008em;
-    line-height: 1.3;
-  }
-  .deliv__name {
-    font-family: var(--serif);
-    font-weight: 700;
-    font-size: 1.08rem;
-    letter-spacing: -0.008em;
-    color: var(--text);
-    line-height: 1.25;
-    margin: 0 0 6px 0;
-  }
-  .deliv__body {
-    color: var(--text-2);
-    font-size: 0.98rem;
-    line-height: 1.55;
-    margin: 0;
-  }
-  .deliv__format {
-    font-family: var(--sans);
-    font-size: 0.78rem;
-    letter-spacing: 0.06em;
-    color: var(--muted);
-    margin: 8px 0 0 0;
-    font-style: italic;
-  }
-
-  /* Chip variant for "choose your modules" and "add a project" — 2-column grid */
-  .inv-list--chips {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-  @media (max-width: 540px) { .inv-list--chips { grid-template-columns: 1fr; } }
-  .inv-list--chips li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 14px;
-    background: oklch(0.98 0.008 220);
-    border: 1px solid var(--line-soft);
-    border-radius: 12px;
-    color: var(--text);
-    font-size: 0.96rem;
-    font-weight: 500;
-    line-height: 1.3;
-  }
-  .inv-list--chips li::before {
-    content: "+";
-    color: var(--accent);
-    font-family: var(--serif);
-    font-style: italic;
-    font-weight: 800;
-    width: 14px; height: auto;
-    background: none;
-    border-radius: 0;
-    margin: 0;
-    flex-shrink: 0;
-    font-size: 1.1rem;
-    line-height: 1;
-  }
-
-  /* Building-your-investment callout */
-  .inv-card__build {
-    background: oklch(0.97 0.024 32);
-    border: 1px solid oklch(0.88 0.04 32);
-    border-radius: 14px;
-    padding: 18px 22px;
-    color: var(--text);
-    font-size: 1.02rem;
-    line-height: 1.55;
-  }
-  .inv-card__build strong {
-    color: var(--accent-strong);
-    font-weight: 700;
-  }
-
-  /* Investment-specific */
-  .inv-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: clamp(20px, 3vw, 36px);
-    align-items: stretch;
-  }
-  @media (max-width: 900px) { .inv-grid { grid-template-columns: 1fr; } }
-
-  .inv-card {
-    position: relative;
-    background: var(--bg);
-    border: 1px solid var(--line-soft);
-    border-radius: clamp(20px, 2.4vw, 28px);
-    padding: clamp(32px, 4vw, 56px);
-    display: flex;
-    flex-direction: column;
-    gap: clamp(28px, 3vw, 40px);
-    transition: transform .6s var(--ease-out), box-shadow .5s var(--ease-out), border-color .4s var(--ease);
-  }
-  .inv-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-2); }
-
-  .inv-card--featured {
-    background:
-      linear-gradient(180deg, oklch(0.97 0.022 32 / 0.5), transparent 40%),
-      var(--bg);
-    border-color: var(--accent);
-    box-shadow:
-      0 1px 2px oklch(0.55 0.06 32 / 0.06),
-      0 14px 50px oklch(0.55 0.06 32 / 0.12);
-  }
-
-  .inv-card__label {
-    font-family: var(--sans);
-    font-size: 0.78rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    font-weight: 500;
-    color: var(--muted);
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .inv-card--featured .inv-card__label { color: var(--accent); }
-  .inv-card__label::before {
-    content: "";
-    width: 22px; height: 1px;
-    background: currentColor;
-  }
-
-  .inv-card__name {
-    font-family: var(--serif);
-    font-weight: 800;
-    font-size: clamp(2.2rem, 1.6rem + 1.8vw, 3.4rem);
-    letter-spacing: -0.022em;
-    line-height: 0.98;
-    color: var(--text);
-    margin: 0;
-  }
-
-  .inv-card__price {
-    font-family: var(--serif);
-    font-weight: 700;
-    font-size: clamp(1.15rem, 0.95rem + 0.6vw, 1.45rem);
-    color: var(--text);
-    letter-spacing: -0.008em;
-    line-height: 1.3;
-  }
-  .inv-card__price strong {
-    color: var(--accent);
-    font-weight: 800;
-    margin-right: 4px;
-  }
-  .inv-card--featured .inv-card__price strong { color: var(--accent-strong); }
-
-  .inv-card__desc {
-    color: var(--text-2);
-    font-size: clamp(1.0rem, 0.94rem + 0.3vw, 1.12rem);
-    line-height: 1.6;
-    max-width: 50ch;
-  }
-
-  .inv-list-title {
-    font-family: var(--sans);
-    font-size: 0.78rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    font-weight: 500;
-    color: var(--text);
-    margin: 0 0 24px 0;
-    padding-bottom: 14px;
-    border-bottom: 1px solid var(--line-soft);
-  }
-  .inv-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .inv-list li {
-    display: flex;
-    gap: 18px;
-    align-items: flex-start;
-    color: var(--text-2);
-    font-size: 1.06rem;
-    line-height: 1.6;
-  }
-  .inv-list li::before {
-    content: "";
-    width: 7px; height: 7px;
-    flex-shrink: 0;
-    border-radius: 50%;
-    background: var(--accent);
-    margin-top: 10px;
-  }
-
-  .inv-card__terms {
-    font-style: italic;
-    font-family: var(--serif);
-    font-weight: 500;
-    color: var(--text-2);
-    font-size: 1.02rem;
-    line-height: 1.55;
-    padding: 16px 18px;
-    background: oklch(0.97 0.016 220);
-    border-radius: 12px;
-    border-left: 2px solid var(--slate);
-  }
-  .inv-card--featured .inv-card__terms {
-    background: oklch(0.97 0.020 32);
-    border-left-color: var(--accent);
-  }
-
-  .inv-card__closing {
-    font-family: var(--serif);
-    font-weight: 700;
-    font-size: clamp(1.05rem, 0.98rem + 0.3vw, 1.18rem);
-    color: var(--text);
-    letter-spacing: -0.008em;
-    line-height: 1.35;
-    padding-top: 12px;
-    border-top: 1px solid var(--line-soft);
-    margin-top: auto;
-  }
-
-  .inv-bridge {
-    margin-top: clamp(28px, 4vw, 48px);
-    padding: clamp(22px, 2.5vw, 32px) clamp(24px, 3vw, 40px);
-    background: var(--bg-warm);
-    border: 1px solid var(--line-soft);
-    border-radius: clamp(14px, 1.8vw, 20px);
-    display: flex;
-    align-items: center;
-    gap: clamp(16px, 2.5vw, 28px);
-    color: var(--text-2);
-    font-size: clamp(1.0rem, 0.94rem + 0.3vw, 1.12rem);
-    line-height: 1.55;
-  }
-  .inv-bridge__icon {
-    width: 36px; height: 36px;
-    border-radius: 50%;
-    background: var(--accent);
-    color: var(--accent-fg);
-    flex-shrink: 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--serif);
-    font-weight: 800;
-    font-style: italic;
-    font-size: 1rem;
-  }
-  .inv-bridge strong { color: var(--text); font-weight: 600; }
-  @media (max-width: 600px) { .inv-bridge { flex-direction: column; align-items: flex-start; } }
-
-  .reassure {
-    background: var(--slate);
-    color: #fff;
-    border-radius: clamp(20px, 2.4vw, 32px);
-    padding: clamp(40px, 6vw, 80px);
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: clamp(28px, 4vw, 64px);
-    align-items: start;
-  }
-  @media (max-width: 800px) { .reassure { grid-template-columns: 1fr; } }
-  .reassure h2 {
-    color: #fff;
-    max-width: 18ch;
-    line-height: 0.98;
-  }
-  .reassure .eyebrow { color: oklch(0.86 0.012 200); }
-  .reassure .eyebrow::before { background: oklch(0.86 0.012 200); }
-  .reassure p {
-    color: oklch(0.90 0.014 200);
-    font-size: clamp(1.05rem, 0.96rem + 0.4vw, 1.20rem);
-    line-height: 1.6;
-    max-width: 56ch;
-  }
-
-  .price-flag {
-    position: absolute;
-    top: clamp(24px, 3vw, 36px);
-    right: clamp(24px, 3vw, 36px);
-    font-family: var(--sans);
-    font-size: 0.72rem;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: var(--accent);
-    background: oklch(0.97 0.024 32);
-    padding: 6px 12px;
-    border-radius: 999px;
-  }
-
-  /* Hero split — heading on left, nonprofit note on right */
-  .invest-hero__grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-    gap: clamp(32px, 5vw, 72px);
-    align-items: start;
-  }
-  @media (max-width: 900px) {
-    .invest-hero__grid { grid-template-columns: 1fr; gap: 36px; }
-  }
-  .invest-hero__note {
-    position: relative;
-    background: var(--bg-warm);
-    border: 1px solid var(--line-soft);
-    border-left: 2px solid var(--accent);
-    border-radius: clamp(14px, 1.8vw, 20px);
-    padding: clamp(22px, 2.4vw, 30px) clamp(24px, 2.6vw, 32px);
-    color: var(--text-2);
-    font-size: clamp(0.98rem, 0.92rem + 0.25vw, 1.08rem);
-    line-height: 1.6;
-    margin-top: clamp(8px, 2vw, 24px);
-  }
-  .invest-hero__note-label {
-    font-family: var(--sans);
-    font-size: 0.74rem;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: var(--accent);
-    margin: 0 0 12px 0;
-  }
-  .invest-hero__note p { margin: 0; }
-  .invest-hero__note strong { color: var(--text); font-weight: 600; }
-  .invest-hero__note a {
-    color: var(--accent-strong);
-    font-weight: 600;
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
-  }
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
+<link rel="stylesheet" href="styles.css?v=20260907" />
 </head>
 <body class="page">
 
@@ -426,7 +42,7 @@
       <div class="invest-hero__grid">
         <div>
           <span class="eyebrow reveal">Investment</span>
-          <h1 class="reveal mt-md" data-delay="1">Honest about <em style="font-style: italic; color: var(--accent);">what this costs</em>.</h1>
+          <h1 class="reveal mt-md" data-delay="1">Honest about <em>what this costs.</em></h1>
           <p class="hero__sub reveal mt-md" data-delay="2">Every business is different, so the work is always scoped to fit yours. But you shouldn&rsquo;t have to book a call just to learn whether we&rsquo;re in the same ballpark. There are two ways to work together. Here&rsquo;s both, and where each one starts.</p>
         </div>
         <aside class="invest-hero__note reveal" data-delay="3">
@@ -451,7 +67,7 @@
             <p class="inv-card__price mt-sm"><strong>$3,200</strong> · one time</p>
           </div>
 
-          <p class="inv-card__desc">A one-time strategy engagement. Every deliverable below is a written artifact you own permanently, compiled into a single organized <strong style="color: var(--text); font-weight: 600;">Marketing Strategy Playbook</strong>, plus one live handoff session.</p>
+          <p class="inv-card__desc">A one-time strategy engagement. Every deliverable below is a written artifact you own permanently, compiled into a single organized <strong>Marketing Strategy Playbook</strong>, plus one live handoff session.</p>
 
           <div class="phase-list">
 
@@ -638,11 +254,15 @@
     </div>
   </section>
 
-  <!-- CLOSING CTA -->
-  <section class="section section--tight">
-    <div class="wrap wrap--narrow" style="text-align: center;">
-      <p class="pull reveal" style="margin-inline: auto;">Not sure where you&rsquo;d land? <em style="color: var(--accent); font-style: italic;">That&rsquo;s exactly what a call is for.</em></p>
-      <div class="row-cta mt-xl reveal" data-delay="1" style="justify-content: center;">
+  <!-- CLOSING CTA — full-bleed cobalt band -->
+  <section class="closing">
+    <div class="closing__inner">
+      <div class="reveal">
+        <span class="eyebrow">Not sure where you&rsquo;d land?</span>
+        <h2>That&rsquo;s exactly what a <em>call is for.</em></h2>
+        <p>A real conversation about your business. No pitch, no pressure.</p>
+      </div>
+      <div class="reveal" data-delay="1">
         <a href="contact.html" class="btn btn--primary">Book a discovery call <span class="arr">→</span></a>
       </div>
     </div>
@@ -655,9 +275,9 @@
     <div class="footer__grid">
       <div>
         <div class="footer__brand-mark"><img src="brand/cp-monogram.png" alt="Carson Poore Consulting" width="56" height="56" /></div>
-        <div class="footer__brand">Carson Poore <span style="color: var(--muted);">/ Consulting</span></div>
+        <div class="footer__brand">Carson Poore <span>/ Consulting</span></div>
         <p class="footer__tag">Full-service marketing for small businesses ready to be the obvious choice.</p>
-        <p style="color: var(--text-2);">Indianapolis, Indiana<br/><a href="mailto:carsonpoore@gmail.com" class="tlink">carsonpoore@gmail.com</a></p>
+        <p>Indianapolis, Indiana<br/><a href="mailto:carsonpoore@gmail.com" class="tlink">carsonpoore@gmail.com</a></p>
       </div>
       <div><h4>Site</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="method.html">Method</a></li><li><a href="investment.html">Investment</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
       <div><h4>Start</h4><ul><li><a href="contact.html">Book a discovery call</a></li><li><a href="mailto:carsonpoore@gmail.com">Email Carson</a></li><li><a href="work.html">Work</a></li></ul></div>
@@ -666,18 +286,7 @@
   </div>
 </footer>
 
-<button class="tweaks-toggle" aria-label="Open design tweaks"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button>
-<aside class="tweaks" aria-label="Design tweaks">
-  <div class="tweaks__head"><span class="tweaks__title">Tweaks</span><button class="tweaks__close" aria-label="Close">×</button></div>
-  <div class="tweaks__row"><span class="tweaks__label">Accent color</span><div class="swatches">
-      <button class="swatch" data-accent="copper" aria-label="Brand copper" style="--c: #9f7557;"></button>
-      <button class="swatch" data-accent="rose" aria-label="Brand rose clay" style="--c: #a27164;"></button>
-      <button class="swatch" data-accent="slate" aria-label="Brand slate" style="--c: #617e82;"></button>
-      <button class="swatch" data-accent="black" aria-label="Black" style="--c: #1a1a1a;"></button>
-  </div></div>
-</aside>
-
-<script src="site.js"></script>
-<script src="motion.js"></script>
+<script src="site.js?v=20260907"></script>
+<script src="motion.js?v=20260907"></script>
 </body>
 </html>
