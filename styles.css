@@ -1746,3 +1746,189 @@ a { color: inherit; text-decoration: none; }
 
 /* Prevent horizontal scroll */
 html, body { overflow-x: clip; }
+
+/* ==========================================================================
+   Ticket landing (/ticket)
+   ========================================================================== */
+
+.ticket-hero {
+  background: var(--bone);
+  padding-top: clamp(56px, 7vw, 100px);
+  padding-bottom: clamp(48px, 6vw, 88px);
+  position: relative;
+  overflow: hidden;
+}
+.ticket-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(1200px 600px at 90% -10%, rgba(224, 160, 48, 0.10), transparent 60%),
+    radial-gradient(900px 500px at -10% 110%, rgba(30, 79, 216, 0.08), transparent 60%);
+  pointer-events: none;
+}
+.ticket-hero > .wrap { position: relative; }
+.ticket-hero h1 {
+  font-size: var(--step-5);
+  max-width: 22ch;
+  color: var(--ink);
+  margin-top: clamp(16px, 2vw, 24px);
+}
+.ticket-hero .hero__sub {
+  color: var(--ink-2);
+  max-width: 56ch;
+  margin-top: clamp(16px, 2vw, 22px);
+  margin-bottom: clamp(36px, 5vw, 56px);
+}
+
+/* Digital ticket card — echoes the printed stub */
+.ticket-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 88px 1fr auto;
+  align-items: stretch;
+  background: var(--bone-2);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow-1);
+  overflow: hidden;
+  min-height: 220px;
+}
+.ticket-card__stub {
+  background: var(--amber);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ticket-card__stub::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: 0; bottom: 0;
+  width: 2px;
+  background-image: radial-gradient(circle, var(--bone-2) 2px, transparent 2.5px);
+  background-size: 2px 10px;
+  background-repeat: repeat-y;
+}
+.ticket-card__stub-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 700;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.ticket-card__body {
+  padding: clamp(22px, 3vw, 36px) clamp(22px, 3vw, 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+.ticket-card__label {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  font-weight: 700;
+}
+.ticket-card__title {
+  color: var(--cobalt);
+  font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.6rem);
+  line-height: 0.98;
+  letter-spacing: -0.028em;
+  font-weight: 900;
+  max-width: 22ch;
+}
+.ticket-card__with {
+  display: block;
+  color: var(--ink);
+  font-size: clamp(0.82rem, 0.78rem + 0.2vw, 0.95rem);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 12px;
+}
+.ticket-card__rule {
+  height: 2px;
+  width: min(320px, 55%);
+  background: var(--cobalt);
+  border-radius: 2px;
+  margin-top: 4px;
+}
+.ticket-card__tag {
+  font-style: italic;
+  color: var(--ink-2);
+  font-size: 1.02rem;
+}
+.ticket-card__mark {
+  align-self: center;
+  padding-right: clamp(22px, 3vw, 40px);
+  padding-left: 12px;
+}
+.ticket-card__mark img {
+  display: block;
+  width: clamp(56px, 8vw, 88px);
+  height: auto;
+}
+@media (max-width: 720px) {
+  .ticket-card { grid-template-columns: 56px 1fr; }
+  .ticket-card__mark { display: none; }
+  .ticket-card__stub-text { font-size: 0.64rem; letter-spacing: 0.18em; }
+  .ticket-card__rule { width: 70%; }
+}
+
+/* What we'll cover */
+.ticket-covers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 2.4vw, 32px);
+  margin-top: clamp(32px, 4vw, 52px);
+}
+@media (max-width: 900px) { .ticket-covers { grid-template-columns: 1fr; } }
+.ticket-cover {
+  background: var(--bone);
+  border: 1px solid var(--line-soft);
+  border-radius: 14px;
+  padding: clamp(22px, 2.4vw, 32px);
+  position: relative;
+}
+.ticket-cover__idx {
+  font-family: var(--sans);
+  font-weight: 800;
+  color: var(--amber);
+  font-size: 0.86rem;
+  letter-spacing: 0.12em;
+  font-variant-numeric: tabular-nums;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+.ticket-cover h3 {
+  font-size: clamp(1.15rem, 1.02rem + 0.6vw, 1.45rem);
+  letter-spacing: -0.014em;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.ticket-cover p {
+  color: var(--ink-2);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Fine print */
+.ticket-fineprint p {
+  text-align: center;
+  color: var(--ink-2);
+  font-size: 0.98rem;
+  max-width: 62ch;
+  margin-inline: auto;
+  line-height: 1.6;
+}
+.ticket-fineprint strong { color: var(--ink); font-weight: 700; }
+
