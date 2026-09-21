@@ -82,4 +82,4 @@ Everything is plain HTML. Edit pages directly. Shared styles in `styles.css`. Ca
 
 ## Contact
 
-[carsonpoore@gmail.com](mailto:carsonpoore@gmail.com)
+[carson@carsonpoore.com](mailto:carson@carsonpoore.com)

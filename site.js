@@ -139,7 +139,7 @@
           const { d, m, y } = selectedDay;
           confirmEl.innerHTML = `
             <strong>Picked.</strong> ${["Sun","Mon","Tue","Wed","Thu","Fri","Sat"][new Date(y,m,d).getDay()]}, ${months[m]} ${d} at ${t} ET.
-            In the real build this connects to Cal.com — for now, email <a href="mailto:carsonpoore@gmail.com" class="tlink">carsonpoore@gmail.com</a> and we'll confirm.
+            In the real build this connects to Cal.com — for now, email <a href="mailto:carson@carsonpoore.com" class="tlink">carson@carsonpoore.com</a> and we'll confirm.
           `;
           confirmEl.classList.add("is-on");
         });
