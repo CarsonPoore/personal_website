@@ -11,7 +11,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
 <link rel="icon" type="image/svg+xml" href="brand/cpc-mark-royalblue.svg" />
-<link rel="stylesheet" href="styles.css?v=20261003-2" />
+<link rel="stylesheet" href="styles.css?v=20261003-3" />
+<link rel="stylesheet" href="motion-c.css?v=20261003-3" />
 </head>
 <body class="page">
 
@@ -35,16 +36,22 @@
 
   <section class="hero page-hero">
     <div class="wrap">
-      <span class="eyebrow reveal">Contact</span>
-      <h1 class="reveal mt-md" data-delay="1">Let&rsquo;s talk about <em>your business.</em></h1>
-      <p class="hero__sub reveal mt-md" data-delay="2">A discovery call is a real conversation. We&rsquo;ll talk about where things stand, what&rsquo;s getting in the way, and whether we&rsquo;re the right fit to help. No pitch, no pressure.</p>
+      <div class="page-hero__grid c-contact-grid">
+        <div class="page-hero__copy">
+          <span class="eyebrow reveal">Contact</span>
+          <h1 class="reveal mt-md" data-delay="1">Let&rsquo;s talk about <em>your business.</em></h1>
+          <p class="hero__sub reveal mt-md" data-delay="2">A discovery call is a real conversation. We&rsquo;ll talk about where things stand, what&rsquo;s getting in the way, and whether we&rsquo;re the right fit to help. No pitch, no pressure.</p>
+        </div>
+        <div class="c-contact-path reveal" data-delay="2" aria-hidden="true"><video class="motion-loop " muted loop playsinline preload="none" poster="media/motion/c-contact-path.png" data-webm="media/motion/c-contact-path.webm" data-hevc="media/motion/c-contact-path-hevc.mp4" width="1040" height="460" aria-hidden="true"></video></div>
+      </div>
     </div>
   </section>
 
   <section class="section section--tight" style="padding-top: 0;">
     <div class="wrap">
 
-      <!-- SCHEDULING — Cal.com embed -->
+      <!-- SCHEDULING — Cal.com embed (the ruler above measures the 30-minute call) -->
+      <div class="c-ruler" aria-hidden="true"><video class="motion-loop " muted loop playsinline preload="none" poster="media/motion/c-cal-ruler.png" data-webm="media/motion/c-cal-ruler.webm" data-hevc="media/motion/c-cal-ruler-hevc.mp4" width="1600" height="120" aria-hidden="true"></video></div>
       <div class="cal-embed reveal">
         <!-- Cal inline embed code begins -->
         <div style="width:100%;min-height:660px;overflow:hidden" id="my-cal-inline-30min"></div>
@@ -88,6 +95,9 @@
     </div>
   </section>
 
+  <!-- Seam band: straddles the section above and the footer -->
+  <div class="c-seam" aria-hidden="true"><video class="motion-loop " muted loop playsinline preload="none" poster="media/motion/c-handoff.png" data-webm="media/motion/c-handoff.webm" data-hevc="media/motion/c-handoff-hevc.mp4" width="1920" height="200" aria-hidden="true"></video></div>
+
 </main>
 
 <footer class="footer">
@@ -106,7 +116,7 @@
   </div>
 </footer>
 
-<script src="site.js?v=20261003-2"></script>
+<script src="site.js?v=20261003-3"></script>
 <script src="motion.js?v=20261003-1"></script>
 </body>
 </html>

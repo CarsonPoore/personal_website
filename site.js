@@ -202,6 +202,14 @@
   if (!vids.length) return;
   const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
 
+  // Transparent loops carry data-webm (VP9 alpha) + data-hevc (HEVC alpha).
+  // WebKit (Safari, every iOS browser) only renders alpha from HEVC.
+  const ua = navigator.userAgent;
+  const webkitOnly = /AppleWebKit/.test(ua) && !/Chrome|Chromium|Edg|Firefox|OPR/.test(ua);
+  vids.forEach(v => {
+    if (v.dataset.webm && !v.getAttribute("src")) v.src = webkitOnly ? (v.dataset.hevc || v.dataset.webm) : v.dataset.webm;
+  });
+
   vids.forEach(v => {
     // JS takes over playback from the autoplay attribute
     v.removeAttribute("autoplay");

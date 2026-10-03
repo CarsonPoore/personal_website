@@ -12,7 +12,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
 <link rel="icon" type="image/svg+xml" href="brand/cpc-mark-royalblue.svg" />
-<link rel="stylesheet" href="styles.css?v=20261003-2" />
+<link rel="stylesheet" href="styles.css?v=20261003-3" />
+<link rel="stylesheet" href="motion-a.css?v=20261003-3" />
 </head>
 <body class="page">
 
@@ -44,9 +45,10 @@
   <section class="ticket-hero">
     <div class="wrap">
       <span class="eyebrow reveal">Ticket redeemed</span>
-      <h1 class="reveal mt-md" data-delay="1">You made it. Now let&rsquo;s put those <em>45 minutes</em> on the calendar.</h1>
+      <h1 class="reveal mt-md" data-delay="1">You made it. Now let&rsquo;s put those <em>45 minutes</em><span class="a-dial" aria-hidden="true"><video class="motion-loop a-layer" muted loop playsinline preload="none" poster="media/motion/a-ticket-dial.png" data-webm="media/motion/a-ticket-dial.webm" data-hevc="media/motion/a-ticket-dial-hevc.mp4" width="160" height="160" aria-hidden="true"></video></span> on the calendar.</h1>
       <p class="hero__sub reveal mt-md" data-delay="2">No pitch. No slides. Just your plan. Pick a time below and tell me a little about your business so we can spend the whole 45 on the work.</p>
 
+      <div class="a-ticket-host">
       <div class="ticket-card reveal" data-delay="3" aria-label="Your ticket">
         <div class="ticket-card__stub">
           <span class="ticket-card__stub-text">Ticket No. <span id="ticket-num">___</span> · One of 100 issued</span>
@@ -60,6 +62,9 @@
         <div class="ticket-card__mark" aria-hidden="true">
           <img src="brand/cpc-mark-navy.svg" alt="" width="72" height="72" />
         </div>
+      </div>
+      <!-- motion A: the tear line runs past the card; a gold cutter punches it -->
+      <video class="motion-loop a-layer a-ticket-perf" muted loop playsinline preload="none" poster="media/motion/a-ticket-perf.png" data-webm="media/motion/a-ticket-perf.webm" data-hevc="media/motion/a-ticket-perf-hevc.mp4" width="120" height="720" aria-hidden="true"></video>
       </div>
     </div>
   </section>
@@ -203,7 +208,7 @@
     } catch (e) {}
   })();
 </script>
-<script src="site.js?v=20261003-2"></script>
+<script src="site.js?v=20261003-3"></script>
 <script src="motion.js?v=20261003-1"></script>
 </body>
 </html>

@@ -1,0 +1,113 @@
+/* Motion group A: Remotion loops that live on the page itself (source: motion/src/v2/a).
+   No frames, no cards. Transparent overlays sit directly on the surface they belong to;
+   two opaque loops are full-bleed backgrounds. All decorative: pointer-events off,
+   aria-hidden in markup, playback handled by site.js (.motion-loop). */
+
+.a-layer { pointer-events: none; }
+video.a-layer { display: block; background: transparent; }
+
+/* Home hero: measured route strip under the CTAs, drawn on the Blueprint grid.
+   Spans the .wrap content width; sits in the hero's bottom padding. */
+.hero > .a-hero-route {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  z-index: 0;
+}
+.a-hero-route video { width: 100%; height: auto; aspect-ratio: 1920 / 160; }
+
+/* Home: seam hanging off the marquee's bottom border into "What we do". */
+.a-seam { position: relative; height: 0; z-index: 2; pointer-events: none; }
+.a-seam video { position: absolute; left: 0; top: 0; width: 100%; height: auto; aspect-ratio: 1920 / 200; }
+
+/* Home "What we do": connector threaded behind the three circle icons.
+   Canvas icon centres are at 100 / 1000 / 1900 of 2000px; --d = icon 1 → icon 3. */
+.a-svc { position: relative; }
+.a-svc .icon-tile__icon { position: relative; z-index: 1; }
+.a-svc-link {
+  --d: calc((200% + 2 * clamp(20px, 3vw, 40px)) / 3);
+  position: absolute;
+  z-index: 0;
+  top: 32px;
+  left: calc(32px - var(--d) * 0.055556);
+  width: calc(var(--d) * 1.111111);
+  height: auto;
+  aspect-ratio: 2000 / 200;
+  transform: translateY(-50%);
+}
+
+/* Home "Our approach": rail set into the left edge of the 01–04 list (rows = quarters). */
+.a-rail-host { position: relative; }
+.a-rail {
+  position: absolute;
+  left: -18px; top: 1em;   /* the <ol> keeps its 1em block margins inside the host */
+  width: 56px; height: calc(100% - 2em);
+  object-fit: fill;
+  z-index: 1;
+}
+
+/* Home "Fit": sorter threaded down the gutter between the two fit cards. */
+.a-fit-host { position: relative; }
+.a-fit-sort {
+  position: absolute;
+  left: 50%; top: -56px;
+  width: 120px; height: auto;
+  aspect-ratio: 240 / 720;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* Home closing band: full-bleed low-contrast blueprint behind the copy. */
+.a-closing-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: right center;
+}
+
+/* Ticket: inline 45-minute dial beside the words "45 minutes". */
+.a-dial {
+  display: inline-block;
+  width: 0.72em; height: 0.72em;
+  margin-left: 0.14em;
+  vertical-align: -0.02em;
+  pointer-events: none;
+}
+.a-dial video { display: block; width: 100%; height: 100%; }
+
+/* Ticket: the stub's tear line, extended past the card's top and bottom edges. */
+.a-ticket-host { position: relative; }
+.a-ticket-perf {
+  position: absolute;
+  left: 58px;            /* centred on the 88px stub edge */
+  top: -28px;            /* stays clear of the paragraph above (>= 36px margin) */
+  width: 60px;
+  height: calc(100% + 76px);
+  object-fit: cover;
+  z-index: 2;
+}
+
+/* 404: route-finding blueprint behind the message. */
+.nf { position: relative; overflow: hidden; }
+.nf > div { position: relative; z-index: 1; }
+.a-nf-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: 64% center;
+}
+
+/* Hide decorative layers where they'd clutter (hidden videos never load). */
+@media (max-width: 900px) {
+  video.a-fit-sort { display: none; }
+}
+@media (max-width: 780px) {
+  video.a-svc-link { display: none; }
+}
+@media (max-width: 720px) {
+  .a-ticket-perf { left: 26px; } /* stub is 56px wide here */
+}
+@media (max-width: 640px) {
+  .hero > .a-hero-route, .a-seam, video.a-rail, video.a-closing-bg { display: none; }
+}

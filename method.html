@@ -11,7 +11,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
 <link rel="icon" type="image/svg+xml" href="brand/cpc-mark-royalblue.svg" />
-<link rel="stylesheet" href="styles.css?v=20261003-2" />
+<link rel="stylesheet" href="styles.css?v=20261003-3" />
+<link rel="stylesheet" href="motion-b.css?v=20261003-3" />
 <style>
   /* Method page — layout tweaks on top of the shared step styles */
   .step {
@@ -82,8 +83,9 @@
     </div>
   </section>
 
-  <section class="section section--tight">
-    <div class="wrap">
+  <section class="section section--tight b-clip-x">
+    <div class="wrap b-start-host">
+      <video class="motion-loop b-loop b-method-start" muted loop playsinline preload="none" width="160" height="220" poster="media/motion/b-method-start.png" data-webm="media/motion/b-method-start.webm" data-hevc="media/motion/b-method-start-hevc.mp4" aria-hidden="true"></video>
       <div class="method-grid">
 
         <!-- RAIL -->
@@ -97,7 +99,8 @@
 
         <!-- STEPS -->
         <div>
-          <article class="step" id="s1">
+          <article class="step b-found-host" id="s1">
+            <video class="motion-loop b-loop b-method-foundation" muted loop playsinline preload="none" width="1920" height="480" poster="media/motion/b-method-foundation.png" data-webm="media/motion/b-method-foundation.webm" data-hevc="media/motion/b-method-foundation-hevc.mp4" aria-hidden="true"></video>
             <div class="step__head">
               <span class="step__num">01</span>
               <h2 class="step__label">Conviction</h2>
@@ -129,7 +132,8 @@
             <p class="step__body">Now the experience itself, every touchpoint from first impression to repeat visit. Here&rsquo;s the truth most marketing misses: your marketing IS the experience of being your customer. We design those moments on purpose, so the business itself does the work.</p>
           </article>
 
-          <article class="step" id="s5">
+          <article class="step b-comp-host" id="s5">
+            <video class="motion-loop b-loop b-method-compound" muted loop playsinline preload="none" width="520" height="520" poster="media/motion/b-method-compound.png" data-webm="media/motion/b-method-compound.webm" data-hevc="media/motion/b-method-compound-hevc.mp4" aria-hidden="true"></video>
             <div class="step__head">
               <span class="step__num">05</span>
               <h2 class="step__label">Word of mouth, on purpose</h2>
@@ -173,7 +177,7 @@
   </div>
 </footer>
 
-<script src="site.js?v=20261003-2"></script>
+<script src="site.js?v=20261003-3"></script>
 <script src="motion.js?v=20261003-1"></script>
 <script>
   // Method rail: scroll-driven active state

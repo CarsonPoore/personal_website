@@ -1,0 +1,122 @@
+/* Motion group B — transparent loops that live on the page itself (services, method,
+   investment). Source: motion/src/v2/b. All decorative: no pointer events, no layout
+   they can break, hidden where they would clutter. Flat only: no gradients. */
+
+video.b-loop { pointer-events: none; background: transparent; user-select: none; }
+
+/* Sections that let an overlay run past the wrap without causing horizontal scroll.
+   overflow-x: clip (not hidden) keeps the sticky method rail working and lets
+   overlays still reach upward into the previous section. */
+.b-clip-x { position: relative; overflow-x: clip; }
+
+/* ---------- services.html ---------- */
+
+/* b-svc-spine: one thread down the left edge linking the four services */
+.b-svc-host { position: relative; }
+video.b-svc-spine {
+  position: absolute;
+  top: 0;
+  left: -64px;
+  width: 48px;
+  height: 100%;
+  object-fit: fill;
+}
+@media (max-width: 1399px) { video.b-svc-spine { left: -42px; width: 40px; } }
+@media (max-width: 1099px) { video.b-svc-spine { display: none; } }
+
+/* b-svc-engine: the systems circuit, under the 03 / Systems copy */
+video.b-svc-engine {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  aspect-ratio: 5 / 1;
+  margin-top: clamp(22px, 2.6vw, 32px);
+}
+@media (max-width: 640px) { video.b-svc-engine { display: none; } }
+
+/* b-svc-traced: full-bleed strategy line under the list */
+video.b-svc-traced {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1920 / 280;
+  margin-top: clamp(28px, 4vw, 56px);
+  margin-bottom: clamp(-40px, -2vw, -16px);
+}
+@media (max-width: 759px) { video.b-svc-traced { display: none; } }
+
+/* ---------- method.html ---------- */
+
+/* b-method-start: gold plumb line from the hero down onto rail step 01 */
+.b-start-host { position: relative; }
+video.b-method-start {
+  position: absolute;
+  bottom: 100%;
+  left: calc(var(--gutter) - 38px);
+  width: 160px;
+  height: 220px;
+  margin-bottom: -2px;
+  z-index: 2;
+}
+/* Below ~1380px the line would cross the hero's bottom-left Blueprint bracket, so it only
+   reaches just past the hero edge (cropped from the top, same scale). */
+@media (max-width: 1379px) {
+  video.b-method-start {
+    height: calc(clamp(56px, 8vw, 110px) + 20px);
+    object-fit: cover;
+    object-position: center bottom;
+  }
+}
+@media (max-width: 900px) { video.b-method-start { display: none; } }
+
+/* b-method-foundation: full-bleed hairline grid behind step 01, standing on its base */
+.b-found-host { position: relative; }
+.b-found-host > :not(video) { position: relative; z-index: 1; }
+video.b-method-foundation {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -50vw;
+  width: calc(100% + 100vw);
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  z-index: 0;
+}
+
+/* b-method-compound: word of mouth rings, bleeding off the right edge beside step 05 */
+.b-comp-host { position: relative; }
+.b-comp-host > :not(video) { position: relative; z-index: 1; }
+video.b-method-compound {
+  position: absolute;
+  top: 58%;
+  right: calc(-1 * (var(--gutter) + max(0px, (100vw - var(--max)) / 2)) - 270px);
+  width: 520px;
+  height: 520px;
+  translate: 0 -50%;
+  z-index: 0;
+}
+@media (max-width: 900px) { video.b-method-compound { display: none; } }
+
+/* ---------- investment.html ---------- */
+
+/* b-retainer-cadence: full-bleed month-by-month band under the tiers */
+video.b-retainer-cadence {
+  width: 100vw;
+  max-width: none;
+  height: auto;
+  aspect-ratio: 1920 / 240;
+  margin-left: calc(50% - 50vw);
+  margin-top: clamp(28px, 4vw, 48px);
+  margin-bottom: clamp(-24px, -1vw, -8px);
+}
+@media (max-width: 759px) { video.b-retainer-cadence { display: none; } }
+
+/* b-eight-seats: inline, sized to the line of text it sits in */
+video.b-eight-seats {
+  display: inline-block;
+  width: auto;
+  height: 1.3em;
+  aspect-ratio: 600 / 84;
+  vertical-align: -0.28em;
+  margin-left: 0.35em;
+}

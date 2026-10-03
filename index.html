@@ -12,7 +12,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
 <link rel="icon" type="image/svg+xml" href="brand/cpc-mark-royalblue.svg" />
-<link rel="stylesheet" href="styles.css?v=20261003-2" />
+<link rel="stylesheet" href="styles.css?v=20261003-3" />
+<link rel="stylesheet" href="motion-a.css?v=20261003-3" />
 </head>
 <body class="page">
 
@@ -59,13 +60,15 @@
         <div class="hero__media reveal" data-delay="2">
           <div class="hero__block-a" aria-hidden="true"></div>
           <div class="hero__media-img">
-            <img src="https://images.unsplash.com/photo-1543764477-646365e11da3?w=1200&amp;q=80&amp;auto=format&amp;fit=crop&amp;ar=3:4" alt="Workshop owner standing in his shop, an American flag hanging behind him" width="900" height="1200" fetchpriority="high" style="width:100%; height:100%; object-fit:cover; display:block;" /><!-- Photo: Jonathon Dorofy / Unsplash -->
+            <img src="https://images.unsplash.com/photo-1632862378103-8248dccb7e3d?w=1200&amp;q=80&amp;auto=format&amp;fit=crop&amp;ar=3:4" alt="A small construction crew leaning over a set of plans at a job site" width="900" height="1200" fetchpriority="high" style="width:100%; height:100%; object-fit:cover; display:block;" /><!-- Photo: Nate Johnston / Unsplash -->
           </div>
           <div class="hero__block-b" aria-hidden="true"></div>
           <div class="hero__block-c" aria-hidden="true"></div>
         </div>
       </div>
     </div>
+    <!-- motion A: measured route (see it / choose it / come back) on the Blueprint grid -->
+    <div class="wrap a-hero-route a-layer" aria-hidden="true"><video class="motion-loop a-layer" muted loop playsinline preload="none" poster="media/motion/a-hero-route.png" data-webm="media/motion/a-hero-route.webm" data-hevc="media/motion/a-hero-route-hevc.mp4" width="1920" height="160" aria-hidden="true"></video></div>
     <div class="hero__coords" aria-hidden="true">
       <div>Higher<br/>brands<br/>brighter<br/>futures</div>
       <div>39.7684&deg; N<br/>86.1581&deg; W</div>
@@ -81,6 +84,9 @@
     </div>
   </section>
 
+  <!-- motion A: four separate rules hang off the marquee and join into one system -->
+  <div class="a-seam" aria-hidden="true"><video class="motion-loop a-layer" muted loop playsinline preload="none" poster="media/motion/a-seam-one.png" data-webm="media/motion/a-seam-one.webm" data-hevc="media/motion/a-seam-one-hevc.mp4" width="1920" height="200" aria-hidden="true"></video></div>
+
   <!-- WHAT WE DO — cream section with circle icon services -->
   <section class="section">
     <div class="wrap">
@@ -92,7 +98,8 @@
         <p class="sec-head__intro reveal" data-delay="2">From strategy to execution, we build marketing that stands out, connects deeper, and drives results. Everything below runs as one system, not four separate vendors.</p>
       </div>
 
-      <div class="icon-tiles">
+      <div class="icon-tiles a-svc">
+        <video class="motion-loop a-layer a-svc-link" muted loop playsinline preload="none" poster="media/motion/a-services-link.png" data-webm="media/motion/a-services-link.webm" data-hevc="media/motion/a-services-link-hevc.mp4" width="2000" height="200" aria-hidden="true"></video>
         <div class="icon-tile reveal">
           <span class="icon-tile__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><rect x="5" y="10" width="3" height="8"/><rect x="10.5" y="6" width="3" height="12"/><rect x="16" y="12" width="3" height="6"/></svg>
@@ -191,12 +198,15 @@
             <a href="method.html" class="tlink">Learn more about our process <span aria-hidden="true">→</span></a>
           </div>
         </div>
+        <div class="a-rail-host">
+        <video class="motion-loop a-layer a-rail" muted loop playsinline preload="none" poster="media/motion/a-approach-rail.png" data-webm="media/motion/a-approach-rail.webm" data-hevc="media/motion/a-approach-rail-hevc.mp4" width="112" height="540" aria-hidden="true"></video>
         <ol class="process-list reveal" data-delay="1">
           <li><span>01</span><span>Discover</span></li>
           <li><span>02</span><span>Strategize</span></li>
           <li><span>03</span><span>Create</span></li>
           <li><span>04</span><span>Launch</span></li>
         </ol>
+        </div>
       </div>
     </div>
   </section>
@@ -214,7 +224,8 @@
         </p>
       </div>
 
-      <div class="fit-grid">
+      <div class="fit-grid a-fit-host">
+        <video class="motion-loop a-layer a-fit-sort" muted loop playsinline preload="none" poster="media/motion/a-fit-sort.png" data-webm="media/motion/a-fit-sort.webm" data-hevc="media/motion/a-fit-sort-hevc.mp4" width="240" height="720" aria-hidden="true"></video>
         <div class="fit-card fit-card__yes reveal">
           <span class="label">A good fit if</span>
           <ul>
@@ -238,6 +249,7 @@
 
   <!-- CLOSING CTA — full-bleed cobalt band -->
   <section class="closing">
+    <video class="motion-loop a-layer a-closing-bg" autoplay muted loop playsinline preload="none" poster="media/motion/a-closing-field.jpg" aria-hidden="true"><source src="media/motion/a-closing-field.webm" type="video/webm" /><source src="media/motion/a-closing-field.mp4" type="video/mp4" /></video>
     <div class="closing__inner">
       <div class="reveal">
         <span class="eyebrow">Ready to build?</span>
@@ -288,7 +300,7 @@
   </div>
 </footer>
 
-<script src="site.js?v=20261003-2"></script>
+<script src="site.js?v=20261003-3"></script>
 <script src="motion.js?v=20261003-1"></script>
 </body>
 </html>

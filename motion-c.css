@@ -1,0 +1,117 @@
+/* Motion group C — about / work / contact.
+   Transparent Remotion loops (source: motion/src/v2/c/) set directly on the page,
+   no frames or cards. Every layer is decorative: pointer-events none, aria-hidden,
+   flat colour only (no gradients). site.js handles playback + reduced motion. */
+
+/* ── About / Founder: Blueprint overlay that measures the portrait ──────────
+   Canvas 520x620; the portrait sits at x 60..460, y 60..560, i.e. a 15% margin
+   on every side of the portrait width. margin-top % resolves against width. */
+.c-founder-host { overflow-x: clip; }
+.c-founder { position: relative; }
+.c-founder .c-founder__frame {
+  position: absolute;
+  left: -15%;
+  top: 0;
+  width: 130%;
+  height: auto;
+  margin-top: -15%;
+  pointer-events: none;
+  z-index: 1;
+}
+@media (max-width: 800px) { .c-founder .c-founder__frame { display: none; } }
+
+/* ── About / Mission: full-bleed road network behind the stone band ───────── */
+.c-roads { position: relative; overflow: hidden; }
+.c-roads > .wrap { position: relative; z-index: 1; }
+.c-roads .c-roads__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 82% 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+@media (max-width: 640px) { .c-roads .c-roads__bg { display: none; } }
+
+/* ── About / Values: inline glyphs, one 4-cell strip cropped per value ────── */
+.c-glyph-name::before { display: none; }
+.value__name .c-glyph {
+  flex: none;
+  width: 42px;
+  height: 42px;
+  margin-block: -6px;
+  object-fit: cover;
+  pointer-events: none;
+}
+.value__name .c-glyph--1 { object-position: 0% 50%; }
+.value__name .c-glyph--2 { object-position: 33.333% 50%; }
+.value__name .c-glyph--3 { object-position: 66.667% 50%; }
+.value__name .c-glyph--4 { object-position: 100% 50%; }
+
+/* ── Work / hero: oversized ghost mark, bleeding off the bottom-left ─────── */
+.c-ghost {
+  position: absolute;
+  left: -5%;
+  bottom: -38%;
+  width: min(70vw, 1000px);
+  pointer-events: none;
+  z-index: 0;
+}
+.c-ghost .motion-loop { width: 100%; height: auto; }
+@media (max-width: 640px) { .c-ghost { display: none; } }
+
+/* ── Work: a case-study layout being drafted inside the holding box ────────
+   Sits behind the copy; the centre of the canvas is kept clear for the text. */
+.c-draft-host { position: relative; overflow: hidden; }
+.c-draft-host > :not(.c-draft) { position: relative; z-index: 1; }
+.c-draft-host .c-draft {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: 0;
+}
+@media (max-width: 760px) { .c-draft-host .c-draft { display: none; } }
+
+/* ── Contact / hero: conversation → plan, running off the right edge ──────── */
+.c-contact-path {
+  /* extend the column to the viewport's right edge; the hero clips the overflow */
+  --c-bleed: calc(var(--gutter) + max(0px, (100vw - var(--max)) / 2));
+  width: calc(100% + var(--c-bleed));
+  margin-right: calc(-1 * var(--c-bleed));
+  justify-self: start;
+  pointer-events: none;
+}
+.c-contact-path .motion-loop { width: 100%; height: auto; }
+@media (max-width: 900px) { .c-contact-path { margin-top: clamp(8px, 3vw, 24px); } }
+@media (max-width: 640px) { .c-contact-path { display: none; } }
+
+/* ── Contact: ruler measuring the 30-minute call, above the scheduler ────── */
+.c-ruler {
+  width: 100%;
+  margin-bottom: clamp(6px, 1vw, 12px);
+  pointer-events: none;
+}
+.c-ruler .motion-loop { width: 100%; height: auto; }
+@media (max-width: 820px) { .c-ruler { display: none; } }
+
+/* ── Contact: seam band straddling "Before the call" and the footer ──────── */
+.c-seam {
+  position: relative;
+  height: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+.c-seam .motion-loop {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  transform: translateY(-50%);
+}
+@media (max-width: 640px) { .c-seam { display: none; } }
