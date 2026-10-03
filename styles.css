@@ -1950,3 +1950,38 @@ html, body { overflow-x: clip; }
 .bp__label--tl { top: clamp(16px, 2.2vw, 30px); left: clamp(40px, 4.6vw, 64px); }
 .bp__label--br { bottom: clamp(16px, 2.2vw, 30px); right: clamp(40px, 4.6vw, 64px); }
 @media (max-width: 640px) { .bp__label--br { display: none; } }
+
+/* Motion loops — Remotion-rendered, muted, decorative (source: motion/).
+   Each video's background is the exact surface color it sits on; the hairline
+   frame makes the edge deliberate. Flat only: no shadows, no gradients. */
+.motion-frame {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.motion-frame--hero { background: var(--navy); border: 1px solid rgba(248, 247, 244, 0.14); }
+.motion-frame--light { background: var(--stone-2); border: 1px solid var(--line-soft); }
+.motion-loop {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: transparent;
+}
+
+/* Inner-page heroes: copy left, motion panel right */
+.page-hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+}
+.page-hero__copy { min-width: 0; }
+.page-hero__motion { width: 100%; max-width: 520px; justify-self: end; }
+@media (max-width: 900px) {
+  .page-hero__grid { grid-template-columns: 1fr; }
+  .page-hero__motion { justify-self: start; max-width: 480px; }
+}
+
+/* Home / The problem: copy then the tactics-to-system figure */
+.split--top { align-items: start; }
+.problem__body { display: flex; flex-direction: column; gap: clamp(28px, 3.5vw, 40px); min-width: 0; }

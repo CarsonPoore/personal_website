@@ -195,3 +195,51 @@
     hero.insertBefore(bp, hero.firstChild);
   });
 })();
+
+// Motion loops — play only while on screen; honor reduced motion (poster only)
+(function () {
+  const vids = document.querySelectorAll("video.motion-loop");
+  if (!vids.length) return;
+  const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  vids.forEach(v => {
+    // JS takes over playback from the autoplay attribute
+    v.removeAttribute("autoplay");
+    v.autoplay = false;
+    v.muted = true;
+    if (!v.paused) v.pause();
+  });
+
+  const play = v => {
+    if (mq.matches) return;
+    if (v.preload === "none") v.preload = "auto";
+    const p = v.play();
+    if (p && p.catch) p.catch(() => {});
+  };
+
+  if (!("IntersectionObserver" in window)) {
+    vids.forEach(play);
+    return;
+  }
+
+  const visible = new Set();
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { visible.add(e.target); play(e.target); }
+      else { visible.delete(e.target); e.target.pause(); }
+    });
+  }, { threshold: 0.25 });
+  vids.forEach(v => io.observe(v));
+
+  // React if the user toggles reduced motion while the page is open
+  const onChange = () => {
+    if (mq.matches) vids.forEach(v => { v.pause(); try { v.currentTime = 0; } catch (e) {} });
+    else visible.forEach(play);
+  };
+  // Resume after a background tab becomes visible again
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) visible.forEach(play);
+  });
+  if (mq.addEventListener) mq.addEventListener("change", onChange);
+  else if (mq.addListener) mq.addListener(onChange);
+})();
