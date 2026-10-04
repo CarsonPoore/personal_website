@@ -1,2 +1,3 @@
 motion/node_modules
 motion/out
+.playwright-mcp/

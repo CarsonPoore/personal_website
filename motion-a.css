@@ -15,9 +15,7 @@ video.a-layer { display: block; background: transparent; }
 }
 .a-hero-route video { width: 100%; height: auto; aspect-ratio: 1920 / 160; }
 
-/* Home: seam hanging off the marquee's bottom border into "What we do". */
-.a-seam { position: relative; height: 0; z-index: 2; pointer-events: none; }
-.a-seam video { position: absolute; left: 0; top: 0; width: 100%; height: auto; aspect-ratio: 1920 / 200; }
+
 
 /* Home "What we do": connector threaded behind the three circle icons.
    Canvas icon centres are at 100 / 1000 / 1900 of 2000px; --d = icon 1 → icon 3. */
@@ -43,17 +41,6 @@ video.a-layer { display: block; background: transparent; }
   width: 56px; height: calc(100% - 2em);
   object-fit: fill;
   z-index: 1;
-}
-
-/* Home "Fit": sorter threaded down the gutter between the two fit cards. */
-.a-fit-host { position: relative; }
-.a-fit-sort {
-  position: absolute;
-  left: 50%; top: -56px;
-  width: 120px; height: auto;
-  aspect-ratio: 240 / 720;
-  transform: translateX(-50%);
-  z-index: 2;
 }
 
 /* Home closing band: full-bleed low-contrast blueprint behind the copy. */
@@ -99,9 +86,6 @@ video.a-layer { display: block; background: transparent; }
 }
 
 /* Hide decorative layers where they'd clutter (hidden videos never load). */
-@media (max-width: 900px) {
-  video.a-fit-sort { display: none; }
-}
 @media (max-width: 780px) {
   video.a-svc-link { display: none; }
 }
@@ -109,5 +93,11 @@ video.a-layer { display: block; background: transparent; }
   .a-ticket-perf { left: 26px; } /* stub is 56px wide here */
 }
 @media (max-width: 640px) {
-  .hero > .a-hero-route, .a-seam, video.a-rail, video.a-closing-bg { display: none; }
+  .hero > .a-hero-route, video.a-rail, video.a-closing-bg { display: none; }
 }
+
+/* Home closing: copy + CTA stack on the left so the drafted structure on the
+   right never sits under the button. */
+.closing:has(.a-closing-bg) .closing__inner { grid-template-columns: minmax(0, 1fr); justify-items: start; }
+.closing:has(.a-closing-bg) .closing__inner > * { max-width: 620px; }
+.closing:has(.a-closing-bg) .bp__line { display: none; } /* the loop draws its own grid */

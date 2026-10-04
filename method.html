@@ -11,18 +11,23 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
 <link rel="icon" type="image/svg+xml" href="brand/cpc-mark-royalblue.svg" />
-<link rel="stylesheet" href="styles.css?v=20261003-3" />
-<link rel="stylesheet" href="motion-b.css?v=20261003-3" />
+<link rel="stylesheet" href="styles.css?v=20261003-5" />
+<link rel="stylesheet" href="motion-b.css?v=20261003-5" />
 <style>
   /* Method page — layout tweaks on top of the shared step styles */
+  /* One shared column system for all five steps: number | label, body under the label */
+  .steps-host { --num-col: clamp(132px, 13vw, 196px); --num-gap: clamp(24px, 3vw, 40px); }
   .step {
+    display: block;
     padding-block: clamp(56px, 8vw, 112px);
     scroll-margin-top: 108px;
   }
+  .step__body { margin-left: calc(var(--num-col) + var(--num-gap)); max-width: 52ch; }
+  @media (max-width: 800px) { .step__body { margin-left: 0; } }
   .step__head {
     display: grid;
-    grid-template-columns: auto 1fr;
-    gap: clamp(28px, 4vw, 48px);
+    grid-template-columns: var(--num-col) minmax(0, 1fr);
+    gap: var(--num-gap);
     align-items: baseline;
     margin-bottom: clamp(20px, 3vw, 36px);
   }
@@ -37,9 +42,6 @@
     margin: 0;
     align-self: end;
     padding-bottom: clamp(8px, 1vw, 16px);
-  }
-  .step__body {
-    padding-left: clamp(0px, 8vw, 96px);
   }
   @media (max-width: 760px) {
     .step__head { grid-template-columns: 1fr; gap: 6px; }
@@ -98,9 +100,8 @@
         </aside>
 
         <!-- STEPS -->
-        <div>
-          <article class="step b-found-host" id="s1">
-            <video class="motion-loop b-loop b-method-foundation" muted loop playsinline preload="none" width="1920" height="480" poster="media/motion/b-method-foundation.png" data-webm="media/motion/b-method-foundation.webm" data-hevc="media/motion/b-method-foundation-hevc.mp4" aria-hidden="true"></video>
+        <div class="steps-host">
+          <article class="step" id="s1">
             <div class="step__head">
               <span class="step__num">01</span>
               <h2 class="step__label">Conviction</h2>
@@ -132,8 +133,7 @@
             <p class="step__body">Now the experience itself, every touchpoint from first impression to repeat visit. Here&rsquo;s the truth most marketing misses: your marketing IS the experience of being your customer. We design those moments on purpose, so the business itself does the work.</p>
           </article>
 
-          <article class="step b-comp-host" id="s5">
-            <video class="motion-loop b-loop b-method-compound" muted loop playsinline preload="none" width="520" height="520" poster="media/motion/b-method-compound.png" data-webm="media/motion/b-method-compound.webm" data-hevc="media/motion/b-method-compound-hevc.mp4" aria-hidden="true"></video>
+          <article class="step" id="s5">
             <div class="step__head">
               <span class="step__num">05</span>
               <h2 class="step__label">Word of mouth, on purpose</h2>
@@ -165,8 +165,7 @@
   <div class="wrap">
     <div class="footer__grid">
       <div>
-        <div class="footer__brand-mark"><img src="brand/cpc-mark-offwhite.svg" alt="Carson Poore Consulting" width="56" height="56" /></div>
-        <div class="footer__brand">Carson Poore <span>/ Consulting</span></div>
+        <div class="footer__lockup"><img src="brand/cpc-lockup-white.svg" alt="Carson Poore Consulting" width="232" height="63" /></div>
         <p class="footer__tag">Full-service marketing for small businesses ready to be the obvious choice.</p>
         <p>Indianapolis, Indiana<br/><a href="mailto:carson@carsonpoore.com" class="tlink">carson@carsonpoore.com</a></p>
       </div>
@@ -177,7 +176,7 @@
   </div>
 </footer>
 
-<script src="site.js?v=20261003-3"></script>
+<script src="site.js?v=20261003-5"></script>
 <script src="motion.js?v=20261003-1"></script>
 <script>
   // Method rail: scroll-driven active state

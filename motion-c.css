@@ -3,23 +3,6 @@
    no frames or cards. Every layer is decorative: pointer-events none, aria-hidden,
    flat colour only (no gradients). site.js handles playback + reduced motion. */
 
-/* ── About / Founder: Blueprint overlay that measures the portrait ──────────
-   Canvas 520x620; the portrait sits at x 60..460, y 60..560, i.e. a 15% margin
-   on every side of the portrait width. margin-top % resolves against width. */
-.c-founder-host { overflow-x: clip; }
-.c-founder { position: relative; }
-.c-founder .c-founder__frame {
-  position: absolute;
-  left: -15%;
-  top: 0;
-  width: 130%;
-  height: auto;
-  margin-top: -15%;
-  pointer-events: none;
-  z-index: 1;
-}
-@media (max-width: 800px) { .c-founder .c-founder__frame { display: none; } }
-
 /* ── About / Mission: full-bleed road network behind the stone band ───────── */
 .c-roads { position: relative; overflow: hidden; }
 .c-roads > .wrap { position: relative; z-index: 1; }
@@ -30,6 +13,7 @@
   height: 100%;
   object-fit: cover;
   object-position: 82% 50%;
+  opacity: 0.45; /* keep road labels well behind the Mission copy */
   pointer-events: none;
   z-index: 0;
 }
@@ -61,21 +45,6 @@
 }
 .c-ghost .motion-loop { width: 100%; height: auto; }
 @media (max-width: 640px) { .c-ghost { display: none; } }
-
-/* ── Work: a case-study layout being drafted inside the holding box ────────
-   Sits behind the copy; the centre of the canvas is kept clear for the text. */
-.c-draft-host { position: relative; overflow: hidden; }
-.c-draft-host > :not(.c-draft) { position: relative; z-index: 1; }
-.c-draft-host .c-draft {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  pointer-events: none;
-  z-index: 0;
-}
-@media (max-width: 760px) { .c-draft-host .c-draft { display: none; } }
 
 /* ── Contact / hero: conversation → plan, running off the right edge ──────── */
 .c-contact-path {

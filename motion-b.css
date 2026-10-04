@@ -11,19 +11,6 @@ video.b-loop { pointer-events: none; background: transparent; user-select: none;
 
 /* ---------- services.html ---------- */
 
-/* b-svc-spine: one thread down the left edge linking the four services */
-.b-svc-host { position: relative; }
-video.b-svc-spine {
-  position: absolute;
-  top: 0;
-  left: -64px;
-  width: 48px;
-  height: 100%;
-  object-fit: fill;
-}
-@media (max-width: 1399px) { video.b-svc-spine { left: -42px; width: 40px; } }
-@media (max-width: 1099px) { video.b-svc-spine { display: none; } }
-
 /* b-svc-engine: the systems circuit, under the 03 / Systems copy */
 video.b-svc-engine {
   width: 100%;
@@ -67,35 +54,6 @@ video.b-method-start {
   }
 }
 @media (max-width: 900px) { video.b-method-start { display: none; } }
-
-/* b-method-foundation: full-bleed hairline grid behind step 01, standing on its base */
-.b-found-host { position: relative; }
-.b-found-host > :not(video) { position: relative; z-index: 1; }
-video.b-method-foundation {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -50vw;
-  width: calc(100% + 100vw);
-  height: 100%;
-  object-fit: cover;
-  object-position: center bottom;
-  z-index: 0;
-}
-
-/* b-method-compound: word of mouth rings, bleeding off the right edge beside step 05 */
-.b-comp-host { position: relative; }
-.b-comp-host > :not(video) { position: relative; z-index: 1; }
-video.b-method-compound {
-  position: absolute;
-  top: 58%;
-  right: calc(-1 * (var(--gutter) + max(0px, (100vw - var(--max)) / 2)) - 270px);
-  width: 520px;
-  height: 520px;
-  translate: 0 -50%;
-  z-index: 0;
-}
-@media (max-width: 900px) { video.b-method-compound { display: none; } }
 
 /* ---------- investment.html ---------- */
 
