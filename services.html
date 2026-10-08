@@ -106,31 +106,107 @@
       "image": "https://carsonpoore.com/brand/carson-headshot.png",
       "email": "carson@carsonpoore.com",
       "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
-      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" },
-        { "@type": "Country", "name": "United States" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
       ],
       "priceRange": "$1,200–$4,800/month",
-      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+      "founder": {
+        "@type": "Person",
+        "@id": "https://carsonpoore.com/about#carson",
+        "name": "Carson Poore",
+        "sameAs": [
+          "https://www.linkedin.com/in/carson-poore/"
+        ]
+      }
     },
     {
       "@type": "ItemList",
       "@id": "https://carsonpoore.com/services#list",
       "name": "Carson Poore Consulting services",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Marketing", "url": "https://carsonpoore.com/services/marketing" },
-        { "@type": "ListItem", "position": 2, "name": "Technical", "url": "https://carsonpoore.com/services/technical" },
-        { "@type": "ListItem", "position": 3, "name": "Strategy", "url": "https://carsonpoore.com/services/strategy" },
-        { "@type": "ListItem", "position": 4, "name": "Coaching & growth", "url": "https://carsonpoore.com/services/coaching" },
-        { "@type": "ListItem", "position": 5, "name": "Local SEO", "url": "https://carsonpoore.com/services/local-seo" },
-        { "@type": "ListItem", "position": 6, "name": "Google Ad Grants", "url": "https://carsonpoore.com/services/google-ad-grants" },
-        { "@type": "ListItem", "position": 7, "name": "Google Ads", "url": "https://carsonpoore.com/services/google-ads" },
-        { "@type": "ListItem", "position": 8, "name": "Websites & web apps", "url": "https://carsonpoore.com/services/websites" },
-        { "@type": "ListItem", "position": 9, "name": "AI & automation", "url": "https://carsonpoore.com/services/ai-automation" },
-        { "@type": "ListItem", "position": 10, "name": "GoHighLevel & CRM", "url": "https://carsonpoore.com/services/crm-gohighlevel" },
-        { "@type": "ListItem", "position": 11, "name": "GA4 & analytics", "url": "https://carsonpoore.com/services/analytics" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Marketing",
+          "url": "https://carsonpoore.com/services/marketing"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Technical",
+          "url": "https://carsonpoore.com/services/technical"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Strategy",
+          "url": "https://carsonpoore.com/services/strategy"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Coaching & growth",
+          "url": "https://carsonpoore.com/services/coaching"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Local SEO",
+          "url": "https://carsonpoore.com/services/local-seo"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Google Ad Grants",
+          "url": "https://carsonpoore.com/services/google-ad-grants"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Google Ads",
+          "url": "https://carsonpoore.com/services/google-ads"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Websites & web apps",
+          "url": "https://carsonpoore.com/services/websites"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "AI & automation",
+          "url": "https://carsonpoore.com/services/ai-automation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "GoHighLevel & CRM",
+          "url": "https://carsonpoore.com/services/crm-gohighlevel"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "GA4 & analytics",
+          "url": "https://carsonpoore.com/services/analytics"
+        }
       ]
     },
     {
@@ -140,17 +216,26 @@
         {
           "@type": "Question",
           "name": "Can we hire just one practice?",
-          "acceptedAnswer": { "@type": "Answer", "text": "One is fine. Plenty of engagements live inside a single practice, like a GA4 setup or a website build. We keep four under one roof so that when the work crosses a line, you don’t have to go find a second vendor." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "One is fine. Plenty of engagements live inside a single practice, like a GA4 setup or a website build. We keep four under one roof so that when the work crosses a line, you don’t have to go find a second vendor."
+          }
         },
         {
           "@type": "Question",
           "name": "Why only eight clients?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Because attention is the whole product. Eight clients means a team that knows your business, not a pod juggling forty accounts. It also means we sometimes say not yet. We’d rather you wait than get a thinner version of the work." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because attention is the whole product. Eight clients means a team that knows your business, not a pod juggling forty accounts. It also means we sometimes say not yet. We’d rather you wait than get a thinner version of the work."
+          }
         },
         {
           "@type": "Question",
           "name": "Who does the work day to day?",
-          "acceptedAnswer": { "@type": "Answer", "text": "We do. The team that writes the plan builds it too. No handoff to a junior pod, no subcontractors you never meet. That’s most of why the cap exists." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We do. The team that writes the plan builds it too. No handoff to a junior pod, no subcontractors you never meet. That’s most of why the cap exists."
+          }
         }
       ]
     }
@@ -216,8 +301,7 @@
   <section class="hero page-hero">
     <div class="wrap">
       <div class="page-hero__copy">
-        <span class="eyebrow reveal">Services</span>
-        <h1 class="reveal mt-md" data-delay="1">Four practices. One team that <em>builds what it plans.</em></h1>
+        <h1 class="reveal" data-delay="1">Four practices. One team that <em>builds what it plans.</em></h1>
         <p class="hero__sub reveal mt-md" data-delay="2">Indy agencies have moved upmarket. AI shops can&rsquo;t do brand. Most fractional CMOs hand you a plan and wish you luck. So we set up in the gap: marketing, technical, strategy, and coaching from one small Indianapolis team, every price published on this site.</p>
       </div>
     </div>
@@ -232,6 +316,7 @@
           <h2 class="vt-marketing">Marketing people actually <em>talk about</em></h2>
           <p class="practice__one mt-md">Brand, campaigns, content, and email that make the right people notice you and talk about you &mdash; measured in calls, customers, and booked work, not impressions.</p>
           <p class="mt-sm">The test we hold ourselves to is blunt. If a campaign can&rsquo;t name the job it&rsquo;s doing, it doesn&rsquo;t run.</p>
+          <p class="mt-sm">Brand identity, photography, and video production are available as <a class="tlink" href="/investment">project work</a>, quoted on their own; retainer clients can add a project anytime.</p>
         </div>
         <div class="practice__aside reveal" data-delay="1">
           <p class="practice__num" aria-hidden="true">01</p>
@@ -254,6 +339,7 @@
           <h2 class="vt-technical">The builds most marketing shops <em>can&rsquo;t do</em></h2>
           <p class="practice__one mt-md">AI agents and automation, websites and web apps, GoHighLevel and CRM, Google Ads, GA4 &mdash; practical, human-approved, and priced for small businesses.</p>
           <p class="mt-sm">Every automation gets checked by a person before it touches a customer. Want proof before you book anything? The <a class="tlink" href="/tools/checkup">free tools on this site</a> are this practice working in public. No email wall. Scored on the spot.</p>
+          <p class="mt-sm">Web design and development and product design are available as <a class="tlink" href="/investment">project work</a>, quoted on their own; retainer clients can add a project anytime.</p>
           <video class="motion-loop b-loop b-svc-engine" muted loop playsinline preload="none" width="600" height="120" poster="/media/motion/b-svc-engine.png" data-webm="/media/motion/b-svc-engine.webm" data-hevc="/media/motion/b-svc-engine-hevc.mp4" aria-hidden="true"></video>
         </div>
         <div class="practice__aside reveal" data-delay="1">
@@ -297,8 +383,8 @@
         <div class="practice__content reveal">
           <span class="eyebrow">04 · Coaching &amp; growth</span>
           <h2 class="vt-coaching">A fractional CMO <em>with hands</em></h2>
-          <p class="practice__one mt-md">A fractional CMO for owners and founders at $1,200&ndash;$4,800 a month &mdash; under the $5,000&ndash;$15,000 the category charges, with the plan and the hands on one team.</p>
-          <p class="mt-sm">Eight clients, total. That&rsquo;s the cap, and it&rsquo;s why the work stays personal: a team that knows your business, not a pod juggling forty accounts.</p>
+          <p class="practice__one mt-md">A fractional CMO for owners and founders at $1,200&ndash;$4,800 a month, with the plan and the hands on one team.</p>
+          <p class="mt-sm">Eight clients at a time. That&rsquo;s the cap, and it&rsquo;s why the work stays personal: a team that knows your business, not a pod juggling forty accounts.</p>
         </div>
         <div class="practice__aside reveal" data-delay="1">
           <p class="practice__num" aria-hidden="true">04</p>
@@ -317,21 +403,17 @@
   <section class="section section--stone">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="eyebrow">All services</span>
         <h2>Every service, <em>one screen</em></h2>
-        <p class="sec-head__intro">The seven specialist pages, filed under their practice. If you already know what you need, jump straight in.</p>
+        <p class="sec-head__intro">The seven specialist pages, filed under their practice. Strategy and coaching &amp; growth don&rsquo;t split into specialties; each is one engagement, described above.</p>
       </div>
       <div class="idx-grid">
         <div class="idx-group reveal">
           <h3>Marketing</h3>
-          <p class="idx-kicker">Getting found and getting talked about.</p>
           <a class="idx-item" href="/services/local-seo"><span class="idx-item__t">Local SEO</span><span class="idx-item__d">Show up when Indianapolis searches for what you do.</span></a>
           <a class="idx-item" href="/services/google-ad-grants"><span class="idx-item__t">Google Ad Grants</span><span class="idx-item__d">Google&rsquo;s $10,000-a-month ad credit for verified nonprofits, actually used.</span></a>
-          <p class="idx-kicker mt-md">Strategy and coaching &amp; growth don&rsquo;t split into specialties. Each is one engagement, described above.</p>
         </div>
         <div class="idx-group reveal" data-delay="1">
           <h3>Technical</h3>
-          <p class="idx-kicker">The builds, priced for small businesses.</p>
           <a class="idx-item" href="/services/google-ads"><span class="idx-item__t">Google Ads</span><span class="idx-item__d">Paid search that pays for itself or gets paused.</span></a>
           <a class="idx-item" href="/services/websites"><span class="idx-item__t">Websites &amp; web apps</span><span class="idx-item__d">Fast, owned by you, built to book work.</span></a>
           <a class="idx-item" href="/services/ai-automation"><span class="idx-item__t">AI &amp; automation</span><span class="idx-item__d">Agents that answer leads in minutes, human-approved.</span></a>
@@ -346,7 +428,6 @@
   <section class="section">
     <div class="wrap wrap--narrow">
       <div class="sec-head reveal">
-        <span class="eyebrow">Where to start</span>
         <h2>Start with the symptom, <em>not the service</em></h2>
         <p class="sec-head__intro">Need all four practices? Great. Need one piece? Also great. Either way, don&rsquo;t start from a menu. Start from whatever&rsquo;s keeping you up, and work backward.</p>
       </div>
@@ -357,7 +438,7 @@
         </div>
         <div class="route reveal">
           <p class="route__sym">&ldquo;We built the thing. Nobody&rsquo;s heard of it.&rdquo;</p>
-          <p class="route__ans">The $3,000 strategy engagement first, then decide if you want us for the long haul. <a class="tlink" href="/for/founders">Founders start here.</a></p>
+          <p class="route__ans">The $3,000 strategy engagement first, then decide if you want us for the long haul; if you do, half the fee ($1,500) is credited toward your retainer. <a class="tlink" href="/for/founders">Founders start here.</a></p>
         </div>
         <div class="route reveal">
           <p class="route__sym">&ldquo;I wear five hats and marketing is the sixth.&rdquo;</p>
@@ -369,18 +450,17 @@
         </div>
         <div class="route reveal">
           <p class="route__sym">&ldquo;Honestly? Not sure.&rdquo;</p>
-          <p class="route__ans">Take <a class="tlink" href="/tools/checkup">the five-step check-up</a>. No email, no login. You&rsquo;ll have a score in about two minutes.</p>
+          <p class="route__ans">Take <a class="tlink" href="/tools/checkup">the Five-Step Check-Up</a>. No email, no login. You&rsquo;ll have a score in about two minutes.</p>
         </div>
       </div>
       <p class="mt-lg reveal">One opinion, free of charge: most small businesses buy ads too early. If that&rsquo;s you, we&rsquo;ll say so on the first call and point you at the cheaper fix first.</p>
-      <p class="money-note mt-md reveal">Money, plainly: retainers are $1,200, $2,400, or $4,800 a month. The strategy engagement is $3,000, once. Three months minimum, because real change takes that long, then month to month. The full breakdown, including the nonprofit rate, is on <a class="tlink" href="/investment">the pricing page</a>.</p>
+      <p class="mt-md reveal">Money, plainly: retainers are $1,200, $2,400, or $4,800 a month. The strategy engagement is $3,000, once. Three months minimum, because real change takes that long, then month to month. The full breakdown, including the nonprofit rate, is on <a class="tlink" href="/investment">the pricing page</a>.</p>
     </div>
   </section>
 
   <!-- FAQ -->
   <section class="section section--stone">
     <div class="wrap wrap--narrow">
-      <span class="eyebrow reveal">Before you book</span>
       <h2 class="reveal mt-md" data-delay="1">Three things people check <em>before they book</em></h2>
       <div class="faq mt-lg reveal" data-delay="2">
         <details>
@@ -396,7 +476,6 @@
           <p>We do. The team that writes the plan builds it too. No handoff to a junior pod, no subcontractors you never meet. That&rsquo;s most of why the cap exists.</p>
         </details>
       </div>
-      <p class="updated mt-lg reveal" data-delay="3">Last updated: October 2026</p>
     </div>
   </section>
 
@@ -404,7 +483,6 @@
   <section class="closing">
     <div class="closing__inner">
       <div class="reveal">
-        <span class="eyebrow">Next step</span>
         <h2>Bring the symptom. We&rsquo;ll <em>name the first step.</em></h2>
         <p>One call. We&rsquo;ll listen and name the practice that fits, or tell you you&rsquo;re too early. You leave knowing what&rsquo;s first either way.</p>
       </div>
@@ -423,7 +501,7 @@
       <div class="footer__brand">
         <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
         <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
-        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
       </div>
       <div>
         <h4>Services</h4>
@@ -451,11 +529,11 @@
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
-          <li><a href="/tools/checkup">The five-step check-up</a></li>
-          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
-          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
-          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
-          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+          <li><a href="/tools/checkup">The Five-Step Check-Up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy Find You?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI Opportunity Finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget Calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-Day Plan Starter</a></li>
         </ul>
       </div>
       <div>

@@ -38,14 +38,35 @@
       "image": "https://carsonpoore.com/brand/carson-headshot.png",
       "email": "carson@carsonpoore.com",
       "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
-      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" },
-        { "@type": "Country", "name": "United States" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
       ],
       "priceRange": "$1,200–$4,800/month",
-      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+      "founder": {
+        "@type": "Person",
+        "@id": "https://carsonpoore.com/about#carson",
+        "name": "Carson Poore",
+        "sameAs": [
+          "https://www.linkedin.com/in/carson-poore/"
+        ]
+      }
     },
     {
       "@type": "ContactPage",
@@ -55,8 +76,12 @@
       "description": "Book a free 30-minute call with Carson Poore Consulting. A real conversation about marketing, technical work, strategy, or coaching. No pitch, no pressure.",
       "inLanguage": "en-US",
       "dateModified": "2026-10-08",
-      "about": { "@id": "https://carsonpoore.com/#org" },
-      "mainEntity": { "@id": "https://carsonpoore.com/#org" }
+      "about": {
+        "@id": "https://carsonpoore.com/#org"
+      },
+      "mainEntity": {
+        "@id": "https://carsonpoore.com/#org"
+      }
     }
   ]
 }
@@ -120,10 +145,9 @@
     <div class="wrap">
       <div class="page-hero__grid c-contact-grid">
         <div class="page-hero__copy">
-          <span class="eyebrow reveal">Contact</span>
-          <h1 class="reveal mt-md" data-delay="1">Let&rsquo;s talk about <em>your business.</em></h1>
+          <h1 class="reveal" data-delay="1">Let&rsquo;s talk about <em>your business.</em></h1>
           <p class="hero__sub reveal mt-md" data-delay="2">Thirty minutes, one real conversation. Marketing, a technical build, strategy, coaching and growth: any of our four practices can be the topic, and so can &ldquo;I don&rsquo;t know what to ask for.&rdquo; We&rsquo;ll go over where things stand and what&rsquo;s in the way. Then we&rsquo;ll tell you straight whether we&rsquo;re the right fit. Pick a time below.</p>
-          <p class="hero__pointer reveal mt-md" data-delay="3">Come prepared if you like. Bring your score if you&rsquo;ve taken the <a href="/tools/checkup" class="tlink">five-step check-up</a>.</p>
+          <p class="hero__pointer reveal mt-md" data-delay="3">Come prepared if you like. Bring your score if you&rsquo;ve taken the <a href="/tools/checkup" class="tlink">Five-Step Check-Up</a>.</p>
         </div>
         <div class="c-contact-path reveal" data-delay="2" aria-hidden="true"><video class="motion-loop " muted loop playsinline preload="none" poster="/media/motion/c-contact-path.png" data-webm="/media/motion/c-contact-path.webm" data-hevc="/media/motion/c-contact-path-hevc.mp4" width="1040" height="460" aria-hidden="true"></video></div>
       </div>
@@ -174,7 +198,7 @@
         <!-- Cal inline embed code ends -->
       </div>
 
-      <p class="c-note">We think a first call should commit you to nothing, including us. Candidly, we can&rsquo;t help everyone. Eight clients is our cap, so we turn some people away, and sometimes the honest answer is &ldquo;not yet.&rdquo; Every price is on the <a href="/investment" class="tlink">pricing page</a>, so the call isn&rsquo;t where you hear a number.</p>
+      <p class="mt-lg" style="max-width: 62ch;">A first call commits you to nothing. Eight clients is our cap, so sometimes the honest answer is &ldquo;not yet.&rdquo; Every price is on the <a href="/investment" class="tlink">pricing page</a>, so the call isn&rsquo;t where you hear a number.</p>
 
       <p class="c-email">
         Prefer email? <a href="mailto:carson@carsonpoore.com" class="tlink">carson@carsonpoore.com</a>
@@ -187,7 +211,6 @@
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <span class="eyebrow reveal">Before the call</span>
           <h2 class="reveal mt-md" data-delay="1">A few things to sit with before we <em>talk.</em></h2>
         </div>
         <p class="sec-head__intro reveal" data-delay="2">You don&rsquo;t need answers ready. These just make our 30 minutes count.</p>
@@ -200,8 +223,6 @@
         <li class="reveal" data-delay="3">Are you open to being a little visible in your own marketing?</li>
         <li class="reveal" data-delay="4">A year from now, what would make you say this worked?</li>
       </ol>
-
-      <p class="updated mt-lg">Last updated: October 2026</p>
     </div>
   </section>
 
@@ -214,7 +235,7 @@
       <div class="reveal">
         <span class="eyebrow">Not ready to talk yet?</span>
         <h2>Start with a <em>score</em> instead.</h2>
-        <p>The five-step check-up is free, asks for no email or login, and scores you on the spot. Come back when you have a number to bring.</p>
+        <p>The Five-Step Check-Up is free, asks for no email or login, and scores you on the spot. Come back when you have a number to bring.</p>
       </div>
       <div class="reveal" data-delay="1">
         <a href="/tools/checkup" class="btn btn--primary">Get your score <span class="arr">→</span></a>
@@ -230,7 +251,7 @@
       <div class="footer__brand">
         <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
         <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
-        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
       </div>
       <div>
         <h4>Services</h4>
@@ -258,11 +279,11 @@
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
-          <li><a href="/tools/checkup">The five-step check-up</a></li>
-          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
-          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
-          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
-          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+          <li><a href="/tools/checkup">The Five-Step Check-Up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy Find You?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI Opportunity Finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget Calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-Day Plan Starter</a></li>
         </ul>
       </div>
       <div>

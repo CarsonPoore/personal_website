@@ -26,6 +26,16 @@ Carson Poore Consulting is a small Indianapolis team that plans the work and the
 7. You keep everything if you leave — site, Google Business Profile, ad accounts, data.
 8. Five ungated, instantly-scored free tools (no email, no login) that double as working proof of the technical practice.
 
+## Carson's decisions (Oct 8, 2026 — binding)
+- Strategy credit: if a $3,000 strategy client continues to a retainer, half ($1,500) is credited toward it.
+- The 8-client cap counts every client: retainer, strategy, and project work.
+- /investment tier claims ("Most clients start here", "full team behind it") stay; a fee chart is coming.
+- Project work (brand identity, photography, video, product design, web) stays on the rate card AND is named inside the Marketing and Technical practices.
+- Stats: few. Max 2 external stats on non-article pages, 4 on articles, short inline attribution, no "Sources:" captions.
+- Little grey text: cut when irrelevant, ambiguous, or redundant. No Blueprint annotation labels, no coordinates, "Last updated" on articles only.
+- Tool names are Title Case: The Five-Step Check-Up, Can Indy Find You?, AI Opportunity Finder, Budget Calculator, 90-Day Plan Starter.
+- LinkedIn (personal): https://www.linkedin.com/in/carson-poore/ (in footer + schema sameAs). No Google Business Profile yet.
+
 ## Guardrails (from research risks — binding)
 - /services/coaching never uses "business coach" language; always "fractional CMO / marketing advisor."
 - Never publish: $5.7B fractional-market figure, $26B automation-market figure, 61%-no-ROI AI stat as a number, vendor Indy CPC claims. The $8,650 managed-Ad-Grant average = "industry-reported." Every on-page statistic needs its named source inline.

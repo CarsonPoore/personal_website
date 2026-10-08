@@ -1,12 +1,12 @@
 # Carson Poore Consulting
 
-> A growth consultancy in Indianapolis, Indiana with four practices (marketing, technical, strategy, and coaching) for local small businesses, founders, and nonprofits. Prices are published on the site: monthly retainers at $1,200, $2,400, or $4,800, a $3,000 one-time strategy engagement, and a reduced nonprofit rate. Eight clients at a time, a three-month minimum then month to month, and clients keep everything (site, Google Business Profile, ad accounts, data) if they leave. Serves Indianapolis and central Indiana locally; technical and coaching work nationwide. Contact: carson@carsonpoore.com.
+> A growth consultancy in Indianapolis, Indiana with four practices (marketing, technical, strategy, and coaching) for local small businesses, founders, and nonprofits. Prices are published on the site: monthly retainers at $1,200, $2,400, or $4,800, a $3,000 one-time strategy engagement (half credited toward a retainer if the client continues), and a reduced nonprofit rate. Eight clients at a time across all engagements, a three-month minimum then month to month, and clients keep everything (site, Google Business Profile, ad accounts, data) if they leave. Serves Indianapolis and central Indiana locally; technical and coaching work nationwide. Contact: carson@carsonpoore.com.
 
 ## Practices
 
 - [Marketing](https://carsonpoore.com/services/marketing): Brand, campaigns, content, and email measured in calls, customers, and booked work.
 - [Technical](https://carsonpoore.com/services/technical): AI agents and automation, websites and web apps, GoHighLevel and CRM, Google Ads, and GA4, priced for small businesses.
-- [Strategy](https://carsonpoore.com/services/strategy): A $3,000 one-time engagement covering positioning, ideal customer, offer, and a 90-day plan the client keeps.
+- [Strategy](https://carsonpoore.com/services/strategy): A $3,000 one-time engagement covering positioning, ideal customer, offer, and a 90-day plan the client keeps; $1,500 is credited toward a retainer if the client continues.
 - [Coaching & growth](https://carsonpoore.com/services/coaching): Fractional CMO and marketing advisory at $1,200 to $4,800 a month, with the plan and the hands on one team.
 
 ## Services

@@ -20,27 +20,48 @@
 <script defer src="/site.js?v=20261008-1"></script>
 <script type="application/ld+json">
 {
-"@context": "https://schema.org",
-"@graph": [
-{
-  "@type": "ProfessionalService",
-  "@id": "https://carsonpoore.com/#org",
-  "name": "Carson Poore Consulting",
-  "url": "https://carsonpoore.com/",
-  "logo": "https://carsonpoore.com/brand/cpc-mark-royalblue.svg",
-  "image": "https://carsonpoore.com/brand/carson-headshot.png",
-  "email": "carson@carsonpoore.com",
-  "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
-  "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
-  "areaServed": [
-    { "@type": "City", "name": "Indianapolis" },
-    { "@type": "State", "name": "Indiana" },
-    { "@type": "Country", "name": "United States" }
-  ],
-  "priceRange": "$1,200–$4,800/month",
-  "founder": { "@id": "https://carsonpoore.com/about#carson" }
-}
-]
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://carsonpoore.com/#org",
+      "name": "Carson Poore Consulting",
+      "url": "https://carsonpoore.com/",
+      "logo": "https://carsonpoore.com/brand/cpc-mark-royalblue.svg",
+      "image": "https://carsonpoore.com/brand/carson-headshot.png",
+      "email": "carson@carsonpoore.com",
+      "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
+      ],
+      "priceRange": "$1,200–$4,800/month",
+      "founder": {
+        "@type": "Person",
+        "@id": "https://carsonpoore.com/about#carson",
+        "name": "Carson Poore",
+        "sameAs": [
+          "https://www.linkedin.com/in/carson-poore/"
+        ]
+      }
+    }
+  ]
 }
 </script>
 </head>
@@ -212,7 +233,6 @@
   <section class="section section--tight ticket-fineprint">
     <div class="wrap">
       <p><strong>One session per business.</strong> If your business has already redeemed a ticket, pass yours along to someone who could use it &mdash; that&rsquo;s better for everyone.</p>
-      <p class="updated">Last updated: October 2026</p>
     </div>
   </section>
 
@@ -224,7 +244,7 @@
       <div class="footer__brand">
         <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
         <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
-        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
       </div>
       <div>
         <h4>Services</h4>
@@ -252,11 +272,11 @@
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
-          <li><a href="/tools/checkup">The five-step check-up</a></li>
-          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
-          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
-          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
-          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+          <li><a href="/tools/checkup">The Five-Step Check-Up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy Find You?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI Opportunity Finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget Calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-Day Plan Starter</a></li>
         </ul>
       </div>
       <div>

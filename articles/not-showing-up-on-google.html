@@ -82,22 +82,47 @@
       "image": "https://carsonpoore.com/brand/carson-headshot.png",
       "email": "carson@carsonpoore.com",
       "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
-      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" },
-        { "@type": "Country", "name": "United States" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
       ],
       "priceRange": "$1,200–$4,800/month",
-      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+      "founder": {
+        "@type": "Person",
+        "@id": "https://carsonpoore.com/about#carson",
+        "name": "Carson Poore",
+        "sameAs": [
+          "https://www.linkedin.com/in/carson-poore/"
+        ]
+      }
     },
     {
       "@type": "Article",
       "@id": "https://carsonpoore.com/articles/not-showing-up-on-google#article",
       "headline": "Why isn’t my business showing up on Google?",
       "description": "Usually one of five fixable things: an empty Business Profile, too few recent reviews, mismatched name-address-phone, a slow site, or no local words on it.",
-      "author": { "@id": "https://carsonpoore.com/about#carson" },
-      "publisher": { "@id": "https://carsonpoore.com/#org" },
+      "author": {
+        "@id": "https://carsonpoore.com/about#carson"
+      },
+      "publisher": {
+        "@id": "https://carsonpoore.com/#org"
+      },
       "datePublished": "2026-10-08",
       "dateModified": "2026-10-08",
       "mainEntityOfPage": "https://carsonpoore.com/articles/not-showing-up-on-google"
@@ -142,7 +167,7 @@
           "name": "What does Carson Poore Consulting charge for local SEO?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Local SEO is part of our published monthly retainers: $1,200, $2,400, or $4,800 a month. Most single-location businesses whose main problem is getting found start at $1,200. Three months minimum, then month to month. We take eight clients total."
+            "text": "Local SEO is part of our published monthly retainers: $1,200, $2,400, or $4,800 a month. Most single-location businesses whose main problem is getting found start at $1,200. Three months minimum, then month to month. We take eight clients at a time."
           }
         }
       ]
@@ -150,9 +175,24 @@
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carsonpoore.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://carsonpoore.com/resources" },
-        { "@type": "ListItem", "position": 3, "name": "Not showing up on Google", "item": "https://carsonpoore.com/articles/not-showing-up-on-google" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://carsonpoore.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Resources",
+          "item": "https://carsonpoore.com/resources"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Not showing up on Google",
+          "item": "https://carsonpoore.com/articles/not-showing-up-on-google"
+        }
       ]
     }
   ]
@@ -225,8 +265,7 @@
       </nav>
       <div class="page-hero__grid">
         <div class="page-hero__copy">
-          <span class="eyebrow reveal">Articles</span>
-          <h1 class="reveal mt-md" data-delay="1">Why isn&rsquo;t my business showing up on <em>Google?</em></h1>
+          <h1 class="reveal" data-delay="1">Why isn&rsquo;t my business showing up on <em>Google?</em></h1>
           <p class="hero__sub reveal mt-md" data-delay="2">Five usual causes, a two-minute check for each, and the free fix. Work through this list before you spend a dollar on help.</p>
         </div>
         <div class="motion-frame motion-frame--hero page-hero__motion reveal" data-delay="2">
@@ -255,7 +294,7 @@
 
         <p>More than most owners guess. About 46% of Google searches have local intent, according to BrightLocal&rsquo;s local SEO statistics. When someone in Fishers types &ldquo;plumber near me,&rdquo; Google answers with a map and three businesses, the local 3-pack, above the regular results.</p>
 
-        <p>BrightLocal reports that businesses in the 3-pack get 126% more traffic and 93% more actions, like calls and direction requests, than businesses ranked fourth through tenth. Fourth place is mostly invisible.</p>
+        <p>BrightLocal reports that businesses in the 3-pack get 126% more traffic than businesses ranked fourth through tenth. Fourth place is mostly invisible.</p>
 
         <p>And these searchers are ready to buy. Google&rsquo;s own consumer research found 76% of people who search &ldquo;near me&rdquo; on a phone visit a business within 24 hours.</p>
 
@@ -315,7 +354,6 @@
         <p>Claimed isn&rsquo;t finished. Plenty of listings were verified once and never touched again.</p>
 
         <div class="selfcheck">
-          <span class="selfcheck__tag">Two-minute check</span>
           <p>Search your business name on your phone, not your laptop, and tap your listing. Look for a specific primary category, current hours, a list of services, a description that says what you do and where, and photos from this year. Anything missing counts as a fail.</p>
         </div>
 
@@ -326,11 +364,10 @@
         <p>A wall of five-star reviews from 2021 tells a searcher you might have closed.</p>
 
         <div class="selfcheck">
-          <span class="selfcheck__tag">Two-minute check</span>
           <p>Open your listing, tap Reviews, and sort by Newest. Count how many came in over the last 90 days, then note your total and your star average.</p>
         </div>
 
-        <p>Both numbers matter. BrightLocal and WiserReview found that profiles with 40 or more reviews and an average of 4.5 stars or better appear in the 3-pack about 3.7 times as often as profiles with fewer than 10. Google is also where the reviews are: it holds about 81% of all online review volume, per the same sources. In our experience, a steady trickle of new reviews does more than a big pile of old ones.</p>
+        <p>Both numbers matter. BrightLocal found that profiles with 40 or more reviews and an average of 4.5 stars or better appear in the 3-pack about 3.7 times as often as profiles with fewer than 10. In our experience, a steady trickle of new reviews does more than a big pile of old ones.</p>
 
         <p>The fix costs nothing but nerve. Ask every happy customer right when the job wraps up, by text, with a direct link (your profile has a button to create one). Reply to every review, the sore ones too. Don&rsquo;t buy reviews or trade discounts for them; it breaks Google&rsquo;s rules, and Google can remove them or restrict your profile.</p>
 
@@ -339,7 +376,6 @@
         <p>Google checks your details against every other listing it can find. When they disagree, it trusts all of them less, and so do the AI assistants reading the same listings.</p>
 
         <div class="selfcheck">
-          <span class="selfcheck__tag">Two-minute check</span>
           <p>Search your phone number in quotes. Then look up your business on Yelp, Facebook, Bing Places, and Apple Business Connect, and compare each one to your Google profile, character by character. &ldquo;Suite 200&rdquo; versus &ldquo;Ste. 200&rdquo; is minor. A phone number from two offices ago is not.</p>
         </div>
 
@@ -350,7 +386,6 @@
         <p>The person searching for you is on a phone, with three other options a thumb away.</p>
 
         <div class="selfcheck">
-          <span class="selfcheck__tag">Two-minute check</span>
           <p>Turn off Wi-Fi, open your site on your phone, and count. If you reach five before you can read anything, it&rsquo;s slow. For a second opinion, run it through Google&rsquo;s free PageSpeed Insights.</p>
         </div>
 
@@ -363,7 +398,6 @@
         <p>Read your homepage headline out loud. If it says something like &ldquo;Quality solutions since 1998,&rdquo; Google has no idea you fix furnaces in Greenwood.</p>
 
         <div class="selfcheck">
-          <span class="selfcheck__tag">Two-minute check</span>
           <p>Read your page title (the text on the browser tab), your main headline, and your first paragraph. Do you see your city? Do you see your service, in the words a customer would actually type, like &ldquo;AC repair&rdquo; instead of &ldquo;climate solutions&rdquo;?</p>
         </div>
 
@@ -375,7 +409,7 @@
 
         <p>The classic mistake is buying ads on top of an unfinished profile. The ad brings a searcher to your listing. They see eleven reviews from 2022 and no hours, and they call the next company. You paid for that click.</p>
 
-        <p>A vcita survey of 500 US small business owners found that 40% of those who outsource marketing drop or switch agencies, and 60% of the ones who leave cite a lack of return. We&rsquo;d bet plenty of that money went to advanced work on a foundation nobody finished.</p>
+        <p>We&rsquo;ve seen plenty of money go to advanced work on a foundation nobody finished.</p>
 
         <p>So do the free things first and give them a few weeks. If you hire help after that, you&rsquo;ll pay for the hard part, not the chores.</p>
 
@@ -387,9 +421,8 @@
 
         <div class="tool-handoff reveal">
           <span class="tool-handoff__corner" aria-hidden="true">Free tool</span>
-          <span class="eyebrow">The full audit</span>
           <h3>Want the rest of the checklist?</h3>
-          <p>Our free self-audit, Can Indy find you?, covers your whole Google profile, your reviews and replies, your website basics, and the smaller extras. You get a live grade and a plain fix for every item you miss. No email, no login.</p>
+          <p>Our free self-audit, Can Indy Find You?, covers your whole Google profile, your reviews and replies, your website basics, and the smaller extras. You get a live grade and a plain fix for every item you miss. No email, no login.</p>
           <div class="row-cta">
             <a class="btn btn--amber" href="/tools/local-visibility">Run the visibility check <span class="arr">→</span></a>
           </div>
@@ -418,20 +451,18 @@
           </details>
           <details>
             <summary>What does Carson Poore Consulting charge for local SEO?</summary>
-            <p>Local SEO is part of our published monthly retainers: $1,200, $2,400, or $4,800 a month. Most single-location businesses whose main problem is getting found start at $1,200. Three months minimum, then month to month. We take eight clients total.</p>
+            <p>Local SEO is part of our published monthly retainers: $1,200, $2,400, or $4,800 a month. Most single-location businesses whose main problem is getting found start at $1,200. Three months minimum, then month to month. We take eight clients at a time.</p>
           </details>
         </div>
 
         <div class="article-note">
           <strong>Keep reading</strong>
           <ul class="next-reads">
-            <li><span class="next-reads__kind">Tool</span><a href="/tools/local-visibility">Can Indy find you? The free visibility check</a></li>
+            <li><span class="next-reads__kind">Tool</span><a href="/tools/local-visibility">Can Indy Find You? The free visibility check</a></li>
             <li><span class="next-reads__kind">Service</span><a href="/services/local-seo">Local SEO in Indianapolis</a></li>
             <li><span class="next-reads__kind">Guide</span><a href="/for/local-businesses">Marketing for Indianapolis local businesses</a></li>
           </ul>
         </div>
-
-        <p class="updated">We re-check these figures when BrightLocal and vcita update theirs.</p>
 
       </article>
     </div>
@@ -441,7 +472,6 @@
   <section class="closing">
     <div class="closing__inner">
       <div class="reveal">
-        <span class="eyebrow">Still invisible?</span>
         <h2>Did the five and still can&rsquo;t <em>find yourself?</em></h2>
         <p>Book a free 30-minute call. We&rsquo;ll put your listing next to the businesses outranking you and tell you what&rsquo;s actually in the way. If it&rsquo;s something you can fix on your own, we&rsquo;ll say that too.</p>
       </div>
@@ -460,7 +490,7 @@
       <div class="footer__brand">
         <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
         <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
-        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
       </div>
       <div>
         <h4>Services</h4>
@@ -488,11 +518,11 @@
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
-          <li><a href="/tools/checkup">The five-step check-up</a></li>
-          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
-          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
-          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
-          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+          <li><a href="/tools/checkup">The Five-Step Check-Up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy Find You?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI Opportunity Finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget Calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-Day Plan Starter</a></li>
         </ul>
       </div>
       <div>

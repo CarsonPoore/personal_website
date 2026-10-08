@@ -18,23 +18,7 @@
 <script defer src="/site.js?v=20261008-1"></script>
 <style>
   /* Google Ads page — layout tweaks on top of the shared system */
-  .own-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
-    gap: clamp(32px, 5vw, 80px);
-    align-items: center;
-  }
-  @media (max-width: 860px) { .own-grid { grid-template-columns: 1fr; } }
-  .own-grid .stat-row { flex-direction: column; gap: clamp(22px, 3vw, 36px); }
-  .own-grid .stat { border-left: 2px solid var(--amber); padding-left: clamp(16px, 2vw, 26px); }
-  .own-grid .stat__num { color: #fff; }
-  .sources {
-    font-size: 0.78rem;
-    color: var(--muted-on-navy);
-    letter-spacing: 0.02em;
-    margin-top: clamp(22px, 3vw, 34px);
-    max-width: 54ch;
-  }
+  .own-grid { max-width: 62ch; }
   .gate-list { list-style: none; margin: 0; padding: 0; counter-reset: gate; max-width: 70ch; }
   .gate-list li {
     counter-increment: gate;
@@ -70,7 +54,6 @@
     color: var(--cream-2); padding: 13px 0; border-top: 1px solid var(--navy-3, rgba(255,255,255,0.12));
   }
   .report-card li span:last-child { color: #fff; font-weight: 700; white-space: nowrap; }
-  .report-card__foot { margin-top: 18px; color: var(--muted-on-navy); font-size: 0.85rem; }
   .cost-note { max-width: 62ch; }
   .cost-note p + p { margin-top: 18px; }
 </style>
@@ -87,14 +70,35 @@
       "image": "https://carsonpoore.com/brand/carson-headshot.png",
       "email": "carson@carsonpoore.com",
       "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
-      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" },
-        { "@type": "Country", "name": "United States" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
       ],
       "priceRange": "$1,200–$4,800/month",
-      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+      "founder": {
+        "@type": "Person",
+        "@id": "https://carsonpoore.com/about#carson",
+        "name": "Carson Poore",
+        "sameAs": [
+          "https://www.linkedin.com/in/carson-poore/"
+        ]
+      }
     },
     {
       "@type": "Service",
@@ -102,19 +106,41 @@
       "name": "Google Ads Management",
       "serviceType": "Google Ads management",
       "description": "Search ads for Indianapolis-area service businesses: campaign buildout, landing pages, conversion and call tracking with GA4, and ongoing budget management inside published monthly retainers. Ad spend is separate and stays in an account the client owns.",
-      "provider": { "@id": "https://carsonpoore.com/#org" },
+      "provider": {
+        "@id": "https://carsonpoore.com/#org"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        }
       ],
       "url": "https://carsonpoore.com/services/google-ads"
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carsonpoore.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://carsonpoore.com/services" },
-        { "@type": "ListItem", "position": 3, "name": "Google Ads" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://carsonpoore.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://carsonpoore.com/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Google Ads"
+        }
       ]
     },
     {
@@ -123,27 +149,42 @@
         {
           "@type": "Question",
           "name": "What does Google Ads management cost in Indianapolis?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Management runs inside our published retainers: $1,200, $2,400, or $4,800 a month, depending on how much of your marketing we handle alongside the ads. Ad spend is separate. It goes to Google directly, from an ad account you own, and you set the number. Three months minimum, then month to month. The full rate card is on our pricing page." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Management runs inside our published retainers: $1,200, $2,400, or $4,800 a month, depending on how much of your marketing we handle alongside the ads. Ad spend is separate. It goes to Google directly, from an ad account you own, and you set the number. Three months minimum, then month to month. The full rate card is on our pricing page."
+          }
         },
         {
           "@type": "Question",
           "name": "How much should I spend on the ads themselves?",
-          "acceptedAnswer": { "@type": "Answer", "text": "There’s no universal number, and anyone who quotes one without asking what an average job is worth to you is guessing. We set the budget together on the first call, based on your job value and how far you’ll drive. We’d rather you hold a modest budget steady for three months than panic-pause a big one in week two. Our free budget calculator gives you an honest starting range." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There’s no universal number, and anyone who quotes one without asking what an average job is worth to you is guessing. We set the budget together on the first call, based on your job value and how far you’ll drive. We’d rather you hold a modest budget steady for three months than panic-pause a big one in week two. Our free Budget Calculator gives you an honest starting range."
+          }
         },
         {
           "@type": "Question",
           "name": "How fast will Google Ads bring in leads?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Clicks start within days of launch. Useful performance takes longer, because the first weeks are spent finding out which searches turn into booked jobs and cutting the ones that don’t. That tuning is most of what management is, and it’s why we ask for three months before you judge the results. You’ll see the movement in the report every month either way." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Clicks start within days of launch. Useful performance takes longer, because the first weeks are spent finding out which searches turn into booked jobs and cutting the ones that don’t. That tuning is most of what management is, and it’s why we ask for three months before you judge the results. You’ll see the movement in the report every month either way."
+          }
         },
         {
           "@type": "Question",
           "name": "Another company runs our ads now. Can you tell us if it’s working?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes, and this is one of our favorite calls. Bring your account login to a free call and we’ll read the last 90 days together: what the money bought and whether anything is tracked well enough to judge. If your current company is doing good work, we’ll say that too. It happens." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, and this is one of our favorite calls. Bring your account login to a free call and we’ll read the last 90 days together: what the money bought and whether anything is tracked well enough to judge. If your current company is doing good work, we’ll say that too. It happens."
+          }
         },
         {
           "@type": "Question",
           "name": "Who owns the ad account?",
-          "acceptedAnswer": { "@type": "Answer", "text": "You do, from day one. The account is created in your name, the card on file is yours, and every search term and result stays with you. If you ever leave us, you keep the account, the history, the landing pages, and the tracking. Nothing needs transferring, because none of it ever left your hands." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You do, from day one. The account is created in your name, the card on file is yours, and every search term and result stays with you. If you ever leave us, you keep the account, the history, the landing pages, and the tracking. Nothing needs transferring, because none of it ever left your hands."
+          }
         }
       ]
     }
@@ -236,7 +277,6 @@
   <section class="section">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="eyebrow">What management means</span>
         <h2>What you&rsquo;re paying for, <em>week to week.</em></h2>
         <p class="sec-head__intro">&ldquo;Management&rdquo; can hide a lot of nothing, so here&rsquo;s ours, itemized. Four jobs, each one visible in the monthly report.</p>
       </div>
@@ -244,25 +284,21 @@
       <div class="svc-list mt-lg">
 
         <article class="svc reveal">
-          <span class="svc__idx">01 / Search</span>
           <h3 class="svc__title">Ads built from your actual jobs</h3>
           <p class="svc__body">We start with two questions the last company probably skipped: what an average job is worth to you, and which work you want more of. Then the campaigns get built around how people here really search. &ldquo;Water heater replacement Greenwood.&rdquo; &ldquo;Emergency electrician near me.&rdquo; Just as important is the negative list, the searches we refuse to pay for, starting with job hunters and DIYers.</p>
         </article>
 
         <article class="svc reveal">
-          <span class="svc__idx">02 / Landing</span>
           <h3 class="svc__title">A page built to catch the click</h3>
           <p class="svc__body">Sending paid traffic to your homepage is a quick way to kill an ad budget. Each ad points to a page that matches it: same service, same town, a phone number up top, a short form for after-hours, loading fast on a phone in a parking lot. If your current site can&rsquo;t host that, we build the page as part of setup.</p>
         </article>
 
         <article class="svc reveal">
-          <span class="svc__idx">03 / Tracking</span>
           <h3 class="svc__title">Tracking wired in before launch</h3>
           <p class="svc__body">We won&rsquo;t spend your money blind. Call tracking and conversion tracking go in before the first ad runs, with <a class="tlink" href="/services/analytics">GA4 configured</a> so a booked job in week nine traces back to the search that started it. This is the unglamorous plumbing of the whole system. Nobody sees it, so it gets skipped.</p>
         </article>
 
         <article class="svc reveal">
-          <span class="svc__idx">04 / Budget</span>
           <h3 class="svc__title">Budgets you set, tuning that doesn&rsquo;t stop</h3>
           <p class="svc__body">You decide the monthly spend, and it never moves without your yes. Our job is making each dollar less wasteful than the last: pruning search terms that click but never call, and moving budget toward the towns and jobs that book. Week after week. Quietly.</p>
         </article>
@@ -276,20 +312,8 @@
     <div class="wrap">
       <div class="own-grid">
         <div class="reveal">
-          <span class="eyebrow">Rent vs. own</span>
           <h2>Stop paying rent on <em>your own customers.</em></h2>
           <p class="mt-md">If you run a trade around Indianapolis, you&rsquo;ve probably tried Angi or HomeAdvisor. The leads arrive cold, they&rsquo;re shared with whoever else pays, and the moment you stop paying, the flow stops with nothing left behind. Home-services comparisons from Housecall Pro and Hearth put platform leads at roughly $80 each, against about $45 from a well-run Google Ads account you own. The price gap is only half the argument. The other half is what accumulates: your own ads teach you which searches become booked jobs, and that history stays in your account even after we&rsquo;re gone. It&rsquo;s the thinking behind most of the work we do for <a class="tlink" href="/for/local-businesses">local businesses</a>.</p>
-          <p class="sources">Lead-cost comparison: Housecall Pro and Hearth home-services analyses (housecallpro.com; gethearth.com). Your numbers will vary by trade and season.</p>
-        </div>
-        <div class="stat-row reveal" data-delay="1">
-          <div class="stat">
-            <span class="stat__num">~$80</span>
-            <span class="stat__lbl">Typical cost of a shared lead on Angi-style platforms &middot; Housecall Pro / Hearth</span>
-          </div>
-          <div class="stat">
-            <span class="stat__num">~$45</span>
-            <span class="stat__lbl">Typical cost of a lead from your own Google Ads in the same comparisons &middot; and it&rsquo;s yours alone</span>
-          </div>
         </div>
       </div>
     </div>
@@ -299,7 +323,6 @@
   <section class="section section--stone">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="eyebrow">Before you spend a dollar</span>
         <h2>Sometimes the answer is <em>don&rsquo;t run ads yet.</em></h2>
         <p class="sec-head__intro">Here&rsquo;s our opinion, and it costs us money every time we share it: most local businesses buy Google Ads too early. Ads amplify what&rsquo;s already there. If these three things aren&rsquo;t true yet, we&rsquo;ll tell you so on the free call and point you at the cheaper fix first.</p>
       </div>
@@ -319,7 +342,7 @@
         </li>
       </ol>
 
-      <p class="pull reveal mt-xl">If that&rsquo;s you, we&rsquo;ll send you away with that homework and no invoice. It stings a little. But we cap ourselves at <em>eight clients</em>, and those eight hired us for results they can count, so the gate stays.</p>
+      <p class="pull reveal mt-xl">If that&rsquo;s you, we&rsquo;ll send you away with that homework and no invoice. It stings a little. But we cap ourselves at <em>eight clients at a time</em>, and those eight hired us for results they can count, so the gate stays.</p>
     </div>
   </section>
 
@@ -328,7 +351,6 @@
     <div class="wrap">
       <div class="report-split">
         <div class="reveal">
-          <span class="eyebrow">The monthly report</span>
           <h2>A report you can read <em>in the truck.</em></h2>
           <p class="mt-md">When vcita surveyed 500 US small-business owners in 2025, 60% of those who&rsquo;d left a marketing agency said they couldn&rsquo;t see the return. We&rsquo;ve read the reports that cause that. Impressions, reach, click-through rates, &ldquo;the algorithm.&rdquo; Ours is one page: how many people called, how many became booked work, what you spent on ads and on us, and the one thing we&rsquo;re changing next month. If a number went the wrong way, it&rsquo;s in there, with the reason.</p>
           <div class="row-cta mt-lg">
@@ -344,7 +366,6 @@
             <li><span>Search terms we cut</span><span>Named</span></li>
             <li><span>Next month&rsquo;s change</span><span>One decision</span></li>
           </ul>
-          <p class="report-card__foot">No impressions. No reach. If it doesn&rsquo;t tie to money, it isn&rsquo;t in the report.</p>
         </div>
       </div>
     </div>
@@ -354,7 +375,6 @@
   <section class="section section--stone">
     <div class="wrap wrap--narrow">
       <div class="sec-head reveal">
-        <span class="eyebrow">What it costs</span>
         <h2>Two numbers, <em>kept separate.</em></h2>
       </div>
       <div class="cost-note reveal mt-md">
@@ -364,7 +384,7 @@
       </div>
       <div class="row-cta reveal mt-lg" data-delay="1">
         <a class="btn btn--ghost" href="/investment">See every price <span class="arr">→</span></a>
-        <a class="tlink" href="/tools/marketing-budget">Try the free budget calculator</a>
+        <a class="tlink" href="/tools/marketing-budget">Try the free Budget Calculator</a>
       </div>
     </div>
   </section>
@@ -373,7 +393,6 @@
   <section class="section">
     <div class="wrap wrap--narrow">
       <div class="sec-head reveal">
-        <span class="eyebrow">Fair questions</span>
         <h2>Asked by owners, <em>answered straight.</em></h2>
       </div>
       <div class="faq mt-lg reveal">
@@ -383,7 +402,7 @@
         </details>
         <details>
           <summary>How much should I spend on the ads themselves?</summary>
-          <p>There&rsquo;s no universal number, and anyone who quotes one without asking what an average job is worth to you is guessing. We set the budget together on the first call, based on your job value and how far you&rsquo;ll drive. We&rsquo;d rather you hold a modest budget steady for three months than panic-pause a big one in week two. Our <a class="tlink" href="/tools/marketing-budget">free budget calculator</a> gives you an honest starting range.</p>
+          <p>There&rsquo;s no universal number, and anyone who quotes one without asking what an average job is worth to you is guessing. We set the budget together on the first call, based on your job value and how far you&rsquo;ll drive. We&rsquo;d rather you hold a modest budget steady for three months than panic-pause a big one in week two. Our <a class="tlink" href="/tools/marketing-budget">free Budget Calculator</a> gives you an honest starting range.</p>
         </details>
         <details>
           <summary>How fast will Google Ads bring in leads?</summary>
@@ -398,7 +417,6 @@
           <p>You do, from day one. The account is created in your name, the card on file is yours, and every search term and result stays with you. If you ever leave us, you keep the account, the history, the landing pages, and the tracking. Nothing needs transferring, because none of it ever left your hands.</p>
         </details>
       </div>
-      <p class="updated mt-lg">Last updated: October 2026</p>
     </div>
   </section>
 
@@ -406,7 +424,6 @@
   <section class="closing">
     <div class="closing__inner">
       <div class="reveal">
-        <span class="eyebrow">The next step</span>
         <h2>Wondering what the money&rsquo;s <em>actually buying?</em></h2>
         <p>Book a free call and bring your ad account, or just your doubts. We&rsquo;ll read the last 90 days out loud in plain English, and you&rsquo;ll leave knowing what&rsquo;s worth keeping and what to fix first. No charge either way.</p>
       </div>
@@ -424,7 +441,7 @@
       <div class="footer__brand">
         <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
         <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
-        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
       </div>
       <div>
         <h4>Services</h4>
@@ -452,11 +469,11 @@
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
-          <li><a href="/tools/checkup">The five-step check-up</a></li>
-          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
-          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
-          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
-          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+          <li><a href="/tools/checkup">The Five-Step Check-Up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy Find You?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI Opportunity Finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget Calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-Day Plan Starter</a></li>
         </ul>
       </div>
       <div>

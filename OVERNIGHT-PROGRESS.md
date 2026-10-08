@@ -53,3 +53,15 @@ ETA per stage: A ~30–45m · B ~20m · C ~60–90m · D ~90m · E ~60m · F ~60
 6. **Profiles for entity SEO:** send LinkedIn (company + personal) and Google Business Profile URLs → I add them to every page's sameAs. Then: verify Google Search Console + Bing Webmaster Tools, submit /sitemap.xml to both (ChatGPT search relies on Bing's index).
 7. **Home hero photo** still hot-links Unsplash (v1 pattern) — self-host?
 8. **90-Day Plan Starter** capitalization: Title Case product name vs footer's sentence case.
+
+## Round 2 — Carson's answers applied (Oct 8, afternoon)
+1. Strategy credit: half the $3,000 ($1,500) credited toward a retainer — on /investment (copy + OfferCatalog), /services/strategy, /services, coaching, founders, technical, marketing, llms.txt.
+2. 8-client cap counts every client — all "eight retainer clients" / "clients, total" wording now "eight clients at a time", incl. schema.
+3. Tier claims stay (fee chart coming).
+4. Project work: kept on /investment AND named inside Marketing (brand identity, photography, video) and Technical (web design & development, product design) on /services + both practice pages.
+5. Stats: 118 stat references cut (max 2 per page, 4 per article, short inline attribution, all "Sources:" captions removed).
+6. LinkedIn added to every footer + founder sameAs in every page's schema. No GBP yet.
+7. Home hero photo self-hosted at /media/photos/home-hero-crew.jpg (Unsplash, Nate Johnston).
+8. Tool names Title Case everywhere.
+- Grey text: 250 items cut (eyebrows, side notes, source captions, labels); Blueprint Ref/Sec/coordinate labels removed from site.js; hero coordinates removed; "Last updated" kept on articles only; 7 motion loops re-rendered without burned-in Ref./Fig./coordinate captions.
+- Still yours: verify Google Search Console + Bing Webmaster Tools and submit /sitemap.xml (needs your Google/Microsoft logins).

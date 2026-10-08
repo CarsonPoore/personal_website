@@ -31,7 +31,6 @@
   @media (max-width: 900px) { .opinion-split { grid-template-columns: 1fr; } }
   .opinion-split__copy p + p { margin-top: 18px; }
   .opinion-split__copy p { max-width: 56ch; }
-  .src { font-size: 0.82rem; color: var(--ink-2); letter-spacing: 0.01em; }
 
   /* The one-page report, drawn as a sheet with blueprint corner marks */
   .report-sheet {
@@ -58,7 +57,6 @@
     padding-bottom: 14px; border-bottom: 2px solid var(--ink);
   }
   .report-sheet__head .label { color: var(--ink); }
-  .report-sheet__head span:last-child { font-size: 0.78rem; color: var(--ink-2); letter-spacing: 0.04em; white-space: nowrap; }
   .report-sheet ol { list-style: none; margin: 0; padding: 0; }
   .report-sheet li {
     display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 14px;
@@ -67,7 +65,6 @@
   .report-sheet__n { font-weight: 900; font-size: 1.5rem; line-height: 1; color: var(--cobalt); }
   .report-sheet h3 { font-size: var(--step-1); line-height: 1.2; }
   .report-sheet li p { margin-top: 6px; color: var(--ink-2); line-height: 1.6; }
-  .report-sheet__foot { margin-top: 16px; font-size: 0.85rem; color: var(--ink-2); }
 
   /* What gets wired: four cells on navy */
   .wire-grid {
@@ -86,7 +83,6 @@
   .wire .label { color: var(--cream-2); display: block; margin-bottom: 14px; }
   .wire h3 { color: #fff; font-size: var(--step-2); line-height: 1.1; }
   .wire p { color: var(--cream-2); margin-top: 12px; line-height: 1.62; }
-  .wire-note { max-width: 64ch; color: var(--cream-2); }
 
   .board-note { max-width: 62ch; }
   .board-note p + p { margin-top: 18px; }
@@ -104,14 +100,35 @@
       "image": "https://carsonpoore.com/brand/carson-headshot.png",
       "email": "carson@carsonpoore.com",
       "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
-      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" },
-        { "@type": "Country", "name": "United States" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
       ],
       "priceRange": "$1,200–$4,800/month",
-      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+      "founder": {
+        "@type": "Person",
+        "@id": "https://carsonpoore.com/about#carson",
+        "name": "Carson Poore",
+        "sameAs": [
+          "https://www.linkedin.com/in/carson-poore/"
+        ]
+      }
     },
     {
       "@type": "Service",
@@ -119,20 +136,45 @@
       "name": "GA4 & analytics",
       "serviceType": "Google Analytics 4 consulting, conversion tracking, and call tracking",
       "description": "GA4 cleanup, key-event and conversion tracking, call tracking, and a one-page monthly report that counts calls and booked work, for small businesses, founders, and nonprofits nationwide. Ongoing work sits inside published monthly retainers; a standalone cleanup is quoted in writing.",
-      "provider": { "@id": "https://carsonpoore.com/#org" },
+      "provider": {
+        "@id": "https://carsonpoore.com/#org"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" },
-        { "@type": "Country", "name": "United States" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
       ],
       "url": "https://carsonpoore.com/services/analytics"
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carsonpoore.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://carsonpoore.com/services" },
-        { "@type": "ListItem", "position": 3, "name": "GA4 & analytics" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://carsonpoore.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://carsonpoore.com/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "GA4 & analytics"
+        }
       ]
     },
     {
@@ -141,27 +183,42 @@
         {
           "@type": "Question",
           "name": "Why is GA4 not tracking my conversions?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Usually one of four things: the event was never marked as a key event, a Google Tag Manager tag sits in the wrong spot, ad blockers hide some visitors, or two reports credit sales by different attribution rules. Check your key events first. It costs nothing, and it’s the culprit we find most." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually one of four things: the event was never marked as a key event, a Google Tag Manager tag sits in the wrong spot, ad blockers hide some visitors, or two reports credit sales by different attribution rules. Check your key events first. It costs nothing, and it’s the culprit we find most."
+          }
         },
         {
           "@type": "Question",
           "name": "How much does a GA4 consultant cost?",
-          "acceptedAnswer": { "@type": "Answer", "text": "GA4 agencies that publish their rates, such as Analytify and Mavlers, list a one-time setup at roughly $699 to $2,000 and up. With us, ongoing tracking and the monthly report sit inside a retainer of $1,200, $2,400, or $4,800 a month, with a three-month minimum. A standalone cleanup gets a written quote before any work starts." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GA4 agencies sell a one-time setup, and some owners only need that. With us, ongoing tracking and the monthly report sit inside a retainer of $1,200, $2,400, or $4,800 a month, with a three-month minimum. A standalone cleanup gets a written quote before any work starts."
+          }
         },
         {
           "@type": "Question",
           "name": "Do I need call tracking if I already have GA4?",
-          "acceptedAnswer": { "@type": "Answer", "text": "If customers call you to buy, yes. GA4 only sees what happens inside the browser, so a call placed from your website looks like nothing happened. Call tracking shows a forwarding number to visitors from search and ads, and every call arrives tagged with where it came from. Your real number stays yours." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If customers call you to buy, yes. GA4 only sees what happens inside the browser, so a call placed from your website looks like nothing happened. Call tracking shows a forwarding number to visitors from search and ads, and every call arrives tagged with where it came from. Your real number stays yours."
+          }
         },
         {
           "@type": "Question",
           "name": "Can you set up GA4 for a business outside Indiana?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. We’re based in Indianapolis and our local marketing work stays in central Indiana, but analytics happens over a screen share. Technical clients anywhere in the country get the same setup and monthly report at the same published prices." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We’re based in Indianapolis and our local marketing work stays in central Indiana, but analytics happens over a screen share. Technical clients anywhere in the country get the same setup and monthly report at the same published prices."
+          }
         },
         {
           "@type": "Question",
           "name": "Should I build my own Looker Studio dashboard?",
-          "acceptedAnswer": { "@type": "Answer", "text": "You can, and some owners enjoy it. But a dashboard only redraws what GA4 collected. If the events underneath are wrong, the charts are wrong in nicer colors. Fix the tracking first, then decide whether you need a dashboard at all. One plain page usually does the job." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can, and some owners enjoy it. But a dashboard only redraws what GA4 collected. If the events underneath are wrong, the charts are wrong in nicer colors. Fix the tracking first, then decide whether you need a dashboard at all. One plain page usually does the job."
+          }
         }
       ]
     }
@@ -254,12 +311,11 @@
   <section class="section">
     <div class="wrap wrap--narrow">
       <div class="sec-head reveal">
-        <span class="eyebrow">The short answer</span>
         <h2>What it is, <em>price included.</em></h2>
       </div>
       <div class="answer-note reveal mt-md">
-        <p>A GA4 consultant opens the Google Analytics property you already have, finds what&rsquo;s miscounting, fixes it, and ties it to the leads that actually pay you, phone calls included. GA4 agencies that publish their rates, Analytify and Mavlers among them, list a one-time setup at roughly <strong>$699 to $2,000</strong> and up.</p>
-        <p>Ours works the way the rest of our pricing works. If we&rsquo;re running your marketing, the tracking and the monthly report sit inside your retainer: $1,200, $2,400, or $4,800 a month, three months minimum, then month to month. If all you want is a one-time cleanup, you get a written quote before anything starts. We cap the practice at eight clients, so whoever set up your tags is also the one reading them every month.</p>
+        <p>A GA4 consultant opens the Google Analytics property you already have, finds what&rsquo;s miscounting, fixes it, and ties it to the leads that actually pay you, phone calls included. GA4 agencies that publish their rates list a one-time setup at roughly <strong>$699 to $2,000</strong> and up.</p>
+        <p>Ours works the way the rest of our pricing works. If we&rsquo;re running your marketing, the tracking and the monthly report sit inside your retainer: $1,200, $2,400, or $4,800 a month, three months minimum, then month to month. If all you want is a one-time cleanup, you get a written quote before anything starts. We take eight clients at a time, so whoever set up your tags is also the one reading them every month.</p>
         <p>And if a one-time setup from one of those agencies is all you need, we&rsquo;ll say so on the call. Sometimes it is.</p>
         <p>The property and every month of data are yours. Leave, and they leave with you.</p>
       </div>
@@ -274,17 +330,14 @@
     <div class="wrap">
       <div class="opinion-split">
         <div class="opinion-split__copy reveal">
-          <span class="eyebrow">Where we stand</span>
           <h2 class="mt-md">Most dashboards exist to <em>look busy.</em></h2>
           <p class="mt-md">Forty tiles and a live map of strangers in Ohio. We think dashboards like that are built to look like work, and yours should do something smaller and harder: answer three questions, then get out of the way.</p>
-          <p>Owners have noticed. In a vcita survey of 500 US small business owners (April 2025), 60% of those who dropped their marketing agency named a lack of return as the reason. Our guess is that some of them were getting a return. Nobody could show them where.</p>
+          <p>Owners have noticed. A vcita survey found that 60% of small business owners who dropped their marketing agency named a lack of return as the reason. Our guess is that some of them were getting a return. Nobody could show them where.</p>
           <p>So the report isn&rsquo;t an extra. Our <a class="tlink" href="/investment">pricing page</a> promises every retainer client &ldquo;a monthly report that says what happened and what it means for you,&rdquo; and this is the page that keeps that promise.</p>
-          <p class="src">Source: vcita, survey of 500 US SMB owners, April 2025 (vcita.com/press).</p>
         </div>
         <div class="report-sheet reveal" data-delay="1">
           <div class="report-sheet__head">
             <span class="label">The monthly page</span>
-            <span>Same layout, every client</span>
           </div>
           <ol>
             <li>
@@ -309,7 +362,6 @@
               </div>
             </li>
           </ol>
-          <p class="report-sheet__foot">No bounce rate, and no chart without a plain sentence under it.</p>
         </div>
       </div>
     </div>
@@ -319,33 +371,28 @@
   <section class="section">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="eyebrow">The usual suspects</span>
         <h2>When GA4 says zero and <em>the phone won&rsquo;t stop.</em></h2>
-        <p class="sec-head__intro">Owners tell us GA4 is broken. It rarely is. It&rsquo;s misconfigured, almost always in one of four ways, the same four that analytics tool makers like Analytify and Cometly walk through in their own troubleshooting guides.</p>
+        <p class="sec-head__intro">Owners tell us GA4 is broken. It rarely is. It&rsquo;s misconfigured, almost always in one of four ways.</p>
       </div>
 
       <div class="svc-list mt-lg">
 
         <article class="svc reveal">
-          <span class="svc__idx">01 / Key events</span>
           <h3 class="svc__title">The form fill nobody flagged</h3>
           <p class="svc__body">GA4 records every form submission, then waits for a person to mark that event as a key event. Until someone does, your conversion report reads zero during a week when the phone never stopped. It&rsquo;s the cause we find most. The fix takes minutes. Finding it is the work.</p>
         </article>
 
         <article class="svc reveal">
-          <span class="svc__idx">02 / Tag Manager</span>
           <h3 class="svc__title">A tag firing twice, or not at all</h3>
           <p class="svc__body">Put Google Tag Manager in the wrong spot and it double-counts some pages while missing others. An old Universal Analytics snippet still sitting in your theme does its own damage. Before we trust any number you&rsquo;ve already got, we trace where every tag fires.</p>
         </article>
 
         <article class="svc reveal">
-          <span class="svc__idx">03 / Ad blockers</span>
           <h3 class="svc__title">The visitors no setup can see</h3>
           <p class="svc__body">Some of your visitors run ad blockers that stop analytics scripts cold. We can&rsquo;t fix that. Neither can anyone else selling you a setup. What we can do is show you roughly where the gap sits. Call tracking closes some of it, since phones don&rsquo;t run ad blockers.</p>
         </article>
 
         <article class="svc reveal">
-          <span class="svc__idx">04 / Attribution</span>
           <h3 class="svc__title">Two tools, two different totals</h3>
           <p class="svc__body">GA4 and Google Ads each give credit for a sale by their own rules, and your CRM keeps a third set of books. So the totals never match, and it feels like somebody&rsquo;s lying. Nobody is. We pick one rule, explain it to you once in plain English, and report by it every month after, so this month can be compared to last.</p>
         </article>
@@ -358,35 +405,30 @@
   <section class="section section--navy">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="eyebrow">The setup</span>
         <h2>Every lead gets <em>a return address.</em></h2>
         <p class="sec-head__intro">Cleanup comes first: one property, one clean set of tags, referral spam filtered out, your own visits excluded. Then we wire up the four things that tie marketing to money.</p>
       </div>
 
       <div class="wire-grid mt-lg">
         <article class="wire reveal">
-          <span class="label">01 &middot; Forms</span>
           <h3>Forms that count</h3>
           <p>Every form that matters becomes a key event, named so you&rsquo;d recognize it without a glossary.</p>
         </article>
         <article class="wire reveal" data-delay="1">
-          <span class="label">02 &middot; Calls</span>
           <h3>Calls with a source</h3>
           <p>A forwarding number swaps in for visitors from search and ads, so each call shows up tagged with where it came from. Your real number stays the main line on your Google Business Profile.</p>
         </article>
         <article class="wire reveal" data-delay="2">
-          <span class="label">03 &middot; Booked work</span>
           <h3>Jobs that actually closed</h3>
           <p>Where your scheduling tool or CRM allows a connection, closed jobs flow back into GA4 and Google Ads. Where it doesn&rsquo;t, we&rsquo;ll tell you, and count them another way.</p>
         </article>
         <article class="wire reveal" data-delay="3">
-          <span class="label">04 &middot; Spend</span>
           <h3>Cost on the same page</h3>
           <p>Ad accounts linked to GA4, so what you spent and what it brought in finally sit side by side.</p>
         </article>
       </div>
 
-      <p class="wire-note reveal mt-lg">If we also run your <a class="tlink" href="/services/google-ads">Google Ads</a> or your <a class="tlink" href="/services/crm-gohighlevel">GoHighLevel account</a>, they share this same tracking, which is half the reason to keep it all with one team. Your first report covers your first full month of clean data.</p>
+      <p class="reveal mt-lg">If we also run your <a class="tlink" href="/services/google-ads">Google Ads</a> or your <a class="tlink" href="/services/crm-gohighlevel">GoHighLevel account</a>, they share this same tracking, which is half the reason to keep it all with one team. Your first report covers your first full month of clean data.</p>
     </div>
   </section>
 
@@ -394,7 +436,6 @@
   <section class="section section--stone">
     <div class="wrap wrap--narrow">
       <div class="sec-head reveal">
-        <span class="eyebrow">For nonprofits</span>
         <h2>Your board wants <em>one page.</em></h2>
       </div>
       <div class="board-note reveal mt-md">
@@ -411,7 +452,6 @@
   <section class="section">
     <div class="wrap wrap--narrow">
       <div class="sec-head reveal">
-        <span class="eyebrow">Fair questions</span>
         <h2>Asked before anyone <em>shares a screen.</em></h2>
       </div>
       <div class="faq mt-lg reveal">
@@ -421,7 +461,7 @@
         </details>
         <details>
           <summary>How much does a GA4 consultant cost?</summary>
-          <p>GA4 agencies that publish their rates, such as Analytify and Mavlers, list a one-time setup at roughly $699 to $2,000 and up. With us, ongoing tracking and the monthly report sit inside a retainer of $1,200, $2,400, or $4,800 a month, with a three-month minimum. A standalone cleanup gets a written quote before any work starts.</p>
+          <p>GA4 agencies sell a one-time setup, and some owners only need that. With us, ongoing tracking and the monthly report sit inside a retainer of $1,200, $2,400, or $4,800 a month, with a three-month minimum. A standalone cleanup gets a written quote before any work starts.</p>
         </details>
         <details>
           <summary>Do I need call tracking if I already have GA4?</summary>
@@ -436,7 +476,6 @@
           <p>You can, and some owners enjoy it. But a dashboard only redraws what GA4 collected. If the events underneath are wrong, the charts are wrong in nicer colors. Fix the tracking first, then decide whether you need a dashboard at all. One plain page usually does the job.</p>
         </details>
       </div>
-      <p class="updated mt-lg">Last updated: October 2026</p>
     </div>
   </section>
 
@@ -444,7 +483,6 @@
   <section class="closing">
     <div class="closing__inner">
       <div class="reveal">
-        <span class="eyebrow">Your move</span>
         <h2>Find out if your numbers <em>are telling the truth.</em></h2>
         <p>Book a free 30-minute call and share your screen. Before we hang up, you&rsquo;ll know whether your key events are counting. If everything&rsquo;s already right, we&rsquo;ll say so, and that answer costs you nothing.</p>
       </div>
@@ -462,7 +500,7 @@
       <div class="footer__brand">
         <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
         <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
-        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
       </div>
       <div>
         <h4>Services</h4>
@@ -490,11 +528,11 @@
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
-          <li><a href="/tools/checkup">The five-step check-up</a></li>
-          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
-          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
-          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
-          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+          <li><a href="/tools/checkup">The Five-Step Check-Up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy Find You?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI Opportunity Finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget Calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-Day Plan Starter</a></li>
         </ul>
       </div>
       <div>

@@ -62,22 +62,47 @@
       "image": "https://carsonpoore.com/brand/carson-headshot.png",
       "email": "carson@carsonpoore.com",
       "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
-      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" },
-        { "@type": "Country", "name": "United States" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
       ],
       "priceRange": "$1,200–$4,800/month",
-      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+      "founder": {
+        "@type": "Person",
+        "@id": "https://carsonpoore.com/about#carson",
+        "name": "Carson Poore",
+        "sameAs": [
+          "https://www.linkedin.com/in/carson-poore/"
+        ]
+      }
     },
     {
       "@type": "Article",
       "@id": "https://carsonpoore.com/articles/small-business-marketing-budget#article",
       "headline": "How much should a small business spend on marketing?",
       "description": "The SBA guideline is 7–8% of gross revenue under $5M. What that means in dollars at $300K, $500K, and $1M, and where your first marketing dollars should go.",
-      "author": { "@id": "https://carsonpoore.com/about#carson" },
-      "publisher": { "@id": "https://carsonpoore.com/#org" },
+      "author": {
+        "@id": "https://carsonpoore.com/about#carson"
+      },
+      "publisher": {
+        "@id": "https://carsonpoore.com/#org"
+      },
       "datePublished": "2026-10-08",
       "dateModified": "2026-10-08",
       "mainEntityOfPage": "https://carsonpoore.com/articles/small-business-marketing-budget"
@@ -90,7 +115,7 @@
           "name": "Is 7–8% of revenue too much for a small business to spend on marketing?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "It’s the SBA’s guideline for businesses under $5M, and Gartner’s 2025 CMO Spend Survey puts the average at 7.7% across mostly larger companies, so it isn’t unusual. If margins are thin, start in the 4–7% band that published budget guides give established businesses, then raise it once you can see which spending brings in work."
+            "text": "It’s the SBA’s guideline for businesses under $5M, so it isn’t unusual. If margins are thin, start in the 4–7% band that published budget guides give established businesses, then raise it once you can see which spending brings in work."
           }
         },
         {
@@ -106,7 +131,7 @@
           "name": "Should a new business spend more on marketing than an established one?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Usually, as a share of revenue. Budget guides from Mercury, True Future Media, and HawkSEM put early-stage businesses at roughly 10–20% of revenue and mature ones at 4–7%. A new business is paying to build the reviews and the customer list an older one already has."
+            "text": "Usually, as a share of revenue. Published budget guides put early-stage businesses at roughly 10–20% of revenue and mature ones at 4–7%. A new business is paying to build the reviews and the customer list an older one already has."
           }
         },
         {
@@ -122,7 +147,7 @@
           "name": "Are pay-per-lead sites like Angi worth the money?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sometimes, early, when you need jobs this month and have no reviews yet. Over time they tend to cost more per lead than channels you own: one comparison cited by Housecall Pro and Hearth put Angi near $80 a lead against about $45 through a business’s own Google Ads. And when you stop paying, the leads stop."
+            "text": "Sometimes, early, when you need jobs this month and have no reviews yet. Over time they tend to cost more per lead than channels you own. And when you stop paying, the leads stop."
           }
         }
       ]
@@ -130,9 +155,24 @@
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carsonpoore.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://carsonpoore.com/resources" },
-        { "@type": "ListItem", "position": 3, "name": "Marketing budget", "item": "https://carsonpoore.com/articles/small-business-marketing-budget" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://carsonpoore.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Resources",
+          "item": "https://carsonpoore.com/resources"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Marketing budget",
+          "item": "https://carsonpoore.com/articles/small-business-marketing-budget"
+        }
       ]
     }
   ]
@@ -206,8 +246,7 @@
       </nav>
       <div class="page-hero__grid">
         <div class="page-hero__copy">
-          <span class="eyebrow reveal">Articles</span>
-          <h1 class="reveal mt-md" data-delay="1">How much should a small business spend on <em>marketing?</em></h1>
+          <h1 class="reveal" data-delay="1">How much should a small business spend on <em>marketing?</em></h1>
           <p class="hero__sub reveal mt-md" data-delay="2">A sourced percentage, the dollar math at three revenue sizes, and our honest take on where the first dollars belong.</p>
         </div>
         <div class="motion-frame motion-frame--hero page-hero__motion reveal" data-delay="2">
@@ -228,15 +267,15 @@
           <span class="updated">Last updated: October 2026</span>
         </div>
 
-        <p class="answer reveal" data-delay="1">The U.S. Small Business Administration&rsquo;s guideline is to spend <strong>7&ndash;8% of gross revenue</strong> on marketing if your business brings in less than $5M a year. For a $500K business, that&rsquo;s about <strong>$2,900&ndash;$3,300 a month</strong>. Gartner&rsquo;s 2025 CMO Spend Survey lands close by, with an average of 7.7%, though its respondents are mostly large companies.</p>
+        <p class="answer reveal" data-delay="1">The U.S. Small Business Administration&rsquo;s guideline is to spend <strong>7&ndash;8% of gross revenue</strong> on marketing if your business brings in less than $5M a year. For a $500K business, that&rsquo;s about <strong>$2,900&ndash;$3,300 a month</strong>.</p>
 
-        <p>A fair warning before the math. A consultancy telling you how much to spend on marketing has an obvious stake in the answer. So none of the percentages on this page are ours. Each one comes from a named source, cited where it appears. The opinions are ours, and we&rsquo;ve labeled them as opinions.</p>
+        <p>A fair warning before the math. A consultancy telling you how much to spend on marketing has an obvious stake in the answer. So none of the percentages on this page are ours. The opinions are, and we&rsquo;ve labeled them as opinions.</p>
 
         <h2>Is 7&ndash;8% of revenue the right number for your business?</h2>
 
         <p>It&rsquo;s a starting point. A blunt one. The SBA gives a single range for every business under $5M, which lumps a two-truck plumbing company in Greenwood together with a 30-person software firm in Fishers. Those two shouldn&rsquo;t budget the same way.</p>
 
-        <p>Stage matters more than size. Budget guides published by Mercury, True Future Media, and HawkSEM converge on roughly these bands:</p>
+        <p>Stage matters more than size. Published budget guides converge on roughly these bands:</p>
 
         <ul class="stage-list">
           <li><b>10&ndash;20%</b><span>Getting started. You&rsquo;re finding customers beyond friends and the first few referrals.</span></li>
@@ -245,8 +284,6 @@
         </ul>
 
         <p>The top band looks alarming at first. Twenty percent of revenue? It makes more sense once you remember what a new business doesn&rsquo;t have yet: reviews and a list of past customers to call in a slow month. You&rsquo;re paying to build things an older business already owns.</p>
-
-        <p>For a reality check on what owners actually spend, a DIYMarketers survey found more than 75% of small businesses put somewhere between $500 and $3,000 a month into marketing. At $300K to $500K in revenue, that overlaps the SBA range. At $1M it usually falls short of it.</p>
 
         <h2>What does that look like in dollars?</h2>
 
@@ -289,7 +326,6 @@
             </tbody>
           </table>
         </div>
-        <p class="src">Sources: U.S. Small Business Administration guidance (7&ndash;8% of gross revenue for businesses under $5M); stage bands from budget guides published by Mercury, True Future Media, and HawkSEM. Monthly figures are the annual range divided by 12.</p>
 
         <p>If you land between two columns, use the lower number for your first three months. Raise it once you can see which spending brings in calls. That rule matters more than whether you pick 6% or 8%.</p>
 
@@ -304,8 +340,6 @@
         <h3>What shouldn&rsquo;t you buy yet?</h3>
 
         <p>Social media management, if your Google profile has eight reviews and photos from 2019. And Google Ads, if you can&rsquo;t yet tell which calls came from an ad. Both are fine purchases later. Early, they&rsquo;re where budgets leak.</p>
-
-        <p>The data backs that up. A 2025 vcita survey of 500 small business owners found that 40% had dropped or switched a marketing agency, and 60% of those named lack of ROI as the reason. The services they cut first were social media management, paid search, and email.</p>
 
         <h2>Is it cheaper to rent leads or own your pipeline?</h2>
 
@@ -324,8 +358,8 @@
             <tbody>
               <tr>
                 <th scope="row">Cost per lead</th>
-                <td>About $80 in one comparison (Housecall Pro, Hearth)</td>
-                <td>About $45 through your own Google Ads, same comparison</td>
+                <td>Higher; you pay for every lead, won or lost</td>
+                <td>Lower once your profile and site are working</td>
               </tr>
               <tr>
                 <th scope="row">Who else gets the lead</th>
@@ -334,7 +368,7 @@
               </tr>
               <tr>
                 <th scope="row">Billing</th>
-                <td>WSOC-TV has reported complaints of charges continuing after cancellation</td>
+                <td>Charges that keep coming after cancellation are a common complaint</td>
                 <td>Ad spend goes to Google from your account, at a budget you set</td>
               </tr>
               <tr>
@@ -345,7 +379,6 @@
             </tbody>
           </table>
         </div>
-        <p class="src">Sources: per-lead comparison as cited in contractor guides from Housecall Pro and Hearth; billing complaints as reported by WSOC-TV. One comparison, not a national average. Your numbers will differ by trade and market.</p>
 
         <p>Renting isn&rsquo;t always wrong. A new contractor with an empty calendar and no reviews can use platform leads to get through a first season while the owned pieces get built. The trouble shows up later, when the platform is still most of the pipeline. By then you&rsquo;ve paid for hundreds of leads and own none of the things that produced them.</p>
 
@@ -393,14 +426,14 @@
 
         <p>Ad spend is separate. If we run Google Ads for you, that money goes to Google from an account in your name, at a budget you set, and it counts toward the same percentage. At $300K, the $1,200 tier leaves roughly $550 to $800 a month for ads inside the SBA&rsquo;s 7&ndash;8%. The $4,800 tier at $300K sits outside that range entirely. It only fits the getting-started band, and even then we&rsquo;d usually suggest starting smaller.</p>
 
-        <p>The terms are the same at every tier. Three months minimum, then month to month. We take eight clients total, and nonprofits get a reduced rate. If what you need is a plan you&rsquo;ll run yourself, there&rsquo;s a $3,000 one-time strategy engagement. Read the full terms on the <a href="/investment">pricing page</a> before you talk to anyone.</p>
+        <p>The terms are the same at every tier. Three months minimum, then month to month. We take eight clients at a time, and nonprofits get a reduced rate. If what you need is a plan you&rsquo;ll run yourself, there&rsquo;s a $3,000 one-time strategy engagement, and if you move to a retainer afterward, half of it ($1,500) is credited toward the retainer. Read the full terms on the <a href="/investment">pricing page</a> before you talk to anyone.</p>
 
         <p>And if $1,200 a month would be more than your whole marketing budget, don&rsquo;t hire us yet. Spend that money on your Google profile and on answering every call. It&rsquo;s what we&rsquo;d do first anyway.</p>
 
         <div class="calc-handoff reveal">
           <div>
             <h3>Want your own number?</h3>
-            <p>The budget calculator takes your revenue and stage, runs this math, and shows its sources. Free, no email.</p>
+            <p>The Budget Calculator takes your revenue and stage and runs this math. Free, no email.</p>
           </div>
           <a class="btn btn--primary" href="/tools/marketing-budget">Run the calculator <span class="arr">→</span></a>
         </div>
@@ -410,7 +443,7 @@
         <div class="faq reveal">
           <details>
             <summary>Is 7&ndash;8% of revenue too much for a small business to spend on marketing?</summary>
-            <p>It&rsquo;s the SBA&rsquo;s guideline for businesses under $5M, and Gartner&rsquo;s 2025 CMO Spend Survey puts the average at 7.7% across mostly larger companies, so it isn&rsquo;t unusual. If margins are thin, start in the 4&ndash;7% band that published budget guides give established businesses, then raise it once you can see which spending brings in work.</p>
+            <p>It&rsquo;s the SBA&rsquo;s guideline for businesses under $5M, so it isn&rsquo;t unusual. If margins are thin, start in the 4&ndash;7% band that published budget guides give established businesses, then raise it once you can see which spending brings in work.</p>
           </details>
           <details>
             <summary>Does a marketing budget include ad spend?</summary>
@@ -418,7 +451,7 @@
           </details>
           <details>
             <summary>Should a new business spend more on marketing than an established one?</summary>
-            <p>Usually, as a share of revenue. Budget guides from Mercury, True Future Media, and HawkSEM put early-stage businesses at roughly 10&ndash;20% of revenue and mature ones at 4&ndash;7%. A new business is paying to build the reviews and the customer list an older one already has.</p>
+            <p>Usually, as a share of revenue. Published budget guides put early-stage businesses at roughly 10&ndash;20% of revenue and mature ones at 4&ndash;7%. A new business is paying to build the reviews and the customer list an older one already has.</p>
           </details>
           <details>
             <summary>How much should a $500K business spend on marketing per month?</summary>
@@ -426,21 +459,19 @@
           </details>
           <details>
             <summary>Are pay-per-lead sites like Angi worth the money?</summary>
-            <p>Sometimes, early, when you need jobs this month and have no reviews yet. Over time they tend to cost more per lead than channels you own: one comparison cited by Housecall Pro and Hearth put Angi near $80 a lead against about $45 through a business&rsquo;s own Google Ads. And when you stop paying, the leads stop.</p>
+            <p>Sometimes, early, when you need jobs this month and have no reviews yet. Over time they tend to cost more per lead than channels you own. And when you stop paying, the leads stop.</p>
           </details>
         </div>
 
         <div class="article-note">
           <strong>Keep reading</strong>
           <ul class="next-reads">
-            <li><span class="next-reads__kind">Tool</span><a href="/tools/marketing-budget">Marketing budget calculator (free, no email)</a></li>
+            <li><span class="next-reads__kind">Tool</span><a href="/tools/marketing-budget">Budget Calculator (free, no email)</a></li>
             <li><span class="next-reads__kind">Article</span><a href="/articles/not-showing-up-on-google">Why your business isn&rsquo;t showing up on Google</a></li>
             <li><span class="next-reads__kind">For you</span><a href="/for/local-businesses">Marketing for local businesses in central Indiana</a></li>
             <li><span class="next-reads__kind">Pricing</span><a href="/investment">Our published prices and terms</a></li>
           </ul>
         </div>
-
-        <p class="updated">Percentages checked against their sources in October 2026. When a source updates, so does the table.</p>
 
       </article>
     </div>
@@ -450,7 +481,6 @@
   <section class="closing">
     <div class="closing__inner">
       <div class="reveal">
-        <span class="eyebrow">For owners setting a budget</span>
         <h2>Bring your number. We&rsquo;ll tell you where it should <em>go first.</em></h2>
         <p>A free 30-minute call. If your money is better spent on your Google profile than on us, we&rsquo;ll say so and show you how to start.</p>
       </div>
@@ -468,7 +498,7 @@
       <div class="footer__brand">
         <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
         <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
-        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
       </div>
       <div>
         <h4>Services</h4>
@@ -496,11 +526,11 @@
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
-          <li><a href="/tools/checkup">The five-step check-up</a></li>
-          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
-          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
-          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
-          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+          <li><a href="/tools/checkup">The Five-Step Check-Up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy Find You?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI Opportunity Finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget Calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-Day Plan Starter</a></li>
         </ul>
       </div>
       <div>

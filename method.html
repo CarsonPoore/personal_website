@@ -100,14 +100,35 @@
       "image": "https://carsonpoore.com/brand/carson-headshot.png",
       "email": "carson@carsonpoore.com",
       "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
-      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" },
-        { "@type": "Country", "name": "United States" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
       ],
       "priceRange": "$1,200–$4,800/month",
-      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+      "founder": {
+        "@type": "Person",
+        "@id": "https://carsonpoore.com/about#carson",
+        "name": "Carson Poore",
+        "sameAs": [
+          "https://www.linkedin.com/in/carson-poore/"
+        ]
+      }
     },
     {
       "@type": "WebPage",
@@ -116,14 +137,36 @@
       "name": "The Five-Step Method | Carson Poore Consulting",
       "description": "Conviction, your people, a sharp offer, the experience, word of mouth. The five steps we run every engagement through, in plain English and with no trademark.",
       "inLanguage": "en-US",
-      "publisher": { "@id": "https://carsonpoore.com/#org" },
+      "publisher": {
+        "@id": "https://carsonpoore.com/#org"
+      },
       "dateModified": "2026-10-08",
       "about": [
-        { "@type": "Thing", "name": "Conviction", "description": "What the owner believes about the work, why it was built, and what stays non-negotiable." },
-        { "@type": "Thing", "name": "Your people", "description": "Getting specific about the customers the marketing is for." },
-        { "@type": "Thing", "name": "A sharp offer", "description": "What the business sells, named, packaged, priced, and pointed." },
-        { "@type": "Thing", "name": "The experience", "description": "Every touchpoint from first impression to tenth visit, designed on purpose." },
-        { "@type": "Thing", "name": "Word of mouth", "description": "Building the part of marketing most businesses leave to chance: people talking about you." }
+        {
+          "@type": "Thing",
+          "name": "Conviction",
+          "description": "What the owner believes about the work, why it was built, and what stays non-negotiable."
+        },
+        {
+          "@type": "Thing",
+          "name": "Your people",
+          "description": "Getting specific about the customers the marketing is for."
+        },
+        {
+          "@type": "Thing",
+          "name": "A sharp offer",
+          "description": "What the business sells, named, packaged, priced, and pointed."
+        },
+        {
+          "@type": "Thing",
+          "name": "The experience",
+          "description": "Every touchpoint from first impression to tenth visit, designed on purpose."
+        },
+        {
+          "@type": "Thing",
+          "name": "Word of mouth",
+          "description": "Building the part of marketing most businesses leave to chance: people talking about you."
+        }
       ]
     }
   ]
@@ -188,8 +231,7 @@
     <div class="wrap">
       <div class="page-hero__grid">
         <div class="page-hero__copy">
-          <span class="eyebrow reveal">The method</span>
-          <h1 class="reveal mt-md" data-delay="1">Five steps, in <em>an order that actually matters.</em></h1>
+          <h1 class="reveal" data-delay="1">Five steps, in <em>an order that actually matters.</em></h1>
           <p class="hero__sub reveal mt-md" data-delay="2">Most marketing starts in the middle, with the ads and the posts, then wonders why nothing sticks. We start at the beginning, with you, and build forward one step at a time.</p>
         </div>
         <div class="motion-frame motion-frame--hero page-hero__motion reveal" data-delay="2">
@@ -221,7 +263,7 @@
               <h2 class="step__label">Conviction</h2>
             </div>
             <p class="step__body">We start with you. What you believe about your work, why you built it, what you won&rsquo;t compromise on. It sounds soft. It isn&rsquo;t. Your conviction is the one thing no competitor can copy, and everything else stands on it.</p>
-            <p class="step__where"><span class="step__where-label">Where this lives on the site</span>It&rsquo;s the opening of our <a href="/services/strategy">strategy engagement</a>, the one-time $3,000 project that begins with what you stand for and ends with a 90-day plan.</p>
+            <p class="step__where">Conviction is the opening of our <a href="/services/strategy">strategy engagement</a>, the one-time $3,000 project that begins with what you stand for and ends with a 90-day plan.</p>
           </article>
 
           <article class="step" id="s2">
@@ -230,7 +272,7 @@
               <h2 class="step__label">Your people</h2>
             </div>
             <p class="step__body">Next, we get specific about who your marketing is for. Not &ldquo;everyone.&rdquo; The customers who light up when they find you. Marketing to the right people is calm and effective. Marketing to everyone is expensive and exhausting.</p>
-            <p class="step__where"><span class="step__where-label">Where this lives on the site</span>Who &ldquo;your people&rdquo; are depends on who you are, so we wrote it out three ways, for <a href="/for/local-businesses">local businesses</a>, <a href="/for/founders">founders</a>, and <a href="/for/nonprofits">nonprofits</a>.</p>
+            <p class="step__where">Who &ldquo;your people&rdquo; are depends on who you are, so we wrote it out three ways, for <a href="/for/local-businesses">local businesses</a>, <a href="/for/founders">founders</a>, and <a href="/for/nonprofits">nonprofits</a>.</p>
           </article>
 
           <article class="step" id="s3">
@@ -239,7 +281,7 @@
               <h2 class="step__label">A sharp offer</h2>
             </div>
             <p class="step__body">Then we make what you sell impossible to misunderstand. Named, packaged, priced, and pointed. A sharp offer does the selling for you, so you spend less time convincing and more time doing what you&rsquo;re good at.</p>
-            <p class="step__where"><span class="step__where-label">Where this lives on the site</span>Shaping your offer is the middle of the <a href="/services/strategy">strategy engagement</a>, and our own prices sit in the open on the <a href="/investment">pricing page</a> as a working example.</p>
+            <p class="step__where">Shaping your offer is the middle of the <a href="/services/strategy">strategy engagement</a>, and our own prices sit in the open on the <a href="/investment">pricing page</a> as a working example.</p>
           </article>
 
           <article class="step" id="s4">
@@ -248,7 +290,7 @@
               <h2 class="step__label">The experience</h2>
             </div>
             <p class="step__body">Every touchpoint, from first impression to tenth visit. Here&rsquo;s what most marketing misses: being your customer <em>is</em> your marketing. We design those moments on purpose, so the business starts selling itself.</p>
-            <p class="step__where"><span class="step__where-label">Where this lives on the site</span>This is where the building happens: <a href="/services/websites">websites and web apps</a> for the first impression, and <a href="/services/crm-gohighlevel">GoHighLevel and CRM</a> for what happens after someone raises a hand.</p>
+            <p class="step__where">This is where the building happens: <a href="/services/websites">websites and web apps</a> for the first impression, and <a href="/services/crm-gohighlevel">GoHighLevel and CRM</a> for what happens after someone raises a hand.</p>
           </article>
 
           <article class="step" id="s5">
@@ -257,7 +299,7 @@
               <h2 class="step__label">Word of mouth, on purpose</h2>
             </div>
             <p class="step__body">Last, we build the part most businesses leave to chance: people talking about you. Delight is the only marketing that compounds for free. Get the first four steps right and this one starts taking care of itself.</p>
-            <p class="step__where"><span class="step__where-label">Where this lives on the site</span>A recommendation usually ends with &ldquo;just look them up,&rdquo; so this step shows up as <a href="/services/local-seo">local SEO</a> work: your Google profile, your reviews, and the answer to &ldquo;who should I call?&rdquo;</p>
+            <p class="step__where">A recommendation usually ends with &ldquo;just look them up,&rdquo; so this step shows up as <a href="/services/local-seo">local SEO</a> work: your Google profile, your reviews, and the answer to &ldquo;who should I call?&rdquo;</p>
           </article>
         </div>
       </div>
@@ -268,15 +310,12 @@
   <section class="section section--stone section--tight taste">
     <div class="wrap wrap--narrow">
       <div class="sec-head reveal">
-        <span class="eyebrow">A free taste</span>
         <h2>Want to see where you stand first?</h2>
       </div>
-      <p class="reveal">The <a href="/tools/checkup" class="hl-cobalt">five-step check-up</a> takes about two minutes, asks for no email address, and scores your business on each step the moment you finish. It can&rsquo;t see your books or talk to your customers. Treat the score as a place to start.</p>
-      <p class="reveal" data-delay="1">We think a method should fit on one page. That&rsquo;s why you won&rsquo;t find a trademark symbol anywhere on this one.</p>
+      <p class="reveal">The <a href="/tools/checkup" class="hl-cobalt">Five-Step Check-Up</a> takes about two minutes, asks for no email address, and scores your business on each step the moment you finish. It can&rsquo;t see your books or talk to your customers. Treat the score as a place to start.</p>
       <div class="row-cta mt-lg reveal" data-delay="2">
-        <a class="btn btn--ghost" href="/tools/checkup">Take the five-step check-up <span class="arr">→</span></a>
+        <a class="btn btn--ghost" href="/tools/checkup">Take the Five-Step Check-Up <span class="arr">→</span></a>
       </div>
-      <p class="updated mt-lg">Last updated: October 2026</p>
     </div>
   </section>
 
@@ -284,7 +323,6 @@
   <section class="closing">
     <div class="closing__inner">
       <div class="reveal">
-        <span class="eyebrow">The next step</span>
         <h2>Tell us which step feels <em>thinnest.</em></h2>
         <p>A free 30-minute call. You talk about what you&rsquo;ve built and who it&rsquo;s for, and we&rsquo;ll tell you where the order breaks down. If we&rsquo;re not the right people to fix it, we&rsquo;ll say that too.</p>
       </div>
@@ -302,7 +340,7 @@
       <div class="footer__brand">
         <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
         <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
-        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
       </div>
       <div>
         <h4>Services</h4>
@@ -330,11 +368,11 @@
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
-          <li><a href="/tools/checkup">The five-step check-up</a></li>
-          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
-          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
-          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
-          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+          <li><a href="/tools/checkup">The Five-Step Check-Up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy Find You?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI Opportunity Finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget Calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-Day Plan Starter</a></li>
         </ul>
       </div>
       <div>

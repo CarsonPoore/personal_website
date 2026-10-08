@@ -54,14 +54,35 @@
       "image": "https://carsonpoore.com/brand/carson-headshot.png",
       "email": "carson@carsonpoore.com",
       "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
-      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" },
-        { "@type": "Country", "name": "United States" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
       ],
       "priceRange": "$1,200–$4,800/month",
-      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+      "founder": {
+        "@type": "Person",
+        "@id": "https://carsonpoore.com/about#carson",
+        "name": "Carson Poore",
+        "sameAs": [
+          "https://www.linkedin.com/in/carson-poore/"
+        ]
+      }
     },
     {
       "@type": "Service",
@@ -69,10 +90,18 @@
       "name": "Strategy engagement",
       "serviceType": "Marketing strategy consulting",
       "description": "A one-time $3,000 strategy engagement for small businesses and founders: positioning, a defined best-fit customer, a sharp offer, and a prioritized 90-day marketing plan delivered with a live walkthrough.",
-      "provider": { "@id": "https://carsonpoore.com/#org" },
+      "provider": {
+        "@id": "https://carsonpoore.com/#org"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        }
       ],
       "offers": {
         "@type": "Offer",
@@ -84,9 +113,23 @@
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carsonpoore.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://carsonpoore.com/services" },
-        { "@type": "ListItem", "position": 3, "name": "Strategy" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://carsonpoore.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://carsonpoore.com/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Strategy"
+        }
       ]
     },
     {
@@ -95,27 +138,42 @@
         {
           "@type": "Question",
           "name": "What exactly do we get for the $3,000?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Four deliverables in one document: positioning, a defined best-fit customer, a sharp offer, and a prioritized 90-day plan. Then a live walkthrough, so the reasoning comes with it. It's the same engagement described on our pricing page, and it's yours to keep even if we never work together again." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Four deliverables in one document: positioning, a defined best-fit customer, a sharp offer, and a prioritized 90-day plan. Then a live walkthrough, so the reasoning comes with it. It's the same engagement described on our pricing page, and it's yours to keep even if we never work together again."
+          }
         },
         {
           "@type": "Question",
           "name": "How long does the strategy engagement take?",
-          "acceptedAnswer": { "@type": "Answer", "text": "About three weeks from kickoff to walkthrough. Most of that is research and conversations with you and, where possible, a few of your customers. The writing comes last. If a week slips because your schedule is full, that's normal and fine." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "About three weeks from kickoff to walkthrough. Most of that is research and conversations with you and, where possible, a few of your customers. The writing comes last. If a week slips because your schedule is full, that's normal and fine."
+          }
         },
         {
           "@type": "Question",
           "name": "What if we just take the plan and run it ourselves?",
-          "acceptedAnswer": { "@type": "Answer", "text": "That's a win, and we mean it. The engagement is priced to stand alone, every deliverable is written so your team can execute without us, and running it yourself is a legitimate outcome. If you get stuck mid-plan, coaching exists for that. No obligation, no expiration." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That's a win, and we mean it. The engagement is priced to stand alone, every deliverable is written so your team can execute without us, and running it yourself is a legitimate outcome. If you get stuck mid-plan, coaching exists for that. No obligation, no expiration."
+          }
         },
         {
           "@type": "Question",
           "name": "Are we too early for this?",
-          "acceptedAnswer": { "@type": "Answer", "text": "If you haven't sold your product consistently yet, probably. Before product-market fit, the honest advice is to go sell, listen hard, and come back once real customers exist. So that's what we'll tell you on a free call, along with homework, instead of taking the $3,000." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you haven't sold your product consistently yet, probably. Before product-market fit, the honest advice is to go sell, listen hard, and come back once real customers exist. So that's what we'll tell you on a free call, along with homework, instead of taking the $3,000."
+          }
         },
         {
           "@type": "Question",
           "name": "What happens after the walkthrough?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Whatever you choose. Some owners run the plan themselves. Others hand the campaign work to our marketing practice, the builds to technical, or keep us on as a monthly advisor through coaching. The plan is written to work in any of those hands, including yours." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Whatever you choose. Some owners run the plan themselves. Others hand the campaign work to our marketing practice, the builds to technical, or keep us on as a monthly advisor through coaching. The plan is written to work in any of those hands, including yours."
+          }
         }
       ]
     }
@@ -194,7 +252,7 @@
           <p class="hero__sub reveal mt-md" data-delay="2">The $3,000 strategy engagement: your positioning, your people, a sharp offer, and a prioritized 90-day marketing plan, walked through live. Yours to keep even if we never work together again.</p>
           <div class="row-cta mt-lg reveal" data-delay="3">
             <a class="btn btn--primary" href="/contact">See if it fits <span class="arr">→</span></a>
-            <a class="btn btn--ghost-light" href="/tools/90-day-plan">Try the free plan starter</a>
+            <a class="btn btn--ghost-light" href="/tools/90-day-plan">Try the free 90-Day Plan Starter</a>
           </div>
         </div>
         <div class="motion-frame motion-frame--hero page-hero__motion reveal" data-delay="2">
@@ -208,14 +266,13 @@
   <section class="section answer-block">
     <div class="wrap wrap--narrow">
       <div class="sec-head">
-        <span class="eyebrow reveal">The short version</span>
         <h2 class="reveal" data-delay="1">What you&rsquo;re buying, up front</h2>
       </div>
       <div class="mt-lg">
         <p class="reveal">The strategy engagement is one project with one price: $3,000, start to finish in about three weeks. We study your numbers and talk to your customers. Then we hand you a document that answers the question every owner eventually asks us: what should we do first?</p>
         <p class="mt-md reveal">You leave with four deliverables. Positioning. A defined best-fit customer. A sharp offer. And a prioritized 90-day plan, delivered in a live walkthrough, because a plan you don&rsquo;t understand is a plan you won&rsquo;t run.</p>
-        <p class="mt-md reveal">We think strategy should be bought once and owned, not rented inside a retainer. So this stands alone. There&rsquo;s no subscription attached and nothing that expires. For context, independent positioning and go-to-market sprints typically list between $1,500 and $3,000-plus on marketplaces like Contra and Maven. Ours sits at the top of that range, and it ends with a dated plan rather than a deck.</p>
-        <p class="mt-md reveal">If you&rsquo;re a founder, this is usually the front door. We usually point founders here first, before anyone touches a channel or spends a dollar on media.</p>
+        <p class="mt-md reveal">We think strategy should be bought once and owned, not rented inside a retainer. So this stands alone. There&rsquo;s no subscription attached and nothing that expires, and it ends with a dated plan rather than a deck.</p>
+        <p class="mt-md reveal">If you&rsquo;re a <a class="tlink" href="/for/founders">founder</a>, this is usually the front door. We usually point founders here first, before anyone touches a channel or spends a dollar on media.</p>
       </div>
       <div class="stat-row reveal" data-delay="2">
         <div><div class="stat__num">$3,000</div><div class="stat__lbl">One engagement, one price</div></div>
@@ -230,7 +287,6 @@
   <section class="section section--stone">
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow reveal">What you leave with</span>
         <h2 class="reveal" data-delay="1">Four deliverables and a walkthrough</h2>
         <p class="sec-head__intro reveal" data-delay="2">The same four deliverables listed on the <a class="tlink" href="/investment">pricing page</a>, spelled out. Everything arrives in plain English, written in your language, about your customers.</p>
       </div>
@@ -264,7 +320,7 @@
           </div>
         </li>
       </ol>
-      <p class="tier-note reveal" style="max-width: 62ch;">It stands alone on purpose. Hand it to your team or run it yourself. Everything in it belongs to you from the day we deliver it.</p>
+      <p class="mt-lg reveal" style="max-width: 62ch;">It stands alone on purpose. Hand it to your team or run it yourself. Everything in it belongs to you from the day we deliver it. And if you keep us on for a monthly partnership afterward, half the fee ($1,500) is credited toward it.</p>
     </div>
   </section>
 
@@ -272,7 +328,6 @@
   <section class="section">
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow reveal">Fit check</span>
         <h2 class="reveal" data-delay="1">Who this is for, and who should wait</h2>
         <p class="sec-head__intro reveal" data-delay="2">A pattern worth naming first: founder-led selling stalls once the company only grows if you&rsquo;re personally on the call. That usually happens well before $2 million in revenue, and it&rsquo;s where this engagement earns its keep.</p>
       </div>
@@ -292,11 +347,10 @@
             <li>You haven&rsquo;t sold the thing consistently yet. Before product-market fit, a paid plan mostly says &ldquo;go sell.&rdquo; We&rsquo;d rather send you off with homework.</li>
             <li>You need leads this week. Strategy is a three-week project; an urgent push is a retainer conversation.</li>
             <li>You already have a plan you believe in. Run it. Come back when it stops answering your questions.</li>
-            <li>$3,000 would strain the business right now. The <a class="tlink" href="/tools/90-day-plan">free plan starter</a> covers the first mile for nothing.</li>
+            <li>$3,000 would strain the business right now. The <a class="tlink" href="/tools/90-day-plan">free 90-Day Plan Starter</a> covers the first mile for nothing.</li>
           </ul>
         </div>
       </div>
-      <p class="fit-note reveal">Yes, this section talks people out of paying us. That&rsquo;s deliberate. An engagement sold to the wrong stage helps nobody, and a founder we send away early can come back when the timing is right. If you&rsquo;re weighing stage fit, the <a class="tlink" href="/for/founders">founders page</a> goes deeper.</p>
     </div>
   </section>
 
@@ -305,8 +359,7 @@
     <div class="wrap">
       <div class="after-grid">
         <div>
-          <span class="eyebrow reveal">After the walkthrough</span>
-          <h2 class="reveal mt-sm" data-delay="1">The plan feeds everything else we do</h2>
+          <h2 class="reveal" data-delay="1">The plan feeds everything else we do</h2>
           <p class="mt-md reveal" data-delay="2">The document doesn&rsquo;t care who executes it. If the plan calls for campaigns, content, and email, that&rsquo;s our <a class="tlink" href="/services/marketing">Marketing practice</a>. If it calls for a site or an ad account built right, that&rsquo;s <a class="tlink" href="/services/technical">Technical</a>. If you&rsquo;d rather run it yourself with us checking your work each month, that&rsquo;s <a class="tlink" href="/services/coaching">Coaching &amp; growth</a>. And some owners simply run it alone, which still counts as the plan working.</p>
           <p class="mt-md reveal" data-delay="2">The engagement and the retainers are priced separately on the <a class="tlink" href="/investment">pricing page</a>. Buying one obligates you to nothing else.</p>
         </div>
@@ -321,10 +374,9 @@
   <section class="section section--navy taste-band">
     <div class="wrap wrap--narrow">
       <div class="sec-head">
-        <span class="eyebrow reveal">Free first</span>
-        <h2 class="reveal" data-delay="1">Try the <em>free</em> plan starter</h2>
+        <h2 class="reveal" data-delay="1">Try the <em>free</em> 90-Day Plan Starter</h2>
       </div>
-      <p class="mt-lg reveal" data-delay="1">Not ready to spend anything? Fair. The 90-day plan starter asks a handful of plain questions about your business and hands back a first-pass outline on the spot. No email. No login. It&rsquo;s one of five free tools on this site, and it doubles as a preview of how we think.</p>
+      <p class="mt-lg reveal" data-delay="1">Not ready to spend anything? Fair. The 90-Day Plan Starter asks a handful of plain questions about your business and hands back a first-pass outline on the spot. No email. No login. It&rsquo;s one of five free tools on this site, and it doubles as a preview of how we think.</p>
       <p class="mt-md reveal" data-delay="2">If the outline makes you argue with it, good. The paid engagement takes the same questions and goes all the way down.</p>
       <div class="row-cta mt-lg reveal" data-delay="3">
         <a class="btn btn--primary" href="/tools/90-day-plan">Start the free plan <span class="arr">→</span></a>
@@ -336,7 +388,6 @@
   <section class="section section--stone">
     <div class="wrap wrap--narrow">
       <div class="sec-head">
-        <span class="eyebrow reveal">Fair questions</span>
         <h2 class="reveal" data-delay="1">What owners ask before buying the plan</h2>
       </div>
       <div class="faq mt-xl reveal" data-delay="2">
@@ -361,7 +412,6 @@
           <p>Whatever you choose. Some owners run the plan themselves. Others hand the campaign work to our <a class="tlink" href="/services/marketing">marketing practice</a>, the builds to <a class="tlink" href="/services/technical">technical</a>, or keep us on as a monthly advisor through <a class="tlink" href="/services/coaching">coaching</a>. The plan is written to work in any of those hands, including yours.</p>
         </details>
       </div>
-      <p class="updated mt-lg">Last updated: October 2026</p>
     </div>
   </section>
 
@@ -369,7 +419,6 @@
   <section class="closing">
     <div class="closing__inner">
       <div class="reveal">
-        <span class="eyebrow">The next step</span>
         <h2>Start with the <em>plan.</em></h2>
         <p>A free 30-minute call. Bring your numbers and the question you keep circling. We&rsquo;ll tell you whether the engagement fits, what order we&rsquo;d work in, and, if you&rsquo;re too early, exactly what to do instead.</p>
       </div>
@@ -387,7 +436,7 @@
       <div class="footer__brand">
         <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
         <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
-        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
       </div>
       <div>
         <h4>Services</h4>
@@ -415,11 +464,11 @@
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
-          <li><a href="/tools/checkup">The five-step check-up</a></li>
-          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
-          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
-          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
-          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+          <li><a href="/tools/checkup">The Five-Step Check-Up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy Find You?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI Opportunity Finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget Calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-Day Plan Starter</a></li>
         </ul>
       </div>
       <div>

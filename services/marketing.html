@@ -62,14 +62,35 @@
       "image": "https://carsonpoore.com/brand/carson-headshot.png",
       "email": "carson@carsonpoore.com",
       "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
-      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" },
-        { "@type": "Country", "name": "United States" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
       ],
       "priceRange": "$1,200–$4,800/month",
-      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+      "founder": {
+        "@type": "Person",
+        "@id": "https://carsonpoore.com/about#carson",
+        "name": "Carson Poore",
+        "sameAs": [
+          "https://www.linkedin.com/in/carson-poore/"
+        ]
+      }
     },
     {
       "@type": "Service",
@@ -77,18 +98,40 @@
       "name": "Small business marketing",
       "serviceType": "Marketing services",
       "description": "Brand, campaigns, content, and email for Indianapolis small businesses, founders, and nonprofits — measured in calls, customers, and booked work, not impressions.",
-      "provider": { "@id": "https://carsonpoore.com/#org" },
+      "provider": {
+        "@id": "https://carsonpoore.com/#org"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        }
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carsonpoore.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://carsonpoore.com/services" },
-        { "@type": "ListItem", "position": 3, "name": "Marketing" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://carsonpoore.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://carsonpoore.com/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Marketing"
+        }
       ]
     },
     {
@@ -97,27 +140,42 @@
         {
           "@type": "Question",
           "name": "What does marketing cost for a small business in Indianapolis?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Our retainers are $1,200, $2,400, or $4,800 a month, published on the pricing page with what each month includes. For context, SBA guidance puts marketing at 7–8% of gross revenue for businesses under $5 million, so $1,200 a month is a normal commitment for a business doing around $200,000 a year." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our retainers are $1,200, $2,400, or $4,800 a month, published on the pricing page with what each month includes. For context, SBA guidance puts marketing at 7–8% of gross revenue for businesses under $5 million, so $1,200 a month is a normal commitment for a business doing around $200,000 a year."
+          }
         },
         {
           "@type": "Question",
           "name": "Do you lock clients into long contracts?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. The minimum is three months, because real change takes that long. After that it’s month to month. Everything we build is registered to you from day one, so if you leave, it all stays yours." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The minimum is three months, because real change takes that long. After that it’s month to month. Everything we build is registered to you from day one, so if you leave, it all stays yours."
+          }
         },
         {
           "@type": "Question",
           "name": "How will we know if it’s working?",
-          "acceptedAnswer": { "@type": "Answer", "text": "You’ll get a monthly report in plain English that counts calls and booked work, not impressions. Call tracking goes in during the first week, so you can see which jobs came from where." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You’ll get a monthly report in plain English that counts calls and booked work, not impressions. Call tracking goes in during the first week, so you can see which jobs came from where."
+          }
         },
         {
           "@type": "Question",
           "name": "Do you work with businesses that compete with us?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. We cap the whole consultancy at eight clients, and we won’t take two of the same trade in the same territory. If your competitor got here first, we’ll tell you and point you somewhere good." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. We cap the whole consultancy at eight clients at a time, and we won’t take two of the same trade in the same territory. If your competitor got here first, we’ll tell you and point you somewhere good."
+          }
         },
         {
           "@type": "Question",
           "name": "What if we’re not ready for ads?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Then we’ll say so and not sell them to you. Most local businesses we meet should fix their Google Business Profile and reviews before spending a dollar on ads. If that’s you, we’ll start there, or just tell you how to do it yourself." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Then we’ll say so and not sell them to you. Most local businesses we meet should fix their Google Business Profile and reviews before spending a dollar on ads. If that’s you, we’ll start there, or just tell you how to do it yourself."
+          }
         }
       ]
     }
@@ -210,13 +268,12 @@
   <section class="section">
     <div class="wrap wrap--narrow">
       <div class="sec-head">
-        <span class="eyebrow reveal">The problem we solve</span>
         <h2 class="reveal" data-delay="1">The work is still good. The phone got quiet.</h2>
       </div>
       <div class="mt-lg">
         <p class="reveal">Word of mouth built your business. Years of solid jobs, neighbors telling neighbors. Then it stopped scaling. Now the company down the road shows up first on Google and you don&rsquo;t show up at all.</p>
         <p class="mt-md reveal">Maybe you&rsquo;ve paid for marketing before. A thousand a month, a report full of charts and buzzwords, and no more jobs than the month before. That wound is common enough to measure: in vcita&rsquo;s April 2025 survey of 500 small-business owners, 40% had dropped or switched their marketing agency, and six in ten of those left because they couldn&rsquo;t see what the money bought.</p>
-        <p class="mt-md reveal">So here is how we run things, plainly. Prices are published on this site. Three months minimum, then month to month. Eight clients, total. If you ever leave, you keep everything: the website, the Google Business Profile, the ad accounts. They&rsquo;re registered to you from day one.</p>
+        <p class="mt-md reveal">So here is how we run things, plainly. Prices are published on this site. Three months minimum, then month to month. Eight clients at a time. If you ever leave, you keep everything: the website, the Google Business Profile, the ad accounts. They&rsquo;re registered to you from day one.</p>
         <p class="mt-md reveal">And the promise is concrete. When Indianapolis searches for what you do, you show up. When someone calls, they get an answer. If that first part isn&rsquo;t happening today, start with <a class="tlink" href="/articles/not-showing-up-on-google">why your business isn&rsquo;t showing up on Google</a>.</p>
         <p class="mt-md reveal">One opinion up front: most local businesses get sold social media management far too early. If your Google Business Profile is thin, fix that first. It&rsquo;s free. And it&rsquo;s where your customers actually look.</p>
         <p class="pull mt-xl reveal">Half of this job is telling you where <em>not</em> to spend.</p>
@@ -228,7 +285,6 @@
   <section class="section section--stone">
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow reveal">What&rsquo;s included</span>
         <h2 class="reveal" data-delay="1">Four kinds of work, one practice</h2>
         <p class="sec-head__intro reveal" data-delay="2">Everything below is done for you and reported every month, aimed at one outcome: more of the right customers finding you and coming back.</p>
       </div>
@@ -263,6 +319,8 @@
         </div>
       </div>
 
+      <p class="mt-xl reveal">Brand identity, photography, and video production are available as project work, quoted on their own on the <a class="tlink" href="/investment">pricing page</a>. Retainer clients can add a project anytime.</p>
+
       <div class="who-strip">
         <div class="who-card reveal">
           <h3>Local businesses</h3>
@@ -288,8 +346,7 @@
     <div class="wrap">
       <div class="connect-grid">
         <div>
-          <span class="eyebrow reveal">One team</span>
-          <h2 class="reveal mt-sm" data-delay="1">Where marketing ends, the other practices pick up</h2>
+          <h2 class="reveal" data-delay="1">Where marketing ends, the other practices pick up</h2>
           <p class="mt-md reveal" data-delay="2">Honestly, the four practices blur. A campaign usually needs a landing page, and a new lead needs an answer inside five minutes; that build work is our <a class="tlink" href="/services/technical">Technical practice</a>. The owner asking &ldquo;what should we do first?&rdquo; wants the one-time <a class="tlink" href="/services/strategy">Strategy engagement</a> before anyone spends a dollar on this page. And if you&rsquo;d rather run marketing yourself with us advising, that&rsquo;s <a class="tlink" href="/services/coaching">Coaching &amp; growth</a>. Same team, one hallway. On the first call we&rsquo;ll tell you which door you&rsquo;re actually standing in front of.</p>
         </div>
         <div class="motion-frame motion-frame--light reveal" data-delay="2">
@@ -303,22 +360,18 @@
   <section class="section section--stone">
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow reveal">Under this roof</span>
         <h2 class="reveal" data-delay="1">The services that live here</h2>
       </div>
       <div class="svc-list mt-xl">
         <article class="svc reveal">
-          <span class="svc__idx">01 / Marketing</span>
           <h3 class="svc__title">Local SEO &amp; Google Business Profile</h3>
-          <p class="svc__body">Show up when Indianapolis searches for what you do. Businesses in Google&rsquo;s local 3-pack get 126% more traffic than the ones ranked just beneath it (BrightLocal), and getting into that box is the most explainable early win in marketing. It&rsquo;s usually where we start. <a class="tlink" href="/services/local-seo">How local SEO works <span aria-hidden="true">→</span></a></p>
+          <p class="svc__body">Show up when Indianapolis searches for what you do. Getting into Google&rsquo;s local 3-pack, the short list of businesses at the top of the map, is the most explainable early win in marketing. It&rsquo;s usually where we start. <a class="tlink" href="/services/local-seo">How local SEO works <span aria-hidden="true">→</span></a></p>
         </article>
         <article class="svc reveal">
-          <span class="svc__idx">02 / Marketing</span>
           <h3 class="svc__title">Google Ad Grants for nonprofits</h3>
-          <p class="svc__body">Google offers verified nonprofits $10,000 a month in free search ads, and most orgs use a few hundred dollars of it. We set it up and run it as part of the retainer, at the nonprofit rate. <a class="tlink" href="/services/google-ad-grants">About the Ad Grant <span aria-hidden="true">→</span></a></p>
+          <p class="svc__body">Google gives verified nonprofits free search ads every month, and most orgs barely touch them. We set it up and run it as part of the retainer, at the nonprofit rate. <a class="tlink" href="/services/google-ad-grants">About the Ad Grant <span aria-hidden="true">→</span></a></p>
         </article>
         <article class="svc reveal">
-          <span class="svc__idx">03 / With Technical</span>
           <h3 class="svc__title">Google Ads, run honestly</h3>
           <p class="svc__body">Paid search lives in our Technical practice, so the same people who build your landing pages run the account. The message still comes from here. If you&rsquo;ve burned two grand on ads yourself, you&rsquo;re in good company, and we&rsquo;ll tell you straight whether you&rsquo;re ready to try again. <a class="tlink" href="/services/google-ads">How we run Google Ads <span aria-hidden="true">→</span></a></p>
         </article>
@@ -330,14 +383,13 @@
   <section class="section price-anchor">
     <div class="wrap wrap--narrow">
       <div class="sec-head">
-        <span class="eyebrow reveal">Investment</span>
         <h2 class="reveal" data-delay="1">What this costs</h2>
-        <p class="sec-head__intro reveal" data-delay="2">Marketing runs on the same three retainers as everything we do: $1,200, $2,400, or $4,800 a month, depending on how much of this page you want done for you. The full breakdown, including the $3,000 strategy engagement and the nonprofit rate, is on the pricing page.</p>
+        <p class="sec-head__intro reveal" data-delay="2">Marketing runs on the same three retainers as everything we do: $1,200, $2,400, or $4,800 a month, depending on how much of this page you want done for you. Many clients start with the $3,000 strategy engagement, and half of that fee ($1,500) is credited toward the retainer if you continue. The full breakdown, including the nonprofit rate, is on the pricing page.</p>
       </div>
       <div class="stat-row reveal" data-delay="2">
         <div><div class="stat__num">$1,200&ndash;$4,800</div><div class="stat__lbl">Monthly retainers, published</div></div>
         <div><div class="stat__num">3 months</div><div class="stat__lbl">Minimum, then month to month</div></div>
-        <div><div class="stat__num">8</div><div class="stat__lbl">Clients, total. That&rsquo;s the cap</div></div>
+        <div><div class="stat__num">8</div><div class="stat__lbl">Clients at a time. That&rsquo;s the cap</div></div>
       </div>
       <div class="row-cta mt-xl reveal" data-delay="3">
         <a class="btn btn--primary" href="/investment">See the full pricing page <span class="arr">→</span></a>
@@ -350,7 +402,6 @@
   <section class="section section--stone">
     <div class="wrap wrap--narrow">
       <div class="sec-head">
-        <span class="eyebrow reveal">Fair questions</span>
         <h2 class="reveal" data-delay="1">Questions owners actually ask</h2>
       </div>
       <div class="faq mt-xl reveal" data-delay="2">
@@ -368,14 +419,13 @@
         </details>
         <details>
           <summary>Do you work with businesses that compete with us?</summary>
-          <p>No. We cap the whole consultancy at eight clients, and we won&rsquo;t take two of the same trade in the same territory. If your competitor got here first, we&rsquo;ll tell you and point you somewhere good.</p>
+          <p>No. We cap the whole consultancy at eight clients at a time, and we won&rsquo;t take two of the same trade in the same territory. If your competitor got here first, we&rsquo;ll tell you and point you somewhere good.</p>
         </details>
         <details>
           <summary>What if we&rsquo;re not ready for ads?</summary>
           <p>Then we&rsquo;ll say so and not sell them to you. Most local businesses we meet should fix their Google Business Profile and reviews before spending a dollar on ads. If that&rsquo;s you, we&rsquo;ll start there, or just tell you how to do it yourself.</p>
         </details>
       </div>
-      <p class="updated mt-lg">Last updated: October 2026</p>
     </div>
   </section>
 
@@ -383,7 +433,6 @@
   <section class="closing">
     <div class="closing__inner">
       <div class="reveal">
-        <span class="eyebrow">The next step</span>
         <h2>Tell us what a <em>good month</em> looks like.</h2>
         <p>A free 30-minute call. We&rsquo;ll ask about your service area and your average job, the questions the last company never asked. If we&rsquo;re not the right buy, we&rsquo;ll say so.</p>
       </div>
@@ -401,7 +450,7 @@
       <div class="footer__brand">
         <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
         <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
-        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
       </div>
       <div>
         <h4>Services</h4>
@@ -429,11 +478,11 @@
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
-          <li><a href="/tools/checkup">The five-step check-up</a></li>
-          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
-          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
-          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
-          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+          <li><a href="/tools/checkup">The Five-Step Check-Up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy Find You?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI Opportunity Finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget Calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-Day Plan Starter</a></li>
         </ul>
       </div>
       <div>

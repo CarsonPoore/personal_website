@@ -58,22 +58,47 @@
       "image": "https://carsonpoore.com/brand/carson-headshot.png",
       "email": "carson@carsonpoore.com",
       "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
-      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" },
-        { "@type": "Country", "name": "United States" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
       ],
       "priceRange": "$1,200–$4,800/month",
-      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+      "founder": {
+        "@type": "Person",
+        "@id": "https://carsonpoore.com/about#carson",
+        "name": "Carson Poore",
+        "sameAs": [
+          "https://www.linkedin.com/in/carson-poore/"
+        ]
+      }
     },
     {
       "@type": "Article",
       "@id": "https://carsonpoore.com/articles/is-gohighlevel-worth-it#article",
       "headline": "Is GoHighLevel worth it? What it really costs to run",
       "description": "Yes for service businesses replacing five or more tools, no for most solos. Plans run $97–$497 a month plus usage fees. The full math, and who should skip it.",
-      "author": { "@id": "https://carsonpoore.com/about#carson" },
-      "publisher": { "@id": "https://carsonpoore.com/#org" },
+      "author": {
+        "@id": "https://carsonpoore.com/about#carson"
+      },
+      "publisher": {
+        "@id": "https://carsonpoore.com/#org"
+      },
       "datePublished": "2026-10-08",
       "dateModified": "2026-10-08",
       "mainEntityOfPage": "https://carsonpoore.com/articles/is-gohighlevel-worth-it"
@@ -86,7 +111,7 @@
           "name": "What are GoHighLevel’s usage fees for?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Sending things. The texts and emails that go out from your account are metered and billed on top of the plan, and so are AI features once you switch them on. Independent reviews from Automate the Journey, builts.ai, RSLA, and Layer3 Labs put the typical add-on at $30 to $300 a month. The more you text, the higher it runs."
+            "text": "Sending things. The texts and emails that go out from your account are metered and billed on top of the plan, and so are AI features once you switch them on. Independent reviews put the typical add-on at $30 to $300 a month. The more you text, the higher it runs."
           }
         },
         {
@@ -94,7 +119,7 @@
           "name": "Is GoHighLevel cheaper than HubSpot?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "For most small businesses, yes. Comparison guides from builts.ai, RSLA, and Layer3 Labs put GoHighLevel at about $3,564 a year at 5,000 contacts, against about $14,880 for a comparable HubSpot setup. If your team already uses HubSpot every day, price in the cost of switching before you chase the savings."
+            "text": "For most small businesses, yes. Independent comparisons put GoHighLevel at about $3,564 a year at 5,000 contacts, against about $14,880 for a comparable HubSpot setup. If your team already uses HubSpot every day, price in the cost of switching before you chase the savings."
           }
         },
         {
@@ -110,7 +135,7 @@
           "name": "What’s the hardest part of switching to GoHighLevel?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The data, not the features. Exporting contacts from old tools, merging duplicates, mapping fields, and registering your number for business texting take longer than building any automation. Contractor-focused guides from Ecosire and Contractor Tool Stack put a working setup at five to seven days and a settled one at six to eight weeks."
+            "text": "The data, not the features. Exporting contacts from old tools, merging duplicates, mapping fields, and registering your number for business texting take longer than building any automation. A working setup comes together in about a week; a settled one takes a couple of months."
           }
         },
         {
@@ -118,7 +143,7 @@
           "name": "Do I need to hire someone to set up GoHighLevel?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No, if you have the hours and the patience. Independent GoHighLevel consultants publish setup rates from about $300 to $5,000 and up. Ours lives inside our monthly retainers of $1,200, $2,400, or $4,800, three months minimum, with no separate setup invoice."
+            "text": "No, if you have the hours and the patience. Outside consultants charge for setup, and the bill varies a lot. Ours lives inside our monthly retainers of $1,200, $2,400, or $4,800, three months minimum, with no separate setup invoice."
           }
         }
       ]
@@ -126,9 +151,24 @@
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carsonpoore.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://carsonpoore.com/resources" },
-        { "@type": "ListItem", "position": 3, "name": "Is GoHighLevel worth it?", "item": "https://carsonpoore.com/articles/is-gohighlevel-worth-it" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://carsonpoore.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Resources",
+          "item": "https://carsonpoore.com/resources"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Is GoHighLevel worth it?",
+          "item": "https://carsonpoore.com/articles/is-gohighlevel-worth-it"
+        }
       ]
     }
   ]
@@ -201,8 +241,7 @@
       </nav>
       <div class="page-hero__grid">
         <div class="page-hero__copy">
-          <span class="eyebrow reveal">Articles</span>
-          <h1 class="reveal mt-md" data-delay="1">Is GoHighLevel <em>worth it?</em></h1>
+          <h1 class="reveal" data-delay="1">Is GoHighLevel <em>worth it?</em></h1>
           <p class="hero__sub reveal mt-md" data-delay="2">What it really costs to run, month after month: the plan price, the usage fees most sales pages leave off, the HubSpot comparison, and a longer-than-expected list of people who should pass.</p>
         </div>
         <div class="motion-frame motion-frame--hero page-hero__motion reveal" data-delay="2">
@@ -223,7 +262,7 @@
           <span class="updated">Last updated: October 2026</span>
         </div>
 
-        <p class="answer reveal" data-delay="1">Yes, if you run a service business and GoHighLevel replaces five or more tools you already pay for. No, for most solo operators. The plans cost <strong>$97–$497 a month</strong> on GoHighLevel&rsquo;s published pricing, and metered usage typically adds <strong>$30–$300</strong> more, per the independent reviews that rank for this exact question.</p>
+        <p class="answer reveal" data-delay="1">Yes, if you run a service business and GoHighLevel replaces five or more tools you already pay for. No, for most solo operators. The plans cost <strong>$97–$497 a month</strong> on GoHighLevel&rsquo;s published pricing, and metered usage typically adds <strong>$30–$300</strong> more, per independent reviews.</p>
 
         <p>So the honest monthly number lands somewhere between $127 and $797, before anyone has set anything up. Whether that&rsquo;s a bargain depends almost entirely on what it lets you cancel. Here&rsquo;s the math, then the people who should walk away.</p>
 
@@ -233,51 +272,42 @@
 
         <p>The subscription is the easy part. GoHighLevel publishes its plans, and they run from $97 to $497 a month. The upper tiers are built for agencies running many client accounts under one login. A single plumbing company in Greenwood almost never needs them.</p>
 
-        <p>The second line is usage. The texts and emails that go out from your account are metered and billed on top of the plan, and so are the AI features once you switch them on. The independent reviews ranking for this question (Automate the Journey, builts.ai, RSLA, and Layer3 Labs) put the typical add-on at $30 to $300 a month. A roofer who texts every missed caller and reminds every appointment sits toward the top of that range. A bookkeeper sending one newsletter a month sits near the bottom.</p>
+        <p>The second line is usage. The texts and emails that go out from your account are metered and billed on top of the plan, and so are the AI features once you switch them on. Independent reviews put the typical add-on at $30 to $300 a month. A roofer who texts every missed caller and reminds every appointment sits toward the top of that range. A bookkeeper sending one newsletter a month sits near the bottom.</p>
 
         <table>
           <thead>
             <tr>
               <th scope="col">Cost line</th>
               <th scope="col">Range</th>
-              <th scope="col">Where the number comes from</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <th scope="row">Plan subscription</th>
               <td class="num">$97–$497/mo</td>
-              <td>GoHighLevel&rsquo;s published pricing</td>
             </tr>
             <tr>
               <th scope="row">Usage: texts, email, AI</th>
               <td class="num">$30–$300/mo</td>
-              <td>Independent reviews: Automate the Journey, builts.ai, RSLA, Layer3 Labs</td>
             </tr>
             <tr>
               <th scope="row">Monthly total, all in</th>
               <td class="num">about $127–$797/mo</td>
-              <td>The two lines above, added together</td>
-            </tr>
-            <tr>
-              <th scope="row">Outside setup help (optional)</th>
-              <td class="num">$300–$5,000+ once</td>
-              <td>Rates published by independent GoHighLevel consultants</td>
             </tr>
           </tbody>
         </table>
-        <p class="src">Sources named in each row. Ranges current as of October 2026. GoHighLevel adjusts its plans from time to time, so check its pricing page the week you sign up.</p>
+        <p>GoHighLevel adjusts its plans from time to time, so check its pricing page the week you sign up.</p>
 
         <p>Our opinion: start on the lowest plan that covers one business, and don&rsquo;t upgrade until a workflow you&rsquo;ve already built needs something the plan lacks. Upgrades bought in the glow of a demo tend to sit unused.</p>
 
         <h2>Is GoHighLevel cheaper than HubSpot?</h2>
 
-        <p>At small-business scale, yes, by a lot. The comparison guides that rank for &ldquo;GoHighLevel vs HubSpot&rdquo; (builts.ai, RSLA, and Layer3 Labs among them) run the numbers at 5,000 contacts and land in the same place.</p>
+        <p>At small-business scale, yes, by a lot. The comparison guides that rank for &ldquo;GoHighLevel vs HubSpot&rdquo; run the numbers at 5,000 contacts and land in the same place.</p>
 
         <div class="math reveal">
           <p><span class="math__big">≈ $3,564 a year</span> for GoHighLevel at 5,000 contacts</p>
           <p><span class="math__big">≈ $14,880 a year</span> for a comparable HubSpot setup</p>
-          <p>A difference of $11,316 a year. Monthly, that&rsquo;s about $297 against $1,240. Source: GoHighLevel-vs-HubSpot comparisons from builts.ai, RSLA, and Layer3 Labs.</p>
+          <p>A difference of $11,316 a year. Monthly, that&rsquo;s about $297 against $1,240.</p>
         </div>
 
         <p>That gap doesn&rsquo;t make HubSpot the wrong choice for everyone. If your team already opens HubSpot every morning and trusts what&rsquo;s in it, switching costs something the price table leaves out: a month of people hunting for buttons, reports rebuilt from scratch, and a few leads that slip while everyone adjusts. Savings that size usually still win. Not always.</p>
@@ -302,7 +332,7 @@
 
         <h3>Can new software fix a sales problem?</h3>
 
-        <p>No. GoHighLevel will send the follow-up text on time. It can&rsquo;t make an unclear offer clear or a slow estimate fast. If quotes go out and nobody bites, the trouble sits upstream of any CRM. Our free <a href="/tools/checkup">five-step check-up</a> takes a few minutes and shows which step is leaking, no email required.</p>
+        <p>No. GoHighLevel will send the follow-up text on time. It can&rsquo;t make an unclear offer clear or a slow estimate fast. If quotes go out and nobody bites, the trouble sits upstream of any CRM. Our free <a href="/tools/checkup">Five-Step Check-Up</a> takes a few minutes and shows which step is leaking, no email required.</p>
 
         <h3>Who on your team will own it after launch?</h3>
 
@@ -325,30 +355,30 @@
 
         <p>None of that appears in a demo. All of it decides whether the numbers you read in month three can be believed. It&rsquo;s the dullest week of any engagement, and we do it before a single automation goes live.</p>
 
-        <p>Guides written for contractors on GoHighLevel, from Ecosire and Contractor Tool Stack, put the timeline at five to seven days to functional and six to eight weeks to humming. That matches our experience. Week one gets calendars and missed-call text-back working. The weeks after are tuning: watching real leads move through, rewriting the message nobody answers, removing the pipeline stage nobody uses.</p>
+        <p>In our experience it takes about a week to get functional and a couple of months to hum. Week one gets calendars and missed-call text-back working. The weeks after are tuning: watching real leads move through, rewriting the message nobody answers, removing the pipeline stage nobody uses.</p>
 
         <h2>Which automations actually pay for it?</h2>
 
-        <p>Fewer than you&rsquo;d think. Home-services guides from Ecosire, Contractor Tool Stack, and Omni Online Strategies credit three automations with about 80% of the value: an instant text back to every missed call, appointment reminders, and a review request when the job closes.</p>
+        <p>Fewer than you&rsquo;d think. Three automations carry most of the value: an instant text back to every missed call, appointment reminders, and a review request when the job closes.</p>
 
-        <p>We think that ratio holds well beyond the trades. Build those, run them for a month, and only then decide what else deserves a workflow. If you want AI on top, say a drafted reply to every web inquiry that you approve before it sends, that&rsquo;s our <a href="/services/ai-automation">AI and automation</a> work, and it plugs into GoHighLevel or whatever CRM you keep. Running a trade around Indianapolis? Our <a href="/for/local-businesses">page for local businesses</a> covers how we work with you in person.</p>
+        <p>We think that holds well beyond the trades. Build those, run them for a month, and only then decide what else deserves a workflow. If you want AI on top, say a drafted reply to every web inquiry that you approve before it sends, that&rsquo;s our <a href="/services/ai-automation">AI and automation</a> work, and it plugs into GoHighLevel or whatever CRM you keep. Running a trade around Indianapolis? Our <a href="/for/local-businesses">page for local businesses</a> covers how we work with you in person.</p>
 
         <h2>What would it cost to have us run it?</h2>
 
         <p>If you&rsquo;d rather not do the setup yourself, ours lives inside our monthly retainers of $1,200, $2,400, or $4,800. There is no separate setup invoice. Three months minimum, then month to month. If you ever leave, the account, the contacts, and every workflow stay yours.</p>
 
-        <p>We take eight clients total, so the people who plan the system are the ones who build it. The scope is on our <a href="/services/crm-gohighlevel">GoHighLevel and CRM page</a>, and every number is on the <a href="/investment">pricing page</a>.</p>
+        <p>We take eight clients at a time, so the people who plan the system are the ones who build it. The scope is on our <a href="/services/crm-gohighlevel">GoHighLevel and CRM page</a>, and every number is on the <a href="/investment">pricing page</a>.</p>
 
         <h2>What do people ask before they sign up?</h2>
 
         <div class="faq reveal">
           <details>
             <summary>What are GoHighLevel&rsquo;s usage fees for?</summary>
-            <p>Sending things. The texts and emails that go out from your account are metered and billed on top of the plan, and so are AI features once you switch them on. Independent reviews from Automate the Journey, builts.ai, RSLA, and Layer3 Labs put the typical add-on at $30 to $300 a month. The more you text, the higher it runs.</p>
+            <p>Sending things. The texts and emails that go out from your account are metered and billed on top of the plan, and so are AI features once you switch them on. Independent reviews put the typical add-on at $30 to $300 a month. The more you text, the higher it runs.</p>
           </details>
           <details>
             <summary>Is GoHighLevel cheaper than HubSpot?</summary>
-            <p>For most small businesses, yes. Comparison guides from builts.ai, RSLA, and Layer3 Labs put GoHighLevel at about $3,564 a year at 5,000 contacts, against about $14,880 for a comparable HubSpot setup. If your team already uses HubSpot every day, price in the cost of switching before you chase the savings.</p>
+            <p>For most small businesses, yes. Independent comparisons put GoHighLevel at about $3,564 a year at 5,000 contacts, against about $14,880 for a comparable HubSpot setup. If your team already uses HubSpot every day, price in the cost of switching before you chase the savings.</p>
           </details>
           <details>
             <summary>Can a solo business owner get value from GoHighLevel?</summary>
@@ -356,11 +386,11 @@
           </details>
           <details>
             <summary>What&rsquo;s the hardest part of switching to GoHighLevel?</summary>
-            <p>The data, not the features. Exporting contacts from old tools, merging duplicates, mapping fields, and registering your number for business texting take longer than building any automation. Contractor-focused guides from Ecosire and Contractor Tool Stack put a working setup at five to seven days and a settled one at six to eight weeks.</p>
+            <p>The data, not the features. Exporting contacts from old tools, merging duplicates, mapping fields, and registering your number for business texting take longer than building any automation. A working setup comes together in about a week; a settled one takes a couple of months.</p>
           </details>
           <details>
             <summary>Do I need to hire someone to set up GoHighLevel?</summary>
-            <p>No, if you have the hours and the patience. Independent GoHighLevel consultants publish setup rates from about $300 to $5,000 and up. Ours lives inside our monthly retainers of $1,200, $2,400, or $4,800, three months minimum, with no separate setup invoice.</p>
+            <p>No, if you have the hours and the patience. Outside consultants charge for setup, and the bill varies a lot. Ours lives inside our monthly retainers of $1,200, $2,400, or $4,800, three months minimum, with no separate setup invoice.</p>
           </details>
         </div>
 
@@ -369,11 +399,9 @@
           <ul class="next-reads">
             <li><span class="next-reads__kind">Service</span><a href="/services/crm-gohighlevel">GoHighLevel &amp; CRM setup, priced inside a retainer</a></li>
             <li><span class="next-reads__kind">Service</span><a href="/services/ai-automation">AI &amp; automation that runs on the CRM you keep</a></li>
-            <li><span class="next-reads__kind">Tool</span><a href="/tools/checkup">The five-step check-up (free, no email)</a></li>
+            <li><span class="next-reads__kind">Tool</span><a href="/tools/checkup">The Five-Step Check-Up (free, no email)</a></li>
           </ul>
         </div>
-
-        <p class="updated">We re-check GoHighLevel&rsquo;s plan prices and the review ranges whenever either one changes.</p>
 
       </article>
     </div>
@@ -383,7 +411,6 @@
   <section class="closing">
     <div class="closing__inner">
       <div class="reveal">
-        <span class="eyebrow">For service businesses</span>
         <h2>Count your logins. We&rsquo;ll tell you if <em>one</em> would do.</h2>
         <p>Bring the list of tools you pay for to a free 30-minute call. We&rsquo;ll tell you whether GoHighLevel retires enough of them to earn its place, or whether you should keep what you have and stop shopping.</p>
       </div>
@@ -401,7 +428,7 @@
       <div class="footer__brand">
         <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
         <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
-        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
       </div>
       <div>
         <h4>Services</h4>
@@ -429,11 +456,11 @@
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
-          <li><a href="/tools/checkup">The five-step check-up</a></li>
-          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
-          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
-          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
-          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+          <li><a href="/tools/checkup">The Five-Step Check-Up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy Find You?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI Opportunity Finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget Calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-Day Plan Starter</a></li>
         </ul>
       </div>
       <div>

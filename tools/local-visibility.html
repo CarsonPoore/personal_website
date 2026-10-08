@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Can Indianapolis find you? A free 18-point check</title>
+<title>Can Indianapolis Find You? A free 18-point check</title>
 <meta name="description" content="An 18-point self-check of your Google Business Profile, reviews, and website basics. Live letter grade, plain fixes, no email. See if Indianapolis can find you." />
 <link rel="canonical" href="https://carsonpoore.com/tools/local-visibility" />
-<meta property="og:title" content="Can Indianapolis find you? A free 18-point check" />
+<meta property="og:title" content="Can Indianapolis Find You? A free 18-point check" />
 <meta property="og:description" content="An 18-point self-check of your Google Business Profile, reviews, and website basics. Live letter grade, plain fixes, no email. See if Indianapolis can find you." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://carsonpoore.com/tools/local-visibility" />
@@ -70,12 +70,6 @@
   .lv-mini b { font-weight: 900; color: var(--amber); }
   .lv-mini span:last-child { color: var(--cream-2); }
   @media (max-width: 960px) { .lv-mini.is-on { display: flex; } }
-  .lv-stats { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: clamp(32px, 5vw, 80px); align-items: center; }
-  @media (max-width: 860px) { .lv-stats { grid-template-columns: 1fr; } }
-  .lv-stats .stat-row { flex-direction: column; gap: clamp(22px, 3vw, 36px); }
-  .lv-stats .stat { border-left: 2px solid var(--amber); padding-left: clamp(16px, 2vw, 26px); }
-  .lv-stats .stat__num { color: #fff; }
-  .lv-stats p + p { margin-top: 16px; }
   .prose { max-width: 62ch; }
   .prose p + p { margin-top: 16px; }
 </style>
@@ -92,35 +86,79 @@
       "image": "https://carsonpoore.com/brand/carson-headshot.png",
       "email": "carson@carsonpoore.com",
       "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
-      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" },
-        { "@type": "Country", "name": "United States" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
       ],
       "priceRange": "$1,200–$4,800/month",
-      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+      "founder": {
+        "@type": "Person",
+        "@id": "https://carsonpoore.com/about#carson",
+        "name": "Carson Poore",
+        "sameAs": [
+          "https://www.linkedin.com/in/carson-poore/"
+        ]
+      }
     },
     {
       "@type": "WebApplication",
       "@id": "https://carsonpoore.com/tools/local-visibility#app",
-      "name": "Can Indianapolis find you? Local visibility check",
+      "name": "Can Indianapolis Find You? Local visibility check",
       "description": "A free 18-item self-check of a Google Business Profile, reviews, name-address-phone consistency, and website basics, with a live A to F grade and the three highest-impact fixes. Runs in the browser; nothing is sent anywhere.",
       "url": "https://carsonpoore.com/tools/local-visibility",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web",
       "browserRequirements": "Requires JavaScript",
       "isAccessibleForFree": true,
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      "provider": { "@id": "https://carsonpoore.com/#org" },
-      "audience": { "@type": "Audience", "audienceType": "Local small business owners in Indianapolis and central Indiana" }
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "provider": {
+        "@id": "https://carsonpoore.com/#org"
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Local small business owners in Indianapolis and central Indiana"
+      }
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carsonpoore.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://carsonpoore.com/resources" },
-        { "@type": "ListItem", "position": 3, "name": "Can Indianapolis find you?" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://carsonpoore.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Resources",
+          "item": "https://carsonpoore.com/resources"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Can Indianapolis Find You?"
+        }
       ]
     }
   ]
@@ -188,12 +226,11 @@
         <ol>
           <li><a href="/">Home</a></li>
           <li><a href="/resources">Resources</a></li>
-          <li aria-current="page">Can Indianapolis find you?</li>
+          <li aria-current="page">Can Indianapolis Find You?</li>
         </ol>
       </nav>
       <div class="page-hero__copy">
-        <span class="eyebrow reveal">Free tool · 18 checks</span>
-        <h1 class="reveal mt-md" data-delay="1">Can Indianapolis <em>find you?</em></h1>
+        <h1 class="reveal mt-md" data-delay="1">Can Indianapolis <em>Find You?</em></h1>
         <p class="hero__sub reveal mt-md" data-delay="2">Eighteen checks on your Google Business Profile, your reviews, and your website basics. Tick what&rsquo;s true today, get a letter grade, and see the three fixes worth doing first. Almost every one is free.</p>
         <p class="hero__sub reveal mt-sm" data-delay="2">Free. No email. No login. Nothing to download. Allow about 30 minutes with your Google profile open.</p>
         <div class="row-cta reveal mt-lg" data-delay="3">
@@ -208,7 +245,6 @@
   <section class="section" id="check">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="eyebrow">The check</span>
         <h2>Tick what&rsquo;s true <em>today.</em></h2>
         <p class="sec-head__intro">Open your Google Business Profile in another tab. Search your business name on your phone, too, because that&rsquo;s the screen your customers see. Every item has a two-minute way to check it and a free way to fix it. Your ticks save in this browser only. We never see them.</p>
       </div>
@@ -368,7 +404,7 @@
           <div class="check-row" data-id="volume" data-w="4" data-short="Build toward 40 reviews at 4.5 stars with a steady ask, never a purchase or a discount.">
             <input type="checkbox" id="c-volume" />
             <div class="lv-item">
-              <label for="c-volume">You have 40 or more reviews, averaging 4.5 stars or better<span class="check-row__why">Per BrightLocal and WiserReview, profiles at that level show up in the map pack about 3.7 times more often than ones with fewer than 10 reviews.</span></label>
+              <label for="c-volume">You have 40 or more reviews, averaging 4.5 stars or better<span class="check-row__why">Per BrightLocal, profiles at that level show up in the map pack about 3.7 times more often than ones with fewer than 10 reviews.</span></label>
               <details>
                 <summary>2-minute check + free fix</summary>
                 <div class="lv-detail">
@@ -521,39 +557,6 @@
         </div>
       </div>
 
-      <p class="tool-note mt-lg reveal">We built this. We build things like it for clients, and the technical side of what we do is <a class="tlink" href="/services/technical">on its own page</a>.</p>
-    </div>
-  </section>
-
-  <!-- WHY THESE EIGHTEEN -->
-  <section class="section section--navy">
-    <div class="wrap">
-      <div class="lv-stats">
-        <div class="reveal">
-          <span class="eyebrow">Why this list</span>
-          <h2 class="mt-md">Most of it is free. <em>That&rsquo;s the point.</em></h2>
-          <div class="prose mt-md">
-            <p>The local visibility problems we see are rarely mysterious. A profile that was never claimed. A trickle of reviews. A phone number written three ways. All of it is fixable in an afternoon, and we&rsquo;d rather you spend that afternoon than pay anyone for it.</p>
-            <p>The stakes are real, though. When someone nearby searches for what you do, the businesses in Google&rsquo;s map pack get the calls.</p>
-          </div>
-        </div>
-        <div class="reveal" data-delay="1">
-          <div class="stat-row">
-            <div class="stat">
-              <span class="stat__num">46%</span>
-              <span class="stat__lbl">Of Google searches have local intent &middot; BrightLocal, local SEO statistics</span>
-            </div>
-            <div class="stat">
-              <span class="stat__num">126%</span>
-              <span class="stat__lbl">More traffic for businesses in the local 3-pack than in positions 4 to 10 &middot; BrightLocal, local SEO statistics</span>
-            </div>
-            <div class="stat">
-              <span class="stat__num">3.7&times;</span>
-              <span class="stat__lbl">More map-pack appearances at 40+ reviews and 4.5 stars than at under 10 reviews &middot; BrightLocal / WiserReview</span>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -561,7 +564,6 @@
   <section class="section section--stone">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="eyebrow">Honest limits</span>
         <h2>What this check <em>can&rsquo;t</em> tell you.</h2>
         <p class="sec-head__intro">It can&rsquo;t see where you rank. Rankings shift with where the searcher is standing: the same search from Fishers and from downtown can show two different top threes. A grade of A means your house is in order. It doesn&rsquo;t promise first place.</p>
       </div>
@@ -570,20 +572,16 @@
       </div>
       <div class="practice-grid mt-lg">
         <article class="practice-card reveal">
-          <span class="practice-card__tag">Read</span>
           <h3>Why isn&rsquo;t my business showing up on Google?</h3>
           <p>Five fixable causes, in the order we check them, with the free fix for each.</p>
           <a class="tlink" href="/articles/not-showing-up-on-google">Read the five fixes <span class="arr">→</span></a>
         </article>
         <article class="practice-card reveal" data-delay="1">
-          <span class="practice-card__tag">Hire</span>
           <h3>Local SEO in Indianapolis</h3>
           <p>Profile upkeep and review requests, handled every month. Published prices from $1,200 a month, three months minimum.</p>
           <a class="tlink" href="/services/local-seo">See how local SEO works here <span class="arr">→</span></a>
         </article>
       </div>
-      <p class="tool-note mt-lg reveal">Running a shop, a restaurant, or a trade in central Indiana? The <a class="tlink" href="/for/local-businesses">local businesses page</a> shows how we work with owners like you.</p>
-      <p class="updated mt-lg">Last updated: October 2026</p>
     </div>
   </section>
 
@@ -591,7 +589,6 @@
   <section class="closing">
     <div class="closing__inner">
       <div class="reveal">
-        <span class="eyebrow">The next step</span>
         <h2>Let&rsquo;s look at your listing <em>together.</em></h2>
         <p>Open your Google profile, share your screen, and we&rsquo;ll go through it side by side with your closest competitor. Thirty minutes. You&rsquo;ll know what to fix first, even if you never hire us.</p>
       </div>
@@ -611,7 +608,7 @@
       <div class="footer__brand">
         <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
         <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
-        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
       </div>
       <div>
         <h4>Services</h4>
@@ -639,11 +636,11 @@
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
-          <li><a href="/tools/checkup">The five-step check-up</a></li>
-          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
-          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
-          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
-          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+          <li><a href="/tools/checkup">The Five-Step Check-Up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy Find You?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI Opportunity Finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget Calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-Day Plan Starter</a></li>
         </ul>
       </div>
       <div>

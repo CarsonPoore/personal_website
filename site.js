@@ -173,12 +173,6 @@
 
 // Blueprint frame on navy heroes — hairline grid, bracket corners, annotation labels
 (function () {
-  const PAGES = ["index", "services", "method", "investment", "work", "about", "contact"];
-  const page = ((location.pathname.split("/").pop() || "index").toLowerCase().replace(/\.html$/, "")) || "index";
-  const idx = PAGES.indexOf(page);
-  const pad = n => String(n).padStart(2, "0");
-  const refLabel = idx >= 0 ? `Ref. CPC-${pad(idx + 1)}` : `Ref. CPC-${page.toUpperCase()}`;
-  const secLabel = idx >= 0 ? `Sec. ${pad(idx + 1)} / ${pad(PAGES.length)}` : "Indianapolis, IN";
   const STEP = 156;
 
   document.querySelectorAll(".hero, .closing").forEach(hero => {
@@ -202,13 +196,6 @@
       const k = document.createElement("span");
       k.className = "bp__corner bp__corner--" + c;
       bp.appendChild(k);
-    });
-    const labels = closing ? [["tl", refLabel + " / Next step"], ["br", "39.7684\u00b0 N \u00b7 86.1581\u00b0 W"]] : [["tl", refLabel], ["br", secLabel]];
-    labels.forEach(([pos, text]) => {
-      const t = document.createElement("span");
-      t.className = "bp__label bp__label--" + pos;
-      t.textContent = text;
-      bp.appendChild(t);
     });
     hero.insertBefore(bp, hero.firstChild);
   });

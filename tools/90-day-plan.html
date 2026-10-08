@@ -144,14 +144,35 @@
       "image": "https://carsonpoore.com/brand/carson-headshot.png",
       "email": "carson@carsonpoore.com",
       "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
-      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" },
-        { "@type": "Country", "name": "United States" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
       ],
       "priceRange": "$1,200–$4,800/month",
-      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+      "founder": {
+        "@type": "Person",
+        "@id": "https://carsonpoore.com/about#carson",
+        "name": "Carson Poore",
+        "sameAs": [
+          "https://www.linkedin.com/in/carson-poore/"
+        ]
+      }
     },
     {
       "@type": "WebApplication",
@@ -161,15 +182,35 @@
       "description": "A free, browser-based builder that turns one goal, one audience, one offer, two channels, and a weekly time budget into a dated, printable 90-day plan on one page.",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web",
-      "provider": { "@id": "https://carsonpoore.com/#org" },
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      "provider": {
+        "@id": "https://carsonpoore.com/#org"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carsonpoore.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://carsonpoore.com/resources" },
-        { "@type": "ListItem", "position": 3, "name": "90-Day Plan Starter" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://carsonpoore.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Resources",
+          "item": "https://carsonpoore.com/resources"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "90-Day Plan Starter"
+        }
       ]
     }
   ]
@@ -271,13 +312,11 @@
             <div class="fld">
               <label for="f-who">Who it&rsquo;s for</label>
               <input type="text" id="f-who" maxlength="140" placeholder="Homeowners in Carmel and Fishers who are tired of a dated kitchen" />
-              <p class="tool-note">One kind of person. If you wrote &ldquo;everyone,&rdquo; try again.</p>
             </div>
 
             <div class="fld">
               <label for="f-offer">Your offer, in one sentence</label>
               <input type="text" id="f-offer" maxlength="220" placeholder="A fixed-price kitchen remodel, done in six weeks, with one project manager" />
-              <p class="tool-note">What you sell, to whom, with what promise. A rough draft is fine. The plan will help you sharpen it.</p>
             </div>
 
             <fieldset class="fld" aria-describedby="chan-count">
@@ -294,7 +333,6 @@
                 <option value="4" selected>4 hours a week</option>
                 <option value="6">6 hours a week</option>
               </select>
-              <p class="tool-note">Be stingy. A plan you finish at 2 hours beats a plan you drop at 6.</p>
             </div>
 
             <div class="tool-actions">
@@ -329,7 +367,6 @@
   <section class="section section--stone no-print">
     <div class="wrap wrap--narrow">
       <div class="sec-head">
-        <span class="eyebrow reveal">How the plan is built</span>
         <h2 class="reveal" data-delay="1">Thirteen weeks, five steps</h2>
         <p class="sec-head__intro reveal" data-delay="2">The plan follows the same five steps we run every engagement through. They&rsquo;re in the order we think they should happen, which is not the order most people try them.</p>
       </div>
@@ -347,13 +384,11 @@
   <section class="section no-print">
     <div class="wrap wrap--narrow">
       <div class="sec-head">
-        <span class="eyebrow reveal">What this can&rsquo;t do</span>
         <h2 class="reveal" data-delay="1">A plan from five boxes has blind spots</h2>
       </div>
       <div class="mt-lg">
         <p class="reveal">It doesn&rsquo;t know your numbers. It can&rsquo;t tell you if your offer holds up or if you picked the right two channels. It gives you a sound shape and a Monday to start. That&rsquo;s worth having. It isn&rsquo;t the whole job.</p>
         <p class="mt-md reveal">The whole job is the <a class="tlink" href="/services/strategy">$3,000 strategy engagement</a>: positioning, your people, the offer with the math behind it, and a 90-day plan we pressure-test with you. If you&rsquo;re a founder deciding where to start, <a class="tlink" href="/for/founders">this page is for you</a>. And if you&rsquo;re not sure the engagement is worth it for your business, a free call will tell you in thirty minutes.</p>
-        <p class="updated mt-lg">Last updated: October 2026</p>
       </div>
     </div>
   </section>
@@ -362,7 +397,6 @@
   <section class="closing">
     <div class="closing__inner">
       <div class="reveal">
-        <span class="eyebrow">Plan in hand?</span>
         <h2>Now find out what it&rsquo;s <em>missing.</em></h2>
         <p>Bring your printed plan to a free 30-minute call. We&rsquo;ll tell you what we&rsquo;d change, whether the full strategy engagement is worth $3,000 for you, and what to do first if it isn&rsquo;t.</p>
       </div>
@@ -380,7 +414,7 @@
       <div class="footer__brand">
         <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
         <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
-        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
       </div>
       <div>
         <h4>Services</h4>
@@ -408,11 +442,11 @@
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
-          <li><a href="/tools/checkup">The five-step check-up</a></li>
-          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
-          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
-          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
-          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+          <li><a href="/tools/checkup">The Five-Step Check-Up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy Find You?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI Opportunity Finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget Calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-Day Plan Starter</a></li>
         </ul>
       </div>
       <div>

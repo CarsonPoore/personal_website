@@ -64,14 +64,35 @@
       "image": "https://carsonpoore.com/brand/carson-headshot.png",
       "email": "carson@carsonpoore.com",
       "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
-      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" },
-        { "@type": "Country", "name": "United States" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
       ],
       "priceRange": "$1,200–$4,800/month",
-      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+      "founder": {
+        "@type": "Person",
+        "@id": "https://carsonpoore.com/about#carson",
+        "name": "Carson Poore",
+        "sameAs": [
+          "https://www.linkedin.com/in/carson-poore/"
+        ]
+      }
     },
     {
       "@type": "Service",
@@ -79,19 +100,44 @@
       "name": "Technical builds and marketing automation",
       "serviceType": "Marketing automation consulting",
       "description": "AI agents and automation, websites and web apps, GoHighLevel and CRM setup, Google Ads, and GA4 analytics for small businesses and founders — human-approved and priced for small budgets, nationwide.",
-      "provider": { "@id": "https://carsonpoore.com/#org" },
+      "provider": {
+        "@id": "https://carsonpoore.com/#org"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" },
-        { "@type": "Country", "name": "United States" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carsonpoore.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://carsonpoore.com/services" },
-        { "@type": "ListItem", "position": 3, "name": "Technical" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://carsonpoore.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://carsonpoore.com/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Technical"
+        }
       ]
     },
     {
@@ -100,27 +146,42 @@
         {
           "@type": "Question",
           "name": "What does a marketing automation consultant do?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Connects the tools a business already uses (CRM, calendar, phones, email, website) so leads get followed up automatically and nobody retypes a name they already have. We also build the missing pieces: AI agents for inbox triage and scheduling, missed-call text-back, review requests. Every automated message is approved by a person before it sends." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Connects the tools a business already uses (CRM, calendar, phones, email, website) so leads get followed up automatically and nobody retypes a name they already have. We also build the missing pieces: AI agents for inbox triage and scheduling, missed-call text-back, review requests. Every automated message is approved by a person before it sends."
+          }
         },
         {
           "@type": "Question",
           "name": "Do you work with businesses outside Indianapolis?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Marketing and local SEO are Indianapolis-area work, but the technical practice runs nationwide. CRM setups, websites, automations, and analytics all happen over a screen share, and most technical clients never need us in the room." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Marketing and local SEO are Indianapolis-area work, but the technical practice runs nationwide. CRM setups, websites, automations, and analytics all happen over a screen share, and most technical clients never need us in the room."
+          }
         },
         {
           "@type": "Question",
           "name": "Will AI send messages to my customers without me seeing them?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. That's the rule the whole practice is built on: a person approves anything a customer will see before it goes out. Automation does the drafting and the remembering. People do the sending." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. That's the rule the whole practice is built on: a person approves anything a customer will see before it goes out. Automation does the drafting and the remembering. People do the sending."
+          }
         },
         {
           "@type": "Question",
           "name": "What does technical work cost?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Ongoing work runs on the same published retainers as everything we do: $1,200, $2,400, or $4,800 a month, with a three-month minimum and the whole consultancy capped at eight clients. One-off builds get a fixed written quote before work starts. Nonprofits get the reduced rate listed on the pricing page." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ongoing work runs on the same published retainers as everything we do: $1,200, $2,400, or $4,800 a month, with a three-month minimum and the whole consultancy capped at eight clients at a time. One-off builds get a fixed written quote before work starts. Nonprofits get the reduced rate listed on the pricing page."
+          }
         },
         {
           "@type": "Question",
           "name": "Do we have to use GoHighLevel?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. When your current stack works, we build on it. We recommend GoHighLevel when a business is paying for five or more tools that don't talk to each other, because consolidating usually costs less and breaks less. If what you have is fine, we'll say so." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. When your current stack works, we build on it. We recommend GoHighLevel when a business is paying for five or more tools that don't talk to each other, because consolidating usually costs less and breaks less. If what you have is fine, we'll say so."
+          }
         }
       ]
     }
@@ -213,7 +274,6 @@
   <section class="section">
     <div class="wrap wrap--narrow">
       <div class="sec-head">
-        <span class="eyebrow reveal">Why this practice exists</span>
         <h2 class="reveal" data-delay="1">Eleven tabs, none of them talking</h2>
       </div>
       <div class="mt-lg">
@@ -231,37 +291,32 @@
   <section class="section section--stone">
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow reveal">The work</span>
         <h2 class="reveal" data-delay="1">Five things we build</h2>
         <p class="sec-head__intro reveal" data-delay="2">Each one has its own page with prices, timelines, and the cases where you shouldn&rsquo;t buy it. Start wherever it hurts.</p>
       </div>
       <div class="svc-list mt-xl">
         <article class="svc reveal">
-          <span class="svc__idx">01 / Technical</span>
           <h3 class="svc__title">AI agents &amp; automation</h3>
           <p class="svc__body">Inbox triage, lead follow-up, scheduling, review requests. We start with one task you already do the same way every day, map it, then automate it, with a person approving every message before it goes out. <a class="tlink" href="/services/ai-automation">How we build AI for small businesses <span aria-hidden="true">→</span></a></p>
         </article>
         <article class="svc reveal">
-          <span class="svc__idx">02 / Technical</span>
           <h3 class="svc__title">GoHighLevel &amp; CRM</h3>
           <p class="svc__body">Everything starts blank in GoHighLevel. That&rsquo;s why the accounts we inherit usually sit half-used. We set up the pipelines, missed-call text-back, appointment reminders, and review requests so the system runs the follow-up while your team runs the jobs. <a class="tlink" href="/services/crm-gohighlevel">What a working CRM setup looks like <span aria-hidden="true">→</span></a></p>
         </article>
         <article class="svc reveal">
-          <span class="svc__idx">03 / Technical</span>
           <h3 class="svc__title">Websites &amp; web apps</h3>
           <p class="svc__body">Fast pages that say what you do and get the phone to ring, plus small web apps where off-the-shelf won&rsquo;t bend far enough. The domain, the hosting, and every file are registered to you from day one. <a class="tlink" href="/services/websites">How we build websites <span aria-hidden="true">→</span></a></p>
         </article>
         <article class="svc reveal">
-          <span class="svc__idx">04 / Technical</span>
           <h3 class="svc__title">Google Ads</h3>
           <p class="svc__body">Paid search with conversion tracking installed before the first dollar spends. The message comes from our marketing practice; the account lives here, run by the people who built your landing page. <a class="tlink" href="/services/google-ads">How we run Google Ads <span aria-hidden="true">→</span></a></p>
         </article>
         <article class="svc reveal">
-          <span class="svc__idx">05 / Technical</span>
           <h3 class="svc__title">GA4 &amp; analytics</h3>
           <p class="svc__body">Tracking set up so the numbers mean something, and a one-page monthly report an owner can read without a glossary. If a number is uncertain, we&rsquo;d rather show you a blank than a guess. <a class="tlink" href="/services/analytics">How we fix analytics <span aria-hidden="true">→</span></a></p>
         </article>
       </div>
+      <p class="mt-xl reveal">Web design and development and product design are also available as project work, quoted on their own on the <a class="tlink" href="/investment">pricing page</a>. Retainer clients can add a project anytime.</p>
     </div>
   </section>
 
@@ -270,8 +325,7 @@
     <div class="wrap">
       <div class="connect-grid">
         <div>
-          <span class="eyebrow reveal">The honest part</span>
-          <h2 class="reveal mt-sm" data-delay="1">A human approves every send</h2>
+          <h2 class="reveal" data-delay="1">A human approves every send</h2>
           <p class="mt-md reveal" data-delay="2">We&rsquo;ll say the quiet part first: plenty of small-business AI projects fail, and the ones we&rsquo;ve seen share a pattern. Someone automated a process nobody had mapped, then let it talk to customers unsupervised.</p>
           <p class="mt-md reveal" data-delay="2">So we run it differently. One task first. Mapped before it&rsquo;s built. And nothing reaches a customer without a person approving the send, not a text, not a review request. Slower on day one. Much better by month three.</p>
           <p class="mt-md reveal" data-delay="2">The other difference is where the builds come from. The plan comes first, whether that&rsquo;s the <a class="tlink" href="/services/strategy">$3,000 strategy engagement</a> or the five steps inside a retainer, and this practice builds what the plan calls for. If the shiny tool isn&rsquo;t on the plan, we don&rsquo;t buy it. Neither should you.</p>
@@ -287,7 +341,6 @@
   <section class="section section--stone">
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow reveal">Who buys this</span>
         <h2 class="reveal" data-delay="1">Two kinds of people land on this page</h2>
       </div>
       <div class="duo-strip">
@@ -309,9 +362,8 @@
   <section class="section section--tight">
     <div class="wrap wrap--narrow">
       <div class="proof-note reveal">
-        <span class="eyebrow">Proof you can click</span>
-        <h2 class="mt-sm">The free tools on this site are samples of this practice</h2>
-        <p class="mt-md">The <a class="tlink" href="/tools/ai-opportunity-finder">AI opportunity finder</a> is a working build: pick your business type, check the tasks you still do by hand, and it names your best first automation. We built it. We build things like it for clients. No email wall, so try it before you ever talk to us.</p>
+        <h2>The free tools on this site are samples of this practice</h2>
+        <p class="mt-md">The <a class="tlink" href="/tools/ai-opportunity-finder">AI Opportunity Finder</a> is a working build: pick your business type, check the tasks you still do by hand, and it names your best first automation. We built it. We build things like it for clients. No email wall, so try it before you ever talk to us.</p>
       </div>
     </div>
   </section>
@@ -320,14 +372,13 @@
   <section class="section price-fit">
     <div class="wrap wrap--narrow">
       <div class="sec-head">
-        <span class="eyebrow reveal">Investment</span>
         <h2 class="reveal" data-delay="1">Projects or retainers, same numbers</h2>
-        <p class="sec-head__intro reveal" data-delay="2">Ongoing technical work runs on the same retainers as every practice here: $1,200, $2,400, or $4,800 a month, published with what each month includes. A one-off build, such as a website or a CRM setup, gets a fixed quote in writing before any work starts. Nonprofits get the reduced rate.</p>
+        <p class="sec-head__intro reveal" data-delay="2">Ongoing technical work runs on the same retainers as every practice here: $1,200, $2,400, or $4,800 a month, published with what each month includes. A one-off build, such as a website or a CRM setup, gets a fixed quote in writing before any work starts. Nonprofits get the reduced rate. If you start with the <a class="tlink" href="/services/strategy">$3,000 strategy engagement</a> and move to a retainer, half of that fee ($1,500) is credited toward it.</p>
       </div>
       <div class="stat-row reveal" data-delay="2">
         <div><div class="stat__num">$1,200&ndash;$4,800</div><div class="stat__lbl">A month, on the pricing page</div></div>
         <div><div class="stat__num">3 months</div><div class="stat__lbl">Retainer minimum, then monthly</div></div>
-        <div><div class="stat__num">8</div><div class="stat__lbl">Clients across all four practices</div></div>
+        <div><div class="stat__num">8</div><div class="stat__lbl">Clients at a time, across all four practices</div></div>
       </div>
       <div class="row-cta mt-xl reveal" data-delay="3">
         <a class="btn btn--primary" href="/investment">Read the full pricing page <span class="arr">→</span></a>
@@ -340,7 +391,6 @@
   <section class="section section--stone">
     <div class="wrap wrap--narrow">
       <div class="sec-head">
-        <span class="eyebrow reveal">Fair questions</span>
         <h2 class="reveal" data-delay="1">What people ask before they buy builds</h2>
       </div>
       <div class="faq mt-xl reveal" data-delay="2">
@@ -358,14 +408,13 @@
         </details>
         <details>
           <summary>What does technical work cost?</summary>
-          <p>Ongoing work runs on the same published retainers as everything we do: $1,200, $2,400, or $4,800 a month, with a three-month minimum and the whole consultancy capped at eight clients. One-off builds get a fixed written quote before work starts. Nonprofits get the reduced rate listed on the pricing page.</p>
+          <p>Ongoing work runs on the same published retainers as everything we do: $1,200, $2,400, or $4,800 a month, with a three-month minimum and the whole consultancy capped at eight clients at a time. One-off builds get a fixed written quote before work starts. Nonprofits get the reduced rate listed on the pricing page.</p>
         </details>
         <details>
           <summary>Do we have to use GoHighLevel?</summary>
           <p>No. When your current stack works, we build on it. We recommend GoHighLevel when a business is paying for five or more tools that don&rsquo;t talk to each other, because consolidating usually costs less and breaks less. If what you have is fine, we&rsquo;ll say so.</p>
         </details>
       </div>
-      <p class="updated mt-lg">Last updated: October 2026</p>
     </div>
   </section>
 
@@ -373,7 +422,6 @@
   <section class="closing">
     <div class="closing__inner">
       <div class="reveal">
-        <span class="eyebrow">The next step</span>
         <h2>Bring us the part held together with <em>duct tape</em>.</h2>
         <p>A free 30-minute call, from anywhere. Tell us which tool you&rsquo;re fighting and we&rsquo;ll tell you whether to connect it or stop paying for it. If the fix is an afternoon of your own time, we&rsquo;ll just explain how.</p>
       </div>
@@ -391,7 +439,7 @@
       <div class="footer__brand">
         <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
         <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
-        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
       </div>
       <div>
         <h4>Services</h4>
@@ -419,11 +467,11 @@
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
-          <li><a href="/tools/checkup">The five-step check-up</a></li>
-          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
-          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
-          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
-          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+          <li><a href="/tools/checkup">The Five-Step Check-Up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy Find You?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI Opportunity Finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget Calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-Day Plan Starter</a></li>
         </ul>
       </div>
       <div>

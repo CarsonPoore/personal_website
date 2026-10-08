@@ -40,23 +40,59 @@
       "image": "https://carsonpoore.com/brand/carson-headshot.png",
       "email": "carson@carsonpoore.com",
       "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
-      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" },
-        { "@type": "Country", "name": "United States" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
       ],
       "priceRange": "$1,200–$4,800/month",
-      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+      "founder": {
+        "@type": "Person",
+        "@id": "https://carsonpoore.com/about#carson",
+        "name": "Carson Poore",
+        "sameAs": [
+          "https://www.linkedin.com/in/carson-poore/"
+        ]
+      }
     },
     {
       "@type": "Person",
       "@id": "https://carsonpoore.com/about#carson",
       "name": "Carson Poore",
       "jobTitle": "Founder",
-      "worksFor": { "@id": "https://carsonpoore.com/#org" },
+      "worksFor": {
+        "@id": "https://carsonpoore.com/#org"
+      },
       "image": "https://carsonpoore.com/brand/carson-headshot.png",
-      "knowsAbout": ["Marketing strategy", "Local SEO", "Google Ads", "Marketing automation", "AI agents", "GoHighLevel", "GA4", "Fractional CMO services", "Nonprofit marketing"]
+      "knowsAbout": [
+        "Marketing strategy",
+        "Local SEO",
+        "Google Ads",
+        "Marketing automation",
+        "AI agents",
+        "GoHighLevel",
+        "GA4",
+        "Fractional CMO services",
+        "Nonprofit marketing"
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/in/carson-poore/"
+      ]
     },
     {
       "@type": "AboutPage",
@@ -64,8 +100,12 @@
       "url": "https://carsonpoore.com/about",
       "name": "About Carson Poore Consulting | Indianapolis Growth Team",
       "description": "Meet the Indianapolis team behind Carson Poore Consulting: four practices, eight clients at a time, prices on the site, and a habit of saying what we think.",
-      "about": { "@id": "https://carsonpoore.com/#org" },
-      "mainEntity": { "@id": "https://carsonpoore.com/about#carson" },
+      "about": {
+        "@id": "https://carsonpoore.com/#org"
+      },
+      "mainEntity": {
+        "@id": "https://carsonpoore.com/about#carson"
+      },
       "dateModified": "2026-10-08"
     }
   ]
@@ -131,8 +171,7 @@
     <div class="wrap">
       <div class="page-hero__grid">
         <div class="page-hero__copy">
-          <span class="eyebrow reveal">About</span>
-          <h1 class="reveal mt-md" data-delay="1">The team behind <em>CPC.</em></h1>
+          <h1 class="reveal" data-delay="1">The team behind <em>CPC.</em></h1>
           <p class="hero__sub reveal mt-md" data-delay="2">We&rsquo;re a small Indianapolis team that plans the work and then builds it, across four practices: marketing, technical, strategy, and coaching.</p>
         </div>
         <div class="motion-frame motion-frame--hero page-hero__motion reveal" data-delay="2">
@@ -162,7 +201,6 @@
       <!-- WHAT WE ACTUALLY DO -->
       <div class="about-card about-more">
         <div class="reveal">
-          <span class="eyebrow">The work</span>
           <h2>So what do we <em>actually</em> do?</h2>
         </div>
         <div class="about-card__copy">
@@ -235,8 +273,6 @@
       </div>
 
       <p class="faith reveal">Our faith shapes how we work more than anything we&rsquo;d put on a marquee. It shows up as these values, in the day to day of the work, not as a label.</p>
-
-      <p class="updated mt-lg reveal" data-delay="1">Last updated: October 2026</p>
     </div>
   </section>
 
@@ -244,7 +280,6 @@
   <section class="closing">
     <div class="closing__inner">
       <div class="reveal">
-        <span class="eyebrow">Next step</span>
         <h2>Tell us what you&rsquo;re <em>building.</em></h2>
         <p>It starts with a 30-minute discovery call. We do most of the listening.</p>
       </div>
@@ -262,7 +297,7 @@
       <div class="footer__brand">
         <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
         <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
-        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
       </div>
       <div>
         <h4>Services</h4>
@@ -290,11 +325,11 @@
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
-          <li><a href="/tools/checkup">The five-step check-up</a></li>
-          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
-          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
-          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
-          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+          <li><a href="/tools/checkup">The Five-Step Check-Up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy Find You?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI Opportunity Finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget Calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-Day Plan Starter</a></li>
         </ul>
       </div>
       <div>

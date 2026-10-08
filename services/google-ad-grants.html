@@ -65,8 +65,6 @@
     font-size: 0.75rem; letter-spacing: 0.08em;
     color: var(--muted-on-navy);
   }
-  .page-hero .grant-meter__note { margin-top: 22px; color: #fff; font-weight: 700; max-width: none; }
-  .page-hero .grant-meter__src { margin-top: 8px; font-size: 0.78rem; color: var(--muted-on-navy); max-width: none; }
 
   /* Checkup: heading left, the four questions right */
   .checkup-grid {
@@ -84,24 +82,8 @@
   .rules .card h3 { font-size: var(--step-1); }
 
   /* Navy numbers band */
-  .grant-stats {
-    display: grid;
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-    gap: clamp(32px, 5vw, 80px);
-    align-items: center;
-  }
-  @media (max-width: 860px) { .grant-stats { grid-template-columns: 1fr; } }
+  .grant-stats { max-width: 64ch; }
   .grant-stats p + p { margin-top: 16px; }
-  .grant-stats .stat-row { flex-direction: column; gap: clamp(22px, 3vw, 36px); }
-  .grant-stats .stat { border-left: 2px solid var(--amber); padding-left: clamp(16px, 2vw, 26px); }
-  .grant-stats .stat__num { color: #fff; }
-  .sources {
-    font-size: 0.78rem;
-    color: var(--muted-on-navy);
-    letter-spacing: 0.02em;
-    margin-top: clamp(22px, 3vw, 34px);
-    max-width: 56ch;
-  }
 
   /* The month, written out */
   .cadence { list-style: none; margin: 0; padding: 0; }
@@ -133,7 +115,6 @@
   /* Cost + fundability */
   .cost-note { max-width: 62ch; }
   .cost-note p + p { margin-top: 18px; }
-  .fund-note {
     margin-top: clamp(28px, 4vw, 44px);
     padding: clamp(22px, 3vw, 32px);
     background: var(--stone-2);
@@ -141,8 +122,6 @@
     border-left: 3px solid var(--cobalt);
     max-width: 66ch;
   }
-  .fund-note .label { color: var(--cobalt); display: block; margin-bottom: 10px; }
-  .fund-note p { color: var(--ink-2); }
 </style>
 <script type="application/ld+json">
 {
@@ -157,14 +136,35 @@
       "image": "https://carsonpoore.com/brand/carson-headshot.png",
       "email": "carson@carsonpoore.com",
       "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
-      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" },
-        { "@type": "Country", "name": "United States" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
       ],
       "priceRange": "$1,200–$4,800/month",
-      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+      "founder": {
+        "@type": "Person",
+        "@id": "https://carsonpoore.com/about#carson",
+        "name": "Carson Poore",
+        "sameAs": [
+          "https://www.linkedin.com/in/carson-poore/"
+        ]
+      }
     },
     {
       "@type": "Service",
@@ -172,20 +172,45 @@
       "name": "Google Ad Grant management",
       "serviceType": "Google Ad Grants management for nonprofits",
       "description": "Setup, compliance, and monthly management of Google Ad Grant accounts (up to $10,000 a month in free Google search ads) for verified nonprofits in Indianapolis and central Indiana, inside published monthly retainers at a reduced nonprofit rate. Starts with a free Ad Grant checkup on a discovery call.",
-      "provider": { "@id": "https://carsonpoore.com/#org" },
-      "audience": { "@type": "Audience", "audienceType": "Nonprofit organizations" },
+      "provider": {
+        "@id": "https://carsonpoore.com/#org"
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Nonprofit organizations"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        }
       ],
       "url": "https://carsonpoore.com/services/google-ad-grants"
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carsonpoore.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://carsonpoore.com/services" },
-        { "@type": "ListItem", "position": 3, "name": "Google Ad Grants" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://carsonpoore.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://carsonpoore.com/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Google Ad Grants"
+        }
       ]
     },
     {
@@ -194,27 +219,42 @@
         {
           "@type": "Question",
           "name": "Is my nonprofit eligible for the Google Ad Grant?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Google decides that, through Google for Nonprofits, and the program is built for verified charities such as 501(c)(3)s. Faith-based and community organizations are welcome, though Google runs its own checks for some of them. We confirm your eligibility during the free checkup instead of promising it on a web page." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google decides that, through Google for Nonprofits, and the program is built for verified charities such as 501(c)(3)s. Faith-based and community organizations are welcome, though Google runs its own checks for some of them. We confirm your eligibility during the free checkup instead of promising it on a web page."
+          }
         },
         {
           "@type": "Question",
           "name": "Why did our Ad Grant account get suspended?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Usually one of two rules. The account’s click rate fell under 5%, or nobody logged in for a month. Both are fixable. The checkup tells you which one tripped it, and getting the account back on is our first job if you hire us." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually one of two rules. The account’s click rate fell under 5%, or nobody logged in for a month. Both are fixable. The checkup tells you which one tripped it, and getting the account back on is our first job if you hire us."
+          }
         },
         {
           "@type": "Question",
           "name": "Does the Google Ad Grant cost anything?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The ad spend is free. Google covers up to $10,000 a month in search ads, and nobody sends you a bill for the clicks. What costs money is the time to run it well: a staff member’s hours, or our retainer at the nonprofit rate." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The ad spend is free. Google covers up to $10,000 a month in search ads, and nobody sends you a bill for the clicks. What costs money is the time to run it well: a staff member’s hours, or our retainer at the nonprofit rate."
+          }
         },
         {
           "@type": "Question",
           "name": "Can we manage the Ad Grant ourselves?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes, if someone on staff can give it a few focused hours every month and enjoys this kind of puzzle. Our guide to the nonprofit Ad Grant walks through every rule. The usual failure is that person moving on and the account going quiet." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, if someone on staff can give it a few focused hours every month and enjoys this kind of puzzle. Our guide to the nonprofit Ad Grant walks through every rule. The usual failure is that person moving on and the account going quiet."
+          }
         },
         {
           "@type": "Question",
           "name": "Will the Ad Grant bring in donations?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Some. We think the bigger payoff for most small organizations is volunteers and newsletter sign-ups, who often become donors later. We count every one of them, so you can show your board exactly what the free ads did." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Some. We think the bigger payoff for most small organizations is volunteers and newsletter sign-ups, who often become donors later. We count every one of them, so you can show your board exactly what the free ads did."
+          }
         }
       ]
     }
@@ -290,19 +330,17 @@
         <div class="page-hero__copy">
           <span class="eyebrow reveal">Google Ad Grants &middot; for nonprofits</span>
           <h1 class="reveal mt-md" data-delay="1">$10,000 a month in free ads, <em>mostly unspent.</em></h1>
-          <p class="hero__sub reveal mt-md" data-delay="2">Google offers verified nonprofits up to $10,000 a month in free search ads. The average self-managed account spends about $300 of it, per Getting Attention. If a volunteer set yours up years ago and nobody&rsquo;s logged in since, you have plenty of company. We handle Google Ad Grant management for nonprofits in Indianapolis and across central Indiana, and we start by finding out where your account actually stands.</p>
+          <p class="hero__sub reveal mt-md" data-delay="2">Google offers verified nonprofits up to $10,000 a month in free search ads. Most self-managed accounts leave almost all of it unspent, according to Getting Attention. If a volunteer set yours up years ago and nobody&rsquo;s logged in since, you have plenty of company. We handle Google Ad Grant management for nonprofits in Indianapolis and across central Indiana, and we start by finding out where your account actually stands.</p>
           <div class="row-cta reveal mt-lg" data-delay="3">
             <a class="btn btn--primary" href="/contact">Get the free Ad Grant checkup <span class="arr">→</span></a>
             <a class="tlink" href="/articles/nonprofit-google-ad-grant">or read how the grant works</a>
           </div>
         </div>
         <aside class="grant-meter page-hero__motion reveal" data-delay="2" aria-label="How much of the grant a typical self-managed account uses">
-          <span class="label">One month of the grant</span>
+          <span class="label">One month of the grant, average self-managed account</span>
           <p class="grant-meter__fig">$300 <span>used of $10,000</span></p>
           <div class="grant-meter__bar" aria-hidden="true"><span class="grant-meter__fill"></span></div>
           <div class="grant-meter__scale" aria-hidden="true"><span>$0</span><span>$10,000</span></div>
-          <p class="grant-meter__note">Roughly $9,700 a month in free search ads, left on the table.</p>
-          <p class="grant-meter__src">Average self-managed account &middot; Getting Attention</p>
         </aside>
       </div>
     </div>
@@ -335,9 +373,8 @@
   <section class="section rules">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="eyebrow">The rules, in plain words</span>
         <h2>Why grant accounts <em>get switched off.</em></h2>
-        <p class="sec-head__intro">Google gives this money away with strings attached. Miss one and the account can be suspended, sometimes for months before anyone at the organization notices. These four catch people most, per 2026 Ad Grant guides from Elevation and Levitate.</p>
+        <p class="sec-head__intro">Google gives this money away with strings attached. Miss one and the account can be suspended, sometimes for months before anyone at the organization notices. These four catch people most.</p>
       </div>
 
       <div class="cards mt-lg">
@@ -372,25 +409,9 @@
     <div class="wrap">
       <div class="grant-stats">
         <div class="reveal">
-          <span class="eyebrow">Left alone vs. looked after</span>
           <h2>Same grant. <em>Very different month.</em></h2>
-          <p class="mt-md">Every organization gets the same $10,000 ceiling. What changes is whether anyone tends the account. Getting Attention puts the average self-managed account at about $300 a month. Agencies that manage grants report an average near $8,650 a month for the accounts they run.</p>
-          <p>That second figure is industry-reported, which means agencies grading their own homework. Read it with one eyebrow raised. You won&rsquo;t hear a dollar target from us until we&rsquo;ve seen your account, and we&rsquo;d rather under-promise on this one.</p>
-          <p class="sources">Sources: the $10,000 monthly grant is Google&rsquo;s, via Google for Nonprofits, as summarized in 2026 guides from Elevation, Donorbox, and Getting Attention. Self-managed usage: Getting Attention. The $8,650 managed average is industry-reported, from agency management data published in January 2026.</p>
-        </div>
-        <div class="stat-row reveal" data-delay="1">
-          <div class="stat">
-            <span class="stat__num">$10,000</span>
-            <span class="stat__lbl">Monthly search-ad ceiling for verified nonprofits &middot; Google Ad Grants</span>
-          </div>
-          <div class="stat">
-            <span class="stat__num">~$300</span>
-            <span class="stat__lbl">Used by the average self-managed account &middot; Getting Attention</span>
-          </div>
-          <div class="stat">
-            <span class="stat__num">~$8,650</span>
-            <span class="stat__lbl">Managed-account average &middot; industry-reported</span>
-          </div>
+          <p class="mt-md">Every organization gets the same $10,000 ceiling. What changes is whether anyone tends the account. Left alone, it drifts: a lapsed login, a click rate that slides, a grant that quietly goes dark. Looked after, the same ceiling turns into donors, volunteers, and people finding the programs you run.</p>
+          <p>You won&rsquo;t hear a dollar target from us until we&rsquo;ve seen your account, and we&rsquo;d rather under-promise on this one.</p>
         </div>
       </div>
     </div>
@@ -400,7 +421,6 @@
   <section class="section">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="eyebrow">What managed means</span>
         <h2>The month, <em>written out.</em></h2>
         <p class="sec-head__intro">Honestly, most of this is unglamorous. Pruning keywords and rewriting ads nobody clicks. It works because it happens every single month, and cleverness has very little to do with it.</p>
       </div>
@@ -434,12 +454,11 @@
     <div class="wrap">
       <div class="reach-copy">
         <div class="sec-head reveal">
-          <span class="eyebrow">Who finds you</span>
           <h2>Donors, yes. <em>Volunteers too.</em></h2>
         </div>
         <div class="reveal mt-md" data-delay="1">
           <p>The grant usually gets pitched as a fundraising tool. We think its best use is finding people. Someone in Fishers looking for Saturday volunteer shifts. A parent on the east side searching for an after-school program near home. Each of those is a search, and the grant can put you in front of it for free.</p>
-          <p>Volunteers matter here because they&rsquo;re getting harder to find. About 28% of Americans volunteered in 2023, down from roughly 30% before COVID, per Census and AmeriCorps data.</p>
+          <p>Volunteers matter here because they&rsquo;re getting harder to find.</p>
           <p>So we usually build separate campaigns for the people you serve, the volunteers you need, and the donors who fund it. Each group searches differently, and lumping them together is a fast way to sink your click rate.</p>
         </div>
       </div>
@@ -450,17 +469,13 @@
   <section class="section">
     <div class="wrap wrap--narrow">
       <div class="sec-head reveal">
-        <span class="eyebrow">What it costs</span>
         <h2>The nonprofit rate, <em>stated plainly.</em></h2>
       </div>
       <div class="cost-note reveal mt-md">
         <p>Google pays for the ads. You pay for the management. Ad Grant management runs inside our published monthly retainers of $1,200, $2,400, or $4,800 a month, and nonprofits get a reduced rate on each one. The pricing page explains how the nonprofit rate works.</p>
         <p>You get the same team as every other client, under the same eight-client cap. The rate is lower because nonprofit budgets are smaller and the work matters. Three months minimum, then month to month.</p>
         <p>The account stays registered to your organization. If you ever leave, it leaves with you.</p>
-      </div>
-      <div class="fund-note reveal" data-delay="1">
-        <span class="label">This may already be fundable</span>
-        <p>United Way of Central Indiana runs a Capacity Fund with capacity-building grants of up to $50,000, the kind that can pay for marketing help. A community foundation also serves every one of Indiana&rsquo;s 92 counties. If a capacity grant could cover this work, we&rsquo;ll help you write the case for it.</p>
+        <p>This may already be fundable. United Way of Central Indiana runs a Capacity Fund for capacity-building grants, the kind that can pay for marketing help. If a capacity grant could cover this work, we&rsquo;ll help you write the case for it.</p>
       </div>
       <div class="row-cta reveal mt-lg" data-delay="2">
         <a class="btn btn--ghost" href="/investment">See published pricing <span class="arr">→</span></a>
@@ -472,7 +487,6 @@
   <section class="section section--stone">
     <div class="wrap wrap--narrow">
       <div class="sec-head reveal">
-        <span class="eyebrow">Questions we hear</span>
         <h2>What development directors <em>ask first.</em></h2>
       </div>
       <div class="faq mt-lg reveal">
@@ -497,7 +511,6 @@
           <p>Some. We think the bigger payoff for most small organizations is volunteers and newsletter sign-ups, who often become donors later. We count every one of them, so you can show your board exactly what the free ads did.</p>
         </details>
       </div>
-      <p class="updated mt-lg">Last updated: October 2026</p>
     </div>
   </section>
 
@@ -505,7 +518,6 @@
   <section class="closing">
     <div class="closing__inner">
       <div class="reveal">
-        <span class="eyebrow">Your first step</span>
         <h2>How much of the $10,000 <em>did you use?</em></h2>
         <p>Book a discovery call and ask for the Ad Grant checkup. Bring the login if you can find it. You&rsquo;ll hang up knowing where the account stands and the one fix to make first, whether or not we ever work together.</p>
       </div>
@@ -523,7 +535,7 @@
       <div class="footer__brand">
         <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
         <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
-        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
       </div>
       <div>
         <h4>Services</h4>
@@ -551,11 +563,11 @@
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
-          <li><a href="/tools/checkup">The five-step check-up</a></li>
-          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
-          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
-          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
-          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+          <li><a href="/tools/checkup">The Five-Step Check-Up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy Find You?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI Opportunity Finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget Calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-Day Plan Starter</a></li>
         </ul>
       </div>
       <div>

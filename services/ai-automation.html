@@ -42,7 +42,6 @@
     padding: 6px 14px; border-radius: 999px; border: 1px solid var(--navy-3); color: var(--cream-2);
   }
   .queue__chip--go { background: var(--cobalt); border-color: var(--cobalt); color: #fff; }
-  .queue__foot { margin-top: 14px; font-size: 0.82rem; color: var(--muted-on-navy); }
 
   /* Short answer band */
   .answer { max-width: 64ch; }
@@ -70,7 +69,6 @@
     .jobs__row--head { display: none; }
     .jobs__cell .label { display: block; }
   }
-  .jobs-note { margin-top: clamp(22px, 3vw, 34px); max-width: 64ch; color: var(--ink-2); }
 
   /* Opinion band */
   .stance {
@@ -109,7 +107,6 @@
     color: var(--cream-2); padding: 13px 0; border-top: 1px solid var(--navy-3);
   }
   .finder__card li::before { content: counter(step, decimal-leading-zero); color: #fff; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.06em; }
-  .finder__foot { margin-top: 18px; color: var(--muted-on-navy); font-size: 0.85rem; }
 
   /* Who asks us for this */
   .who {
@@ -121,7 +118,6 @@
   @media (max-width: 760px) { .who { grid-template-columns: 1fr; } }
   .who__col { border-top: 2px solid var(--cobalt); padding-top: 20px; }
   .who__col p { margin-top: 10px; color: var(--ink-2); }
-  .who-note { margin-top: clamp(28px, 4vw, 44px); max-width: 64ch; color: var(--ink-2); }
 </style>
 <script type="application/ld+json">
 {
@@ -136,14 +132,35 @@
       "image": "https://carsonpoore.com/brand/carson-headshot.png",
       "email": "carson@carsonpoore.com",
       "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
-      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" },
-        { "@type": "Country", "name": "United States" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
       ],
       "priceRange": "$1,200–$4,800/month",
-      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+      "founder": {
+        "@type": "Person",
+        "@id": "https://carsonpoore.com/about#carson",
+        "name": "Carson Poore",
+        "sameAs": [
+          "https://www.linkedin.com/in/carson-poore/"
+        ]
+      }
     },
     {
       "@type": "Service",
@@ -151,20 +168,45 @@
       "name": "AI agents and automation",
       "serviceType": "AI automation consulting for small business",
       "description": "Scoping and building one practical AI agent or automation at a time for small businesses and founders: lead follow-up within minutes, intake, review requests, weekly reporting, and content drafts, with a person approving anything a customer reads. Ongoing work runs inside published monthly retainers; one-off builds get a fixed written quote.",
-      "provider": { "@id": "https://carsonpoore.com/#org" },
+      "provider": {
+        "@id": "https://carsonpoore.com/#org"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" },
-        { "@type": "Country", "name": "United States" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
       ],
       "url": "https://carsonpoore.com/services/ai-automation"
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carsonpoore.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://carsonpoore.com/services" },
-        { "@type": "ListItem", "position": 3, "name": "AI & automation" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://carsonpoore.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://carsonpoore.com/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI & automation"
+        }
       ]
     },
     {
@@ -173,27 +215,42 @@
         {
           "@type": "Question",
           "name": "How much does an AI automation consultant cost for a small business?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Independent consultants typically charge $150 to $250 an hour, and a defined small-business project usually runs $1,500 to $6,000, per published rate guides from Bushe, Rapid Developers, and Kamyar Shah. With us, ongoing automation work is part of the published monthly retainer: $1,200, $2,400, or $4,800, with a three-month minimum. A one-off build gets a fixed written quote before any work starts." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Independent consultants bill by the hour or by the project. With us, ongoing automation work is part of the published monthly retainer: $1,200, $2,400, or $4,800, with a three-month minimum. A one-off build gets a fixed written quote before any work starts."
+          }
         },
         {
           "@type": "Question",
           "name": "What can an AI agent actually do in a five-person business?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Less than the ads suggest, and that’s fine. The dependable jobs are replying to new leads within minutes, running intake by text or form, sending review requests, assembling a weekly report, and drafting emails and posts. Each one works best on a task you already do the same way every day." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Less than the ads suggest, and that’s fine. The dependable jobs are replying to new leads within minutes, running intake by text or form, sending review requests, assembling a weekly report, and drafting emails and posts. Each one works best on a task you already do the same way every day."
+          }
         },
         {
           "@type": "Question",
           "name": "Will the AI send messages to my customers without me seeing them?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Not one we build. You approve the wording of routine replies up front, and anything unusual waits for a person to tap approve. Content drafts never publish on their own. If you want to loosen that rule later, it’s your call." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not one we build. You approve the wording of routine replies up front, and anything unusual waits for a person to tap approve. Content drafts never publish on their own. If you want to loosen that rule later, it’s your call."
+          }
         },
         {
           "@type": "Question",
           "name": "Do I need to buy new software first?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Usually not. We build on the inbox and calendar you already use. If your leads are scattered across texts and sticky notes, the better first move may be a proper CRM, and we’ll say so. That’s a GoHighLevel setup, and it has its own page." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually not. We build on the inbox and calendar you already use. If your leads are scattered across texts and sticky notes, the better first move may be a proper CRM, and we’ll say so. That’s a GoHighLevel setup, and it has its own page."
+          }
         },
         {
           "@type": "Question",
           "name": "Do you work with businesses outside Indianapolis?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. We’re based in Indianapolis, and the AI and automation practice is national. Builds happen over calls and shared screens, so a shop in Fishers and a startup in Denver get the same process." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We’re based in Indianapolis, and the AI and automation practice is national. Builds happen over calls and shared screens, so a shop in Fishers and a startup in Denver get the same process."
+          }
         }
       ]
     }
@@ -294,7 +351,6 @@
               <span class="queue__meta">Monday numbers &middot; 7:00 AM</span>
               <p class="queue__text">Calls and booked jobs on one page.</p>
             </div>
-            <p class="queue__foot">Nothing goes out until someone taps approve.</p>
           </div>
         </div>
       </div>
@@ -305,12 +361,11 @@
   <section class="section">
     <div class="wrap wrap--narrow">
       <div class="sec-head reveal">
-        <span class="eyebrow">The short answer</span>
         <h2>What an AI consultant does, <em>and what it costs.</em></h2>
       </div>
       <div class="answer reveal mt-md">
         <p class="answer__lead">An AI automation consultant builds software that takes one repeated job off your plate. Answering new leads. Asking intake questions. Sending review requests. Pulling Monday&rsquo;s numbers. A good one also tells you which jobs to leave alone.</p>
-        <p>Independent AI consultants typically charge $150 to $250 an hour, and a defined small-business project usually runs $1,500 to $6,000, according to published rate guides from Bushe, Rapid Developers, and Kamyar Shah.</p>
+        <p>Independent AI consultants typically charge $150 to $250 an hour, and a defined small-business project usually runs $1,500 to $6,000, according to published rate guides.</p>
         <p>We price this the way we price everything. Ongoing automation work sits inside our published retainers of $1,200, $2,400, or $4,800 a month, with a three-month minimum. A one-off build gets a fixed quote in writing before any work starts. Nonprofits get the reduced rate listed on the pricing page. If you ever leave, every automation and account we built stays with you, along with your data.</p>
       </div>
       <div class="row-cta reveal mt-lg" data-delay="1">
@@ -324,9 +379,8 @@
   <section class="section section--stone">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="eyebrow">What we build</span>
         <h2>Five jobs worth <em>handing to an agent.</em></h2>
-        <p class="sec-head__intro">When vcita surveyed 500 small-business owners in 2025, the AI help they asked for was plain: content, and fast replies to inquiries. Our list looks a lot like theirs. Each job below shows what the agent does and what a person still does. Both columns matter.</p>
+        <p class="sec-head__intro">Small-business owners mostly ask AI for the plain stuff: content, and fast replies to inquiries. Our list looks a lot like that. Each job below shows what the agent does and what a person still does. Both columns matter.</p>
       </div>
 
       <div class="jobs reveal">
@@ -367,7 +421,7 @@
         </div>
       </div>
 
-      <p class="jobs-note reveal">Already running a CRM? Review requests and missed-call text-back are often a <a class="tlink" href="/services/crm-gohighlevel">GoHighLevel setup</a> job, no custom agent required. We&rsquo;ll tell you which one you need.</p>
+      <p class="reveal mt-lg">Already running a CRM? Review requests and missed-call text-back are often a <a class="tlink" href="/services/crm-gohighlevel">GoHighLevel setup</a> job, no custom agent required. We&rsquo;ll tell you which one you need.</p>
     </div>
   </section>
 
@@ -376,7 +430,6 @@
     <div class="wrap">
       <div class="stance">
         <div class="reveal">
-          <span class="eyebrow">Where we stand</span>
           <h2>Your name is on it, <em>so you sign off.</em></h2>
           <p class="mt-md">Here&rsquo;s our opinion, plainly. An agent should sort and draft on its own, and anything a customer reads gets a human yes first.</p>
           <p>Some AI shops sell full autopilot because it demos well. We think that&rsquo;s backwards for a small business. One strange automated text to a ten-year customer costs more trust than a hundred fast replies earn back. Approval takes a single tap on your phone, so you keep the speed.</p>
@@ -392,12 +445,11 @@
   <section class="section">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="eyebrow">How we start</span>
         <h2>One automation first. <em>Then we talk.</em></h2>
       </div>
       <div class="start-copy reveal mt-md">
         <p>Every engagement opens with a scoping pass. We list the tasks you repeat and put your own hours next to each one. Then we pick the single build where being slow costs you real money. Usually that&rsquo;s lead follow-up. It ships on software you already pay for, then runs for a few weeks with you approving everything before we propose a second build.</p>
-        <p>Now the candid part. Plenty of AI projects shouldn&rsquo;t exist. The same rate guides that publish consultant prices pass along a sobering pattern: most small-business AI engagements don&rsquo;t pay for themselves in the first year (as reported by Rapid Developers and Kamyar Shah). The usual cause is building something big before anyone mapped the chore. So sometimes our scoping verdict is &ldquo;keep the spreadsheet,&rdquo; and we&rsquo;d rather say that than bill you for a robot.</p>
+        <p>Now the candid part. Plenty of AI projects shouldn&rsquo;t exist. The same rate guides pass along a sobering pattern: most small-business AI engagements don&rsquo;t pay for themselves in the first year. The usual cause is building something big before anyone mapped the chore. So sometimes our scoping verdict is &ldquo;keep the spreadsheet,&rdquo; and we&rsquo;d rather say that than bill you for a robot.</p>
         <p>One more admission. The first week of any agent is a little clumsy. Expect to correct it. That&rsquo;s what the approval step is for.</p>
       </div>
 
@@ -432,22 +484,21 @@
         <div class="reveal">
           <span class="eyebrow">Free &middot; no email, no login</span>
           <h2>Scope your first build <em>tonight.</em></h2>
-          <p class="mt-md">The AI opportunity finder is our scoping pass with us taken out. Pick your business type and check the tasks you still do by hand. Then set how many hours each one eats. It names your best first automation and adds up your own hours. No invented savings figures. Just your numbers, back to you.</p>
+          <p class="mt-md">The AI Opportunity Finder is our scoping pass with us taken out. Pick your business type and check the tasks you still do by hand. Then set how many hours each one eats. It names your best first automation and adds up your own hours. No invented savings figures. Just your numbers, back to you.</p>
           <p class="mt-md">If it says you don&rsquo;t need an agent yet, believe it. We built the tool, and it&rsquo;s also a fair sample of how we build.</p>
           <div class="row-cta mt-lg">
-            <a class="btn btn--primary" href="/tools/ai-opportunity-finder">Open the opportunity finder <span class="arr">→</span></a>
+            <a class="btn btn--primary" href="/tools/ai-opportunity-finder">Open the AI Opportunity Finder <span class="arr">→</span></a>
             <a class="tlink" href="/articles/ai-agents-for-small-business">Or read our guide to AI agents first</a>
           </div>
         </div>
         <div class="finder__card reveal" data-delay="1">
-          <span class="label">AI opportunity finder &middot; 4 steps</span>
+          <span class="label">AI Opportunity Finder &middot; 4 steps</span>
           <ol>
             <li>Pick your business type</li>
             <li>Check the tasks you still do by hand</li>
             <li>Set the hours each one takes</li>
             <li>Get your first automation, named</li>
           </ol>
-          <p class="finder__foot">Each task gets a plain verdict: an agent, a simple automation, or a better-connected CRM.</p>
         </div>
       </div>
     </div>
@@ -457,7 +508,6 @@
   <section class="section">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="eyebrow">Who asks us for this</span>
         <h2>Indianapolis-based. <em>Built for anywhere.</em></h2>
       </div>
       <div class="who">
@@ -470,7 +520,6 @@
           <p>You&rsquo;re the bottleneck for intake and every follow-up. Automation buys back hours you&rsquo;d otherwise hire for. Our page for <a class="tlink" href="/for/founders">founders</a> covers the strategy work we pair it with.</p>
         </div>
       </div>
-      <p class="who-note reveal">Automation travels well, so this practice is national and runs over calls and shared screens. Our local marketing stays rooted in central Indiana. The technical work goes wherever you are.</p>
     </div>
   </section>
 
@@ -478,13 +527,12 @@
   <section class="section section--stone">
     <div class="wrap wrap--narrow">
       <div class="sec-head reveal">
-        <span class="eyebrow">Fair questions</span>
         <h2>Before you hand anything <em>to a machine.</em></h2>
       </div>
       <div class="faq mt-lg reveal">
         <details>
           <summary>How much does an AI automation consultant cost for a small business?</summary>
-          <p>Independent consultants typically charge $150 to $250 an hour, and a defined small-business project usually runs $1,500 to $6,000, per published rate guides from Bushe, Rapid Developers, and Kamyar Shah. With us, ongoing automation work is part of the published monthly retainer: $1,200, $2,400, or $4,800, with a three-month minimum. A one-off build gets a fixed written quote before any work starts.</p>
+          <p>Independent consultants bill by the hour or by the project. With us, ongoing automation work is part of the published monthly retainer: $1,200, $2,400, or $4,800, with a three-month minimum. A one-off build gets a fixed written quote before any work starts.</p>
         </details>
         <details>
           <summary>What can an AI agent actually do in a five-person business?</summary>
@@ -503,7 +551,6 @@
           <p>Yes. We&rsquo;re based in Indianapolis, and the AI and automation practice is national. Builds happen over calls and shared screens, so a shop in Fishers and a startup in Denver get the same process.</p>
         </details>
       </div>
-      <p class="updated mt-lg">Last updated: October 2026</p>
     </div>
   </section>
 
@@ -511,9 +558,8 @@
   <section class="closing">
     <div class="closing__inner">
       <div class="reveal">
-        <span class="eyebrow">Your next step</span>
         <h2>Name the chore. <em>We&rsquo;ll scope it.</em></h2>
-        <p>On a free 30-minute call, we&rsquo;ll pick the one task worth automating first and sketch how it would run, approvals included. The sketch is yours to keep, hire us or not. We take eight clients total, so if we&rsquo;re full, we&rsquo;ll say that too.</p>
+        <p>On a free 30-minute call, we&rsquo;ll pick the one task worth automating first and sketch how it would run, approvals included. The sketch is yours to keep, hire us or not. We take eight clients at a time, so if we&rsquo;re full, we&rsquo;ll say that too.</p>
       </div>
       <div class="reveal" data-delay="1">
         <a href="/contact" class="btn btn--primary">Pick the chore to automate <span class="arr">→</span></a>
@@ -529,7 +575,7 @@
       <div class="footer__brand">
         <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
         <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
-        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
       </div>
       <div>
         <h4>Services</h4>
@@ -557,11 +603,11 @@
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
-          <li><a href="/tools/checkup">The five-step check-up</a></li>
-          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
-          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
-          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
-          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+          <li><a href="/tools/checkup">The Five-Step Check-Up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy Find You?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI Opportunity Finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget Calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-Day Plan Starter</a></li>
         </ul>
       </div>
       <div>

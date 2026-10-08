@@ -18,24 +18,7 @@
 <script defer src="/site.js?v=20261008-1"></script>
 <style>
   /* Local SEO page — layout tweaks on top of the shared system */
-  .seo-stats {
-    display: grid;
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-    gap: clamp(32px, 5vw, 80px);
-    align-items: center;
-  }
-  @media (max-width: 860px) { .seo-stats { grid-template-columns: 1fr; } }
-  .seo-stats .stat-row { flex-direction: column; gap: clamp(22px, 3vw, 36px); }
-  .seo-stats .stat { border-left: 2px solid var(--amber); padding-left: clamp(16px, 2vw, 26px); }
-  .seo-stats .stat__num { color: #fff; }
-  .seo-stats .stat__num sup { font-size: 0.4em; }
-  .sources {
-    font-size: 0.78rem;
-    color: var(--muted-on-navy);
-    letter-spacing: 0.02em;
-    margin-top: clamp(22px, 3vw, 34px);
-    max-width: 52ch;
-  }
+  .seo-stats { max-width: 62ch; }
   .tool-split {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
@@ -72,14 +55,35 @@
       "image": "https://carsonpoore.com/brand/carson-headshot.png",
       "email": "carson@carsonpoore.com",
       "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
-      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" },
-        { "@type": "Country", "name": "United States" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
       ],
       "priceRange": "$1,200–$4,800/month",
-      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+      "founder": {
+        "@type": "Person",
+        "@id": "https://carsonpoore.com/about#carson",
+        "name": "Carson Poore",
+        "sameAs": [
+          "https://www.linkedin.com/in/carson-poore/"
+        ]
+      }
     },
     {
       "@type": "Service",
@@ -87,19 +91,41 @@
       "name": "Local SEO",
       "serviceType": "Local search engine optimization",
       "description": "Google Business Profile management, a steady review system, listings and NAP cleanup, and on-page local signals for Indianapolis-area small businesses, inside published monthly retainers.",
-      "provider": { "@id": "https://carsonpoore.com/#org" },
+      "provider": {
+        "@id": "https://carsonpoore.com/#org"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        }
       ],
       "url": "https://carsonpoore.com/services/local-seo"
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carsonpoore.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://carsonpoore.com/services" },
-        { "@type": "ListItem", "position": 3, "name": "Local SEO" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://carsonpoore.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://carsonpoore.com/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Local SEO"
+        }
       ]
     },
     {
@@ -108,27 +134,42 @@
         {
           "@type": "Question",
           "name": "How long does local SEO take to work?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Longer than anyone selling it wants to admit. If your profile has been neglected, basic fixes can move your map ranking within a few weeks. In a crowded category in a dense part of Indy, it takes months of steady signals. That’s one reason for our three-month minimum: we won’t charge you for a month in which nothing could honestly happen. Every month you get a plain-English report showing what moved." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Longer than anyone selling it wants to admit. If your profile has been neglected, basic fixes can move your map ranking within a few weeks. In a crowded category in a dense part of Indy, it takes months of steady signals. That’s one reason for our three-month minimum: we won’t charge you for a month in which nothing could honestly happen. Every month you get a plain-English report showing what moved."
+          }
         },
         {
           "@type": "Question",
           "name": "Do I need to pay for a Google Business Profile?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. The profile is free, and claiming it is free. If someone calls offering to “activate” or “secure” your listing for a fee, hang up. What costs money is the ongoing work of keeping it complete, photographed, posted, and reviewed, which is the work we do." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The profile is free, and claiming it is free. If someone calls offering to “activate” or “secure” your listing for a fee, hang up. What costs money is the ongoing work of keeping it complete, photographed, posted, and reviewed, which is the work we do."
+          }
         },
         {
           "@type": "Question",
           "name": "Should I do local SEO or Google Ads first?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Local SEO first, almost every time. It is the cheaper, more durable win, and ads perform better once your profile and website are ready to catch what the ads send. When you are ready for that step, Google Ads is its own service with the same published pricing." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Local SEO first, almost every time. It is the cheaper, more durable win, and ads perform better once your profile and website are ready to catch what the ads send. When you are ready for that step, Google Ads is its own service with the same published pricing."
+          }
         },
         {
           "@type": "Question",
           "name": "What if I have almost no reviews?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Then this matters more for you, not less. Profiles with 40 or more reviews averaging 4.5 stars appear in the map pack about 3.7 times more often than profiles with fewer than 10, per BrightLocal and WiserReview. The fix is a system, not begging: ask at the moment the customer is happiest, by text, with one link, every time. We set it up so it runs without you thinking about it." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Then this matters more for you, not less. Profiles with 40 or more reviews averaging 4.5 stars appear in the map pack about 3.7 times more often than profiles with fewer than 10, per BrightLocal. The fix is a system, not begging: ask at the moment the customer is happiest, by text, with one link, every time. We set it up so it runs without you thinking about it."
+          }
         },
         {
           "@type": "Question",
           "name": "Can I just do this myself?",
-          "acceptedAnswer": { "@type": "Answer", "text": "A lot of it, yes. We built a free 18-point self-check so you can: run it, fix what you can in an afternoon, and don’t pay anyone for that part. Owners usually hire us when the slow, repetitive pieces (listings cleanup, review replies, photos, monthly upkeep) stop happening because business picked up. Which is sort of the point." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A lot of it, yes. We built a free 18-point self-check so you can: run it, fix what you can in an afternoon, and don’t pay anyone for that part. Owners usually hire us when the slow, repetitive pieces (listings cleanup, review replies, photos, monthly upkeep) stop happening because business picked up. Which is sort of the point."
+          }
         }
       ]
     }
@@ -221,7 +262,6 @@
   <section class="section section--stone">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="eyebrow">Who this is for</span>
         <h2>Built for businesses people <em>drive to.</em></h2>
         <p class="sec-head__intro">Trades and home services. Restaurants. Shops, salons, studios, practices. If your customers live within twenty miles and the phone has gone quieter than your work deserves, this is usually the first thing we fix &mdash; the same starting point we recommend to every <a class="tlink" href="/for/local-businesses">local business we serve</a>.</p>
       </div>
@@ -254,7 +294,6 @@
   <section class="section">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="eyebrow">The work</span>
         <h2>What we actually do, <em>month by month.</em></h2>
         <p class="sec-head__intro">No mystery retainer. Four jobs, done steadily, are the whole game, and you&rsquo;ll see each one counted in a plain-English monthly report.</p>
       </div>
@@ -262,25 +301,21 @@
       <div class="svc-list mt-lg">
 
         <article class="svc reveal">
-          <span class="svc__idx">01 / Profile</span>
           <h3 class="svc__title">Your Google Business Profile, actually finished</h3>
           <p class="svc__body">Most profiles we open are half-done: no description, three photos from 2019, a category that&rsquo;s close but wrong. We fill every field. The most specific category Google offers, all 750 characters of description, your services listed, photos that look like your real work, a post or two a month. Your website link matches your site exactly, down to the trailing slash.</p>
         </article>
 
         <article class="svc reveal">
-          <span class="svc__idx">02 / Reviews</span>
           <h3 class="svc__title">A review system that runs itself</h3>
           <p class="svc__body">A steady flow of recent reviews now counts for more than a big old pile of them. So we build the ask into your workflow: when a job wraps or a table clears, the customer gets a text with one link. We draft replies to every review, good and rough, in your voice. No begging, no fake accounts, ever.</p>
         </article>
 
         <article class="svc reveal">
-          <span class="svc__idx">03 / Listings</span>
           <h3 class="svc__title">One name, address, and number, everywhere</h3>
           <p class="svc__body">Google cross-checks your business details against Yelp, Facebook, Bing, and Apple, and every mismatch quietly costs you trust. We hunt down each listing and make them identical. Honestly? This part is data entry. It&rsquo;s boring. We do it anyway, because Google notices.</p>
         </article>
 
         <article class="svc reveal">
-          <span class="svc__idx">04 / Website</span>
           <h3 class="svc__title">Local signals on your website</h3>
           <p class="svc__body">Your site should answer what people around here actually type: the service and the town, in plain words near the top of the page, with the cost question answered instead of dodged. We write those pages, put the city where it belongs, and add schema markup &mdash; code that tells Google what your business is, in Google&rsquo;s own language. It works in Carmel and Fishers the same way it works in Greenwood, Brownsburg, and Avon.</p>
         </article>
@@ -294,24 +329,8 @@
     <div class="wrap">
       <div class="seo-stats">
         <div class="reveal">
-          <span class="eyebrow">Why start here</span>
           <h2>The first marketing dollar <em>we&rsquo;d spend.</em></h2>
-          <p class="mt-md">The map pack is the set of three businesses Google shows above everything else. Landing there is worth real money: those businesses get 126% more traffic and 93% more calls, clicks, and direction requests than the results just below them, per BrightLocal&rsquo;s local SEO statistics. Reviews are how you earn the spot. And unlike an ad, a ranking doesn&rsquo;t stop the day you stop paying for it.</p>
-          <p class="sources">Sources: BrightLocal, Local SEO Statistics (brightlocal.com/learn/local-seo-statistics); review-volume figures from BrightLocal and WiserReview; visit-within-a-day figure from Google&rsquo;s consumer search research.</p>
-        </div>
-        <div class="stat-row reveal" data-delay="1">
-          <div class="stat">
-            <span class="stat__num">126%</span>
-            <span class="stat__lbl">More traffic for map-pack businesses vs. positions 4&ndash;10 &middot; BrightLocal</span>
-          </div>
-          <div class="stat">
-            <span class="stat__num">3.7&times;</span>
-            <span class="stat__lbl">More map-pack appearances with 40+ reviews at 4.5 stars vs. under 10 &middot; BrightLocal / WiserReview</span>
-          </div>
-          <div class="stat">
-            <span class="stat__num">76%</span>
-            <span class="stat__lbl">Of nearby mobile searches lead to a visit within a day &middot; Google research</span>
-          </div>
+          <p class="mt-md">The map pack is the set of three businesses Google shows above everything else. Landing there is worth real money: those businesses get 126% more traffic than the results just below them, per BrightLocal. Reviews are how you earn the spot. And unlike an ad, a ranking doesn&rsquo;t stop the day you stop paying for it.</p>
         </div>
       </div>
     </div>
@@ -321,7 +340,6 @@
   <section class="section">
     <div class="wrap wrap--narrow">
       <div class="sec-head reveal">
-        <span class="eyebrow">What it costs</span>
         <h2>Part of the retainer, <em>not an upsell.</em></h2>
       </div>
       <div class="cost-note reveal mt-md">
@@ -348,7 +366,7 @@
           </div>
         </div>
         <div class="tool-card reveal" data-delay="1">
-          <span class="label">Can Indy find you? &middot; 18 checks</span>
+          <span class="label">Can Indy Find You? &middot; 18 checks</span>
           <ul>
             <li><span>Google Business Profile completeness</span><span>6 checks</span></li>
             <li><span>Reviews &amp; replies</span><span>4 checks</span></li>
@@ -365,7 +383,6 @@
   <section class="section">
     <div class="wrap wrap--narrow">
       <div class="sec-head reveal">
-        <span class="eyebrow">Fair questions</span>
         <h2>What owners ask us <em>before they start.</em></h2>
       </div>
       <div class="faq mt-lg reveal">
@@ -383,14 +400,13 @@
         </details>
         <details>
           <summary>What if I have almost no reviews?</summary>
-          <p>Then this matters more for you, not less. Profiles with 40 or more reviews averaging 4.5 stars appear in the map pack about 3.7 times more often than profiles with fewer than 10, per BrightLocal and WiserReview. The fix is a system, not begging: ask at the moment the customer is happiest, by text, with one link, every time. We set it up so it runs without you thinking about it.</p>
+          <p>Then this matters more for you, not less. Profiles with 40 or more reviews averaging 4.5 stars appear in the map pack about 3.7 times more often than profiles with fewer than 10, per BrightLocal. The fix is a system, not begging: ask at the moment the customer is happiest, by text, with one link, every time. We set it up so it runs without you thinking about it.</p>
         </details>
         <details>
           <summary>Can I just do this myself?</summary>
           <p>A lot of it, yes. We built a free 18-point self-check so you can: run it, fix what you can in an afternoon, and don&rsquo;t pay anyone for that part. Owners usually hire us when the slow, repetitive pieces (listings cleanup, review replies, photos, monthly upkeep) stop happening because business picked up. Which is sort of the point.</p>
         </details>
       </div>
-      <p class="updated mt-lg">Last updated: October 2026</p>
     </div>
   </section>
 
@@ -398,7 +414,6 @@
   <section class="closing">
     <div class="closing__inner">
       <div class="reveal">
-        <span class="eyebrow">The next step</span>
         <h2>Somebody nearby is searching <em>right now.</em></h2>
         <p>Book a free call and we&rsquo;ll pull up your Google profile together, live. You&rsquo;ll leave with three specific fixes, whether or not you ever pay us a dollar.</p>
       </div>
@@ -416,7 +431,7 @@
       <div class="footer__brand">
         <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
         <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
-        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
       </div>
       <div>
         <h4>Services</h4>
@@ -444,11 +459,11 @@
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
-          <li><a href="/tools/checkup">The five-step check-up</a></li>
-          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
-          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
-          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
-          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+          <li><a href="/tools/checkup">The Five-Step Check-Up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy Find You?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI Opportunity Finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget Calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-Day Plan Starter</a></li>
         </ul>
       </div>
       <div>

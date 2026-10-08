@@ -24,11 +24,6 @@
   .next-reads { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 10px; }
   .next-reads li { margin: 0; padding: 0; }
   .next-reads a { font-weight: 600; }
-  .next-reads .next-reads__kind {
-    display: inline-block; min-width: 64px; margin-right: 10px;
-    font-size: 0.66rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--muted);
-  }
   .article .updated { margin-top: clamp(40px, 6vw, 60px); }
 </style>
 <script type="application/ld+json">
@@ -44,22 +39,47 @@
       "image": "https://carsonpoore.com/brand/carson-headshot.png",
       "email": "carson@carsonpoore.com",
       "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
-      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" },
-        { "@type": "Country", "name": "United States" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
       ],
       "priceRange": "$1,200–$4,800/month",
-      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+      "founder": {
+        "@type": "Person",
+        "@id": "https://carsonpoore.com/about#carson",
+        "name": "Carson Poore",
+        "sameAs": [
+          "https://www.linkedin.com/in/carson-poore/"
+        ]
+      }
     },
     {
       "@type": "Article",
       "@id": "https://carsonpoore.com/articles/fractional-cmo-cost#article",
       "headline": "What does a fractional CMO cost?",
       "description": "Market rates run $3,000–$15,000 a month for 10–20 hours a week. Ours are $1,200–$4,800, published. Where the money goes, and when it's not worth it.",
-      "author": { "@id": "https://carsonpoore.com/about#carson" },
-      "publisher": { "@id": "https://carsonpoore.com/#org" },
+      "author": {
+        "@id": "https://carsonpoore.com/about#carson"
+      },
+      "publisher": {
+        "@id": "https://carsonpoore.com/#org"
+      },
       "datePublished": "2026-10-08",
       "dateModified": "2026-10-08",
       "mainEntityOfPage": "https://carsonpoore.com/articles/fractional-cmo-cost"
@@ -72,7 +92,7 @@
           "name": "Is a fractional CMO worth it for a small business?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Usually, once you're past roughly $500K in revenue and marketing has outgrown guesswork. upGrowth's hiring guides put the trigger between $500K and $2M. Before product-market fit, no. At that stage a plan you run yourself beats any retainer, including ours."
+            "text": "Usually, once you're past roughly $500K in revenue and marketing has outgrown guesswork. Before product-market fit, no. At that stage a plan you run yourself beats any retainer, including ours."
           }
         },
         {
@@ -80,7 +100,7 @@
           "name": "How many hours does a fractional CMO work?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Published guides from MarketerHire and Kalungi put it at 10 to 20 hours a week per client. That's enough to own the strategy and direct whoever executes. It is not enough to also do the hands-on work, so ask how execution gets staffed before you sign anything."
+            "text": "It's part-time. That's enough to own the strategy and direct whoever executes. It is not enough to also do the hands-on work, so ask how execution gets staffed before you sign anything."
           }
         },
         {
@@ -96,7 +116,7 @@
           "name": "How much does a full-time CMO cost compared to a fractional one?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Full-time CMO compensation runs $175,000 to $300,000 and up before benefits, per MarketerHire and Chief Outsiders. Those same guides put fractional work at one-third to one-fifth of that cost. For most small businesses the real comparison is fractional versus nobody owning marketing at all."
+            "text": "A full-time CMO runs well into six figures before benefits, and published guides put fractional work at a fraction of that. For most small businesses the real comparison is fractional versus nobody owning marketing at all."
           }
         },
         {
@@ -104,7 +124,7 @@
           "name": "What do Carson Poore Consulting's fractional CMO retainers cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "$1,200, $2,400, or $4,800 a month, published on our pricing page, with a $3,000 one-time strategy engagement as the usual starting point. Three months minimum, then month to month. We cap the practice at eight clients total."
+            "text": "$1,200, $2,400, or $4,800 a month, published on our pricing page, with a $3,000 one-time strategy engagement as the usual starting point. Three months minimum, then month to month. We cap the practice at eight clients at a time."
           }
         }
       ]
@@ -112,9 +132,24 @@
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carsonpoore.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://carsonpoore.com/resources" },
-        { "@type": "ListItem", "position": 3, "name": "Fractional CMO cost", "item": "https://carsonpoore.com/articles/fractional-cmo-cost" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://carsonpoore.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Resources",
+          "item": "https://carsonpoore.com/resources"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Fractional CMO cost",
+          "item": "https://carsonpoore.com/articles/fractional-cmo-cost"
+        }
       ]
     }
   ]
@@ -187,7 +222,6 @@
       </nav>
       <div class="page-hero__grid">
         <div class="page-hero__copy">
-          <span class="eyebrow reveal">Articles</span>
           <h1 class="reveal mt-md" data-delay="1">What does a fractional CMO <em>cost?</em></h1>
           <p class="hero__sub reveal mt-md" data-delay="2">The market's published ranges, ours beside them, and a plain section on when you shouldn't hire one at all.</p>
         </div>
@@ -209,7 +243,7 @@
           <span class="updated">Last updated: October 2026</span>
         </div>
 
-        <p class="answer reveal" data-delay="1">Most fractional CMOs charge <strong>$3,000–$15,000 a month</strong> for 10–20 hours a week, per the published rate guides at MarketerHire, Chief Outsiders, and Kalungi. Hourly engagements run $150–$350. Our own retainers at Carson Poore Consulting are <strong>$1,200, $2,400, or $4,800 a month</strong> — published, three months minimum, then month to month.</p>
+        <p class="answer reveal" data-delay="1">Most fractional CMOs charge <strong>$3,000–$15,000 a month</strong> for 10–20 hours a week, per the published rate guides at MarketerHire, Chief Outsiders, and Kalungi. Our own retainers at Carson Poore Consulting are <strong>$1,200, $2,400, or $4,800 a month</strong> — published, three months minimum, then month to month.</p>
 
         <p>That's the short version. The longer version is below, including the one question that matters more than price: whether you should buy this at all.</p>
 
@@ -217,11 +251,11 @@
 
         <p>Three things set the price: hours, seniority, and who the provider was built to serve.</p>
 
-        <p>Hours first. The standard engagement is 10 to 20 hours a week, a range MarketerHire and Kalungi both publish in their own guides. Fewer hours, lower retainer. Twenty hours a week of a senior operator's time is real money anywhere you buy it.</p>
+        <p>Hours first. The standard engagement is part-time, and fewer hours means a lower retainer. A senior operator's time is real money anywhere you buy it.</p>
 
-        <p>Seniority second. Someone who has run marketing through two growth stages charges more than someone two years out of an agency job, which is why hourly rates in those same guides stretch all the way from $150 to $350.</p>
+        <p>Seniority second. Someone who has run marketing through two growth stages charges more than someone two years out of an agency job,, which is why rates in those same guides stretch so wide.</p>
 
-        <p>The third one is the part nobody tells you. The market's price floor was set by startups. Nearly every firm ranking for this question serves Series A and B companies, funded, with a two-to-six-person marketing team already in place for the CMO to direct. A $5,000-a-month floor makes sense for that buyer. It makes much less sense for a $900K plumbing company in Greenwood or a two-founder software business that hasn't raised a dime.</p>
+        <p>The third one is the part nobody tells you. The market's price floor was set by startups. Nearly every firm ranking for this question serves Series A and B companies, funded, with a two-to-six-person marketing team already in place for the CMO to direct. A premium price floor makes sense for that buyer. It makes much less sense for a $900K plumbing company in Greenwood or a two-founder software business that hasn't raised a dime.</p>
 
         <p>We think most businesses under $2M in revenue get quoted prices from a market that wasn't built for them. That's an opinion. The table below is not.</p>
 
@@ -239,7 +273,7 @@
           <tbody>
             <tr>
               <th scope="row">Typical cost</th>
-              <td>$3,000–$15,000/mo (MarketerHire, Chief Outsiders, Kalungi)</td>
+              <td>A monthly retainer, in the range above</td>
               <td>Rarely published. Most firms quote after a sales call.</td>
               <td>$175K–$300K+ a year before benefits (MarketerHire)</td>
             </tr>
@@ -251,7 +285,7 @@
             </tr>
             <tr>
               <th scope="row">Hours on your business</th>
-              <td>10–20 a week (published guides)</td>
+              <td>Part-time, a set number of hours each week</td>
               <td>Varies by retainer; attention is split across accounts</td>
               <td>40+</td>
             </tr>
@@ -263,25 +297,24 @@
             </tr>
             <tr>
               <th scope="row">Fits best when</th>
-              <td>$500K–$2M+ revenue and a strategy gap (upGrowth)</td>
+              <td>Revenue is past the guesswork stage and there's a strategy gap</td>
               <td>You've proven a channel and need hands</td>
-              <td>$5M+ with a team to lead</td>
+              <td>A large business with a team to lead</td>
             </tr>
           </tbody>
         </table>
-        <p class="src">Sources: published rate guides from MarketerHire, Chief Outsiders, and Kalungi; upGrowth's fractional-CMO hiring guides. Ranges current as of October 2026.</p>
 
         <p>You're buying clarity from a fractional CMO and capacity from an agency. That's the frame nearly every comparison piece lands on, and it's roughly right. A full-time hire gets you both, at a salary most small businesses can't carry. We wrote up the agency comparison in full, trade-offs included, in <a href="/articles/fractional-cmo-vs-marketing-agency">fractional CMO vs. marketing agency</a>.</p>
 
-        <p>One more number for context. The guides above repeat a savings pitch: fractional runs one-third to one-fifth the cost of the full-time equivalent, which MarketerHire frames as $150K–$250K saved a year. True as far as it goes. But the savings math assumes you were ever going to pay a $200,000 marketing executive, and if you're reading this, you probably weren't. Compare against what you'd actually do instead, which is usually a junior hire or an agency retainer. Or nothing.</p>
+        <p>The guides above repeat a savings pitch: fractional costs a fraction of the full-time equivalent. True as far as it goes. But the savings math assumes you were ever going to pay a six-figure marketing executive, and if you're reading this, you probably weren't. Compare against what you'd actually do instead, which is usually a junior hire or an agency retainer. Or nothing.</p>
 
         <h2>Where our pricing sits</h2>
 
-        <p>Our fractional CMO work runs through the <a href="/services/coaching">coaching &amp; growth practice</a>. The retainers are $1,200, $2,400, or $4,800 a month, depending on scope. A one-time strategy engagement is $3,000. Three months minimum, then month to month. We take eight clients total, and if you ever leave, you keep everything: your site, your Google Business Profile, your ad accounts, and your data. Full terms are on the <a href="/investment">pricing page</a>.</p>
+        <p>Our fractional CMO work runs through the <a href="/services/coaching">coaching &amp; growth practice</a>. The retainers are $1,200, $2,400, or $4,800 a month, depending on scope. A one-time strategy engagement is $3,000, and if you move to a retainer afterward, half that fee ($1,500) is credited toward it. Three months minimum, then month to month. We take eight clients at a time, and if you ever leave, you keep everything: your site, your Google Business Profile, your ad accounts, and your data. Full terms are on the <a href="/investment">pricing page</a>.</p>
 
         <p>Those numbers sit under the market's published floor on purpose. We built for the segment the $5,000-and-up firms skip: owner-run companies and early-stage founders, with a reduced rate for nonprofits. And the people writing your plan are the same team building the automation and the ad account, so you're not paying a strategist's rate for work that's really coordination.</p>
 
-        <p>One thing said plainly: we're not a neutral narrator here. This article prices the thing we sell. That's exactly why every market number above carries a name you can go check.</p>
+        <p>One thing said plainly: we're not a neutral narrator here. This article prices the thing we sell. That's exactly why the market figures above say where they come from.</p>
 
         <h2>When a fractional CMO isn't worth it</h2>
 
@@ -291,18 +324,18 @@
 
         <p>And there's a structural failure worth knowing before you shop. Automate the Journey, whose piece on this question ranks for a reason, names the pattern: a fractional CMO "gives you the plan but doesn't run the work." You end up with a strategy deck and nobody to execute it. Ask any candidate who implements, by name, before you sign. Our answer is that the same team does both. Other good answers exist. No answer is a red flag.</p>
 
-        <p>Last: if $1,200 a month would strain the business, you're too early for any of this. Our free <a href="/tools/marketing-budget">marketing budget calculator</a> will give you a defensible number to grow into. No email required.</p>
+        <p>Last: if $1,200 a month would strain the business, you're too early for any of this. Our free <a href="/tools/marketing-budget">Budget Calculator</a> will give you a defensible number to grow into. No email required.</p>
 
         <h2>Questions people ask next</h2>
 
         <div class="faq reveal">
           <details>
             <summary>Is a fractional CMO worth it for a small business?</summary>
-            <p>Usually, once you're past roughly $500K in revenue and marketing has outgrown guesswork. upGrowth's hiring guides put the trigger between $500K and $2M. Before product-market fit, no. At that stage a plan you run yourself beats any retainer, including ours.</p>
+            <p>Usually, once you're past roughly $500K in revenue and marketing has outgrown guesswork. Before product-market fit, no. At that stage a plan you run yourself beats any retainer, including ours.</p>
           </details>
           <details>
             <summary>How many hours does a fractional CMO work?</summary>
-            <p>Published guides from MarketerHire and Kalungi put it at 10 to 20 hours a week per client. That's enough to own the strategy and direct whoever executes. It is not enough to also do the hands-on work, so ask how execution gets staffed before you sign anything.</p>
+            <p>It's part-time. That's enough to own the strategy and direct whoever executes. It is not enough to also do the hands-on work, so ask how execution gets staffed before you sign anything.</p>
           </details>
           <details>
             <summary>What does a fractional CMO actually do?</summary>
@@ -310,24 +343,22 @@
           </details>
           <details>
             <summary>How much does a full-time CMO cost compared to a fractional one?</summary>
-            <p>Full-time CMO compensation runs $175,000 to $300,000 and up before benefits, per MarketerHire and Chief Outsiders. Those same guides put fractional work at one-third to one-fifth of that cost. For most small businesses the real comparison is fractional versus nobody owning marketing at all.</p>
+            <p>A full-time CMO runs well into six figures before benefits, and published guides put fractional work at a fraction of that. For most small businesses the real comparison is fractional versus nobody owning marketing at all.</p>
           </details>
           <details>
             <summary>What do Carson Poore Consulting's fractional CMO retainers cost?</summary>
-            <p>$1,200, $2,400, or $4,800 a month, published on our pricing page, with a $3,000 one-time strategy engagement as the usual starting point. Three months minimum, then month to month. We cap the practice at eight clients total.</p>
+            <p>$1,200, $2,400, or $4,800 a month, published on our pricing page, with a $3,000 one-time strategy engagement as the usual starting point. Three months minimum, then month to month. We cap the practice at eight clients at a time.</p>
           </details>
         </div>
 
         <div class="article-note">
           <strong>Keep reading</strong>
           <ul class="next-reads">
-            <li><span class="next-reads__kind">Article</span><a href="/articles/fractional-cmo-vs-marketing-agency">Fractional CMO vs. marketing agency</a></li>
-            <li><span class="next-reads__kind">Service</span><a href="/services/coaching">Coaching &amp; growth: our fractional CMO practice</a></li>
-            <li><span class="next-reads__kind">Tool</span><a href="/tools/marketing-budget">Marketing budget calculator (free, no email)</a></li>
+            <li><a href="/articles/fractional-cmo-vs-marketing-agency">Fractional CMO vs. marketing agency</a></li>
+            <li><a href="/services/coaching">Coaching &amp; growth: our fractional CMO practice</a></li>
+            <li><a href="/tools/marketing-budget">Budget Calculator (free, no email)</a></li>
           </ul>
         </div>
-
-        <p class="updated">We re-check the market ranges when the sources update theirs.</p>
 
       </article>
     </div>
@@ -337,7 +368,6 @@
   <section class="closing">
     <div class="closing__inner">
       <div class="reveal">
-        <span class="eyebrow">For founders and owners</span>
         <h2>Want the plan and the hands on <em>one team?</em></h2>
         <p>A 30-minute call. We'll tell you which tier fits, or that you're too early and what to do in the meantime. Both answers are free.</p>
       </div>
@@ -355,7 +385,7 @@
       <div class="footer__brand">
         <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
         <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
-        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
       </div>
       <div>
         <h4>Services</h4>
@@ -383,11 +413,11 @@
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
-          <li><a href="/tools/checkup">The five-step check-up</a></li>
-          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
-          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
-          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
-          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+          <li><a href="/tools/checkup">The Five-Step Check-Up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy Find You?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI Opportunity Finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget Calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-Day Plan Starter</a></li>
         </ul>
       </div>
       <div>

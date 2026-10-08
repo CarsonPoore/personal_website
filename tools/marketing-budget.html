@@ -66,14 +66,35 @@
       "image": "https://carsonpoore.com/brand/carson-headshot.png",
       "email": "carson@carsonpoore.com",
       "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
-      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" },
-        { "@type": "Country", "name": "United States" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
       ],
       "priceRange": "$1,200–$4,800/month",
-      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+      "founder": {
+        "@type": "Person",
+        "@id": "https://carsonpoore.com/about#carson",
+        "name": "Carson Poore",
+        "sameAs": [
+          "https://www.linkedin.com/in/carson-poore/"
+        ]
+      }
     },
     {
       "@type": "WebApplication",
@@ -84,15 +105,35 @@
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web",
       "isAccessibleForFree": true,
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      "provider": { "@id": "https://carsonpoore.com/#org" }
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "provider": {
+        "@id": "https://carsonpoore.com/#org"
+      }
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carsonpoore.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://carsonpoore.com/resources" },
-        { "@type": "ListItem", "position": 3, "name": "Marketing budget calculator" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://carsonpoore.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Resources",
+          "item": "https://carsonpoore.com/resources"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Budget Calculator"
+        }
       ]
     }
   ]
@@ -160,11 +201,10 @@
         <ol>
           <li><a href="/">Home</a></li>
           <li><a href="/resources">Resources</a></li>
-          <li aria-current="page">Marketing budget calculator</li>
+          <li aria-current="page">Budget Calculator</li>
         </ol>
       </nav>
       <div class="page-hero__copy">
-        <span class="eyebrow reveal">Free tool</span>
         <h1 class="reveal mt-md" data-delay="1">What should marketing <em>cost</em>?</h1>
         <p class="hero__sub reveal mt-md" data-delay="2">Type in your revenue and pick your stage. You get a monthly range with the math written out, so you can check it yourself. Free. No email. No login. Nothing you type leaves this page.</p>
       </div>
@@ -205,12 +245,11 @@
 
               <div class="check-row" style="border-bottom:0;padding:0;">
                 <input type="checkbox" id="mb-np" />
-                <label for="mb-np">We&rsquo;re a nonprofit<span class="check-row__why">Swaps in the notes that apply to nonprofits, including the Google Ad Grant.</span></label>
+                <label for="mb-np">We&rsquo;re a nonprofit</label>
               </div>
 
               <div class="mb-actions">
                 <button type="submit" class="btn btn--primary">Show my range <span class="arr">→</span></button>
-                <span class="tool-note">It also updates as you type.</span>
               </div>
             </form>
 
@@ -226,13 +265,11 @@
   <section class="section section--stone sources">
     <div class="wrap wrap--narrow">
       <div class="sec-head">
-        <span class="eyebrow reveal">Sources</span>
         <h2 class="reveal" data-delay="1">Where the percentages come from</h2>
       </div>
       <div class="mt-lg">
         <p class="reveal"><cite>The anchor is SBA guidance.</cite> The U.S. Small Business Administration recommends that businesses with under $5 million in annual revenue put 7&ndash;8% of gross revenue into marketing. Every result above is compared against it.</p>
-        <p class="reveal">Gartner&rsquo;s 2025 CMO Spend Survey puts average marketing spend at 7.7% of revenue. The companies in that survey skew large, so we treat it as context and don&rsquo;t build on it. It lands inside the SBA range, which is useful to know.</p>
-        <p class="reveal">The stage bands are ours: steady is 5&ndash;7%, growing is 8&ndash;10%, new or turnaround is 10&ndash;12%. That&rsquo;s a judgment call set around the SBA anchor, not a published standard. Other guides run wider, from about 4% for mature businesses up to 20% for early-stage ones (mercury.com, truefuturemedia.com, hawksem.com).</p>
+        <p class="reveal">The stage bands are ours: steady is 5&ndash;7%, growing is 8&ndash;10%, new or turnaround is 10&ndash;12%. That&rsquo;s a judgment call set around the SBA anchor, not a published standard.</p>
         <p class="reveal">What counts as marketing? All of it. Our fee if you hire us, ad spend, software, photography, printing, sponsorships, and the slice of someone&rsquo;s salary spent on it. This part is boring. Do it anyway, because owners tend to compare a retainer against a budget that never included the other half.</p>
         <p class="reveal">One opinion: we think most small businesses should start at the low end of their range and move up only when the calls and booked jobs show it&rsquo;s paying back.</p>
       </div>
@@ -243,7 +280,6 @@
   <section class="section">
     <div class="wrap wrap--narrow">
       <div class="sec-head">
-        <span class="eyebrow reveal">Keep going</span>
         <h2 class="reveal" data-delay="1">Two places to take the number</h2>
       </div>
       <div class="read-next">
@@ -258,7 +294,6 @@
           <a class="tlink" href="/investment">See the pricing page <span aria-hidden="true">→</span></a>
         </div>
       </div>
-      <p class="updated mt-lg">Last updated: October 2026</p>
     </div>
   </section>
 
@@ -266,7 +301,6 @@
   <section class="closing">
     <div class="closing__inner">
       <div class="reveal">
-        <span class="eyebrow">The next step</span>
         <h2>The number takes a minute. <em>Where it goes</em> is the work.</h2>
         <p>Bring your range to a free 30-minute call and we&rsquo;ll talk through a first-pass split. If the honest answer is &ldquo;spend less, or do it yourself for now,&rdquo; we&rsquo;ll say so.</p>
       </div>
@@ -284,7 +318,7 @@
       <div class="footer__brand">
         <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
         <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
-        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
       </div>
       <div>
         <h4>Services</h4>
@@ -312,11 +346,11 @@
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
-          <li><a href="/tools/checkup">The five-step check-up</a></li>
-          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
-          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
-          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
-          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+          <li><a href="/tools/checkup">The Five-Step Check-Up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy Find You?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI Opportunity Finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget Calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-Day Plan Starter</a></li>
         </ul>
       </div>
       <div>

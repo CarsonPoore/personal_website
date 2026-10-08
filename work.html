@@ -75,14 +75,35 @@
       "image": "https://carsonpoore.com/brand/carson-headshot.png",
       "email": "carson@carsonpoore.com",
       "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
-      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" },
-        { "@type": "Country", "name": "United States" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
       ],
       "priceRange": "$1,200–$4,800/month",
-      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+      "founder": {
+        "@type": "Person",
+        "@id": "https://carsonpoore.com/about#carson",
+        "name": "Carson Poore",
+        "sameAs": [
+          "https://www.linkedin.com/in/carson-poore/"
+        ]
+      }
     },
     {
       "@type": "WebPage",
@@ -92,8 +113,12 @@
       "description": "Client write-ups are coming, and we won't invent any. Until then, talk to a current client on a free call, or judge our thinking by our free tools and articles.",
       "inLanguage": "en-US",
       "dateModified": "2026-10-08",
-      "about": { "@id": "https://carsonpoore.com/#org" },
-      "publisher": { "@id": "https://carsonpoore.com/#org" }
+      "about": {
+        "@id": "https://carsonpoore.com/#org"
+      },
+      "publisher": {
+        "@id": "https://carsonpoore.com/#org"
+      }
     }
   ]
 }
@@ -159,8 +184,7 @@
     <div class="wrap">
       <div class="page-hero__grid">
         <div class="page-hero__copy">
-          <span class="eyebrow reveal">Work</span>
-          <h1 class="reveal mt-md" data-delay="1">Proof, <em>not promises.</em></h1>
+          <h1 class="reveal" data-delay="1">Proof, <em>not promises.</em></h1>
           <p class="hero__sub reveal mt-md" data-delay="2">No logo wall, no made-up numbers. The client write-ups are still in draft, and until they&rsquo;re done you can talk to a client yourself.</p>
         </div>
         <div class="motion-frame motion-frame--hero page-hero__motion reveal" data-delay="2">
@@ -174,10 +198,9 @@
   <section class="section section--tight" style="padding-top: clamp(40px, 5vw, 72px);">
     <div class="wrap">
       <div class="holding wk-holding reveal">
-        <p class="label">Write-ups coming</p>
-        <h2 class="mt-md">We&rsquo;re writing these up now.</h2>
+        <h2>We&rsquo;re writing these up now.</h2>
         <p class="mt-md">Each story waits for the client&rsquo;s okay and for a result we can date and show our math on. That takes longer than posting a quote. It&rsquo;s the only version worth posting.</p>
-        <p class="mt-md">Rather hear it straight from a client? Ask on your discovery call and we&rsquo;ll connect you. We take eight clients total, so it&rsquo;s a short list and a real conversation. Ask what the first three months were like. Ask what they&rsquo;d change.</p>
+        <p class="mt-md">Rather hear it straight from a client? Ask on your discovery call and we&rsquo;ll connect you. We take eight clients at a time, so it&rsquo;s a short list and a real conversation. Ask what the first three months were like. Ask what they&rsquo;d change.</p>
         <div class="row-cta mt-lg" style="justify-content: center;">
           <a href="/contact" class="btn btn--primary">Book a call, then ask <span class="arr">→</span></a>
         </div>
@@ -190,8 +213,7 @@
     <div class="wrap">
       <div class="wk-rules-grid">
         <div class="reveal">
-          <span class="eyebrow">The standard</span>
-          <h2 class="mt-md">What a write-up has to <em>carry.</em></h2>
+          <h2>What a write-up has to <em>carry.</em></h2>
           <p class="wk-opinion">We think a case study with no named client and no dated number is an ad. So ours won&rsquo;t run without both.</p>
         </div>
         <ol class="wk-rules reveal" data-delay="1">
@@ -208,15 +230,14 @@
   <section class="section section--stone">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="eyebrow">In the meantime</span>
         <h2>See how we think.</h2>
-        <p class="sec-head__intro">Our free tools and articles are the working proof for now. Nothing on them is gated, and any statistic carries its source right beside it. We built the tools ourselves, so they also show how our technical practice works.</p>
+        <p class="sec-head__intro">Our free tools and articles are the working proof for now. Nothing on them is gated. We built the tools ourselves, so they also show how our technical practice works.</p>
       </div>
 
       <div class="cards wk-cards mt-lg">
         <article class="card reveal">
           <span class="label">Free tool</span>
-          <h3>The five-step check-up</h3>
+          <h3>The Five-Step Check-Up</h3>
           <p>Ten questions, scored on the spot, no email asked. It names which of our five steps is your weakest link.</p>
           <a class="tlink" href="/tools/checkup">Score your business <span class="arr">→</span></a>
         </article>
@@ -235,7 +256,6 @@
       </div>
 
       <p class="wk-admit reveal">Honest answer: that&rsquo;s a thin substitute for client results, and we know it. It&rsquo;s the strongest proof we can show you today without making something up.</p>
-      <p class="updated mt-lg">Last updated: October 2026</p>
     </div>
   </section>
 
@@ -243,7 +263,6 @@
   <section class="closing">
     <div class="closing__inner">
       <div class="reveal">
-        <span class="eyebrow">The next step</span>
         <h2>Ask a <em>client</em> yourself.</h2>
         <p>A free 30-minute call. Bring the questions you&rsquo;d put to a stranger before hiring one. We&rsquo;ll answer them, then set up a talk with a current client so you can ask theirs too.</p>
       </div>
@@ -261,7 +280,7 @@
       <div class="footer__brand">
         <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
         <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
-        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
       </div>
       <div>
         <h4>Services</h4>
@@ -289,11 +308,11 @@
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
-          <li><a href="/tools/checkup">The five-step check-up</a></li>
-          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
-          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
-          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
-          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+          <li><a href="/tools/checkup">The Five-Step Check-Up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy Find You?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI Opportunity Finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget Calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-Day Plan Starter</a></li>
         </ul>
       </div>
       <div>

@@ -48,14 +48,35 @@
       "image": "https://carsonpoore.com/brand/carson-headshot.png",
       "email": "carson@carsonpoore.com",
       "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
-      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" },
-        { "@type": "Country", "name": "United States" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
       ],
       "priceRange": "$1,200–$4,800/month",
-      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+      "founder": {
+        "@type": "Person",
+        "@id": "https://carsonpoore.com/about#carson",
+        "name": "Carson Poore",
+        "sameAs": [
+          "https://www.linkedin.com/in/carson-poore/"
+        ]
+      }
     },
     {
       "@type": "WebPage",
@@ -63,9 +84,15 @@
       "url": "https://carsonpoore.com/investment",
       "name": "Pricing: what the work costs · Carson Poore Consulting",
       "description": "Published prices, because you shouldn't book a call to hear a number: $1,200, $2,400, or $4,800 a month, a $3,000 strategy engagement, a nonprofit rate.",
-      "isPartOf": { "@id": "https://carsonpoore.com/#website" },
-      "about": { "@id": "https://carsonpoore.com/#org" },
-      "mainEntity": { "@id": "https://carsonpoore.com/investment#catalog" },
+      "isPartOf": {
+        "@id": "https://carsonpoore.com/#website"
+      },
+      "about": {
+        "@id": "https://carsonpoore.com/#org"
+      },
+      "mainEntity": {
+        "@id": "https://carsonpoore.com/investment#catalog"
+      },
       "dateModified": "2026-10-08"
     },
     {
@@ -73,47 +100,72 @@
       "@id": "https://carsonpoore.com/investment#catalog",
       "name": "Carson Poore Consulting pricing",
       "url": "https://carsonpoore.com/investment",
-      "provider": { "@id": "https://carsonpoore.com/#org" },
+      "provider": {
+        "@id": "https://carsonpoore.com/#org"
+      },
       "itemListElement": [
         {
           "@type": "Offer",
           "@id": "https://carsonpoore.com/investment#lane",
           "name": "Lane",
-          "description": "Monthly partnership, $1,200 /month. One channel, run properly: full strategy and positioning direction, one executed channel of your choice, a monthly strategy call, and a monthly performance report. Three-month minimum, then month to month. We take on eight retainer clients at a time.",
+          "description": "Monthly partnership, $1,200 /month. One channel, run properly: full strategy and positioning direction, one executed channel of your choice, a monthly strategy call, and a monthly performance report. Three-month minimum, then month to month. We take on eight clients at a time, strategy and project clients included.",
           "price": "1200",
           "priceCurrency": "USD",
-          "priceSpecification": { "@type": "UnitPriceSpecification", "price": "1200", "priceCurrency": "USD", "unitText": "MONTH" },
-          "seller": { "@id": "https://carsonpoore.com/#org" }
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "1200",
+            "priceCurrency": "USD",
+            "unitText": "MONTH"
+          },
+          "seller": {
+            "@id": "https://carsonpoore.com/#org"
+          }
         },
         {
           "@type": "Offer",
           "@id": "https://carsonpoore.com/investment#system",
           "name": "System",
-          "description": "Monthly partnership, $2,400 /month. Your marketing, running as one thing: everything in Lane, plus multi-channel execution, marketing systems and automation, twice-monthly strategy calls, and a quarterly strategy reset. Three-month minimum, then month to month. We take on eight retainer clients at a time.",
+          "description": "Monthly partnership, $2,400 /month. Your marketing, running as one thing: everything in Lane, plus multi-channel execution, marketing systems and automation, twice-monthly strategy calls, and a quarterly strategy reset. Three-month minimum, then month to month. We take on eight clients at a time, strategy and project clients included.",
           "price": "2400",
           "priceCurrency": "USD",
-          "priceSpecification": { "@type": "UnitPriceSpecification", "price": "2400", "priceCurrency": "USD", "unitText": "MONTH" },
-          "seller": { "@id": "https://carsonpoore.com/#org" }
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "2400",
+            "priceCurrency": "USD",
+            "unitText": "MONTH"
+          },
+          "seller": {
+            "@id": "https://carsonpoore.com/#org"
+          }
         },
         {
           "@type": "Offer",
           "@id": "https://carsonpoore.com/investment#partner",
           "name": "Partner",
-          "description": "Monthly partnership, $4,800 /month. Full ownership of the marketing function: everything in System, plus dedicated team capacity, weekly access and priority turnaround, and project work at partner rates. Three-month minimum, then month to month. We take on eight retainer clients at a time.",
+          "description": "Monthly partnership, $4,800 /month. Full ownership of the marketing function: everything in System, plus dedicated team capacity, weekly access and priority turnaround, and project work at partner rates. Three-month minimum, then month to month. We take on eight clients at a time, strategy and project clients included.",
           "price": "4800",
           "priceCurrency": "USD",
-          "priceSpecification": { "@type": "UnitPriceSpecification", "price": "4800", "priceCurrency": "USD", "unitText": "MONTH" },
-          "seller": { "@id": "https://carsonpoore.com/#org" }
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "4800",
+            "priceCurrency": "USD",
+            "unitText": "MONTH"
+          },
+          "seller": {
+            "@id": "https://carsonpoore.com/#org"
+          }
         },
         {
           "@type": "Offer",
           "@id": "https://carsonpoore.com/investment#strategy",
           "name": "Strategy engagement",
-          "description": "Strategy engagement, $3,000 one time. A standalone engagement with no monthly commitment, so the three-month minimum does not apply: a defined best-fit customer, positioning and messaging, a structured and priced core offer, and a prioritized 90-day plan with a live walkthrough. Retainer work stays capped at eight clients at a time.",
+          "description": "Strategy engagement, $3,000 one time. A standalone engagement with no monthly commitment, so the three-month minimum does not apply: a defined best-fit customer, positioning and messaging, a structured and priced core offer, and a prioritized 90-day plan with a live walkthrough. Retainer work stays capped at eight clients at a time. Half ($1,500) is credited toward a retainer if you continue.",
           "price": "3000",
           "priceCurrency": "USD",
           "url": "https://carsonpoore.com/services/strategy",
-          "seller": { "@id": "https://carsonpoore.com/#org" }
+          "seller": {
+            "@id": "https://carsonpoore.com/#org"
+          }
         }
       ]
     }
@@ -180,10 +232,9 @@
     <div class="wrap">
       <div class="page-hero__grid">
         <div class="page-hero__copy">
-          <span class="eyebrow reveal">Pricing</span>
-          <h1 class="reveal mt-md" data-delay="1">Real numbers, <em>right here.</em></h1>
+          <h1 class="reveal" data-delay="1">Real numbers, <em>right here.</em></h1>
           <p class="hero__sub reveal mt-md" data-delay="2">Most agencies make you book a call just to find out if you can afford them. We print the numbers. Here&rsquo;s everything: three monthly partnerships, a one-time strategy engagement, and project work quoted on its own.</p>
-          <p class="hero__pointer reveal mt-md" data-delay="3">Want a sanity check before you look at tiers? <a href="/tools/marketing-budget" class="tlink">Try the free budget calculator <span class="arr">→</span></a></p>
+          <p class="hero__pointer reveal mt-md" data-delay="3">Want a sanity check before you look at tiers? <a href="/tools/marketing-budget" class="tlink">Try the free Budget Calculator <span class="arr">→</span></a></p>
         </div>
         <div class="motion-frame motion-frame--hero page-hero__motion reveal" data-delay="2">
           <video class="motion-loop" muted loop playsinline preload="none" poster="/media/motion/tier-stack.jpg" width="960" height="800" aria-hidden="true"><source src="/media/motion/tier-stack.webm" type="video/webm" /><source src="/media/motion/tier-stack.mp4" type="video/mp4" /></video>
@@ -201,7 +252,7 @@
           <h2 class="reveal mt-md" data-delay="1">Pick how much of it you want <em>off your plate.</em></h2>
         </div>
         <p class="sec-head__intro reveal" data-delay="2">
-          Every tier includes the strategy. What changes is how much of the doing runs through us. We take on eight retainer clients at a time, because eight is as many as we can know well.<video class="motion-loop b-loop b-eight-seats" muted loop playsinline preload="none" width="200" height="28" poster="/media/motion/b-eight-seats.png" data-webm="/media/motion/b-eight-seats.webm" data-hevc="/media/motion/b-eight-seats-hevc.mp4" aria-hidden="true"></video>
+          Every tier includes the strategy. What changes is how much of the doing runs through us. We take on eight clients at a time, strategy and project work included, because eight is as many as we can know well.<video class="motion-loop b-loop b-eight-seats" muted loop playsinline preload="none" width="200" height="28" poster="/media/motion/b-eight-seats.png" data-webm="/media/motion/b-eight-seats.webm" data-hevc="/media/motion/b-eight-seats-hevc.mp4" aria-hidden="true"></video>
         </p>
       </div>
 
@@ -279,7 +330,6 @@
       <!-- WHAT EVERY RETAINER INCLUDES -->
       <div class="every-tier reveal">
         <div class="every-tier__head">
-          <span class="eyebrow">In every tier</span>
           <p class="every-tier__title">What every retainer includes.</p>
         </div>
         <ul class="every-tier__list">
@@ -297,7 +347,6 @@
     <div class="wrap">
       <div class="practice-home">
         <div>
-          <span class="eyebrow reveal">The other practices</span>
           <h2 class="reveal mt-md" data-delay="1">Where coaching and technical work <em>live.</em></h2>
         </div>
         <div class="practice-home__body reveal" data-delay="2">
@@ -355,7 +404,7 @@
         </li>
       </ol>
 
-      <p class="tier-note reveal" style="max-width: 60ch;">It stands on its own. You can take the plan and run it yourself, and that&rsquo;s a win too. <a href="/services/strategy" class="tlink">What the strategy engagement covers</a></p>
+      <p class="reveal" style="max-width: 60ch; margin-top: 28px;">It stands on its own. You can take the plan and run it yourself, and that&rsquo;s a win too. If you move into a monthly partnership afterward, half of it ($1,500) is credited toward your retainer. <a href="/services/strategy" class="tlink">What the strategy engagement covers</a></p>
     </div>
   </section>
 
@@ -364,7 +413,6 @@
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <span class="eyebrow reveal">Project work</span>
           <h2 class="reveal mt-md" data-delay="1">Bigger builds, quoted <em>on their own.</em></h2>
         </div>
         <p class="sec-head__intro reveal" data-delay="2">
@@ -400,14 +448,12 @@
     <p class="nonprofit-note reveal">
       Nonprofit or mission-driven business? We take on a few each quarter at a reduced rate. <a href="/contact" class="tlink">Let&rsquo;s talk.</a>
     </p>
-    <p class="updated mt-lg">Last updated: October 2026</p>
   </section>
 
   <!-- CLOSING CTA: full-bleed cobalt band -->
   <section class="closing">
     <div class="closing__inner">
       <div class="reveal">
-        <span class="eyebrow">Not sure where you&rsquo;d land?</span>
         <h2>That&rsquo;s exactly what a <em>call is for.</em></h2>
         <p>Thirty minutes, a real conversation about your business, and an honest answer about which tier fits. No pitch, no pressure.</p>
       </div>
@@ -425,7 +471,7 @@
       <div class="footer__brand">
         <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
         <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
-        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
       </div>
       <div>
         <h4>Services</h4>
@@ -453,11 +499,11 @@
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
-          <li><a href="/tools/checkup">The five-step check-up</a></li>
-          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
-          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
-          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
-          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+          <li><a href="/tools/checkup">The Five-Step Check-Up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy Find You?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI Opportunity Finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget Calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-Day Plan Starter</a></li>
         </ul>
       </div>
       <div>

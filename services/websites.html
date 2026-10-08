@@ -58,14 +58,6 @@
     border-radius: var(--r-3);
     padding: clamp(26px, 4vw, 44px);
   }
-  .keep-card__foot { margin-top: 18px; color: var(--muted-on-navy); font-size: 0.85rem; }
-  .burn-source {
-    font-size: 0.78rem;
-    color: var(--muted-on-navy);
-    letter-spacing: 0.02em;
-    margin-top: clamp(20px, 3vw, 30px);
-    max-width: 52ch;
-  }
   /* Handoff loop seam straddling the navy section's lower edge */
   .handoff-seam {
     position: relative;
@@ -109,14 +101,35 @@
       "image": "https://carsonpoore.com/brand/carson-headshot.png",
       "email": "carson@carsonpoore.com",
       "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
-      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" },
-        { "@type": "Country", "name": "United States" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
       ],
       "priceRange": "$1,200–$4,800/month",
-      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+      "founder": {
+        "@type": "Person",
+        "@id": "https://carsonpoore.com/about#carson",
+        "name": "Carson Poore",
+        "sameAs": [
+          "https://www.linkedin.com/in/carson-poore/"
+        ]
+      }
     },
     {
       "@type": "Service",
@@ -124,20 +137,45 @@
       "name": "Websites & web apps",
       "serviceType": "Web design and development for small businesses",
       "description": "Fast marketing websites, booking and lead flows, and web apps for small businesses, built in the client's own accounts so they keep the domain, hosting, files, and profiles no matter what.",
-      "provider": { "@id": "https://carsonpoore.com/#org" },
+      "provider": {
+        "@id": "https://carsonpoore.com/#org"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" },
-        { "@type": "Country", "name": "United States" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
       ],
       "url": "https://carsonpoore.com/services/websites"
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carsonpoore.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://carsonpoore.com/services" },
-        { "@type": "ListItem", "position": 3, "name": "Websites & web apps" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://carsonpoore.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://carsonpoore.com/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Websites & web apps"
+        }
       ]
     },
     {
@@ -146,27 +184,42 @@
         {
           "@type": "Question",
           "name": "How much does a small business website cost in Indianapolis?",
-          "acceptedAnswer": { "@type": "Answer", "text": "There's no honest flat answer, so we don't pretend to have one. The price depends on the page count and the features, and on how much of the writing falls to us. What we promise instead: one number, quoted in writing before any work starts, and it holds unless you change the scope. How project quotes sit next to our monthly retainers is laid out on the investment page." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There's no honest flat answer, so we don't pretend to have one. The price depends on the page count and the features, and on how much of the writing falls to us. What we promise instead: one number, quoted in writing before any work starts, and it holds unless you change the scope. How project quotes sit next to our monthly retainers is laid out on the investment page."
+          }
         },
         {
           "@type": "Question",
           "name": "Do I own my website if we stop working together?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. All of it. The domain is registered in your account and the hosting is billed to your card. Every file lives in a repository you control. We build it that way from day one, so there is nothing to transfer when you leave and nothing we could hold. If we parted ways tomorrow, your site wouldn't notice." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. All of it. The domain is registered in your account and the hosting is billed to your card. Every file lives in a repository you control. We build it that way from day one, so there is nothing to transfer when you leave and nothing we could hold. If we parted ways tomorrow, your site wouldn't notice."
+          }
         },
         {
           "@type": "Question",
           "name": "How long does a website take to build?",
-          "acceptedAnswer": { "@type": "Answer", "text": "A marketing site usually takes three to four weeks. The writing is the long pole, not the design, and it goes faster when you can give us an hour of honest answers about what you do and what it costs. A booking flow adds a week or two. Web apps are their own animal: we scope them individually and give you a timeline with the quote, and if it's a months-long build we say so up front." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A marketing site usually takes three to four weeks. The writing is the long pole, not the design, and it goes faster when you can give us an hour of honest answers about what you do and what it costs. A booking flow adds a week or two. Web apps are their own animal: we scope them individually and give you a timeline with the quote, and if it's a months-long build we say so up front."
+          }
         },
         {
           "@type": "Question",
           "name": "Can you fix my current website instead of rebuilding it?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Often, yes, and we'd rather. Some sites need an afternoon of fixes (slow images, a homepage that never says what the business does) and not a rebuild. On a free call we'll look at yours together and tell you which kind it is. If the answer is \"keep what you have,\" you'll hear that too." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Often, yes, and we'd rather. Some sites need an afternoon of fixes (slow images, a homepage that never says what the business does) and not a rebuild. On a free call we'll look at yours together and tell you which kind it is. If the answer is \"keep what you have,\" you'll hear that too."
+          }
         },
         {
           "@type": "Question",
           "name": "What do you build websites with?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Plain, fast pages wherever possible, and a light framework when a project genuinely needs one. WordPress enters only if you arrive with it and want to stay. The reason is boring and practical: fewer moving parts means faster load times and fewer plugin emergencies at 2 a.m. Whatever we build with, the files and accounts are yours." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Plain, fast pages wherever possible, and a light framework when a project genuinely needs one. WordPress enters only if you arrive with it and want to stay. The reason is boring and practical: fewer moving parts means faster load times and fewer plugin emergencies at 2 a.m. Whatever we build with, the files and accounts are yours."
+          }
         }
       ]
     }
@@ -254,7 +307,6 @@
   <section class="section section--stone">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="eyebrow">What we build</span>
         <h2>Three kinds of build, <em>each with a straight timeline.</em></h2>
         <p class="sec-head__intro">Every project starts by naming which of these it is, because the price and the timeline both follow from that one answer.</p>
       </div>
@@ -289,11 +341,9 @@
     <div class="wrap">
       <div class="keep-grid">
         <div class="reveal">
-          <span class="eyebrow">Ownership</span>
           <h2>Why we lead with what happens <em>if you leave.</em></h2>
           <p class="mt-md">This industry has a pattern that never appears in proposals: the hostage website. The agency registers your domain and hosts your site in their account. Your Google Business Profile? &ldquo;Managed&rdquo; from their login. Everything works fine. Right up until you cancel.</p>
-          <p class="mt-md">It gets expensive fast. BlitzMetrics documented a contractor who paid $14,775 for a website, SEO, and social media, got almost none of the work, and when he ended the contract, the agency cut his hosting and the phone number tied to his Google profile. His phones were down for two days. So we build the other way around: your accounts, your card on the billing, our hands on the keyboard. If we stopped working together tomorrow, nothing would turn off.</p>
-          <p class="burn-source">Source: BlitzMetrics, documented contractor agency-burn case studies (blitzmetrics.com).</p>
+          <p class="mt-md">It gets expensive fast. When an owner ends the contract, the agency can cut off the hosting and the phone number tied to the Google profile, and the phones go dark. So we build the other way around: your accounts, your card on the billing, our hands on the keyboard. If we stopped working together tomorrow, nothing would turn off.</p>
         </div>
         <div class="keep-card reveal" data-delay="1">
           <span class="label keep-list__title">What stays yours, in writing</span>
@@ -304,7 +354,6 @@
             <li><strong>Your Google Business Profile,</strong>&nbsp;with you as primary owner</li>
             <li><strong>Your analytics and ad accounts,</strong>&nbsp;same arrangement</li>
           </ul>
-          <p class="keep-card__foot">We set things up this way on day one, so there&rsquo;s never anything to hand back.</p>
         </div>
       </div>
     </div>
@@ -315,7 +364,6 @@
   <section class="section">
     <div class="wrap wrap--narrow">
       <div class="sec-head reveal">
-        <span class="eyebrow">Speed as strategy</span>
         <h2>Built to load <em>before doubt sets in.</em></h2>
       </div>
       <div class="speed-note reveal mt-md">
@@ -330,7 +378,6 @@
   <section class="section section--stone">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="eyebrow">The process</span>
         <h2>How a build actually goes.</h2>
         <p class="sec-head__intro">Four stages, no mystery phase. You&rsquo;ll know where your project sits every week, because you can see the site taking shape at a real link.</p>
       </div>
@@ -372,7 +419,6 @@
   <section class="section">
     <div class="wrap wrap--narrow">
       <div class="sec-head reveal">
-        <span class="eyebrow">What it costs</span>
         <h2>Quoted per project, <em>before work starts.</em></h2>
       </div>
       <div class="quote-note reveal mt-md">
@@ -391,7 +437,6 @@
       <div class="sec-head reveal">
         <span class="eyebrow">Before you sign anything</span>
         <h2>The questions worth asking <em>any web shop.</em></h2>
-        <p class="sec-head__intro">Including us. Especially the second one.</p>
       </div>
       <div class="faq mt-lg reveal">
         <details>
@@ -415,7 +460,6 @@
           <p>Plain, fast pages wherever possible, and a light framework when a project genuinely needs one. WordPress enters only if you arrive with it and want to stay. The reason is boring and practical: fewer moving parts means faster load times and fewer plugin emergencies at 2 a.m. Whatever we build with, the files and accounts are yours.</p>
         </details>
       </div>
-      <p class="updated mt-lg">Last updated: October 2026</p>
     </div>
   </section>
 
@@ -423,7 +467,6 @@
   <section class="closing">
     <div class="closing__inner">
       <div class="reveal">
-        <span class="eyebrow">The next step</span>
         <h2>Bring us the site you have. <em>Or the one you don&rsquo;t.</em></h2>
         <p>Send your web address when you book and we&rsquo;ll show up having already read it, with notes on what&rsquo;s slow or unclear and a straight answer on whether you need a new site at all. No charge, and no hard feelings if the answer is &ldquo;keep what you&rsquo;ve got.&rdquo;</p>
       </div>
@@ -441,7 +484,7 @@
       <div class="footer__brand">
         <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
         <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
-        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
       </div>
       <div>
         <h4>Services</h4>
@@ -469,11 +512,11 @@
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
-          <li><a href="/tools/checkup">The five-step check-up</a></li>
-          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
-          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
-          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
-          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+          <li><a href="/tools/checkup">The Five-Step Check-Up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy Find You?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI Opportunity Finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget Calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-Day Plan Starter</a></li>
         </ul>
       </div>
       <div>

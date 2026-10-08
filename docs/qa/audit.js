@@ -44,7 +44,7 @@ for (const f of files) {
     const canon = (h.match(/rel="canonical"\s+href="([^"]+)"/) || [])[1];
     const want = "https://carsonpoore.com" + (urlPath === "/" ? "/" : urlPath);
     if (!canon) issues.push("no canonical"); else if (canon !== want && canon !== want.replace(/\/$/, "")) issues.push(`canonical ${canon} ≠ ${want}`);
-    if (!/class="[^"]*\bupdated\b/.test(h)) warns.push("no .updated line");
+    if (f.startsWith("articles/") && !/class="[^"]*\bupdated\b/.test(h)) warns.push("article missing .updated line");
   }
   if (is404 || isTicket) { if (!/name="robots"[^>]*noindex/.test(h)) issues.push("missing noindex"); }
   const h1 = (h.match(/<h1[\s>]/g) || []).length;

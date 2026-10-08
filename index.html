@@ -59,21 +59,44 @@
       "image": "https://carsonpoore.com/brand/carson-headshot.png",
       "email": "carson@carsonpoore.com",
       "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
-      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" },
-        { "@type": "Country", "name": "United States" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
       ],
       "priceRange": "$1,200–$4,800/month",
-      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+      "founder": {
+        "@type": "Person",
+        "@id": "https://carsonpoore.com/about#carson",
+        "name": "Carson Poore",
+        "sameAs": [
+          "https://www.linkedin.com/in/carson-poore/"
+        ]
+      }
     },
     {
       "@type": "WebSite",
       "@id": "https://carsonpoore.com/#website",
       "url": "https://carsonpoore.com/",
       "name": "Carson Poore Consulting",
-      "publisher": { "@id": "https://carsonpoore.com/#org" },
+      "publisher": {
+        "@id": "https://carsonpoore.com/#org"
+      },
       "inLanguage": "en-US"
     },
     {
@@ -83,22 +106,34 @@
         {
           "@type": "Question",
           "name": "What does a marketing consultant cost in Indianapolis?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Our retainers are $1,200, $2,400, or $4,800 a month, and the one-time strategy engagement is $3,000. Nonprofits pay a reduced rate. The pricing page lists what each tier includes, so you can compare us without booking anything." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our retainers are $1,200, $2,400, or $4,800 a month, and the one-time strategy engagement is $3,000. Nonprofits pay a reduced rate. The pricing page lists what each tier includes, so you can compare us without booking anything."
+          }
         },
         {
           "@type": "Question",
           "name": "Do we have to sign a long contract?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. Engagements run three months minimum, then month to month. We ask for three because real change takes that long. After that, leave whenever you like. You keep your site, your Google Business Profile, your ad accounts, and your data." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Engagements run three months minimum, then month to month. We ask for three because real change takes that long. After that, leave whenever you like. You keep your site, your Google Business Profile, your ad accounts, and your data."
+          }
         },
         {
           "@type": "Question",
           "name": "Who actually does the work?",
-          "acceptedAnswer": { "@type": "Answer", "text": "We do. The same small team that writes your plan builds the site, the automation, the ad account, and the reporting. Nothing is resold to subcontractors, and the roster stops at eight clients so it stays that way." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We do. The same small team that writes your plan builds the site, the automation, the ad account, and the reporting. Nothing is resold to subcontractors, and the roster stops at eight clients so it stays that way."
+          }
         },
         {
           "@type": "Question",
           "name": "Do you only work with Indianapolis businesses?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Marketing and local SEO stay close to home, within about an hour of Indianapolis, because local work should be done by people who are actually local. Technical and coaching engagements run nationwide over video." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Marketing and local SEO stay close to home, within about an hour of Indianapolis, because local work should be done by people who are actually local. Technical and coaching engagements run nationwide over video."
+          }
         }
       ]
     }
@@ -170,13 +205,13 @@
           <p class="hero__sub reveal" data-delay="2">We&rsquo;re Carson Poore Consulting, a small Indianapolis team that plans the work and then builds it. Four practices: marketing, technical, strategy, and coaching &mdash; for local businesses, founders, and nonprofits, with every price on the site. We stop at eight clients.</p>
           <div class="hero__cta reveal" data-delay="3">
             <a href="/contact" class="btn btn--primary">Book a free call <span class="arr">→</span></a>
-            <a href="/tools/checkup" class="btn btn--ghost-light">Take the five-step check-up</a>
+            <a href="/tools/checkup" class="btn btn--ghost-light">Take the Five-Step Check-Up</a>
           </div>
         </div>
         <div class="hero__media reveal" data-delay="2">
           <div class="hero__block-a" aria-hidden="true"></div>
           <div class="hero__media-img">
-            <img src="https://images.unsplash.com/photo-1632862378103-8248dccb7e3d?w=1200&amp;q=80&amp;auto=format&amp;fit=crop&amp;ar=3:4" alt="A small construction crew leaning over a set of plans at a job site" width="900" height="1200" fetchpriority="high" style="width:100%; height:100%; object-fit:cover; display:block;" /><!-- Photo: Nate Johnston / Unsplash -->
+            <img src="/media/photos/home-hero-crew.jpg" alt="A small construction crew leaning over a set of plans at a job site" width="900" height="1200" fetchpriority="high" style="width:100%; height:100%; object-fit:cover; display:block;" /><!-- Photo: Nate Johnston / Unsplash -->
           </div>
           <div class="hero__block-b" aria-hidden="true"></div>
           <div class="hero__block-c" aria-hidden="true"></div>
@@ -185,10 +220,6 @@
     </div>
     <!-- motion A: measured route (see it / choose it / come back) on the Blueprint grid -->
     <div class="wrap a-hero-route a-layer" aria-hidden="true"><video class="motion-loop a-layer" muted loop playsinline preload="none" poster="/media/motion/a-hero-route.png" data-webm="/media/motion/a-hero-route.webm" data-hevc="/media/motion/a-hero-route-hevc.mp4" width="1920" height="160" aria-hidden="true"></video></div>
-    <div class="hero__coords" aria-hidden="true">
-      <div>Built in<br/>central<br/>Indiana</div>
-      <div>39.7684&deg; N<br/>86.1581&deg; W</div>
-    </div>
   </section>
 
   <!-- TOWNS MARQUEE -->
@@ -233,7 +264,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.51 4.04 3 5.5l7 7Z"/></svg>
           </span>
           <h3>Nonprofits</h3>
-          <p>You&rsquo;re wearing five hats, and marketing falls to whoever has ten spare minutes. Start with the Ad Grant: Google offers verified nonprofits $10,000 a month in free ads, and most use a few hundred dollars of it. Our nonprofit rate isn&rsquo;t charity. The budgets are smaller and the work matters.</p>
+          <p>You&rsquo;re wearing five hats, and marketing falls to whoever has ten spare minutes. Start with the Ad Grant: Google offers verified nonprofits $10,000 a month in free ads, and we help you actually use it. Our nonprofit rate isn&rsquo;t charity. The budgets are smaller and the work matters.</p>
           <a href="/for/nonprofits" class="tlink">For nonprofits <span aria-hidden="true">→</span></a>
         </div>
       </div>
@@ -245,7 +276,6 @@
     <div class="wrap">
       <div class="practices">
         <div class="practices__lede">
-          <span class="eyebrow reveal">Four practices</span>
           <h2 class="reveal mt-md" data-delay="1">We plan the work. Then we <em>build it.</em></h2>
           <p class="reveal mt-md" data-delay="2" style="color: var(--ink-2); line-height: 1.65; max-width: 44ch;">For a while this site said &ldquo;marketing agency.&rdquo; That was a size too small, so we fixed it. Half of what clients pay us for is technical &mdash; the site, the automation, the ad account, the tracking. The other half is deciding what&rsquo;s worth building in the first place.</p>
           <p class="reveal mt-md" data-delay="3" style="color: var(--ink-2); line-height: 1.65; max-width: 44ch;">The market splits the other way. Indy agencies have moved upmarket and don&rsquo;t build. AI shops can&rsquo;t do brand. Most fractional CMOs hand you a plan, then wish you luck. We sit where those three don&rsquo;t overlap. On purpose.</p>
@@ -255,27 +285,23 @@
         </div>
         <div class="practice-grid">
           <a class="practice-card reveal" href="/services/marketing">
-            <span class="practice-card__tag">Practice 01</span>
             <h3>Marketing</h3>
             <p>Brand, campaigns, content, and email that make the right people notice you and talk about you. Measured in customers and booked work, not impressions.</p>
             <span class="tlink">How we do marketing <span aria-hidden="true">→</span></span>
           </a>
           <a class="practice-card reveal" data-delay="1" href="/services/technical">
-            <span class="practice-card__tag">Practice 02</span>
             <h3>Technical</h3>
             <p>The builds most marketing shops can&rsquo;t do: AI agents and automation, websites and web apps, GoHighLevel and CRM, Google Ads, GA4. Human-approved, and priced for small businesses.</p>
             <span class="tlink">What we build <span aria-hidden="true">→</span></span>
           </a>
           <a class="practice-card reveal" data-delay="2" href="/services/strategy">
-            <span class="practice-card__tag">Practice 03</span>
             <h3>Strategy</h3>
             <p>A $3,000, one-time engagement: your positioning, your people, a sharp offer, and a 90-day plan you could run without us. The answer to &ldquo;what should we do first?&rdquo;</p>
             <span class="tlink">The $3,000 engagement <span aria-hidden="true">→</span></span>
           </a>
           <a class="practice-card reveal" data-delay="3" href="/services/coaching">
-            <span class="practice-card__tag">Practice 04</span>
             <h3>Coaching &amp; growth</h3>
-            <p>A fractional CMO for owners and founders at $1,200&ndash;$4,800 a month, under the $3,000&ndash;$15,000 range that 2026 pricing guides from MarketerHire and GoFractional report for the category, with the plan and the hands on one team.</p>
+            <p>A fractional CMO for owners and founders at $1,200&ndash;$4,800 a month, with the plan and the hands on one team.</p>
             <span class="tlink">How coaching works <span aria-hidden="true">→</span></span>
           </a>
         </div>
@@ -288,7 +314,6 @@
     <div class="wrap">
       <div class="sec-head">
         <div>
-          <span class="eyebrow reveal">The method</span>
           <h2 class="approach__title reveal mt-md" data-delay="1">
             <span>Five steps,</span>
             <span>in plain English,</span>
@@ -324,10 +349,9 @@
     <div class="wrap">
       <div class="model">
         <div>
-          <span class="eyebrow reveal">The model</span>
           <h2 class="reveal mt-md" data-delay="1">What it costs, before you ever <em>call.</em></h2>
           <p class="reveal mt-md" data-delay="2" style="line-height: 1.65; max-width: 46ch;">Before writing this page, we read 13 competitor sites, local and national. Twelve of the thirteen publish no prices at all. You book the call, then you hear the number.</p>
-          <p class="reveal mt-md" data-delay="3" style="line-height: 1.65; max-width: 46ch;">We&rsquo;d rather you compare in the open. For scale: 2026 pricing guides from MarketerHire and GoFractional put typical fractional-CMO retainers at $3,000 to $15,000 a month. Ours are on the right.</p>
+          <p class="reveal mt-md" data-delay="3" style="line-height: 1.65; max-width: 46ch;">We&rsquo;d rather you compare in the open. Ours are on the right.</p>
           <div class="row-cta mt-lg reveal" data-delay="3">
             <a href="/investment" class="btn btn--amber">See the full rate card <span class="arr">→</span></a>
             <a href="/work" class="btn btn--ghost-light">Client results</a>
@@ -344,7 +368,7 @@
               <dd>The strategy engagement, for anyone asking &ldquo;what should we do first?&rdquo; A reduced rate applies for nonprofits across everything we do.</dd>
             </div>
             <div class="model-row">
-              <dt>Eight clients, total</dt>
+              <dt>Eight clients at a time</dt>
               <dd>A team that knows your business, not a pod juggling forty accounts. When the eight seats are full, we&rsquo;re full.</dd>
             </div>
             <div class="model-row">
@@ -352,7 +376,6 @@
               <dd>Your site, your Google Business Profile, your ad accounts, your data. If you ever leave, it all stays yours.</dd>
             </div>
           </dl>
-          <p class="model__foot">Most of this work happens within an hour of Indianapolis. Technical and coaching engagements run nationwide.</p>
         </div>
       </div>
     </div>
@@ -363,10 +386,10 @@
     <div class="wrap--narrow wrap">
       <span class="eyebrow reveal">Free tools</span>
       <h2 class="reveal mt-md" data-delay="1">Check your own marketing <em>first.</em></h2>
-      <p class="reveal mt-md" data-delay="2" style="color: var(--ink-2); line-height: 1.65; max-width: 62ch; font-size: 1.05rem;">Five free tools live on this site: the five-step check-up, a local-visibility test, an AI opportunity finder, a budget calculator, and a 90-day plan starter. No email gate, no login, scored on the spot &mdash; and they double as working proof of the technical practice, because we build things like this for clients.</p>
+      <p class="reveal mt-md" data-delay="2" style="color: var(--ink-2); line-height: 1.65; max-width: 62ch; font-size: 1.05rem;">Five free tools live on this site: the Five-Step Check-Up, Can Indy Find You?, the AI Opportunity Finder, the Budget Calculator, and the 90-Day Plan Starter. No email gate, no login, scored on the spot &mdash; and they double as working proof of the technical practice, because we build things like this for clients.</p>
       <p class="reveal mt-md" data-delay="3" style="color: var(--ink-2); line-height: 1.65; max-width: 62ch;">Start with the check-up. It takes about three minutes and tells you which of the five steps is leaking.</p>
       <div class="row-cta mt-lg reveal" data-delay="3">
-        <a href="/tools/checkup" class="btn btn--primary">Take the five-step check-up <span class="arr">→</span></a>
+        <a href="/tools/checkup" class="btn btn--primary">Take the Five-Step Check-Up <span class="arr">→</span></a>
         <a href="/resources" class="tlink">Browse every tool and guide <span aria-hidden="true">→</span></a>
       </div>
     </div>
@@ -375,7 +398,6 @@
   <!-- FAQ -->
   <section class="section">
     <div class="wrap--narrow wrap">
-      <span class="eyebrow reveal">Fair questions</span>
       <h2 class="reveal mt-md" data-delay="1">Things owners ask <em>first.</em></h2>
       <div class="faq mt-lg reveal" data-delay="2">
         <details>
@@ -395,7 +417,6 @@
           <p>Marketing and local SEO stay close to home, within about an hour of Indianapolis, because local work should be done by people who are actually local. Technical and coaching engagements run nationwide over video.</p>
         </details>
       </div>
-      <p class="updated mt-lg reveal" data-delay="3">Last updated: October 2026</p>
     </div>
   </section>
 
@@ -404,7 +425,6 @@
     <video class="motion-loop a-layer a-closing-bg" autoplay muted loop playsinline preload="none" poster="/media/motion/a-closing-field.jpg" aria-hidden="true"><source src="/media/motion/a-closing-field.webm" type="video/webm" /><source src="/media/motion/a-closing-field.mp4" type="video/mp4" /></video>
     <div class="closing__inner">
       <div class="reveal">
-        <span class="eyebrow">The next step is small</span>
         <h2>Bring us the thing you&rsquo;ve <em>built.</em></h2>
         <p>A free 30-minute call about your numbers and what we&rsquo;d do first. If we&rsquo;re not the right fit, we&rsquo;ll say so and point you to someone who is.</p>
       </div>
@@ -423,7 +443,7 @@
       <div class="footer__brand">
         <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
         <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
-        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
       </div>
       <div>
         <h4>Services</h4>
@@ -451,11 +471,11 @@
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
-          <li><a href="/tools/checkup">The five-step check-up</a></li>
-          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
-          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
-          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
-          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+          <li><a href="/tools/checkup">The Five-Step Check-Up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy Find You?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI Opportunity Finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget Calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-Day Plan Starter</a></li>
         </ul>
       </div>
       <div>

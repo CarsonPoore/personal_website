@@ -89,14 +89,35 @@
       "image": "https://carsonpoore.com/brand/carson-headshot.png",
       "email": "carson@carsonpoore.com",
       "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
-      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" },
-        { "@type": "Country", "name": "United States" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
       ],
       "priceRange": "$1,200–$4,800/month",
-      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+      "founder": {
+        "@type": "Person",
+        "@id": "https://carsonpoore.com/about#carson",
+        "name": "Carson Poore",
+        "sameAs": [
+          "https://www.linkedin.com/in/carson-poore/"
+        ]
+      }
     },
     {
       "@type": "WebPage",
@@ -104,8 +125,12 @@
       "url": "https://carsonpoore.com/for/local-businesses",
       "name": "Marketing for Indianapolis Local Businesses | Carson Poore",
       "description": "Indianapolis home services, trades, and local shops: show up on Google and answer every lead in minutes. Prices on the site, 3 months then month to month.",
-      "about": { "@id": "https://carsonpoore.com/for/local-businesses#service" },
-      "publisher": { "@id": "https://carsonpoore.com/#org" },
+      "about": {
+        "@id": "https://carsonpoore.com/for/local-businesses#service"
+      },
+      "publisher": {
+        "@id": "https://carsonpoore.com/#org"
+      },
       "dateModified": "2026-10-08"
     },
     {
@@ -114,19 +139,44 @@
       "name": "Marketing for Indianapolis local businesses",
       "serviceType": "Local business marketing",
       "description": "Google visibility, fast lead follow-up, and review systems for Indianapolis home services, trades, restaurants, retail shops, and salons, reported monthly in calls and booked jobs.",
-      "provider": { "@id": "https://carsonpoore.com/#org" },
-      "audience": { "@type": "BusinessAudience", "audienceType": "Local small businesses: home services, trades, restaurants, retail, and salons" },
+      "provider": {
+        "@id": "https://carsonpoore.com/#org"
+      },
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Local small businesses: home services, trades, restaurants, retail, and salons"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        }
       ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carsonpoore.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Who we help", "item": "https://carsonpoore.com/#who-we-help" },
-        { "@type": "ListItem", "position": 3, "name": "Local businesses" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://carsonpoore.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Who we help",
+          "item": "https://carsonpoore.com/#who-we-help"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Local businesses"
+        }
       ]
     },
     {
@@ -135,32 +185,50 @@
         {
           "@type": "Question",
           "name": "Am I signing a 12-month contract?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. The minimum is three months, and we say so up front because a Google profile and a stack of new reviews need about that long to move. After month three it’s month to month, and you can stop any month you like." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The minimum is three months, and we say so up front because a Google profile and a stack of new reviews need about that long to move. After month three it’s month to month, and you can stop any month you like."
+          }
         },
         {
           "@type": "Question",
           "name": "How will I know if the marketing is working?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Once a month you get a short report in plain English. It counts calls, form fills, new reviews, and the jobs you tell us you booked. You won’t find the word “impressions” in it. Call tracking is the first thing we set up, so every call can be traced back to where it came from." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Once a month you get a short report in plain English. It counts calls, form fills, new reviews, and the jobs you tell us you booked. You won’t find the word “impressions” in it. Call tracking is the first thing we set up, so every call can be traced back to where it came from."
+          }
         },
         {
           "@type": "Question",
           "name": "Who answers when I call you?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The same person every time, someone who already knows your business. There’s no account manager reading your file for the first time, because we cap the whole consultancy at eight clients. As for your customers’ calls, you still answer those. If you miss one, a text goes back within a minute so they don’t move on to the next name on Google." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The same person every time, someone who already knows your business. There’s no account manager reading your file for the first time, because we cap the whole consultancy at eight clients. As for your customers’ calls, you still answer those. If you miss one, a text goes back within a minute so they don’t move on to the next name on Google."
+          }
         },
         {
           "@type": "Question",
           "name": "What does marketing cost for a home services business in Indianapolis?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Our retainers are $1,200, $2,400, or $4,800 a month. At $1,200 we run one channel properly, and for most local businesses we’d pick Google visibility and reviews. At $2,400 we add lead follow-up and review automation so the pieces work together. At $4,800 we run your marketing outright. The minimum is three months, there’s no setup fee, and nonprofits get a reduced rate. If you run ads, the ad spend goes on your own card, straight to Google. For a sense of scale, SBA guidance puts marketing at 7–8% of gross revenue for businesses under $5 million. On $300,000 a year, that works out to roughly $1,750 to $2,000 a month." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our retainers are $1,200, $2,400, or $4,800 a month. At $1,200 we run one channel properly, and for most local businesses we’d pick Google visibility and reviews. At $2,400 we add lead follow-up and review automation so the pieces work together. At $4,800 we run your marketing outright. The minimum is three months, there’s no setup fee, and nonprofits get a reduced rate. If you run ads, the ad spend goes on your own card, straight to Google. For a sense of scale, SBA guidance puts marketing at 7–8% of gross revenue for businesses under $5 million. On $300,000 a year, that works out to roughly $1,750 to $2,000 a month."
+          }
         },
         {
           "@type": "Question",
           "name": "What happens if I stop working with you?",
-          "acceptedAnswer": { "@type": "Answer", "text": "You keep everything. Your website and domain, your Google Business Profile, your ad accounts, your customer list, and your reports are set up in your name from the first week, with us added as a user. When you leave, we hand over anything outstanding and remove ourselves. Nothing gets switched off. We’ve read too many stories like the contractor BlitzMetrics wrote about, whose agency killed his hosting and the phone number on his Google profile on the way out. His phones were down for two days." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You keep everything. Your website and domain, your Google Business Profile, your ad accounts, your customer list, and your reports are set up in your name from the first week, with us added as a user. When you leave, we hand over anything outstanding and remove ourselves. Nothing gets switched off. We’ve read too many stories of agencies that killed a contractor’s hosting and the phone number on his Google profile on the way out."
+          }
         },
         {
           "@type": "Question",
           "name": "Will you also work for my competitor?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Not in your part of town. Eight clients total lets us keep it to roughly one per trade per territory. If a business like yours already has the seat, you’ll hear that on the first call, along with a name or two we’d trust instead." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not in your part of town. Eight clients at a time lets us keep it to roughly one per trade per territory. If a business like yours already has the seat, you’ll hear that on the first call, along with a name or two we’d trust instead."
+          }
         }
       ]
     }
@@ -244,7 +312,7 @@
           <ul class="hero-facts reveal" data-delay="3">
             <li>Prices on the site</li>
             <li>3 months, then month to month</li>
-            <li>8 clients, total</li>
+            <li>8 clients at a time</li>
             <li>You keep everything</li>
           </ul>
         </div>
@@ -259,7 +327,6 @@
   <section class="section">
     <div class="wrap wrap--narrow">
       <div class="sec-head">
-        <span class="eyebrow reveal">Sound familiar?</span>
         <h2 class="reveal" data-delay="1">Busy every day. Somehow not growing.</h2>
       </div>
       <div class="mt-lg">
@@ -274,12 +341,12 @@
         </div>
         <div class="vertical reveal" data-delay="1">
           <h3>Restaurants, shops &amp; salons</h3>
-          <p>Here it sounds different. Nobody wants a quote; they&rsquo;re deciding where to eat tonight or who cuts their hair next. That decision happens fast. Google&rsquo;s own research found that 76% of people who search &ldquo;near me&rdquo; on a phone visit a business within 24 hours. Meanwhile your Instagram is gathering dust because you&rsquo;re on the floor all day, and Tuesdays in Fountain Square are slower than they should be.</p>
+          <p>Here it sounds different. Nobody wants a quote; they&rsquo;re deciding where to eat tonight or who cuts their hair next. That decision happens fast, and it usually starts with a phone search for &ldquo;near me.&rdquo; Meanwhile your Instagram is gathering dust because you&rsquo;re on the floor all day, and Tuesdays in Fountain Square are slower than they should be.</p>
         </div>
       </div>
 
       <div>
-        <p class="reveal">Maybe you already tried to fix it. Paid an agency every month, got a PDF full of charts and words like &ldquo;reach,&rdquo; and couldn&rsquo;t point to one extra job. You&rsquo;re in a big club. When vcita surveyed 500 small-business owners in April 2025, 40% had dropped or switched their marketing agency. More than half of those breakups came 6 to 12 months in, and 60% of the owners who left gave the same reason: they couldn&rsquo;t see a return.</p>
+        <p class="reveal">Maybe you already tried to fix it. Paid an agency every month, got a PDF full of charts and words like &ldquo;reach,&rdquo; and couldn&rsquo;t point to one extra job. You&rsquo;re in a big club. When vcita surveyed small-business owners in April 2025, 40% had dropped or switched their marketing agency, and most gave the same reason: they couldn&rsquo;t see a return.</p>
         <p class="mt-md reveal">So we set this up around the parts that burned you. The price is printed on our pricing page. You commit to three months, then it&rsquo;s month to month. The report counts calls and booked jobs. And everything we set up is in your name, so leaving never costs you your phone number.</p>
         <p class="pull mt-xl reveal">Booked jobs are the number that <em>matters</em>.</p>
       </div>
@@ -298,7 +365,6 @@
   <section class="section section--stone first-steps">
     <div class="wrap">
       <div class="sec-head">
-        <span class="eyebrow reveal">Where we start</span>
         <h2 class="reveal" data-delay="1">The order we&rsquo;d do it in</h2>
         <p class="sec-head__intro reveal" data-delay="2">Most local businesses need the same few fixes, in roughly the same sequence. Whatever you&rsquo;ve already got handled, we skip.</p>
       </div>
@@ -318,7 +384,7 @@
         <article class="card reveal" data-delay="2">
           <span class="card__num">03</span>
           <h3>Reviews, asked for while the customer is happy</h3>
-          <p>A review request goes out right after the work is done, while the customer is still happy. BrightLocal found that listings with 40 or more reviews and a 4.5-star average land in Google&rsquo;s local 3-pack about 3.7 times as often as listings with fewer than 10.</p>
+          <p>A review request goes out right after the work is done, while the customer is still happy. BrightLocal&rsquo;s research found that listings with plenty of strong reviews land in Google&rsquo;s local 3-pack far more often than thin ones.</p>
           <a class="tlink" href="/articles/not-showing-up-on-google">Why you&rsquo;re not showing up <span aria-hidden="true">→</span></a>
         </article>
         <article class="card reveal" data-delay="3">
@@ -346,7 +412,6 @@
   <section class="section">
     <div class="wrap wrap--narrow">
       <div class="sec-head">
-        <span class="eyebrow reveal">Before you call</span>
         <h2 class="reveal" data-delay="1">The questions you&rsquo;d ask anyway</h2>
         <p class="sec-head__intro reveal" data-delay="2">You&rsquo;ve been pitched before. Here are the straight answers, so the call can be about your business.</p>
       </div>
@@ -369,11 +434,11 @@
         </details>
         <details>
           <summary>What happens if I stop working with you?</summary>
-          <p>You keep everything. Your website and domain, your Google Business Profile, your ad accounts, your customer list, and your reports are set up in your name from the first week, with us added as a user. When you leave, we hand over anything outstanding and remove ourselves. Nothing gets switched off. We&rsquo;ve read too many stories like the contractor BlitzMetrics wrote about, whose agency killed his hosting and the phone number on his Google profile on the way out. His phones were down for two days.</p>
+          <p>You keep everything. Your website and domain, your Google Business Profile, your ad accounts, your customer list, and your reports are set up in your name from the first week, with us added as a user. When you leave, we hand over anything outstanding and remove ourselves. Nothing gets switched off. We&rsquo;ve read too many stories of agencies that killed a contractor&rsquo;s hosting and the phone number on his Google profile on the way out.</p>
         </details>
         <details>
           <summary>Will you also work for my competitor?</summary>
-          <p>Not in your part of town. Eight clients total lets us keep it to roughly one per trade per territory. If a business like yours already has the seat, you&rsquo;ll hear that on the first call, along with a name or two we&rsquo;d trust instead.</p>
+          <p>Not in your part of town. Eight clients at a time lets us keep it to roughly one per trade per territory. If a business like yours already has the seat, you&rsquo;ll hear that on the first call, along with a name or two we&rsquo;d trust instead.</p>
         </details>
       </div>
       <div class="row-cta mt-xl reveal">
@@ -394,18 +459,17 @@
       <div class="tool-strip">
         <div class="tool-card reveal">
           <span class="label">Local visibility check</span>
-          <h3>Can Indy find you?</h3>
+          <h3>Can Indy Find You?</h3>
           <p>A checklist for your Google Business Profile, your reviews, and your website basics. Tick off what you&rsquo;ve done and it tells you which gaps to close first. Most of the fixes you can do yourself this week.</p>
           <a class="btn btn--ghost-light" href="/tools/local-visibility">Run the visibility check <span class="arr">→</span></a>
         </div>
         <div class="tool-card reveal" data-delay="1">
-          <span class="label">The five-step check-up</span>
+          <span class="label">The Five-Step Check-Up</span>
           <h3>Where&rsquo;s the weak link?</h3>
           <p>A short quiz on the five steps we run every business through, from Conviction to Word of mouth. It names the one step holding the rest back, in plain words.</p>
           <a class="btn btn--ghost-light" href="/tools/checkup">Take the check-up <span class="arr">→</span></a>
         </div>
       </div>
-      <p class="updated tool-strip__note reveal">Last updated: October 2026</p>
     </div>
   </section>
 
@@ -413,7 +477,6 @@
   <section class="closing">
     <div class="closing__inner">
       <div class="reveal">
-        <span class="eyebrow">One next step</span>
         <h2>Bring us your <em>slowest month.</em></h2>
         <p>Thirty minutes, free. We&rsquo;ll ask what a typical job is worth to you and where your best customers came from. You&rsquo;ll hang up knowing the first thing we&rsquo;d fix, even if you decide to fix it yourself.</p>
       </div>
@@ -431,7 +494,7 @@
       <div class="footer__brand">
         <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
         <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
-        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
       </div>
       <div>
         <h4>Services</h4>
@@ -459,11 +522,11 @@
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
-          <li><a href="/tools/checkup">The five-step check-up</a></li>
-          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
-          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
-          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
-          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+          <li><a href="/tools/checkup">The Five-Step Check-Up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy Find You?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI Opportunity Finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget Calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-Day Plan Starter</a></li>
         </ul>
       </div>
       <div>

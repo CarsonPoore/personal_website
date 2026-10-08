@@ -85,14 +85,35 @@
       "image": "https://carsonpoore.com/brand/carson-headshot.png",
       "email": "carson@carsonpoore.com",
       "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
-      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
       "areaServed": [
-        { "@type": "City", "name": "Indianapolis" },
-        { "@type": "State", "name": "Indiana" },
-        { "@type": "Country", "name": "United States" }
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
       ],
       "priceRange": "$1,200–$4,800/month",
-      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+      "founder": {
+        "@type": "Person",
+        "@id": "https://carsonpoore.com/about#carson",
+        "name": "Carson Poore",
+        "sameAs": [
+          "https://www.linkedin.com/in/carson-poore/"
+        ]
+      }
     },
     {
       "@type": "WebApplication",
@@ -103,15 +124,35 @@
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web",
       "isAccessibleForFree": true,
-      "provider": { "@id": "https://carsonpoore.com/#org" },
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      "provider": {
+        "@id": "https://carsonpoore.com/#org"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carsonpoore.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://carsonpoore.com/resources" },
-        { "@type": "ListItem", "position": 3, "name": "The five-step check-up" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://carsonpoore.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Resources",
+          "item": "https://carsonpoore.com/resources"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "The Five-Step Check-Up"
+        }
       ]
     },
     {
@@ -120,17 +161,26 @@
         {
           "@type": "Question",
           "name": "Do I have to give you my email to see my score?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. There’s no email and no login. Your answers stay in your browser and nothing is saved. The only time your score leaves this page is if you click through to book a call, which carries the number along so we can prepare." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. There’s no email and no login. Your answers stay in your browser and nothing is saved. The only time your score leaves this page is if you click through to book a call, which carries the number along so we can prepare."
+          }
         },
         {
           "@type": "Question",
           "name": "How is the check-up scored?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Each question has four answers worth 0, 3, 7, or 10 points. Two questions cover each of the five steps, so every step is scored out of 20 and the total is out of 100. Your weakest step is the one with the lowest score. If two tie, we name the earlier one, because the later steps stand on it." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each question has four answers worth 0, 3, 7, or 10 points. Two questions cover each of the five steps, so every step is scored out of 20 and the total is out of 100. Your weakest step is the one with the lowest score. If two tie, we name the earlier one, because the later steps stand on it."
+          }
         },
         {
           "@type": "Question",
           "name": "What happens on the free call?",
-          "acceptedAnswer": { "@type": "Answer", "text": "We spend 30 minutes on your weakest step. You’ll leave with one or two specific fixes, even if we never work together. We take eight clients total, so if we’re not the right fit, we’ll say so and point you somewhere better." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We spend 30 minutes on your weakest step. You’ll leave with one or two specific fixes, even if we never work together. We take eight clients at a time, so if we’re not the right fit, we’ll say so and point you somewhere better."
+          }
         }
       ]
     }
@@ -198,7 +248,7 @@
         <ol>
           <li><a href="/">Home</a></li>
           <li><a href="/resources">Resources</a></li>
-          <li aria-current="page">The five-step check-up</li>
+          <li aria-current="page">The Five-Step Check-Up</li>
         </ol>
       </nav>
       <span class="eyebrow reveal">Free tool · about 3 minutes</span>
@@ -226,7 +276,7 @@
 
         <!-- Intro -->
         <div class="tool__panel ck-intro" id="ck-intro">
-          <span class="label">The five-step check-up</span>
+          <span class="label">The Five-Step Check-Up</span>
           <h2 class="ck-h mt-sm" id="ck-intro-head" tabindex="-1">Ten questions, one at a time</h2>
           <p>Pick the answer that&rsquo;s true today, not the one you&rsquo;re hoping for. Nobody sees this but you. At the end you&rsquo;ll get a score out of 100 and the one step worth fixing first.</p>
           <div class="ck-mode">
@@ -268,9 +318,7 @@
   <section class="section">
     <div class="wrap wrap--narrow">
       <div class="sec-head">
-        <span class="eyebrow reveal">What it measures</span>
         <h2 class="reveal" data-delay="1">The same five steps we use with every client</h2>
-        <p class="sec-head__intro reveal" data-delay="2">Two questions per step. Here&rsquo;s what each pair is really asking.</p>
       </div>
       <ol class="ck-measure mt-xl reveal">
         <li><span class="name">Conviction</span><span class="body">Can you say why you exist in plain words, and does your team say it the same way?</span></li>
@@ -287,7 +335,6 @@
   <section class="section section--stone">
     <div class="wrap wrap--narrow">
       <div class="sec-head">
-        <span class="eyebrow reveal">Fair questions</span>
         <h2 class="reveal" data-delay="1">Before you start</h2>
       </div>
       <div class="faq mt-xl reveal" data-delay="2">
@@ -301,10 +348,9 @@
         </details>
         <details>
           <summary>What happens on the free call?</summary>
-          <p>We spend 30 minutes on your weakest step. You’ll leave with one or two specific fixes, even if we never work together. We take eight clients total, so if we’re not the right fit, we’ll say so and point you somewhere better.</p>
+          <p>We spend 30 minutes on your weakest step. You’ll leave with one or two specific fixes, even if we never work together. We take eight clients at a time, so if we’re not the right fit, we’ll say so and point you somewhere better.</p>
         </details>
       </div>
-      <p class="updated mt-lg">Last updated: October 2026</p>
     </div>
   </section>
 
@@ -312,7 +358,6 @@
   <section class="closing">
     <div class="closing__inner">
       <div class="reveal">
-        <span class="eyebrow">Got your number?</span>
         <h2>Your weakest step is <em>where we start.</em></h2>
         <p>Thirty minutes, free, on video or over coffee somewhere in Indy. Bring the score and the step it named. We&rsquo;ll tell you what we&rsquo;d fix first, and whether you even need us to do it.</p>
       </div>
@@ -330,7 +375,7 @@
       <div class="footer__brand">
         <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
         <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
-        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
       </div>
       <div>
         <h4>Services</h4>
@@ -358,11 +403,11 @@
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
-          <li><a href="/tools/checkup">The five-step check-up</a></li>
-          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
-          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
-          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
-          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+          <li><a href="/tools/checkup">The Five-Step Check-Up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy Find You?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI Opportunity Finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget Calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-Day Plan Starter</a></li>
         </ul>
       </div>
       <div>
