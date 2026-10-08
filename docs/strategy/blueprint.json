@@ -1,0 +1,1125 @@
+{
+  "sitemap": [
+    {
+      "path": "/",
+      "file": "index.html",
+      "title_tag": "Indianapolis Marketing Consultant | Carson Poore Consulting",
+      "meta_description": "I'm Carson, a growth consultant in Indianapolis. Strategy, marketing, technical builds, and coaching for local businesses, founders, and nonprofits.",
+      "page_type": "core",
+      "primary_keyword": "marketing consultant indianapolis",
+      "purpose": "Anchor the soft 'marketing consultant indianapolis' SERP, state the repositioning (growth consultancy, one person, four practices), and route visitors into the right client pathway within one screen. Main CTA: book a free call; secondary CTA: take the Five-Step Check-Up.",
+      "key_sections": [
+        "Super-display hero with person + city in first 100 words (no jargon, no hype)",
+        "Three client-pathway cards (local businesses / founders / nonprofits) — view-transition morph sources",
+        "Four practices overview with one-liner each",
+        "Five-step method teaser with amber numerals",
+        "Published-pricing teaser ($1,200/$2,400/$4,800, $3,000 strategy, 8-client cap)",
+        "Proof strip: one named client + one real number per ICP, link to /work",
+        "Towns-served block: Carmel, Fishers, Zionsville, Noblesville, Westfield, Greenwood, Brownsburg, Avon + 'central Indiana; technical and coaching nationwide'",
+        "Five-Step Check-Up CTA band",
+        "FAQ (3-5 questions: cost, contracts, who does the work) with FAQPage schema",
+        "Footer NAP block matching GBP exactly"
+      ],
+      "schema_types": [
+        "ProfessionalService",
+        "WebSite",
+        "FAQPage"
+      ],
+      "links_to": [
+        "/for/local-businesses",
+        "/for/founders",
+        "/for/nonprofits",
+        "/services",
+        "/services/marketing",
+        "/services/technical",
+        "/services/strategy",
+        "/services/coaching",
+        "/method",
+        "/investment",
+        "/work",
+        "/tools/checkup",
+        "/contact"
+      ]
+    },
+    {
+      "path": "/services",
+      "file": "services.html",
+      "title_tag": "Growth Consulting Services in Indianapolis | Carson Poore",
+      "meta_description": "Four practices under one roof — marketing, technical builds, strategy, and coaching. Here's what each one does, what it costs, and where to start.",
+      "page_type": "hub",
+      "purpose": "Router hub for the four-practice model: make the one-person/four-practices claim explicit (Indy agencies don't build, AI shops don't do brand, fractional CMOs don't implement) and send each visitor to the right practice or pathway. CTA: free call, with 'not sure? take the Check-Up' as the low-commitment branch.",
+      "key_sections": [
+        "One person, four practices intro (the empty-intersection claim from competitor research)",
+        "Four practice cards with view-transition-name morphs to practice heroes",
+        "Which practice for which problem (symptom → practice mapping in owner language)",
+        "Common combinations per client type (links to the three pathways)",
+        "Pricing teaser + link",
+        "FAQ: who actually does the work, the 8-client cap, how practices combine"
+      ],
+      "schema_types": [
+        "WebPage",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/services/marketing",
+        "/services/technical",
+        "/services/strategy",
+        "/services/coaching",
+        "/for/local-businesses",
+        "/for/founders",
+        "/for/nonprofits",
+        "/investment",
+        "/tools/checkup",
+        "/contact"
+      ]
+    },
+    {
+      "path": "/method",
+      "file": "method.html",
+      "title_tag": "The Five-Step Method | Carson Poore Consulting",
+      "meta_description": "Conviction, your people, a sharp offer, the experience, word of mouth. The five steps I run every engagement through — in plain English, no trademark.",
+      "page_type": "core",
+      "purpose": "Present the five steps as a named, citable framework (AEO asset) and explicitly not a trademarked system — the candid counter to Growth Gears®/BRAVE™ framework soup. CTA: score yourself with the Five-Step Check-Up.",
+      "key_sections": [
+        "Oversized amber numerals 1-5 as structural backdrop (existing convention)",
+        "Each step explained in owner language with short founder and nonprofit translations",
+        "'No ™ on any of this' aside in voice",
+        "How each step maps to the four practices",
+        "Sticky-rail mini map of the five steps",
+        "Check-Up CTA: 'score your business on these five steps in two minutes'"
+      ],
+      "schema_types": [
+        "WebPage",
+        "HowTo",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/tools/checkup",
+        "/services",
+        "/for/local-businesses",
+        "/for/founders",
+        "/for/nonprofits",
+        "/contact"
+      ]
+    },
+    {
+      "path": "/investment",
+      "file": "investment.html",
+      "title_tag": "What Marketing Help Costs | Carson Poore Consulting",
+      "meta_description": "Published prices, because you shouldn't book a call to hear a number: $1,200, $2,400, or $4,800 a month, a $3,000 strategy engagement, a nonprofit rate.",
+      "page_type": "core",
+      "primary_keyword": "how much does a marketing consultant cost",
+      "purpose": "The pricing-transparency weapon: 12 of 13 competitors hide pricing, so this page answers cost queries with real numbers and OfferCatalog schema, pre-frames the tiers with percent-of-revenue context, and converts pricing-anxiety traffic. CTA: free call; secondary: budget calculator. Stillest page on the site — count-up stats row only.",
+      "key_sections": [
+        "Rate card: three tiers with 'what you get each month' per tier",
+        "$3,000 strategy engagement block",
+        "Nonprofit rate (respect framing, same scope and cap)",
+        "8-client cap + '3 months minimum, because real change takes that long' honesty block",
+        "Percent-of-revenue sanity check (SBA 7-8% under $5M, cited)",
+        "Market context: fractional CMO market $3K-$15K/mo, cited ranges",
+        "'What you keep if you leave' list (site, GBP, ad accounts, data)",
+        "Count-up stats row (8 clients / 3 months / 3 tiers)",
+        "Budget-calculator CTA",
+        "FAQ: cancellation, what a retainer includes, do-you-work-with-my-competitor"
+      ],
+      "schema_types": [
+        "WebPage",
+        "OfferCatalog",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/tools/marketing-budget",
+        "/services",
+        "/services/strategy",
+        "/for/nonprofits",
+        "/articles/small-business-marketing-budget",
+        "/contact"
+      ]
+    },
+    {
+      "path": "/about",
+      "file": "about.html",
+      "title_tag": "About Carson Poore | Indianapolis Growth Consultant",
+      "meta_description": "The person behind the practice: one strategist in Indianapolis, eight clients at a time, and a rule about saying the quiet parts out loud — prices included.",
+      "page_type": "core",
+      "purpose": "Entity hub for AEO (Person schema, knowsAbout, sameAs to LinkedIn/GBP) and the byline target for every article; this audience buys a person, so photo + plain bio + the why behind the repositioning. CTA: free call.",
+      "key_sections": [
+        "Photo and plain first-person bio",
+        "Why 'growth consultancy' not 'marketing agency' (the repositioning story)",
+        "The 8-client cap story and the published-pricing rule",
+        "'How I write' colophon: no hype, no jargon, stated publicly",
+        "Indy rootedness: neighborhoods, local references a national agency couldn't write",
+        "knowsAbout / credentials list feeding Person schema",
+        "sameAs links (LinkedIn, GBP, directories)"
+      ],
+      "schema_types": [
+        "AboutPage",
+        "Person",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/method",
+        "/services",
+        "/work",
+        "/contact"
+      ]
+    },
+    {
+      "path": "/contact",
+      "file": "contact.html",
+      "title_tag": "Book a Free Call | Carson Poore Consulting",
+      "meta_description": "Thirty minutes, no pitch, no slides. Tell me what's going on and I'll tell you what I'd do first — including when the answer is 'don't hire me yet.'",
+      "page_type": "utility",
+      "purpose": "Single conversion endpoint for every CTA sitewide; booking link reads tool-result URL params so calls start pre-briefed. Also the local-SEO trust page: GBP map embed and exact NAP.",
+      "key_sections": [
+        "Booking embed/link that accepts ?score= and ?result= params from the tools",
+        "What happens next ('you'll hear back within a day')",
+        "Who this call is for / not for (filters bad fits in voice)",
+        "Exact NAP block matching GBP + embedded GBP map",
+        "Hours and direct email"
+      ],
+      "schema_types": [
+        "ContactPage",
+        "ProfessionalService",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/investment",
+        "/tools/checkup",
+        "/services"
+      ]
+    },
+    {
+      "path": "/work",
+      "file": "work.html",
+      "title_tag": "Client Results & Case Studies | Carson Poore Consulting",
+      "meta_description": "Real clients, real numbers, dated results — one concrete number per story, and the honest context behind it. No logo walls, no placeholder stats.",
+      "page_type": "core",
+      "purpose": "Proof hub organized by ICP cluster; counters the competitor epidemic of logo walls and literal '$0 Billion' placeholder stats with 3-5 honest case studies, each with one named client and one real number. CTA: 'talk to a current client' vetting offer, then free call.",
+      "key_sections": [
+        "Case studies grouped by ICP: a trade/home-services story, a restaurant or retail story, a nonprofit story",
+        "One named client + one real dated number per story (never invented; industry stats with attribution where client numbers don't exist yet)",
+        "Founder-proof bridge note (honest line until startup case studies exist)",
+        "'Talk to a current client' vetting offer",
+        "Per-cluster links into the matching pathway"
+      ],
+      "schema_types": [
+        "CollectionPage",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/for/local-businesses",
+        "/for/founders",
+        "/for/nonprofits",
+        "/services",
+        "/contact"
+      ]
+    },
+    {
+      "path": "/ticket",
+      "file": "ticket.html",
+      "title_tag": "Redeem Your Ticket | Carson Poore Consulting",
+      "meta_description": "You're holding 45 minutes of my full attention on your business. Book your session — no pitch, no slides, just your plan. Pick a time that works and show up.",
+      "page_type": "utility",
+      "purpose": "Existing noindex redemption page for the printed-ticket 45-minute strategy session; rewrite copy to the new voice and keep it out of nav and sitemap.xml. CTA: book the session.",
+      "key_sections": [
+        "Redemption hero in voice",
+        "Booking embed",
+        "What to bring / what happens in 45 minutes",
+        "noindex robots meta retained"
+      ],
+      "schema_types": [
+        "WebPage"
+      ],
+      "links_to": [
+        "/contact",
+        "/method"
+      ]
+    },
+    {
+      "path": "/404",
+      "file": "404.html",
+      "title_tag": "Page Not Found | Carson Poore Consulting",
+      "meta_description": "That page moved or never existed. The useful stuff is one click away: services, pricing, free tools, and a human you can actually email. Or head home.",
+      "page_type": "utility",
+      "purpose": "Recover lost visitors with a short, in-voice apology and a plain list of the five places they probably wanted.",
+      "key_sections": [
+        "One-line apology in voice",
+        "Links: home, services, pricing, tools, contact"
+      ],
+      "schema_types": [
+        "WebPage"
+      ],
+      "links_to": [
+        "/",
+        "/services",
+        "/investment",
+        "/resources",
+        "/contact"
+      ]
+    },
+    {
+      "path": "/services/marketing",
+      "file": "services/marketing.html",
+      "title_tag": "Marketing Services in Indianapolis | Carson Poore Consulting",
+      "meta_description": "Brand, campaigns, content, and email — the practice that makes people notice you and talk about you. Measured in calls and customers, not impressions.",
+      "page_type": "pathway",
+      "primary_keyword": "small business marketing indianapolis",
+      "purpose": "Practice hub for Marketing: brand/messaging, campaigns, content, and email (email folded here rather than a standalone page), routed by client type and anchored in outcomes language since social/paid/email are the first services burned SMBs cut. CTA: free call.",
+      "key_sections": [
+        "Super-display hero + sticky section rail",
+        "What's inside: brand & messaging, campaigns, content, email — each in two plain sentences",
+        "Outcome framing: calls, customers, booked work (never channel-deliverable language)",
+        "Who it's for: three pathway cross-links with one line of pain each",
+        "Child services: local visibility and Ad Grants (with Google Ads cross-practice note)",
+        "How it maps to the five steps",
+        "Proof block + retainer fit",
+        "FAQ with FAQPage schema"
+      ],
+      "schema_types": [
+        "Service",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/services/local-seo",
+        "/services/google-ad-grants",
+        "/services/google-ads",
+        "/for/local-businesses",
+        "/for/nonprofits",
+        "/investment",
+        "/work",
+        "/articles/not-showing-up-on-google",
+        "/contact"
+      ]
+    },
+    {
+      "path": "/services/technical",
+      "file": "services/technical.html",
+      "title_tag": "Technical Practice — AI, Websites, CRM | Carson Poore",
+      "meta_description": "AI agents, automation, websites, GoHighLevel, Google Ads, and analytics — the builds most marketing people can't do, at small-business prices.",
+      "page_type": "pathway",
+      "primary_keyword": "marketing automation consultant",
+      "purpose": "Practice hub for Technical: the differentiator practice no competitor set matches (agencies can't build, AI shops can't do brand), positioned for the sub-$5K buyer OptiWork's $12K floor leaves unserved, human-in-the-loop throughout. CTA: AI Opportunity Finder, then free call.",
+      "key_sections": [
+        "Hero + the five builds as cards (AI automation, CRM/GoHighLevel, websites, Google Ads, analytics)",
+        "'Practical automation at a small-business price' positioning block",
+        "Human-in-the-loop promise in plain words",
+        "Speed-to-lead outcome framing for trades ('every call, text, and form answered in minutes')",
+        "The free tools as proof-of-craft note ('we built these; we build things like them for clients')",
+        "Project vs retainer pricing fit",
+        "FAQ"
+      ],
+      "schema_types": [
+        "Service",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/services/ai-automation",
+        "/services/crm-gohighlevel",
+        "/services/websites",
+        "/services/google-ads",
+        "/services/analytics",
+        "/tools/ai-opportunity-finder",
+        "/for/founders",
+        "/for/local-businesses",
+        "/contact"
+      ]
+    },
+    {
+      "path": "/services/strategy",
+      "file": "services/strategy.html",
+      "title_tag": "Positioning & 90-Day Marketing Plan | Carson Poore",
+      "meta_description": "One engagement, $3,000, about three weeks: positioning, a sharp offer, and a 90-day plan you could run without me. Founders usually start here.",
+      "page_type": "pathway",
+      "primary_keyword": "90-day marketing plan",
+      "purpose": "Practice hub that IS the $3,000 strategy engagement page — the verified market-priced entry offer ($1,500-$3,000+ positioning sprints) and the front door for founders; converts the founder content cluster and the 90-Day Plan Starter tool. CTA: free call to see if it fits; honest 'too early?' self-qualifier filters pre-PMF buyers.",
+      "key_sections": [
+        "Answer-first block: what it is, $3,000, roughly three weeks, what you leave with",
+        "Deliverables list: positioning, ICP ('your people'), offer, first repeatable channel, 90-day plan",
+        "Who it's for: founders first-dollar to ~$2M ARR, owners asking 'what should we do first', pre-retainer step",
+        "'Too early for me?' honest qualifier: pre-PMF homework instead of a retainer",
+        "What happens after: retainer or coaching continuation",
+        "90-Day Plan Starter teaser (the free lightweight version)",
+        "Offer schema with price",
+        "FAQ"
+      ],
+      "schema_types": [
+        "Service",
+        "Offer",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/tools/90-day-plan",
+        "/for/founders",
+        "/services/coaching",
+        "/investment",
+        "/contact"
+      ]
+    },
+    {
+      "path": "/services/coaching",
+      "file": "services/coaching.html",
+      "title_tag": "Fractional CMO in Indianapolis | Carson Poore Consulting",
+      "meta_description": "A fractional CMO who also builds: plan plus hands, $1,200–$4,800 a month — under the $5,000–$15,000 the category charges. Eight clients, total.",
+      "page_type": "pathway",
+      "primary_keyword": "fractional cmo indianapolis",
+      "purpose": "BUILD FIRST: the single best keyword opportunity found (thin, low-quality SERP) and the Coaching & Growth practice hub — fractional CMO / advisory retainer positioned as plan-AND-hands (answering the category's top objection) and never as 'business coaching' (Indy Chamber owns that at free). CTA: free call.",
+      "key_sections": [
+        "Answer-first: what a fractional CMO does here, cost, hours, cadence",
+        "The plan-plus-hands differentiator vs 'gives you the plan but doesn't run the work'",
+        "Comparison table: vs full-time CMO ($175K-$300K+ anchor, cited) and vs agency (clarity vs capacity)",
+        "Who it's for: owners past $500K, founders continuing from the strategy engagement",
+        "What a month looks like (the owner's time cost: one real cadence)",
+        "8-client cap + 3-month structure as founder-friendly terms",
+        "Stage-matched proof, offered before being asked",
+        "FAQ seeded with PAA questions verbatim: what does a fractional CMO do, how many hours, when to hire"
+      ],
+      "schema_types": [
+        "Service",
+        "Offer",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/articles/fractional-cmo-cost",
+        "/articles/fractional-cmo-vs-marketing-agency",
+        "/for/founders",
+        "/for/local-businesses",
+        "/investment",
+        "/contact"
+      ]
+    },
+    {
+      "path": "/services/local-seo",
+      "file": "services/local-seo.html",
+      "title_tag": "Local SEO in Indianapolis | Carson Poore Consulting",
+      "meta_description": "When someone in Indianapolis searches for what you do, you should show up. Google Business Profile, reviews, and local SEO — the highest-trust first win.",
+      "page_type": "service",
+      "primary_keyword": "local seo indianapolis",
+      "purpose": "The lead-with service for local SMBs: the most explainable, highest-trust early win (get found + get reviewed), backed by cited 3-pack and review statistics. CTA: run the free visibility check, then free call.",
+      "key_sections": [
+        "Answer-first promise in trades-customer language ('AC repair in Indianapolis', 'plumber near Greenwood')",
+        "Why it works, cited: 3-pack businesses get 126% more traffic; 40+ reviews at 4.5+ appear 3.7x more often (BrightLocal)",
+        "What I do monthly: GBP, reviews system, citations/NAP cleanup, local pages",
+        "DIY-first honesty: 'don't buy social media management if your Google profile is empty'",
+        "Suburb coverage block naming real towns",
+        "Visibility-tool CTA band",
+        "FAQ"
+      ],
+      "schema_types": [
+        "Service",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/tools/local-visibility",
+        "/for/local-businesses",
+        "/articles/not-showing-up-on-google",
+        "/services/google-ads",
+        "/contact"
+      ]
+    },
+    {
+      "path": "/services/google-ads",
+      "file": "services/google-ads.html",
+      "title_tag": "Google Ads Management in Indianapolis | Carson Poore",
+      "meta_description": "Google Ads run honestly: conversion tracking first, budgets you set, leads you own instead of renting from Angi. Plain monthly reports — calls and booked work.",
+      "page_type": "service",
+      "primary_keyword": "google ads management indianapolis",
+      "purpose": "Win the medium-competition local Ads SERP against out-of-market SEO plays with a genuinely local page; 'own your leads instead of renting them' positioning against Angi-type platforms. CTA: free call (audit-intent 'is my agency wasting my money' welcome).",
+      "key_sections": [
+        "Answer-first: what management includes and costs, spend honesty",
+        "Own vs rent: the Angi/lead-platform comparison, cited carefully",
+        "Conversion tracking + GA4 + call tracking set up from day one",
+        "'When you shouldn't run ads yet' candid section (ads are for scale, not starting)",
+        "Plain monthly report sample: calls, booked jobs, dollars — never impressions",
+        "Local proof",
+        "FAQ"
+      ],
+      "schema_types": [
+        "Service",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/services/analytics",
+        "/services/local-seo",
+        "/for/local-businesses",
+        "/investment",
+        "/contact"
+      ]
+    },
+    {
+      "path": "/services/websites",
+      "file": "services/websites.html",
+      "title_tag": "Websites & Web Apps for Small Businesses | Carson Poore",
+      "meta_description": "Fast, plain-English websites and web apps that load quick, say what you do, and get the phone to ring. You own it all — hosting, domain, every file.",
+      "page_type": "service",
+      "primary_keyword": "web design for small business indianapolis",
+      "purpose": "Targets the softer small-business variant of the HIGH-competition 'web design indianapolis' head term; the ownership promise directly answers the documented burn stories (agencies killing hosting and GBP on cancellation). CTA: free call.",
+      "key_sections": [
+        "Answer-first: what gets built (sites, web apps, landing pages) and typical timelines",
+        "Ownership promise: your domain, your hosting, your files, your GBP — leave anytime and keep it all",
+        "Speed as strategy: static, fast pages (and why AI answer engines favor them)",
+        "Process in plain steps",
+        "Portfolio / proof with real sites",
+        "Honest pricing anchors",
+        "FAQ"
+      ],
+      "schema_types": [
+        "Service",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/work",
+        "/services/analytics",
+        "/services/local-seo",
+        "/for/local-businesses",
+        "/contact"
+      ]
+    },
+    {
+      "path": "/services/ai-automation",
+      "file": "services/ai-automation.html",
+      "title_tag": "AI Agents & Automation for Small Business | Carson Poore",
+      "meta_description": "Practical AI for a five-person business: inbox triage, lead follow-up, scheduling, review requests. One task first, a human in the loop, honest prices.",
+      "page_type": "service",
+      "primary_keyword": "ai automation consultant for small business",
+      "purpose": "The softest national head-term SERP of the four technical services — rankable with one strong page; frames AI as labor relief with the five verifiably-bought use cases and SMB pricing vs the enterprise rankers. CTA: AI Opportunity Finder, then free call.",
+      "key_sections": [
+        "Answer-first with real price ranges (market: $150-$250/hr, $1,500-$6,000 projects, cited)",
+        "The five proven use cases: inbox triage, lead qualification, follow-ups, scheduling, review requests",
+        "Start-with-one-task method ('one task you already do the same way every day')",
+        "'When NOT to hire an AI consultant' candid section (most engagements don't pay off in year one, paraphrased)",
+        "Human-in-the-loop promise",
+        "Indianapolis + nationwide note",
+        "Opportunity Finder CTA band",
+        "FAQ"
+      ],
+      "schema_types": [
+        "Service",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/tools/ai-opportunity-finder",
+        "/articles/ai-agents-for-small-business",
+        "/services/crm-gohighlevel",
+        "/for/founders",
+        "/for/local-businesses",
+        "/contact"
+      ]
+    },
+    {
+      "path": "/services/crm-gohighlevel",
+      "file": "services/crm-gohighlevel.html",
+      "title_tag": "GoHighLevel Consultant & CRM Setup | Carson Poore",
+      "meta_description": "GoHighLevel set up so it actually gets used: pipelines, missed-call text-back, reminders, review requests. Setup that sticks, with a human who answers.",
+      "page_type": "service",
+      "primary_keyword": "gohighlevel consultant",
+      "purpose": "National service page (no geo in title) for GHL setup and CRM implementation — 'gohighlevel consultant indianapolis' has essentially zero dedicated competition and the weak 'CRM implementation small business' SERP needs no supporting cluster; the home-services section wires national technical content into the local trades pathway. CTA: free call.",
+      "key_sections": [
+        "Answer-first: what a GoHighLevel consultant does and what setup costs (market: $300-$5,000+, cited)",
+        "'Everything starts blank' — the pain this fixes",
+        "The three automations that do 80% of the work: missed-call text-back, appointment reminders, review requests",
+        "Home-services section linking to the trades pathway",
+        "Consolidation math, cited: replacing 5-8 tools; GHL ~$3,564/yr vs HubSpot ~$14,880/yr at 5,000 contacts",
+        "Timeline honesty: days to functional, weeks to humming",
+        "'When GHL is not worth it' (solos under ~50 leads)",
+        "FAQ"
+      ],
+      "schema_types": [
+        "Service",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/articles/is-gohighlevel-worth-it",
+        "/for/local-businesses",
+        "/services/ai-automation",
+        "/services/analytics",
+        "/contact"
+      ]
+    },
+    {
+      "path": "/services/analytics",
+      "file": "services/analytics.html",
+      "title_tag": "GA4 & Conversion Tracking Help | Carson Poore",
+      "meta_description": "GA4 set up so the numbers mean something: conversion tracking, call tracking, and a one-page report an owner can read. Fixed prices, no retainer required.",
+      "page_type": "service",
+      "primary_keyword": "ga4 consultant",
+      "purpose": "National service page price-anchored against the published $699-$2,000 GA4 setup market; also serves nonprofit board-dashboard demand. CTA: free call.",
+      "key_sections": [
+        "Answer-first with price anchor vs the cited setup market",
+        "The four documented causes of broken tracking (events not marked as key events, GTM placement, ad blockers, attribution confusion)",
+        "What gets instrumented: conversions, calls, forms, offline where possible",
+        "The one-page owner report (plain English, monthly)",
+        "Board-ready dashboards for nonprofits",
+        "FAQ"
+      ],
+      "schema_types": [
+        "Service",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/services/google-ads",
+        "/services/crm-gohighlevel",
+        "/for/nonprofits",
+        "/contact"
+      ]
+    },
+    {
+      "path": "/services/google-ad-grants",
+      "file": "services/google-ad-grants.html",
+      "title_tag": "Google Ad Grants Management for Nonprofits | Carson Poore",
+      "meta_description": "Your nonprofit can run $10,000 a month in free Google ads. Most orgs that have the grant use about $300 of it. Setup, compliance, and a free checkup.",
+      "page_type": "service",
+      "primary_keyword": "google ad grant management indianapolis",
+      "purpose": "The nonprofit wedge service: hero offer of the nonprofit pathway and a LOW-MEDIUM competition local keyword; the free Ad Grant checkup is the lowest-risk entry point in the whole site. CTA: free Ad Grant checkup.",
+      "key_sections": [
+        "Answer-first: $10K/month exists; average self-managed account uses ~$300 of it (Getting Attention, cited)",
+        "Free Ad Grant checkup CTA: eligible? active? suspended? how much used last month?",
+        "Compliance in plain words: the 5% click rule, monthly login, why accounts get shut off",
+        "Managed vs unmanaged reality (~$8,650/month managed average, attributed as industry-reported)",
+        "Serves donors AND volunteers (recruitment angle)",
+        "Mission-rate note + capacity-grant fundability pointer",
+        "'Faith-based and community organizations welcome — eligibility verified during the checkup'",
+        "FAQ"
+      ],
+      "schema_types": [
+        "Service",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/for/nonprofits",
+        "/articles/nonprofit-google-ad-grant",
+        "/services/analytics",
+        "/contact"
+      ]
+    },
+    {
+      "path": "/for/local-businesses",
+      "file": "for/local-businesses.html",
+      "title_tag": "Marketing for Indianapolis Local Businesses | Carson Poore",
+      "meta_description": "The work is good and word of mouth built you — but the phone's gone quiet. Plain prices, no long contracts, and reports that count booked jobs, not likes.",
+      "page_type": "client",
+      "primary_keyword": "marketing for home services indianapolis",
+      "purpose": "Dedicated pathway for trades, home services, restaurants, retail, and salons, built on the first-100-words spec: name the situation, acknowledge the agency scar, state the difference in one sentence, promise one concrete outcome. CTA: free call; secondary: visibility check.",
+      "key_sections": [
+        "First-100-words hero: quiet phone, competitor showing up first, the scar, the difference (published prices, 3 months then month-to-month, 8 clients, one person who answers), one outcome promise",
+        "Vertical H2 blocks with swapped pain language: HVAC/plumbing/trades, restaurants, retail & salons",
+        "Top-5 objections answered inline: burned before, can't tell if it works, price (percent-of-revenue + vs renting Angi leads), no time (30 min/month), 'you won't get my business'",
+        "Services in lead order: local visibility, speed-to-lead automation (never named GoHighLevel), Google Ads done honestly, done-for-you consistency",
+        "Inline pricing table (not behind a call)",
+        "'What you keep if you leave' list",
+        "Neighborhood/suburb ticker (Broad Ripple, Carmel, Fountain Square, Greenwood...)",
+        "Local proof + 'talk to a current client' offer",
+        "FAQ incl. exclusivity: the 8-client cap means roughly one per trade per territory"
+      ],
+      "schema_types": [
+        "WebPage",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/services/local-seo",
+        "/services/google-ads",
+        "/services/crm-gohighlevel",
+        "/services/ai-automation",
+        "/tools/local-visibility",
+        "/tools/checkup",
+        "/investment",
+        "/work",
+        "/articles/not-showing-up-on-google",
+        "/contact"
+      ]
+    },
+    {
+      "path": "/for/founders",
+      "file": "for/founders.html",
+      "title_tag": "Marketing Help for Founders & Startups | Carson Poore",
+      "meta_description": "You built the thing. Now let's get it to people. Positioning, a first repeatable channel, and a playbook you can hand to your first hire — from one strategist.",
+      "page_type": "client",
+      "primary_keyword": "startup marketing consultant",
+      "purpose": "Pathway for pre-seed to seed and bootstrapped founders: lead with distribution pain and the founder-led-sales ceiling, frame CPC as the anti-agency (owns outcomes, not deliverables), with the $3,000 strategy engagement as entry and coaching as continuation. CTA: free call; the 'too early?' candor is the conversion mechanism.",
+      "key_sections": [
+        "Distribution-pain hero ('I built it and nobody came' territory)",
+        "Explicit stage definition: first dollar to ~$2M ARR; the founder-led-sales ceiling (closing 70-80% yourself, 15+ hrs/week)",
+        "Anti-agency framing: outcomes vs deliverables; the 8-client cap as structural proof of attention",
+        "The path: $3,000 strategy sprint → fractional CMO retainer at $1,200-$4,800 (under the $5K-$15K category floor)",
+        "'Are we too early?' honest qualifier: pre-PMF, don't buy ads or a retainer — here's the homework",
+        "Technical differentiator: your strategist also builds (lead qualification, outreach automation, onboarding, GA4)",
+        "Indy ecosystem nod without affiliation claims: High Alpha, gBETA Indiana, Elevate Ventures, TechPoint — plus 'works anywhere' for remote",
+        "Stage-matched proof with honest bridge from local/nonprofit results",
+        "Method translated to founder language",
+        "FAQ"
+      ],
+      "schema_types": [
+        "WebPage",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/services/strategy",
+        "/services/coaching",
+        "/services/ai-automation",
+        "/services/analytics",
+        "/tools/90-day-plan",
+        "/articles/fractional-cmo-cost",
+        "/articles/fractional-cmo-vs-marketing-agency",
+        "/contact"
+      ]
+    },
+    {
+      "path": "/for/nonprofits",
+      "file": "for/nonprofits.html",
+      "title_tag": "Marketing for Nonprofits in Indianapolis | Carson Poore",
+      "meta_description": "For the ED wearing five hats: Ad Grants, email, donor data you can trust, and stories people understand. A reduced nonprofit rate — because the work matters.",
+      "page_type": "client",
+      "primary_keyword": "nonprofit marketing indianapolis",
+      "purpose": "Pathway for the hat-stacking ED/development director: reframe marketing spend as mission delivery with a line they can repeat to the board, lead with the Ad Grant checkup, and present the reduced rate as respect, not charity. CTA: 'talk it through with Carson' (conversation, never proposal).",
+      "key_sections": [
+        "Hat-stacker empathy open ('marketing falls to whoever has ten spare minutes')",
+        "Board-overhead reframe: one quotable sentence for the board (more donors found, more volunteers recruited, more people served)",
+        "Hero offer: free Ad Grant checkup — $10,000/month exists, most orgs use ~$300",
+        "Service stack in order: Ad Grants, email + donor CRM cleanup ('one list everyone trusts'), storytelling/case for support, GA4 board dashboards",
+        "Volunteer recruitment as co-equal section (75% of orgs depend on volunteers; declining volunteerism, cited)",
+        "Mission-rate block: same scope, same cap, same 3-month minimum — 'because the budgets are smaller and the work matters'",
+        "'This may already be fundable': United Way of Central Indiana Capacity Fund (up to $50K), community foundations in all 92 counties; offer to help write the capacity-grant case",
+        "Sector fluency shown in copy: lapsed donors, stewardship, restricted funds, GivingTuesday",
+        "Sparse verified stats, attributed: donors down 3.6% while dollars rose (FEP), ~28.6% email open rate (M+R)",
+        "FAQ"
+      ],
+      "schema_types": [
+        "WebPage",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/services/google-ad-grants",
+        "/services/analytics",
+        "/services/marketing",
+        "/tools/checkup",
+        "/articles/nonprofit-google-ad-grant",
+        "/investment",
+        "/contact"
+      ]
+    },
+    {
+      "path": "/resources",
+      "file": "resources.html",
+      "title_tag": "Free Tools & Honest Articles | Carson Poore Consulting",
+      "meta_description": "Five free tools — no email, no login, nothing to download — plus plain-English articles with real numbers. Use them, share them, no pitch inside.",
+      "page_type": "hub",
+      "purpose": "The resources hub: one linkable, shareable index of all five ungated tools and all seven articles; the ungated stance stated loudly is the differentiator against gated competitors. CTA: soft free-call link only.",
+      "key_sections": [
+        "'Free. No email. No login.' banner",
+        "Tools grid: five cards with one-line descriptions",
+        "Articles list with dates, bylines, and last-updated stamps",
+        "'We built these — we build things like them for clients' proof-of-craft note",
+        "Quiet contact CTA"
+      ],
+      "schema_types": [
+        "CollectionPage",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/tools/checkup",
+        "/tools/local-visibility",
+        "/tools/ai-opportunity-finder",
+        "/tools/marketing-budget",
+        "/tools/90-day-plan",
+        "/articles/fractional-cmo-cost",
+        "/articles/fractional-cmo-vs-marketing-agency",
+        "/articles/is-gohighlevel-worth-it",
+        "/articles/ai-agents-for-small-business",
+        "/articles/not-showing-up-on-google",
+        "/articles/small-business-marketing-budget",
+        "/articles/nonprofit-google-ad-grant",
+        "/contact"
+      ]
+    },
+    {
+      "path": "/tools/checkup",
+      "file": "tools/checkup.html",
+      "title_tag": "The Five-Step Marketing Check-Up | Carson Poore",
+      "meta_description": "Ten questions, two minutes, no email. Score your marketing against the five steps and find the weakest one — the thing quietly dragging down the rest.",
+      "page_type": "magnet",
+      "purpose": "Flagship magnet (linked from home hero and nav): a 10-question scored self-assessment teaching the five-step method while scoring it; all client types, business/nonprofit toggle. CTA: 'bring your score to a free call — 30 minutes on your weakest step', score passed to /contact as URL param.",
+      "key_sections": [
+        "Start screen: 'Free. No email. Results in 60 seconds.' + business/nonprofit toggle",
+        "10 questions (2 per method step), one per screen, progress bar, 1-4 'that's us / not yet' scale",
+        "Result: 0-100 score + plainspoken stage name ('Solid footing', 'One weak link', 'Starting fresh')",
+        "Five-bar per-step breakdown",
+        "Weakest-step callout in plain words ('Your offer isn't sharp enough for word of mouth to work with')",
+        "Single CTA tied to the result; localStorage save; pure client-side JS"
+      ],
+      "schema_types": [
+        "WebPage",
+        "WebApplication",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/method",
+        "/contact",
+        "/services"
+      ]
+    },
+    {
+      "path": "/tools/local-visibility",
+      "file": "tools/local-visibility.html",
+      "title_tag": "Can Indianapolis Find You? Free Visibility Check",
+      "meta_description": "An 18-point self-audit of your Google Business Profile, reviews, and website basics. Live grade, plain fixes, no email — see why Indianapolis can't find you.",
+      "page_type": "magnet",
+      "primary_keyword": "google business profile checklist",
+      "purpose": "Local-SMB magnet modeled on the proven GBP-audit-tool pattern; doubles as a local-SEO landing surface since Indianapolis keywords live here naturally. CTA: 'still not showing up, or don't want to do the fixes yourself? We'll look at your listing together, live.'",
+      "key_sections": [
+        "16-18 interactive check items in four groups: GBP completeness, reviews & replies, website/NAP basics, being-found extras",
+        "Per-item 'check this in 2 minutes' expander + fix-it-yourself note",
+        "Live letter-grade score, localStorage so owners can return",
+        "Top-3 highest-impact unchecked items callout",
+        "CTA tied to result; result summary passed to booking link"
+      ],
+      "schema_types": [
+        "WebPage",
+        "WebApplication",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/services/local-seo",
+        "/for/local-businesses",
+        "/articles/not-showing-up-on-google",
+        "/contact"
+      ]
+    },
+    {
+      "path": "/tools/ai-opportunity-finder",
+      "file": "tools/ai-opportunity-finder.html",
+      "title_tag": "AI Opportunity Finder — What to Automate First",
+      "meta_description": "Pick your business type, check the tasks you still do by hand, set your hours. Get your best first automation, named — and your own time played back to you.",
+      "page_type": "magnet",
+      "primary_keyword": "what to automate first",
+      "purpose": "Technical-practice magnet and proof-of-craft: the 'what to build first' verdict pattern, with the visitor's own hours played back (no fabricated savings claims). CTA: 'book a call and we'll scope your first build in 30 minutes — you leave with the plan either way.'",
+      "key_sections": [
+        "Business-type picker: trades / restaurant / retail / professional services / nonprofit / startup",
+        "Hand-task checklist (chasing quotes, answering the same questions, follow-up texts, review requests, rekeying data, scheduling) with hours-per-week sliders",
+        "Output: tasks ranked easiest-to-automate first + 'that's ~X hours a month, by your numbers'",
+        "Plain verdict per task: an agent, an automation, or just a better-connected CRM",
+        "Single CTA tied to the named first automation"
+      ],
+      "schema_types": [
+        "WebPage",
+        "WebApplication",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/services/ai-automation",
+        "/services/crm-gohighlevel",
+        "/articles/ai-agents-for-small-business",
+        "/contact"
+      ]
+    },
+    {
+      "path": "/tools/marketing-budget",
+      "file": "tools/marketing-budget.html",
+      "title_tag": "Marketing Budget Calculator | Carson Poore Consulting",
+      "meta_description": "Revenue in, a defensible monthly range out — built on SBA and Gartner benchmarks, math shown. Ends the 'am I overpaying?' spiral in about a minute.",
+      "page_type": "magnet",
+      "primary_keyword": "marketing budget calculator",
+      "purpose": "Pricing pre-frame magnet linked from /investment: two inputs return a sourced monthly range and quietly map it onto the published tiers so discovery calls skip sticker shock. CTA: 'the number is the easy part — a free call gets you a first-pass allocation.'",
+      "key_sections": [
+        "Two inputs: annual revenue + stage (getting started / growing / steady)",
+        "Sourced output: SBA 7-8% under $5M, stage bands ~10-20% / 7-10% / 4-7%, Gartner 7.7% as context — all cited on-page with the math shown",
+        "Tier mapping line: 'for a business doing $400K, a healthy range is $2,300-$3,300/month — the $2,400 tier sits inside it'",
+        "Nonprofit toggle applying the reduced-rate note",
+        "Single CTA; result passed to booking link"
+      ],
+      "schema_types": [
+        "WebPage",
+        "WebApplication",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/investment",
+        "/articles/small-business-marketing-budget",
+        "/contact"
+      ]
+    },
+    {
+      "path": "/tools/90-day-plan",
+      "file": "tools/90-day-plan.html",
+      "title_tag": "90-Day Plan Starter — Free One-Page Builder",
+      "meta_description": "One goal, one audience, one offer, two channels, a weekly rhythm — a printable 90-day plan on a single page. Proof a real plan doesn't need 40 slides.",
+      "page_type": "magnet",
+      "primary_keyword": "90 day marketing plan template",
+      "purpose": "The most direct on-ramp to the $3,000 strategy engagement: a guided form mirroring the five steps that assembles a printable one-page plan (window.print, copy-to-clipboard, no backend). Handoff lives in the plan's own footer: 'this is the starter — the full version is the $3,000 strategy engagement.'",
+      "key_sections": [
+        "Guided form: one goal, the one audience it serves, the offer, two channels you'll actually keep up with, a weekly rhythm",
+        "Live one-page plan preview structured on the five steps",
+        "Print-to-PDF and copy actions",
+        "Plan footer + result screen handoff to the strategy engagement",
+        "'A free call tells you whether it's worth it for you' CTA"
+      ],
+      "schema_types": [
+        "WebPage",
+        "WebApplication",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/services/strategy",
+        "/method",
+        "/for/founders",
+        "/contact"
+      ]
+    },
+    {
+      "path": "/articles/fractional-cmo-cost",
+      "file": "articles/fractional-cmo-cost.html",
+      "title_tag": "What Does a Fractional CMO Cost? Real 2026 Numbers",
+      "meta_description": "Market rates run $3,000–$15,000 a month for 10–20 hours a week. Mine are $1,200–$4,800, published. Here's where the money goes and when it's not worth it.",
+      "page_type": "article",
+      "primary_keyword": "what does a fractional cmo cost",
+      "purpose": "Highest-demand question in the research: answer with a number in sentence one, cite the market ranges, publish Carson's own rates as the citable data point, and include a 'when it's not worth it' section. Quiet CTA to /services/coaching.",
+      "key_sections": [
+        "Direct answer in first 40-70 words with real numbers",
+        "Honest market ranges, cited (MarketerHire, Chief Outsiders, Kalungi): $3K-$15K/mo, $150-$350/hr, 10-20 hrs/week",
+        "Carson's published pricing and why it sits under the floor",
+        "Full-time comparison anchor: $175K-$300K+",
+        "'When a fractional CMO is not worth it' candor section",
+        "Byline → /about, visible last-updated date",
+        "FAQ block with PAA questions verbatim (FAQPage schema)"
+      ],
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/services/coaching",
+        "/investment",
+        "/articles/fractional-cmo-vs-marketing-agency"
+      ]
+    },
+    {
+      "path": "/articles/fractional-cmo-vs-marketing-agency",
+      "file": "articles/fractional-cmo-vs-marketing-agency.html",
+      "title_tag": "Fractional CMO vs. Marketing Agency: Which One?",
+      "meta_description": "One buys clarity, the other buys capacity. From someone who's been both: which your business needs first, what each costs, and the questions that decide it.",
+      "page_type": "article",
+      "primary_keyword": "fractional cmo vs marketing agency",
+      "purpose": "Table-stakes comparison query (8+ dedicated ranking pages) with the one credible unique angle — 'I've been both, and I'm both' — plus an honest 'when an agency is the right call' section. Quiet CTA to /services/coaching.",
+      "key_sections": [
+        "Direct answer: the clarity-vs-capacity frame in the first two sentences",
+        "Comparison table (AI engines extract tables cleanly): cost, ownership of outcomes, who does the work",
+        "The 'plan but no hands' objection and the one-person-both answer",
+        "When an agency genuinely wins (candid trade-offs)",
+        "Decision questions to ask either one",
+        "Byline, last-updated, FAQ block"
+      ],
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/services/coaching",
+        "/for/founders",
+        "/articles/fractional-cmo-cost"
+      ]
+    },
+    {
+      "path": "/articles/is-gohighlevel-worth-it",
+      "file": "articles/is-gohighlevel-worth-it.html",
+      "title_tag": "Is GoHighLevel Worth It? What It Really Costs to Run",
+      "meta_description": "Short answer: yes if you're replacing five-plus tools, no for most solos. Real costs — $97–$497 a month plus usage fees — and who should skip it.",
+      "page_type": "article",
+      "primary_keyword": "is gohighlevel worth it",
+      "purpose": "Winnable worth-it SERP held by small independent sites: conditional yes/no in the first two sentences, the full cost math including usage fees, and a who-should-skip-it section. Quiet CTA to /services/crm-gohighlevel.",
+      "key_sections": [
+        "Conditional answer in first two sentences",
+        "Total cost of running it: $97-$497/mo plans + $30-$300 usage, cited",
+        "Consolidation math: ~$3,564/yr vs HubSpot ~$14,880/yr at 5,000 contacts, cited",
+        "Who should skip it (solos under ~50 leads/month)",
+        "Setup reality: days to functional, weeks to humming",
+        "Byline, last-updated, FAQ block"
+      ],
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/services/crm-gohighlevel",
+        "/for/local-businesses"
+      ]
+    },
+    {
+      "path": "/articles/ai-agents-for-small-business",
+      "file": "articles/ai-agents-for-small-business.html",
+      "title_tag": "How to Use AI Agents in a Small Business",
+      "meta_description": "Start with one task you already do the same way every day. The five jobs AI agents reliably handle in small businesses, what setup costs, and what to skip.",
+      "page_type": "article",
+      "primary_keyword": "how to use ai agents in a small business",
+      "purpose": "Beats the generic listicles ranking for this question cluster with a concrete practitioner walkthrough of the five proven use cases and honest costs; the caution stat is paraphrased, never the unverified $28K number. Quiet CTA to /services/ai-automation and the Opportunity Finder.",
+      "key_sections": [
+        "Direct how-to answer first: one repeatable task, human on final approval, tools you already use",
+        "The five use cases walked through with concrete small-business examples",
+        "What setup costs, cited ranges ($1,500-$6,000 projects; $150-$250/hr)",
+        "'Most AI engagements fail to pay off in year one' paraphrased caution + how to avoid it",
+        "What to skip entirely",
+        "Byline, last-updated, FAQ block"
+      ],
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/services/ai-automation",
+        "/tools/ai-opportunity-finder"
+      ]
+    },
+    {
+      "path": "/articles/not-showing-up-on-google",
+      "file": "articles/not-showing-up-on-google.html",
+      "title_tag": "Why Isn't My Business Showing Up on Google?",
+      "meta_description": "Usually one of five fixable things: an empty Business Profile, too few recent reviews, mismatched name-address-phone, a slow site, or no local words on it.",
+      "page_type": "article",
+      "primary_keyword": "why is my business not showing up on google",
+      "purpose": "The highest-intent problem-first local query: five causes with two-minute self-checks, 'do these free fixes before paying anyone' candor, and a handoff to the visibility tool for the full audit. Quiet CTA to /services/local-seo.",
+      "key_sections": [
+        "Direct answer listing the five causes in the first 40-70 words",
+        "Each cause with a 2-minute self-check and a free fix",
+        "Cited local stats (BrightLocal: 3-pack traffic, review thresholds)",
+        "'Do this before you pay anyone' section",
+        "Visibility-tool handoff band",
+        "Byline, last-updated, FAQ block"
+      ],
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/services/local-seo",
+        "/tools/local-visibility",
+        "/for/local-businesses"
+      ]
+    },
+    {
+      "path": "/articles/small-business-marketing-budget",
+      "file": "articles/small-business-marketing-budget.html",
+      "title_tag": "How Much Should a Small Business Spend on Marketing?",
+      "meta_description": "A working rule: 7–8% of gross revenue if you're under $5M, per the SBA. What that means in dollars at $300K, $500K, and $1M — and where it should go first.",
+      "page_type": "article",
+      "primary_keyword": "how much should a small business spend on marketing",
+      "purpose": "Benchmark question answered with sourced statistics (GEO: +41% visibility from statistics) and dollar tables by revenue; pre-frames the published tiers and hands off to the budget calculator. Quiet CTA to /investment.",
+      "key_sections": [
+        "Number in sentence one: SBA 7-8% under $5M, cited; Gartner 7.7% and stage bands as context",
+        "Dollar table at $300K / $500K / $1M revenue",
+        "Where the first dollars should go (and what not to buy yet)",
+        "Renting leads vs owning your pipeline cost comparison",
+        "Calculator handoff band",
+        "Byline, last-updated, FAQ block"
+      ],
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/tools/marketing-budget",
+        "/investment",
+        "/for/local-businesses"
+      ]
+    },
+    {
+      "path": "/articles/nonprofit-google-ad-grant",
+      "file": "articles/nonprofit-google-ad-grant.html",
+      "title_tag": "The $10,000 a Month Your Nonprofit Isn't Spending",
+      "meta_description": "The Google Ad Grant gives verified nonprofits $10,000 a month in free search ads. Most orgs use about $300 of it. How to get it, keep it, and spend it well.",
+      "page_type": "article",
+      "primary_keyword": "google ad grants for nonprofits",
+      "purpose": "The natural lead-in for the nonprofit pathway and the 'Google Ad Grant Indianapolis' SEO play: what the grant is, the utilization gap, eligibility, and the compliance traps in plain words. Quiet CTA: the free Ad Grant checkup on /services/google-ad-grants.",
+      "key_sections": [
+        "Answer-first: what the grant is and the ~$300-of-$10,000 gap, cited",
+        "Eligibility and application in plain steps (faith-based nuance handled honestly)",
+        "The compliance traps: 5% CTR rule, monthly login, conversion tracking — why accounts get suspended",
+        "Managed vs unmanaged, attributed as industry-reported",
+        "What to spend it on: donors, volunteers, program awareness",
+        "Free checkup handoff band",
+        "Byline, last-updated, FAQ block"
+      ],
+      "schema_types": [
+        "Article",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "links_to": [
+        "/services/google-ad-grants",
+        "/for/nonprofits"
+      ]
+    }
+  ],
+  "messaging_map": {
+    "master_narrative": "Carson Poore Consulting is one strategist in Indianapolis who plans the work and then builds it. For years the site said 'marketing agency'; the truth is simpler and bigger: a growth consultancy with four practices — marketing, technical, strategy, and coaching — for local businesses, founders, and nonprofits across central Indiana, and anywhere for the technical and coaching work. The model is the message: prices published on the site ($1,200, $2,400, or $4,800 a month, a $3,000 one-time strategy engagement, a reduced nonprofit rate), eight clients total, three months minimum then month to month, and you keep everything — your site, your Google profile, your ad accounts — if you leave. Indianapolis agencies have moved upmarket, AI shops can't do brand, and fractional CMOs hand you a plan without hands; Carson sits in the intersection none of them occupy, runs every engagement through five plain-English steps (Conviction, Your people, A sharp offer, The experience, Word of mouth), and talks like the candid friend who happens to be a strategist: he'll tell you what not to buy, when you're too early, and exactly what a month of work gets you.",
+    "practice_oneliner": {
+      "marketing": "Brand, campaigns, content, and email that make the right people notice you and talk about you — measured in calls, customers, and booked work, not impressions.",
+      "technical": "The builds most marketing people can't do — AI agents and automation, websites and web apps, GoHighLevel and CRM, Google Ads, GA4 — practical, human-in-the-loop, and priced for small businesses.",
+      "strategy": "A $3,000, one-time engagement: your positioning, your people, a sharp offer, and a 90-day plan you could run without me — the answer to 'what should we do first?'",
+      "coaching": "A fractional CMO for owners and founders at $1,200–$4,800 a month — under the $5,000–$15,000 the category charges, with the plan and the hands in one person."
+    },
+    "icp_messages": {
+      "local_smb": "Word of mouth built your business; it just stopped scaling. When Indianapolis searches for what you do, you'll show up — and every call, text, and form gets answered in minutes. Published prices, three months then month to month, monthly reports that count calls and booked jobs, and you keep everything if you ever leave. I'll also tell you what not to buy — starting with ads you're not ready for.",
+      "founders": "You built the thing; now we get it to people. Start with the $3,000 strategy engagement — positioning, who it's actually for, a first repeatable channel — then keep me on as a fractional CMO at well under category rates. I think like an owner, own outcomes instead of deliverables, and build the automation too. If you're pre-product-market fit, I'll say so and send you off with homework instead of a retainer.",
+      "nonprofits": "You're wearing five hats and marketing falls to whoever has ten spare minutes. Start with a free Ad Grant checkup — Google offers verified nonprofits $10,000 a month in free ads, and most orgs use about $300 of it — then one donor list everyone trusts, stories people understand, and numbers your board can read. The nonprofit rate isn't charity: the budgets are smaller and the work matters. A capacity-building grant may even cover it."
+    },
+    "differentiators": [
+      "Published pricing on the site — 12 of 13 competitors reviewed make you book a call to hear a number.",
+      "Eight clients, total: a person, not a pod — the structural opposite of the 6,000-brand outsourced-CMO volume model.",
+      "One person, four practices: the strategist who writes the plan also builds the automation, the site, and the ad account. Indy agencies don't build, AI shops don't do brand, fractional CMOs don't implement — the intersection is empty.",
+      "Actually in Indianapolis: the local SERP is held by out-of-state template farms; real neighborhoods, real local clients, one exact NAP everywhere.",
+      "Five plain-English steps, deliberately untrademarked — the candid counter to Growth Gears®, BRAVE™, and the framework soup.",
+      "Candor as policy: what not to buy, when you're too early, and 'three months minimum, because real change takes that long' instead of fake no-contract promises.",
+      "You keep everything if you leave — site, Google Business Profile, ad accounts, data — which pre-answers the burn stories this market carries.",
+      "Five ungated, instantly-scored free tools (no email, no login) that double as working proof of the technical practice."
+    ]
+  },
+  "nav_structure": "TOP NAV (6 items + CTA, identical sitewide, sentence case): [1] Services → /services, with dropdown: Marketing (/services/marketing), Technical (/services/technical), Strategy (/services/strategy), Coaching (/services/coaching), All services (/services). [2] Who I help → links to /#who-i-help (the home pathway cards — real href so it works without JS), with dropdown: Local businesses (/for/local-businesses), Founders & startups (/for/founders), Nonprofits (/for/nonprofits). [3] Method → /method. [4] Pricing → /investment. [5] Work → /work. [6] Resources → /resources. CTA button (persistent, right side): 'Book a free call' → /contact. Mobile: same six + CTA in the existing disclosure menu; dropdowns render as plain nested lists. Dropdowns are keyboard-accessible (focus-within), never hover-only. /about, /ticket, and 404 stay out of the top nav. Current nav items 'Home/About/Contact' drop out of the bar (brand mark = home; About moves to footer + bylines; Contact is the CTA). FOOTER (identical sitewide — this is where the 36-page depth lives): Col 1 'Services': the four practices, then the seven service pages grouped under their practice (Local SEO, Google Ads, Websites & web apps, AI agents & automation, GoHighLevel & CRM, GA4 & analytics, Google Ad Grants). Col 2 'Who I help': Local businesses, Founders & startups, Nonprofits, Client results (/work). Col 3 'Free tools': all five tools + 'All tools & articles' (/resources), each tagged 'no email required'. Col 4 'Articles': all seven article titles (keeps every article one click from every page for crawl + AEO freshness). Col 5 'Company': About, Method, Pricing, Contact, Client requests (/ticket). BOTTOM BAR: exact-match NAP string (identical to GBP/Bing Places, one canonical format), the towns line ('Serving Indianapolis, Carmel, Fishers, Zionsville, Noblesville, Westfield, Greenwood, Brownsburg, Avon, and all of central Indiana — technical and coaching work nationwide'), sameAs icon links (LinkedIn, Google Business Profile), and the © line. Breadcrumbs: visible breadcrumb + BreadcrumbList schema on every page below the top level (services/*, for/*, tools/*, articles/*).",
+  "magnet_shortlist": [
+    "The Five-Step Check-Up | 10-question scored quiz, one question per screen, 0–100 score + stage name + per-step bars, business/nonprofit toggle, pure client-side JS | All three ICPs — flagship magnet, linked from home hero and the Resources nav | Which of the five method steps is your weakest — the one quietly dragging the other four down | Result names the weak step in plain words; single CTA 'Bring your score to a free call — we'll spend 30 minutes on your weakest step,' score passed to /contact as a URL param so the call starts pre-briefed",
+    "Can Indianapolis Find You? | 18-item interactive visibility self-audit (GBP completeness, reviews, NAP/website, extras) with live letter grade, 2-minute check expanders, fix-it-yourself notes, localStorage resume | Local SMBs — trades, home services, restaurants, retail | A visibility grade plus the three highest-impact unchecked fixes, teaching that most misses are free to fix | 'Checked everything and still not showing up — or don't want to do the fixes yourself? Book 30 minutes and we'll look at your listing together, live'",
+    "The AI Opportunity Finder | Business-type picker + hand-task checklist + hours-per-week sliders → tasks ranked easiest-to-automate, with the visitor's own hours totaled back (no fabricated savings) | Local SMBs + founders; feeds the Technical practice and doubles as proof-of-craft | Your single best first automation, named, with a plain verdict per task: an agent, an automation, or just a better-connected CRM | 'The build is usually simpler than people expect. Book a call and we'll scope your first one in 30 minutes — you leave with the plan either way'",
+    "What Should Marketing Cost? | 2-input calculator (annual revenue + stage) returning a sourced monthly range — SBA 7–8% under $5M, stage bands, Gartner 7.7% context — with the math shown and a nonprofit toggle | Local SMBs + founders in the pricing-anxiety research stage; linked from /investment | A defensible dollar range for their actual revenue, quietly mapped onto the published tiers ('$400K → $2,300–$3,300/month; the $2,400 tier sits inside it') — ends the 'am I being ripped off?' spiral | 'The number is the easy part — where it goes is the work. A free call gets you a first-pass allocation for your range'",
+    "90-Day Plan Starter | Guided form (one goal, one audience, the offer, two channels you'll keep up with, a weekly rhythm) assembling a printable one-page plan; window.print + copy-to-clipboard, no backend | Founders & startups primarily; strategy-curious owners and nonprofits secondarily; linked from /services/strategy | A real, dated, honest-sized plan fits on one page — a lightweight version of the paid deliverable, structured on the five steps | Plan footer + result screen: 'This is the starter. The full version — your positioning, offer math, and the plan pressure-tested — is the $3,000 strategy engagement. A free call tells you whether it's worth it for you'"
+  ],
+  "article_shortlist": [
+    "What Does a Fractional CMO Cost? Real 2026 Numbers | what does a fractional cmo cost | Number in sentence one: market runs $3,000–$15,000/month for 10–20 hrs/week (cited); Carson publishes his own $1,200–$4,800 rates as the citable data point, explains where the money goes, and says plainly when it's not worth it",
+    "Fractional CMO vs. Marketing Agency: Which One? | fractional cmo vs marketing agency | The clarity-vs-capacity frame answered in two sentences by someone who's been both — comparison table, honest 'when an agency wins' section, and the unique 'I'm both: plan plus hands' claim",
+    "Is GoHighLevel Worth It? What It Really Costs to Run | is gohighlevel worth it | Conditional yes/no up front: yes for service businesses replacing 5+ tools, no for most solos — full cost math ($97–$497/mo plus $30–$300 usage, GHL ~$3,564/yr vs HubSpot ~$14,880/yr at 5,000 contacts, cited) and who should skip it",
+    "How to Use AI Agents in a Small Business | how to use ai agents in a small business | The method in the first 50 words — start with one task you do the same way every day, keep a human on final approval — then the five proven use cases with real setup costs and a paraphrased most-engagements-don't-pay-off caution",
+    "Why Isn't My Business Showing Up on Google? | why is my business not showing up on google | Five fixable causes named immediately (empty GBP, few recent reviews, mismatched NAP, slow site, no local words), each with a 2-minute self-check and free fix — 'do these before you pay anyone,' then the visibility tool for the full audit",
+    "How Much Should a Small Business Spend on Marketing? | how much should a small business spend on marketing | SBA's 7–8% rule in sentence one with Gartner and stage-band context (all cited), dollar tables at $300K/$500K/$1M, renting-vs-owning-leads comparison, and a handoff to the budget calculator",
+    "The $10,000 a Month Your Nonprofit Isn't Spending | google ad grants for nonprofits | Answer-first: the Google Ad Grant gives verified 501(c)(3)s $10,000/month in free search ads and the average self-managed account uses ~$300 of it (cited) — eligibility, the 5%-CTR and monthly-login traps in plain words, and a free checkup CTA"
+  ],
+  "risks": [
+    "CLAUDE.md creative-batch rule applies to the five tools: build 2-3 (recommend Check-Up, Can Indianapolis Find You?, and the budget calculator) plus all five copy decks first and wait for approval before building the full batch.",
+    "The 36-file budget is spent exactly: email-marketing service page, the 'how to vet a marketing company' article, the GA4-diagnostic article, GoHighLevel-for-home-services article, and dedicated Carmel/Fishers suburb pages were deliberately deferred to phase 2 — adding any page now requires cutting another. No thin per-suburb doorway pages at launch; one towns-served block instead.",
+    "/services/coaching must never use 'business coach' language or compete on that SERP — Indy Chamber's free BOI coaching and ActionCOACH own it and anchor the price at free. Always 'fractional CMO / marketing advisor.'",
+    "Stat hygiene: never publish the single-source figures ($5.7B fractional market, $26B workflow-automation market, the 61%-no-ROI/$28K AI stat as numbers, vendor Indy CPC claims); attribute the $8,650 managed-Ad-Grant average as industry-reported; every on-page statistic needs its named source inline.",
+    "Do not chase head terms in titles: bare 'fractional CMO', 'gohighlevel expert', and 'web design indianapolis' are marketplace/incumbent SERPs — the question-format articles carry the national ranking load while service pages convert.",
+    "Proof gap: no named founder case studies exist yet — the founders pathway and /work must bridge honestly from local/nonprofit results ('industry data + my local results, named') rather than invent startup numbers; fabricated proof reads instantly as agency-speak to this audience.",
+    "Nav: 'Who I help' has no hub page, so its top-level link must point to a real anchor (/#who-i-help) and dropdowns must be keyboard-accessible with a no-JS fallback; verify Vercel cleanUrls serves services.html and services/*.html side by side (it does by default) and keep all 9 legacy paths byte-identical so no redirects are needed.",
+    "Site-level files ship with the build but don't count against 36: /llms.txt (H1 + blockquote summary + linked sections), robots.txt explicitly allowing GPTBot/OAI-SearchBot/ClaudeBot/Claude-SearchBot/PerplexityBot/Google-Extended/Bingbot, sitemap.xml with real lastmod (exclude /ticket and 404), Organization/ProfessionalService @graph with @id referenced on every page, visible 'Last updated' lines, and canonical URLs in one exact format.",
+    "Off-site work is load-bearing and lags 60-90 days: Bing Webmaster Tools + Google Search Console verification, GBP + Bing Places with identical NAP, free directory profiles (Clutch, GoodFirms, BrightLocal, ClearlyRated, Semrush Agency Partners), review-velocity system, and killing any listing that still says 'marketing agency' — ChatGPT can't cite pages Bing hasn't indexed, and ~6.5x of AI citations come via third parties.",
+    "Copy QA: run the 24-gate humanize checklist (commit as docs/copy-qa-checklist.md) on every page before ship — negative parallelism, banned vocab (which overlaps the brand ban list), triad stacking, 'whether you're X or Y', vague attribution, and uniform rhythm are the likeliest failure modes of generated copy; metas above are written to 140-160 chars and titles to ~60, so re-verify lengths after any edit; every page needs at least two of: a real price, the 8-client cap, the 3-month minimum, an Indy place name, a named method step."
+  ]
+}

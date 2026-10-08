@@ -12,7 +12,11 @@
   const burger = document.querySelector(".nav__burger");
   const menu = document.querySelector(".mobile-menu");
   if (burger && menu) {
-    burger.addEventListener("click", () => menu.classList.toggle("is-open"));
+    burger.addEventListener("click", () => {
+      const open = menu.classList.toggle("is-open");
+      burger.setAttribute("aria-expanded", String(open));
+      menu.setAttribute("aria-hidden", String(!open));
+    });
     menu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => menu.classList.remove("is-open")));
   }
 
@@ -36,13 +40,25 @@
   // Clear legacy accent override from previous design system
   try { localStorage.removeItem("cp.accent"); } catch (e) {}
 
-  // Active nav link based on path
-  const path = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-  document.querySelectorAll(".nav__links a, .mobile-menu a").forEach(a => {
-    const href = (a.getAttribute("href") || "").toLowerCase();
-    if (href === path || (path === "" && href === "index.html") || (path === "index.html" && href === "index.html")) {
-      a.classList.add("is-active");
-    }
+  // Active nav link — clean, extensionless, nested paths (v2)
+  const norm = p => ("/" + (p || "").replace(/\/+$/, "").replace(/\.html$/, "").replace(/^\/+/, "")).toLowerCase() || "/";
+  const here = norm(location.pathname) === "/index" ? "/" : norm(location.pathname);
+  const seg1 = "/" + (here.split("/")[1] || "");
+  document.querySelectorAll(".nav__links a, .nav__links .nav__item > a, .mobile-menu a").forEach(a => {
+    const raw = (a.getAttribute("href") || "").split("#")[0];
+    if (!raw) return;
+    const href = norm(raw) === "/index" ? "/" : norm(raw);
+    if (href === here || (href !== "/" && here.startsWith(href + "/"))) a.classList.add("is-active");
+  });
+  // Section highlight: /services/* lights Services, /for/* lights Who we help,
+  // /tools/* and /articles/* light Resources
+  document.querySelectorAll(".nav__item > a, .nav__links > a").forEach(a => {
+    const raw = (a.getAttribute("href") || "").split("#")[0];
+    if (!raw) return;
+    const href = norm(raw);
+    if (href === seg1 && seg1 !== "/") a.classList.add("is-active");
+    if ((seg1 === "/tools" || seg1 === "/articles") && href === "/resources") a.classList.add("is-active");
+    if (seg1 === "/for" && (a.textContent || "").trim().toLowerCase().startsWith("who we help")) a.classList.add("is-active");
   });
 
   // Contact: scheduling mock
