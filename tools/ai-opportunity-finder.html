@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI Opportunity Finder: What to Automate First | Carson Poore</title>
+<meta name="description" content="Free tool: pick your business type, check the tasks you still do by hand, set your hours, and get your best first automation named. No email, no login." />
+<link rel="canonical" href="https://carsonpoore.com/tools/ai-opportunity-finder" />
+<meta property="og:title" content="AI Opportunity Finder: What to Automate First | Carson Poore" />
+<meta property="og:description" content="Free tool: pick your business type, check the tasks you still do by hand, set your hours, and get your best first automation named. No email, no login." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://carsonpoore.com/tools/ai-opportunity-finder" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
+<link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
+<link rel="stylesheet" href="/styles.css?v=20261008-1" />
+<script defer src="/site.js?v=20261008-1"></script>
+<style>
+  /* AI opportunity finder: tool pieces on top of the shared tool primitives */
+  .hero-trust { margin-top: 18px; color: var(--cream-2); font-size: 0.92rem; max-width: 60ch; }
+
+  .tool__q:focus { outline: none; }
+  .step-label { display: block; margin-bottom: 8px; color: var(--ink-2); }
+  .opt__note { display: block; margin-top: 3px; font-weight: 400; font-size: 0.86rem; color: var(--ink-2); }
+  .tool-intro { color: var(--ink-2); margin: -4px 0 14px; max-width: 60ch; }
+  .tool-count { margin-top: 14px; }
+  .tool-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 28px; }
+
+  /* Verdict chips: outlined, never a loud fill */
+  .chip {
+    display: inline-block; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.02em;
+    padding: 5px 12px; border-radius: 999px; line-height: 1.3;
+    border: 1px solid var(--cobalt); color: var(--cobalt); background: var(--accent-soft);
+  }
+  .chip--auto { border-color: var(--navy); color: var(--navy); background: var(--bone); }
+  .chip--crm { border-color: var(--amber); color: var(--navy); background: #fff; }
+
+  /* Results */
+  .pick { border: 2px solid var(--cobalt); border-radius: var(--r-2); padding: clamp(20px, 3vw, 30px); background: #fff; }
+  .pick__how { margin-top: 12px; color: var(--ink-2); max-width: 62ch; }
+  .pick__why { margin-top: 12px; color: var(--ink); font-weight: 600; max-width: 62ch; }
+  .sum { margin-top: 22px; padding: 18px 20px; background: var(--bone); border-radius: var(--r-2); border: 1px solid var(--line-soft); }
+  .sum p { color: var(--ink); }
+  .sum p + p { margin-top: 8px; color: var(--ink-2); }
+  .sum strong { font-weight: 800; }
+  .rest-h { margin-top: 28px; font-size: var(--step-1); font-weight: 800; line-height: 1.25; }
+  .rest { list-style: none; margin: 14px 0 0; padding: 0; }
+  .rest .result-card { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 16px; }
+  .rank__n { grid-row: 1 / span 3; font-weight: 900; font-size: var(--step-1); color: var(--cobalt); font-variant-numeric: tabular-nums; line-height: 1.2; }
+  .rank__title { font-weight: 700; color: var(--ink); line-height: 1.35; }
+  .rank__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; font-size: 0.88rem; color: var(--ink-2); }
+  .rank__how { color: var(--ink-2); font-size: 0.95rem; line-height: 1.55; }
+  .rest .score-bar { margin-top: 6px; }
+  .cta-block { margin-top: 28px; padding: clamp(20px, 3vw, 28px); background: var(--navy); border-radius: var(--r-2); }
+  .cta-block p { color: #fff; font-size: var(--step-0); max-width: 58ch; }
+  .cta-block .row-cta { margin-top: 18px; }
+  .cta-block .tlink { color: #fff; }
+  .more-links { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 22px; }
+
+  /* Static explainer below the tool */
+  .explain { max-width: 64ch; }
+  .explain p + p { margin-top: 18px; }
+  .rate-wrap { margin-top: clamp(28px, 4vw, 44px); }
+  .rate { width: 100%; border-collapse: collapse; }
+  .rate caption { text-align: left; font-weight: 800; font-size: var(--step-1); padding-bottom: 14px; color: var(--ink); }
+  .rate th, .rate td { text-align: left; padding: 12px 14px 12px 0; border-bottom: 1px solid var(--line-soft); vertical-align: top; color: var(--ink-2); }
+  .rate thead th { font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); border-bottom: 2px solid var(--line); }
+  .rate tbody th { color: var(--ink); font-weight: 600; }
+  .verdicts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 3vw, 40px); margin-top: clamp(28px, 4vw, 44px); }
+  @media (max-width: 820px) { .verdicts { grid-template-columns: 1fr; } }
+  .verdicts > div { border-top: 2px solid var(--cobalt); padding-top: 16px; }
+  .verdicts p { margin-top: 10px; color: var(--ink-2); }
+  .tool-links { margin-top: clamp(24px, 3vw, 36px); display: flex; flex-wrap: wrap; gap: 10px 26px; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://carsonpoore.com/#org",
+      "name": "Carson Poore Consulting",
+      "url": "https://carsonpoore.com/",
+      "logo": "https://carsonpoore.com/brand/cpc-mark-royalblue.svg",
+      "image": "https://carsonpoore.com/brand/carson-headshot.png",
+      "email": "carson@carsonpoore.com",
+      "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
+      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "areaServed": [
+        { "@type": "City", "name": "Indianapolis" },
+        { "@type": "State", "name": "Indiana" },
+        { "@type": "Country", "name": "United States" }
+      ],
+      "priceRange": "$1,200–$4,800/month",
+      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://carsonpoore.com/tools/ai-opportunity-finder#app",
+      "name": "The AI Opportunity Finder",
+      "url": "https://carsonpoore.com/tools/ai-opportunity-finder",
+      "description": "A free, private tool for small businesses. Pick your business type, check the tasks you still do by hand, enter your own weekly hours, and get your tasks ranked with a plain verdict on each: an agent, an automation, or a better-connected CRM.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "provider": { "@id": "https://carsonpoore.com/#org" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carsonpoore.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://carsonpoore.com/resources" },
+        { "@type": "ListItem", "position": 3, "name": "AI opportunity finder" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="page">
+
+<header class="nav">
+  <div class="nav__inner">
+    <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
+    <nav class="nav__links" aria-label="Primary">
+      <div class="nav__item has-drop">
+        <a href="/services">Services</a>
+        <div class="nav__drop" aria-label="Services">
+          <a href="/services/marketing">Marketing</a>
+          <a href="/services/technical">Technical</a>
+          <a href="/services/strategy">Strategy</a>
+          <a href="/services/coaching">Coaching &amp; growth</a>
+          <a class="nav__drop-all" href="/services">All services</a>
+        </div>
+      </div>
+      <div class="nav__item has-drop">
+        <a href="/#who-we-help">Who we help</a>
+        <div class="nav__drop" aria-label="Who we help">
+          <a href="/for/local-businesses">Local businesses</a>
+          <a href="/for/founders">Founders &amp; startups</a>
+          <a href="/for/nonprofits">Nonprofits</a>
+        </div>
+      </div>
+      <a href="/method">Method</a>
+      <a href="/investment">Pricing</a>
+      <a href="/work">Work</a>
+      <a href="/resources">Resources</a>
+      <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
+    </nav>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" aria-hidden="true">
+  <span class="mobile-menu__group">Services</span>
+  <a href="/services/marketing">Marketing</a>
+  <a href="/services/technical">Technical</a>
+  <a href="/services/strategy">Strategy</a>
+  <a href="/services/coaching">Coaching &amp; growth</a>
+  <span class="mobile-menu__group">Who we help</span>
+  <a href="/for/local-businesses">Local businesses</a>
+  <a href="/for/founders">Founders &amp; startups</a>
+  <a href="/for/nonprofits">Nonprofits</a>
+  <span class="mobile-menu__group">Explore</span>
+  <a href="/method">Method</a>
+  <a href="/investment">Pricing</a>
+  <a href="/work">Work</a>
+  <a href="/resources">Resources</a>
+  <a href="/about">About</a>
+  <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero page-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li aria-current="page">AI opportunity finder</li>
+        </ol>
+      </nav>
+      <div class="page-hero__copy">
+        <span class="eyebrow reveal">Free tool &middot; Takes about two minutes</span>
+        <h1 class="reveal mt-md" data-delay="1">Which chore should an agent <em>take first?</em></h1>
+        <p class="hero__sub reveal mt-md" data-delay="2">Check the tasks you still do by hand. Tell us how many hours each one eats. You&rsquo;ll get your best first automation named, with a plain verdict on every task: an agent, an automation, or honestly, just a better-connected CRM.</p>
+        <div class="row-cta reveal mt-lg" data-delay="3">
+          <a class="btn btn--primary" href="#finder">Start the finder <span class="arr">→</span></a>
+          <a class="tlink" href="/services/ai-automation">or see what we build</a>
+        </div>
+        <p class="hero-trust reveal" data-delay="3">Free. No email. No login. Nothing to download. Everything you enter stays in your browser.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE TOOL -->
+  <section class="section section--tight" id="tool">
+    <div class="wrap">
+      <div class="tool" id="finder">
+        <noscript>
+          <div class="tool__panel">
+            <h2 class="tool__q">This tool needs JavaScript.</h2>
+            <p>The finder runs entirely in your browser, so it can&rsquo;t work with scripts turned off. The table further down the page lists all twelve tasks with our ease rating and the usual verdict for each. Or skip the tool: <a class="tlink" href="/contact">book a free call</a> and we&rsquo;ll walk through your task list together.</p>
+            <div class="row-cta mt-md"><a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a></div>
+          </div>
+        </noscript>
+        <div id="finder-steps"></div>
+        <div id="finder-results" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW THE RANKING WORKS -->
+  <section class="section section--stone">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">How it ranks</span>
+        <h2>The math is short, <em>and it&rsquo;s all on this page.</em></h2>
+      </div>
+      <div class="explain reveal mt-md">
+        <p>Every task has a fixed ease rating from 1 to 5, set by us. A 5 means pure rule-following: copy this from there to here. A 1 means someone has to use judgment every time. The finder multiplies that rating by the hours you entered, and the biggest product goes first.</p>
+        <p>That&rsquo;s the whole formula. It can&rsquo;t know your margins or what your Tuesday nights are worth, so it doesn&rsquo;t pretend to. The only hours it shows are the ones you typed in.</p>
+        <p>We think most five-person businesses should automate one task, watch it for a few weeks, and only then pick a second. That&rsquo;s why the finder names one first pick instead of a shopping list.</p>
+      </div>
+
+      <div class="rate-wrap reveal">
+        <table class="rate">
+          <caption>The twelve tasks, our ease rating, and the usual verdict</caption>
+          <thead>
+            <tr><th scope="col">Task</th><th scope="col">Ease rating</th><th scope="col">Usual verdict</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Following up on new leads</th><td>5 of 5</td><td>An agent</td></tr>
+            <tr><th scope="row">Scheduling and rescheduling</th><td>4 of 5</td><td>An automation</td></tr>
+            <tr><th scope="row">Asking customers for reviews</th><td>4 of 5</td><td>Honestly, just a better-connected CRM</td></tr>
+            <tr><th scope="row">Sending invoice reminders</th><td>4 of 5</td><td>An automation</td></tr>
+            <tr><th scope="row">Pulling the weekly numbers together</th><td>4 of 5</td><td>An automation</td></tr>
+            <tr><th scope="row">Drafting social posts</th><td>3 of 5</td><td>An agent</td></tr>
+            <tr><th scope="row">Collecting details with intake forms</th><td>4 of 5</td><td>An agent</td></tr>
+            <tr><th scope="row">Answering the same questions</th><td>4 of 5</td><td>An agent</td></tr>
+            <tr><th scope="row">Retyping data between tools</th><td>5 of 5</td><td>An automation</td></tr>
+            <tr><th scope="row">Following up on quotes</th><td>4 of 5</td><td>An agent</td></tr>
+            <tr><th scope="row">Sending thank-yous</th><td>3 of 5</td><td>Honestly, just a better-connected CRM</td></tr>
+            <tr><th scope="row">Writing up meeting notes</th><td>3 of 5</td><td>An agent</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="verdicts reveal">
+        <div>
+          <h3>An agent</h3>
+          <p>Software that reads a message or a form, drafts a reply or a summary, and waits for your tap. It writes in your name, so it needs the most care to set up.</p>
+        </div>
+        <div>
+          <h3>An automation</h3>
+          <p>A fixed rule: when this happens, do that. No judgment involved, which makes it the cheapest kind of fix to reason about.</p>
+        </div>
+        <div>
+          <h3>Just a better-connected CRM</h3>
+          <p>The tools you own don&rsquo;t talk to each other, or you don&rsquo;t have a CRM yet. We&rsquo;d connect things before building anything new.</p>
+        </div>
+      </div>
+
+      <div class="tool-links reveal">
+        <a class="tlink" href="/services/ai-automation">What our AI and automation work looks like</a>
+        <a class="tlink" href="/articles/ai-agents-for-small-business">AI agents for small business, in plain English</a>
+        <a class="tlink" href="/services/crm-gohighlevel">GoHighLevel and CRM setups</a>
+      </div>
+      <p class="updated mt-lg">Last updated: October 2026</p>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="closing">
+    <div class="closing__inner">
+      <div class="reveal">
+        <span class="eyebrow">Your next step</span>
+        <h2>Bring the list. <em>We&rsquo;ll scope the build.</em></h2>
+        <p>Thirty minutes, free, no slide deck. We take your top task, sketch how it would run with you approving everything, and hand you the sketch even if you never hire us. We take eight clients total, so if we&rsquo;re full, we&rsquo;ll tell you that too.</p>
+      </div>
+      <div class="reveal" data-delay="1">
+        <a href="/contact" class="btn btn--primary">Book a free scoping call <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer footer--v2">
+  <div class="wrap">
+    <div class="footer__grid footer__grid--v2">
+      <div class="footer__brand">
+        <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
+        <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/marketing">Marketing</a></li>
+          <li><a href="/services/technical">Technical</a></li>
+          <li><a href="/services/strategy">Strategy</a></li>
+          <li><a href="/services/coaching">Coaching &amp; growth</a></li>
+          <li><a href="/services/local-seo">Local SEO</a></li>
+          <li><a href="/services/google-ads">Google Ads</a></li>
+          <li><a href="/services/websites">Websites &amp; web apps</a></li>
+          <li><a href="/services/ai-automation">AI &amp; automation</a></li>
+          <li><a href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a></li>
+          <li><a href="/services/analytics">GA4 &amp; analytics</a></li>
+          <li><a href="/services/google-ad-grants">Google Ad Grants</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Who we help</h4>
+        <ul>
+          <li><a href="/for/local-businesses">Local businesses</a></li>
+          <li><a href="/for/founders">Founders &amp; startups</a></li>
+          <li><a href="/for/nonprofits">Nonprofits</a></li>
+          <li><a href="/work">Client results</a></li>
+        </ul>
+        <h4 class="footer__h4-gap">Free tools</h4>
+        <ul>
+          <li><a href="/tools/checkup">The five-step check-up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Articles</h4>
+        <ul>
+          <li><a href="/articles/fractional-cmo-cost">Fractional CMO cost</a></li>
+          <li><a href="/articles/fractional-cmo-vs-marketing-agency">CMO vs. agency</a></li>
+          <li><a href="/articles/is-gohighlevel-worth-it">Is GoHighLevel worth it?</a></li>
+          <li><a href="/articles/ai-agents-for-small-business">AI agents, explained</a></li>
+          <li><a href="/articles/not-showing-up-on-google">Not showing up on Google</a></li>
+          <li><a href="/articles/small-business-marketing-budget">What marketing should cost</a></li>
+          <li><a href="/articles/nonprofit-google-ad-grant">The nonprofit Ad Grant</a></li>
+          <li><a href="/resources" class="tlink">All resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/method">Method</a></li>
+          <li><a href="/investment">Pricing</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__meta">
+      <span>© 2026 Carson Poore Consulting · Indianapolis, Indiana · carson@carsonpoore.com</span>
+      <span class="footer__towns">Serving Indianapolis, Carmel, Fishers, Zionsville, Noblesville, Westfield, Greenwood, Brownsburg, Avon, and all of central Indiana — technical and coaching work nationwide.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  var TYPES = [
+    { id: "service", name: "Service business", note: "Trades, clinics, salons, home services" },
+    { id: "retail", name: "Restaurant or retail", note: "Food, shops, events, anything with a counter" },
+    { id: "pro", name: "Professional services", note: "Accounting, legal, agencies, consultants" },
+    { id: "nonprofit", name: "Nonprofit", note: "Donors, volunteers, programs, and a board" },
+    { id: "startup", name: "Startup or founder-led company", note: "A small team where the founder is the bottleneck" }
+  ];
+
+  /* score = our fixed ease rating, 1 (needs judgment) to 5 (pure rule) */
+  var TASKS = [
+    { id: "lead", score: 5, verdict: "agent", label: "Following up on new leads", hint: "Web forms, texts, missed calls",
+      by: { service: "Following up on new leads and estimate requests", retail: "Replying to catering and private-event inquiries", pro: "Following up on new inquiries and consult requests", nonprofit: "Replying to volunteer and partner inquiries", startup: "Following up on demo requests and inbound leads" },
+      how: "An agent drafts a reply within minutes, using your real calendar for two open times. You approve it with one tap, and anything unusual waits for you." },
+    { id: "schedule", score: 4, verdict: "auto", label: "Scheduling and rescheduling", hint: "The back-and-forth over which day works",
+      by: { service: "Scheduling and rescheduling jobs or visits", retail: "Booking reservations and rescheduling events", pro: "Scheduling and rescheduling client calls", nonprofit: "Scheduling volunteer shifts and event slots", startup: "Scheduling demos and customer calls" },
+      how: "A booking link tied to your real calendar, with automatic reminders. No agent needed. It&rsquo;s a rule, and rules are simple to build." },
+    { id: "reviews", score: 4, verdict: "crm", label: "Asking customers for reviews", hint: "Remembering to ask, then asking again",
+      by: { service: "Asking finished customers for a Google review", retail: "Asking regulars for a Google review", pro: "Asking happy clients for a review or a referral", nonprofit: "Asking volunteers and donors for a testimonial", startup: "Asking early customers for a review or a quote" },
+      how: "When a job closes, your CRM texts one link to your Google profile and sends a single reminder. That&rsquo;s a trigger, not an agent. If you don&rsquo;t have a CRM yet, this is a good reason to get one." },
+    { id: "invoice", score: 4, verdict: "auto", label: "Sending invoice reminders", hint: "Chasing what's already owed",
+      by: { service: "Chasing unpaid invoices", retail: "Chasing unpaid catering or wholesale invoices", pro: "Sending invoice reminders to clients", nonprofit: "Sending pledge and payment reminders", startup: "Chasing unpaid invoices" },
+      how: "Your accounting tool can already send reminders on a schedule. We&rsquo;d set the timing and the wording once, and flag only the late ones that need a human call." },
+    { id: "report", score: 4, verdict: "auto", label: "Pulling the weekly numbers together", hint: "Five logins on a Sunday night",
+      by: { service: "Pulling calls, jobs, and ad numbers into one report", retail: "Pulling sales and traffic numbers into one report", pro: "Pulling leads and billable numbers into one report", nonprofit: "Assembling board and funder reports", startup: "Pulling pipeline and traffic numbers into one report" },
+      how: "A scheduled job pulls the numbers onto one page every Monday morning. Reading it takes two minutes. Building it is a one-time job." },
+    { id: "social", score: 3, verdict: "agent", label: "Drafting social posts", hint: "Staring at a blank caption",
+      by: { retail: "Drafting social posts and the weekly specials", nonprofit: "Drafting social posts and the donor newsletter", startup: "Drafting social posts and launch emails" },
+      how: "An agent drafts posts from your real work, in your voice. You edit and publish. Nothing posts itself." },
+    { id: "intake", score: 4, verdict: "agent", label: "Collecting details with intake forms", hint: "Name, address, what they need, photos",
+      by: { service: "Collecting job details and photos before a visit", retail: "Taking catering and order details", pro: "Intake forms and new-client paperwork", nonprofit: "Volunteer sign-ups and intake forms", startup: "Onboarding forms for new customers" },
+      how: "An agent asks the questions you would ask, by text or on a form that talks back. You get a one-paragraph brief and take over any thread it flags." },
+    { id: "faq", score: 4, verdict: "agent", label: "Answering the same questions", hint: "Hours, prices, how it works",
+      by: { service: "Answering the same questions about price, hours, and service area", retail: "Answering the same questions about hours, menu, and orders", pro: "Answering the same questions from prospects", nonprofit: "Answering the same questions from donors and volunteers", startup: "Answering the same questions from customers" },
+      how: "An agent drafts answers from your own FAQ and past replies. You approve the wording of routine answers once, and anything odd waits for a tap." },
+    { id: "data", score: 5, verdict: "auto", label: "Retyping data between tools", hint: "Copy here, paste there",
+      by: { service: "Copying customer details from the inbox into the CRM or invoices", retail: "Copying orders between the register, inventory, and spreadsheets", nonprofit: "Copying donor details between the donation tool and your list" },
+      how: "A connector copies the details from one tool to the next the moment they change. No agent needed. This is plumbing, and it should have been done the day you bought the second tool." },
+    { id: "quote", score: 4, verdict: "agent", label: "Following up on quotes", hint: "The estimate that went quiet",
+      by: { service: "Following up on quotes that went quiet", retail: "Following up on catering quotes", pro: "Following up on proposals", nonprofit: "Following up on grant and sponsorship asks", startup: "Following up on proposals and pilots" },
+      how: "An agent notices a quote that has sat for a few days and drafts a nudge that mentions the actual job. You read it and press send." },
+    { id: "thanks", score: 3, verdict: "crm", label: "Sending thank-yous", hint: "After a purchase, a gift, or a finished job",
+      by: { service: "Thanking customers after a job", retail: "Thanking customers and regulars", pro: "Sending thank-you notes to clients and referrers", nonprofit: "Thanking donors", startup: "Thanking new customers and early backers" },
+      how: "A connected CRM sends the thank-you when the sale or gift lands, with a short note you wrote once. The personal touch on a big one stays with a person." },
+    { id: "notes", score: 3, verdict: "agent", label: "Writing up meeting notes", hint: "Who said they'd do what",
+      by: { service: "Writing up job notes and site-visit summaries", retail: "Writing up supplier and staff meeting notes", pro: "Writing up client call notes", nonprofit: "Writing up board and committee notes", startup: "Writing up customer and team call notes" },
+      how: "An agent turns a recording or transcript into a summary and a task list. You skim it for mistakes, because it will make a few." }
+  ];
+
+  var VERDICTS = {
+    agent: { chip: "An agent", cls: "" },
+    auto: { chip: "An automation", cls: " chip--auto" },
+    crm: { chip: "Honestly, just a better-connected CRM", cls: " chip--crm" }
+  };
+
+  var stepsEl = document.getElementById("finder-steps");
+  var resultsEl = document.getElementById("finder-results");
+  if (!stepsEl || !resultsEl) { return; }
+
+  var state = { type: null, checked: {}, hours: {} };
+
+  function esc(s) {
+    return String(s).replace(/&(?!(?:[a-z]+|#\d+);)/gi, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+  function fmt(n) { return n % 1 === 0 ? String(n) : n.toFixed(1); }
+  function hrs(n) { return (n === 1 ? "1 hour" : fmt(n) + " hours"); }
+  function labelFor(t) { return (state.type && t.by[state.type]) || t.label; }
+  function checkedTasks() { return TASKS.filter(function (t) { return state.checked[t.id]; }); }
+  function typeName() {
+    for (var i = 0; i < TYPES.length; i++) { if (TYPES[i].id === state.type) { return TYPES[i].name; } }
+    return "";
+  }
+
+  function progress(n) {
+    var h = '<div class="tool__progress" aria-hidden="true">';
+    for (var i = 1; i <= 4; i++) { h += '<span' + (i <= n ? ' class="is-done"' : '') + '></span>'; }
+    return h + '</div>';
+  }
+
+  function show(which, html) {
+    if (which === "steps") {
+      resultsEl.innerHTML = "";
+      stepsEl.hidden = false;
+      stepsEl.innerHTML = html;
+    } else {
+      stepsEl.innerHTML = "";
+      stepsEl.hidden = true;
+      resultsEl.innerHTML = html;
+    }
+  }
+
+  function focusHeading(root, scroll) {
+    var h = root.querySelector(".tool__q");
+    if (h) {
+      try { h.focus({ preventScroll: !scroll }); } catch (e) { h.focus(); }
+    }
+  }
+
+  /* ---------- Step 1: business type ---------- */
+  function renderType(focus) {
+    var h = '<div class="tool__panel">' + progress(1) +
+      '<span class="label step-label">Step 1 of 3</span>' +
+      '<h2 class="tool__q" tabindex="-1">What kind of business do you run?</h2>' +
+      '<div class="opt-list" role="group" aria-label="Business type">';
+    TYPES.forEach(function (t) {
+      var on = state.type === t.id;
+      h += '<button type="button" class="opt' + (on ? ' is-picked' : '') + '" data-act="type" data-id="' + t.id + '" aria-pressed="' + (on ? 'true' : 'false') + '">' +
+        esc(t.name) + '<span class="opt__note">' + esc(t.note) + '</span></button>';
+    });
+    h += '</div><p class="tool-note tool-count">We use this only to word the task list in terms that fit you.</p></div>';
+    show("steps", h);
+    if (focus) { focusHeading(stepsEl, true); }
+  }
+
+  /* ---------- Step 2: tasks ---------- */
+  function renderTasks(focus) {
+    var h = '<div class="tool__panel">' + progress(2) +
+      '<span class="label step-label">Step 2 of 3 &middot; ' + esc(typeName()) + '</span>' +
+      '<h2 class="tool__q" tabindex="-1">Which of these do you still do by hand?</h2>' +
+      '<p class="tool-intro">Check every one that sounds like your week. Skip the ones you already have covered.</p>' +
+      '<div role="group" aria-label="Tasks you do by hand">';
+    TASKS.forEach(function (t) {
+      h += '<div class="check-row"><input type="checkbox" id="task-' + t.id + '" data-act="task" data-id="' + t.id + '"' + (state.checked[t.id] ? ' checked' : '') + ' />' +
+        '<label for="task-' + t.id + '">' + esc(labelFor(t)) + '<span class="check-row__why">' + esc(t.hint) + '</span></label></div>';
+    });
+    h += '</div><p class="tool-note tool-count" id="task-count"></p>' +
+      '<div class="tool-actions">' +
+      '<button type="button" class="btn btn--ghost" data-act="back-type">Back</button>' +
+      '<button type="button" class="btn btn--primary" data-act="to-hours" id="to-hours"></button>' +
+      '</div></div>';
+    show("steps", h);
+    updateCount();
+    if (focus) { focusHeading(stepsEl, true); }
+  }
+
+  function updateCount() {
+    var n = checkedTasks().length;
+    var c = document.getElementById("task-count");
+    var b = document.getElementById("to-hours");
+    if (c) { c.textContent = n === 0 ? "None checked yet." : n + (n === 1 ? " task checked." : " tasks checked."); }
+    if (b) { b.innerHTML = (n === 0 ? "See results" : "Set the hours") + ' <span class="arr">→</span>'; }
+  }
+
+  /* ---------- Step 3: hours ---------- */
+  function renderHours(focus) {
+    var h = '<div class="tool__panel">' + progress(3) +
+      '<span class="label step-label">Step 3 of 3</span>' +
+      '<h2 class="tool__q" tabindex="-1">About how many hours a week does each one take?</h2>' +
+      '<p class="tool-intro">Count everyone&rsquo;s time, yours and your team&rsquo;s. A rough guess is fine. Leave a task at 0 if it&rsquo;s really a rare one.</p>';
+    checkedTasks().forEach(function (t) {
+      var v = state.hours[t.id] || 0;
+      h += '<div class="range-row"><label for="h-' + t.id + '">' + esc(labelFor(t)) + '</label>' +
+        '<output id="o-' + t.id + '" for="h-' + t.id + '">' + hrs(v) + '</output>' +
+        '<input type="range" id="h-' + t.id + '" data-act="hours" data-id="' + t.id + '" min="0" max="10" step="0.5" value="' + v + '" aria-valuetext="' + hrs(v) + ' a week" /></div>';
+    });
+    h += '<div class="tool-actions">' +
+      '<button type="button" class="btn btn--ghost" data-act="back-tasks">Back</button>' +
+      '<button type="button" class="btn btn--primary" data-act="to-results">Show my results <span class="arr">→</span></button>' +
+      '</div></div>';
+    show("steps", h);
+    if (focus) { focusHeading(stepsEl, true); }
+  }
+
+  /* ---------- Results ---------- */
+  function ctaBlock() {
+    return '<div class="cta-block"><p>Book a call and we&rsquo;ll scope your first one in 30 minutes. You leave with the plan either way.</p>' +
+      '<div class="row-cta"><a class="btn btn--primary" href="/contact">Book a free scoping call <span class="arr">→</span></a>' +
+      '<a class="tlink" href="/services/ai-automation">See what we build</a></div></div>' +
+      '<div class="more-links"><a class="tlink" href="/articles/ai-agents-for-small-business">How AI agents work, in plain English</a>' +
+      '<a class="tlink" href="/services/crm-gohighlevel">GoHighLevel and CRM setups</a></div>';
+  }
+
+  function endButtons(hasTasks) {
+    return '<div class="tool-actions">' +
+      '<button type="button" class="btn btn--ghost" data-act="' + (hasTasks ? 'back-hours' : 'back-tasks') + '">' + (hasTasks ? 'Change my hours' : 'Back to the tasks') + '</button>' +
+      '<button type="button" class="btn btn--ghost" data-act="restart">Start over</button></div>';
+  }
+
+  function finish(h, focus) {
+    show("results", h + '</div>');
+    if (focus) { focusHeading(resultsEl, true); }
+  }
+
+  function renderResults(focus) {
+    var picks = checkedTasks().map(function (t, i) {
+      var hh = state.hours[t.id] || 0;
+      return { t: t, i: i, h: hh, s: t.score, v: t.score * hh };
+    });
+    var h = '<div class="tool__panel">' + progress(4);
+
+    if (!picks.length) {
+      h += '<span class="label step-label">Your results</span>' +
+        '<h2 class="tool__q" tabindex="-1">Nothing checked, and that&rsquo;s a real answer.</h2>' +
+        '<p class="pick__how">If none of these are eating your week, you may not need automation yet. Go back and check anything that&rsquo;s close, even if it&rsquo;s only half true. Or tell us what <em>is</em> eating your week on a call, because the task that hurts most isn&rsquo;t always on a list.</p>' +
+        ctaBlock() + endButtons(false);
+      finish(h, focus);
+      return;
+    }
+
+    picks.sort(function (a, b) { return (b.v - a.v) || (b.s - a.s) || (a.i - b.i); });
+    var total = picks.reduce(function (n, p) { return n + p.h; }, 0);
+    var top = picks[0];
+    var max = top.v;
+    var v = VERDICTS[top.t.verdict];
+
+    h += '<span class="label step-label">Your results &middot; ' + esc(typeName()) + '</span>' +
+      '<h2 class="tool__q" tabindex="-1">Your best first automation: ' + esc(labelFor(top.t).charAt(0).toLowerCase() + labelFor(top.t).slice(1)) + '</h2>' +
+      '<div class="pick"><span class="chip' + v.cls + '">' + v.chip + '</span>' +
+      '<p class="pick__how">' + top.t.how + '</p>';
+    if (total > 0) {
+      h += '<p class="pick__why">You gave it about ' + hrs(top.h) + ' a week, and we rate it ' + top.s + ' out of 5 for how cleanly it hands off.</p>';
+    } else {
+      h += '<p class="pick__why">You left every slider at 0, so this pick comes from our ease rating alone (' + top.s + ' out of 5). Change your hours for a sharper answer.</p>';
+    }
+    h += '</div>';
+
+    h += '<div class="sum"><p>You told us these tasks take about <strong>' + hrs(total) + ' a week</strong>.</p>' +
+      '<p>That&rsquo;s your number, not ours. We don&rsquo;t know your pay rate or your margins, so we won&rsquo;t turn it into a savings figure.</p>';
+    if (total > 0 && total <= 2) {
+      h += '<p>It&rsquo;s also small. At two hours a week or less, we think a written checklist usually beats a build, and we&rsquo;d tell you so on a call.</p>';
+    }
+    if (top.t.verdict === "crm") {
+      h += '<p>Your first move may be connecting the tools you already pay for, not building anything new.</p>';
+    }
+    h += '</div>';
+
+    if (picks.length > 1) {
+      h += '<h3 class="rest-h">The rest, in order</h3><ol class="rest">';
+      picks.slice(1).forEach(function (p, idx) {
+        var vv = VERDICTS[p.t.verdict];
+        var width = max > 0 ? Math.max(4, Math.round((p.v / max) * 100)) : Math.round((p.s / 5) * 100);
+        h += '<li class="result-card"><span class="rank__n">' + (idx + 2) + '</span>' +
+          '<span class="rank__title">' + esc(labelFor(p.t)) + '</span>' +
+          '<span class="rank__meta"><span class="chip' + vv.cls + '">' + vv.chip + '</span><span>' + hrs(p.h) + ' a week</span><span>Ease rating ' + p.s + ' of 5</span></span>' +
+          '<span class="rank__how">' + p.t.how + '</span>' +
+          '<div class="score-bar" role="img" aria-label="Rank score ' + width + ' percent of the top pick"><span style="width:' + width + '%"></span></div></li>';
+      });
+      h += '</ol>';
+    }
+
+    h += ctaBlock() + endButtons(true);
+    finish(h, focus);
+  }
+
+  /* ---------- Events ---------- */
+  function onClick(e) {
+    var el = e.target.closest ? e.target.closest("button[data-act]") : null;
+    if (!el) { return; }
+    var act = el.getAttribute("data-act");
+    if (act === "type") {
+      state.type = el.getAttribute("data-id");
+      renderTasks(true);
+    } else if (act === "back-type") {
+      renderType(true);
+    } else if (act === "to-hours") {
+      if (checkedTasks().length) { renderHours(true); } else { renderResults(true); }
+    } else if (act === "back-tasks") {
+      renderTasks(true);
+    } else if (act === "to-results") {
+      renderResults(true);
+    } else if (act === "back-hours") {
+      renderHours(true);
+    } else if (act === "restart") {
+      state = { type: null, checked: {}, hours: {} };
+      renderType(true);
+    }
+  }
+
+  function onChange(e) {
+    var el = e.target;
+    if (!el || !el.getAttribute) { return; }
+    if (el.getAttribute("data-act") === "task") {
+      state.checked[el.getAttribute("data-id")] = !!el.checked;
+      updateCount();
+    }
+  }
+
+  function onInput(e) {
+    var el = e.target;
+    if (!el || !el.getAttribute || el.getAttribute("data-act") !== "hours") { return; }
+    var id = el.getAttribute("data-id");
+    var v = parseFloat(el.value);
+    if (isNaN(v)) { v = 0; }
+    state.hours[id] = v;
+    var o = document.getElementById("o-" + id);
+    if (o) { o.textContent = hrs(v); }
+    el.setAttribute("aria-valuetext", hrs(v) + " a week");
+  }
+
+  stepsEl.addEventListener("click", onClick);
+  resultsEl.addEventListener("click", onClick);
+  stepsEl.addEventListener("change", onChange);
+  stepsEl.addEventListener("input", onInput);
+
+  renderType(false);
+})();
+</script>
+
+</body>
+</html>

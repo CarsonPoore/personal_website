@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Startup Marketing Consultant for Founders | Carson Poore</title>
+<meta name="description" content="You built the thing. We help you get it to people: a $3,000 strategy engagement, then a fractional CMO from $1,200 a month. Indy-based, working nationwide." />
+<link rel="canonical" href="https://carsonpoore.com/for/founders" />
+<meta property="og:title" content="Startup Marketing Consultant for Founders | Carson Poore" />
+<meta property="og:description" content="You built the thing. We help you get it to people: a $3,000 strategy engagement, then a fractional CMO from $1,200 a month. Indy-based, working nationwide." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://carsonpoore.com/for/founders" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
+<link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
+<link rel="stylesheet" href="/styles.css?v=20261008-1" />
+<script defer src="/site.js?v=20261008-1"></script>
+<style>
+  /* Founders & startups pathway — page-specific layout */
+  .hero-facts {
+    list-style: none; padding: 0; margin: clamp(22px, 3vw, 32px) 0 0;
+    display: flex; flex-wrap: wrap; gap: 10px 24px;
+    color: var(--cream-2); font-size: 0.92rem; font-weight: 600;
+  }
+  .hero-facts li { display: inline-flex; align-items: center; gap: 10px; }
+  .hero-facts li::before {
+    content: ""; width: 6px; height: 6px; border-radius: 50%;
+    background: var(--cream-2); flex-shrink: 0;
+  }
+
+  .stuck {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(24px, 4vw, 56px);
+    margin-block: clamp(32px, 5vw, 56px);
+  }
+  @media (max-width: 760px) { .stuck { grid-template-columns: 1fr; } }
+  .stuck__item {
+    border-top: 3px solid var(--cobalt);
+    padding-top: clamp(16px, 2vw, 22px);
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .stuck__item h3 { font-size: var(--step-2); font-weight: 800; letter-spacing: -0.016em; }
+  .stuck__item p { color: var(--ink-2); line-height: 1.65; }
+
+  .indy-note {
+    margin-top: clamp(32px, 5vw, 52px);
+    padding: clamp(22px, 3vw, 32px);
+    background: var(--stone-2);
+    border-radius: var(--r-3);
+  }
+  .indy-note .label { display: block; margin-bottom: 10px; }
+  .indy-note p { color: var(--ink-2); line-height: 1.65; }
+
+  .path .card .card__price {
+    font-weight: 800; font-size: var(--step-1); color: var(--navy);
+    letter-spacing: -0.01em;
+  }
+  .path .card .tlink { margin-top: auto; align-self: flex-start; font-size: 0.92rem; }
+  .path .card .card__links { margin-top: auto; display: flex; flex-wrap: wrap; gap: 8px 18px; }
+  .path .card .card__links .tlink { margin-top: 0; }
+  .path__notes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(24px, 4vw, 56px);
+    margin-top: clamp(36px, 5vw, 60px);
+  }
+  @media (max-width: 860px) { .path__notes { grid-template-columns: 1fr; } }
+  .path__notes p { color: var(--ink-2); line-height: 1.68; }
+  .path__notes .label { display: block; margin-bottom: 10px; }
+
+  .proof__grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: clamp(32px, 5vw, 72px);
+    align-items: start;
+  }
+  @media (max-width: 900px) { .proof__grid { grid-template-columns: 1fr; } }
+  .proof__grid p { color: var(--ink-2); line-height: 1.68; }
+  .proof .stat-row { margin-top: clamp(28px, 4vw, 44px); }
+  .proof .motion-frame { width: 100%; }
+
+  .gate .fit-grid { margin-top: clamp(32px, 5vw, 52px); }
+  .gate .fit-card h3 { font-size: var(--step-2); font-weight: 800; margin-top: 8px; }
+  .gate__after { margin-top: clamp(24px, 3vw, 36px); color: var(--ink-2); max-width: 64ch; }
+
+  .tool-strip {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(16px, 2.4vw, 28px);
+    margin-top: clamp(32px, 5vw, 52px);
+  }
+  @media (max-width: 760px) { .tool-strip { grid-template-columns: 1fr; } }
+  .tool-card {
+    background: var(--navy);
+    border-radius: var(--r-3);
+    padding: clamp(28px, 3.4vw, 44px);
+    display: flex; flex-direction: column; gap: 12px;
+    transition: transform .5s var(--ease-out), box-shadow .5s var(--ease-out);
+  }
+  .tool-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-1); }
+  .tool-card .label { color: var(--cream-2); }
+  .tool-card h3 { color: #fff; font-size: var(--step-3); font-weight: 800; letter-spacing: -0.02em; }
+  .tool-card p { color: var(--cream-2); line-height: 1.6; }
+  .tool-card .btn { margin-top: auto; align-self: flex-start; }
+  .tool-strip__note { margin-top: clamp(24px, 3vw, 36px); color: var(--ink-2); }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://carsonpoore.com/#org",
+      "name": "Carson Poore Consulting",
+      "url": "https://carsonpoore.com/",
+      "logo": "https://carsonpoore.com/brand/cpc-mark-royalblue.svg",
+      "image": "https://carsonpoore.com/brand/carson-headshot.png",
+      "email": "carson@carsonpoore.com",
+      "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
+      ],
+      "priceRange": "$1,200–$4,800/month",
+      "founder": {
+        "@id": "https://carsonpoore.com/about#carson"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://carsonpoore.com/for/founders#webpage",
+      "url": "https://carsonpoore.com/for/founders",
+      "name": "Startup Marketing Consultant for Founders | Carson Poore",
+      "description": "You built the thing. We help you get it to people: a $3,000 strategy engagement, then a fractional CMO from $1,200 a month. Indy-based, working nationwide.",
+      "about": {
+        "@id": "https://carsonpoore.com/for/founders#service"
+      },
+      "publisher": {
+        "@id": "https://carsonpoore.com/#org"
+      },
+      "dateModified": "2026-10-08"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carsonpoore.com/for/founders#service",
+      "name": "Startup marketing consulting for founders",
+      "serviceType": "Startup marketing consultant",
+      "description": "Positioning, a first repeatable channel, and a fractional CMO for pre-seed, seed, and bootstrapped founders, starting with a one-time strategy engagement.",
+      "provider": {
+        "@id": "https://carsonpoore.com/#org"
+      },
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Founders and early-stage startups, pre-seed to seed and bootstrapped"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "name": "Strategy engagement",
+        "price": "3000",
+        "priceCurrency": "USD",
+        "description": "One-time strategy engagement: positioning, who it's for, a sharp offer, and a 90-day plan."
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://carsonpoore.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Who we help",
+          "item": "https://carsonpoore.com/#who-we-help"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Founders & startups"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does a fractional CMO cost for a startup?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ours runs $1,200, $2,400, or $4,800 a month, with a three-month minimum and then month to month. We'd point most founders to the $3,000 strategy engagement first, so the retainer has a plan to run. For comparison, 2026 pricing guides from MarketerHire and GoFractional put fractional CMO retainers at $3,000 to $15,000 monthly. Ad spend, if you run ads, goes on your own card."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are we too early to hire a marketing consultant?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Maybe. If you don’t have paying customers who stay yet, you’re probably pre-product-market fit, and a retainer would waste your runway. Book the call anyway. We’ll say so plainly and send you off with homework: customer interviews, a few hand-sold deals, and one sentence on who it’s for. Come back when people pay and stick around."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should we hire a full-time marketer instead?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Eventually, yes. Right now a full-time hire costs more than any of our tiers and still needs someone to tell them what to do. The first marketing hire usually fails because nothing was written down before they arrived. We write the playbook with you, run it until it works, and hand it to your hire when you make one."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "We got burned by an agency. How is this different?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An agency gets paid for deliverables: posts, ads, a monthly deck. We’re measured on customers and pipeline, and the monthly report says how many came from where. We cap the whole consultancy at eight clients, so the people on your call know your product. Your accounts stay in your name, and after three months you can stop any month."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with founders outside Indianapolis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We’re based in Indianapolis, and the strategy, fractional CMO, and technical work all run over video, so founders anywhere in the U.S. work with us the same way. If you’re local, we’re happy to meet in person too."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="page">
+
+<header class="nav">
+  <div class="nav__inner">
+    <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
+    <nav class="nav__links" aria-label="Primary">
+      <div class="nav__item has-drop">
+        <a href="/services">Services</a>
+        <div class="nav__drop" aria-label="Services">
+          <a href="/services/marketing">Marketing</a>
+          <a href="/services/technical">Technical</a>
+          <a href="/services/strategy">Strategy</a>
+          <a href="/services/coaching">Coaching &amp; growth</a>
+          <a class="nav__drop-all" href="/services">All services</a>
+        </div>
+      </div>
+      <div class="nav__item has-drop">
+        <a href="/#who-we-help">Who we help</a>
+        <div class="nav__drop" aria-label="Who we help">
+          <a href="/for/local-businesses">Local businesses</a>
+          <a href="/for/founders">Founders &amp; startups</a>
+          <a href="/for/nonprofits">Nonprofits</a>
+        </div>
+      </div>
+      <a href="/method">Method</a>
+      <a href="/investment">Pricing</a>
+      <a href="/work">Work</a>
+      <a href="/resources">Resources</a>
+      <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
+    </nav>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" aria-hidden="true">
+  <span class="mobile-menu__group">Services</span>
+  <a href="/services/marketing">Marketing</a>
+  <a href="/services/technical">Technical</a>
+  <a href="/services/strategy">Strategy</a>
+  <a href="/services/coaching">Coaching &amp; growth</a>
+  <span class="mobile-menu__group">Who we help</span>
+  <a href="/for/local-businesses">Local businesses</a>
+  <a href="/for/founders">Founders &amp; startups</a>
+  <a href="/for/nonprofits">Nonprofits</a>
+  <span class="mobile-menu__group">Explore</span>
+  <a href="/method">Method</a>
+  <a href="/investment">Pricing</a>
+  <a href="/work">Work</a>
+  <a href="/resources">Resources</a>
+  <a href="/about">About</a>
+  <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero page-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#who-we-help">Who we help</a></li>
+          <li aria-current="page">Founders &amp; startups</li>
+        </ol>
+      </nav>
+      <div class="page-hero__grid">
+        <div class="page-hero__copy">
+          <span class="eyebrow reveal">For founders &amp; startups</span>
+          <h1 class="reveal mt-md" data-delay="1">You built the thing. Now let&rsquo;s get it to <em>people.</em></h1>
+          <p class="hero__sub reveal mt-md" data-delay="2">A startup marketing consultant for pre-seed, seed, and bootstrapped founders, somewhere between your first dollar and about $2M in revenue. We start with positioning and one channel that repeats, then stay on as your fractional CMO if it&rsquo;s working. We&rsquo;re in Indianapolis and work with founders anywhere in the country.</p>
+          <div class="row-cta mt-lg reveal" data-delay="3">
+            <a class="btn btn--primary" href="/contact">Book a 30-minute call <span class="arr">→</span></a>
+            <a class="btn btn--ghost-light" href="/tools/90-day-plan">Draft a 90-day plan</a>
+          </div>
+          <ul class="hero-facts reveal" data-delay="3">
+            <li>$3,000 strategy first</li>
+            <li>8 clients, total</li>
+            <li>Indy-based, working nationwide</li>
+            <li>You keep everything</li>
+          </ul>
+        </div>
+        <div class="motion-frame motion-frame--hero page-hero__motion reveal" data-delay="2">
+          <video class="motion-loop" muted loop playsinline preload="none" poster="/media/motion/tactics-to-system.jpg" width="960" height="800" aria-hidden="true"><source src="/media/motion/tactics-to-system.webm" type="video/webm" /><source src="/media/motion/tactics-to-system.mp4" type="video/mp4" /></video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THEIR WORLD -->
+  <section class="section">
+    <div class="wrap wrap--narrow">
+      <div class="sec-head">
+        <span class="eyebrow reveal">Where founders get stuck</span>
+        <h2 class="reveal" data-delay="1">The product works. Not enough people know it exists.</h2>
+      </div>
+      <div class="mt-lg">
+        <p class="reveal">You spent a year getting the thing right. You launched, posted about it, told everyone you know. And then the signups came in at a trickle, or not at all. Indie Hackers is full of threads from founders who launched to zero paying customers and decided, months later, that distribution was the real problem all along. It usually is.</p>
+        <p class="mt-md reveal">That&rsquo;s the first gap. The second one shows up later, and it&rsquo;s sneakier.</p>
+      </div>
+
+      <div class="stuck">
+        <div class="stuck__item reveal">
+          <h3>No distribution yet</h3>
+          <p>Building felt like progress because it was. Getting the first 100 customers is a different skill, and nobody on the team owns it. So marketing turns into random acts: a launch post here, an ad test that ran for nine days. Nothing compounds because nothing repeats.</p>
+        </div>
+        <div class="stuck__item reveal" data-delay="1">
+          <h3>Founder-led sales hits a ceiling</h3>
+          <p>You close most deals yourself, and you&rsquo;re good at it. SaaStr puts the breaking point at the moment you personally close 70&ndash;80% of new business and burn 15+ hours a week doing it. The company grows only when you get on the call. And none of it is written down, so you can&rsquo;t hand it to a hire yet.</p>
+        </div>
+      </div>
+
+      <div>
+        <p class="reveal">Maybe you tried an agency to fix it. You got a dashboard and a monthly deck. What you couldn&rsquo;t get was one customer you could point to. That isn&rsquo;t bad luck. Cervin Ventures describes the agency setup for early-stage startups as &ldquo;structurally set up to produce the wrong outcomes,&rdquo; because agencies get paid for what&rsquo;s easy to measure. Some agency contracts lock in ad spend before anyone knows which channel works.</p>
+        <p class="mt-md reveal">Often the growth problem is a positioning problem. If the messaging is fuzzy, sales guesses, and nobody on the team agrees on who the product is for. More spend just makes that louder.</p>
+        <p class="pull mt-xl reveal">Positioning problems love to <em>dress up</em> as growth problems.</p>
+      </div>
+
+      <div class="indy-note reveal">
+        <span class="label">If you&rsquo;re building in Indy</span>
+        <p>You know the mood. If you&rsquo;ve pitched at a gBETA Indiana night, sat in a High Alpha office, or read TechPoint&rsquo;s Indiana Venture Report, you&rsquo;ve heard the word careful a lot. Indianapolis startups raised about $892 million across roughly 147 deals in 2025, according to superscout.co, and investors want to see efficient growth. We aren&rsquo;t affiliated with any of those groups. We just work down the road from them, and we price for founders who are watching every dollar. Not in Indiana? Founder calls happen over video anyway.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE PATH -->
+  <section class="section section--stone path">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow reveal">How we&rsquo;d work together</span>
+        <h2 class="reveal" data-delay="1">Strategy first. Then a CMO who also builds.</h2>
+        <p class="sec-head__intro reveal" data-delay="2">Three pieces, taken in order. You can stop after the first one and still walk away with something you can run.</p>
+      </div>
+      <div class="cards mt-xl">
+        <article class="card reveal">
+          <span class="card__num">01</span>
+          <h3>The strategy engagement</h3>
+          <p class="card__price">$3,000, one time</p>
+          <p>Who the product is actually for, said in one sentence. Positioning your sales calls can repeat. A sharp offer, and the first channel worth repeating. You get a 90-day plan you could run without us. Contra and Maven list two-week positioning sprints at $1,500&ndash;$3,000 and up, so this sits right at market.</p>
+          <a class="tlink" href="/services/strategy">What&rsquo;s in the strategy engagement <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="card reveal" data-delay="1">
+          <span class="card__num">02</span>
+          <h3>A fractional CMO</h3>
+          <p class="card__price">$1,200, $2,400, or $4,800 a month</p>
+          <p>If the plan holds, we stay on and run it with you. We own the result, meaning customers and pipeline, not a list of deliverables. 2026 pricing guides from MarketerHire and GoFractional put fractional CMO retainers at $3,000&ndash;$15,000 monthly. Our top tier sits near the bottom of that range.</p>
+          <a class="tlink" href="/services/coaching">How the fractional CMO work runs <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="card reveal" data-delay="2">
+          <span class="card__num">03</span>
+          <h3>Builds, when you need them</h3>
+          <p>The same team writes the plan and wires it up. Lead qualification and outreach automation, onboarding emails that catch the people who sign up and disappear, AI chat for after-hours questions, and GA4 set up so you can see what&rsquo;s working. It&rsquo;s the ops work that stops you being the bottleneck.</p>
+          <div class="card__links">
+            <a class="tlink" href="/services/technical">Technical builds <span aria-hidden="true">→</span></a>
+            <a class="tlink" href="/services/ai-automation">AI &amp; automation <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="path__notes">
+        <div class="reveal">
+          <span class="label">Our opinion</span>
+          <p>Don&rsquo;t hire your first marketer before the playbook exists. The most common way that hire fails is simple: the founder never wrote down what works, so the new person guesses. Buy the playbook first, then hire against it. A full-time marketer at your stage costs more than any of our tiers and still needs someone to set direction.</p>
+        </div>
+        <div class="reveal" data-delay="1">
+          <span class="label">The fine print, said plainly</span>
+          <p>The retainer has a three-month minimum, then it&rsquo;s month to month. We take eight clients in total, so you get people who know your product, not a rotating account team. Your ad accounts, analytics, and CRM stay in your name from day one. If you leave, nothing gets switched off. You can read every tier on the <a class="tlink" href="/investment">pricing page</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF HONESTY -->
+  <section class="section proof">
+    <div class="wrap">
+      <div class="proof__grid">
+        <div>
+          <div class="sec-head">
+            <span class="eyebrow reveal">About proof</span>
+            <h2 class="reveal" data-delay="1">No founder case studies yet. Here&rsquo;s what we can show you.</h2>
+          </div>
+          <p class="mt-lg reveal">You&rsquo;ll want someone who&rsquo;s done this at your stage, and you should. So here&rsquo;s the honest version. Our client work so far has been with local businesses and nonprofits, and that&rsquo;s what you&rsquo;ll find on our <a class="tlink" href="/work">work page</a>. We haven&rsquo;t published a startup case study, and we won&rsquo;t make one up.</p>
+          <p class="mt-md reveal">What carries over is the method. Every engagement runs on the same five steps. For a founder they translate like this: why this product, said clearly. Who it&rsquo;s actually for. Positioning and the first channel that repeats. Onboarding that keeps the people you worked to get. Then referrals from customers who&rsquo;d tell a friend. The <a class="tlink" href="/method">method page</a> walks through each one.</p>
+          <p class="mt-md reveal">And you can judge us fast. Early in the three-week strategy engagement you&rsquo;ll see a one-sentence answer to who it&rsquo;s for, the positioning draft, and the channel we&rsquo;d bet on, with our reasons. If that work doesn&rsquo;t make sense to you, stop there.</p>
+          <div class="stat-row reveal" data-delay="1">
+            <div><div class="stat__num">3 weeks</div><div class="stat__lbl">Kickoff to a 90-day plan</div></div>
+            <div><div class="stat__num">8</div><div class="stat__lbl">Clients, total</div></div>
+            <div><div class="stat__num">3 months</div><div class="stat__lbl">Minimum, then month to month</div></div>
+          </div>
+        </div>
+        <div class="motion-frame motion-frame--light reveal" data-delay="2">
+          <video class="motion-loop" muted loop playsinline preload="none" poster="/media/motion/proof-line.jpg" width="960" height="800" aria-hidden="true"><source src="/media/motion/proof-line.webm" type="video/webm" /><source src="/media/motion/proof-line.mp4" type="video/mp4" /></video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CANDID GATE -->
+  <section class="section section--stone gate">
+    <div class="wrap wrap--narrow">
+      <div class="sec-head">
+        <span class="eyebrow reveal">Are we too early?</span>
+        <h2 class="reveal" data-delay="1">Before product-market fit, you get homework. Not a retainer.</h2>
+        <p class="sec-head__intro reveal" data-delay="2">We&rsquo;d rather lose the sale than sell you a retainer you can&rsquo;t use yet. Ads are for scaling something that already works. Spending on them before that is the most expensive mistake in early-stage marketing.</p>
+      </div>
+      <div class="fit-grid">
+        <div class="fit-card fit-card__yes reveal">
+          <span class="label">You&rsquo;re ready for us if</span>
+          <h3>Some customers already pay</h3>
+          <ul>
+            <li>People pay you and mostly stay, even if you found every one of them yourself.</li>
+            <li>You can name your best customer, but your website describes someone else.</li>
+            <li>Sales only happens when you&rsquo;re on the call, and you want it written down.</li>
+          </ul>
+        </div>
+        <div class="fit-card fit-card__no reveal" data-delay="1">
+          <span class="label">Homework first if</span>
+          <h3>You&rsquo;re still finding the fit</h3>
+          <ul>
+            <li>Talk to 20 people who have the problem, and write down their exact words.</li>
+            <li>Sell the first ten customers by hand. No ad budget yet.</li>
+            <li>Write one sentence on who it&rsquo;s for, and keep rewriting it until a stranger gets it.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="gate__after reveal">If that&rsquo;s you, book the call anyway. We&rsquo;ll tell you it&rsquo;s early, give you the homework in more detail, and tell you what signal to come back with. It costs you thirty minutes. The <a class="tlink" href="/tools/90-day-plan">90-day plan starter</a> is a good place to put the answers.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="wrap wrap--narrow">
+      <div class="sec-head">
+        <span class="eyebrow reveal">Before you call</span>
+        <h2 class="reveal" data-delay="1">What founders ask us first</h2>
+        <p class="sec-head__intro reveal" data-delay="2">Short answers, so the call can be about your product.</p>
+      </div>
+      <div class="faq mt-xl reveal" data-delay="2">
+        <details>
+          <summary>What does a fractional CMO cost for a startup?</summary>
+          <p>Ours runs $1,200, $2,400, or $4,800 a month, with a three-month minimum and then month to month. We&rsquo;d point most founders to the $3,000 strategy engagement first, so the retainer has a plan to run. For comparison, 2026 pricing guides from MarketerHire and GoFractional put fractional CMO retainers at $3,000 to $15,000 monthly. Ad spend, if you run ads, goes on your own card.</p>
+        </details>
+        <details>
+          <summary>Are we too early to hire a marketing consultant?</summary>
+          <p>Maybe. If you don&rsquo;t have paying customers who stay yet, you&rsquo;re probably pre-product-market fit, and a retainer would waste your runway. Book the call anyway. We&rsquo;ll say so plainly and send you off with homework: customer interviews, a few hand-sold deals, and one sentence on who it&rsquo;s for. Come back when people pay and stick around.</p>
+        </details>
+        <details>
+          <summary>Should we hire a full-time marketer instead?</summary>
+          <p>Eventually, yes. Right now a full-time hire costs more than any of our tiers and still needs someone to tell them what to do. The first marketing hire usually fails because nothing was written down before they arrived. We write the playbook with you, run it until it works, and hand it to your hire when you make one.</p>
+        </details>
+        <details>
+          <summary>We got burned by an agency. How is this different?</summary>
+          <p>An agency gets paid for deliverables: posts, ads, a monthly deck. We&rsquo;re measured on customers and pipeline, and the monthly report says how many came from where. We cap the whole consultancy at eight clients, so the people on your call know your product. Your accounts stay in your name, and after three months you can stop any month.</p>
+        </details>
+        <details>
+          <summary>Do you work with founders outside Indianapolis?</summary>
+          <p>Yes. We&rsquo;re based in Indianapolis, and the strategy, fractional CMO, and technical work all run over video, so founders anywhere in the U.S. work with us the same way. If you&rsquo;re local, we&rsquo;re happy to meet in person too.</p>
+        </details>
+      </div>
+      <div class="row-cta mt-xl reveal">
+        <a class="btn btn--dark" href="/investment">See every price <span class="arr">→</span></a>
+        <a class="tlink" href="/articles/fractional-cmo-vs-marketing-agency">Fractional CMO or agency? <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FREE TOOLS STRIP -->
+  <section class="section section--stone">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow reveal">Want to start on your own?</span>
+        <h2 class="reveal" data-delay="1">Two free tools, no email required</h2>
+        <p class="sec-head__intro reveal" data-delay="2">Both run in your browser and give you an answer on the spot. We built them the way we build things for clients.</p>
+      </div>
+      <div class="tool-strip">
+        <div class="tool-card reveal">
+          <span class="label">90-day plan starter</span>
+          <h3>Fit the next quarter on one page</h3>
+          <p>Pick one goal, one audience, the offer, and two channels you&rsquo;ll actually keep up with. It turns your answers into a dated, printable plan. It&rsquo;s a lighter version of what the strategy engagement produces.</p>
+          <a class="btn btn--ghost-light" href="/tools/90-day-plan">Start the plan <span class="arr">→</span></a>
+        </div>
+        <div class="tool-card reveal" data-delay="1">
+          <span class="label">The five-step check-up</span>
+          <h3>Find the step that&rsquo;s stuck</h3>
+          <p>Ten quick questions on the five steps, from Conviction to Word of mouth. It scores you and names the one step quietly dragging the rest down.</p>
+          <a class="btn btn--ghost-light" href="/tools/checkup">Take the check-up <span class="arr">→</span></a>
+        </div>
+      </div>
+      <p class="updated tool-strip__note reveal">Last updated: October 2026</p>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing">
+    <div class="closing__inner">
+      <div class="reveal">
+        <span class="eyebrow">One next step</span>
+        <h2>Tell us who it&rsquo;s for in <em>one sentence.</em></h2>
+        <p>That&rsquo;s the first question on the call. Thirty minutes, free, over video from wherever you are. You&rsquo;ll leave knowing whether you need the strategy engagement, a retainer, or just homework for now.</p>
+      </div>
+      <div class="reveal" data-delay="1">
+        <a href="/contact" class="btn btn--primary">Book the founder call <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer footer--v2">
+  <div class="wrap">
+    <div class="footer__grid footer__grid--v2">
+      <div class="footer__brand">
+        <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
+        <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/marketing">Marketing</a></li>
+          <li><a href="/services/technical">Technical</a></li>
+          <li><a href="/services/strategy">Strategy</a></li>
+          <li><a href="/services/coaching">Coaching &amp; growth</a></li>
+          <li><a href="/services/local-seo">Local SEO</a></li>
+          <li><a href="/services/google-ads">Google Ads</a></li>
+          <li><a href="/services/websites">Websites &amp; web apps</a></li>
+          <li><a href="/services/ai-automation">AI &amp; automation</a></li>
+          <li><a href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a></li>
+          <li><a href="/services/analytics">GA4 &amp; analytics</a></li>
+          <li><a href="/services/google-ad-grants">Google Ad Grants</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Who we help</h4>
+        <ul>
+          <li><a href="/for/local-businesses">Local businesses</a></li>
+          <li><a href="/for/founders">Founders &amp; startups</a></li>
+          <li><a href="/for/nonprofits">Nonprofits</a></li>
+          <li><a href="/work">Client results</a></li>
+        </ul>
+        <h4 class="footer__h4-gap">Free tools</h4>
+        <ul>
+          <li><a href="/tools/checkup">The five-step check-up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Articles</h4>
+        <ul>
+          <li><a href="/articles/fractional-cmo-cost">Fractional CMO cost</a></li>
+          <li><a href="/articles/fractional-cmo-vs-marketing-agency">CMO vs. agency</a></li>
+          <li><a href="/articles/is-gohighlevel-worth-it">Is GoHighLevel worth it?</a></li>
+          <li><a href="/articles/ai-agents-for-small-business">AI agents, explained</a></li>
+          <li><a href="/articles/not-showing-up-on-google">Not showing up on Google</a></li>
+          <li><a href="/articles/small-business-marketing-budget">What marketing should cost</a></li>
+          <li><a href="/articles/nonprofit-google-ad-grant">The nonprofit Ad Grant</a></li>
+          <li><a href="/resources" class="tlink">All resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/method">Method</a></li>
+          <li><a href="/investment">Pricing</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__meta">
+      <span>© 2026 Carson Poore Consulting · Indianapolis, Indiana · carson@carsonpoore.com</span>
+      <span class="footer__towns">Serving Indianapolis, Carmel, Fishers, Zionsville, Noblesville, Westfield, Greenwood, Brownsburg, Avon, and all of central Indiana — technical and coaching work nationwide.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

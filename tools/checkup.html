@@ -1,0 +1,893 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Five-Step Check-Up: Free Marketing Score | Carson Poore</title>
+<meta name="description" content="Ten plain questions, about three minutes, no email. Score your business or nonprofit out of 100 and see which of five steps is holding the rest back." />
+<link rel="canonical" href="https://carsonpoore.com/tools/checkup" />
+<meta property="og:title" content="The Five-Step Check-Up: Free Marketing Score | Carson Poore" />
+<meta property="og:description" content="Ten plain questions, about three minutes, no email. Score your business or nonprofit out of 100 and see which of five steps is holding the rest back." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://carsonpoore.com/tools/checkup" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
+<link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
+<link rel="stylesheet" href="/styles.css?v=20261008-1" />
+<script defer src="/site.js?v=20261008-1"></script>
+<style>
+  /* Five-step check-up — page-specific layout */
+  .ck-h { font-size: var(--step-3); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; color: var(--ink); }
+  .ck-h:focus, .tool__q:focus { outline: none; }
+  .ck-intro p { color: var(--ink-2); max-width: 60ch; margin-top: 14px; line-height: 1.65; }
+  .ck-intro .tool-note { color: var(--muted); }
+  .ck-mode { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin-top: 26px; }
+  .ck-mode__label { font-weight: 700; font-size: 0.92rem; color: var(--ink); }
+  .toggle-row button:focus-visible { outline: 2px solid var(--cobalt); outline-offset: 2px; }
+  .ck-start-row { margin-top: 28px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 22px; }
+
+  .ck-meta { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px 16px; margin-bottom: 14px;
+    font-size: 0.76rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cobalt); }
+  .ck-meta span + span { color: var(--muted); }
+  .opt { display: flex; align-items: flex-start; gap: 14px; line-height: 1.45; }
+  .opt__key { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--line);
+    display: inline-grid; place-items: center; font-size: 0.8rem; font-weight: 800; color: var(--cobalt); background: #fff; }
+  .opt.is-picked .opt__key { background: var(--cobalt); border-color: var(--cobalt); color: #fff; }
+  .ck-nav { margin-top: 22px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .ck-back { font: inherit; font-weight: 600; font-size: 0.92rem; background: none; border: 0; color: var(--cobalt);
+    cursor: pointer; padding: 8px 0; text-decoration: underline; text-underline-offset: 3px; }
+  .ck-back:focus-visible { outline: 2px solid var(--cobalt); outline-offset: 2px; }
+
+  .ck-top { display: grid; grid-template-columns: auto 1fr; gap: 12px 36px; align-items: end; }
+  @media (max-width: 620px) { .ck-top { grid-template-columns: 1fr; } }
+  .ck-top .grade small { font-size: 0.28em; font-weight: 700; letter-spacing: 0; color: var(--muted); margin-left: 4px; }
+  .ck-stage-desc { color: var(--ink-2); max-width: 52ch; margin-top: 8px; line-height: 1.6; }
+  .ck-bars { margin-top: 34px; display: grid; gap: 16px; }
+  .ck-bar { display: grid; grid-template-columns: 1fr auto; gap: 6px 16px; align-items: baseline; }
+  .ck-bar .score-bar { grid-column: 1 / -1; }
+  .ck-bar__name { font-weight: 700; color: var(--ink); }
+  .ck-bar__flag { font-weight: 600; color: var(--ink-2); }
+  .ck-bar__num { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--ink-2); font-size: 0.92rem; }
+  .ck-weak { margin-top: 34px; border-left: 4px solid var(--amber); }
+  .ck-weak h3 { font-size: var(--step-1); font-weight: 800; margin-top: 8px; color: var(--ink); line-height: 1.25; }
+  .ck-weak p { color: var(--ink-2); line-height: 1.65; margin-top: 10px; max-width: 62ch; }
+  .ck-week { background: var(--bone); border-radius: var(--r-2); padding: 14px 18px; margin-top: 16px; }
+  .ck-week strong { color: var(--ink); }
+  .ck-links { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px 22px; }
+  .ck-cta { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 12px 16px; align-items: center; }
+  .ck-cta .btn { white-space: normal; text-align: left; }
+  .ck-foot { margin-top: 18px; }
+  .ck-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .ck-noscript { max-width: 860px; margin-inline: auto; }
+  .ck-noscript p { color: var(--ink-2); margin-top: 10px; line-height: 1.65; }
+
+  .ck-measure { list-style: none; margin: 0; padding: 0; counter-reset: ck; display: grid; gap: 0; }
+  .ck-measure li { counter-increment: ck; display: grid; grid-template-columns: 56px 1fr; gap: 4px 18px;
+    padding: 20px 0; border-top: 1px solid var(--line); }
+  .ck-measure li:last-child { border-bottom: 1px solid var(--line); }
+  .ck-measure li::before { content: "0" counter(ck); grid-row: span 2; font-weight: 900; font-size: 1.5rem;
+    color: var(--cobalt); font-variant-numeric: tabular-nums; line-height: 1.1; }
+  .ck-measure .name { font-weight: 800; color: var(--ink); font-size: 1.08rem; }
+  .ck-measure .body { color: var(--ink-2); line-height: 1.6; }
+  .ck-opinion { max-width: 62ch; margin-top: clamp(24px, 3vw, 36px); color: var(--ink-2); line-height: 1.65; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://carsonpoore.com/#org",
+      "name": "Carson Poore Consulting",
+      "url": "https://carsonpoore.com/",
+      "logo": "https://carsonpoore.com/brand/cpc-mark-royalblue.svg",
+      "image": "https://carsonpoore.com/brand/carson-headshot.png",
+      "email": "carson@carsonpoore.com",
+      "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
+      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "areaServed": [
+        { "@type": "City", "name": "Indianapolis" },
+        { "@type": "State", "name": "Indiana" },
+        { "@type": "Country", "name": "United States" }
+      ],
+      "priceRange": "$1,200–$4,800/month",
+      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://carsonpoore.com/tools/checkup#app",
+      "name": "The Five-Step Check-Up",
+      "url": "https://carsonpoore.com/tools/checkup",
+      "description": "A free, ten-question self-assessment for small businesses and nonprofits. Scores you out of 100 across five steps (Conviction, Your people, A sharp offer, The experience, Word of mouth) and names your weakest step. Runs in the browser; no email or login.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "isAccessibleForFree": true,
+      "provider": { "@id": "https://carsonpoore.com/#org" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carsonpoore.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://carsonpoore.com/resources" },
+        { "@type": "ListItem", "position": 3, "name": "The five-step check-up" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I have to give you my email to see my score?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. There’s no email and no login. Your answers stay in your browser and nothing is saved. The only time your score leaves this page is if you click through to book a call, which carries the number along so we can prepare." }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the check-up scored?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Each question has four answers worth 0, 3, 7, or 10 points. Two questions cover each of the five steps, so every step is scored out of 20 and the total is out of 100. Your weakest step is the one with the lowest score. If two tie, we name the earlier one, because the later steps stand on it." }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens on the free call?",
+          "acceptedAnswer": { "@type": "Answer", "text": "We spend 30 minutes on your weakest step. You’ll leave with one or two specific fixes, even if we never work together. We take eight clients total, so if we’re not the right fit, we’ll say so and point you somewhere better." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="page">
+<header class="nav">
+  <div class="nav__inner">
+    <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
+    <nav class="nav__links" aria-label="Primary">
+      <div class="nav__item has-drop">
+        <a href="/services">Services</a>
+        <div class="nav__drop" aria-label="Services">
+          <a href="/services/marketing">Marketing</a>
+          <a href="/services/technical">Technical</a>
+          <a href="/services/strategy">Strategy</a>
+          <a href="/services/coaching">Coaching &amp; growth</a>
+          <a class="nav__drop-all" href="/services">All services</a>
+        </div>
+      </div>
+      <div class="nav__item has-drop">
+        <a href="/#who-we-help">Who we help</a>
+        <div class="nav__drop" aria-label="Who we help">
+          <a href="/for/local-businesses">Local businesses</a>
+          <a href="/for/founders">Founders &amp; startups</a>
+          <a href="/for/nonprofits">Nonprofits</a>
+        </div>
+      </div>
+      <a href="/method">Method</a>
+      <a href="/investment">Pricing</a>
+      <a href="/work">Work</a>
+      <a href="/resources">Resources</a>
+      <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
+    </nav>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" aria-hidden="true">
+  <span class="mobile-menu__group">Services</span>
+  <a href="/services/marketing">Marketing</a>
+  <a href="/services/technical">Technical</a>
+  <a href="/services/strategy">Strategy</a>
+  <a href="/services/coaching">Coaching &amp; growth</a>
+  <span class="mobile-menu__group">Who we help</span>
+  <a href="/for/local-businesses">Local businesses</a>
+  <a href="/for/founders">Founders &amp; startups</a>
+  <a href="/for/nonprofits">Nonprofits</a>
+  <span class="mobile-menu__group">Explore</span>
+  <a href="/method">Method</a>
+  <a href="/investment">Pricing</a>
+  <a href="/work">Work</a>
+  <a href="/resources">Resources</a>
+  <a href="/about">About</a>
+  <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero page-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li aria-current="page">The five-step check-up</li>
+        </ol>
+      </nav>
+      <span class="eyebrow reveal">Free tool · about 3 minutes</span>
+      <h1 class="reveal mt-md" data-delay="1">Which step is <em>quietly</em> holding the rest back?</h1>
+      <p class="hero__sub reveal mt-md" data-delay="2">Ten plain questions about your business or nonprofit, scored on the spot against the same five steps we run every client through. No email. No login. Your answers stay on this page.</p>
+      <div class="row-cta mt-lg reveal" data-delay="3">
+        <a class="btn btn--primary" href="#checkup">Start the check-up <span class="arr">→</span></a>
+        <a class="btn btn--ghost-light" href="/method">Read the five steps first</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOL -->
+  <section class="section section--stone" id="checkup">
+    <div class="wrap">
+      <noscript>
+        <div class="tool__panel ck-noscript">
+          <h2 class="ck-h">The check-up needs JavaScript</h2>
+          <p>This tool scores your answers right here in your browser, so it can&rsquo;t run with JavaScript turned off. Nothing gets sent anywhere either way.</p>
+          <p>Prefer to talk it through? <a class="tlink" href="/contact">Book a free call</a> and we&rsquo;ll walk the ten questions with you in person.</p>
+        </div>
+      </noscript>
+
+      <div class="tool" id="checkup-tool" hidden>
+
+        <!-- Intro -->
+        <div class="tool__panel ck-intro" id="ck-intro">
+          <span class="label">The five-step check-up</span>
+          <h2 class="ck-h mt-sm" id="ck-intro-head" tabindex="-1">Ten questions, one at a time</h2>
+          <p>Pick the answer that&rsquo;s true today, not the one you&rsquo;re hoping for. Nobody sees this but you. At the end you&rsquo;ll get a score out of 100 and the one step worth fixing first.</p>
+          <div class="ck-mode">
+            <span class="ck-mode__label" id="ck-mode-label">Answering for</span>
+            <div class="toggle-row" role="group" aria-labelledby="ck-mode-label">
+              <button type="button" class="is-on" aria-pressed="true" data-mode="business">A business</button>
+              <button type="button" aria-pressed="false" data-mode="nonprofit">A nonprofit</button>
+            </div>
+          </div>
+          <p class="tool-note" id="ck-mode-note">The questions will talk about customers. Switch to nonprofit and they&rsquo;ll talk about donors and supporters instead.</p>
+          <div class="ck-start-row">
+            <button type="button" class="btn btn--primary" id="ck-start">Start the check-up <span class="arr">→</span></button>
+            <span class="tool-note">On a keyboard? Press 1&ndash;4 to answer.</span>
+          </div>
+        </div>
+
+        <!-- Questions -->
+        <div class="tool__panel" id="ck-quiz" hidden>
+          <div class="tool__progress" id="ck-progress" aria-hidden="true"></div>
+          <div class="ck-meta"><span id="ck-step"></span><span id="ck-count"></span></div>
+          <h2 class="tool__q" id="ck-q" tabindex="-1"></h2>
+          <div class="opt-list" id="ck-opts" role="group" aria-labelledby="ck-q"></div>
+          <div class="ck-nav">
+            <button type="button" class="ck-back" id="ck-back">Previous question</button>
+            <span class="tool-note">Your answers stay in this browser.</span>
+          </div>
+        </div>
+
+        <!-- Results -->
+        <div class="tool__panel" id="ck-result-panel" hidden>
+          <div id="ck-results" aria-live="polite"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT IT MEASURES -->
+  <section class="section">
+    <div class="wrap wrap--narrow">
+      <div class="sec-head">
+        <span class="eyebrow reveal">What it measures</span>
+        <h2 class="reveal" data-delay="1">The same five steps we use with every client</h2>
+        <p class="sec-head__intro reveal" data-delay="2">Two questions per step. Here&rsquo;s what each pair is really asking.</p>
+      </div>
+      <ol class="ck-measure mt-xl reveal">
+        <li><span class="name">Conviction</span><span class="body">Can you say why you exist in plain words, and does your team say it the same way?</span></li>
+        <li><span class="name">Your people</span><span class="body">Do you know your best customers well enough to write to one of them by name?</span></li>
+        <li><span class="name">A sharp offer</span><span class="body">Can a stranger tell what you sell and why it&rsquo;s worth it in about ten seconds?</span></li>
+        <li><span class="name">The experience</span><span class="body">What actually happens between someone&rsquo;s first inquiry and their second visit?</span></li>
+        <li><span class="name">Word of mouth</span><span class="body">Do happy customers turn into new ones on purpose, or only when you get lucky?</span></li>
+      </ol>
+      <p class="ck-opinion reveal">We think the weakest step matters more than the total. A business at 70 with one step sitting at 4 out of 20 usually has a clearer next move than one at 85 with no obvious gap. So that&rsquo;s what the result leads with. <a class="tlink" href="/method">Read the five steps in full</a>.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--stone">
+    <div class="wrap wrap--narrow">
+      <div class="sec-head">
+        <span class="eyebrow reveal">Fair questions</span>
+        <h2 class="reveal" data-delay="1">Before you start</h2>
+      </div>
+      <div class="faq mt-xl reveal" data-delay="2">
+        <details>
+          <summary>Do I have to give you my email to see my score?</summary>
+          <p>No. There’s no email and no login. Your answers stay in your browser and nothing is saved. The only time your score leaves this page is if you click through to book a call, which carries the number along so we can prepare.</p>
+        </details>
+        <details>
+          <summary>How is the check-up scored?</summary>
+          <p>Each question has four answers worth 0, 3, 7, or 10 points. Two questions cover each of the five steps, so every step is scored out of 20 and the total is out of 100. Your weakest step is the one with the lowest score. If two tie, we name the earlier one, because the later steps stand on it.</p>
+        </details>
+        <details>
+          <summary>What happens on the free call?</summary>
+          <p>We spend 30 minutes on your weakest step. You’ll leave with one or two specific fixes, even if we never work together. We take eight clients total, so if we’re not the right fit, we’ll say so and point you somewhere better.</p>
+        </details>
+      </div>
+      <p class="updated mt-lg">Last updated: October 2026</p>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing">
+    <div class="closing__inner">
+      <div class="reveal">
+        <span class="eyebrow">Got your number?</span>
+        <h2>Your weakest step is <em>where we start.</em></h2>
+        <p>Thirty minutes, free, on video or over coffee somewhere in Indy. Bring the score and the step it named. We&rsquo;ll tell you what we&rsquo;d fix first, and whether you even need us to do it.</p>
+      </div>
+      <div class="reveal" data-delay="1">
+        <a href="/contact" class="btn btn--primary">Bring your score to a call <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer footer--v2">
+  <div class="wrap">
+    <div class="footer__grid footer__grid--v2">
+      <div class="footer__brand">
+        <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
+        <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/marketing">Marketing</a></li>
+          <li><a href="/services/technical">Technical</a></li>
+          <li><a href="/services/strategy">Strategy</a></li>
+          <li><a href="/services/coaching">Coaching &amp; growth</a></li>
+          <li><a href="/services/local-seo">Local SEO</a></li>
+          <li><a href="/services/google-ads">Google Ads</a></li>
+          <li><a href="/services/websites">Websites &amp; web apps</a></li>
+          <li><a href="/services/ai-automation">AI &amp; automation</a></li>
+          <li><a href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a></li>
+          <li><a href="/services/analytics">GA4 &amp; analytics</a></li>
+          <li><a href="/services/google-ad-grants">Google Ad Grants</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Who we help</h4>
+        <ul>
+          <li><a href="/for/local-businesses">Local businesses</a></li>
+          <li><a href="/for/founders">Founders &amp; startups</a></li>
+          <li><a href="/for/nonprofits">Nonprofits</a></li>
+          <li><a href="/work">Client results</a></li>
+        </ul>
+        <h4 class="footer__h4-gap">Free tools</h4>
+        <ul>
+          <li><a href="/tools/checkup">The five-step check-up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Articles</h4>
+        <ul>
+          <li><a href="/articles/fractional-cmo-cost">Fractional CMO cost</a></li>
+          <li><a href="/articles/fractional-cmo-vs-marketing-agency">CMO vs. agency</a></li>
+          <li><a href="/articles/is-gohighlevel-worth-it">Is GoHighLevel worth it?</a></li>
+          <li><a href="/articles/ai-agents-for-small-business">AI agents, explained</a></li>
+          <li><a href="/articles/not-showing-up-on-google">Not showing up on Google</a></li>
+          <li><a href="/articles/small-business-marketing-budget">What marketing should cost</a></li>
+          <li><a href="/articles/nonprofit-google-ad-grant">The nonprofit Ad Grant</a></li>
+          <li><a href="/resources" class="tlink">All resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/method">Method</a></li>
+          <li><a href="/investment">Pricing</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__meta">
+      <span>© 2026 Carson Poore Consulting · Indianapolis, Indiana · carson@carsonpoore.com</span>
+      <span class="footer__towns">Serving Indianapolis, Carmel, Fishers, Zionsville, Noblesville, Westfield, Greenwood, Brownsburg, Avon, and all of central Indiana — technical and coaching work nationwide.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  var tool = document.getElementById("checkup-tool");
+  if (!tool) return;
+
+  var STEPS = [
+    { key: "conviction", name: "Conviction" },
+    { key: "people", name: "Your people" },
+    { key: "offer", name: "A sharp offer" },
+    { key: "experience", name: "The experience" },
+    { key: "word-of-mouth", name: "Word of mouth" }
+  ];
+  var POINTS = [0, 3, 7, 10];
+
+  // s = step index. q / options: a string, or { b: business wording, n: nonprofit wording }.
+  // Options run from "not yet" (0 points) to "that's us" (10 points).
+  var QUESTIONS = [
+    {
+      s: 0,
+      q: {
+        b: "If someone asked why you started this business, could you answer in two sentences without rambling?",
+        n: "If a new volunteer asked why your organization exists, could you answer in two sentences without reciting the mission statement?"
+      },
+      o: [
+        "Honestly, I’d ramble. I haven’t said it out loud in years.",
+        "I could, but it would sound like everyone else in my field.",
+        { b: "Yes, though my team would each say it a little differently.", n: "Yes, though our staff and board would each say it a little differently." },
+        { b: "Yes, and my team says it the same way I do.", n: "Yes, and our staff and board say it the same way I do." }
+      ]
+    },
+    {
+      s: 0,
+      q: {
+        b: "Is there work you turn down, even when the money’s good, because it isn’t what you’re about?",
+        n: "Is there funding or programming you’d turn down because it would pull you off your mission?"
+      },
+      o: [
+        { b: "No. If it pays, we take it.", n: "No. If it’s funded, we do it." },
+        "We’ve talked about it but never actually said no.",
+        "We say no sometimes, but we couldn’t tell you the rule.",
+        "Yes. We know what we stand for, and we’ve walked away over it."
+      ]
+    },
+    {
+      s: 1,
+      q: {
+        b: "Picture your best customer, the one you’d clone if you could. Could you describe them in one sentence?",
+        n: "Picture your most committed donor, the one you’d clone if you could. Could you describe them in one sentence?"
+      },
+      o: [
+        { b: "Our customers are pretty much anybody.", n: "Our donors are pretty much anybody who gives." },
+        "Roughly, by age or zip code, but not by what they actually want.",
+        "Yes, I know them well. It’s just not written down anywhere.",
+        "Yes, and our website and emails are clearly written to that person."
+      ]
+    },
+    {
+      s: 1,
+      q: {
+        b: "When did you last ask a customer, in their own words, why they picked you?",
+        n: "When did you last ask a donor, in their own words, why they give to you?"
+      },
+      o: [
+        "I can’t remember asking.",
+        "Over a year ago, maybe.",
+        "In the last few months, casually.",
+        "We ask regularly and keep notes on what people say."
+      ]
+    },
+    {
+      s: 2,
+      q: {
+        b: "Could a stranger look at your website for ten seconds and say what you sell and who it’s for?",
+        n: "Could a stranger look at your website for ten seconds and say what a gift does and how to give one?"
+      },
+      o: [
+        { b: "Probably not. Even my friends aren’t totally sure.", n: "Probably not. Even our board would struggle." },
+        "They’d get the general category, not why we’re different.",
+        "Mostly. The details are buried a few clicks in.",
+        "Yes. It’s on the first screen, in plain words."
+      ]
+    },
+    {
+      s: 2,
+      q: {
+        b: "How do people usually react when they hear your price?",
+        n: "When you make an ask, how do people usually react?"
+      },
+      o: [
+        { b: "We don’t really have set prices. Every quote starts from scratch.", n: "We don’t make specific asks. We mostly say “please give.”" },
+        { b: "They push back or ask for a discount a lot.", n: "Polite nods. Gifts come in smaller than we hoped." },
+        { b: "Some hesitate, but most get it once we explain.", n: "Good responses, but only when we explain the impact one on one." },
+        { b: "They expect it. The value’s clear before the price comes up.", n: "People know what their gift will do before we finish asking." }
+      ]
+    },
+    {
+      s: 3,
+      q: {
+        b: "A new customer calls, texts, or fills out your form at 4:45 on a Friday. What happens?",
+        n: "Someone fills out your volunteer or giving form at 4:45 on a Friday. What happens?"
+      },
+      o: [
+        "Honestly? It might sit until Monday, or get lost.",
+        "Someone gets back to them eventually, when there’s a minute.",
+        "We reply within a day, mostly thanks to memory and sticky notes.",
+        "They hear back within minutes, and it’s tracked so nobody slips through."
+      ]
+    },
+    {
+      s: 3,
+      q: {
+        b: "After someone buys from you, what happens next?",
+        n: "After someone gives for the first time, what happens next?"
+      },
+      o: [
+        { b: "Nothing, really. We hope they come back.", n: "A receipt. That’s about it." },
+        "A thank-you, if we remember.",
+        "We follow up, but it depends on who’s working that week.",
+        { b: "Every customer gets the same follow-up: a thank-you and a check-in a few weeks later.", n: "Every first-time donor gets the same thank-you and an update on what their gift did." }
+      ]
+    },
+    {
+      s: 4,
+      q: {
+        b: "When did you last ask a happy customer for a review or a referral?",
+        n: "When did you last ask a happy supporter to share your work or bring a friend?"
+      },
+      o: [
+        "We don’t ask. It feels pushy.",
+        "Once in a while, when someone’s especially thrilled.",
+        "We ask most people, but there’s no system to it.",
+        { b: "Asking is built into how we finish every job.", n: "Asking is built into every event and every thank-you." }
+      ]
+    },
+    {
+      s: 4,
+      q: {
+        b: "If you went quiet on marketing for a month, would new customers still find you?",
+        n: "If you stopped posting and sending appeals for a month, would new supporters still find you?"
+      },
+      o: [
+        { b: "No. Everything stops when I stop.", n: "No. Everything stops when we stop." },
+        "A trickle, mostly from people who already know us.",
+        "Some referrals come in on their own, but it’s unpredictable.",
+        { b: "Yes. Reviews and referrals keep bringing people in.", n: "Yes. Our supporters keep bringing new people in." }
+      ]
+    }
+  ];
+
+  var STAGES = [
+    { min: 80, name: "Solid footing", desc: "The five steps are mostly working together. Gains from here come from tightening one step." },
+    { min: 60, name: "One weak link", desc: "Most of the system works. One step is quietly costing you more than the rest, and it’s named below." },
+    { min: 40, name: "Running on hustle", desc: "Things work because you work. Growth shows up when you push and stalls when you rest. That’s normal at this stage, and fixable." },
+    { min: 0, name: "Starting fresh", desc: "Most of the five steps haven’t been built on purpose yet. That’s fine. It means the first fixes tend to be simple ones." }
+  ];
+
+  var WEAK = {
+    "conviction": {
+      line: "Your why isn’t doing any work for you yet.",
+      means: {
+        b: "When an owner can’t say why the business exists in a sentence or two, the marketing drifts toward sounding like everyone else’s. Then price becomes the only way to stand out. It’s rarely a lack of belief. Nobody has written it down since the early days, that’s all.",
+        n: "When the people inside an organization each explain the mission differently, donors hear five causes instead of one, and appeals get longer and vaguer. It’s rarely a lack of belief. Nobody has put it in plain words since the founding days, that’s all."
+      },
+      week: {
+        b: "Write two sentences: why you started, and one kind of work you won’t take. Read them to someone on your team and ask, “Does that sound like us?”",
+        n: "Write two sentences: why the organization exists, and one thing you’d turn down to protect it. Read them at your next staff or board meeting and ask, “Does that sound like us?”"
+      },
+      links: { b: [["/services/strategy", "See the strategy engagement"]], n: [["/services/strategy", "See the strategy engagement"]] }
+    },
+    "people": {
+      line: "You’re talking to everyone, so nobody feels talked to.",
+      means: {
+        b: "Marketing written for everyone lands with no one in particular. It’s also the priciest way to advertise, because you pay to reach people who were never going to buy. The answer is usually sitting in your customer list already.",
+        n: "Appeals written for everyone land with no one in particular. Most organizations already have a core group who give again and again. They just haven’t been described clearly enough to find more people like them."
+      },
+      week: {
+        b: "Call three of your best customers and ask one question: “What almost stopped you from hiring us?” Write down their exact words. Those words belong on your website.",
+        n: "Call three of your most loyal donors and ask one question: “What made you give the first time?” Write down their exact words. Those words belong in your next appeal."
+      },
+      links: {
+        b: [["/for/local-businesses", "How we help local businesses"], ["/for/founders", "How we help founders"]],
+        n: [["/for/nonprofits", "How we help nonprofits"]]
+      }
+    },
+    "offer": {
+      line: { b: "Your offer takes too much explaining.", n: "Your ask takes too much explaining." },
+      means: {
+        b: "If people can’t tell what you sell, who it’s for, and roughly what it costs, they don’t ask. They leave. A fuzzy offer also makes word of mouth nearly impossible, because happy customers can’t repeat what they can’t summarize.",
+        n: "If people can’t tell what their gift does, they give less or they wait. A fuzzy ask also makes word of mouth nearly impossible, because supporters can’t repeat what they can’t summarize."
+      },
+      week: {
+        b: "Write your main offer as one sentence a customer could repeat at dinner: what it is and who it’s for. Put it on the first screen of your homepage.",
+        n: "Write one sentence that ties a specific gift amount to one concrete thing it makes possible. Use a real number from your own budget. Put it at the top of your donate page."
+      },
+      links: { b: [["/services/strategy", "See the strategy engagement"]], n: [["/services/strategy", "See the strategy engagement"]] }
+    },
+    "experience": {
+      line: { b: "Good leads are slipping through the cracks.", n: "Interested people are slipping through the cracks." },
+      means: {
+        b: "We think slow replies and forgotten follow-ups cost most small businesses more work than competitors do. The marketing did its job. The handoff didn’t. It’s almost always a systems problem: your people are busy, and sticky notes don’t text anyone back.",
+        n: "We think slow replies and forgotten thank-yous cost most nonprofits more volunteers and second gifts than other causes do. The outreach did its job. The handoff didn’t. It’s almost always a systems problem: your staff is stretched, and a shared inbox doesn’t follow up on its own."
+      },
+      week: {
+        b: "Fill out your own website form, then time how long the reply takes. Write down every step that happened, and every step that didn’t.",
+        n: "Fill out your own volunteer or giving form, then time how long the reply takes. Write down every step that happened, and every step that didn’t."
+      },
+      links: { b: [["/services/crm-gohighlevel", "See how we set up follow-up"]], n: [["/services/crm-gohighlevel", "See how we set up follow-up"]] }
+    },
+    "word-of-mouth": {
+      line: { b: "Happy customers aren’t turning into new ones.", n: "Happy supporters aren’t bringing in new ones." },
+      means: {
+        b: "You’re probably doing good work that not enough people hear about. At a small business, word of mouth rarely happens by accident. It happens because someone asks at the right moment, in a way that’s easy to say yes to.",
+        n: "Your supporters probably love the work. They just haven’t been asked to talk about it. Word of mouth rarely happens by accident. It happens because someone asks at the right moment, in a way that’s easy to say yes to."
+      },
+      week: {
+        b: "Pick the five happiest customers from the last 90 days and send each one a short, personal note asking for a Google review. Include the direct review link so it takes them a minute.",
+        n: "Pick five supporters who’ve been with you the longest and ask each one to share a single story about your work with a friend. Make it easy: send them the story and the link."
+      },
+      links: { b: [["/services/local-seo", "See how we build reviews and local search"]], n: [["/services/local-seo", "See how we build reviews and local search"]] }
+    }
+  };
+
+  var mode = "business";
+  var idx = 0;
+  var answers = [];
+  var locked = false;
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  var intro = document.getElementById("ck-intro");
+  var introHead = document.getElementById("ck-intro-head");
+  var quiz = document.getElementById("ck-quiz");
+  var progress = document.getElementById("ck-progress");
+  var stepEl = document.getElementById("ck-step");
+  var countEl = document.getElementById("ck-count");
+  var qEl = document.getElementById("ck-q");
+  var optsEl = document.getElementById("ck-opts");
+  var backBtn = document.getElementById("ck-back");
+  var resultPanel = document.getElementById("ck-result-panel");
+  var results = document.getElementById("ck-results");
+  var modeNote = document.getElementById("ck-mode-note");
+  var modeBtns = tool.querySelectorAll(".toggle-row button");
+
+  function t(x) {
+    if (x == null) return "";
+    if (typeof x === "string") return x;
+    return mode === "nonprofit" ? (x.n != null ? x.n : x.b) : x.b;
+  }
+
+  function el(tag, cls, text) {
+    var node = document.createElement(tag);
+    if (cls) node.className = cls;
+    if (text != null) node.textContent = text;
+    return node;
+  }
+
+  function show(panel) {
+    intro.hidden = panel !== intro;
+    quiz.hidden = panel !== quiz;
+    resultPanel.hidden = panel !== resultPanel;
+  }
+
+  function setMode(next) {
+    mode = next === "nonprofit" ? "nonprofit" : "business";
+    for (var i = 0; i < modeBtns.length; i++) {
+      var on = modeBtns[i].getAttribute("data-mode") === mode;
+      modeBtns[i].classList.toggle("is-on", on);
+      modeBtns[i].setAttribute("aria-pressed", on ? "true" : "false");
+    }
+    modeNote.textContent = mode === "nonprofit"
+      ? "The questions will talk about donors and supporters. Switch back to business and they’ll talk about customers."
+      : "The questions will talk about customers. Switch to nonprofit and they’ll talk about donors and supporters instead.";
+  }
+
+  function buildProgress() {
+    progress.innerHTML = "";
+    for (var i = 0; i < QUESTIONS.length; i++) progress.appendChild(el("span"));
+  }
+
+  function paintProgress() {
+    var spans = progress.children;
+    for (var i = 0; i < spans.length; i++) {
+      spans[i].className = (answers[i] != null || i < idx) ? "is-done" : "";
+    }
+  }
+
+  function showQuestion(i, moveFocus) {
+    idx = Math.max(0, Math.min(i, QUESTIONS.length - 1));
+    var q = QUESTIONS[idx];
+    stepEl.textContent = "Step " + (q.s + 1) + " of 5 · " + STEPS[q.s].name;
+    countEl.textContent = "Question " + (idx + 1) + " of " + QUESTIONS.length;
+    qEl.textContent = t(q.q);
+    optsEl.innerHTML = "";
+    q.o.forEach(function (opt, k) {
+      var b = el("button", "opt" + (answers[idx] === k ? " is-picked" : ""));
+      b.type = "button";
+      b.setAttribute("aria-pressed", answers[idx] === k ? "true" : "false");
+      var key = el("span", "opt__key", String(k + 1));
+      key.setAttribute("aria-hidden", "true");
+      b.appendChild(key);
+      b.appendChild(el("span", "", t(opt)));
+      b.addEventListener("click", function () { choose(k); });
+      optsEl.appendChild(b);
+    });
+    backBtn.textContent = idx === 0 ? "Back to the start" : "Previous question";
+    paintProgress();
+    show(quiz);
+    if (moveFocus) qEl.focus();
+  }
+
+  function choose(k) {
+    if (locked || quiz.hidden) return;
+    answers[idx] = k;
+    var btns = optsEl.querySelectorAll(".opt");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].classList.toggle("is-picked", i === k);
+      btns[i].setAttribute("aria-pressed", i === k ? "true" : "false");
+    }
+    paintProgress();
+    locked = true;
+    window.setTimeout(function () {
+      locked = false;
+      if (idx < QUESTIONS.length - 1) showQuestion(idx + 1, true);
+      else showResults();
+    }, reduceMotion ? 0 : 220);
+  }
+
+  function score() {
+    var steps = [0, 0, 0, 0, 0];
+    QUESTIONS.forEach(function (q, i) {
+      var a = answers[i];
+      steps[q.s] += (typeof a === "number" && POINTS[a] != null) ? POINTS[a] : 0;
+    });
+    var total = steps.reduce(function (sum, n) { return sum + n; }, 0);
+    var low = Math.min.apply(null, steps);
+    var tied = [];
+    steps.forEach(function (n, i) { if (n === low) tied.push(i); });
+    var stage = STAGES[STAGES.length - 1];
+    for (var i = 0; i < STAGES.length; i++) { if (total >= STAGES[i].min) { stage = STAGES[i]; break; } }
+    return { steps: steps, total: total, low: low, weakest: tied[0], tied: tied, stage: stage };
+  }
+
+  function addLink(parent, href, text) {
+    var a = el("a", "tlink", text);
+    a.setAttribute("href", href);
+    parent.appendChild(a);
+  }
+
+  function showResults() {
+    var r = score();
+    var perfect = r.low >= 20;
+    var weakStep = STEPS[r.weakest];
+    results.innerHTML = "";
+
+    results.appendChild(el("span", "label", "Your check-up result"));
+
+    var top = el("div", "ck-top mt-sm");
+    var grade = el("div", "grade", String(r.total));
+    grade.setAttribute("aria-hidden", "true");
+    grade.appendChild(el("small", "", "/ 100"));
+    top.appendChild(grade);
+    var stageWrap = el("div");
+    var head = el("h2", "ck-h", r.stage.name);
+    head.id = "ck-result-head";
+    head.setAttribute("tabindex", "-1");
+    head.insertBefore(el("span", "ck-sr", "Your score is " + r.total + " out of 100. Stage: "), head.firstChild);
+    stageWrap.appendChild(head);
+    stageWrap.appendChild(el("p", "ck-stage-desc", r.stage.desc));
+    top.appendChild(stageWrap);
+    results.appendChild(top);
+
+    var bars = el("div", "ck-bars");
+    var fills = [];
+    STEPS.forEach(function (step, i) {
+      var isWeak = !perfect && i === r.weakest;
+      var row = el("div", "ck-bar");
+      var name = el("span", "ck-bar__name", step.name);
+      if (isWeak) name.appendChild(el("span", "ck-bar__flag", " · weakest step"));
+      row.appendChild(name);
+      row.appendChild(el("span", "ck-bar__num", r.steps[i] + " of 20"));
+      var bar = el("div", "score-bar" + (isWeak ? " score-bar--amber" : ""));
+      bar.setAttribute("aria-hidden", "true");
+      var fill = el("span");
+      fill.style.width = reduceMotion ? (r.steps[i] / 20 * 100) + "%" : "0%";
+      bar.appendChild(fill);
+      fills.push([fill, r.steps[i] / 20 * 100]);
+      row.appendChild(bar);
+      bars.appendChild(row);
+    });
+    results.appendChild(bars);
+
+    var card = el("div", "result-card ck-weak");
+    if (perfect) {
+      card.appendChild(el("span", "label", "No weak step showed up"));
+      card.appendChild(el("h3", "", "All five steps scored 20 out of 20."));
+      card.appendChild(el("p", "", "That’s rare, and worth a second look. Owners and their teams often answer these differently, and the gap between your answers is usually where the work is."));
+      var weekP = el("p", "ck-week");
+      weekP.appendChild(el("strong", "", "One thing to do this week: "));
+      weekP.appendChild(document.createTextNode(mode === "nonprofit"
+        ? "Send this page to one staff member and one board member, and compare your scores."
+        : "Send this page to someone on your team who talks to customers every day, and compare your scores."));
+      card.appendChild(weekP);
+      var pl = el("div", "ck-links");
+      addLink(pl, "/method", "Read the five steps in full");
+      card.appendChild(pl);
+    } else {
+      var w = WEAK[weakStep.key];
+      card.appendChild(el("span", "label", "Your weakest step: " + weakStep.name));
+      card.appendChild(el("h3", "", t(w.line)));
+      card.appendChild(el("p", "", t(w.means)));
+      var week = el("p", "ck-week");
+      week.appendChild(el("strong", "", "One thing to do this week: "));
+      week.appendChild(document.createTextNode(t(w.week)));
+      card.appendChild(week);
+      if (r.tied.length > 1) {
+        var names = r.tied.slice(1).map(function (i) { return STEPS[i].name; });
+        var others = names.length > 1 ? names.slice(0, -1).join(", ") + ", and " + names[names.length - 1] : names[0];
+        card.appendChild(el("p", "tool-note", others + " tied with " + weakStep.name + " at " + r.low + " of 20. We named " + weakStep.name + " because the steps after it stand on it."));
+      }
+      var links = el("div", "ck-links");
+      (mode === "nonprofit" ? w.links.n : w.links.b).forEach(function (l) { addLink(links, l[0], l[1]); });
+      card.appendChild(links);
+    }
+    results.appendChild(card);
+
+    var cta = el("div", "ck-cta");
+    var book = el("a", "btn btn--primary", "Book 30 minutes on your weakest step ");
+    book.setAttribute("href", "/contact?checkup=" + r.total + "&weak=" + (perfect ? "none" : weakStep.key) + "&mode=" + mode);
+    var arr = el("span", "arr", "→");
+    arr.setAttribute("aria-hidden", "true");
+    book.appendChild(arr);
+    cta.appendChild(book);
+    var again = el("button", "btn btn--ghost", "Restart the check-up");
+    again.type = "button";
+    again.addEventListener("click", restart);
+    cta.appendChild(again);
+    results.appendChild(cta);
+
+    results.appendChild(el("p", "tool-note ck-foot", "Your answers stayed in this browser. Nothing was saved or sent. The booking link carries only your score, your weakest step, and which version you took, so the call starts pre-briefed."));
+
+    show(resultPanel);
+    head.focus();
+    if (!reduceMotion) {
+      window.requestAnimationFrame(function () {
+        window.requestAnimationFrame(function () {
+          fills.forEach(function (f) { f[0].style.width = f[1] + "%"; });
+        });
+      });
+    }
+  }
+
+  function restart() {
+    answers = [];
+    idx = 0;
+    locked = false;
+    results.innerHTML = "";
+    paintProgress();
+    show(intro);
+    introHead.focus();
+  }
+
+  for (var m = 0; m < modeBtns.length; m++) {
+    modeBtns[m].addEventListener("click", function () { setMode(this.getAttribute("data-mode")); });
+  }
+  document.getElementById("ck-start").addEventListener("click", function () {
+    answers = [];
+    showQuestion(0, true);
+  });
+  backBtn.addEventListener("click", function () {
+    if (idx === 0) { show(intro); introHead.focus(); }
+    else showQuestion(idx - 1, true);
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (quiz.hidden || e.altKey || e.ctrlKey || e.metaKey) return;
+    var tag = (e.target && e.target.tagName) || "";
+    if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
+    var n = parseInt(e.key, 10);
+    if (n >= 1 && n <= 4) {
+      e.preventDefault();
+      choose(n - 1);
+    }
+  });
+
+  try {
+    var params = new URLSearchParams(window.location.search);
+    if (params.get("mode") === "nonprofit") setMode("nonprofit");
+  } catch (err) { /* older browsers: keep the business default */ }
+
+  buildProgress();
+  tool.hidden = false;
+})();
+</script>
+</body>
+</html>

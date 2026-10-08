@@ -23,6 +23,7 @@
   .page-hero .hero__pointer .tlink { color: #fff; }
   .c-note { margin-top: 28px; max-width: 62ch; color: var(--ink-2); line-height: 1.7; }
   .c-email { margin-top: 16px; color: var(--ink-2); font-size: 0.98rem; }
+.tool-brief { margin: 0 0 18px; padding: 14px 18px; border-left: 3px solid var(--amber); background: var(--stone-2); border-radius: 0 var(--r-1) var(--r-1) 0; color: var(--ink); font-weight: 600; }
 </style>
 <script type="application/ld+json">
 {
@@ -121,7 +122,7 @@
         <div class="page-hero__copy">
           <span class="eyebrow reveal">Contact</span>
           <h1 class="reveal mt-md" data-delay="1">Let&rsquo;s talk about <em>your business.</em></h1>
-          <p class="hero__sub reveal mt-md" data-delay="2">Thirty minutes, one real conversation, no pitch. Marketing, a technical build, strategy, coaching and growth: any of our four practices can be the topic, and so can &ldquo;I don&rsquo;t know what to ask for.&rdquo; We&rsquo;ll go over where things stand and what&rsquo;s in the way. Then we&rsquo;ll tell you straight whether we&rsquo;re the right fit. Pick a time below.</p>
+          <p class="hero__sub reveal mt-md" data-delay="2">Thirty minutes, one real conversation. Marketing, a technical build, strategy, coaching and growth: any of our four practices can be the topic, and so can &ldquo;I don&rsquo;t know what to ask for.&rdquo; We&rsquo;ll go over where things stand and what&rsquo;s in the way. Then we&rsquo;ll tell you straight whether we&rsquo;re the right fit. Pick a time below.</p>
           <p class="hero__pointer reveal mt-md" data-delay="3">Come prepared if you like. Bring your score if you&rsquo;ve taken the <a href="/tools/checkup" class="tlink">five-step check-up</a>.</p>
         </div>
         <div class="c-contact-path reveal" data-delay="2" aria-hidden="true"><video class="motion-loop " muted loop playsinline preload="none" poster="/media/motion/c-contact-path.png" data-webm="/media/motion/c-contact-path.webm" data-hevc="/media/motion/c-contact-path-hevc.mp4" width="1040" height="460" aria-hidden="true"></video></div>
@@ -136,13 +137,36 @@
       <div class="c-ruler" aria-hidden="true"><video class="motion-loop " muted loop playsinline preload="none" poster="/media/motion/c-cal-ruler.png" data-webm="/media/motion/c-cal-ruler.webm" data-hevc="/media/motion/c-cal-ruler-hevc.mp4" width="1600" height="120" aria-hidden="true"></video></div>
       <div class="cal-embed reveal">
         <!-- Cal inline embed code begins -->
+        <p class="tool-brief" id="tool-brief" hidden></p>
         <div style="width:100%;min-height:660px;overflow:hidden" id="my-cal-inline-30min"></div>
         <script type="text/javascript">
           (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
           Cal("init", "30min", {origin:"https://app.cal.com"});
+          // Carry a free-tool result into the booking: visible note + Cal "notes" prefill
+          var calConfig = {"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"};
+          (function () {
+            try {
+              var q = new URLSearchParams(location.search), note = "", shown = "";
+              var steps = { conviction: "Conviction", people: "Your people", offer: "A sharp offer", experience: "The experience", "word-of-mouth": "Word of mouth" };
+              var score = q.get("checkup"), weak = q.get("weak"), grade = q.get("grade"), checked = q.get("checked");
+              if (score && /^\d{1,3}$/.test(score)) {
+                var w = steps[weak] || "";
+                note = "Five-Step Check-Up score: " + score + "/100" + (w ? ". Weakest step: " + w + "." : ".");
+                shown = "Your check-up score (" + score + "/100) will come with you" + (w ? ", and we\u2019ll spend the call on " + w + "." : ".");
+              } else if (q.get("from") === "local-visibility" && grade && /^[A-F]$/.test(grade)) {
+                note = "Local visibility self-audit: grade " + grade + (checked && /^\d{1,2}$/.test(checked) ? " (" + checked + " of 18 checked)." : ".");
+                shown = "Your visibility grade (" + grade + ") will come with you. We\u2019ll pull up your listing together on the call.";
+              }
+              if (note) {
+                calConfig.notes = note;
+                var el = document.getElementById("tool-brief");
+                if (el) { el.textContent = shown; el.hidden = false; }
+              }
+            } catch (e) {}
+          })();
           Cal.ns["30min"]("inline", {
             elementOrSelector:"#my-cal-inline-30min",
-            config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"},
+            config: calConfig,
             calLink: "carson-poore-consulting/30min",
           });
           Cal.ns["30min"]("ui", {"theme":"light","cssVarsPerTheme":{"light":{"cal-brand":"#1E4FD8"},"dark":{"cal-brand":"#1E4FD8"}},"hideEventTypeDetails":false,"layout":"month_view"});
@@ -193,7 +217,7 @@
         <p>The five-step check-up is free, asks for no email or login, and scores you on the spot. Come back when you have a number to bring.</p>
       </div>
       <div class="reveal" data-delay="1">
-        <a href="/tools/checkup" class="btn btn--primary">Take the check-up <span class="arr">→</span></a>
+        <a href="/tools/checkup" class="btn btn--primary">Get your score <span class="arr">→</span></a>
       </div>
     </div>
   </section>

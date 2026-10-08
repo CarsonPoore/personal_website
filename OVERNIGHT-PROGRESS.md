@@ -18,10 +18,10 @@ Started: Oct 7, 2026, 8:30pm ET · Target: done before morning · Deploys to mai
 | A | Research sweep (10 agents, 160 web lookups, 0 errors) | ✅ done 9:10pm | docs/research/* (10 files) |
 | B | Strategy: 36-page blueprint, messaging map, canonical chrome, schema base, copy-QA gates, v2 CSS/JS layer | ✅ done 9:40pm | docs/strategy/*, styles.css v2 layer, site.js |
 | C | Template batch: 5 pages + ICP deliverable, builder+QA all passed | ✅ done | index, services, services/marketing, services/local-seo, articles/fractional-cmo-cost, docs/deliverables/icp-profiles.md |
-| D | Pathways, services, client pages | ✅ 12/13 built | founders + 5 tools + resources in final wave |
+| D | Pathways, services, client pages, 5 tools, resources hub | ✅ done | 18 pages |
 | E | Core rewrites (method, pricing, about, contact, work, ticket, 404) | ✅ built | 7 pages |
 | F | Articles | ✅ 7/7 built | articles/* |
-| G | Final wave: 7 pages + batched voice QA + 1 gated Fable review; sitemap/robots/llms done | ⏳ running | 29/36 pass scripted audit |
+| G | Final wave + voice QA (6 Sonnet batches) + 1 Fable review + browser tests + ship | ✅ shipped | 36/36 pass audit; 5/5 tools tested |
 
 ETA per stage: A ~30–45m · B ~20m · C ~60–90m · D ~90m · E ~60m · F ~60m · G ~45m.
 
@@ -41,3 +41,15 @@ ETA per stage: A ~30–45m · B ~20m · C ~60–90m · D ~90m · E ~60m · F ~60
 - ~10:40am — Second spend-limit stall mid-D (5 of 18 built) and at E+F start (0 of 13). Carson cleared it; resumed both with model tiering on everything not yet cached (opus writers, sonnet QA).
 - ~3:55pm — Carson: Fable gated to ~5% (one final review). All agents now carry explicit models: Opus for checkup + founders, Sonnet for 4 tools/resources/all QA, Fable for one 6-page review. Per-page QA agents replaced by docs/qa/audit.js (free scripted checks) + 6 batched Sonnet voice-QA agents.
 - ~3:55pm — Scripted audit: 29/29 existing pages pass (chrome, schema, links, assets, one h1, no truncation). sitemap.xml (34 URLs, ticket+404 excluded), robots.txt (AI crawlers allowed), llms.txt written.
+- ~4:30pm — Final wave: 14 agents, 0 errors. Fable review (6 pages) made 5 fixes. I fixed: 76% "near me" stat re-attributed to Google (not BrightLocal) on 3 pages; google-ads past-history claim turned into stated policy; coaching cap wording matched to /investment's "eight retainer clients at a time"; "See work we've done" → "How we report results"; /contact now reads check-up/visibility results, shows them, and prefills Cal.com booking notes.
+- Browser-verified: all 5 tools end to end (zero console errors), contact handoff, mobile home at 375px (no horizontal overflow).
+
+## Carson's decision list (needs you, not me)
+1. **Strategy credit:** if a $3,000 strategy client continues to a retainer, is the $3,000 credited? Pages say "start with strategy, then keep us on" — one sentence on /investment answers it.
+2. **What counts toward the 8-client cap?** Retainers only (current wording everywhere now), or strategy + project work too?
+3. **/investment legacy claims under the new model:** "Most clients start here" badge on $2,400; "full team behind it" / "Dedicated team capacity" on $4,800. True today?
+4. **Project-work list** still sells Photography, Video, Product design, Brand identity — keep on the rate card or fold under Marketing/Technical?
+5. **Stat spot-checks (all cited, none verified against live primary sources):** vcita 2025 churn survey; Housecall Pro/Hearth $80 vs $45 leads; BlitzMetrics $14,775 story; GHL $3,564 vs HubSpot $14,880; superscout $892M/147 deals (founders page); MarketerHire/GoFractional $3K–$15K (coaching cites Chief Outsiders/Kalungi instead — pick one pair); crm-gohighlevel "$300 to $5,000-plus" consultant range has no named source — name or cut.
+6. **Profiles for entity SEO:** send LinkedIn (company + personal) and Google Business Profile URLs → I add them to every page's sameAs. Then: verify Google Search Console + Bing Webmaster Tools, submit /sitemap.xml to both (ChatGPT search relies on Bing's index).
+7. **Home hero photo** still hot-links Unsplash (v1 pattern) — self-host?
+8. **90-Day Plan Starter** capitalization: Title Case product name vs footer's sentence case.

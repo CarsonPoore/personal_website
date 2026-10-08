@@ -1,0 +1,934 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Can Indianapolis find you? A free 18-point check</title>
+<meta name="description" content="An 18-point self-check of your Google Business Profile, reviews, and website basics. Live letter grade, plain fixes, no email. See if Indianapolis can find you." />
+<link rel="canonical" href="https://carsonpoore.com/tools/local-visibility" />
+<meta property="og:title" content="Can Indianapolis find you? A free 18-point check" />
+<meta property="og:description" content="An 18-point self-check of your Google Business Profile, reviews, and website basics. Live letter grade, plain fixes, no email. See if Indianapolis can find you." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://carsonpoore.com/tools/local-visibility" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
+<link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
+<link rel="stylesheet" href="/styles.css?v=20261008-1" />
+<script defer src="/site.js?v=20261008-1"></script>
+<style>
+  /* Local visibility check: layout on top of the shared tool primitives */
+  .lv { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, 380px); gap: clamp(24px, 4vw, 56px); align-items: start; }
+  .lv__list { grid-column: 1; grid-row: 1; min-width: 0; }
+  .lv__results { grid-column: 2; grid-row: 1; position: sticky; top: 96px; min-width: 0; }
+  @media (max-width: 960px) {
+    .lv { grid-template-columns: 1fr; }
+    .lv__list, .lv__results { grid-column: 1; grid-row: auto; position: static; }
+  }
+  .lv__results .tool__panel { padding: clamp(22px, 3vw, 32px); }
+  .lv__results h2, .lv__results h3 { color: #fff; }
+  .lv__results .label { color: var(--amber); display: block; margin-bottom: 10px; }
+  .lv__results .grade { color: #fff; }
+  .lv-count { color: var(--cream-2); font-size: 0.95rem; margin: 8px 0 14px; }
+  .lv__results .score-bar { background: var(--navy-3); }
+  .lv-msg { margin-top: 18px; }
+  .lv-msg h3 { font-size: var(--step-1); font-weight: 800; letter-spacing: -0.01em; line-height: 1.2; margin-bottom: 6px; }
+  .lv-msg p { color: var(--cream-2); font-size: 0.95rem; line-height: 1.6; }
+  .lv-top { margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--navy-3); }
+  .lv-top h3 { font-size: var(--step-0); font-weight: 800; margin-bottom: 4px; }
+  .lv-top > p { color: var(--cream-2); font-size: 0.88rem; margin-bottom: 14px; }
+  .lv-top ol { list-style: none; margin: 0; padding: 0; }
+  .lv-fix { background: var(--navy-2); border-color: var(--navy-3); color: var(--cream-2); padding: 16px 18px; }
+  .lv-fix + .lv-fix { margin-top: 10px; }
+  .lv-fix__tag { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--amber); margin-bottom: 6px; }
+  .lv-fix h4 { color: #fff; font-size: 1rem; font-weight: 700; line-height: 1.35; margin-bottom: 6px; }
+  .lv-fix p { font-size: 0.9rem; line-height: 1.55; color: var(--cream-2); }
+  .lv-open { margin-top: 10px; background: none; border: 0; padding: 0; font: inherit; font-weight: 700; font-size: 0.9rem; color: var(--amber); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+  .lv-open:hover { color: #fff; }
+  .lv-open:focus-visible, .lv-clear:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
+  .lv-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--navy-3); }
+  .lv-clear { font: inherit; font-weight: 600; font-size: 0.88rem; color: var(--cream); background: transparent; border: 1px solid var(--navy-3); border-radius: var(--r-pill); padding: 8px 16px; cursor: pointer; }
+  .lv-clear:hover { border-color: var(--amber); }
+  .lv__results .tool-note { color: var(--muted-on-navy); }
+  .lv-group { margin-bottom: clamp(28px, 4vw, 44px); }
+  .lv-group h3 { font-size: var(--step-1); font-weight: 800; letter-spacing: -0.015em; line-height: 1.2; }
+  .lv-group__meta { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
+  .lv-group__count { font-size: 0.85rem; font-weight: 700; color: var(--cobalt); font-variant-numeric: tabular-nums; }
+  .lv-group__intro { color: var(--ink-2); font-size: 0.95rem; max-width: 56ch; margin-bottom: 6px; }
+  .lv-item { min-width: 0; flex: 1; }
+  .lv-item details { margin-top: 8px; }
+  .lv-item summary { cursor: pointer; font-size: 0.88rem; font-weight: 700; color: var(--cobalt); }
+  .lv-item summary:focus-visible { outline: 2px solid var(--cobalt); outline-offset: 3px; border-radius: 2px; }
+  .lv-detail { margin-top: 10px; padding: 14px 16px; background: var(--bone); border: 1px solid var(--line-soft); border-radius: var(--r-1); }
+  .lv-detail p { font-size: 0.93rem; line-height: 1.6; color: var(--ink-2); max-width: 62ch; }
+  .lv-detail p + p { margin-top: 10px; }
+  .lv-detail strong { color: var(--ink); }
+  .lv-cta { margin-top: clamp(8px, 2vw, 20px); padding: clamp(22px, 3vw, 32px); }
+  .lv-cta h3 { font-size: var(--step-1); font-weight: 800; line-height: 1.25; margin-bottom: 8px; max-width: 34ch; }
+  .lv-cta p { color: var(--ink-2); max-width: 56ch; }
+  .lv-mini { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 40; display: none; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 18px; background: var(--navy); color: #fff; border: 1px solid var(--navy-3); border-radius: var(--r-pill); font-size: 0.9rem; font-weight: 600; box-shadow: var(--shadow-2); }
+  .lv-mini b { font-weight: 900; color: var(--amber); }
+  .lv-mini span:last-child { color: var(--cream-2); }
+  @media (max-width: 960px) { .lv-mini.is-on { display: flex; } }
+  .lv-stats { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: clamp(32px, 5vw, 80px); align-items: center; }
+  @media (max-width: 860px) { .lv-stats { grid-template-columns: 1fr; } }
+  .lv-stats .stat-row { flex-direction: column; gap: clamp(22px, 3vw, 36px); }
+  .lv-stats .stat { border-left: 2px solid var(--amber); padding-left: clamp(16px, 2vw, 26px); }
+  .lv-stats .stat__num { color: #fff; }
+  .lv-stats p + p { margin-top: 16px; }
+  .prose { max-width: 62ch; }
+  .prose p + p { margin-top: 16px; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://carsonpoore.com/#org",
+      "name": "Carson Poore Consulting",
+      "url": "https://carsonpoore.com/",
+      "logo": "https://carsonpoore.com/brand/cpc-mark-royalblue.svg",
+      "image": "https://carsonpoore.com/brand/carson-headshot.png",
+      "email": "carson@carsonpoore.com",
+      "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
+      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "areaServed": [
+        { "@type": "City", "name": "Indianapolis" },
+        { "@type": "State", "name": "Indiana" },
+        { "@type": "Country", "name": "United States" }
+      ],
+      "priceRange": "$1,200–$4,800/month",
+      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://carsonpoore.com/tools/local-visibility#app",
+      "name": "Can Indianapolis find you? Local visibility check",
+      "description": "A free 18-item self-check of a Google Business Profile, reviews, name-address-phone consistency, and website basics, with a live A to F grade and the three highest-impact fixes. Runs in the browser; nothing is sent anywhere.",
+      "url": "https://carsonpoore.com/tools/local-visibility",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "browserRequirements": "Requires JavaScript",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "provider": { "@id": "https://carsonpoore.com/#org" },
+      "audience": { "@type": "Audience", "audienceType": "Local small business owners in Indianapolis and central Indiana" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carsonpoore.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://carsonpoore.com/resources" },
+        { "@type": "ListItem", "position": 3, "name": "Can Indianapolis find you?" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="page">
+
+<header class="nav">
+  <div class="nav__inner">
+    <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
+    <nav class="nav__links" aria-label="Primary">
+      <div class="nav__item has-drop">
+        <a href="/services">Services</a>
+        <div class="nav__drop" aria-label="Services">
+          <a href="/services/marketing">Marketing</a>
+          <a href="/services/technical">Technical</a>
+          <a href="/services/strategy">Strategy</a>
+          <a href="/services/coaching">Coaching &amp; growth</a>
+          <a class="nav__drop-all" href="/services">All services</a>
+        </div>
+      </div>
+      <div class="nav__item has-drop">
+        <a href="/#who-we-help">Who we help</a>
+        <div class="nav__drop" aria-label="Who we help">
+          <a href="/for/local-businesses">Local businesses</a>
+          <a href="/for/founders">Founders &amp; startups</a>
+          <a href="/for/nonprofits">Nonprofits</a>
+        </div>
+      </div>
+      <a href="/method">Method</a>
+      <a href="/investment">Pricing</a>
+      <a href="/work">Work</a>
+      <a href="/resources">Resources</a>
+      <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
+    </nav>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" aria-hidden="true">
+  <span class="mobile-menu__group">Services</span>
+  <a href="/services/marketing">Marketing</a>
+  <a href="/services/technical">Technical</a>
+  <a href="/services/strategy">Strategy</a>
+  <a href="/services/coaching">Coaching &amp; growth</a>
+  <span class="mobile-menu__group">Who we help</span>
+  <a href="/for/local-businesses">Local businesses</a>
+  <a href="/for/founders">Founders &amp; startups</a>
+  <a href="/for/nonprofits">Nonprofits</a>
+  <span class="mobile-menu__group">Explore</span>
+  <a href="/method">Method</a>
+  <a href="/investment">Pricing</a>
+  <a href="/work">Work</a>
+  <a href="/resources">Resources</a>
+  <a href="/about">About</a>
+  <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero page-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li aria-current="page">Can Indianapolis find you?</li>
+        </ol>
+      </nav>
+      <div class="page-hero__copy">
+        <span class="eyebrow reveal">Free tool · 18 checks</span>
+        <h1 class="reveal mt-md" data-delay="1">Can Indianapolis <em>find you?</em></h1>
+        <p class="hero__sub reveal mt-md" data-delay="2">Eighteen checks on your Google Business Profile, your reviews, and your website basics. Tick what&rsquo;s true today, get a letter grade, and see the three fixes worth doing first. Almost every one is free.</p>
+        <p class="hero__sub reveal mt-sm" data-delay="2">Free. No email. No login. Nothing to download. Allow about 30 minutes with your Google profile open.</p>
+        <div class="row-cta reveal mt-lg" data-delay="3">
+          <a class="btn btn--primary" href="#check">Start the check <span class="arr">↓</span></a>
+          <a class="tlink" href="/services/local-seo">or see how we do local SEO</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE TOOL -->
+  <section class="section" id="check">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">The check</span>
+        <h2>Tick what&rsquo;s true <em>today.</em></h2>
+        <p class="sec-head__intro">Open your Google Business Profile in another tab. Search your business name on your phone, too, because that&rsquo;s the screen your customers see. Every item has a two-minute way to check it and a free way to fix it. Your ticks save in this browser only. We never see them.</p>
+      </div>
+
+      <noscript>
+        <div class="result-card mt-md">
+          <p><strong>This check adds up your grade with JavaScript, and it looks like that&rsquo;s switched off.</strong> The 18 items below still work as a plain checklist. Tick them, count your boxes, and use this scale: 17 or more is an A, 14 to 16 a B, 10 to 13 a C, 6 to 9 a D, and 5 or fewer an F. Would you rather have a person count and do the fixes with you? <a class="tlink" href="/contact">Book 30 minutes</a>.</p>
+        </div>
+      </noscript>
+
+      <div class="lv mt-lg">
+
+        <!-- RESULTS (sticky on desktop) -->
+        <aside class="lv__results" id="lv-results" aria-labelledby="lv-results-h" aria-live="polite">
+          <div class="tool__panel tool__panel--navy">
+            <span class="label" id="lv-results-h">Your grade</span>
+            <div class="lv-gradebox">
+              <div class="grade" id="lv-grade">F</div>
+              <p class="lv-count" id="lv-count">0 of 18 checked</p>
+            </div>
+            <div class="score-bar score-bar--amber" role="progressbar" aria-label="Items checked" aria-valuemin="0" aria-valuemax="18" aria-valuenow="0" id="lv-bar"><span style="width:0%"></span></div>
+            <div class="lv-msg">
+              <h3 id="lv-msg-h">Nothing&rsquo;s ticked yet</h3>
+              <p id="lv-msg-p">So this starts at F. Tick what&rsquo;s true today and watch it move.</p>
+            </div>
+            <div class="lv-top" id="lv-top">
+              <h3 id="lv-top-h" tabindex="-1">Fix these first</h3>
+              <p>Ranked by how much each one matters. That ranking is our judgment, not a Google formula.</p>
+              <ol id="lv-top-list"></ol>
+            </div>
+            <div class="lv-tools">
+              <button type="button" class="lv-clear" id="lv-clear">Clear all ticks</button>
+              <span class="tool-note" id="lv-saved">Saved in this browser as you go.</span>
+            </div>
+          </div>
+        </aside>
+
+        <!-- CHECKLIST -->
+        <div class="lv__list">
+        <div class="lv-group" data-group="gbp">
+          <div class="lv-group__meta">
+            <h3 id="g-gbp">Your Google Business Profile</h3>
+            <span class="lv-group__count" data-count-for="gbp">0 of 7</span>
+          </div>
+          <p class="lv-group__intro">The profile is the first thing a searcher sees. These seven decide whether it looks like a real, open business.</p>
+          <div class="check-row" data-id="claim" data-w="5" data-short="Claim and verify it at business.google.com. It’s free, and until you do, you don’t control what it says.">
+            <input type="checkbox" id="c-claim" />
+            <div class="lv-item">
+              <label for="c-claim">You&rsquo;ve claimed and verified your Google Business Profile<span class="check-row__why">If it&rsquo;s unclaimed, anyone can suggest changes to your hours, phone number, and address.</span></label>
+              <details>
+                <summary>2-minute check + free fix</summary>
+                <div class="lv-detail">
+                  <p><strong>Check it:</strong> Search your business name on Google, signed in to the Google account you think owns it. You should see buttons like <em>Edit profile</em> and <em>Performance</em>. If you see <em>Own this business?</em> instead, it isn&rsquo;t claimed, or someone else claimed it. A former web person is the usual suspect.</p>
+                  <p><strong>Fix it, free:</strong> Go to business.google.com, search your name, and follow the steps. Verification is by phone, text, email, video, or postcard, depending on what Google offers you. It&rsquo;s free. If a stranger calls offering to &ldquo;activate&rdquo; your listing for a fee, hang up. If a past agency owns it, ask them to add you as owner, then take them off.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+          <div class="check-row" data-id="category" data-w="5" data-short="Switch your main category to the most specific one for the work that pays your bills.">
+            <input type="checkbox" id="c-category" />
+            <div class="lv-item">
+              <label for="c-category">Your main category is the most specific one that fits<span class="check-row__why">Google leans on your primary category to decide which searches you match. &ldquo;Plumber&rdquo; beats &ldquo;Contractor.&rdquo;</span></label>
+              <details>
+                <summary>2-minute check + free fix</summary>
+                <div class="lv-detail">
+                  <p><strong>Check it:</strong> In your profile, open <em>Edit profile</em>, then <em>Business information</em>, and read the category at the top. Then search your main service in Google Maps and tap the top three results. Look at what they picked.</p>
+                  <p><strong>Fix it, free:</strong> Choose the one category that matches the work that pays your bills. Add secondary categories only for things you really do. Don&rsquo;t add one because a competitor has it and you&rsquo;d like their calls.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+          <div class="check-row" data-id="hours" data-w="3" data-short="Correct your hours and add special hours for the next holiday. It takes ten minutes.">
+            <input type="checkbox" id="c-hours" />
+            <div class="lv-item">
+              <label for="c-hours">Your hours are right, holidays included<span class="check-row__why">A wrong closing time sends people to a locked door, and they say so in reviews.</span></label>
+              <details>
+                <summary>2-minute check + free fix</summary>
+                <div class="lv-detail">
+                  <p><strong>Check it:</strong> Compare the hours on your profile to your front door and your website. Then look at the next holiday on the calendar. Did you set special hours for it?</p>
+                  <p><strong>Fix it, free:</strong> Open <em>Edit profile</em>, then <em>Business information</em>, then <em>Hours</em>. Use <em>Special hours</em> for holidays and weather closures. It takes ten minutes. Put a reminder on the calendar before Thanksgiving.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+          <div class="check-row" data-id="location" data-w="3" data-short="Show your address only if customers visit you. Otherwise hide it and list the towns you really serve.">
+            <input type="checkbox" id="c-location" />
+            <div class="lv-item">
+              <label for="c-location">Your address and service area match how you actually work<span class="check-row__why">A shop shows its address. A plumber who drives to customers shouldn&rsquo;t. Mixing them up can get a profile suspended.</span></label>
+              <details>
+                <summary>2-minute check + free fix</summary>
+                <div class="lv-detail">
+                  <p><strong>Check it:</strong> Look at your profile the way a customer would, on Google Maps. Does the pin sit where you really are? If customers never come to you, is your home address hidden?</p>
+                  <p><strong>Fix it, free:</strong> Open <em>Edit profile</em>, then <em>Business location</em> and <em>Service areas</em>. If customers visit you, show the address. If they don&rsquo;t, hide it and list the towns you really serve, like Carmel or Greenwood. One honest catch: listing a town doesn&rsquo;t make you rank there. Google weighs how close you are to the searcher, so be realistic about your radius.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+          <div class="check-row" data-id="description" data-w="2" data-short="Fill in the description. Lead with what you do and where you do it, in plain words.">
+            <input type="checkbox" id="c-description" />
+            <div class="lv-item">
+              <label for="c-description">Your description uses most of the 750 characters<span class="check-row__why">Not all of it shows at first glance, but the start does. It&rsquo;s your one chance to say it in your own words.</span></label>
+              <details>
+                <summary>2-minute check + free fix</summary>
+                <div class="lv-detail">
+                  <p><strong>Check it:</strong> Open <em>Edit profile</em>, then <em>Business information</em>, then <em>Description</em>. Is it empty, a single line, or a list of keywords?</p>
+                  <p><strong>Fix it, free:</strong> Write it like you&rsquo;d say it to a neighbor. Lead with what you do and where, for example: &ldquo;Family-owned HVAC company serving Carmel, Fishers, and the north side of Indianapolis. Same-day repairs, upfront prices.&rdquo; Then say what makes you different. Skip the web addresses and phone numbers. Google doesn&rsquo;t allow links in it.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+          <div class="check-row" data-id="services" data-w="3" data-short="List each service you sell, in the words customers search, with a sentence on what’s included.">
+            <input type="checkbox" id="c-services" />
+            <div class="lv-item">
+              <label for="c-services">Your services are listed, in your customers&rsquo; words<span class="check-row__why">People search &ldquo;water heater replacement,&rdquo; not &ldquo;residential plumbing solutions.&rdquo; Your list should match what they type.</span></label>
+              <details>
+                <summary>2-minute check + free fix</summary>
+                <div class="lv-detail">
+                  <p><strong>Check it:</strong> In <em>Edit profile</em>, open <em>Services</em> (or <em>Products</em>, if you sell things). Is it blank, or full of your own jargon?</p>
+                  <p><strong>Fix it, free:</strong> Add every service you really sell, one line each, with a sentence about what&rsquo;s included. Add a price or &ldquo;starting at&rdquo; where the profile lets you. Begin with the five jobs you&rsquo;d hate to lose.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+          <div class="check-row" data-id="photos" data-w="3" data-short="Upload ten real photos from your phone: your building, your team, finished work.">
+            <input type="checkbox" id="c-photos" />
+            <div class="lv-item">
+              <label for="c-photos">You&rsquo;ve added real photos, and some are recent<span class="check-row__why">Customers compare listings in seconds. A profile full of your actual work looks open for business.</span></label>
+              <details>
+                <summary>2-minute check + free fix</summary>
+                <div class="lv-detail">
+                  <p><strong>Check it:</strong> Search your name on Maps and open the Photos tab. Are any of them yours? Is the newest one from this year, or from years ago?</p>
+                  <p><strong>Fix it, free:</strong> Add your logo, a clear shot of the outside so people can spot the building, your team, and finished jobs. Real photos beat stock. Upload about ten now, then two or three a month. Your phone is good enough.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+        <div class="lv-group" data-group="reviews">
+          <div class="lv-group__meta">
+            <h3 id="g-reviews">Reviews</h3>
+            <span class="lv-group__count" data-count-for="reviews">0 of 4</span>
+          </div>
+          <p class="lv-group__intro">Reviews are what a stranger reads before they decide to call you or the next listing down.</p>
+          <div class="check-row" data-id="recent" data-w="4" data-short="Text three recent happy customers your review link this week.">
+            <input type="checkbox" id="c-recent" />
+            <div class="lv-item">
+              <label for="c-recent">You&rsquo;ve had a new review in the last 30 days<span class="check-row__why">A steady trickle of recent reviews beats a big pile that stopped two years ago. Fresh ones tell Google and customers you&rsquo;re busy.</span></label>
+              <details>
+                <summary>2-minute check + free fix</summary>
+                <div class="lv-detail">
+                  <p><strong>Check it:</strong> Open your reviews and sort by <em>Newest</em>. How long ago was the last one?</p>
+                  <p><strong>Fix it, free:</strong> This week, text your three happiest recent customers a direct review link (the item after next shows how). Then keep a steady pace. A slow drip beats one big push.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+          <div class="check-row" data-id="volume" data-w="4" data-short="Build toward 40 reviews at 4.5 stars with a steady ask, never a purchase or a discount.">
+            <input type="checkbox" id="c-volume" />
+            <div class="lv-item">
+              <label for="c-volume">You have 40 or more reviews, averaging 4.5 stars or better<span class="check-row__why">Per BrightLocal and WiserReview, profiles at that level show up in the map pack about 3.7 times more often than ones with fewer than 10 reviews.</span></label>
+              <details>
+                <summary>2-minute check + free fix</summary>
+                <div class="lv-detail">
+                  <p><strong>Check it:</strong> Look at the number next to your star rating. Then check your closest competitor&rsquo;s number. That gap is what you&rsquo;re closing.</p>
+                  <p><strong>Fix it, free:</strong> There&rsquo;s no shortcut, and you wouldn&rsquo;t want one. Don&rsquo;t buy reviews. Don&rsquo;t offer discounts for them either; Google removes both and can penalize the profile. A system gets you there. At four new reviews a month from a standing start, you&rsquo;d reach 40 in ten months.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+          <div class="check-row" data-id="reply" data-w="3" data-short="Reply to every review you haven’t answered, starting with the oldest bad one.">
+            <input type="checkbox" id="c-reply" />
+            <div class="lv-item">
+              <label for="c-reply">You&rsquo;ve replied to your reviews, the bad ones too<span class="check-row__why">Every future reader sees your reply. A calm answer to a bad review tells the next customer how you treat people.</span></label>
+              <details>
+                <summary>2-minute check + free fix</summary>
+                <div class="lv-detail">
+                  <p><strong>Check it:</strong> Scroll through your reviews and count the ones with no reply.</p>
+                  <p><strong>Fix it, free:</strong> Reply within a couple of days. Use the customer&rsquo;s first name and mention the job. For a bad review, say sorry once, say what you&rsquo;ll do, offer a phone number, and stop. No arguing and no private details. A reply is public.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+          <div class="check-row" data-id="system" data-w="4" data-short="Save your Google review link on your phone and text it to every customer the day the job’s done.">
+            <input type="checkbox" id="c-system" />
+            <div class="lv-item">
+              <label for="c-system">You have a simple way to ask every customer for a review<span class="check-row__why">Reviews don&rsquo;t come from wanting them. They come from asking, the same way, the day the job&rsquo;s done.</span></label>
+              <details>
+                <summary>2-minute check + free fix</summary>
+                <div class="lv-detail">
+                  <p><strong>Check it:</strong> Could you send a review link from your phone in under a minute? Test it now by sending one to a friend.</p>
+                  <p><strong>Fix it, free:</strong> On your profile, look for <em>Ask for reviews</em> or <em>Get more reviews</em> to copy your short link. Save it as a text shortcut on your phone. Send it when the job wraps or the table pays. Ask everyone, including the customers you&rsquo;re unsure about. Google doesn&rsquo;t allow screening out the unhappy ones.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+        <div class="lv-group" data-group="nap">
+          <div class="lv-group__meta">
+            <h3 id="g-nap">Name, address, and website</h3>
+            <span class="lv-group__count" data-count-for="nap">0 of 4</span>
+          </div>
+          <p class="lv-group__intro">Google cross-checks what your profile says against what the rest of the internet says. Make them agree.</p>
+          <div class="check-row" data-id="nap" data-w="5" data-short="Pick one exact spelling of your name, address, and phone, and paste it everywhere it appears.">
+            <input type="checkbox" id="c-nap" />
+            <div class="lv-item">
+              <label for="c-nap">Your name, address, and phone number are written the same way everywhere<span class="check-row__why">&ldquo;Smith Plumbing LLC&rdquo; on Google and &ldquo;Smith Plumbing &amp; Heating&rdquo; on Facebook can look like two businesses.</span></label>
+              <details>
+                <summary>2-minute check + free fix</summary>
+                <div class="lv-detail">
+                  <p><strong>Check it:</strong> Search your phone number in quotes, then your business name with &ldquo;Indianapolis.&rdquo; List every place you appear: Google, your website, Facebook, Yelp, Apple, Bing, any trade directory. Compare the name, suite number, abbreviations, and phone.</p>
+                  <p><strong>Fix it, free:</strong> Pick one exact version and write it down. Paste it into every listing. Fix the ones you control first (your site footer, Facebook, Yelp), then ask the directories to correct the rest. This part is boring. Do it anyway.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+          <div class="check-row" data-id="weblink" data-w="2" data-short="Point the profile’s website link at your https homepage in the exact format your site uses.">
+            <input type="checkbox" id="c-weblink" />
+            <div class="lv-item">
+              <label for="c-weblink">The website link on your profile goes to the right page<span class="check-row__why">It should land on a real, secure page, in the same address format your site uses everywhere else.</span></label>
+              <details>
+                <summary>2-minute check + free fix</summary>
+                <div class="lv-detail">
+                  <p><strong>Check it:</strong> On your phone, tap the Website button on your profile. Does it load? Do you get a &ldquo;Not secure&rdquo; warning, or a bounce through two other addresses?</p>
+                  <p><strong>Fix it, free:</strong> Open <em>Edit profile</em>, then <em>Contact</em>, then <em>Website</em>. Use the exact address your site uses: https, and with or without www, matching everywhere else. If you have several locations, link each profile to its own page.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+          <div class="check-row" data-id="title" data-w="4" data-short="Rewrite your homepage title and main heading to say what you do and where.">
+            <input type="checkbox" id="c-title" />
+            <div class="lv-item">
+              <label for="c-title">Your homepage says what you do and where, in the tab title and the main heading<span class="check-row__why">Google reads the title and the first heading to decide what a page is about. A title that just says &ldquo;Home&rdquo; tells it nothing.</span></label>
+              <details>
+                <summary>2-minute check + free fix</summary>
+                <div class="lv-detail">
+                  <p><strong>Check it:</strong> Open your homepage and read the text in the browser tab. Then read the biggest heading on the page.</p>
+                  <p><strong>Fix it, free:</strong> Aim for something like &ldquo;Furnace repair in Indianapolis | Smith Heating&rdquo;, under about 60 characters. Make the main heading say the same thing in plain words. Name your towns once, in a &ldquo;where we work&rdquo; line. We&rsquo;d skip a separate page for every suburb. A thin page per town tends to read as filler.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+          <div class="check-row" data-id="speed" data-w="3" data-short="Make your phone number tap-to-call and shrink the photos that slow your homepage down.">
+            <input type="checkbox" id="c-speed" />
+            <div class="lv-item">
+              <label for="c-speed">Your site loads quickly on a phone and your number is tappable<span class="check-row__why">76% of &ldquo;near me&rdquo; mobile searches lead to a visit within 24 hours, per Google&rsquo;s consumer research. Those people won&rsquo;t wait on a slow page.</span></label>
+              <details>
+                <summary>2-minute check + free fix</summary>
+                <div class="lv-detail">
+                  <p><strong>Check it:</strong> Turn off Wi-Fi and open your site on your phone. How long until you can read it? Try tapping your phone number. For a second opinion, run your address through pagespeed.web.dev, which is free.</p>
+                  <p><strong>Fix it, free:</strong> The usual culprits are giant photos, plugins you don&rsquo;t use, and a phone number that&rsquo;s plain text. Resize photos before you upload them, delete the extra plugins, and make the number a tap-to-call link. Any web person can add that in a minute.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+        <div class="lv-group" data-group="extras">
+          <div class="lv-group__meta">
+            <h3 id="g-extras">The extras</h3>
+            <span class="lv-group__count" data-count-for="extras">0 of 3</span>
+          </div>
+          <p class="lv-group__intro">These won&rsquo;t rescue a weak profile. On a solid one, they&rsquo;re what separates you from the next listing.</p>
+          <div class="check-row" data-id="others" data-w="3" data-short="Claim Apple Business Connect and Bing Places first. Bing can import from your Google profile.">
+            <input type="checkbox" id="c-others" />
+            <div class="lv-item">
+              <label for="c-others">Your Apple Maps, Bing, Yelp, and Facebook listings are claimed<span class="check-row__why">Apple Maps and Bing run on their own listings, not Google&rsquo;s. Ask Siri on an iPhone and the answer comes from Apple Maps.</span></label>
+              <details>
+                <summary>2-minute check + free fix</summary>
+                <div class="lv-detail">
+                  <p><strong>Check it:</strong> Search your business in the Maps app on an iPhone, on Bing Maps, on Yelp, and on Facebook. Is each one there? Does it match Google?</p>
+                  <p><strong>Fix it, free:</strong> Claim Apple Business Connect (businessconnect.apple.com), Bing Places (bingplaces.com), Yelp for Business, and your Facebook page. Bing Places can import from your Google profile in a few clicks. Use the one exact name, address, and phone from the earlier item.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+          <div class="check-row" data-id="posts" data-w="1" data-short="Post one recent job photo and two sentences, then set a monthly reminder.">
+            <input type="checkbox" id="c-posts" />
+            <div class="lv-item">
+              <label for="c-posts">You&rsquo;ve posted an update on your profile in the last 30 days<span class="check-row__why">A post is a small signal. Its real job is proof: a customer comparing two listings can see which business is active.</span></label>
+              <details>
+                <summary>2-minute check + free fix</summary>
+                <div class="lv-detail">
+                  <p><strong>Check it:</strong> Search your business on Google and look for updates or posts on your profile. What&rsquo;s the date on the latest one?</p>
+                  <p><strong>Fix it, free:</strong> Once a month, post a photo of a recent job with two sentences, or a seasonal reminder like furnace tune-ups before the first cold snap. It takes ten minutes. Set a repeating calendar reminder, because you won&rsquo;t remember otherwise.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+          <div class="check-row" data-id="numbers" data-w="1" data-short="Write down this month’s calls, directions, and website clicks so you have a baseline.">
+            <input type="checkbox" id="c-numbers" />
+            <div class="lv-item">
+              <label for="c-numbers">You know how many calls and direction requests your profile gets<span class="check-row__why">If you don&rsquo;t write down where you started, you can&rsquo;t tell which fix did anything.</span></label>
+              <details>
+                <summary>2-minute check + free fix</summary>
+                <div class="lv-detail">
+                  <p><strong>Check it:</strong> Search your business name while signed in and tap <em>Performance</em>. Look at calls, direction requests, and website clicks for the last 30 days.</p>
+                  <p><strong>Fix it, free:</strong> Write today&rsquo;s three numbers in a note or a sheet, and look again on the same day next month. If calls rise after you fix photos and reviews, you&rsquo;ll see it. If they don&rsquo;t, that&rsquo;s worth a conversation.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+
+          <div class="result-card lv-cta" id="lv-cta">
+            <h3>Checked everything and still not showing up, or don&rsquo;t want to do the fixes yourself?</h3>
+            <p>Book 30 minutes. We&rsquo;ll look at your listing together, live, and tell you what&rsquo;s costing you calls. That holds whatever grade you got.</p>
+            <div class="row-cta mt-md">
+              <a class="btn btn--primary" id="lv-cta-link" href="/contact">Book 30 minutes <span class="arr">→</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="tool-note mt-lg reveal">We built this. We build things like it for clients, and the technical side of what we do is <a class="tlink" href="/services/technical">on its own page</a>.</p>
+    </div>
+  </section>
+
+  <!-- WHY THESE EIGHTEEN -->
+  <section class="section section--navy">
+    <div class="wrap">
+      <div class="lv-stats">
+        <div class="reveal">
+          <span class="eyebrow">Why this list</span>
+          <h2 class="mt-md">Most of it is free. <em>That&rsquo;s the point.</em></h2>
+          <div class="prose mt-md">
+            <p>The local visibility problems we see are rarely mysterious. A profile that was never claimed. A trickle of reviews. A phone number written three ways. All of it is fixable in an afternoon, and we&rsquo;d rather you spend that afternoon than pay anyone for it.</p>
+            <p>The stakes are real, though. When someone nearby searches for what you do, the businesses in Google&rsquo;s map pack get the calls.</p>
+          </div>
+        </div>
+        <div class="reveal" data-delay="1">
+          <div class="stat-row">
+            <div class="stat">
+              <span class="stat__num">46%</span>
+              <span class="stat__lbl">Of Google searches have local intent &middot; BrightLocal, local SEO statistics</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num">126%</span>
+              <span class="stat__lbl">More traffic for businesses in the local 3-pack than in positions 4 to 10 &middot; BrightLocal, local SEO statistics</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num">3.7&times;</span>
+              <span class="stat__lbl">More map-pack appearances at 40+ reviews and 4.5 stars than at under 10 reviews &middot; BrightLocal / WiserReview</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT THIS CAN'T TELL YOU -->
+  <section class="section section--stone">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Honest limits</span>
+        <h2>What this check <em>can&rsquo;t</em> tell you.</h2>
+        <p class="sec-head__intro">It can&rsquo;t see where you rank. Rankings shift with where the searcher is standing: the same search from Fishers and from downtown can show two different top threes. A grade of A means your house is in order. It doesn&rsquo;t promise first place.</p>
+      </div>
+      <div class="prose reveal">
+        <p>If you grade yourself well and the phone is still quiet, the cause usually sits outside this list. Crowded categories, a competitor with 300 reviews, an address far from the people searching. Those take a person looking at your listing next to your competitors&rsquo;. That&rsquo;s the 30 minutes we offer above.</p>
+      </div>
+      <div class="practice-grid mt-lg">
+        <article class="practice-card reveal">
+          <span class="practice-card__tag">Read</span>
+          <h3>Why isn&rsquo;t my business showing up on Google?</h3>
+          <p>Five fixable causes, in the order we check them, with the free fix for each.</p>
+          <a class="tlink" href="/articles/not-showing-up-on-google">Read the five fixes <span class="arr">→</span></a>
+        </article>
+        <article class="practice-card reveal" data-delay="1">
+          <span class="practice-card__tag">Hire</span>
+          <h3>Local SEO in Indianapolis</h3>
+          <p>Profile upkeep and review requests, handled every month. Published prices from $1,200 a month, three months minimum.</p>
+          <a class="tlink" href="/services/local-seo">See how local SEO works here <span class="arr">→</span></a>
+        </article>
+      </div>
+      <p class="tool-note mt-lg reveal">Running a shop, a restaurant, or a trade in central Indiana? The <a class="tlink" href="/for/local-businesses">local businesses page</a> shows how we work with owners like you.</p>
+      <p class="updated mt-lg">Last updated: October 2026</p>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="closing">
+    <div class="closing__inner">
+      <div class="reveal">
+        <span class="eyebrow">The next step</span>
+        <h2>Let&rsquo;s look at your listing <em>together.</em></h2>
+        <p>Open your Google profile, share your screen, and we&rsquo;ll go through it side by side with your closest competitor. Thirty minutes. You&rsquo;ll know what to fix first, even if you never hire us.</p>
+      </div>
+      <div class="reveal" data-delay="1">
+        <a href="/contact" class="btn btn--primary">Book a free call <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<a class="lv-mini" id="lv-mini" href="#lv-results" aria-hidden="true" tabindex="-1"><span>Grade <b id="lv-mini-g">F</b> &middot; <span id="lv-mini-n">0</span> of 18</span><span>See your fixes ↑</span></a>
+
+<footer class="footer footer--v2">
+  <div class="wrap">
+    <div class="footer__grid footer__grid--v2">
+      <div class="footer__brand">
+        <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
+        <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/marketing">Marketing</a></li>
+          <li><a href="/services/technical">Technical</a></li>
+          <li><a href="/services/strategy">Strategy</a></li>
+          <li><a href="/services/coaching">Coaching &amp; growth</a></li>
+          <li><a href="/services/local-seo">Local SEO</a></li>
+          <li><a href="/services/google-ads">Google Ads</a></li>
+          <li><a href="/services/websites">Websites &amp; web apps</a></li>
+          <li><a href="/services/ai-automation">AI &amp; automation</a></li>
+          <li><a href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a></li>
+          <li><a href="/services/analytics">GA4 &amp; analytics</a></li>
+          <li><a href="/services/google-ad-grants">Google Ad Grants</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Who we help</h4>
+        <ul>
+          <li><a href="/for/local-businesses">Local businesses</a></li>
+          <li><a href="/for/founders">Founders &amp; startups</a></li>
+          <li><a href="/for/nonprofits">Nonprofits</a></li>
+          <li><a href="/work">Client results</a></li>
+        </ul>
+        <h4 class="footer__h4-gap">Free tools</h4>
+        <ul>
+          <li><a href="/tools/checkup">The five-step check-up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Articles</h4>
+        <ul>
+          <li><a href="/articles/fractional-cmo-cost">Fractional CMO cost</a></li>
+          <li><a href="/articles/fractional-cmo-vs-marketing-agency">CMO vs. agency</a></li>
+          <li><a href="/articles/is-gohighlevel-worth-it">Is GoHighLevel worth it?</a></li>
+          <li><a href="/articles/ai-agents-for-small-business">AI agents, explained</a></li>
+          <li><a href="/articles/not-showing-up-on-google">Not showing up on Google</a></li>
+          <li><a href="/articles/small-business-marketing-budget">What marketing should cost</a></li>
+          <li><a href="/articles/nonprofit-google-ad-grant">The nonprofit Ad Grant</a></li>
+          <li><a href="/resources" class="tlink">All resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/method">Method</a></li>
+          <li><a href="/investment">Pricing</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__meta">
+      <span>© 2026 Carson Poore Consulting · Indianapolis, Indiana · carson@carsonpoore.com</span>
+      <span class="footer__towns">Serving Indianapolis, Carmel, Fishers, Zionsville, Noblesville, Westfield, Greenwood, Brownsburg, Avon, and all of central Indiana — technical and coaching work nationwide.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  var KEY = "cpc-local-visibility-v1";
+  var rows = [].slice.call(document.querySelectorAll(".check-row[data-id]"));
+  var total = rows.length;
+  if (!total) { return; }
+
+  var gradeEl = document.getElementById("lv-grade");
+  var countEl = document.getElementById("lv-count");
+  var barEl = document.getElementById("lv-bar");
+  var msgH = document.getElementById("lv-msg-h");
+  var msgP = document.getElementById("lv-msg-p");
+  var topList = document.getElementById("lv-top-list");
+  var topH = document.getElementById("lv-top-h");
+  var clearBtn = document.getElementById("lv-clear");
+  var savedEl = document.getElementById("lv-saved");
+  var ctaLink = document.getElementById("lv-cta-link");
+  var mini = document.getElementById("lv-mini");
+  var miniG = document.getElementById("lv-mini-g");
+  var miniN = document.getElementById("lv-mini-n");
+
+  var reduce = false;
+  try { reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches; } catch (e) {}
+
+  var LEVELS = [
+    { min: 17, g: "A" },
+    { min: 14, g: "B" },
+    { min: 10, g: "C" },
+    { min: 6, g: "D" },
+    { min: 0, g: "F" }
+  ];
+
+  var MSG = {
+    A: ["You’ve covered the basics", "Almost everything on this list is in place. If you still don’t show up where you want to, the cause is probably outside it: a crowded category, or how far you sit from the searcher. That’s a good 30-minute conversation."],
+    B: ["Close", "You’ve done most of it. The fixes below are the gaps worth closing, and none of them should take long."],
+    C: ["Half there", "Google has something to work with, but not enough to pick you over a neighbor with a full profile. Start with the fixes below."],
+    D: ["Mostly still to do", "That’s good news, honestly. Nearly everything here is free and takes minutes. Work the list from the top."],
+    F: ["A few things are in place", "Almost all the rest is free. The fixes below are the best place to start."]
+  };
+
+  var store = null;
+  var storeOk = true;
+  try { store = window.localStorage; store.getItem(KEY); } catch (e) { store = null; storeOk = false; }
+
+  function readSaved() {
+    if (!store) { return []; }
+    try {
+      var raw = store.getItem(KEY);
+      var arr = raw ? JSON.parse(raw) : [];
+      return Array.isArray(arr) ? arr : [];
+    } catch (e) { return []; }
+  }
+
+  function writeSaved(ids) {
+    if (!store) { return; }
+    try {
+      if (ids.length) { store.setItem(KEY, JSON.stringify(ids)); } else { store.removeItem(KEY); }
+    } catch (e) { storeOk = false; }
+  }
+
+  function boxOf(row) { return row.querySelector('input[type="checkbox"]'); }
+  function idOf(row) { return row.getAttribute("data-id"); }
+  function weightOf(row) { return parseInt(row.getAttribute("data-w"), 10) || 1; }
+  function titleOf(row) {
+    var label = row.querySelector("label");
+    var node = label && label.firstChild;
+    return node ? node.textContent.trim() : idOf(row);
+  }
+
+  function gradeFor(n) {
+    for (var i = 0; i < LEVELS.length; i++) { if (n >= LEVELS[i].min) { return LEVELS[i]; } }
+    return LEVELS[LEVELS.length - 1];
+  }
+
+  function nextLevel(n) {
+    var next = null;
+    for (var i = LEVELS.length - 1; i >= 0; i--) {
+      if (LEVELS[i].min > n) { next = LEVELS[i]; break; }
+    }
+    return next;
+  }
+
+  function impactLabel(w) {
+    if (w >= 5) { return "Big one"; }
+    if (w >= 4) { return "High impact"; }
+    if (w >= 3) { return "Medium impact"; }
+    return "Small but real";
+  }
+
+  function setText(el, text) { if (el && el.textContent !== text) { el.textContent = text; } }
+
+  function openItem(id) {
+    var row = document.querySelector('.check-row[data-id="' + id + '"]');
+    if (!row) { return; }
+    var d = row.querySelector("details");
+    if (d) { d.open = true; }
+    var box = boxOf(row);
+    try { box.focus({ preventScroll: true }); } catch (e) { box.focus(); }
+    row.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
+  }
+
+  var lastTopKey = null;
+
+  function renderTop(unchecked, n) {
+    var picks = unchecked.slice().sort(function (a, b) {
+      if (b.w !== a.w) { return b.w - a.w; }
+      return a.i - b.i;
+    }).slice(0, 3);
+    var key = picks.map(function (p) { return p.id; }).join("|") || "none";
+    if (key === lastTopKey) { return; }
+    lastTopKey = key;
+    while (topList.firstChild) { topList.removeChild(topList.firstChild); }
+
+    if (!picks.length) {
+      var done = document.createElement("li");
+      done.className = "result-card lv-fix";
+      var dh = document.createElement("h4");
+      dh.textContent = "Nothing left on the list";
+      var dp = document.createElement("p");
+      dp.textContent = "All " + total + " are ticked. Keep the monthly habits going: new photos, a review request after every job, a reply to each review. Then check your calls next month.";
+      done.appendChild(dh);
+      done.appendChild(dp);
+      topList.appendChild(done);
+      return;
+    }
+
+    picks.forEach(function (p, idx) {
+      var li = document.createElement("li");
+      li.className = "result-card lv-fix";
+      var tag = document.createElement("span");
+      tag.className = "lv-fix__tag";
+      tag.textContent = (idx + 1) + " · " + impactLabel(p.w);
+      var h = document.createElement("h4");
+      h.textContent = p.title;
+      var para = document.createElement("p");
+      para.textContent = p.short;
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "lv-open";
+      btn.textContent = "Show me how to check it";
+      btn.setAttribute("aria-label", "Show me how to check: " + p.title);
+      btn.addEventListener("click", function () { openItem(p.id); });
+      li.appendChild(tag);
+      li.appendChild(h);
+      li.appendChild(para);
+      li.appendChild(btn);
+      topList.appendChild(li);
+    });
+  }
+
+  function update(persist) {
+    var n = 0;
+    var unchecked = [];
+    var ids = [];
+    rows.forEach(function (row, i) {
+      if (boxOf(row).checked) {
+        n++;
+        ids.push(idOf(row));
+      } else {
+        unchecked.push({ id: idOf(row), w: weightOf(row), i: i, title: titleOf(row), short: row.getAttribute("data-short") || "" });
+      }
+    });
+
+    var lvl = gradeFor(n);
+    setText(gradeEl, lvl.g);
+    setText(countEl, n + " of " + total + " checked" + (function () {
+      var nx = nextLevel(n);
+      if (!nx) { return ""; }
+      var need = nx.min - n;
+      return ". " + need + " more " + (need === 1 ? "tick gets" : "ticks get") + " you a " + nx.g + ".";
+    })());
+    if (barEl) {
+      barEl.setAttribute("aria-valuenow", String(n));
+      var fill = barEl.firstElementChild;
+      if (fill) { fill.style.width = Math.round((n / total) * 100) + "%"; }
+    }
+
+    if (n === 0) {
+      setText(msgH, "Nothing’s ticked yet");
+      setText(msgP, "So this starts at F. Tick what’s true today and watch it move.");
+    } else {
+      setText(msgH, MSG[lvl.g][0]);
+      setText(msgP, MSG[lvl.g][1]);
+    }
+
+    renderTop(unchecked, n);
+
+    [].slice.call(document.querySelectorAll("[data-group]")).forEach(function (grp) {
+      var boxes = [].slice.call(grp.querySelectorAll('.check-row input[type="checkbox"]'));
+      var on = boxes.filter(function (b) { return b.checked; }).length;
+      var c = grp.querySelector("[data-count-for]");
+      setText(c, on + " of " + boxes.length);
+    });
+
+    setText(miniG, lvl.g);
+    setText(miniN, String(n));
+    if (ctaLink) { ctaLink.setAttribute("href", "/contact?from=local-visibility&grade=" + lvl.g + "&checked=" + n); }
+
+    if (persist) {
+      writeSaved(ids);
+      setText(savedEl, storeOk && store ? "Saved in this browser as you go." : "Can’t save in this browser, so finish in one sitting.");
+    }
+  }
+
+  // Restore
+  var saved = readSaved();
+  var restored = 0;
+  if (saved.length) {
+    rows.forEach(function (row) {
+      if (saved.indexOf(idOf(row)) !== -1) { boxOf(row).checked = true; restored++; }
+    });
+  }
+
+  rows.forEach(function (row) {
+    boxOf(row).addEventListener("change", function () { update(true); });
+  });
+
+  if (clearBtn) {
+    clearBtn.addEventListener("click", function () {
+      rows.forEach(function (row) { boxOf(row).checked = false; });
+      update(true);
+      setText(savedEl, "Cleared. Every box is empty again.");
+      if (topH) { topH.focus(); }
+    });
+  }
+
+  update(false);
+  if (restored) {
+    setText(savedEl, "Welcome back. We restored " + restored + " ticks from this browser.");
+  } else if (!store) {
+    setText(savedEl, "Can’t save in this browser, so finish in one sitting.");
+  }
+
+  // Mobile mini bar: show only while the tool is on screen
+  if (mini && "IntersectionObserver" in window) {
+    var tool = document.getElementById("check");
+    var resultsEl = document.getElementById("lv-results");
+    var toolVisible = false;
+    var resultsVisible = false;
+    var sync = function () { mini.classList.toggle("is-on", toolVisible && !resultsVisible); };
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.target === tool) { toolVisible = en.isIntersecting; }
+        if (en.target === resultsEl) { resultsVisible = en.isIntersecting; }
+      });
+      sync();
+    }, { threshold: 0.05 });
+    if (tool) { io.observe(tool); }
+    if (resultsEl) { io.observe(resultsEl); }
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Marketing Budget Calculator | Carson Poore Consulting</title>
+<meta name="description" content="Enter your revenue, pick your stage, and get a monthly marketing range with the math shown. SBA guidance as the anchor. Free, no email, no login." />
+<link rel="canonical" href="https://carsonpoore.com/tools/marketing-budget" />
+<meta property="og:title" content="Marketing Budget Calculator | Carson Poore Consulting" />
+<meta property="og:description" content="Enter your revenue, pick your stage, and get a monthly marketing range with the math shown. SBA guidance as the anchor. Free, no email, no login." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://carsonpoore.com/tools/marketing-budget" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
+<link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
+<link rel="stylesheet" href="/styles.css?v=20261008-1" />
+<script defer src="/site.js?v=20261008-1"></script>
+<style>
+  /* Budget calculator: page-specific layout */
+  .mb-form { display: grid; gap: clamp(20px, 3vw, 28px); }
+  .mb-field { display: flex; flex-direction: column; gap: 8px; }
+  .mb-field > label, .mb-field > .mb-legend { font-weight: 700; color: var(--ink); font-size: 1rem; }
+  .mb-hint { font-size: 0.88rem; color: var(--muted); line-height: 1.5; }
+  .mb-input { max-width: 340px; }
+  .mb-stage { display: flex; flex-wrap: wrap; border-radius: var(--r-2); max-width: 100%; }
+  .mb-stage button { text-align: left; }
+  .mb-stage .mb-pct { display: block; font-weight: 800; font-size: 0.8rem; opacity: 0.85; }
+  .mb-stage button { line-height: 1.25; padding: 10px 18px; }
+  .mb-stage button:focus-visible { outline: 2px solid var(--cobalt); outline-offset: 2px; }
+  .mb-blurb { min-height: 1.5em; }
+  .mb-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+  .mb-out { margin-top: clamp(28px, 4vw, 40px); padding-top: clamp(24px, 3vw, 32px); border-top: 1px solid var(--line); }
+  .mb-out h3 { font-size: 1.1rem; font-weight: 800; letter-spacing: -0.01em; margin-bottom: 10px; outline: none; }
+  .mb-out h3:focus-visible { outline: 2px solid var(--cobalt); outline-offset: 4px; }
+  .mb-big { font-size: clamp(2rem, 6.2vw, 3.5rem); font-weight: 900; letter-spacing: -0.03em; line-height: 1.05; color: var(--cobalt); font-variant-numeric: tabular-nums; }
+  .mb-big small { font-size: 0.4em; font-weight: 700; color: var(--ink-2); letter-spacing: 0; margin-left: 6px; }
+  .mb-sub { color: var(--ink-2); margin-top: 10px; line-height: 1.6; }
+  .mb-line { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 20px; padding: 10px 0; border-bottom: 1px solid var(--line-soft); font-variant-numeric: tabular-nums; color: var(--ink-2); }
+  .mb-line:last-of-type { border-bottom: 0; }
+  .mb-line strong { color: var(--ink); font-weight: 800; }
+  .mb-out p { color: var(--ink-2); line-height: 1.65; }
+  .mb-out p + p { margin-top: 12px; }
+  .mb-out ul.mb-diy { margin: 12px 0 0; padding-left: 1.2em; color: var(--ink-2); line-height: 1.65; }
+  .mb-out ul.mb-diy li + li { margin-top: 8px; }
+  .mb-tier-nums { font-weight: 800; color: var(--ink); }
+  .sources p + p { margin-top: 16px; }
+  .sources cite { font-style: normal; font-weight: 700; color: var(--ink); }
+  .read-next { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(20px, 3vw, 40px); margin-top: clamp(28px, 4vw, 48px); }
+  @media (max-width: 760px) { .read-next { grid-template-columns: 1fr; } }
+  .read-next > div { border-left: 3px solid var(--line); padding-left: clamp(16px, 2vw, 24px); display: flex; flex-direction: column; gap: 8px; }
+  .read-next h3 { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.01em; }
+  .read-next p { color: var(--ink-2); font-size: 0.95rem; line-height: 1.6; }
+  .read-next .tlink { align-self: flex-start; font-size: 0.92rem; margin-top: auto; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://carsonpoore.com/#org",
+      "name": "Carson Poore Consulting",
+      "url": "https://carsonpoore.com/",
+      "logo": "https://carsonpoore.com/brand/cpc-mark-royalblue.svg",
+      "image": "https://carsonpoore.com/brand/carson-headshot.png",
+      "email": "carson@carsonpoore.com",
+      "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
+      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "areaServed": [
+        { "@type": "City", "name": "Indianapolis" },
+        { "@type": "State", "name": "Indiana" },
+        { "@type": "Country", "name": "United States" }
+      ],
+      "priceRange": "$1,200–$4,800/month",
+      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://carsonpoore.com/tools/marketing-budget#app",
+      "name": "What Should Marketing Cost? Budget Calculator",
+      "url": "https://carsonpoore.com/tools/marketing-budget",
+      "description": "Enter annual revenue and business stage to get a monthly marketing budget range, with the math shown and SBA guidance as the anchor.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "provider": { "@id": "https://carsonpoore.com/#org" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carsonpoore.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://carsonpoore.com/resources" },
+        { "@type": "ListItem", "position": 3, "name": "Marketing budget calculator" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="page">
+
+<header class="nav">
+  <div class="nav__inner">
+    <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
+    <nav class="nav__links" aria-label="Primary">
+      <div class="nav__item has-drop">
+        <a href="/services">Services</a>
+        <div class="nav__drop" aria-label="Services">
+          <a href="/services/marketing">Marketing</a>
+          <a href="/services/technical">Technical</a>
+          <a href="/services/strategy">Strategy</a>
+          <a href="/services/coaching">Coaching &amp; growth</a>
+          <a class="nav__drop-all" href="/services">All services</a>
+        </div>
+      </div>
+      <div class="nav__item has-drop">
+        <a href="/#who-we-help">Who we help</a>
+        <div class="nav__drop" aria-label="Who we help">
+          <a href="/for/local-businesses">Local businesses</a>
+          <a href="/for/founders">Founders &amp; startups</a>
+          <a href="/for/nonprofits">Nonprofits</a>
+        </div>
+      </div>
+      <a href="/method">Method</a>
+      <a href="/investment">Pricing</a>
+      <a href="/work">Work</a>
+      <a href="/resources">Resources</a>
+      <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
+    </nav>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" aria-hidden="true">
+  <span class="mobile-menu__group">Services</span>
+  <a href="/services/marketing">Marketing</a>
+  <a href="/services/technical">Technical</a>
+  <a href="/services/strategy">Strategy</a>
+  <a href="/services/coaching">Coaching &amp; growth</a>
+  <span class="mobile-menu__group">Who we help</span>
+  <a href="/for/local-businesses">Local businesses</a>
+  <a href="/for/founders">Founders &amp; startups</a>
+  <a href="/for/nonprofits">Nonprofits</a>
+  <span class="mobile-menu__group">Explore</span>
+  <a href="/method">Method</a>
+  <a href="/investment">Pricing</a>
+  <a href="/work">Work</a>
+  <a href="/resources">Resources</a>
+  <a href="/about">About</a>
+  <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero page-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li aria-current="page">Marketing budget calculator</li>
+        </ol>
+      </nav>
+      <div class="page-hero__copy">
+        <span class="eyebrow reveal">Free tool</span>
+        <h1 class="reveal mt-md" data-delay="1">What should marketing <em>cost</em>?</h1>
+        <p class="hero__sub reveal mt-md" data-delay="2">Type in your revenue and pick your stage. You get a monthly range with the math written out, so you can check it yourself. Free. No email. No login. Nothing you type leaves this page.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE TOOL -->
+  <section class="section">
+    <div class="wrap">
+      <div class="tool">
+        <div class="tool__panel reveal">
+
+          <noscript>
+            <div class="result-card">
+              <h2 class="tool__q">This calculator needs JavaScript.</h2>
+              <p>Here is the math without it. Take your annual revenue, multiply it by 5&ndash;12% depending on your stage, then divide by 12 for a monthly number. The U.S. Small Business Administration&rsquo;s guidance for businesses under $5 million is 7&ndash;8% of gross revenue. Turn JavaScript on to see it worked out for you, or <a class="tlink" href="/contact">book a free call</a> and we&rsquo;ll do it together. Published prices are on the <a class="tlink" href="/investment">pricing page</a>.</p>
+            </div>
+          </noscript>
+
+          <div id="mb-app" hidden>
+            <form class="mb-form" id="mb-form" novalidate>
+
+              <div class="mb-field">
+                <label for="mb-rev" id="mb-rev-label">Annual revenue</label>
+                <input class="mb-input" type="text" inputmode="numeric" autocomplete="off" id="mb-rev" name="revenue" placeholder="$400,000" aria-describedby="mb-rev-hint" />
+                <span class="mb-hint" id="mb-rev-hint">Gross revenue for a full year, before expenses. You can type 400000 or 400k.</span>
+              </div>
+
+              <div class="mb-field" role="group" aria-labelledby="mb-stage-legend">
+                <span class="mb-legend" id="mb-stage-legend">Where is the business right now?</span>
+                <div class="toggle-row mb-stage" id="mb-stage">
+                  <button type="button" data-stage="steady" aria-pressed="false">Steady<span class="mb-pct">5&ndash;7%</span></button>
+                  <button type="button" data-stage="growing" class="is-on" aria-pressed="true">Growing<span class="mb-pct">8&ndash;10%</span></button>
+                  <button type="button" data-stage="fresh" aria-pressed="false">New or turnaround<span class="mb-pct">10&ndash;12%</span></button>
+                </div>
+                <span class="mb-hint mb-blurb" id="mb-blurb"></span>
+              </div>
+
+              <div class="check-row" style="border-bottom:0;padding:0;">
+                <input type="checkbox" id="mb-np" />
+                <label for="mb-np">We&rsquo;re a nonprofit<span class="check-row__why">Swaps in the notes that apply to nonprofits, including the Google Ad Grant.</span></label>
+              </div>
+
+              <div class="mb-actions">
+                <button type="submit" class="btn btn--primary">Show my range <span class="arr">→</span></button>
+                <span class="tool-note">It also updates as you type.</span>
+              </div>
+            </form>
+
+            <div class="mb-out" id="mb-out" aria-live="polite" aria-atomic="true"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHERE THE NUMBERS COME FROM -->
+  <section class="section section--stone sources">
+    <div class="wrap wrap--narrow">
+      <div class="sec-head">
+        <span class="eyebrow reveal">Sources</span>
+        <h2 class="reveal" data-delay="1">Where the percentages come from</h2>
+      </div>
+      <div class="mt-lg">
+        <p class="reveal"><cite>The anchor is SBA guidance.</cite> The U.S. Small Business Administration recommends that businesses with under $5 million in annual revenue put 7&ndash;8% of gross revenue into marketing. Every result above is compared against it.</p>
+        <p class="reveal">Gartner&rsquo;s 2025 CMO Spend Survey puts average marketing spend at 7.7% of revenue. The companies in that survey skew large, so we treat it as context and don&rsquo;t build on it. It lands inside the SBA range, which is useful to know.</p>
+        <p class="reveal">The stage bands are ours: steady is 5&ndash;7%, growing is 8&ndash;10%, new or turnaround is 10&ndash;12%. That&rsquo;s a judgment call set around the SBA anchor, not a published standard. Other guides run wider, from about 4% for mature businesses up to 20% for early-stage ones (mercury.com, truefuturemedia.com, hawksem.com).</p>
+        <p class="reveal">What counts as marketing? All of it. Our fee if you hire us, ad spend, software, photography, printing, sponsorships, and the slice of someone&rsquo;s salary spent on it. This part is boring. Do it anyway, because owners tend to compare a retainer against a budget that never included the other half.</p>
+        <p class="reveal">One opinion: we think most small businesses should start at the low end of their range and move up only when the calls and booked jobs show it&rsquo;s paying back.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- READ NEXT -->
+  <section class="section">
+    <div class="wrap wrap--narrow">
+      <div class="sec-head">
+        <span class="eyebrow reveal">Keep going</span>
+        <h2 class="reveal" data-delay="1">Two places to take the number</h2>
+      </div>
+      <div class="read-next">
+        <div class="reveal">
+          <h3>The longer explanation</h3>
+          <p>How owners usually get this number wrong, what belongs inside it, and when to spend less than the range says.</p>
+          <a class="tlink" href="/articles/small-business-marketing-budget">What marketing should cost a small business <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="reveal" data-delay="1">
+          <h3>What working with us costs</h3>
+          <p>Three monthly retainers, a one-time strategy engagement, and a nonprofit rate. All published, with what each month includes.</p>
+          <a class="tlink" href="/investment">See the pricing page <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <p class="updated mt-lg">Last updated: October 2026</p>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing">
+    <div class="closing__inner">
+      <div class="reveal">
+        <span class="eyebrow">The next step</span>
+        <h2>The number takes a minute. <em>Where it goes</em> is the work.</h2>
+        <p>Bring your range to a free 30-minute call and we&rsquo;ll talk through a first-pass split. If the honest answer is &ldquo;spend less, or do it yourself for now,&rdquo; we&rsquo;ll say so.</p>
+      </div>
+      <div class="reveal" data-delay="1">
+        <a href="/contact" class="btn btn--primary">Book a free call <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer footer--v2">
+  <div class="wrap">
+    <div class="footer__grid footer__grid--v2">
+      <div class="footer__brand">
+        <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
+        <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/marketing">Marketing</a></li>
+          <li><a href="/services/technical">Technical</a></li>
+          <li><a href="/services/strategy">Strategy</a></li>
+          <li><a href="/services/coaching">Coaching &amp; growth</a></li>
+          <li><a href="/services/local-seo">Local SEO</a></li>
+          <li><a href="/services/google-ads">Google Ads</a></li>
+          <li><a href="/services/websites">Websites &amp; web apps</a></li>
+          <li><a href="/services/ai-automation">AI &amp; automation</a></li>
+          <li><a href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a></li>
+          <li><a href="/services/analytics">GA4 &amp; analytics</a></li>
+          <li><a href="/services/google-ad-grants">Google Ad Grants</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Who we help</h4>
+        <ul>
+          <li><a href="/for/local-businesses">Local businesses</a></li>
+          <li><a href="/for/founders">Founders &amp; startups</a></li>
+          <li><a href="/for/nonprofits">Nonprofits</a></li>
+          <li><a href="/work">Client results</a></li>
+        </ul>
+        <h4 class="footer__h4-gap">Free tools</h4>
+        <ul>
+          <li><a href="/tools/checkup">The five-step check-up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Articles</h4>
+        <ul>
+          <li><a href="/articles/fractional-cmo-cost">Fractional CMO cost</a></li>
+          <li><a href="/articles/fractional-cmo-vs-marketing-agency">CMO vs. agency</a></li>
+          <li><a href="/articles/is-gohighlevel-worth-it">Is GoHighLevel worth it?</a></li>
+          <li><a href="/articles/ai-agents-for-small-business">AI agents, explained</a></li>
+          <li><a href="/articles/not-showing-up-on-google">Not showing up on Google</a></li>
+          <li><a href="/articles/small-business-marketing-budget">What marketing should cost</a></li>
+          <li><a href="/articles/nonprofit-google-ad-grant">The nonprofit Ad Grant</a></li>
+          <li><a href="/resources" class="tlink">All resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/method">Method</a></li>
+          <li><a href="/investment">Pricing</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__meta">
+      <span>© 2026 Carson Poore Consulting · Indianapolis, Indiana · carson@carsonpoore.com</span>
+      <span class="footer__towns">Serving Indianapolis, Carmel, Fishers, Zionsville, Noblesville, Westfield, Greenwood, Brownsburg, Avon, and all of central Indiana — technical and coaching work nationwide.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  var BANDS = {
+    steady:  { name: 'Steady',            lo: 5,  hi: 7,  blurb: 'Established, with sales that are flat or growing slowly.' },
+    growing: { name: 'Growing',           lo: 8,  hi: 10, blurb: 'Adding customers, jobs, or locations, and the pipeline needs to keep up.' },
+    fresh:   { name: 'New or turnaround', lo: 10, hi: 12, blurb: 'Newly launched, or rebuilding after a slow stretch.' }
+  };
+  var TIERS = [1200, 2400, 4800];
+  var SBA = { lo: 7, hi: 8, cap: 5000000 };
+  var EXAMPLE = { rev: 400000, stage: 'growing' };
+
+  var app = document.getElementById('mb-app');
+  var form = document.getElementById('mb-form');
+  var revEl = document.getElementById('mb-rev');
+  var npEl = document.getElementById('mb-np');
+  var stageWrap = document.getElementById('mb-stage');
+  var blurbEl = document.getElementById('mb-blurb');
+  var out = document.getElementById('mb-out');
+  if (!app || !form || !revEl || !npEl || !stageWrap || !out) { return; }
+
+  var state = { stage: 'growing', nonprofit: false };
+  var timer = null;
+
+  function money(n) {
+    return '$' + String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+  function pct(n) { return String(n) + '%'; }
+
+  // Returns { status: 'empty' | 'bad' | 'ok', value: Number }
+  function parseRevenue(raw) {
+    var s = String(raw || '').replace(/[\s$,]/g, '').toLowerCase();
+    if (!s) { return { status: 'empty', value: 0 }; }
+    var m = /^(\d*\.?\d+)([km])?$/.exec(s);
+    if (!m) { return { status: 'bad', value: 0 }; }
+    var v = parseFloat(m[1]);
+    if (m[2] === 'k') { v = v * 1000; }
+    if (m[2] === 'm') { v = v * 1000000; }
+    if (!isFinite(v) || v <= 0) { return { status: 'bad', value: 0 }; }
+    if (v > 10000000000) { v = 10000000000; }
+    return { status: 'ok', value: v };
+  }
+
+  function labelFor() {
+    var l = document.getElementById('mb-rev-label');
+    if (l) { l.textContent = state.nonprofit ? 'Annual budget or revenue' : 'Annual revenue'; }
+    revEl.setAttribute('placeholder', state.nonprofit ? '$600,000' : '$400,000');
+  }
+
+  function setBlurb() {
+    if (blurbEl) { blurbEl.textContent = BANDS[state.stage].blurb; }
+  }
+
+  function line(label, math, result) {
+    return '<p class="mb-line"><span>' + label + '</span><span>' + math + ' = <strong>' + result + '</strong></span></p>';
+  }
+
+  function emptyHTML(msg) {
+    var b = BANDS[EXAMPLE.stage];
+    var ex = EXAMPLE.rev * b.lo / 100 / 12;
+    return '<div class="result-card">' +
+      '<h3 id="mb-result-h" tabindex="-1">Your range shows up here</h3>' +
+      '<p>' + msg + '</p>' +
+      '<p>The formula is annual revenue &times; a percentage &divide; 12 months.</p>' +
+      '<p class="tool-note">Example only, not your numbers: ' + money(EXAMPLE.rev) + ' &times; ' + pct(b.lo) + ' &divide; 12 = ' + money(ex) + ' a month at the low end of the ' + b.name + ' band.</p>' +
+      '</div>';
+  }
+
+  function tierFit(low, high) {
+    var inside = [];
+    var i;
+    for (i = 0; i < TIERS.length; i++) {
+      if (TIERS[i] >= low && TIERS[i] <= high) { inside.push(TIERS[i]); }
+    }
+    var html = '';
+    if (high < TIERS[0]) {
+      html += '<p><strong>Honestly, that&rsquo;s below our smallest tier. Here&rsquo;s where we&rsquo;d put the money instead.</strong></p>';
+      html += '<ul class="mb-diy">';
+      html += '<li>Finish your Google Business Profile: hours, services, photos, a real description. It&rsquo;s free, and it&rsquo;s what shows in the map results.</li>';
+      html += '<li>Ask every happy ' + (state.nonprofit ? 'donor, volunteer, and client' : 'customer') + ' for a Google review, and answer each review you get, good or bad.</li>';
+      html += '<li>Email the people who already know you once a month. The software is cheap, and they already trust you.</li>';
+      html += '</ul>';
+      html += '<p>Our free <a class="tlink" href="/tools/local-visibility">visibility check</a> grades the first one. Come back when your range reaches $1,200 a month.</p>';
+      return html;
+    }
+    if (inside.length === 1) {
+      html += '<p>The <span class="mb-tier-nums">' + '$' + String(inside[0]).replace(/\B(?=(\d{3})+(?!\d))/g, ',') + '</span> tier sits inside your range.</p>';
+    } else if (inside.length === 2) {
+      html += '<p>The <span class="mb-tier-nums">$' + String(inside[0]).replace(/\B(?=(\d{3})+(?!\d))/g, ',') + '</span> and <span class="mb-tier-nums">$' + String(inside[1]).replace(/\B(?=(\d{3})+(?!\d))/g, ',') + '</span> tiers both sit inside your range.</p>';
+    } else if (inside.length === 3) {
+      html += '<p>All of our tiers sit inside your range: <span class="mb-tier-nums">$1,200, $2,400, and $4,800</span>.</p>';
+    } else if (low > TIERS[2]) {
+      html += '<p>Your range starts above our largest tier, <span class="mb-tier-nums">$4,800</span>. That tier fits, and the rest of the budget would go to ad spend and tools.</p>';
+    } else {
+      var under = TIERS[0];
+      var over = TIERS[2];
+      for (i = 0; i < TIERS.length; i++) {
+        if (TIERS[i] < low) { under = TIERS[i]; }
+      }
+      for (i = TIERS.length - 1; i >= 0; i--) {
+        if (TIERS[i] > high) { over = TIERS[i]; }
+      }
+      html += '<p>No tier lands inside your range. The <span class="mb-tier-nums">' + money(under) + '</span> tier is under it and the <span class="mb-tier-nums">' + money(over) + '</span> tier is over it. We&rsquo;d start with the lower one and add scope later if the calls justify it.</p>';
+    }
+    html += '<p>The retainer comes out of this number, and so does any ad spend or software you buy, so it isn&rsquo;t the whole budget. What each tier includes, and the three-month minimum, are on the <a class="tlink" href="/investment">pricing page</a>.</p>';
+    if (state.nonprofit) {
+      html += '<p>We also have a reduced nonprofit rate. It&rsquo;s on the same page.</p>';
+    }
+    return html;
+  }
+
+  function resultHTML(rev) {
+    var b = BANDS[state.stage];
+    var lowM = rev * b.lo / 100 / 12;
+    var highM = rev * b.hi / 100 / 12;
+    var sbaLoM = rev * SBA.lo / 100 / 12;
+    var sbaHiM = rev * SBA.hi / 100 / 12;
+    var h = '';
+
+    h += '<div class="result-card">';
+    h += '<h3 id="mb-result-h" tabindex="-1">Your monthly range</h3>';
+    h += '<div class="mb-big">' + money(lowM) + ' &ndash; ' + money(highM) + '<small>a month</small></div>';
+    h += '<p class="mb-sub">That&rsquo;s the ' + b.name + ' band, ' + pct(b.lo) + '&ndash;' + pct(b.hi) + ' of ' + money(rev) + ' a year. Across twelve months: ' + money(lowM * 12) + ' to ' + money(highM * 12) + '.</p>';
+    h += '</div>';
+
+    h += '<div class="result-card">';
+    h += '<h3>The math</h3>';
+    h += line('Low end', money(rev) + ' &times; ' + pct(b.lo) + ' &divide; 12', money(lowM));
+    h += line('High end', money(rev) + ' &times; ' + pct(b.hi) + ' &divide; 12', money(highM));
+    h += '</div>';
+
+    h += '<div class="result-card">';
+    h += '<h3>The anchor: SBA guidance</h3>';
+    h += line('SBA, ' + pct(SBA.lo) + '&ndash;' + pct(SBA.hi), money(rev) + ' &times; ' + pct(SBA.lo) + '&ndash;' + pct(SBA.hi) + ' &divide; 12', money(sbaLoM) + ' &ndash; ' + money(sbaHiM));
+    if (state.nonprofit) {
+      h += '<p>The SBA&rsquo;s guidance is for businesses, not nonprofits, so treat this as a reference point and not a rule. Budgets at nonprofits vary a lot with how much is staff time.</p>';
+    } else if (rev >= SBA.cap) {
+      h += '<p>The SBA&rsquo;s 7&ndash;8% guidance is written for businesses under $5 million in revenue. You&rsquo;re past that, so read the anchor as a rough guide.</p>';
+    } else {
+      var rel;
+      if (lowM > sbaHiM) { rel = 'Your stage range starts above the SBA anchor.'; }
+      else if (highM < sbaLoM) { rel = 'Your stage range sits below the SBA anchor.'; }
+      else { rel = 'Your stage range overlaps the SBA anchor.'; }
+      h += '<p>The SBA recommends 7&ndash;8% of gross revenue for businesses under $5 million. ' + rel + '</p>';
+    }
+    h += '</div>';
+
+    h += '<div class="result-card">';
+    h += '<h3>Where our tiers land</h3>';
+    h += tierFit(lowM, highM);
+    h += '</div>';
+
+    if (state.nonprofit) {
+      h += '<div class="result-card">';
+      h += '<h3>Budget on top: the Google Ad Grant</h3>';
+      h += '<p>Google says its Ad Grant gives eligible nonprofits $10,000 a month in search ads. That money sits on top of the range above and doesn&rsquo;t come out of it. You still need someone to run the account. <a class="tlink" href="/services/google-ad-grants">How the Ad Grant works <span aria-hidden="true">&rarr;</span></a></p>';
+      h += '</div>';
+    }
+
+    return h;
+  }
+
+  function render(focusHeading) {
+    var r = parseRevenue(revEl.value);
+    var html;
+    if (r.status === 'empty') {
+      html = emptyHTML('Type your annual ' + (state.nonprofit ? 'budget or revenue' : 'revenue') + ' above and your range appears here.');
+    } else if (r.status === 'bad') {
+      html = emptyHTML('That didn&rsquo;t read as a number. Try 400000 or 400k.');
+    } else {
+      html = resultHTML(r.value);
+    }
+    out.innerHTML = html;
+    if (focusHeading) {
+      var hd = document.getElementById('mb-result-h');
+      if (hd && typeof hd.focus === 'function') { hd.focus(); }
+    }
+  }
+
+  function formatField() {
+    var r = parseRevenue(revEl.value);
+    if (r.status === 'ok') { revEl.value = money(r.value); }
+  }
+
+  function setStage(key) {
+    if (!BANDS[key]) { return; }
+    state.stage = key;
+    var btns = stageWrap.getElementsByTagName('button');
+    for (var i = 0; i < btns.length; i++) {
+      var on = btns[i].getAttribute('data-stage') === key;
+      btns[i].setAttribute('aria-pressed', on ? 'true' : 'false');
+      if (on) { btns[i].classList.add('is-on'); } else { btns[i].classList.remove('is-on'); }
+    }
+    setBlurb();
+    render(false);
+  }
+
+  stageWrap.addEventListener('click', function (e) {
+    var t = e.target;
+    while (t && t !== stageWrap && t.tagName !== 'BUTTON') { t = t.parentNode; }
+    if (t && t.tagName === 'BUTTON') { setStage(t.getAttribute('data-stage')); }
+  });
+
+  npEl.addEventListener('change', function () {
+    state.nonprofit = !!npEl.checked;
+    labelFor();
+    render(false);
+  });
+
+  revEl.addEventListener('input', function () {
+    if (timer) { clearTimeout(timer); }
+    timer = setTimeout(function () { render(false); }, 400);
+  });
+  revEl.addEventListener('blur', function () {
+    formatField();
+    if (timer) { clearTimeout(timer); }
+    render(false);
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (timer) { clearTimeout(timer); }
+    formatField();
+    render(true);
+  });
+
+  app.hidden = false;
+  labelFor();
+  setBlurb();
+  render(false);
+})();
+</script>
+
+</body>
+</html>

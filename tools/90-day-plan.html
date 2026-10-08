@@ -1,0 +1,1024 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>90-Day Plan Starter: Free One-Page Builder</title>
+<meta name="description" content="One goal, one audience, one offer, two channels, a weekly rhythm. A printable 90-day plan on one page, free, no email, built on our five steps." />
+<link rel="canonical" href="https://carsonpoore.com/tools/90-day-plan" />
+<meta property="og:title" content="90-Day Plan Starter: Free One-Page Builder" />
+<meta property="og:description" content="One goal, one audience, one offer, two channels, a weekly rhythm. A printable 90-day plan on one page, free, no email, built on our five steps." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://carsonpoore.com/tools/90-day-plan" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
+<link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
+<link rel="stylesheet" href="/styles.css?v=20261008-1" />
+<script defer src="/site.js?v=20261008-1"></script>
+<style>
+  /* 90-day plan tool: page-specific layout */
+  .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+  .tool-section { padding-top: clamp(40px, 6vw, 72px); }
+  .fld { margin-top: 22px; }
+  .fld:first-of-type { margin-top: 0; }
+  .fld > label, .fld > legend { display: block; font-weight: 700; color: var(--ink); margin-bottom: 6px; font-size: 1rem; padding: 0; }
+  .fld .tool-note { margin-top: 6px; }
+  .fld-row { display: grid; gap: 22px; grid-template-columns: 1fr; }
+  fieldset.fld { border: 0; padding: 0; margin: 22px 0 0; min-width: 0; }
+  .chan-grid { display: grid; grid-template-columns: 1fr; column-gap: 28px; margin-top: 4px; }
+  @media (min-width: 720px) { .chan-grid { grid-template-columns: 1fr 1fr; } .fld-row--two { grid-template-columns: 1fr 1fr; } }
+  .chan-count { font-weight: 700; color: var(--cobalt); font-size: 0.92rem; margin-top: 10px; min-height: 1.5em; }
+  .chan-count.is-warn { color: #9a5b00; }
+  .tool-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; align-items: center; }
+  .form-hint { margin-top: 14px; min-height: 1.4em; }
+
+  .results { margin-top: clamp(28px, 4vw, 48px); }
+  .plan-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; align-items: center; }
+  .plan-actions .btn { font-size: 0.92rem; }
+  .copy-status { font-size: 0.9rem; font-weight: 600; color: var(--cobalt); margin-bottom: 12px; min-height: 1.3em; }
+  .plan-text { width: 100%; font: 0.85rem/1.5 ui-monospace, Menlo, Consolas, monospace; padding: 12px 14px; border: 1px solid var(--line); border-radius: var(--r-1); background: #fff; color: var(--ink); margin-bottom: 18px; }
+
+  /* The plan itself */
+  .plan { background: #fff; border: 1px solid var(--line); border-radius: var(--r-3); overflow: hidden; box-shadow: var(--shadow-1); color: var(--ink); }
+  .plan__head { background: var(--navy); color: #fff; padding: clamp(22px, 3.4vw, 36px); }
+  .plan__kicker { font-size: 0.74rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-2); }
+  .plan__kicker b { color: var(--amber); font-weight: 800; }
+  .plan__title { font-size: clamp(1.35rem, 2.6vw, 2rem); font-weight: 800; letter-spacing: -0.015em; line-height: 1.2; color: #fff; margin-top: 10px; overflow-wrap: anywhere; }
+  .plan__title:focus { outline: none; }
+  .plan__title:focus-visible { outline: 2px solid var(--amber); outline-offset: 4px; }
+  .plan__facts { display: grid; grid-template-columns: 1fr; gap: 12px 28px; margin-top: 20px; }
+  @media (min-width: 720px) { .plan__facts { grid-template-columns: 1fr 1fr; } }
+  .plan__facts dt { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--cream-2); }
+  .plan__facts dd { margin: 2px 0 0; color: #fff; font-weight: 600; line-height: 1.4; overflow-wrap: anywhere; }
+  .plan__body { padding: clamp(18px, 3vw, 32px); }
+  .plan__sec { margin-top: 24px; }
+  .plan__sec:first-child { margin-top: 0; }
+  .plan__sec-h { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cobalt); padding-bottom: 6px; border-bottom: 2px solid var(--navy); margin-bottom: 4px; }
+  .plan__sec-h span { color: var(--ink-2); font-weight: 600; letter-spacing: 0.02em; text-transform: none; font-size: 0.86rem; }
+  .wk { display: grid; grid-template-columns: 1fr; gap: 6px 18px; padding: 12px 0; border-bottom: 1px solid var(--line-soft); }
+  @media (min-width: 720px) { .wk { grid-template-columns: 120px 1fr; } }
+  .wk:last-child { border-bottom: 0; }
+  .wk__label strong { display: block; font-weight: 800; color: var(--ink); }
+  .wk__label span { display: block; font-size: 0.82rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .wk__label em { display: block; font-style: normal; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cobalt); margin-top: 2px; }
+  .wk ul { margin: 0; padding-left: 1.1em; color: var(--ink-2); line-height: 1.5; }
+  .wk li + li { margin-top: 4px; }
+  .wk__two { display: grid; grid-template-columns: 1fr; gap: 8px 22px; }
+  @media (min-width: 720px) { .wk__two { grid-template-columns: 1fr 1fr; } }
+  .wk__two p { margin: 0; color: var(--ink-2); line-height: 1.5; }
+  .wk__two p b { display: block; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--cobalt); font-weight: 800; }
+  .rhythm { display: grid; grid-template-columns: 1fr; gap: 12px; margin: 12px 0 8px; }
+  @media (min-width: 720px) { .rhythm { grid-template-columns: 1fr 1fr; } }
+  .rhythm .result-card { padding: 14px 16px; background: var(--bone); }
+  .rhythm h3 { font-size: 1rem; font-weight: 800; margin: 0; color: var(--ink); }
+  .rhythm h3 span { display: block; font-size: 0.8rem; font-weight: 600; color: var(--muted); margin-top: 2px; }
+  .rhythm ul { margin: 8px 0 0; padding-left: 1.1em; color: var(--ink-2); line-height: 1.5; font-size: 0.95rem; }
+  .rhythm li + li { margin-top: 3px; }
+  .wk-head { display: none; }
+  .plan__foot { border-top: 2px solid var(--navy); padding: clamp(16px, 2.6vw, 26px) clamp(18px, 3vw, 32px); background: var(--bone); }
+  .plan__foot p { margin: 0; color: var(--ink-2); line-height: 1.55; }
+  .plan__foot p + p { margin-top: 8px; }
+  .plan__foot strong { color: var(--ink); }
+  .plan__cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+
+  .map-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; counter-reset: m; }
+  .map-list li { display: grid; grid-template-columns: 44px 1fr; gap: 6px 14px; padding: 16px 0; border-bottom: 1px solid var(--line-soft); }
+  .map-list li:last-child { border-bottom: 0; }
+  .map-list .n { font-weight: 900; color: var(--cobalt); font-variant-numeric: tabular-nums; font-size: 1.1rem; }
+  .map-list strong { color: var(--ink); }
+  .map-list p { margin: 2px 0 0; color: var(--ink-2); line-height: 1.55; }
+
+  @media print {
+    @page { size: letter; margin: 0.25in; }
+    html, body { background: #fff !important; }
+    body { font-size: 8pt; }
+    .page-hero, main > section:not(.tool-section), .updated { display: none !important; }
+    .reveal { opacity: 1 !important; transform: none !important; }
+    .tool-section { padding: 0 !important; background: #fff !important; }
+    .tool-section .wrap { padding: 0 !important; max-width: none !important; }
+    #tool-panel, #copy-status, #plan-text { display: none !important; }
+    .results { margin: 0; }
+    .plan { border: 1px solid #000; border-radius: 0; box-shadow: none; }
+    .plan__head { background: #fff !important; color: #000; padding: 7px 12px; border-bottom: 2px solid #000; }
+    .plan__kicker, .plan__facts dt { color: #333; font-size: 6.5pt; }
+    .plan__kicker b { color: #000; }
+    .plan__title, .plan__title:focus, .plan__title:focus-visible { color: #000; font-size: 13pt; margin-top: 2px; outline: none !important; }
+    .plan__facts { grid-template-columns: 1fr 1fr; gap: 3px 18px; margin-top: 5px; }
+    .plan__facts dd { color: #000; font-size: 7.5pt; line-height: 1.25; }
+    .plan__body { padding: 3px 12px; }
+    .plan__sec { margin-top: 5px; }
+    .plan__sec-h { color: #000; font-size: 7pt; padding-bottom: 1px; margin-bottom: 0; }
+    .plan__sec-h span { display: none; }
+    .wk { grid-template-columns: 82px 1fr; padding: 1px 0; gap: 1px 8px; break-inside: avoid; }
+    .wk__label strong { display: inline; font-size: 7.5pt; }
+    .wk__label span { display: inline; font-size: 6.5pt; color: #333; margin-left: 3px; }
+    .wk__label em { font-size: 6pt; color: #333; margin-top: 0; letter-spacing: 0.04em; }
+    .wk ul, .wk__two p, .rhythm ul { color: #000; font-size: 7.5pt; line-height: 1.25; }
+    .wk li + li { margin-top: 0; }
+    .wk__two { grid-template-columns: 1fr 1fr; gap: 1px 12px; }
+    .wk__two p b { font-size: 6pt; color: #333; }
+    .rhythm { grid-template-columns: 1fr 1fr; gap: 6px; margin: 3px 0; }
+    .rhythm .result-card { padding: 3px 7px; background: #fff; border-color: #777; border-radius: 0; }
+    .rhythm h3 { font-size: 8pt; }
+    .rhythm h3 span { font-size: 6.5pt; color: #333; margin-top: 0; }
+    .rhythm ul { margin-top: 1px; }
+    .rhythm li + li { margin-top: 0; }
+    .plan__foot { background: #fff; padding: 4px 12px; border-top: 1px solid #000; }
+    .plan__foot p { color: #000; font-size: 7.5pt; line-height: 1.25; }
+    .plan__foot p + p { margin-top: 3px; }
+    .plan__cta { display: none; }
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://carsonpoore.com/#org",
+      "name": "Carson Poore Consulting",
+      "url": "https://carsonpoore.com/",
+      "logo": "https://carsonpoore.com/brand/cpc-mark-royalblue.svg",
+      "image": "https://carsonpoore.com/brand/carson-headshot.png",
+      "email": "carson@carsonpoore.com",
+      "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
+      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "areaServed": [
+        { "@type": "City", "name": "Indianapolis" },
+        { "@type": "State", "name": "Indiana" },
+        { "@type": "Country", "name": "United States" }
+      ],
+      "priceRange": "$1,200–$4,800/month",
+      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://carsonpoore.com/tools/90-day-plan#app",
+      "name": "90-Day Plan Starter",
+      "url": "https://carsonpoore.com/tools/90-day-plan",
+      "description": "A free, browser-based builder that turns one goal, one audience, one offer, two channels, and a weekly time budget into a dated, printable 90-day plan on one page.",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "provider": { "@id": "https://carsonpoore.com/#org" },
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carsonpoore.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://carsonpoore.com/resources" },
+        { "@type": "ListItem", "position": 3, "name": "90-Day Plan Starter" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="page">
+
+<header class="nav">
+  <div class="nav__inner">
+    <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
+    <nav class="nav__links" aria-label="Primary">
+      <div class="nav__item has-drop">
+        <a href="/services">Services</a>
+        <div class="nav__drop" aria-label="Services">
+          <a href="/services/marketing">Marketing</a>
+          <a href="/services/technical">Technical</a>
+          <a href="/services/strategy">Strategy</a>
+          <a href="/services/coaching">Coaching &amp; growth</a>
+          <a class="nav__drop-all" href="/services">All services</a>
+        </div>
+      </div>
+      <div class="nav__item has-drop">
+        <a href="/#who-we-help">Who we help</a>
+        <div class="nav__drop" aria-label="Who we help">
+          <a href="/for/local-businesses">Local businesses</a>
+          <a href="/for/founders">Founders &amp; startups</a>
+          <a href="/for/nonprofits">Nonprofits</a>
+        </div>
+      </div>
+      <a href="/method">Method</a>
+      <a href="/investment">Pricing</a>
+      <a href="/work">Work</a>
+      <a href="/resources">Resources</a>
+      <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
+    </nav>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" aria-hidden="true">
+  <span class="mobile-menu__group">Services</span>
+  <a href="/services/marketing">Marketing</a>
+  <a href="/services/technical">Technical</a>
+  <a href="/services/strategy">Strategy</a>
+  <a href="/services/coaching">Coaching &amp; growth</a>
+  <span class="mobile-menu__group">Who we help</span>
+  <a href="/for/local-businesses">Local businesses</a>
+  <a href="/for/founders">Founders &amp; startups</a>
+  <a href="/for/nonprofits">Nonprofits</a>
+  <span class="mobile-menu__group">Explore</span>
+  <a href="/method">Method</a>
+  <a href="/investment">Pricing</a>
+  <a href="/work">Work</a>
+  <a href="/resources">Resources</a>
+  <a href="/about">About</a>
+  <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero page-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li aria-current="page">90-Day Plan Starter</li>
+        </ol>
+      </nav>
+      <span class="eyebrow reveal">Free tool · No email · No login</span>
+      <h1 class="reveal mt-md" data-delay="1">Your next 90 days on <em>one page</em></h1>
+      <p class="hero__sub reveal mt-md" data-delay="2">Tell us your goal, who it&rsquo;s for, what you sell, and the two things you&rsquo;ll actually keep up with. You get a dated plan with a task for every week. Print it, copy it, tape it above your desk.</p>
+    </div>
+  </section>
+
+  <!-- THE TOOL -->
+  <section class="section tool-section" id="builder">
+    <div class="wrap">
+      <div class="tool">
+
+        <noscript>
+          <div class="tool__panel">
+            <p class="tool__q">This one needs JavaScript.</p>
+            <p>The plan builder runs in your browser, and your browser has JavaScript turned off. Turn it on and reload. Or skip the tool and <a class="tlink" href="/contact">book a free call</a>. We&rsquo;ll walk through the same five questions with you.</p>
+          </div>
+        </noscript>
+
+        <div class="tool__panel no-print" id="tool-panel" hidden>
+          <h2 class="tool__q" id="form-title">Five answers. One plan.</h2>
+          <form id="plan-form" novalidate autocomplete="off">
+
+            <div class="fld">
+              <label for="f-goal">One goal for the next 90 days</label>
+              <input type="text" id="f-goal" maxlength="140" placeholder="Book 12 new kitchen remodels by the end of January" />
+              <p class="tool-note">Best if it has a number and a date. You&rsquo;ll check it on day 90.</p>
+            </div>
+
+            <div class="fld">
+              <label for="f-who">Who it&rsquo;s for</label>
+              <input type="text" id="f-who" maxlength="140" placeholder="Homeowners in Carmel and Fishers who are tired of a dated kitchen" />
+              <p class="tool-note">One kind of person. If you wrote &ldquo;everyone,&rdquo; try again.</p>
+            </div>
+
+            <div class="fld">
+              <label for="f-offer">Your offer, in one sentence</label>
+              <input type="text" id="f-offer" maxlength="220" placeholder="A fixed-price kitchen remodel, done in six weeks, with one project manager" />
+              <p class="tool-note">What you sell, to whom, with what promise. A rough draft is fine. The plan will help you sharpen it.</p>
+            </div>
+
+            <fieldset class="fld" aria-describedby="chan-count">
+              <legend>The two channels you&rsquo;ll keep up with</legend>
+              <p class="tool-note">Pick exactly two. We think two channels, done every week, beat five done when you remember.</p>
+              <div class="chan-grid" id="chan-grid"></div>
+              <p class="chan-count" id="chan-count" role="status" aria-live="polite"></p>
+            </fieldset>
+
+            <div class="fld">
+              <label for="f-hours">Hours a week you can really give it</label>
+              <select class="tool-select" id="f-hours">
+                <option value="2">2 hours a week</option>
+                <option value="4" selected>4 hours a week</option>
+                <option value="6">6 hours a week</option>
+              </select>
+              <p class="tool-note">Be stingy. A plan you finish at 2 hours beats a plan you drop at 6.</p>
+            </div>
+
+            <div class="tool-actions">
+              <button type="button" class="btn btn--primary" id="btn-build">Build my plan <span class="arr">→</span></button>
+              <button type="button" class="btn btn--ghost" id="btn-reset">Start over</button>
+            </div>
+            <p class="tool-note form-hint" id="form-hint" role="status" aria-live="polite"></p>
+          </form>
+          <p class="tool-note mt-md">Everything stays in your browser. We never see what you type, and nothing is saved when you close the tab.</p>
+        </div>
+
+        <!-- RESULTS -->
+        <div class="results" id="results" aria-live="polite" aria-atomic="false">
+          <p class="sr-only" id="results-status"></p>
+          <div id="plan-wrap" aria-live="off" hidden>
+            <div class="plan-actions no-print">
+              <button type="button" class="btn btn--dark" id="btn-print">Print</button>
+              <button type="button" class="btn btn--ghost" id="btn-copy">Copy as text</button>
+              <button type="button" class="btn btn--ghost" id="btn-edit">Edit my answers</button>
+            </div>
+            <p class="copy-status no-print" id="copy-status" role="status" aria-live="polite"></p>
+            <textarea class="plan-text no-print" id="plan-text" rows="12" readonly hidden aria-label="Your plan as plain text"></textarea>
+            <div id="plan-mount"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT MAPS TO THE FIVE STEPS -->
+  <section class="section section--stone no-print">
+    <div class="wrap wrap--narrow">
+      <div class="sec-head">
+        <span class="eyebrow reveal">How the plan is built</span>
+        <h2 class="reveal" data-delay="1">Thirteen weeks, five steps</h2>
+        <p class="sec-head__intro reveal" data-delay="2">The plan follows the same five steps we run every engagement through. They&rsquo;re in the order we think they should happen, which is not the order most people try them.</p>
+      </div>
+      <ol class="map-list mt-lg">
+        <li class="reveal"><span class="n">01</span><div><strong>Conviction, week 1</strong><p>Why you built this and what you won&rsquo;t bend on. Plus the goal, written so you can tell on day 90 if you hit it.</p></div></li>
+        <li class="reveal"><span class="n">02</span><div><strong>Your people, week 2</strong><p>One real person, not a demographic. You talk to a few of them before you write another word.</p></div></li>
+        <li class="reveal"><span class="n">03</span><div><strong>A sharp offer, weeks 3 and 4</strong><p>Your one sentence, cut until a stranger can repeat it back, then tested out loud on people who&rsquo;d buy it.</p></div></li>
+        <li class="reveal"><span class="n">04</span><div><strong>The experience, weeks 5 to 12</strong><p>Your two channels on a weekly rhythm that fits the hours you gave us. Eight weeks is long enough to see if a channel works.</p></div></li>
+        <li class="reveal"><span class="n">05</span><div><strong>Word of mouth, week 13</strong><p>Review the numbers, ask your best customers for introductions, and decide the next 90 days. Read the <a class="tlink" href="/method">five steps in full</a>.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- HONEST LIMITS -->
+  <section class="section no-print">
+    <div class="wrap wrap--narrow">
+      <div class="sec-head">
+        <span class="eyebrow reveal">What this can&rsquo;t do</span>
+        <h2 class="reveal" data-delay="1">A plan from five boxes has blind spots</h2>
+      </div>
+      <div class="mt-lg">
+        <p class="reveal">It doesn&rsquo;t know your numbers. It can&rsquo;t tell you if your offer holds up or if you picked the right two channels. It gives you a sound shape and a Monday to start. That&rsquo;s worth having. It isn&rsquo;t the whole job.</p>
+        <p class="mt-md reveal">The whole job is the <a class="tlink" href="/services/strategy">$3,000 strategy engagement</a>: positioning, your people, the offer with the math behind it, and a 90-day plan we pressure-test with you. If you&rsquo;re a founder deciding where to start, <a class="tlink" href="/for/founders">this page is for you</a>. And if you&rsquo;re not sure the engagement is worth it for your business, a free call will tell you in thirty minutes.</p>
+        <p class="updated mt-lg">Last updated: October 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing">
+    <div class="closing__inner">
+      <div class="reveal">
+        <span class="eyebrow">Plan in hand?</span>
+        <h2>Now find out what it&rsquo;s <em>missing.</em></h2>
+        <p>Bring your printed plan to a free 30-minute call. We&rsquo;ll tell you what we&rsquo;d change, whether the full strategy engagement is worth $3,000 for you, and what to do first if it isn&rsquo;t.</p>
+      </div>
+      <div class="reveal" data-delay="1">
+        <a href="/contact" class="btn btn--primary">Book a discovery call <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer footer--v2">
+  <div class="wrap">
+    <div class="footer__grid footer__grid--v2">
+      <div class="footer__brand">
+        <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
+        <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/marketing">Marketing</a></li>
+          <li><a href="/services/technical">Technical</a></li>
+          <li><a href="/services/strategy">Strategy</a></li>
+          <li><a href="/services/coaching">Coaching &amp; growth</a></li>
+          <li><a href="/services/local-seo">Local SEO</a></li>
+          <li><a href="/services/google-ads">Google Ads</a></li>
+          <li><a href="/services/websites">Websites &amp; web apps</a></li>
+          <li><a href="/services/ai-automation">AI &amp; automation</a></li>
+          <li><a href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a></li>
+          <li><a href="/services/analytics">GA4 &amp; analytics</a></li>
+          <li><a href="/services/google-ad-grants">Google Ad Grants</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Who we help</h4>
+        <ul>
+          <li><a href="/for/local-businesses">Local businesses</a></li>
+          <li><a href="/for/founders">Founders &amp; startups</a></li>
+          <li><a href="/for/nonprofits">Nonprofits</a></li>
+          <li><a href="/work">Client results</a></li>
+        </ul>
+        <h4 class="footer__h4-gap">Free tools</h4>
+        <ul>
+          <li><a href="/tools/checkup">The five-step check-up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Articles</h4>
+        <ul>
+          <li><a href="/articles/fractional-cmo-cost">Fractional CMO cost</a></li>
+          <li><a href="/articles/fractional-cmo-vs-marketing-agency">CMO vs. agency</a></li>
+          <li><a href="/articles/is-gohighlevel-worth-it">Is GoHighLevel worth it?</a></li>
+          <li><a href="/articles/ai-agents-for-small-business">AI agents, explained</a></li>
+          <li><a href="/articles/not-showing-up-on-google">Not showing up on Google</a></li>
+          <li><a href="/articles/small-business-marketing-budget">What marketing should cost</a></li>
+          <li><a href="/articles/nonprofit-google-ad-grant">The nonprofit Ad Grant</a></li>
+          <li><a href="/resources" class="tlink">All resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/method">Method</a></li>
+          <li><a href="/investment">Pricing</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__meta">
+      <span>© 2026 Carson Poore Consulting · Indianapolis, Indiana · carson@carsonpoore.com</span>
+      <span class="footer__towns">Serving Indianapolis, Carmel, Fishers, Zionsville, Noblesville, Westfield, Greenwood, Brownsburg, Avon, and all of central Indiana — technical and coaching work nationwide.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  /* ---------- Channel library: eight channels, each with a weekly rhythm and eight week-by-week focuses ---------- */
+  var ORDER = ["gbp", "email", "instagram", "facebook", "linkedin", "ads", "referral", "events"];
+  var CH = {
+    gbp: {
+      name: "Google Business Profile",
+      why: "Your listing on Google Maps and local search",
+      rec: [
+        { t: "Answer every new review and message, ideally the same day", m: 20 },
+        { t: "Post one update: a photo, an offer, or something that happened this week", m: 25 },
+        { t: "Ask two recent customers for a review, in person or by text", m: 25 }
+      ],
+      focus: [
+        "Claim or verify the profile. Make your name, address, hours, and phone match your website exactly.",
+        "Pick the right primary category and add every service you sell, each with a one-line description.",
+        "Upload 10 real photos: the place, the work, the team. No stock images.",
+        "Write the description in plain words and add your booking or contact link.",
+        "Add prices where you can, and any attributes that apply, like online appointments or wheelchair access.",
+        "Write a short review-ask message and keep it saved on your phone.",
+        "Search your own service from three spots in your area and note where you show up.",
+        "Look at the profile's calls, direction requests, and website clicks. Write the three numbers down."
+      ]
+    },
+    email: {
+      name: "Email newsletter",
+      why: "A list you own, on a steady schedule",
+      rec: [
+        { t: "Send one email on a set day, short and written to one person", m: 30 },
+        { t: "Reply to everyone who writes back. Each reply is a conversation", m: 15 },
+        { t: "Personally invite five people to join, one message at a time", m: 20 }
+      ],
+      focus: [
+        "Pick a tool (a free plan is fine) and set up your sender name, reply-to address, and a short welcome email.",
+        "Add the people who have already said yes: customers who asked for updates. Skip anyone who didn't.",
+        "Write your promise in one sentence: what a subscriber gets and how often.",
+        "Send your first issue: one useful thing, one short story, one clear ask.",
+        "See who opened and clicked. Write down the subject line that did best.",
+        "Write a three-email welcome series so new subscribers hear from you right away.",
+        "Ask subscribers one question and reply to every answer.",
+        "Count your list, your best subject line, and your replies. Write the three numbers down."
+      ]
+    },
+    instagram: {
+      name: "Instagram",
+      why: "Photos and short video of the real work",
+      rec: [
+        { t: "Post twice: a photo or short video of real work, with one plain sentence", m: 30 },
+        { t: "Answer comments and DMs", m: 15 },
+        { t: "Comment with something useful on five local accounts: customers, neighbors, partners", m: 20 }
+      ],
+      focus: [
+        "Rewrite your bio in one line: who you help, where, and how to reach you. Add one link.",
+        "Shoot a batch of eight photos or clips in one sitting and save them for the weeks ahead.",
+        "Make three highlights: your work, your people, how to book.",
+        "Film a short video of how you do the main thing you sell, start to finish.",
+        "Tag the places and people in your posts: the neighborhood, the partner, the customer who said yes.",
+        "Ask three customers if you can show their results or tell their story.",
+        "Check which posts got saves and shares, not just likes, and make two more like them.",
+        "Count profile visits, link clicks, and DMs. Write the three numbers down."
+      ]
+    },
+    facebook: {
+      name: "Facebook",
+      why: "Your page and the local groups where neighbors already talk",
+      rec: [
+        { t: "Post once or twice: a photo, an update, or a useful answer", m: 25 },
+        { t: "Answer every comment and message within a day", m: 20 },
+        { t: "Share something useful in one local group you belong to, without selling", m: 25 }
+      ],
+      focus: [
+        "Fix the basics: page name, category, hours, phone, website, and a cover photo of the real work.",
+        "Join two local groups your customers are in. Read the rules, then just listen for a week.",
+        "Pin a post that says what you do, who it's for, and how to reach you.",
+        "Post a short customer story, with their permission.",
+        "Create one event or offer with a clear end date.",
+        "Ask five happy customers to leave a recommendation on your page.",
+        "Answer three questions in your groups with real, specific help.",
+        "Count messages, calls, and event responses. Write the numbers down."
+      ]
+    },
+    linkedin: {
+      name: "LinkedIn",
+      why: "Your profile and posts, in front of people who buy from people",
+      rec: [
+        { t: "Post once or twice: a lesson, a story, or a plain opinion", m: 30 },
+        { t: "Comment on five posts from people you want to know", m: 20 },
+        { t: "Send three personal messages to people you've worked with or want to meet", m: 25 }
+      ],
+      focus: [
+        "Rewrite your headline and About section for the person it's for, in plain words, not your job title.",
+        "List 25 people you'd be glad to hear back from, by name.",
+        "Write a post about the problem your people have, in their words.",
+        "Feature your best piece of work, or a result a client says you can share.",
+        "Ask three past clients or colleagues for a short recommendation.",
+        "Message ten people from your list with a question, not a pitch.",
+        "Write a post about something you changed your mind on.",
+        "Count profile views, replies, and conversations booked. Write the three numbers down."
+      ]
+    },
+    ads: {
+      name: "Google Ads",
+      why: "Paid search for people already looking",
+      rec: [
+        { t: "Check spend and calls or form fills. Pause anything that spent with nothing to show", m: 20 },
+        { t: "Read the search terms report and add negative keywords for anything off-target", m: 25 },
+        { t: "Answer every lead the same day and note which ones were real", m: 30 }
+      ],
+      focus: [
+        "Set up conversion tracking for calls and form submissions before you spend anything.",
+        "Pick one service and one area to start. Write the ad's promise in one sentence.",
+        "Build one campaign, one ad group per service, and a monthly cap you'd be fine losing.",
+        "Make sure the page matches the ad: same promise, one clear next step, phone number visible.",
+        "Launch, and check it daily for the first week.",
+        "First real review: pause weak keywords and add negatives.",
+        "Write a second ad that tests a different promise.",
+        "Count calls, form fills, and booked jobs, and what each one cost. Write it all down."
+      ]
+    },
+    referral: {
+      name: "Referral program",
+      why: "Your best customers sending you more of them",
+      rec: [
+        { t: "Thank every referral personally within two days, by call or handwritten note", m: 20 },
+        { t: "Ask two happy customers by name: “Who do you know who needs this?”", m: 25 },
+        { t: "Keep a simple list: who referred whom, and what came of it", m: 15 }
+      ],
+      focus: [
+        "List your 20 best customers. Mark the ones who have already sent someone your way.",
+        "Decide the thank-you: a gift, a credit, a donation in their name, or a handwritten note. Keep it small and real.",
+        "Write the ask in two sentences you can say out loud or text.",
+        "Make one card or link they can hand to a friend: what you do, who it's for, how to reach you.",
+        "Ask your first five customers, in person if you can.",
+        "Visit one neighboring business that serves the same people, and offer to send work their way.",
+        "Follow up with everyone who said “sure, I'll think of someone.”",
+        "Count referrals received and jobs that came from them. Write both numbers down."
+      ]
+    },
+    events: {
+      name: "Local events",
+      why: "Showing up where your people already gather",
+      rec: [
+        { t: "Follow up with everyone you met within 48 hours, by name", m: 30 },
+        { t: "Check the calendar for what's coming: chamber, markets, meetups, school and nonprofit events", m: 15 },
+        { t: "Post or send one recap with photos and a thank-you", m: 25 }
+      ],
+      focus: [
+        "List five events or groups in your area where your people actually show up.",
+        "Pick two and put them on your calendar. Skip the rest for now.",
+        "Make a one-page handout or sign: what you do, who it's for, how to reach you.",
+        "Go to your first event with one goal: three real conversations.",
+        "Ask the organizer how else you could help: speak, sponsor small, or volunteer.",
+        "Go to a second event, or host a small one yourself.",
+        "Introduce two people you met to each other.",
+        "Count conversations, follow-ups, and anything that turned into work. Write the numbers down."
+      ]
+    }
+  };
+
+  /* ---------- tiny helpers ---------- */
+  var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  var DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+  function $(id) { return document.getElementById(id); }
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) { n.className = cls; }
+    if (text != null) { n.textContent = text; }
+    return n;
+  }
+  function addDays(d, n) { return new Date(d.getFullYear(), d.getMonth(), d.getDate() + n); }
+  function fmtLong(d) { return DAYS[d.getDay()] + ", " + MONTHS[d.getMonth()] + " " + d.getDate(); }
+  function fmtShort(d) { return MONTHS[d.getMonth()].slice(0, 3) + " " + d.getDate(); }
+  function nextMonday() {
+    var t = new Date();
+    var today = new Date(t.getFullYear(), t.getMonth(), t.getDate());
+    var ahead = (8 - today.getDay()) % 7;
+    return addDays(today, ahead === 0 ? 7 : ahead);
+  }
+  function clean(s) { return String(s || "").replace(/\s+/g, " ").replace(/^\s+|\s+$/g, ""); }
+  function trimEnd(s) { return s.replace(/[\s.!?;:,]+$/, ""); }
+  function hrsLabel(min) {
+    var h = min / 60;
+    return (h === 1 ? "1 hour" : h + " hours") + " a week";
+  }
+  function reducedMotion() {
+    try { return window.matchMedia("(prefers-reduced-motion: reduce)").matches; } catch (e) { return false; }
+  }
+
+  /* ---------- form wiring ---------- */
+  var panel = $("tool-panel");
+  var grid = $("chan-grid");
+  var countEl = $("chan-count");
+  var hintEl = $("form-hint");
+  var statusEl = $("results-status");
+  var planWrap = $("plan-wrap");
+  var mount = $("plan-mount");
+  var copyStatus = $("copy-status");
+  var textArea = $("plan-text");
+  var lastText = "";
+
+  ORDER.forEach(function (key) {
+    var row = el("div", "check-row");
+    var cb = el("input");
+    cb.type = "checkbox";
+    cb.id = "ch-" + key;
+    cb.value = key;
+    cb.name = "channels";
+    var lab = el("label", null, CH[key].name);
+    lab.setAttribute("for", cb.id);
+    var why = el("span", "check-row__why", CH[key].why);
+    lab.appendChild(why);
+    row.appendChild(cb);
+    row.appendChild(lab);
+    grid.appendChild(row);
+  });
+
+  function picked() {
+    var out = [];
+    ORDER.forEach(function (k) { if ($("ch-" + k).checked) { out.push(k); } });
+    return out;
+  }
+  function updateCount(msg, warn) {
+    var n = picked().length;
+    countEl.className = "chan-count" + (warn ? " is-warn" : "");
+    countEl.textContent = msg || (n === 0 ? "Pick two." : n === 1 ? "1 of 2 picked. Pick one more." : "2 of 2 picked. That’s the right number.");
+  }
+  grid.addEventListener("change", function (e) {
+    var cb = e.target;
+    if (!cb || cb.type !== "checkbox") { return; }
+    if (picked().length > 2) {
+      cb.checked = false;
+      updateCount("Two is the limit. Uncheck one to swap in " + CH[cb.value].name + ".", true);
+      return;
+    }
+    updateCount();
+  });
+  updateCount();
+
+  panel.hidden = false;
+
+  /* ---------- plan data ---------- */
+  var DEFAULTS = ["gbp", "referral"];
+
+  function chooseChannels(sel) {
+    var chosen = sel.slice(0, 2);
+    var suggested = [false, false];
+    var i = 0;
+    while (chosen.length < 2 && i < DEFAULTS.length) {
+      if (chosen.indexOf(DEFAULTS[i]) === -1) { chosen.push(DEFAULTS[i]); suggested[chosen.length - 1] = true; }
+      i++;
+    }
+    return { keys: chosen, suggested: suggested };
+  }
+
+  function buildPlan() {
+    var goalRaw = clean($("f-goal").value);
+    var whoRaw = clean($("f-who").value);
+    var offerRaw = clean($("f-offer").value);
+    var hours = parseInt($("f-hours").value, 10);
+    if (hours !== 2 && hours !== 4 && hours !== 6) { hours = 4; }
+    var blanks = [];
+    if (!goalRaw) { blanks.push("goal"); }
+    if (!whoRaw) { blanks.push("audience"); }
+    if (!offerRaw) { blanks.push("offer"); }
+
+    var goal = goalRaw || "[write your goal here: a number and a date]";
+    var who = whoRaw || "[write who it’s for: one kind of person]";
+    var offer = offerRaw || "[write your offer in one sentence]";
+    var goalC = trimEnd(goal), whoC = trimEnd(who), offerC = trimEnd(offer);
+
+    var sel = chooseChannels(picked());
+    var start = nextMonday();
+    var end = addDays(start, 13 * 7 - 1);
+    var nextReview = addDays(start, 13 * 7);
+    var budget = (hours * 60) / 2;
+    var nTalks = hours === 2 ? 3 : hours === 4 ? 5 : 6;
+    var recCount = hours === 2 ? 1 : hours === 4 ? 2 : 3;
+
+    var chans = sel.keys.map(function (k, idx) {
+      var c = CH[k];
+      var rec = c.rec.slice(0, recCount);
+      var used = rec.reduce(function (a, r) { return a + r.m; }, 0);
+      return { key: k, name: c.name, suggested: sel.suggested[idx], budget: budget, rec: rec, focusMin: budget - used, focus: c.focus };
+    });
+
+    var wk = function (n) { return fmtShort(addDays(start, (n - 1) * 7)); };
+    var rows = [
+      { week: "Week 1", date: wk(1), step: "01 Conviction", items: [
+        "Write why you built this and what you won’t bend on. Three lines, no more.",
+        "Write the goal where you’ll see it every day: “" + goalC + ".” Check that on day 90 you could say plainly whether you hit it.",
+        "Put your " + hours + " hours a week on the calendar now, same days every week."
+      ] },
+      { week: "Week 2", date: wk(2), step: "02 Your people", items: [
+        "Take “" + whoC + "” and narrow it to one real person you know. Write their name, their week, and what they’re trying to fix.",
+        "Talk to " + nTalks + " customers or people like them for 15 minutes each. Ask what they tried first, what almost stopped them, and how they’d describe you to a friend.",
+        "Write one paragraph: who it’s for, what they want, and what’s in their way."
+      ] },
+      { week: "Week 3", date: wk(3), step: "03 A sharp offer", items: [
+        "Start from your sentence: “" + offerC + ".” Cut it until a stranger could repeat it back.",
+        "Write what’s included, what it costs, and who it isn’t for.",
+        "Add the one promise you can keep every single time."
+      ] },
+      { week: "Week 4", date: wk(4), step: "03 A sharp offer", items: [
+        "Say the offer out loud to three people from your week 2 list. Write down every question they ask.",
+        "Fix the sentence where they got confused, then put the new version on your website, your profiles, and anything you hand out.",
+        "Sketch the experience: what happens from the moment someone says yes. The first call, the first email, the first week."
+      ] }
+    ];
+
+    var focusRows = [];
+    for (var i = 0; i < 8; i++) {
+      focusRows.push({ week: "Week " + (5 + i), date: wk(5 + i), cells: [chans[0].focus[i], chans[1].focus[i]] });
+    }
+
+    var last = { week: "Week 13", date: wk(13), step: "05 Word of mouth", items: [
+      "Pull the numbers from both channels. Write what worked, what didn’t, and what you’re dropping.",
+      "Ask your best customers for one introduction each. Name the kind of person you want to meet: " + whoC + ".",
+      "Decide the next 90 days: keep both channels, swap one, or stop. Put the review on your calendar for " + fmtLong(nextReview) + "."
+    ] };
+
+    return {
+      goal: goal, who: who, offer: offer, hours: hours, blanks: blanks,
+      start: start, end: end, startLong: fmtLong(start), endLong: fmtLong(end),
+      chans: chans, budget: budget, rows: rows, focusRows: focusRows, last: last
+    };
+  }
+
+  /* ---------- render ---------- */
+  function chanLabel(c) { return c.name + (c.suggested ? " (our suggestion)" : ""); }
+
+  function weekRow(r) {
+    var row = el("div", "wk");
+    var lab = el("div", "wk__label");
+    lab.appendChild(el("strong", null, r.week));
+    lab.appendChild(el("span", null, "of " + r.date));
+    if (r.step) { lab.appendChild(el("em", null, r.step)); }
+    row.appendChild(lab);
+    var ul = el("ul");
+    r.items.forEach(function (t) { ul.appendChild(el("li", null, t)); });
+    row.appendChild(ul);
+    return row;
+  }
+
+  function secHead(title, sub) {
+    var h = el("div", "plan__sec-h", title);
+    if (sub) { h.appendChild(el("span", null, sub)); }
+    return h;
+  }
+
+  function renderPlan(p) {
+    mount.textContent = "";
+    var plan = el("article", "plan");
+    plan.setAttribute("aria-labelledby", "plan-title");
+
+    var head = el("header", "plan__head");
+    var kick = el("p", "plan__kicker");
+    kick.appendChild(document.createTextNode("90-day plan · starts "));
+    kick.appendChild(el("b", null, p.startLong));
+    kick.appendChild(document.createTextNode(" · runs through " + p.endLong));
+    head.appendChild(kick);
+    var title = el("h2", "plan__title", "90 days to: " + p.goal);
+    title.id = "plan-title";
+    title.tabIndex = -1;
+    head.appendChild(title);
+    var dl = el("dl", "plan__facts");
+    [
+      ["Who it’s for", p.who],
+      ["The offer", p.offer],
+      ["Your two channels", chanLabel(p.chans[0]) + " and " + chanLabel(p.chans[1])],
+      ["Your time", p.hours + " hours a week, about " + hrsLabel(p.budget).replace(" a week", "") + " per channel"]
+    ].forEach(function (f) {
+      var wrap = el("div");
+      wrap.appendChild(el("dt", null, f[0]));
+      wrap.appendChild(el("dd", null, f[1]));
+      dl.appendChild(wrap);
+    });
+    head.appendChild(dl);
+    plan.appendChild(head);
+
+    var body = el("div", "plan__body");
+
+    var s1 = el("section", "plan__sec");
+    s1.appendChild(secHead("Weeks 1 to 4", "Get clear: your conviction, your people, a sharp offer"));
+    p.rows.forEach(function (r) { s1.appendChild(weekRow(r)); });
+    body.appendChild(s1);
+
+    var s2 = el("section", "plan__sec");
+    s2.appendChild(secHead("Weeks 5 to 12 · 04 The experience", "Two channels, one weekly rhythm"));
+    var rhythm = el("div", "rhythm");
+    p.chans.forEach(function (c) {
+      var card = el("div", "result-card");
+      var h3 = el("h3", null, chanLabel(c));
+      h3.appendChild(el("span", null, "About " + hrsLabel(c.budget)));
+      card.appendChild(h3);
+      var ul = el("ul");
+      c.rec.forEach(function (r) { ul.appendChild(el("li", null, r.t + " (" + r.m + " min)")); });
+      ul.appendChild(el("li", null, "That week’s focus, below (about " + c.focusMin + " min)"));
+      card.appendChild(ul);
+      rhythm.appendChild(card);
+    });
+    s2.appendChild(rhythm);
+    p.focusRows.forEach(function (r) {
+      var row = el("div", "wk");
+      var lab = el("div", "wk__label");
+      lab.appendChild(el("strong", null, r.week));
+      lab.appendChild(el("span", null, "of " + r.date));
+      row.appendChild(lab);
+      var two = el("div", "wk__two");
+      p.chans.forEach(function (c, i) {
+        var para = el("p");
+        para.appendChild(el("b", null, c.name));
+        para.appendChild(document.createTextNode(r.cells[i]));
+        two.appendChild(para);
+      });
+      row.appendChild(two);
+      s2.appendChild(row);
+    });
+    body.appendChild(s2);
+
+    var s3 = el("section", "plan__sec");
+    s3.appendChild(secHead("Week 13", "Review, then ask"));
+    s3.appendChild(weekRow(p.last));
+    body.appendChild(s3);
+    plan.appendChild(body);
+
+    var foot = el("footer", "plan__foot");
+    var f1 = el("p");
+    f1.appendChild(el("strong", null, "Every Friday, five minutes: "));
+    f1.appendChild(document.createTextNode("did the hours happen? If not, cut a task. Don’t stretch the plan."));
+    foot.appendChild(f1);
+    var f2 = el("p");
+    f2.appendChild(el("strong", null, "This is the starter. "));
+    f2.appendChild(document.createTextNode("The full version, with your positioning and offer math pressure-tested, is the $3,000 strategy engagement. A free call tells you whether it’s worth it for you. carsonpoore.com/services/strategy"));
+    foot.appendChild(f2);
+    var cta = el("div", "plan__cta no-print");
+    var a1 = el("a", "btn btn--primary");
+    a1.href = "/services/strategy";
+    a1.appendChild(document.createTextNode("See the strategy engagement "));
+    a1.appendChild(el("span", "arr", "→"));
+    var a2 = el("a", "btn btn--ghost");
+    a2.href = "/contact";
+    a2.textContent = "Book a free call";
+    cta.appendChild(a1);
+    cta.appendChild(a2);
+    foot.appendChild(cta);
+    plan.appendChild(foot);
+
+    mount.appendChild(plan);
+    return title;
+  }
+
+  function planText(p) {
+    var L = [];
+    L.push("90-DAY PLAN");
+    L.push("Goal: " + p.goal);
+    L.push("Starts " + p.startLong + ", runs through " + p.endLong);
+    L.push("Who it's for: " + p.who);
+    L.push("The offer: " + p.offer);
+    L.push("Your two channels: " + chanLabel(p.chans[0]) + " and " + chanLabel(p.chans[1]));
+    L.push("Your time: " + p.hours + " hours a week, about " + hrsLabel(p.budget).replace(" a week", "") + " per channel");
+    L.push("");
+    p.rows.forEach(function (r) {
+      L.push(r.week.toUpperCase() + " (of " + r.date + ") - " + r.step);
+      r.items.forEach(function (t) { L.push("- " + t); });
+      L.push("");
+    });
+    L.push("WEEKS 5 TO 12 - 04 The experience");
+    p.chans.forEach(function (c) {
+      L.push("Every week, " + chanLabel(c) + " (about " + hrsLabel(c.budget) + "):");
+      c.rec.forEach(function (r) { L.push("- " + r.t + " (" + r.m + " min)"); });
+      L.push("- That week's focus (about " + c.focusMin + " min)");
+    });
+    L.push("");
+    p.focusRows.forEach(function (r) {
+      L.push(r.week.toUpperCase() + " (of " + r.date + ")");
+      p.chans.forEach(function (c, i) { L.push("- " + c.name + ": " + r.cells[i]); });
+    });
+    L.push("");
+    L.push(p.last.week.toUpperCase() + " (of " + p.last.date + ") - " + p.last.step);
+    p.last.items.forEach(function (t) { L.push("- " + t); });
+    L.push("");
+    L.push("Every Friday, five minutes: did the hours happen? If not, cut a task. Don't stretch the plan.");
+    L.push("");
+    L.push("This is the starter. The full version, with your positioning and offer math pressure-tested, is the $3,000 strategy engagement. A free call tells you whether it's worth it for you. https://carsonpoore.com/services/strategy");
+    L.push("Built with the 90-Day Plan Starter, https://carsonpoore.com/tools/90-day-plan");
+    return L.join("\n");
+  }
+
+  /* ---------- actions ---------- */
+  function build() {
+    var p = buildPlan();
+    var title = renderPlan(p);
+    lastText = planText(p);
+    textArea.hidden = true;
+    textArea.value = "";
+    copyStatus.textContent = "";
+    planWrap.hidden = false;
+    $("btn-build").firstChild.nodeValue = "Rebuild my plan ";
+
+    var sel = picked().length;
+    var notes = [];
+    if (p.blanks.length) {
+      notes.push("Some boxes were empty, so the plan has blanks in brackets. Fill them in above and rebuild.");
+    }
+    if (sel < 2) {
+      notes.push(sel === 0 ? "You didn’t pick channels, so we suggested two. Swap them above if you like." : "You picked one channel, so we suggested the second. Swap it above if you like.");
+    }
+    hintEl.textContent = notes.join(" ");
+    statusEl.textContent = "Your 90-day plan is ready below. It starts " + p.startLong + ".";
+
+    try { title.focus({ preventScroll: true }); } catch (e) { try { title.focus(); } catch (e2) {} }
+    try { planWrap.scrollIntoView({ behavior: reducedMotion() ? "auto" : "smooth", block: "start" }); } catch (e3) {}
+  }
+
+  function reset() {
+    ["f-goal", "f-who", "f-offer"].forEach(function (id) { $(id).value = ""; });
+    $("f-hours").value = "4";
+    ORDER.forEach(function (k) { $("ch-" + k).checked = false; });
+    updateCount();
+    hintEl.textContent = "";
+    mount.textContent = "";
+    planWrap.hidden = true;
+    textArea.hidden = true;
+    lastText = "";
+    statusEl.textContent = "Form cleared.";
+    $("btn-build").firstChild.nodeValue = "Build my plan ";
+    $("f-goal").focus();
+  }
+
+  function copyPlan() {
+    if (!lastText) { build(); }
+    var done = function () { copyStatus.textContent = "Copied. Paste it into a doc, an email, or your notes."; };
+    var fallback = function () {
+      textArea.hidden = false;
+      textArea.value = lastText;
+      textArea.focus();
+      textArea.select();
+      var ok = false;
+      try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+      copyStatus.textContent = ok ? "Copied. Paste it into a doc, an email, or your notes." : "Your browser blocked the copy. The text is selected below, so press Ctrl+C (Cmd+C on a Mac).";
+    };
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(lastText).then(done, fallback);
+      } else {
+        fallback();
+      }
+    } catch (e) {
+      fallback();
+    }
+  }
+
+  $("btn-build").addEventListener("click", build);
+  $("btn-reset").addEventListener("click", reset);
+  $("btn-copy").addEventListener("click", copyPlan);
+  $("btn-print").addEventListener("click", function () {
+    if (!lastText) { build(); }
+    try { window.print(); } catch (e) { copyStatus.textContent = "Your browser couldn’t open the print dialog. Try Ctrl+P (Cmd+P on a Mac)."; }
+  });
+  $("btn-edit").addEventListener("click", function () {
+    try { panel.scrollIntoView({ behavior: reducedMotion() ? "auto" : "smooth", block: "start" }); } catch (e) {}
+    $("f-goal").focus();
+  });
+  ["f-goal", "f-who", "f-offer"].forEach(function (id) {
+    $(id).addEventListener("keydown", function (e) {
+      if (e.key === "Enter") { e.preventDefault(); build(); }
+    });
+  });
+  $("plan-form").addEventListener("submit", function (e) { e.preventDefault(); build(); });
+})();
+</script>
+
+</body>
+</html>
