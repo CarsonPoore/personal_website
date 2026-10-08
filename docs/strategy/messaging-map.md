@@ -9,7 +9,7 @@ Carson Poore Consulting is a small Indianapolis team that plans the work and the
 - **Marketing:** Brand, campaigns, content, and email that make the right people notice you and talk about you — measured in calls, customers, and booked work, not impressions.
 - **Technical:** The builds most marketing shops can't do — AI agents and automation, websites and web apps, GoHighLevel and CRM, Google Ads, GA4 — practical, human-approved, and priced for small businesses.
 - **Strategy:** A $3,000, one-time engagement: your positioning, your people, a sharp offer, and a 90-day plan you could run without us. The answer to "what should we do first?"
-- **Coaching & growth:** A fractional CMO for owners and founders at $1,200–$4,800 a month — under the $5,000–$15,000 the category charges, with the plan and the hands on one team.
+- **Coaching & growth:** A fractional CMO for owners and founders at $1,200–$4,800 a month — under the $3,000–$15,000 that 2026 pricing guides (MarketerHire, GoFractional) report for the category, with the plan and the hands on one team.
 
 ## ICP messages
 - **Local small businesses:** Word of mouth built your business; it just stopped scaling. When Indianapolis searches for what you do, you'll show up — and every call, text, and form gets answered in minutes. Published prices, three months then month to month, monthly reports that count calls and booked jobs, and you keep everything if you ever leave. We'll also tell you what not to buy — starting with ads you're not ready for.
