@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Local SEO in Indianapolis | Carson Poore Consulting</title>
-<meta name="description" content="When someone in Indianapolis searches for what you do, you should show up. Google Business Profile, reviews, and local SEO — the highest-trust first win." />
-<link rel="canonical" href="https://carsonpoore.com/services/local-seo" />
-<meta property="og:title" content="Local SEO in Indianapolis | Carson Poore Consulting" />
-<meta property="og:description" content="When someone in Indianapolis searches for what you do, you should show up. Google Business Profile, reviews, and local SEO — the highest-trust first win." />
+<title>Content Marketing in Indianapolis | Carson Poore Consulting</title>
+<meta name="description" content="Articles that answer what your customers already ask, plus email newsletters and guides, written so Google and ChatGPT can find and cite you. In our retainers." />
+<link rel="canonical" href="https://carsonpoore.com/services/content-marketing" />
+<meta property="og:title" content="Content Marketing in Indianapolis | Carson Poore Consulting" />
+<meta property="og:description" content="Articles that answer what your customers already ask, plus email newsletters and guides, written so Google and ChatGPT can find and cite you. In our retainers." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://carsonpoore.com/services/local-seo" />
+<meta property="og:url" content="https://carsonpoore.com/services/content-marketing" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
@@ -17,28 +17,30 @@
 <link rel="stylesheet" href="/styles.css?v=20261008-5" />
 <script defer src="/site.js?v=20261008-3"></script>
 <style>
-  /* Local SEO page — layout tweaks on top of the shared system */
-  .seo-stats { max-width: 62ch; }
-  .tool-split {
+  /* Content marketing page — layout tweaks on top of the shared system */
+  .cm-slow { max-width: 62ch; }
+  .cm-slow p + p { margin-top: 18px; }
+  .cm-slow a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+  .cm-split {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
     gap: clamp(28px, 4vw, 72px);
     align-items: center;
   }
-  @media (max-width: 860px) { .tool-split { grid-template-columns: 1fr; } }
-  .tool-card {
+  @media (max-width: 860px) { .cm-split { grid-template-columns: 1fr; } }
+  .cm-card {
     background: var(--navy);
     border-radius: var(--r-3);
     padding: clamp(28px, 4vw, 48px);
   }
-  .tool-card .label { color: var(--amber); display: block; margin-bottom: 16px; }
-  .tool-card ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
-  .tool-card li {
+  .cm-card ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+  .cm-card li {
     display: flex; justify-content: space-between; gap: 18px; align-items: baseline;
     color: var(--cream-2); padding: 13px 0; border-top: 1px solid var(--navy-3, rgba(255,255,255,0.12));
   }
-  .tool-card li span:last-child { color: #fff; font-weight: 700; white-space: nowrap; }
-  .tool-card__foot { margin-top: 18px; color: var(--muted-on-navy); font-size: 0.85rem; }
+  .cm-card li:first-child { border-top: 0; }
+  .cm-card li span:last-child { color: #fff; font-weight: 700; white-space: nowrap; }
+  .cm-card__foot { margin-top: 18px; color: var(--muted-on-navy); font-size: 0.85rem; }
   .cost-note { max-width: 62ch; }
   .cost-note p + p { margin-top: 18px; }
 </style>
@@ -87,10 +89,10 @@
     },
     {
       "@type": "Service",
-      "@id": "https://carsonpoore.com/services/local-seo#service",
-      "name": "Local SEO",
-      "serviceType": "Local search engine optimization",
-      "description": "Google Business Profile management, a steady review system, listings and NAP cleanup, and on-page local signals for Indianapolis-area small businesses, inside published monthly retainers.",
+      "@id": "https://carsonpoore.com/services/content-marketing#service",
+      "name": "Content marketing",
+      "serviceType": "Content marketing",
+      "description": "Articles that answer the questions customers actually ask, written so Google and AI answer engines can find and cite them, plus email newsletters, guides, and social posts cut from each piece, for Indianapolis-area small businesses, founders, and nonprofits inside published monthly retainers.",
       "provider": {
         "@id": "https://carsonpoore.com/#org"
       },
@@ -104,7 +106,7 @@
           "name": "Indiana"
         }
       ],
-      "url": "https://carsonpoore.com/services/local-seo"
+      "url": "https://carsonpoore.com/services/content-marketing"
     },
     {
       "@type": "BreadcrumbList",
@@ -130,7 +132,7 @@
         {
           "@type": "ListItem",
           "position": 4,
-          "name": "Local SEO"
+          "name": "Content marketing"
         }
       ]
     },
@@ -139,42 +141,42 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How long does local SEO take to work?",
+          "name": "How often should a small business publish?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Longer than anyone selling it wants to admit. If your profile has been neglected, basic fixes can move your map ranking within a few weeks. In a crowded category in a dense part of Indy, it takes months of steady signals. That’s one reason for our three-month minimum: we won’t charge you for a month in which nothing could honestly happen. Every month you get a plain-English report showing what moved."
+            "text": "Less often than you’ve been told. Our default is two articles a month and one newsletter, and we’d rather drop to one great article than pad the schedule. Consistency matters more than volume. A business that publishes twice a month for a year is in a much better spot than one that posts daily for six weeks and then goes quiet."
           }
         },
         {
           "@type": "Question",
-          "name": "Do I need to pay for a Google Business Profile?",
+          "name": "Who actually writes it?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. The profile is free, and claiming it is free. If someone calls offering to “activate” or “secure” your listing for a fee, hang up. What costs money is the ongoing work of keeping it complete, photographed, posted, and reviewed, which is the work we do."
+            "text": "We do. You give us about half an hour a month on a call, we ask what customers asked you lately, and we turn your answers into drafts. You read every piece before it goes live and you can change anything. Your expertise, our writing. Nobody needs to know which sentences were whose."
           }
         },
         {
           "@type": "Question",
-          "name": "Should I do local SEO or Google Ads first?",
+          "name": "Does AI-written content work?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Local SEO first, almost every time. It is the cheaper, more durable win, and ads perform better once your profile and website are ready to catch what the ads send. When you are ready for that step, Google Ads is its own service with the same published pricing."
+            "text": "Unedited, no. It reads like everyone else’s, because it was built from everyone else’s. Google has said it judges content on whether it’s helpful, not on how it was produced, and generic answers aren’t helpful. We use AI for research and rough outlines. A person who knows your business writes and edits every piece, and the parts that make it worth reading (your prices and your opinions) can only come from you."
           }
         },
         {
           "@type": "Question",
-          "name": "What if I have almost no reviews?",
+          "name": "How long until content pays off?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Then this matters more for you, not less. Profiles with 40 or more reviews averaging 4.5 stars appear in the map pack about 3.7 times more often than profiles with fewer than 10, per BrightLocal. The fix is a system, not begging: ask at the moment the customer is happiest, by text, with one link, every time. We set it up so it runs without you thinking about it."
+            "text": "Months. Most articles take a while to get picked up by search, and the library has to get deep enough to matter. A newsletter can work faster if you already have a customer list, since those people know you. That’s part of why our retainers have a three-month minimum. Each monthly report shows what was read, what got found, and what led to a call."
           }
         },
         {
           "@type": "Question",
-          "name": "Can I just do this myself?",
+          "name": "Do you do email newsletters?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A lot of it, yes. We built a free 18-point self-check so you can: run it, fix what you can in an afternoon, and don’t pay anyone for that part. Owners usually hire us when the slow, repetitive pieces (listings cleanup, review replies, photos, monthly upkeep) stop happening because business picked up. Which is sort of the point."
+            "text": "Yes, and for many local businesses it’s the better first channel. We write it, design a simple template, and send it from the tool you already use, or set one up if you don’t have one. Monthly is the usual rhythm. If the list lives in a CRM, we can connect it to the rest of your follow-up too."
           }
         }
       ]
@@ -263,6 +265,7 @@
   <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
 </div>
 
+
 <main>
 
   <!-- HERO -->
@@ -273,20 +276,20 @@
           <li><a href="/">Home</a></li>
           <li><a href="/services">Services</a></li>
           <li><a href="/services/marketing">Marketing</a></li>
-          <li aria-current="page">Local SEO</li>
+          <li aria-current="page">Content marketing</li>
         </ol>
       </nav>
       <div class="page-hero__grid">
         <div class="page-hero__copy">
-          <h1 class="reveal mt-md" data-delay="1">When Indianapolis searches, <em>you show up.</em></h1>
-          <p class="hero__sub reveal mt-md" data-delay="2">Local SEO is how nearby customers find you at the moment they need you &mdash; the ones typing &ldquo;AC repair in Indianapolis&rdquo; or &ldquo;plumber near Greenwood&rdquo; tonight. We tune your Google Business Profile, build a steady stream of recent reviews, straighten out your listings, and sharpen the local pages on your site until Google trusts you enough to show you first.</p>
+          <h1 class="reveal mt-md" data-delay="1">Answer what your customers <em>already ask.</em></h1>
+          <p class="hero__sub reveal mt-md" data-delay="2">How much does it cost? How long does it take? Is it worth it? Your customers type those questions into Google and ChatGPT every day. We write the articles and newsletters that answer them in your words, so the business that shows up with the answer is yours.</p>
           <div class="row-cta reveal mt-lg" data-delay="3">
-            <a class="btn btn--primary" href="/tools/local-visibility">Run the free visibility check <span class="arr">→</span></a>
-            <a class="tlink" href="/contact">or book a free call</a>
+            <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
+            <a class="tlink" href="/articles/not-showing-up-on-google">or read one of ours first</a>
           </div>
         </div>
         <div class="motion-frame motion-frame--hero page-hero__motion reveal" data-delay="2">
-          <video class="motion-loop" muted loop playsinline preload="none" poster="/media/motion/central-indiana.jpg?v=20261008b" width="960" height="800" aria-hidden="true"><source src="/media/motion/central-indiana.webm?v=20261008b" type="video/webm" /><source src="/media/motion/central-indiana.mp4?v=20261008b" type="video/mp4" /></video>
+          <video class="motion-loop" muted loop playsinline preload="none" poster="/media/motion/proof-line.jpg?v=20261008b" width="960" height="800" aria-hidden="true"><source src="/media/motion/proof-line.webm?v=20261008b" type="video/webm" /><source src="/media/motion/proof-line.mp4?v=20261008b" type="video/mp4" /></video>
         </div>
       </div>
     </div>
@@ -295,8 +298,8 @@
 
   <!-- PHOTO BAND -->
   <section class="section section--tight"><div class="wrap">
-    <figure class="photo photo--cinema photo--amber reveal"><img src="/media/photos/local-seo-1-philadelphia-bakery.jpg" alt="Two customers standing outside a small neighborhood bakery storefront with an awning" width="1400" height="875" loading="lazy" decoding="async" /></figure>
-    <!-- Photo: Ruben Mavarez / Unsplash — https://unsplash.com/photos/people-stand-outside-a-small-tartes-bakery-qqL1y15xQ9w -->
+    <figure class="photo photo--cinema photo--amber reveal"><img src="/media/photos/content-marketing-1-notebook-coffee.jpg" alt="Hands holding a pen over an open notebook on a dark wooden table beside a cup of coffee" width="1600" height="1000" decoding="async" /></figure>
+    <!-- Photo: David Iskander / Unsplash — https://unsplash.com/photos/person-opening-notebook-on-brown-wooden-table-8hFiT80X-6o -->
   </div></section>
 
   <!-- WHO IT'S FOR -->
@@ -304,34 +307,34 @@
     <div class="wrap">
       <div class="photo-split">
         <div class="sec-head reveal">
-        <h2>Built for businesses people <em>drive to.</em></h2>
-        <p class="sec-head__intro">Trades and home services. Restaurants. Shops, salons, studios, practices. If your customers live within twenty miles and the phone has gone quieter than your work deserves, this is usually the first thing we fix &mdash; the same starting point we recommend to every <a class="tlink" href="/for/local-businesses">local business we serve</a>.</p>
-      </div>
-        <figure class="photo photo--wide photo--flip reveal"><img src="/media/photos/local-seo-2-indy-aerial.jpg" alt="Aerial view of downtown Indianapolis buildings and Lucas Oil Stadium" width="1500" height="938" loading="lazy" decoding="async" /></figure>
-        <!-- Photo: Ryan De Hamer / Unsplash — https://unsplash.com/photos/DXiR18__75c -->
+          <h2>You already answer these questions <em>all day.</em></h2>
+          <p class="sec-head__intro">On the phone, at the counter, in a quote you emailed last Tuesday. Content marketing is writing those answers down once, well, where strangers can find them. It fits owners who know their trade cold and never have time to write about it. It fits nonprofits too, whose donors keep asking where the money goes.</p>
+        </div>
+        <figure class="photo photo--wide photo--flip reveal"><img src="/media/photos/content-marketing-2-tailor-shop.jpg" alt="A woman on the phone at a laptop in a sewing studio, with clothing racks and pattern sketches behind her" width="1600" height="1000" loading="lazy" decoding="async" /></figure>
+        <!-- Photo: Vitaly Gariev / Unsplash — https://unsplash.com/photos/fashion-designer-on-the-phone-working-on-a-laptop-kk4J92iaSBk -->
       </div>
 
       <div class="fit-grid mt-lg">
         <div class="fit-card fit-card__yes reveal">
           <span class="label">This is your lane if</span>
           <ul>
-            <li>Word of mouth built the business, and it&rsquo;s stopped being enough.</li>
-            <li>A competitor shows up first on Google and you don&rsquo;t show up at all.</li>
-            <li>You&rsquo;d rather own your Google profile and reviews than rent leads from Angi.</li>
-            <li>You answer your phone. This whole system depends on that.</li>
+            <li>Customers ask the same five questions before they buy, and you&rsquo;re tired of typing the answers.</li>
+            <li>Your website says what you do but never explains why anyone should pick you.</li>
+            <li>You have an email list and haven&rsquo;t sent it anything in a year.</li>
+            <li>You can spare half an hour a month to talk. We handle the writing.</li>
           </ul>
         </div>
         <div class="fit-card fit-card__no reveal" data-delay="1">
           <span class="label">Probably not, if</span>
           <ul>
-            <li>You sell nationwide online. That&rsquo;s a different kind of SEO, and we&rsquo;ll say so on a free call.</li>
-            <li>You want rankings for their own sake. We count calls and booked jobs, never positions.</li>
-            <li>You need page one in two weeks. We won&rsquo;t promise that. Nobody honest will.</li>
+            <li>You need calls this month. Content won&rsquo;t do that. Local SEO or ads will get there sooner.</li>
+            <li>You want a post every day for the algorithm. We&rsquo;ll write less, and better.</li>
+            <li>Nobody can find you on Google at all yet. Fix that first, then publish.</li>
           </ul>
         </div>
       </div>
 
-      <p class="pull reveal mt-xl">We think most local businesses buy ads before their Google profile has earned them. <em>Fix the profile first.</em></p>
+      <p class="pull reveal mt-xl">We think two useful articles a month beat twelve thin ones. <em>Every single time.</em></p>
     </div>
   </section>
 
@@ -339,43 +342,69 @@
   <section class="section">
     <div class="wrap">
       <div class="sec-head reveal">
-        <h2>What we actually do, <em>month by month.</em></h2>
-        <p class="sec-head__intro">No mystery retainer. Four jobs, done steadily, are the whole game, and you&rsquo;ll see each one counted in a plain-English monthly report.</p>
+        <h2>Here&rsquo;s what lands on your site <em>each month.</em></h2>
+        <p class="sec-head__intro">Every piece starts from a question a real customer asked you. Then it gets used everywhere it can be.</p>
       </div>
 
       <div class="svc-list mt-lg">
 
         <article class="svc reveal">
-          <h3 class="svc__title">Your Google Business Profile, actually finished</h3>
-          <p class="svc__body">Most profiles we open are half-done: no description, three photos from 2019, a category that&rsquo;s close but wrong. We fill every field. The most specific category Google offers, all 750 characters of description, your services listed, photos that look like your real work, a post or two a month. Your website link matches your site exactly, down to the trailing slash.</p>
+          <h3 class="svc__title">Articles that answer one question properly</h3>
+          <p class="svc__body">What does a new roof cost in Carmel? Should a nonprofit hire or outsource its books? We pick the questions your customers ask right before they buy, and write one clear, specific answer per article, with your real prices and your real opinions in it. Sometimes a topic deserves more room, so it becomes a longer guide people bookmark and forward.</p>
         </article>
 
         <article class="svc reveal">
-          <h3 class="svc__title">A review system that runs itself</h3>
-          <p class="svc__body">A steady flow of recent reviews now counts for more than a big old pile of them. So we build the ask into your workflow: when a job wraps or a table clears, the customer gets a text with one link. We draft replies to every review, good and rough, in your voice. No begging, no fake accounts, ever.</p>
+          <h3 class="svc__title">Written so Google and ChatGPT can quote you</h3>
+          <p class="svc__body">More people now ask AI answer engines like ChatGPT before they ever open a search page. Those tools pull from pages that answer a question plainly near the top, name a place, and show who wrote it. So that&rsquo;s how we structure every piece: the answer first, the detail after, your name and city on it, and schema markup so search engines know what they&rsquo;re reading.</p>
         </article>
 
         <article class="svc reveal">
-          <h3 class="svc__title">One name, address, and number, everywhere</h3>
-          <p class="svc__body">Google cross-checks your business details against Yelp, Facebook, Bing, and Apple, and every mismatch quietly costs you trust. We hunt down each listing and make them identical. Honestly? This part is data entry. It&rsquo;s boring. We do it anyway, because Google notices.</p>
+          <h3 class="svc__title">A newsletter people open</h3>
+          <p class="svc__body">Once a month, a short email to the people who already know you. One useful thing, plus one clear reason to reply or book. It&rsquo;s the cheapest repeat business there is, and most owners we meet have a list sitting unused in a spreadsheet.</p>
         </article>
 
         <article class="svc reveal">
-          <h3 class="svc__title">Local signals on your website</h3>
-          <p class="svc__body">Your site should answer what people around here actually type: the service and the town, in plain words near the top of the page, with the cost question answered instead of dodged. We write those pages, put the city where it belongs, and add schema markup &mdash; code that tells Google what your business is, in Google&rsquo;s own language. It works in Carmel and Fishers the same way it works in Greenwood, Brownsburg, and Avon.</p>
+          <h3 class="svc__title">One piece, cut up for social</h3>
+          <p class="svc__body">An article that took a week to get right shouldn&rsquo;t be posted once and forgotten. We cut each one into a handful of short posts and a line for your Google profile. If you want <a class="tlink" href="/services/social-media">social media run as its own channel</a>, that&rsquo;s a separate conversation.</p>
         </article>
 
       </div>
     </div>
   </section>
 
-  <!-- WHY IT WORKS, CITED -->
+  <!-- THE CANDID PART -->
   <section class="section section--navy">
     <div class="wrap">
-      <div class="seo-stats">
+      <div class="cm-slow">
         <div class="reveal">
-          <h2>The first marketing dollar <em>we&rsquo;d spend.</em></h2>
-          <p class="mt-md">The map pack is the set of three businesses Google shows above everything else. Landing there is worth real money: those businesses get 126% more traffic than the results just below them, per BrightLocal. Reviews are how you earn the spot. And unlike an ad, a ranking doesn&rsquo;t stop the day you stop paying for it.</p>
+          <h2>This is slow. <em>We&rsquo;d rather say so now.</em></h2>
+          <p class="mt-md">Content compounds over months, not weeks. The first article you publish probably won&rsquo;t ring the phone. The fifteenth might, because by then there&rsquo;s a library that answers most of what your customers wonder, and Google has had time to trust it. If you need booked work by the end of the quarter, we&rsquo;ll point you somewhere faster and tell you why.</p>
+          <p>The upside is that it keeps working. An article that answers &ldquo;how much does this cost in Indianapolis&rdquo; can still be bringing in calls two years after we wrote it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEE THE FORMAT -->
+  <section class="section section--stone">
+    <div class="wrap">
+      <div class="cm-split">
+        <div class="reveal">
+          <h2>Read ours before you <em>hire us.</em></h2>
+          <p class="mt-md">Our own articles follow the same format we&rsquo;d write for you. Each takes one question a small business owner actually asked us, answers it in the first paragraph, and then shows the work. Read one and judge the writing for yourself. If it sounds like something your customers would finish, we should talk.</p>
+          <div class="row-cta mt-lg">
+            <a class="btn btn--primary" href="/articles/small-business-marketing-budget">Read the budget article <span class="arr">→</span></a>
+            <a class="tlink" href="/articles/not-showing-up-on-google">Or the Google one</a>
+          </div>
+        </div>
+        <div class="cm-card reveal" data-delay="1">
+          <ul>
+            <li><span>The answer, up top</span><span>first paragraph</span></li>
+            <li><span>Real prices and places</span><span>always</span></li>
+            <li><span>Who wrote it, and when</span><span>on every page</span></li>
+            <li><span>Questions people ask next</span><span>answered below</span></li>
+          </ul>
+          <p class="cm-card__foot">The same checklist runs on every piece we write for clients.</p>
         </div>
       </div>
     </div>
@@ -385,11 +414,11 @@
   <section class="section">
     <div class="wrap wrap--narrow">
       <div class="sec-head reveal">
-        <h2>Part of the retainer, <em>not an upsell.</em></h2>
+        <h2>What content costs</h2>
       </div>
       <div class="cost-note reveal mt-md">
-        <p>Local SEO lives inside our published monthly retainers: $1,200, $2,400, or $4,800 a month, depending on how much of your marketing you want handled. For a single-location business whose main problem is getting found, the $1,200 tier usually covers it. Three months minimum, then month to month, because this work compounds and a 30-day sample proves nothing.</p>
-        <p>If you ever leave, you keep everything. The Google Business Profile, the reviews, the website, the listings. It was always yours.</p>
+        <p>Content marketing runs inside our published monthly retainers. At $1,200 a month, we run one channel properly, and content or email can be that channel. At $2,400 a month, it connects across channels, so each article also feeds your newsletter and your social posts. The $4,800 tier hands us the whole marketing function.</p>
+        <p>There&rsquo;s no separate project price for content. Retainers have a three-month minimum, then run month to month. Every article and every email list stays yours if you leave.</p>
       </div>
       <div class="row-cta reveal mt-lg" data-delay="1">
         <a class="btn btn--ghost" href="/investment">See the full rate card <span class="arr">→</span></a>
@@ -397,57 +426,32 @@
     </div>
   </section>
 
-  <!-- FREE SELF-CHECK HANDOFF -->
-  <section class="section section--stone">
-    <div class="wrap">
-      <div class="tool-split">
-        <div class="reveal">
-          <h2>Check yourself before you <em>pay anyone.</em></h2>
-          <p class="mt-md">We built an 18-point self-audit covering your Google Business Profile, your reviews, your website basics, and the extras that get you found. It grades you live, flags the three fixes that matter most, and never asks for your email. Run it tonight. Plenty of owners fix what it finds and stop there, and that&rsquo;s fine with us.</p>
-          <div class="row-cta mt-lg">
-            <a class="btn btn--primary" href="/tools/local-visibility">Run the visibility check <span class="arr">→</span></a>
-            <a class="tlink" href="/articles/not-showing-up-on-google">Why businesses vanish from Google</a>
-          </div>
-        </div>
-        <div class="tool-card reveal" data-delay="1">
-          <ul>
-            <li><span>Google Business Profile completeness</span><span>6 checks</span></li>
-            <li><span>Reviews &amp; replies</span><span>4 checks</span></li>
-            <li><span>Website &amp; NAP basics</span><span>4 checks</span></li>
-            <li><span>Being-found extras</span><span>4 checks</span></li>
-          </ul>
-          <p class="tool-card__foot">Scored in your browser as you go. Your answers stay on your device.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- FAQ -->
-  <section class="section">
+  <section class="section section--stone">
     <div class="wrap wrap--narrow">
       <div class="sec-head reveal">
-        <h2>What owners ask us <em>before they start.</em></h2>
+        <h2>Questions owners ask about content</h2>
       </div>
       <div class="faq mt-lg reveal">
         <details>
-          <summary>How long does local SEO take to work?</summary>
-          <p>Longer than anyone selling it wants to admit. If your profile has been neglected, basic fixes can move your map ranking within a few weeks. In a crowded category in a dense part of Indy, it takes months of steady signals. That&rsquo;s one reason for our three-month minimum: we won&rsquo;t charge you for a month in which nothing could honestly happen. Every month you get a plain-English report showing what moved.</p>
+          <summary>How often should a small business publish?</summary>
+          <p>Less often than you&rsquo;ve been told. Our default is two articles a month and one newsletter, and we&rsquo;d rather drop to one great article than pad the schedule. Consistency matters more than volume. A business that publishes twice a month for a year is in a much better spot than one that posts daily for six weeks and then goes quiet.</p>
         </details>
         <details>
-          <summary>Do I need to pay for a Google Business Profile?</summary>
-          <p>No. The profile is free, and claiming it is free. If someone calls offering to &ldquo;activate&rdquo; or &ldquo;secure&rdquo; your listing for a fee, hang up. What costs money is the ongoing work of keeping it complete, photographed, posted, and reviewed, which is the work we do.</p>
+          <summary>Who actually writes it?</summary>
+          <p>We do. You give us about half an hour a month on a call, we ask what customers asked you lately, and we turn your answers into drafts. You read every piece before it goes live and you can change anything. Your expertise, our writing. Nobody needs to know which sentences were whose.</p>
         </details>
         <details>
-          <summary>Should I do local SEO or Google Ads first?</summary>
-          <p>Local SEO first, almost every time. It is the cheaper, more durable win, and ads perform better once your profile and website are ready to catch what the ads send. When you are ready for that step, <a class="tlink" href="/services/google-ads">Google Ads is its own service</a> with the same published pricing.</p>
+          <summary>Does AI-written content work?</summary>
+          <p>Unedited, no. It reads like everyone else&rsquo;s, because it was built from everyone else&rsquo;s. Google has said it judges content on whether it&rsquo;s helpful, not on how it was produced, and generic answers aren&rsquo;t helpful. We use AI for research and rough outlines. A person who knows your business writes and edits every piece, and the parts that make it worth reading (your prices and your opinions) can only come from you.</p>
         </details>
         <details>
-          <summary>What if I have almost no reviews?</summary>
-          <p>Then this matters more for you, not less. Profiles with 40 or more reviews averaging 4.5 stars appear in the map pack about 3.7 times more often than profiles with fewer than 10, per BrightLocal. The fix is a system, not begging: ask at the moment the customer is happiest, by text, with one link, every time. We set it up so it runs without you thinking about it.</p>
+          <summary>How long until content pays off?</summary>
+          <p>Months. Most articles take a while to get picked up by search, and the library has to get deep enough to matter. A newsletter can work faster if you already have a customer list, since those people know you. That&rsquo;s part of why our retainers have a three-month minimum. Each monthly report shows what was read, what got found, and what led to a call.</p>
         </details>
         <details>
-          <summary>Can I just do this myself?</summary>
-          <p>A lot of it, yes. We built a free 18-point self-check so you can: run it, fix what you can in an afternoon, and don&rsquo;t pay anyone for that part. Owners usually hire us when the slow, repetitive pieces (listings cleanup, review replies, photos, monthly upkeep) stop happening because business picked up. Which is sort of the point.</p>
+          <summary>Do you do email newsletters?</summary>
+          <p>Yes, and for many local businesses it&rsquo;s the better first channel. We write it, design a simple template, and send it from the tool you already use, or set one up if you don&rsquo;t have one. Monthly is the usual rhythm. If the list lives in a CRM, we can <a class="tlink" href="/services/crm-gohighlevel">connect it to the rest of your follow-up</a> too.</p>
         </details>
       </div>
     </div>
@@ -455,23 +459,25 @@
 
   <!-- WHERE TO NEXT -->
   <section class="next-strip"><div class="wrap"><h2 class="next-strip__title reveal">Where to next</h2><div class="next-grid">
-    <a class="next-card reveal" href="/services/google-ads"><strong>Google Ads, once you're ready</strong><span>Paid search catches the ready-to-buy. Local SEO comes first.</span><span class="arr-link">See Google Ads →</span></a>
-    <a class="next-card reveal" href="/tools/local-visibility"><strong>Can Indy Find You?</strong><span>A free check of how your business shows up in local search.</span><span class="arr-link">Run the check →</span></a>
-    <a class="next-card reveal" href="/investment"><strong>Local SEO sits in the retainer</strong><span>Retainers run $1,200, $2,400, or $4,800 a month, and $1,200 usually covers one location.</span><span class="arr-link">See the rate card →</span></a>
+    <a class="next-card reveal" href="/services/social-media"><strong>Social media, run properly</strong><span>Where the posts cut from each article end up, and how we run that channel.</span><span class="arr-link">See social media →</span></a>
+    <a class="next-card reveal" href="/tools/checkup"><strong>The Five-Step Check-Up</strong><span>Two minutes, no email. Find out whether content is really your weakest step.</span><span class="arr-link">Take the check-up →</span></a>
+    <a class="next-card reveal" href="/investment"><strong>Content sits in the retainer</strong><span>$1,200 a month runs one channel, content included. $2,400 connects it to the rest.</span><span class="arr-link">See the rate card →</span></a>
   </div></div></section>
 
   <!-- CLOSING CTA -->
   <section class="closing">
     <div class="closing__inner">
       <div class="reveal">
-        <h2>Somebody nearby is searching <em>right now.</em></h2>
-        <p>Book a free call and we&rsquo;ll pull up your Google profile together, live. You&rsquo;ll leave with three specific fixes, whether or not you ever pay us a dollar.</p>
+        <h2>Bring us the questions <em>you hear most.</em></h2>
+        <p>On a free call, we&rsquo;ll pick the three your customers ask most often and sketch the article that answers each one. Keep the list either way.</p>
       </div>
       <div class="reveal" data-delay="1">
         <a href="/contact" class="btn btn--primary">Book a free call <span class="arr">→</span></a>
       </div>
     </div>
   </section>
+
+</main>
 
 </main>
 

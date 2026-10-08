@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Video Production in Indianapolis | Carson Poore Consulting</title>
+<meta name="description" content="Video production for Indianapolis small businesses: a brand video from $1,200, short-form clip packs from $750, photo shoots from $350. You own every file." />
+<link rel="canonical" href="https://carsonpoore.com/services/video-photo" />
+<meta property="og:title" content="Video Production in Indianapolis | Carson Poore Consulting" />
+<meta property="og:description" content="Video production for Indianapolis small businesses: a brand video from $1,200, short-form clip packs from $750, photo shoots from $350. You own every file." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://carsonpoore.com/services/video-photo" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
+<link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
+<link rel="stylesheet" href="/styles.css?v=20261008-5" />
+<script defer src="/site.js?v=20261008-3"></script>
+<style>
+  /* Video & photo page — package cards and small layout tweaks on top of the shared system */
+  .pkg-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(14px, 2vw, 24px);
+  }
+  @media (max-width: 900px) { .pkg-grid { grid-template-columns: 1fr; } }
+  .pkg {
+    display: flex; flex-direction: column; gap: 12px;
+    background: #fff; border: 1px solid var(--line); border-radius: var(--r-3);
+    padding: clamp(22px, 3vw, 32px);
+  }
+  .pkg h3 { font-size: var(--step-2); }
+  .pkg__price { font-weight: 800; font-size: 1.6rem; color: var(--ink); font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+  .pkg__price small { font-weight: 600; font-size: 0.85rem; color: var(--muted); margin-right: 6px; }
+  .pkg p { color: var(--ink-2); line-height: 1.55; margin: 0; }
+  .pkg__fit { margin-top: auto !important; padding-top: 12px; border-top: 1px solid var(--line-soft); font-size: 0.95rem; }
+  .own-note { max-width: 62ch; }
+  .home-note { max-width: 62ch; }
+  .home-note p + p { margin-top: 18px; }
+  .home-note a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://carsonpoore.com/#org",
+      "name": "Carson Poore Consulting",
+      "url": "https://carsonpoore.com/",
+      "logo": "https://carsonpoore.com/brand/cpc-mark-royalblue.svg",
+      "image": "https://carsonpoore.com/brand/carson-headshot.png",
+      "email": "carson@carsonpoore.com",
+      "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
+      ],
+      "priceRange": "$1,200–$4,800/month",
+      "founder": {
+        "@type": "Person",
+        "@id": "https://carsonpoore.com/about#carson",
+        "name": "Carson Poore",
+        "sameAs": [
+          "https://www.linkedin.com/in/carson-poore/"
+        ]
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carsonpoore.com/services/video-photo#service",
+      "name": "Video & photo",
+      "serviceType": "Video production and commercial photography",
+      "description": "Brand videos, short-form vertical video packs, and half-day photo shoots for Indianapolis-area small businesses, planned with the owner and shot on location in central Indiana. The client owns the footage and photos.",
+      "provider": {
+        "@id": "https://carsonpoore.com/#org"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        }
+      ],
+      "url": "https://carsonpoore.com/services/video-photo",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Brand video",
+          "description": "A short film about your business, planned and scripted with you. Starting price.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": 1200,
+            "priceCurrency": "USD"
+          },
+          "seller": {
+            "@id": "https://carsonpoore.com/#org"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Short-form video pack",
+          "description": "Vertical clips cut for Reels, TikTok, and YouTube Shorts. Starting price.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": 750,
+            "priceCurrency": "USD"
+          },
+          "seller": {
+            "@id": "https://carsonpoore.com/#org"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Half-day photo shoot",
+          "description": "A half-day shoot with edited photos for your site and social. Starting price.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": 350,
+            "priceCurrency": "USD"
+          },
+          "seller": {
+            "@id": "https://carsonpoore.com/#org"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://carsonpoore.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://carsonpoore.com/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Marketing",
+          "item": "https://carsonpoore.com/services/marketing"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Video & photo"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What happens on shoot day?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Less than you’d think. You approved the shot list days earlier, so nobody is improvising. We show up, set up quietly, and work through the list: the space, the work in progress, your people doing what they do, and a few portraits if you want them. A half-day photo shoot is about four hours. Video can run longer, and your quote says how long. You can usually stay open while we work."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long until I get the files?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your quote puts a delivery date in writing before anything starts. Photos come back first, usually within two weeks of the shoot. Video takes longer because you see a first cut, send us your notes, and approve the final before we call it done."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I own the footage and photos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The footage, the finished videos, and the photos are yours. Put them on your site, your Google profile, your ads, a flyer, a screen at a trade show. They land in a folder you control, so you never have to ask us for your own files."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you shoot at my business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That’s the whole idea. We shoot on location in central Indiana: your shop floor, kitchen, job site, office, or studio, from Westfield down to Greenwood. A studio backdrop makes you look like everybody else. Your own place doesn’t."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to be on camera?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. A good brand video can run on hands at work, your crew, your customers, and a voiceover. That said, people like buying from a person, and twenty honest seconds from the owner tends to beat anything polished. We plan around what you’re comfortable with, and we write the words with you so you’re never winging it."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="page">
+
+<header class="nav">
+  <div class="nav__inner">
+    <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
+    <nav class="nav__links" aria-label="Primary">
+      <div class="nav__item has-drop">
+        <a href="/services" class="nav__top">Services</a>
+        <div class="nav__drop nav__drop--wide" aria-label="Services">
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/marketing">Marketing</a>
+            <a class="nav__drop-sub" href="/services/branding">Branding</a>
+            <a class="nav__drop-sub" href="/services/content-marketing">Content marketing</a>
+            <a class="nav__drop-sub" href="/services/social-media">Social media</a>
+            <a class="nav__drop-sub" href="/services/video-photo">Video &amp; photo</a>
+            <a class="nav__drop-sub" href="/services/local-seo">Local SEO</a>
+            <a class="nav__drop-sub" href="/services/google-ad-grants">Google Ad Grants</a>
+          </div>
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/technical">Technical</a>
+            <a class="nav__drop-sub" href="/services/websites">Web design &amp; development</a>
+            <a class="nav__drop-sub" href="/services/ai-automation">AI &amp; automation</a>
+            <a class="nav__drop-sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+            <a class="nav__drop-sub" href="/services/google-ads">Google Ads</a>
+            <a class="nav__drop-sub" href="/services/analytics">GA4 &amp; analytics</a>
+            <a class="nav__drop-head" href="/services/strategy">Strategy &amp; planning</a>
+            <a class="nav__drop-head" href="/services/coaching">Coaching &amp; growth</a>
+          </div>
+          <div class="nav__drop-foot">
+            <a href="/services">All services</a>
+            <a href="/investment#projects">Project pricing</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav__item has-drop">
+        <button type="button" class="nav__top nav__toggle" aria-expanded="false">Who we help</button>
+        <div class="nav__drop" aria-label="Who we help">
+          <a href="/for/local-businesses">Local businesses</a>
+          <a href="/for/founders">Founders &amp; startups</a>
+          <a href="/for/nonprofits">Nonprofits</a>
+        </div>
+      </div>
+      <a href="/method">Method</a>
+      <a href="/investment">Pricing</a>
+      <a href="/resources">Resources</a>
+      <a href="/about">About</a>
+      <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
+    </nav>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" aria-hidden="true">
+  <span class="mobile-menu__group">Services</span>
+  <a href="/services/marketing">Marketing</a>
+  <a class="mobile-menu__sub" href="/services/branding">Branding</a>
+  <a class="mobile-menu__sub" href="/services/content-marketing">Content marketing</a>
+  <a class="mobile-menu__sub" href="/services/social-media">Social media</a>
+  <a class="mobile-menu__sub" href="/services/video-photo">Video &amp; photo</a>
+  <a class="mobile-menu__sub" href="/services/local-seo">Local SEO</a>
+  <a class="mobile-menu__sub" href="/services/google-ad-grants">Google Ad Grants</a>
+  <a href="/services/technical">Technical</a>
+  <a class="mobile-menu__sub" href="/services/websites">Web design &amp; development</a>
+  <a class="mobile-menu__sub" href="/services/ai-automation">AI &amp; automation</a>
+  <a class="mobile-menu__sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+  <a class="mobile-menu__sub" href="/services/google-ads">Google Ads</a>
+  <a class="mobile-menu__sub" href="/services/analytics">GA4 &amp; analytics</a>
+  <a href="/services/strategy">Strategy &amp; planning</a>
+  <a href="/services/coaching">Coaching &amp; growth</a>
+  <span class="mobile-menu__group">Who we help</span>
+  <a href="/for/local-businesses">Local businesses</a>
+  <a href="/for/founders">Founders &amp; startups</a>
+  <a href="/for/nonprofits">Nonprofits</a>
+  <span class="mobile-menu__group">Explore</span>
+  <a href="/method">Method</a>
+  <a href="/investment">Pricing</a>
+  <a href="/resources">Resources</a>
+  <a href="/about">About</a>
+  <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero page-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/services/marketing">Marketing</a></li>
+          <li aria-current="page">Video &amp; photo</li>
+        </ol>
+      </nav>
+      <div class="page-hero__grid">
+        <div class="page-hero__copy">
+          <h1 class="reveal mt-md" data-delay="1">Video and photos of <em>your actual business.</em></h1>
+          <p class="hero__sub reveal mt-md" data-delay="2">We do video production for small businesses in Indianapolis and the towns around it. A short brand film, a stack of vertical clips, or a half-day of photos, all shot on location at your place. We plan it with you, film the real thing, and hand you files you own outright.</p>
+          <div class="row-cta reveal mt-lg" data-delay="3">
+            <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
+            <a class="tlink" href="/investment#projects">See video and photo prices</a>
+          </div>
+        </div>
+        <figure class="photo photo--wide photo--amber page-hero__motion reveal" data-delay="2"><img src="/media/photos/video-photo-1-chef-filming.jpg" alt="A camera operator filming a chef at work behind a restaurant counter, with the shot showing on the camera monitor" width="1600" height="1000" decoding="async" /></figure>
+        <!-- Photo: Remco Guijs / Unsplash — https://unsplash.com/photos/a-camera-set-up-in-front-of-a-man-in-a-black-shirt-0reZtj8eS-c -->
+      </div>
+    </div>
+  </section>
+
+  <!-- THE THREE PACKAGES -->
+  <section class="section section--stone">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2>Pick a starting point. <em>The price is on it.</em></h2>
+        <p class="sec-head__intro">Each one is a one-time project with a written quote before any work starts. These are starting prices, and the quote spells out exactly what you get. Retainer clients can add one anytime.</p>
+      </div>
+
+      <div class="pkg-grid mt-lg">
+        <article class="pkg reveal">
+          <h3>Brand video</h3>
+          <span class="pkg__price"><small>from</small>$1,200</span>
+          <p>A short film about your business, planned and scripted with you. It&rsquo;s the video that goes on your home page and answers &ldquo;who are these people?&rdquo; before anyone calls.</p>
+          <p class="pkg__fit">Right for you if your site and Google profile are in decent shape and still don&rsquo;t say much about you.</p>
+        </article>
+        <article class="pkg reveal" data-delay="1">
+          <h3>Short-form video pack</h3>
+          <span class="pkg__price"><small>from</small>$750</span>
+          <p>A set of vertical clips cut for Reels, TikTok, and YouTube Shorts. We film them in one session, so you have weeks of posts ready instead of one video and a blank calendar.</p>
+          <p class="pkg__fit">Right for you if someone on your team will actually post them.</p>
+        </article>
+        <article class="pkg reveal" data-delay="2">
+          <h3>Half-day photo shoot</h3>
+          <span class="pkg__price"><small>from</small>$350</span>
+          <p>About four hours at your place, then a set of edited photos for your site and social, sized and ready to post.</p>
+          <p class="pkg__fit">Right for you if your best photo right now is from a phone, three years ago, at an angle.</p>
+        </article>
+      </div>
+
+      <div class="own-note reveal mt-lg">
+        <p>You own all of it. The footage, the finished edits, and the photos are yours to use anywhere, for as long as you want.</p>
+      </div>
+      <div class="row-cta reveal mt-md" data-delay="1">
+        <a class="btn btn--ghost" href="/investment#projects">See every project price <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE OPINION: REAL BEATS STOCK -->
+  <section class="section">
+    <div class="wrap">
+      <div class="photo-split">
+        <div class="sec-head reveal">
+          <h2>Your own shop beats stock <em>every time.</em></h2>
+          <p class="sec-head__intro">A stock photo of a grinning stranger in a hard hat tells a customer nothing. They may have already seen him on a competitor&rsquo;s site. A photo of your own truck parked outside the deck you finished last week tells them exactly who&rsquo;s showing up. That&rsquo;s the part that earns the call.</p>
+          <p class="mt-md">It doesn&rsquo;t need to be glossy. Sawdust on the bench is fine. So is a lunch rush that looks like a lunch rush. People can tell when a business is real, and they trust it more for it.</p>
+        </div>
+        <figure class="photo photo--tall photo--flip reveal" style="max-width: 440px;"><img src="/media/photos/video-photo-2-woodworker-hands.jpg" alt="A man in a blue T-shirt working the edge of a wooden board by hand at an outdoor workbench" width="1200" height="1500" loading="lazy" decoding="async" /></figure>
+        <!-- Photo: Samuel Cruz / Unsplash — https://unsplash.com/photos/a-man-working-on-a-piece-of-wood-o8C5SxNCGaw -->
+      </div>
+
+      <p class="pull reveal mt-xl">We think real photos of your shop, your crew, and your customers beat stock every time. <em>Even the slightly messy ones.</em></p>
+    </div>
+  </section>
+
+  <!-- HOW A SHOOT RUNS -->
+  <section class="section section--stone">
+    <div class="wrap">
+      <div class="photo-split photo-split--flip">
+        <div class="sec-head reveal">
+          <h2>How a shoot runs, <em>start to files.</em></h2>
+          <p class="sec-head__intro">No surprises on the day. Most of the work happens before anyone picks up a camera.</p>
+        </div>
+        <figure class="photo photo--wide reveal" data-delay="1"><img src="/media/photos/video-photo-3-food-shoot.jpg" alt="A camera on a tripod photographing two pastries on a plate against a gray backdrop" width="1600" height="1000" loading="lazy" decoding="async" /></figure>
+        <!-- Photo: Minh Chau / Unsplash — https://unsplash.com/photos/camera-photographing-food-on-a-plate-juYwa0G2Cmg -->
+      </div>
+
+      <div class="svc-list mt-lg">
+        <article class="svc reveal">
+          <h3 class="svc__title">First, a plan you sign off on</h3>
+          <p class="svc__body">We start with a call about what you sell and who buys it. Then we write a shot list and, for video, a short script in your words. You approve both before we book the day. If something on the list feels off, it comes off.</p>
+        </article>
+        <article class="svc reveal">
+          <h3 class="svc__title">Shoot day happens at your place</h3>
+          <p class="svc__body">We come to you, anywhere in central Indiana. Carmel, Fishers, Noblesville, Greenwood, Avon, downtown. We work around your hours and your customers, and we keep the gear footprint small so the shop still runs.</p>
+        </article>
+        <article class="svc reveal">
+          <h3 class="svc__title">You see it before it&rsquo;s final</h3>
+          <p class="svc__body">For video, you get a first cut and a chance to send notes. For photos, we cull the set, edit the keepers, and show you the lot. Nothing is &ldquo;done&rdquo; until you say so.</p>
+        </article>
+        <article class="svc reveal">
+          <h3 class="svc__title">Files land in a folder you control</h3>
+          <p class="svc__body">Sized for where they&rsquo;ll actually go: wide for your website, vertical for phones. And they&rsquo;re yours. No licensing fee next year, no asking us for your own footage.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE ADMISSION -->
+  <section class="section section--navy">
+    <div class="wrap">
+      <div class="home-note reveal">
+        <h2>One great video won&rsquo;t carry <em>your marketing.</em></h2>
+        <p class="mt-md">Here&rsquo;s the honest part. A beautiful video with nowhere to live ends up on a YouTube channel nobody visits. It needs a home: a website that loads fast on a phone, and social accounts that post more than twice a year. Without those, you&rsquo;ve paid for something lovely that almost no one sees.</p>
+        <p>So if your site or your feed isn&rsquo;t ready, we&rsquo;ll say so before you buy a shoot. We build those too. Start with <a href="/services/websites">web design and development</a> or <a href="/services/social-media">social media</a>, and the video has somewhere to go.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="wrap wrap--narrow">
+      <div class="sec-head reveal">
+        <h2>Questions owners ask <em>before the camera shows up.</em></h2>
+      </div>
+      <div class="faq mt-lg reveal">
+        <details>
+          <summary>What happens on shoot day?</summary>
+          <p>Less than you&rsquo;d think. You approved the shot list days earlier, so nobody is improvising. We show up, set up quietly, and work through the list: the space, the work in progress, your people doing what they do, and a few portraits if you want them. A half-day photo shoot is about four hours. Video can run longer, and your quote says how long. You can usually stay open while we work.</p>
+        </details>
+        <details>
+          <summary>How long until I get the files?</summary>
+          <p>Your quote puts a delivery date in writing before anything starts. Photos come back first, usually within two weeks of the shoot. Video takes longer because you see a first cut, send us your notes, and approve the final before we call it done.</p>
+        </details>
+        <details>
+          <summary>Do I own the footage and photos?</summary>
+          <p>Yes. The footage, the finished videos, and the photos are yours. Put them on your site, your Google profile, your ads, a flyer, a screen at a trade show. They land in a folder you control, so you never have to ask us for your own files.</p>
+        </details>
+        <details>
+          <summary>Can you shoot at my business?</summary>
+          <p>That&rsquo;s the whole idea. We shoot on location in central Indiana: your shop floor, kitchen, job site, office, or studio, from Westfield down to Greenwood. A studio backdrop makes you look like everybody else. Your own place doesn&rsquo;t.</p>
+        </details>
+        <details>
+          <summary>Do I need to be on camera?</summary>
+          <p>No. A good brand video can run on hands at work, your crew, your customers, and a voiceover. That said, people like buying from a person, and twenty honest seconds from the owner tends to beat anything polished. We plan around what you&rsquo;re comfortable with, and we write the words with you so you&rsquo;re never winging it.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHERE TO NEXT -->
+  <section class="next-strip"><div class="wrap"><h2 class="next-strip__title reveal">Where to next</h2><div class="next-grid">
+    <a class="next-card reveal" href="/services/social-media"><strong>Social media, where the clips live</strong><span>A pack of vertical clips needs an account that posts on a schedule. Here&rsquo;s how we run that part.</span><span class="arr-link">See social media →</span></a>
+    <a class="next-card reveal" data-delay="1" href="/tools/marketing-budget"><strong>Budget Calculator</strong><span>Put in your revenue and get a sensible monthly marketing range, with the math shown. See where a shoot fits before you book one.</span><span class="arr-link">Run the calculator →</span></a>
+    <a class="next-card reveal" data-delay="2" href="/investment#projects"><strong>Video and photo prices</strong><span>Brand video from $1,200. Short-form video pack from $750. Half-day photo shoot from $350.</span><span class="arr-link">See project pricing →</span></a>
+  </div></div></section>
+
+  <!-- CLOSING CTA -->
+  <section class="closing">
+    <div class="closing__inner">
+      <div class="reveal">
+        <h2>Let&rsquo;s film the place your customers <em>already like.</em></h2>
+        <p>Book a free call and tell us what a stranger should see in the first ten seconds. We&rsquo;ll tell you which package fits, or whether you need one yet.</p>
+      </div>
+      <div class="reveal" data-delay="1">
+        <a href="/contact" class="btn btn--primary">Book a free call <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer footer--v2">
+  <div class="wrap">
+    <div class="footer__grid footer__grid--v2">
+      <div class="footer__brand">
+        <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
+        <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/marketing">Marketing</a></li>
+          <li><a href="/services/technical">Technical</a></li>
+          <li><a href="/services/strategy">Strategy &amp; planning</a></li>
+          <li><a href="/services/coaching">Coaching &amp; growth</a></li>
+          <li><a href="/services/branding">Branding</a></li>
+          <li><a href="/services/content-marketing">Content marketing</a></li>
+          <li><a href="/services/social-media">Social media</a></li>
+          <li><a href="/services/video-photo">Video &amp; photo</a></li>
+          <li><a href="/services/websites">Web design &amp; development</a></li>
+          <li><a href="/services/local-seo">Local SEO</a></li>
+          <li><a href="/services/google-ads">Google Ads</a></li>
+          <li><a href="/services/ai-automation">AI &amp; automation</a></li>
+          <li><a href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a></li>
+          <li><a href="/services/analytics">GA4 &amp; analytics</a></li>
+          <li><a href="/services/google-ad-grants">Google Ad Grants</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Who we help</h4>
+        <ul>
+          <li><a href="/for/local-businesses">Local businesses</a></li>
+          <li><a href="/for/founders">Founders &amp; startups</a></li>
+          <li><a href="/for/nonprofits">Nonprofits</a></li>
+          <li><a href="/work">Work</a></li>
+        </ul>
+        <h4 class="footer__h4-gap">Free tools</h4>
+        <ul>
+          <li><a href="/tools/checkup">The Five-Step Check-Up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy Find You?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI Opportunity Finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget Calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-Day Plan Starter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Articles</h4>
+        <ul>
+          <li><a href="/articles/fractional-cmo-cost">Fractional CMO cost</a></li>
+          <li><a href="/articles/fractional-cmo-vs-marketing-agency">CMO vs. agency</a></li>
+          <li><a href="/articles/is-gohighlevel-worth-it">Is GoHighLevel worth it?</a></li>
+          <li><a href="/articles/ai-agents-for-small-business">AI agents, explained</a></li>
+          <li><a href="/articles/not-showing-up-on-google">Not showing up on Google</a></li>
+          <li><a href="/articles/small-business-marketing-budget">What marketing should cost</a></li>
+          <li><a href="/articles/nonprofit-google-ad-grant">The nonprofit Ad Grant</a></li>
+          <li><a href="/resources" class="tlink">All resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/method">Method</a></li>
+          <li><a href="/investment">Pricing</a></li>
+          <li><a href="/investment#projects">Project pricing</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__meta">
+      <span>© 2026 Carson Poore Consulting · Indianapolis, Indiana · carson@carsonpoore.com</span>
+      <span class="footer__towns">Serving Indianapolis, Carmel, Fishers, Zionsville, Noblesville, Westfield, Greenwood, Brownsburg, Avon, and all of central Indiana — technical and coaching work nationwide.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

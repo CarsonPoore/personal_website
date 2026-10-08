@@ -1,0 +1,26 @@
+[
+ {
+  "file": "/media/photos/video-photo-1-chef-filming.jpg",
+  "unsplash_id": "0reZtj8eS-c",
+  "photographer": "Remco Guijs",
+  "unsplash_url": "https://unsplash.com/photos/a-camera-set-up-in-front-of-a-man-in-a-black-shirt-0reZtj8eS-c",
+  "page": "/services/video-photo",
+  "alt": "A camera operator filming a chef at work behind a restaurant counter, with the shot showing on the camera monitor"
+ },
+ {
+  "file": "/media/photos/video-photo-2-woodworker-hands.jpg",
+  "unsplash_id": "o8C5SxNCGaw",
+  "photographer": "Samuel Cruz",
+  "unsplash_url": "https://unsplash.com/photos/a-man-working-on-a-piece-of-wood-o8C5SxNCGaw",
+  "page": "/services/video-photo",
+  "alt": "A man in a blue T-shirt working the edge of a wooden board by hand at an outdoor workbench"
+ },
+ {
+  "file": "/media/photos/video-photo-3-food-shoot.jpg",
+  "unsplash_id": "juYwa0G2Cmg",
+  "photographer": "Minh Chau",
+  "unsplash_url": "https://unsplash.com/photos/camera-photographing-food-on-a-plate-juYwa0G2Cmg",
+  "page": "/services/video-photo",
+  "alt": "A camera on a tripod photographing two pastries on a plate against a gray backdrop"
+ }
+]

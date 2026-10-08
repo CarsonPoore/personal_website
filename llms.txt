@@ -6,14 +6,18 @@
 
 - [Marketing](https://carsonpoore.com/services/marketing): Brand, campaigns, content, and email measured in calls, customers, and booked work.
 - [Technical](https://carsonpoore.com/services/technical): AI agents and automation, websites and web apps, GoHighLevel and CRM, Google Ads, and GA4, priced for small businesses.
-- [Strategy](https://carsonpoore.com/services/strategy): A $3,000 one-time engagement covering positioning, ideal customer, offer, and a 90-day plan the client keeps; $1,500 is credited toward a retainer if the client continues.
+- [Strategy & planning](https://carsonpoore.com/services/strategy): A $3,000 one-time engagement covering positioning, ideal customer, offer, and a 90-day plan the client keeps; $1,500 is credited toward a retainer if the client continues.
 - [Coaching & growth](https://carsonpoore.com/services/coaching): Fractional CMO and marketing advisory at $1,200 to $4,800 a month, with the plan and the hands on one team.
 
 ## Services
 
+- [Branding](https://carsonpoore.com/services/branding): Logo and identity from $750; full brand system (positioning, messaging, identity, voice, guidelines) from $2,000.
+- [Content marketing](https://carsonpoore.com/services/content-marketing): Articles that answer customer questions, email newsletters, and guides, run inside the monthly retainers.
+- [Social media](https://carsonpoore.com/services/social-media): Planning, posting, short-form video, and replies on the platforms customers use, run inside the monthly retainers.
+- [Video & photo](https://carsonpoore.com/services/video-photo): Brand video from $1,200, short-form video pack from $750, half-day photo shoot from $350, shot on location in central Indiana.
 - [Local SEO](https://carsonpoore.com/services/local-seo): Google Business Profile, reviews, and local search visibility in Indianapolis and central Indiana.
 - [Google Ads management](https://carsonpoore.com/services/google-ads): Search ads with tracking set up first; the client owns the account and the leads.
-- [Websites & web apps](https://carsonpoore.com/services/websites): Fast small-business websites and web apps the client fully owns.
+- [Web design & development](https://carsonpoore.com/services/websites): Fast small-business websites and web apps the client fully owns.
 - [AI agents & automation](https://carsonpoore.com/services/ai-automation): Practical automation for small businesses, with a human approving what goes out.
 - [GoHighLevel & CRM](https://carsonpoore.com/services/crm-gohighlevel): GoHighLevel setup, migration, pipelines, and follow-up automation.
 - [GA4 & analytics](https://carsonpoore.com/services/analytics): GA4 cleanup, conversion and call tracking, and monthly reports a person can read.
