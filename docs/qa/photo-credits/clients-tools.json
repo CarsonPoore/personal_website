@@ -1,0 +1,74 @@
+[
+  {
+    "file": "/media/photos/lb-1-plumber.jpg",
+    "unsplash_id": "c314Gh8dXAo",
+    "photographer": "Timur Shakerzianov",
+    "unsplash_url": "https://unsplash.com/photos/a-man-working-on-a-pipe-in-a-wall-c314Gh8dXAo",
+    "page": "/for/local-businesses",
+    "alt": "A plumber tightening a fitting on the pipes under a sink"
+  },
+  {
+    "file": "/media/photos/lb-2-kitchen.jpg",
+    "unsplash_id": "GfVYwJUziVE",
+    "photographer": "Daniel (unsplashbydan)",
+    "unsplash_url": "https://unsplash.com/photos/a-group-of-men-working-in-a-kitchen-preparing-doughnuts-GfVYwJUziVE",
+    "page": "/for/local-businesses",
+    "alt": "Cooks in aprons preparing food at a cutting board in a busy restaurant kitchen"
+  },
+  {
+    "file": "/media/photos/lb-3-coffee-counter.jpg",
+    "unsplash_id": "MAGhG3x_AII",
+    "photographer": "Vitaly Gariev",
+    "unsplash_url": "https://unsplash.com/photos/customer-pays-at-a-coffee-shop-MAGhG3x_AII",
+    "page": "/for/local-businesses",
+    "alt": "A barista chatting with a customer at a coffee shop counter"
+  },
+  {
+    "file": "/media/photos/fnd-1-laptop.jpg",
+    "unsplash_id": "C3V88BOoRoM",
+    "photographer": "Bench Accounting",
+    "unsplash_url": "https://unsplash.com/photos/man-operating-laptop-on-top-of-table-C3V88BOoRoM",
+    "page": "/for/founders",
+    "alt": "A man typing on a laptop at a wooden table beside a brick wall"
+  },
+  {
+    "file": "/media/photos/fnd-2-whiteboard.jpg",
+    "unsplash_id": "wD1LRb9OeEo",
+    "photographer": "Austin Distel",
+    "unsplash_url": "https://unsplash.com/photos/three-men-sitting-while-using-laptops-and-watching-man-beside-whiteboard-wD1LRb9OeEo",
+    "page": "/for/founders",
+    "alt": "Three men with laptops watching a colleague talk beside a whiteboard"
+  },
+  {
+    "file": "/media/photos/np-1-desk.jpg",
+    "unsplash_id": "n_4iTY1KmDE",
+    "photographer": "Emma Dau",
+    "unsplash_url": "https://unsplash.com/photos/two-women-using-laptops-n_4iTY1KmDE",
+    "page": "/for/nonprofits",
+    "alt": "Two women laughing together over laptops at a wooden counter"
+  },
+  {
+    "file": "/media/photos/np-2-volunteers.jpg",
+    "unsplash_id": "qKVSEuBT5EY",
+    "photographer": "Rashpal Singh",
+    "unsplash_url": "https://unsplash.com/photos/three-men-wearing-yellow-volunteers-shirts-qKVSEuBT5EY",
+    "page": "/for/nonprofits",
+    "alt": "Three volunteers in yellow Volunteers shirts watching a crowd at an outdoor city event"
+  },
+  {
+    "file": "/media/photos/np-3-table.jpg",
+    "unsplash_id": "8NDGA3RepNg",
+    "photographer": "Centre for Ageing Better",
+    "unsplash_url": "https://unsplash.com/photos/women-talking-at-art-class-table-8NDGA3RepNg",
+    "page": "/for/nonprofits",
+    "alt": "A younger and an older woman talking at a table during a community art class"
+  },
+  {
+    "file": "/media/photos/tool-lv-1-storefronts.jpg",
+    "unsplash_id": "H1qRuRIV2kE",
+    "photographer": "Michael Hart",
+    "unsplash_url": "https://unsplash.com/photos/a-brick-building-with-a-clock-on-the-front-of-it-H1qRuRIV2kE",
+    "page": "/tools/local-visibility",
+    "alt": "Brick storefronts on a small-town main street seen across a landscaped plaza"
+  }
+]

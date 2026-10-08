@@ -1,0 +1,1278 @@
+{
+ "journey_summary": "The site has three entry paths, and each should end at a price and then a booked call. (a) Search or AI-answer visitors land on an article or service page. Each of those pages should hand off in this order: the matching service, one plain price sentence that links to /investment, then /contact. Today several articles never mention price (nonprofit-google-ad-grant, not-showing-up-on-google) and some leaf services never link back to their practice. (b) Home visitors pick a door: /for/local-businesses, /for/founders or /for/nonprofits. From there they go to the right practice or service, then /investment, then /contact. That path works, but it is text-only (zero photos on all three client pages), and it keeps detouring to /work, which has no case studies. Home, founders, local-businesses, coaching, marketing and websites all send people there as if it were proof. (c) Tool users get a result and should be routed to the page that fixes their result. Four tools already do this. The Five-Step Check-Up is the site's main secondary CTA, and it only offers /method or /contact. Its result should name the practice for the weakest step. Two conversion leaks matter most. /investment has no project prices for web builds, branding or video production, so the websites and marketing pages promise \"quoted per project\" and lead nowhere. And /contact ends by sending people away to a tool.",
+ "nav_changes": [
+  "Final top nav, 7 items: Services▾ · Who we help▾ · Method · Pricing · Resources · About · [Book a free call →]. This removes Work and adds About in its slot.",
+  "Remove Work from the top nav and the mobile menu until at least 2 real write-ups are published. Keep the /work URL live and link it only from the footer as 'Work'. Rename the footer's 'Client results' link, because there are no results on the page yet.",
+  "Retarget every in-page link that uses /work as proof (home 'Client results', websites 'See how we build', marketing 'Browse client work', coaching 'Browse what we can show', local-businesses 'How we report results', founders 'work page'). The new destinations are listed in each page's next_steps.",
+  "Add About to the top nav. People vetting a small team want to see who 'we' are. Today About appears only in the footer and the mobile menu.",
+  "'Who we help' should stop linking to /#who-we-help. Make it a button that opens the dropdown (aria-expanded, opens on click or tap, also opens on hover on desktop). The anchor jump confuses people on touch devices and does nothing visible when they are already on the home page. Change the /for/* breadcrumbs to Home → Local businesses (no middle level).",
+  "Services dropdown becomes two columns. Each practice gets its services listed under it. Marketing: Local SEO, Google Ads, Google Ad Grants. Technical: Websites & web apps, AI & automation, GoHighLevel & CRM, GA4 & analytics. Strategy and Coaching & growth stay single links. Then 'All services' (/services) and 'Project pricing' (/investment). The mobile menu shows the same structure with indented sub-links.",
+  "Breadcrumbs on leaf service pages include the practice: Home → Services → Marketing → Local SEO, and Home → Services → Technical → Websites & web apps. This gives every leaf page a route back up.",
+  "Footer Company column: add 'Project pricing' (/investment) under 'Pricing'. The footer is otherwise unchanged."
+ ],
+ "global_patterns": [
+  "Where to next strip: a static band placed directly above the closing CTA band on every page except /contact, /ticket and /404. It holds 3 cards, each with a title, one line of copy and a link. Card 1 is the logical next page in the journey (article → its service, service → its practice or client page, client page → its first service, practice → /investment). Card 2 is the matching free tool. Card 3 is the price: one sentence with a real number linking to /investment. Rules: never repeat the closing band's target, never link /work, and never use more than 3 cards. The per-page choices are listed in each page's next_steps.",
+  "Sticky mobile booking bar (under 768px only): a slim bar at the bottom that reads 'Book a free call →' and links to /contact. It appears after the visitor scrolls past the hero. It hides while the closing band is on screen, and it is never shown on /contact, /ticket or /404. It has no close button, and its height is reserved with body padding-bottom so it never covers footer links.",
+  "One-line price on every service, client and article page, placed near the hero or the first H2. Examples: 'Retainers $1,200–$4,800/mo · strategy $3,000 once · websites from $X → see pricing'. These pages currently state no price: /about, /resources, /method, /tools/checkup, /tools/local-visibility, /tools/ai-opportunity-finder, /articles/not-showing-up-on-google, /articles/nonprofit-google-ad-grant.",
+  "Project pricing component. /investment gets a 'Project work' table: Websites (marketing site / booking & lead flow / web app), Brand identity & messaging, Video production (brand film / social video package), Photography, GoHighLevel setup, and the first AI automation build. Each row shows 'from $X', a typical timeline and a link to the service page. Carson sets the numbers; never invent them. The same rows appear as short excerpts on /services/websites (web rows), /services/marketing (brand, video, photo rows) and /services/technical (web, CRM, AI rows), each linking to /investment.",
+  "Tool result routing. Every tool's result screen ends with one recommended page chosen by the result, plus /contact. Five-Step Check-Up weakest step: Conviction or A sharp offer → /services/strategy; Your people → /services/marketing; The experience → /services/technical; Word of mouth → /services/local-seo. Can Indy Find You? low score → /services/local-seo. Budget Calculator → /investment. 90-Day Plan Starter → /services/strategy. AI Opportunity Finder → /services/ai-automation.",
+  "Photo system: real-looking photos of central Indiana life only. Owners at work in trades, restaurants, retail and salons; founders at laptops or whiteboards; nonprofit staff and volunteers; Indianapolis streets and neighborhoods. No handshakes, boardroom poses, robots or glowing-AI imagery. Never caption or alt-text a stock person as a client or team member. Any slot that shows Carson or the team must use Carson's own photography; Unsplash is only a placeholder for environment shots. Treatment: one consistent warm grade, 4px radius, explicit width and height, AVIF/WebP at 200KB or less, loading=lazy below the fold. No grey captions.",
+  "Proof honesty: until case studies exist, 'proof' links point to /method (how we work), /about (who we are) or a free tool. Never point them to /work."
+ ],
+ "pages": [
+  {
+   "path": "/",
+   "visitor": "Referrals, LinkedIn clicks and branded searches. They want to know what CPC is, whether it is for someone like them, and roughly what it costs.",
+   "problems": [
+    "The 'Client results' button sits right next to the pricing CTA and goes to /work, which has no results. That breaks trust at the price moment.",
+    "The door-picker (local / founders / nonprofits) is text-only, so 'which one is me' takes reading instead of a glance.",
+    "Nothing on the page shows the people behind 'we', and About is not linked anywhere in the main content.",
+    "The page has only 1 photo, versus 4 videos."
+   ],
+   "next_steps": [
+    {
+     "label": "Not sure which tier? Run the Budget Calculator",
+     "href": "/tools/marketing-budget",
+     "where": "Replaces the 'Client results' secondary button in 'What it costs, before you ever call.'"
+    },
+    {
+     "label": "Meet the team →",
+     "href": "/about",
+     "where": "New short team strip with a photo, between the five-steps section and the pricing section"
+    },
+    {
+     "label": "For local businesses → / For founders → / For nonprofits →",
+     "href": "/for/local-businesses",
+     "where": "Make each door card fully clickable, photo included (same for /for/founders and /for/nonprofits)"
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Door card: Local businesses",
+     "subject": "A trades or shop owner at work, such as a plumber at a van or a shop owner behind the counter",
+     "search": "small business owner counter",
+     "orientation": "landscape"
+    },
+    {
+     "slot": "Door card: Founders & startups",
+     "subject": "A founder working at a laptop or sketching on a whiteboard in a small office",
+     "search": "founder whiteboard startup",
+     "orientation": "landscape"
+    },
+    {
+     "slot": "Door card: Nonprofits",
+     "subject": "Volunteers sorting donations or setting up a community event",
+     "search": "volunteers sorting donations",
+     "orientation": "landscape"
+    },
+    {
+     "slot": "Team strip (new)",
+     "subject": "Carson working with an owner at a table (Carson's own photo only)",
+     "search": "Indianapolis coffee shop meeting",
+     "orientation": "landscape"
+    },
+    {
+     "slot": "Behind the closing band 'Bring us the thing you've built'",
+     "subject": "Indianapolis neighborhood street with local storefronts",
+     "search": "Indianapolis Mass Ave",
+     "orientation": "landscape"
+    }
+   ]
+  },
+  {
+   "path": "/about",
+   "visitor": "Someone vetting CPC before booking. They want to know who they would work with, whether the team is really local, and whether it can be trusted.",
+   "problems": [
+    "The page is not in the top nav. Only the footer and mobile menu reach it.",
+    "It has 6 videos and 1 image, and no clear faces of the team.",
+    "'Who we help' links to the home anchor /#who-we-help instead of the client pages.",
+    "It never mentions price or the five-step method, so the vetting visitor has to backtrack."
+   ],
+   "next_steps": [
+    {
+     "label": "See how we work: the five steps",
+     "href": "/method",
+     "where": "Where to next strip, card 1"
+    },
+    {
+     "label": "Prices are on the site: see them",
+     "href": "/investment",
+     "where": "Where to next strip, card 3"
+    },
+    {
+     "label": "Local businesses / Founders / Nonprofits",
+     "href": "/for/local-businesses",
+     "where": "Replaces the 'who we help' → /#who-we-help link in 'So what do we actually do?' with three direct links"
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Hero, beside H1 'The team behind CPC.'",
+     "subject": "Team portrait in an Indianapolis setting (Carson's own photo only)",
+     "search": "Indianapolis downtown street",
+     "orientation": "landscape"
+    },
+    {
+     "slot": "Beside 'Grow central Indiana's small businesses the way we'd grow our own.'",
+     "subject": "A working session with a local owner at a shop counter (Carson's own photo only)",
+     "search": "small business owner laptop shop",
+     "orientation": "portrait"
+    },
+    {
+     "slot": "Beside 'Healthier businesses. Healthier owners.'",
+     "subject": "Central Indiana neighborhood main street, such as Fountain Square or Broad Ripple",
+     "search": "Indianapolis neighborhood storefronts",
+     "orientation": "landscape"
+    }
+   ]
+  },
+  {
+   "path": "/contact",
+   "visitor": "Ready or nearly ready to book. They want low friction, a face, and to know what happens on the call.",
+   "problems": [
+    "The closing band ('Start with a score instead') sends ready visitors away to /tools/checkup. The last thing on the booking page is an exit.",
+    "There is a Check-Up link near the top, ahead of the booking step.",
+    "The page has no photo of the person they will talk to (0 images)."
+   ],
+   "next_steps": [
+    {
+     "label": "Who you'll talk to",
+     "href": "/about",
+     "where": "Short line under the booking embed, next to Carson's photo"
+    },
+    {
+     "label": "Pricing page",
+     "href": "/investment",
+     "where": "Keep the existing in-copy link"
+    },
+    {
+     "label": "Not ready? Take the Five-Step Check-Up",
+     "href": "/tools/checkup",
+     "where": "Demote to a single text link below the form. Remove the 'Start with a score instead' closing band."
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Beside the booking form",
+     "subject": "Friendly portrait of Carson at a laptop (Carson's own photo only)",
+     "search": "Indianapolis cafe laptop",
+     "orientation": "portrait"
+    }
+   ]
+  },
+  {
+   "path": "/investment",
+   "visitor": "Comparing cost, usually arriving from a service page, the nav or an article. They want a number that fits their situation, including one-off projects.",
+   "problems": [
+    "No project-based pricing. Web builds, branding and video production (plus photography, CRM setup and the first AI build) are covered only by 'Bigger builds, quoted on their own', with no starting prices. /services/websites and /services/marketing send visitors here and they find nothing for their project.",
+    "It does not link to /services/websites, /services/marketing or /for/nonprofits (where the nonprofit rate is explained).",
+    "The Lane / System / Partner tiers do not say which kind of client usually picks which.",
+    "The page has no photos (3 videos, 0 images)."
+   ],
+   "next_steps": [
+    {
+     "label": "Websites: what's included",
+     "href": "/services/websites",
+     "where": "Websites row of the new 'Project work' table"
+    },
+    {
+     "label": "Brand, video & photo: how it works",
+     "href": "/services/marketing",
+     "where": "Branding, video production and photography rows of the 'Project work' table"
+    },
+    {
+     "label": "How the nonprofit rate works",
+     "href": "/for/nonprofits",
+     "where": "Under the tier cards, beside the reduced-rate mention"
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Beside the new 'Project work' table",
+     "subject": "A small video crew filming a restaurant or shop owner in their space",
+     "search": "filming small business owner",
+     "orientation": "landscape"
+    },
+    {
+     "slot": "Beside 'Pick how much of it you want off your plate.'",
+     "subject": "An owner reviewing numbers on a laptop at the back counter of their shop",
+     "search": "shop owner laptop counter",
+     "orientation": "portrait"
+    }
+   ]
+  },
+  {
+   "path": "/method",
+   "visitor": "A curious owner who wants to understand how CPC thinks before trusting it, usually coming from home or a tool.",
+   "problems": [
+    "The five steps are abstract and have no images.",
+    "After reading, there is no mapping from each step to the practice that does it, so the visitor cannot get from method to service.",
+    "The page has no photos."
+   ],
+   "next_steps": [
+    {
+     "label": "Take the Five-Step Check-Up",
+     "href": "/tools/checkup",
+     "where": "Keep the existing mid-page section"
+    },
+    {
+     "label": "Which practice handles which step",
+     "href": "/services",
+     "where": "Where to next strip, card 1"
+    },
+    {
+     "label": "What it costs",
+     "href": "/investment",
+     "where": "Where to next strip, card 3"
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Beside H2 'Conviction'",
+     "subject": "An owner sketching their business idea on a whiteboard",
+     "search": "person writing whiteboard",
+     "orientation": "landscape"
+    },
+    {
+     "slot": "Beside H2 'The experience'",
+     "subject": "A barista handing a drink to a regular customer",
+     "search": "barista serving customer",
+     "orientation": "landscape"
+    },
+    {
+     "slot": "Beside H2 'Word of mouth, on purpose'",
+     "subject": "Customers chatting at a neighborhood restaurant counter",
+     "search": "customers restaurant counter",
+     "orientation": "landscape"
+    }
+   ]
+  },
+  {
+   "path": "/resources",
+   "visitor": "DIY owners and searchers looking for free tools or straight answers. Many are not ready to buy.",
+   "problems": [
+    "The outline shows tools and FAQs but no clear 'Articles' heading, even though 7 articles are linked.",
+    "There is no 'start here if…' routing by situation (local, founder, nonprofit).",
+    "No price mention and no photos."
+   ],
+   "next_steps": [
+    {
+     "label": "Local business? Start here",
+     "href": "/for/local-businesses",
+     "where": "New 'Start by situation' row above the tools (with founders and nonprofits)"
+    },
+    {
+     "label": "What the work costs",
+     "href": "/investment",
+     "where": "Where to next strip, card 3"
+    },
+    {
+     "label": "Talk through your score",
+     "href": "/contact",
+     "where": "Keep the existing closing band"
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Page hero",
+     "subject": "An owner working on a laptop in their shop after hours",
+     "search": "small business owner laptop evening",
+     "orientation": "landscape"
+    }
+   ]
+  },
+  {
+   "path": "/services",
+   "visitor": "A comparer who wants to see everything CPC does and find the right practice.",
+   "problems": [
+    "The page has no photos, so the four practice sections look identical.",
+    "'project work → /investment' links land on a page with no project prices.",
+    "'Every service, one screen' covers only Marketing and Technical. Strategy and Coaching are missing from the summary."
+   ],
+   "next_steps": [
+    {
+     "label": "Start with the symptom",
+     "href": "/for/local-businesses",
+     "where": "Keep the existing symptom routing section (also /for/founders and /for/nonprofits)"
+    },
+    {
+     "label": "Project and retainer prices",
+     "href": "/investment",
+     "where": "Where to next strip, card 3"
+    },
+    {
+     "label": "Take the check-up",
+     "href": "/tools/checkup",
+     "where": "Keep the existing closing band secondary"
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Marketing practice section",
+     "subject": "A restaurant owner being filmed for a short social video",
+     "search": "restaurant owner filming",
+     "orientation": "landscape"
+    },
+    {
+     "slot": "Technical practice section",
+     "subject": "An office manager at a desk with laptop and phone, working in a CRM",
+     "search": "office manager laptop phone",
+     "orientation": "landscape"
+    },
+    {
+     "slot": "Strategy practice section",
+     "subject": "A founder and an advisor planning at a whiteboard",
+     "search": "whiteboard planning session",
+     "orientation": "landscape"
+    },
+    {
+     "slot": "Coaching & growth section",
+     "subject": "Two people at a cafe table reviewing a notebook plan",
+     "search": "cafe meeting notebook",
+     "orientation": "landscape"
+    }
+   ]
+  },
+  {
+   "path": "/services/marketing",
+   "visitor": "An owner whose phone got quiet. They want to know what marketing CPC does and what it costs.",
+   "problems": [
+    "Project work (brand identity, video production, photography) is not named inside the practice, which contradicts Carson's Oct 8 decision.",
+    "'Browse client work →' goes to the empty /work page.",
+    "The page has no photos, which is a poor fit for a page selling brand and content."
+   ],
+   "next_steps": [
+    {
+     "label": "Brand, video & photo project prices",
+     "href": "/investment",
+     "where": "New 'Project work' sub-section after 'Four kinds of work, one practice'"
+    },
+    {
+     "label": "How local SEO works",
+     "href": "/services/local-seo",
+     "where": "Keep the existing link in 'The services that live here'"
+    },
+    {
+     "label": "See the five steps we run",
+     "href": "/method",
+     "where": "Replaces 'Browse client work →' in 'What this costs'"
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Hero",
+     "subject": "A salon or barbershop owner photographed at work with a client in the chair",
+     "search": "barber cutting hair",
+     "orientation": "landscape"
+    },
+    {
+     "slot": "New 'Project work' sub-section (brand, video, photo)",
+     "subject": "A camera on a tripod filming a baker or shop owner in their space",
+     "search": "video shoot small business",
+     "orientation": "landscape"
+    },
+    {
+     "slot": "Beside 'Campaigns / Content / Email'",
+     "subject": "A retail owner photographing products on a phone for a social post",
+     "search": "shop owner phone photo",
+     "orientation": "portrait"
+    }
+   ]
+  },
+  {
+   "path": "/services/technical",
+   "visitor": "An owner drowning in disconnected tools, or a founder who wants time back. They want to know what CPC builds.",
+   "problems": [
+    "The page has no photos, so the technical topics feel abstract.",
+    "'Projects or retainers, same numbers' links to /investment, which has no web, CRM or AI project rows yet."
+   ],
+   "next_steps": [
+    {
+     "label": "Websites & web apps",
+     "href": "/services/websites",
+     "where": "Keep the existing link in 'Five things we build'"
+    },
+    {
+     "label": "Find what to automate first",
+     "href": "/tools/ai-opportunity-finder",
+     "where": "Where to next strip, card 2"
+    },
+    {
+     "label": "Project prices for builds",
+     "href": "/investment",
+     "where": "Project pricing excerpt inside 'Projects or retainers, same numbers'"
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Beside 'Eleven tabs, none of them talking'",
+     "subject": "An owner at a cluttered desk juggling a laptop, phone and paper calendar",
+     "search": "busy desk laptop phone",
+     "orientation": "landscape"
+    },
+    {
+     "slot": "Beside 'A human approves every send'",
+     "subject": "A contractor checking a text message on a phone in a work truck",
+     "search": "contractor phone truck",
+     "orientation": "portrait"
+    }
+   ]
+  },
+  {
+   "path": "/services/strategy",
+   "visitor": "A founder or owner asking 'what should we do first?' who is weighing the $3,000 engagement.",
+   "problems": [
+    "The page has no photos.",
+    "The $1,500 credit toward a retainer (Carson's decision) should appear near the price so the next step is clear."
+   ],
+   "next_steps": [
+    {
+     "label": "Try the free 90-Day Plan Starter",
+     "href": "/tools/90-day-plan",
+     "where": "Keep the existing section"
+    },
+    {
+     "label": "What happens after the plan: fractional CMO",
+     "href": "/services/coaching",
+     "where": "Where to next strip, card 1"
+    },
+    {
+     "label": "Full pricing, including the $1,500 credit",
+     "href": "/investment",
+     "where": "Where to next strip, card 3"
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Hero",
+     "subject": "A founder sketching a plan on a whiteboard",
+     "search": "founder whiteboard planning",
+     "orientation": "landscape"
+    },
+    {
+     "slot": "Beside 'Four deliverables and a walkthrough'",
+     "subject": "A notebook and laptop on a table during a working session",
+     "search": "notebook laptop planning",
+     "orientation": "landscape"
+    }
+   ]
+  },
+  {
+   "path": "/services/coaching",
+   "visitor": "Founders and owners searching 'fractional CMO'. They are comparing against an agency or a full-time hire.",
+   "problems": [
+    "'Browse what we can show →' goes to the empty /work page.",
+    "The page has no photos."
+   ],
+   "next_steps": [
+    {
+     "label": "Start with the $3,000 strategy engagement",
+     "href": "/services/strategy",
+     "where": "Where to next strip, card 1"
+    },
+    {
+     "label": "How we work: the five steps",
+     "href": "/method",
+     "where": "Replaces 'Browse what we can show →' in the pricing section"
+    },
+    {
+     "label": "See the full pricing page",
+     "href": "/investment",
+     "where": "Keep the existing button"
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Hero",
+     "subject": "An owner and an advisor at a cafe table reviewing a laptop",
+     "search": "cafe meeting laptop",
+     "orientation": "landscape"
+    },
+    {
+     "slot": "Beside 'Who this is for. And who it isn't.'",
+     "subject": "A founder on a phone call at a standing desk",
+     "search": "founder phone call office",
+     "orientation": "portrait"
+    }
+   ]
+  },
+  {
+   "path": "/services/websites",
+   "visitor": "An owner who needs a new or better site and wants timelines, ownership and price.",
+   "problems": [
+    "The hero secondary CTA 'See how we build' goes to the empty /work page. This is the weakest handoff on the site.",
+    "'Quoted per project, before work starts.' sends visitors to /investment, which has no web prices.",
+    "No link back to the Technical practice, and no photos."
+   ],
+   "next_steps": [
+    {
+     "label": "Website project prices",
+     "href": "/investment",
+     "where": "Replaces the hero 'See how we build' link. Add an inline 'from $X' web-build excerpt in 'Quoted per project'."
+    },
+    {
+     "label": "Local SEO built into the launch",
+     "href": "/services/local-seo",
+     "where": "Keep the existing link in 'Built to load before doubt sets in.'"
+    },
+    {
+     "label": "Everything the Technical practice builds",
+     "href": "/services/technical",
+     "where": "Where to next strip, card 1"
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Hero",
+     "subject": "A customer browsing a local business website on a phone in a shop",
+     "search": "person phone browsing store",
+     "orientation": "landscape"
+    },
+    {
+     "slot": "Beside 'How a build actually goes.'",
+     "subject": "A designer's laptop with a site build open on a work table",
+     "search": "laptop web design desk",
+     "orientation": "landscape"
+    }
+   ]
+  },
+  {
+   "path": "/services/ai-automation",
+   "visitor": "An owner who has heard about AI agents and wants practical, safe uses with a price.",
+   "problems": [
+    "No photos.",
+    "It does not link up to the Technical practice."
+   ],
+   "next_steps": [
+    {
+     "label": "Open the AI Opportunity Finder",
+     "href": "/tools/ai-opportunity-finder",
+     "where": "Keep the existing hero and section CTA"
+    },
+    {
+     "label": "GoHighLevel setup",
+     "href": "/services/crm-gohighlevel",
+     "where": "Where to next strip, card 1"
+    },
+    {
+     "label": "Rate card",
+     "href": "/investment",
+     "where": "Where to next strip, card 3"
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Beside 'Five jobs worth handing to an agent.'",
+     "subject": "A front-desk worker at a salon or clinic scheduling on a laptop",
+     "search": "front desk scheduling laptop",
+     "orientation": "landscape"
+    },
+    {
+     "slot": "Beside 'Your name is on it, so you sign off.'",
+     "subject": "An owner reviewing a draft message on a phone before sending",
+     "search": "person reading phone",
+     "orientation": "portrait"
+    }
+   ]
+  },
+  {
+   "path": "/services/crm-gohighlevel",
+   "visitor": "An owner searching GoHighLevel setup who is tired of missed calls and leads that go nowhere.",
+   "problems": [
+    "No photos.",
+    "No link up to the Technical practice."
+   ],
+   "next_steps": [
+    {
+     "label": "Is GoHighLevel worth it?",
+     "href": "/articles/is-gohighlevel-worth-it",
+     "where": "Keep the existing link"
+    },
+    {
+     "label": "AI and automation on top of the CRM",
+     "href": "/services/ai-automation",
+     "where": "Where to next strip, card 1"
+    },
+    {
+     "label": "Rate card",
+     "href": "/investment",
+     "where": "Where to next strip, card 3"
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Beside 'Built for people who answer from the truck.'",
+     "subject": "A trades worker answering a text on a phone in a work truck",
+     "search": "tradesman phone truck",
+     "orientation": "portrait"
+    },
+    {
+     "slot": "Beside 'Three automations carry most of the weight.'",
+     "subject": "A salon receptionist confirming appointments",
+     "search": "salon reception desk",
+     "orientation": "landscape"
+    }
+   ]
+  },
+  {
+   "path": "/services/analytics",
+   "visitor": "An owner or nonprofit who cannot tell what is working and wants trustworthy numbers.",
+   "problems": [
+    "No photos.",
+    "No link up to the Technical practice."
+   ],
+   "next_steps": [
+    {
+     "label": "Google Ads, tracked properly",
+     "href": "/services/google-ads",
+     "where": "Keep the existing link"
+    },
+    {
+     "label": "Every retainer includes reporting",
+     "href": "/investment",
+     "where": "Where to next strip, card 3"
+    },
+    {
+     "label": "How we work with nonprofits",
+     "href": "/for/nonprofits",
+     "where": "Keep the existing button"
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Beside 'Most dashboards exist to look busy.'",
+     "subject": "An owner reviewing a simple report on a laptop at a kitchen table",
+     "search": "person reviewing laptop report",
+     "orientation": "landscape"
+    },
+    {
+     "slot": "Beside 'Your board wants one page.'",
+     "subject": "Nonprofit staff around a table looking at a printed page",
+     "search": "nonprofit staff meeting",
+     "orientation": "landscape"
+    }
+   ]
+  },
+  {
+   "path": "/services/local-seo",
+   "visitor": "A local business owner searching 'local SEO Indianapolis' who wants to show up in the map pack.",
+   "problems": [
+    "No photos.",
+    "No link up to the Marketing practice."
+   ],
+   "next_steps": [
+    {
+     "label": "Run the free visibility check",
+     "href": "/tools/local-visibility",
+     "where": "Keep the existing hero CTA"
+    },
+    {
+     "label": "Google Ads, once you're ready",
+     "href": "/services/google-ads",
+     "where": "Where to next strip, card 1"
+    },
+    {
+     "label": "Rate card",
+     "href": "/investment",
+     "where": "Keep the existing button"
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Hero",
+     "subject": "A person searching on a phone on an Indianapolis sidewalk",
+     "search": "person phone city sidewalk",
+     "orientation": "landscape"
+    },
+    {
+     "slot": "Beside 'Built for businesses people drive to.'",
+     "subject": "Local storefronts on an Indianapolis street",
+     "search": "Indianapolis storefront",
+     "orientation": "landscape"
+    }
+   ]
+  },
+  {
+   "path": "/services/google-ads",
+   "visitor": "An owner thinking about paid ads who wants honest management and to know whether ads even make sense yet.",
+   "problems": [
+    "No photos.",
+    "No link up to the Marketing practice."
+   ],
+   "next_steps": [
+    {
+     "label": "Try the free Budget Calculator",
+     "href": "/tools/marketing-budget",
+     "where": "Where to next strip, card 2"
+    },
+    {
+     "label": "Not ready? Start with local SEO",
+     "href": "/services/local-seo",
+     "where": "Keep the existing hero link"
+    },
+    {
+     "label": "See every price",
+     "href": "/investment",
+     "where": "Keep the existing button"
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Hero",
+     "subject": "A home-services worker loading tools into a van",
+     "search": "contractor van tools",
+     "orientation": "landscape"
+    },
+    {
+     "slot": "Beside 'A report you can read in the truck.'",
+     "subject": "A contractor reading a phone in the driver's seat",
+     "search": "man phone truck cab",
+     "orientation": "portrait"
+    }
+   ]
+  },
+  {
+   "path": "/services/google-ad-grants",
+   "visitor": "A nonprofit ED or development director who wants to use the $10,000/mo grant without getting suspended.",
+   "problems": [
+    "No photos.",
+    "No link up to the Marketing practice."
+   ],
+   "next_steps": [
+    {
+     "label": "Read how the grant works",
+     "href": "/articles/nonprofit-google-ad-grant",
+     "where": "Keep the existing link"
+    },
+    {
+     "label": "The nonprofit rate",
+     "href": "/investment",
+     "where": "Keep the existing button"
+    },
+    {
+     "label": "Everything we do for nonprofits",
+     "href": "/for/nonprofits",
+     "where": "Where to next strip, card 1"
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Hero",
+     "subject": "Nonprofit volunteers at a community table handing out materials",
+     "search": "volunteers community event",
+     "orientation": "landscape"
+    },
+    {
+     "slot": "Beside 'Donors, yes. Volunteers too.'",
+     "subject": "Volunteers working together at a food pantry",
+     "search": "food pantry volunteers",
+     "orientation": "landscape"
+    }
+   ]
+  },
+  {
+   "path": "/for/local-businesses",
+   "visitor": "An Indianapolis trades, restaurant, retail or salon owner who is busy but not growing. They want to know whether this fits and what comes first.",
+   "problems": [
+    "'How we report results →' goes to the empty /work page.",
+    "The page has no photos even though it names trades, restaurants, shops and salons, which are the easiest audience to show.",
+    "The pathway is good (SEO → lead follow-up → reviews → ads), but each step is a text link with no visual weight."
+   ],
+   "next_steps": [
+    {
+     "label": "How local SEO works",
+     "href": "/services/local-seo",
+     "where": "Where to next strip, card 1 (first step in 'The order we'd do it in')"
+    },
+    {
+     "label": "See if Indy can find you",
+     "href": "/tools/local-visibility",
+     "where": "Keep the existing hero secondary CTA"
+    },
+    {
+     "label": "How we report: the five steps",
+     "href": "/method",
+     "where": "Replaces 'How we report results →' (/work) in 'The questions you'd ask anyway'"
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Hero",
+     "subject": "An HVAC or plumbing technician working at a customer's home",
+     "search": "plumber at work",
+     "orientation": "landscape"
+    },
+    {
+     "slot": "Beside 'Trades & home services' / 'Restaurants, shops & salons'",
+     "subject": "A restaurant owner in their kitchen or behind the counter",
+     "search": "restaurant owner kitchen",
+     "orientation": "portrait"
+    },
+    {
+     "slot": "Beside 'Reviews, asked for while the customer is happy'",
+     "subject": "A salon owner chatting with a happy customer at checkout",
+     "search": "salon owner customer",
+     "orientation": "landscape"
+    }
+   ]
+  },
+  {
+   "path": "/for/founders",
+   "visitor": "A startup founder with a working product but no distribution. They want to know whether CPC fits their stage and what it costs.",
+   "problems": [
+    "'No founder case studies yet' is honest, but it links to the empty /work page.",
+    "The page has no photos."
+   ],
+   "next_steps": [
+    {
+     "label": "What's in the strategy engagement",
+     "href": "/services/strategy",
+     "where": "Where to next strip, card 1"
+    },
+    {
+     "label": "Draft a 90-day plan",
+     "href": "/tools/90-day-plan",
+     "where": "Keep the existing hero secondary"
+    },
+    {
+     "label": "See every price",
+     "href": "/investment",
+     "where": "Keep the existing button. Remove the 'work page' link from the case-studies section and keep the 'method page' link."
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Hero",
+     "subject": "A founder at a laptop in a small coworking space",
+     "search": "founder laptop coworking",
+     "orientation": "landscape"
+    },
+    {
+     "slot": "Beside 'Strategy first. Then a CMO who also builds.'",
+     "subject": "A small team planning around a whiteboard",
+     "search": "small team whiteboard",
+     "orientation": "landscape"
+    }
+   ]
+  },
+  {
+   "path": "/for/nonprofits",
+   "visitor": "A nonprofit ED or development director wearing five hats who wants more donors and volunteers on a small budget.",
+   "problems": [
+    "The page has no photos, despite a section about the people who show up on Saturday.",
+    "The hero secondary uses an in-page anchor, which is fine. The page is otherwise a strong pathway."
+   ],
+   "next_steps": [
+    {
+     "label": "How we manage the Ad Grant",
+     "href": "/services/google-ad-grants",
+     "where": "Where to next strip, card 1"
+    },
+    {
+     "label": "Take the five-step check-up",
+     "href": "/tools/checkup",
+     "where": "Where to next strip, card 2"
+    },
+    {
+     "label": "See all published pricing",
+     "href": "/investment",
+     "where": "Keep the existing button"
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Hero",
+     "subject": "A nonprofit staffer at a crowded desk with a laptop and paperwork",
+     "search": "nonprofit office desk",
+     "orientation": "landscape"
+    },
+    {
+     "slot": "Beside 'The same system recruits the people who show up on Saturday'",
+     "subject": "Volunteers working together at a Saturday community event",
+     "search": "volunteers saturday event",
+     "orientation": "landscape"
+    },
+    {
+     "slot": "Beside 'Numbers your board can read'",
+     "subject": "A small group around a meeting table in a community center",
+     "search": "community center meeting",
+     "orientation": "landscape"
+    }
+   ]
+  },
+  {
+   "path": "/articles/ai-agents-for-small-business",
+   "visitor": "A searcher or AI-answer reader asking how to use AI agents in a small business.",
+   "problems": [
+    "Needs a header photo.",
+    "The closing band goes to /contact. The AI Opportunity Finder should be a visible second option there."
+   ],
+   "next_steps": [
+    {
+     "label": "AI & automation service",
+     "href": "/services/ai-automation",
+     "where": "Where to next strip, card 1"
+    },
+    {
+     "label": "Open the AI Opportunity Finder",
+     "href": "/tools/ai-opportunity-finder",
+     "where": "Closing band secondary button"
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Article header image",
+     "subject": "A shop owner checking an automated message on a phone at the counter",
+     "search": "shop owner phone counter",
+     "orientation": "landscape"
+    }
+   ]
+  },
+  {
+   "path": "/articles/fractional-cmo-cost",
+   "visitor": "A founder or owner researching what a fractional CMO costs.",
+   "problems": [
+    "Needs a header photo."
+   ],
+   "next_steps": [
+    {
+     "label": "Our fractional CMO practice",
+     "href": "/services/coaching",
+     "where": "Where to next strip, card 1"
+    },
+    {
+     "label": "See our pricing",
+     "href": "/investment",
+     "where": "Where to next strip, card 3"
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Article header image",
+     "subject": "A founder reviewing a budget in a notebook beside a laptop",
+     "search": "founder budget notebook",
+     "orientation": "landscape"
+    }
+   ]
+  },
+  {
+   "path": "/articles/fractional-cmo-vs-marketing-agency",
+   "visitor": "A searcher deciding between a fractional CMO and an agency.",
+   "problems": [
+    "Needs a header photo."
+   ],
+   "next_steps": [
+    {
+     "label": "Fractional CMO with a build team",
+     "href": "/services/coaching",
+     "where": "Where to next strip, card 1"
+    },
+    {
+     "label": "What it costs",
+     "href": "/investment",
+     "where": "Where to next strip, card 3"
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Article header image",
+     "subject": "Two people at a whiteboard mapping out a plan",
+     "search": "two people whiteboard",
+     "orientation": "landscape"
+    }
+   ]
+  },
+  {
+   "path": "/articles/is-gohighlevel-worth-it",
+   "visitor": "A searcher evaluating GoHighLevel before signing up.",
+   "problems": [
+    "Needs a header photo."
+   ],
+   "next_steps": [
+    {
+     "label": "GoHighLevel setup service",
+     "href": "/services/crm-gohighlevel",
+     "where": "Where to next strip, card 1"
+    },
+    {
+     "label": "What we'd charge to run it",
+     "href": "/investment",
+     "where": "Where to next strip, card 3"
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Article header image",
+     "subject": "A contractor juggling a phone and a laptop on a truck tailgate",
+     "search": "contractor laptop truck",
+     "orientation": "landscape"
+    }
+   ]
+  },
+  {
+   "path": "/articles/nonprofit-google-ad-grant",
+   "visitor": "A nonprofit staffer searching for how the Google Ad Grant works.",
+   "problems": [
+    "No price mention and no /contact link. The only next step is the service page.",
+    "Needs a header photo."
+   ],
+   "next_steps": [
+    {
+     "label": "Get a free Ad Grant checkup",
+     "href": "/services/google-ad-grants",
+     "where": "Keep the existing closing button"
+    },
+    {
+     "label": "The nonprofit rate",
+     "href": "/investment",
+     "where": "Where to next strip, card 3"
+    },
+    {
+     "label": "Talk it through with Carson",
+     "href": "/contact",
+     "where": "Closing band secondary button"
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Article header image",
+     "subject": "Nonprofit volunteers packing boxes at a community center",
+     "search": "volunteers packing boxes",
+     "orientation": "landscape"
+    }
+   ]
+  },
+  {
+   "path": "/articles/not-showing-up-on-google",
+   "visitor": "A local owner searching why their business does not appear on Google.",
+   "problems": [
+    "No price mention anywhere on the page.",
+    "Needs a header photo."
+   ],
+   "next_steps": [
+    {
+     "label": "Local SEO service",
+     "href": "/services/local-seo",
+     "where": "Where to next strip, card 1"
+    },
+    {
+     "label": "Run the visibility check",
+     "href": "/tools/local-visibility",
+     "where": "Keep the existing mid-article and closing secondary"
+    },
+    {
+     "label": "Local SEO is part of every retainer",
+     "href": "/investment",
+     "where": "Where to next strip, card 3"
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Article header image",
+     "subject": "A person searching a map app on a phone outside local storefronts",
+     "search": "phone map street",
+     "orientation": "landscape"
+    }
+   ]
+  },
+  {
+   "path": "/articles/small-business-marketing-budget",
+   "visitor": "An owner searching how much to spend on marketing.",
+   "problems": [
+    "No link to a specific service. It hands off only to the client page and the calculator.",
+    "Needs a header photo."
+   ],
+   "next_steps": [
+    {
+     "label": "Run the Budget Calculator",
+     "href": "/tools/marketing-budget",
+     "where": "Keep the existing mid-article button"
+    },
+    {
+     "label": "Where the first dollars go: local SEO",
+     "href": "/services/local-seo",
+     "where": "Where to next strip, card 1"
+    },
+    {
+     "label": "Our published prices",
+     "href": "/investment",
+     "where": "Where to next strip, card 3"
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Article header image",
+     "subject": "An owner at a counter with receipts and a calculator",
+     "search": "small business receipts calculator",
+     "orientation": "landscape"
+    }
+   ]
+  },
+  {
+   "path": "/tools/checkup",
+   "visitor": "An owner who clicked the site's main secondary CTA and wants a quick score.",
+   "problems": [
+    "The result routes only to /method or /contact. Nothing ties the weakest step to the practice that fixes it, even though this is the most-promoted tool on the site.",
+    "No price mention."
+   ],
+   "next_steps": [
+    {
+     "label": "Your weakest step, fixed: matching practice",
+     "href": "/services/strategy",
+     "where": "Result screen. Dynamic by weakest step: Conviction or Offer → /services/strategy; Your people → /services/marketing; Experience → /services/technical; Word of mouth → /services/local-seo"
+    },
+    {
+     "label": "Bring your score to a call",
+     "href": "/contact",
+     "where": "Keep the existing closing band"
+    }
+   ],
+   "photos": []
+  },
+  {
+   "path": "/tools/local-visibility",
+   "visitor": "A local owner checking whether Indianapolis can find them on Google.",
+   "problems": [
+    "No price mention after the result."
+   ],
+   "next_steps": [
+    {
+     "label": "See how local SEO works here",
+     "href": "/services/local-seo",
+     "where": "Result screen, shown when the score is low"
+    },
+    {
+     "label": "Book a free call",
+     "href": "/contact",
+     "where": "Keep the existing closing band"
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Hero, beside H1",
+     "subject": "Storefront signs on an Indianapolis street",
+     "search": "Indianapolis storefront sign",
+     "orientation": "landscape"
+    }
+   ]
+  },
+  {
+   "path": "/tools/ai-opportunity-finder",
+   "visitor": "An owner who wants to know which chore to automate first.",
+   "problems": [
+    "No price mention after the result."
+   ],
+   "next_steps": [
+    {
+     "label": "What our AI work looks like",
+     "href": "/services/ai-automation",
+     "where": "Result screen recommendation"
+    },
+    {
+     "label": "Book a free scoping call",
+     "href": "/contact",
+     "where": "Keep the existing closing band"
+    }
+   ],
+   "photos": []
+  },
+  {
+   "path": "/tools/marketing-budget",
+   "visitor": "An owner who wants a marketing budget number.",
+   "problems": [
+    "The handoff is fine. The result should point straight to /investment."
+   ],
+   "next_steps": [
+    {
+     "label": "See where our prices sit against your number",
+     "href": "/investment",
+     "where": "Result screen"
+    },
+    {
+     "label": "Book a free call",
+     "href": "/contact",
+     "where": "Keep the existing closing band"
+    }
+   ],
+   "photos": []
+  },
+  {
+   "path": "/tools/90-day-plan",
+   "visitor": "A founder or owner who wants a one-page quarterly plan.",
+   "problems": [
+    "No price mention. The $3,000 strategy link is mid-page only."
+   ],
+   "next_steps": [
+    {
+     "label": "The $3,000 strategy engagement",
+     "href": "/services/strategy",
+     "where": "Result screen recommendation"
+    },
+    {
+     "label": "Book a discovery call",
+     "href": "/contact",
+     "where": "Keep the existing closing band"
+    }
+   ],
+   "photos": []
+  },
+  {
+   "path": "/work",
+   "visitor": "Someone looking for proof, sent here by nav and in-page 'Client results' links.",
+   "problems": [
+    "It is a holding page with no case studies, yet it is linked from the top nav and 7+ in-page proof CTAs. The visitor feels misled.",
+    "There is no route forward except /contact and tools."
+   ],
+   "next_steps": [
+    {
+     "label": "How we work: the five steps",
+     "href": "/method",
+     "where": "'See how we think' section, added card"
+    },
+    {
+     "label": "Who you'd work with",
+     "href": "/about",
+     "where": "Where to next strip, card 1"
+    },
+    {
+     "label": "Set up a client call",
+     "href": "/contact",
+     "where": "Keep the existing closing band"
+    }
+   ],
+   "photos": [
+    {
+     "slot": "Beside 'We're writing these up now.'",
+     "subject": "An Indianapolis neighborhood main street with small businesses (not labeled as a client)",
+     "search": "Indianapolis main street",
+     "orientation": "landscape"
+    }
+   ]
+  },
+  {
+   "path": "/404",
+   "visitor": "Someone who followed a broken link and needs a way back in.",
+   "problems": [
+    "There is no visible set of routes back into the journey."
+   ],
+   "next_steps": [
+    {
+     "label": "Home",
+     "href": "/",
+     "where": "Under the H1"
+    },
+    {
+     "label": "All services",
+     "href": "/services",
+     "where": "Under the H1"
+    },
+    {
+     "label": "Pricing",
+     "href": "/investment",
+     "where": "Under the H1"
+    }
+   ],
+   "photos": []
+  }
+ ]
+}

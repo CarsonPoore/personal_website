@@ -14,8 +14,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
 <link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
-<link rel="stylesheet" href="/styles.css?v=20261008-2" />
-<script defer src="/site.js?v=20261008-2"></script>
+<link rel="stylesheet" href="/styles.css?v=20261008-5" />
+<script defer src="/site.js?v=20261008-3"></script>
 <style>
   /* Nonprofits pathway — page-specific layout */
   .np-grant {
@@ -172,12 +172,6 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Who we help",
-          "item": "https://carsonpoore.com/#who-we-help"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
           "name": "Nonprofits"
         }
       ]
@@ -238,17 +232,31 @@
     <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
     <nav class="nav__links" aria-label="Primary">
       <div class="nav__item has-drop">
-        <a href="/services">Services</a>
-        <div class="nav__drop" aria-label="Services">
-          <a href="/services/marketing">Marketing</a>
-          <a href="/services/technical">Technical</a>
-          <a href="/services/strategy">Strategy</a>
-          <a href="/services/coaching">Coaching &amp; growth</a>
-          <a class="nav__drop-all" href="/services">All services</a>
+        <a href="/services" class="nav__top">Services</a>
+        <div class="nav__drop nav__drop--wide" aria-label="Services">
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/marketing">Marketing</a>
+            <a class="nav__drop-sub" href="/services/local-seo">Local SEO</a>
+            <a class="nav__drop-sub" href="/services/google-ad-grants">Google Ad Grants</a>
+            <a class="nav__drop-head" href="/services/strategy">Strategy</a>
+            <a class="nav__drop-head" href="/services/coaching">Coaching &amp; growth</a>
+          </div>
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/technical">Technical</a>
+            <a class="nav__drop-sub" href="/services/websites">Websites &amp; web apps</a>
+            <a class="nav__drop-sub" href="/services/ai-automation">AI &amp; automation</a>
+            <a class="nav__drop-sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+            <a class="nav__drop-sub" href="/services/google-ads">Google Ads</a>
+            <a class="nav__drop-sub" href="/services/analytics">GA4 &amp; analytics</a>
+          </div>
+          <div class="nav__drop-foot">
+            <a href="/services">All services</a>
+            <a href="/investment#projects">Project pricing</a>
+          </div>
         </div>
       </div>
       <div class="nav__item has-drop">
-        <a href="/#who-we-help">Who we help</a>
+        <button type="button" class="nav__top nav__toggle" aria-expanded="false">Who we help</button>
         <div class="nav__drop" aria-label="Who we help">
           <a href="/for/local-businesses">Local businesses</a>
           <a href="/for/founders">Founders &amp; startups</a>
@@ -257,8 +265,8 @@
       </div>
       <a href="/method">Method</a>
       <a href="/investment">Pricing</a>
-      <a href="/work">Work</a>
       <a href="/resources">Resources</a>
+      <a href="/about">About</a>
       <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
     </nav>
     <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -267,7 +275,14 @@
 <div class="mobile-menu" aria-hidden="true">
   <span class="mobile-menu__group">Services</span>
   <a href="/services/marketing">Marketing</a>
+  <a class="mobile-menu__sub" href="/services/local-seo">Local SEO</a>
+  <a class="mobile-menu__sub" href="/services/google-ad-grants">Google Ad Grants</a>
   <a href="/services/technical">Technical</a>
+  <a class="mobile-menu__sub" href="/services/websites">Websites &amp; web apps</a>
+  <a class="mobile-menu__sub" href="/services/ai-automation">AI &amp; automation</a>
+  <a class="mobile-menu__sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+  <a class="mobile-menu__sub" href="/services/google-ads">Google Ads</a>
+  <a class="mobile-menu__sub" href="/services/analytics">GA4 &amp; analytics</a>
   <a href="/services/strategy">Strategy</a>
   <a href="/services/coaching">Coaching &amp; growth</a>
   <span class="mobile-menu__group">Who we help</span>
@@ -277,7 +292,6 @@
   <span class="mobile-menu__group">Explore</span>
   <a href="/method">Method</a>
   <a href="/investment">Pricing</a>
-  <a href="/work">Work</a>
   <a href="/resources">Resources</a>
   <a href="/about">About</a>
   <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
@@ -291,7 +305,6 @@
       <nav class="crumbs" aria-label="Breadcrumb">
         <ol>
           <li><a href="/">Home</a></li>
-          <li><a href="/#who-we-help">Who we help</a></li>
           <li aria-current="page">Nonprofits</li>
         </ol>
       </nav>
@@ -313,14 +326,22 @@
 
   <!-- THEIR WORLD -->
   <section class="section">
-    <div class="wrap wrap--narrow">
-      <div class="sec-head">
+    <div class="wrap">
+      <div class="photo-split photo-split--flip">
+        <figure class="photo photo--wide photo--amber reveal"><img src="/media/photos/np-1-desk.jpg" alt="Two women laughing together over laptops at a wooden counter" width="1600" height="1000" loading="lazy" decoding="async" /></figure>
+<!-- Photo: Emma Dau / Unsplash — https://unsplash.com/photos/two-women-using-laptops-n_4iTY1KmDE -->
+        <div>
+          <div class="sec-head">
         <h2 class="reveal" data-delay="1">Marketing falls to whoever has ten spare minutes.</h2>
       </div>
       <div class="mt-lg">
         <p class="reveal">You&rsquo;re the executive director. You&rsquo;re also the development director, the volunteer coordinator, the grant writer, and on Thursdays, the entire marketing department. Nobody on staff has marketing as their actual job. So it happens in the gaps between a site visit and a grant report, when it happens at all.</p>
         <p class="mt-md reveal">We hear the same few sentences from almost every small nonprofit we sit down with:</p>
       </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap wrap--narrow">
       <ul class="q-list mt-lg reveal" data-delay="1">
         <li>The newsletter goes out when someone has time.</li>
         <li>Our donor data is in three spreadsheets, and nobody trusts any of them.</li>
@@ -396,6 +417,15 @@
           <a class="tlink" href="/services/analytics">GA4 and reporting <span aria-hidden="true">→</span></a>
         </div>
       </div>
+
+      <div class="photo-split mt-xl">
+        <div>
+          <h3 class="reveal">Built for the board packet</h3>
+          <p class="mt-sm reveal" data-delay="1">Boards read better when the numbers fit on one page. We build the report around the questions your board asks, then walk you through it before the first meeting.</p>
+        </div>
+        <figure class="photo photo--wide photo--cobalt reveal"><img src="/media/photos/np-3-table.jpg" alt="A younger and an older woman talking at a table during a community art class" width="1600" height="1000" loading="lazy" decoding="async" /></figure>
+<!-- Photo: Centre for Ageing Better / Unsplash — https://unsplash.com/photos/women-talking-at-art-class-table-8NDGA3RepNg -->
+      </div>
     </div>
   </section>
 
@@ -407,6 +437,8 @@
           <h2 class="reveal mt-sm" data-delay="1">The same system recruits the people who show up on Saturday</h2>
           <p class="mt-md reveal" data-delay="2">Donors get most of the attention in nonprofit marketing. Your volunteers matter just as much, and they&rsquo;re harder to find than they used to be.</p>
           <p class="mt-md reveal" data-delay="2">So we build for both. Ad Grant campaigns can point at your volunteer sign-up page. The CRM remembers who came to the spring build and invites them back for the fall one. A small team can keep track of hundreds of relationships that way, while the human part (the handshake, the thank-you call) stays with you.</p>
+          <figure class="photo photo--wide photo--navy mt-xl reveal" style="margin-right:18px"><img src="/media/photos/np-2-volunteers.jpg" alt="Three volunteers in yellow Volunteers shirts watching a crowd at an outdoor city event" width="1600" height="1000" loading="lazy" decoding="async" /></figure>
+<!-- Photo: Rashpal Singh / Unsplash — https://unsplash.com/photos/three-men-wearing-yellow-volunteers-shirts-qKVSEuBT5EY -->
         </div>
         <div class="motion-frame motion-frame--light reveal" data-delay="2">
           <video class="motion-loop" muted loop playsinline preload="none" poster="/media/motion/tactics-to-system.jpg?v=20261008b" width="960" height="800" aria-hidden="true"><source src="/media/motion/tactics-to-system.webm?v=20261008b" type="video/webm" /><source src="/media/motion/tactics-to-system.mp4?v=20261008b" type="video/mp4" /></video>
@@ -468,6 +500,13 @@
     </div>
   </section>
 
+  <!-- WHERE TO NEXT -->
+  <section class="next-strip"><div class="wrap"><h2 class="next-strip__title reveal">Where to next</h2><div class="next-grid">
+      <a class="next-card reveal" href="/services/google-ad-grants"><strong>How we manage the Ad Grant</strong><span>Eligibility, the 5% rule, and the monthly work that keeps the account active.</span><span class="arr-link">See the Ad Grant work →</span></a>
+      <a class="next-card reveal" href="/tools/checkup"><strong>Take the five-step check-up</strong><span>Ten questions, a score, and the one step quietly dragging the rest down.</span><span class="arr-link">Take the check-up →</span></a>
+      <a class="next-card reveal" href="/investment"><strong>Retainers start at $1,200 a month</strong><span>Nonprofits get a reduced rate on every tier. Every price is printed.</span><span class="arr-link">See the pricing →</span></a>
+  </div></div></section>
+
   <!-- CLOSING -->
   <section class="closing">
     <div class="closing__inner">
@@ -513,7 +552,7 @@
           <li><a href="/for/local-businesses">Local businesses</a></li>
           <li><a href="/for/founders">Founders &amp; startups</a></li>
           <li><a href="/for/nonprofits">Nonprofits</a></li>
-          <li><a href="/work">Client results</a></li>
+          <li><a href="/work">Work</a></li>
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
@@ -543,6 +582,7 @@
           <li><a href="/about">About</a></li>
           <li><a href="/method">Method</a></li>
           <li><a href="/investment">Pricing</a></li>
+          <li><a href="/investment#projects">Project pricing</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
       </div>

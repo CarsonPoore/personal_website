@@ -14,12 +14,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
 <link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
-<link rel="stylesheet" href="/styles.css?v=20261008-2" />
+<link rel="stylesheet" href="/styles.css?v=20261008-5" />
 <link rel="stylesheet" href="/motion-c.css?v=20261008-1" />
-<script defer src="/site.js?v=20261008-2"></script>
+<script defer src="/site.js?v=20261008-3"></script>
 <style>
   /* Work holding page: page-specific layout */
   .wk-holding { max-width: 760px; margin-inline: auto; }
+  .wk-split .wk-holding { max-width: none; margin: 0; text-align: left; }
+  .wk-split .wk-holding h2, .wk-split .wk-holding p { margin-inline: 0; }
+  .wk-split .row-cta { justify-content: flex-start !important; }
   .wk-holding .label { color: var(--cobalt); }
   .wk-holding h2 { max-width: 24ch; margin-inline: auto; }
   .wk-holding p { color: var(--ink-2); max-width: 52ch; margin-inline: auto; }
@@ -55,8 +58,7 @@
   .wk-rules strong { color: #fff; font-weight: 700; font-size: 1.1rem; letter-spacing: -0.01em; }
   .wk-rules span { color: var(--cream-2); font-size: 0.98rem; line-height: 1.55; }
 
-  .wk-cards.cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  @media (max-width: 900px) { .wk-cards.cards { grid-template-columns: 1fr; } }
+  .wk-cards.cards { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
   .wk-cards .label { color: var(--cobalt); }
   .wk-cards .card p { flex: 1; }
   .wk-cards .tlink { align-self: flex-start; margin-top: 6px; }
@@ -131,17 +133,31 @@
     <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
     <nav class="nav__links" aria-label="Primary">
       <div class="nav__item has-drop">
-        <a href="/services">Services</a>
-        <div class="nav__drop" aria-label="Services">
-          <a href="/services/marketing">Marketing</a>
-          <a href="/services/technical">Technical</a>
-          <a href="/services/strategy">Strategy</a>
-          <a href="/services/coaching">Coaching &amp; growth</a>
-          <a class="nav__drop-all" href="/services">All services</a>
+        <a href="/services" class="nav__top">Services</a>
+        <div class="nav__drop nav__drop--wide" aria-label="Services">
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/marketing">Marketing</a>
+            <a class="nav__drop-sub" href="/services/local-seo">Local SEO</a>
+            <a class="nav__drop-sub" href="/services/google-ad-grants">Google Ad Grants</a>
+            <a class="nav__drop-head" href="/services/strategy">Strategy</a>
+            <a class="nav__drop-head" href="/services/coaching">Coaching &amp; growth</a>
+          </div>
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/technical">Technical</a>
+            <a class="nav__drop-sub" href="/services/websites">Websites &amp; web apps</a>
+            <a class="nav__drop-sub" href="/services/ai-automation">AI &amp; automation</a>
+            <a class="nav__drop-sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+            <a class="nav__drop-sub" href="/services/google-ads">Google Ads</a>
+            <a class="nav__drop-sub" href="/services/analytics">GA4 &amp; analytics</a>
+          </div>
+          <div class="nav__drop-foot">
+            <a href="/services">All services</a>
+            <a href="/investment#projects">Project pricing</a>
+          </div>
         </div>
       </div>
       <div class="nav__item has-drop">
-        <a href="/#who-we-help">Who we help</a>
+        <button type="button" class="nav__top nav__toggle" aria-expanded="false">Who we help</button>
         <div class="nav__drop" aria-label="Who we help">
           <a href="/for/local-businesses">Local businesses</a>
           <a href="/for/founders">Founders &amp; startups</a>
@@ -150,8 +166,8 @@
       </div>
       <a href="/method">Method</a>
       <a href="/investment">Pricing</a>
-      <a href="/work">Work</a>
       <a href="/resources">Resources</a>
+      <a href="/about">About</a>
       <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
     </nav>
     <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -160,7 +176,14 @@
 <div class="mobile-menu" aria-hidden="true">
   <span class="mobile-menu__group">Services</span>
   <a href="/services/marketing">Marketing</a>
+  <a class="mobile-menu__sub" href="/services/local-seo">Local SEO</a>
+  <a class="mobile-menu__sub" href="/services/google-ad-grants">Google Ad Grants</a>
   <a href="/services/technical">Technical</a>
+  <a class="mobile-menu__sub" href="/services/websites">Websites &amp; web apps</a>
+  <a class="mobile-menu__sub" href="/services/ai-automation">AI &amp; automation</a>
+  <a class="mobile-menu__sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+  <a class="mobile-menu__sub" href="/services/google-ads">Google Ads</a>
+  <a class="mobile-menu__sub" href="/services/analytics">GA4 &amp; analytics</a>
   <a href="/services/strategy">Strategy</a>
   <a href="/services/coaching">Coaching &amp; growth</a>
   <span class="mobile-menu__group">Who we help</span>
@@ -170,7 +193,6 @@
   <span class="mobile-menu__group">Explore</span>
   <a href="/method">Method</a>
   <a href="/investment">Pricing</a>
-  <a href="/work">Work</a>
   <a href="/resources">Resources</a>
   <a href="/about">About</a>
   <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
@@ -197,13 +219,17 @@
   <!-- HOLDING: write-ups coming + talk to a client -->
   <section class="section section--tight" style="padding-top: clamp(40px, 5vw, 72px);">
     <div class="wrap">
-      <div class="holding wk-holding reveal">
-        <h2>We&rsquo;re writing these up now.</h2>
-        <p class="mt-md">Each story waits for the client&rsquo;s okay and for a result we can date and show our math on. That takes longer than posting a quote. It&rsquo;s the only version worth posting.</p>
-        <p class="mt-md">Rather hear it straight from a client? Ask on your discovery call and we&rsquo;ll connect you. We take eight clients at a time, so it&rsquo;s a short list and a real conversation. Ask what the first three months were like. Ask what they&rsquo;d change.</p>
-        <div class="row-cta mt-lg" style="justify-content: center;">
-          <a href="/contact" class="btn btn--primary">Book a call, then ask <span class="arr">→</span></a>
+      <div class="photo-split wk-split">
+        <div class="holding wk-holding reveal">
+          <h2>We&rsquo;re writing these up now.</h2>
+          <p class="mt-md">Each story waits for the client&rsquo;s okay and for a result we can date and show our math on. That takes longer than posting a quote. It&rsquo;s the only version worth posting.</p>
+          <p class="mt-md">Rather hear it straight from a client? Ask on your discovery call and we&rsquo;ll connect you. We take eight clients at a time, so it&rsquo;s a short list and a real conversation. Ask what the first three months were like. Ask what they&rsquo;d change.</p>
+          <div class="row-cta mt-lg" style="justify-content: center;">
+            <a href="/contact" class="btn btn--primary">Book a call, then ask <span class="arr">→</span></a>
+          </div>
         </div>
+        <figure class="photo photo--wide photo--amber reveal" data-delay="1"><img src="/media/photos/work-1-main-street.jpg" alt="A row of small brick storefronts along a main street" width="1400" height="875" loading="lazy" decoding="async" /></figure>
+<!-- Photo: J Dean / Unsplash — https://unsplash.com/photos/MjehgL_zflA -->
       </div>
     </div>
   </section>
@@ -250,11 +276,22 @@
           <p>The market ranges, where the money goes, and our published rates, so you can compare before you call anyone.</p>
           <a class="tlink" href="/articles/fractional-cmo-cost">See the numbers <span class="arr">→</span></a>
         </article>
+        <article class="card reveal" data-delay="3">
+          <h3>How we work: the five steps</h3>
+          <p>The order we build in, and why a sharp offer comes before an ad. It&rsquo;s the thinking behind every engagement.</p>
+          <a class="tlink" href="/method">Read the method <span class="arr">→</span></a>
+        </article>
       </div>
 
       <p class="wk-admit reveal">Honest answer: that&rsquo;s a thin substitute for client results, and we know it. It&rsquo;s the strongest proof we can show you today without making something up.</p>
     </div>
   </section>
+
+  <section class="next-strip"><div class="wrap"><h2 class="next-strip__title reveal">Where to next</h2><div class="next-grid">
+    <a class="next-card reveal" href="/about"><strong>Who you&rsquo;d work with</strong><span>Meet Carson, how the practice started, and why we cap it at eight clients.</span><span class="arr-link">Read about us →</span></a>
+    <a class="next-card reveal" data-delay="1" href="/tools/local-visibility"><strong>Can Indianapolis find you?</strong><span>An 18-point self-audit of your Google profile, reviews and site. About ten minutes, free.</span><span class="arr-link">Run the audit →</span></a>
+    <a class="next-card reveal" data-delay="2" href="/investment"><strong>See what it costs</strong><span>Monthly partnerships start at $1,200 and strategy is $3,000 once. Project prices are listed too.</span><span class="arr-link">See every price →</span></a>
+  </div></div></section>
 
   <!-- CLOSING -->
   <section class="closing">
@@ -301,7 +338,7 @@
           <li><a href="/for/local-businesses">Local businesses</a></li>
           <li><a href="/for/founders">Founders &amp; startups</a></li>
           <li><a href="/for/nonprofits">Nonprofits</a></li>
-          <li><a href="/work">Client results</a></li>
+          <li><a href="/work">Work</a></li>
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
@@ -331,6 +368,7 @@
           <li><a href="/about">About</a></li>
           <li><a href="/method">Method</a></li>
           <li><a href="/investment">Pricing</a></li>
+          <li><a href="/investment#projects">Project pricing</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
       </div>

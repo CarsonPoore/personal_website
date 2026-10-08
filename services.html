@@ -14,9 +14,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
 <link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
-<link rel="stylesheet" href="/styles.css?v=20261008-2" />
+<link rel="stylesheet" href="/styles.css?v=20261008-5" />
 <link rel="stylesheet" href="/motion-b.css?v=20261008-1" />
-<script defer src="/site.js?v=20261008-2"></script>
+<script defer src="/site.js?v=20261008-3"></script>
 <style>
   /* Services hub — alternating asymmetric practice sections */
   .practice {
@@ -250,17 +250,31 @@
     <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
     <nav class="nav__links" aria-label="Primary">
       <div class="nav__item has-drop">
-        <a href="/services">Services</a>
-        <div class="nav__drop" aria-label="Services">
-          <a href="/services/marketing">Marketing</a>
-          <a href="/services/technical">Technical</a>
-          <a href="/services/strategy">Strategy</a>
-          <a href="/services/coaching">Coaching &amp; growth</a>
-          <a class="nav__drop-all" href="/services">All services</a>
+        <a href="/services" class="nav__top">Services</a>
+        <div class="nav__drop nav__drop--wide" aria-label="Services">
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/marketing">Marketing</a>
+            <a class="nav__drop-sub" href="/services/local-seo">Local SEO</a>
+            <a class="nav__drop-sub" href="/services/google-ad-grants">Google Ad Grants</a>
+            <a class="nav__drop-head" href="/services/strategy">Strategy</a>
+            <a class="nav__drop-head" href="/services/coaching">Coaching &amp; growth</a>
+          </div>
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/technical">Technical</a>
+            <a class="nav__drop-sub" href="/services/websites">Websites &amp; web apps</a>
+            <a class="nav__drop-sub" href="/services/ai-automation">AI &amp; automation</a>
+            <a class="nav__drop-sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+            <a class="nav__drop-sub" href="/services/google-ads">Google Ads</a>
+            <a class="nav__drop-sub" href="/services/analytics">GA4 &amp; analytics</a>
+          </div>
+          <div class="nav__drop-foot">
+            <a href="/services">All services</a>
+            <a href="/investment#projects">Project pricing</a>
+          </div>
         </div>
       </div>
       <div class="nav__item has-drop">
-        <a href="/#who-we-help">Who we help</a>
+        <button type="button" class="nav__top nav__toggle" aria-expanded="false">Who we help</button>
         <div class="nav__drop" aria-label="Who we help">
           <a href="/for/local-businesses">Local businesses</a>
           <a href="/for/founders">Founders &amp; startups</a>
@@ -269,8 +283,8 @@
       </div>
       <a href="/method">Method</a>
       <a href="/investment">Pricing</a>
-      <a href="/work">Work</a>
       <a href="/resources">Resources</a>
+      <a href="/about">About</a>
       <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
     </nav>
     <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -279,7 +293,14 @@
 <div class="mobile-menu" aria-hidden="true">
   <span class="mobile-menu__group">Services</span>
   <a href="/services/marketing">Marketing</a>
+  <a class="mobile-menu__sub" href="/services/local-seo">Local SEO</a>
+  <a class="mobile-menu__sub" href="/services/google-ad-grants">Google Ad Grants</a>
   <a href="/services/technical">Technical</a>
+  <a class="mobile-menu__sub" href="/services/websites">Websites &amp; web apps</a>
+  <a class="mobile-menu__sub" href="/services/ai-automation">AI &amp; automation</a>
+  <a class="mobile-menu__sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+  <a class="mobile-menu__sub" href="/services/google-ads">Google Ads</a>
+  <a class="mobile-menu__sub" href="/services/analytics">GA4 &amp; analytics</a>
   <a href="/services/strategy">Strategy</a>
   <a href="/services/coaching">Coaching &amp; growth</a>
   <span class="mobile-menu__group">Who we help</span>
@@ -289,7 +310,6 @@
   <span class="mobile-menu__group">Explore</span>
   <a href="/method">Method</a>
   <a href="/investment">Pricing</a>
-  <a href="/work">Work</a>
   <a href="/resources">Resources</a>
   <a href="/about">About</a>
   <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
@@ -315,7 +335,9 @@
           <h2 class="vt-marketing">Marketing people actually <em>talk about</em></h2>
           <p class="practice__one mt-md">Brand, campaigns, content, and email that make the right people notice you and talk about you &mdash; measured in calls, customers, and booked work, not impressions.</p>
           <p class="mt-sm">The test we hold ourselves to is blunt. If a campaign can&rsquo;t name the job it&rsquo;s doing, it doesn&rsquo;t run.</p>
-          <p class="mt-sm">Brand identity, photography, and video production are available as <a class="tlink" href="/investment">project work</a>, quoted on their own; retainer clients can add a project anytime.</p>
+          <p class="mt-sm">Brand identity, photography, and video production are available as <a class="tlink" href="/investment#projects">project work</a>, with starting prices published; retainer clients can add a project anytime.</p>
+          <figure class="photo photo--wide reveal mt-lg"><img src="/media/photos/services-1-restaurant-filming.jpg" alt="A videographer filming inside a restaurant" width="1600" height="1000" loading="lazy" decoding="async" /></figure>
+<!-- Photo: A videographer filming inside a restaurant / Unsplash — https://unsplash.com/photos/KT5j84hSxB8 -->
         </div>
         <div class="practice__aside reveal" data-delay="1">
           <p class="practice__num" aria-hidden="true">01</p>
@@ -337,7 +359,9 @@
           <h2 class="vt-technical">The builds most marketing shops <em>can&rsquo;t do</em></h2>
           <p class="practice__one mt-md">AI agents and automation, websites and web apps, GoHighLevel and CRM, Google Ads, GA4 &mdash; practical, human-approved, and priced for small businesses.</p>
           <p class="mt-sm">Every automation gets checked by a person before it touches a customer. Want proof before you book anything? The <a class="tlink" href="/tools/checkup">free tools on this site</a> are this practice working in public. No email wall. Scored on the spot.</p>
-          <p class="mt-sm">Web design and development and product design are available as <a class="tlink" href="/investment">project work</a>, quoted on their own; retainer clients can add a project anytime.</p>
+          <p class="mt-sm">Web design and development and product design are available as <a class="tlink" href="/investment#projects">project work</a>, with starting prices published; retainer clients can add a project anytime.</p>
+          <figure class="photo photo--wide photo--amber reveal mt-lg"><img src="/media/photos/services-2-office-laptop-phone.jpg" alt="A man at a table by a window with a laptop and smartphone" width="1600" height="1000" loading="lazy" decoding="async" /></figure>
+<!-- Photo: A man at a table by a window with a laptop and smartphone / Unsplash — https://unsplash.com/photos/XGC_1eH_ZGI -->
           <video class="motion-loop b-loop b-svc-engine" muted loop playsinline preload="none" width="600" height="120" poster="/media/motion/b-svc-engine.png" data-webm="/media/motion/b-svc-engine.webm" data-hevc="/media/motion/b-svc-engine-hevc.mp4" aria-hidden="true"></video>
         </div>
         <div class="practice__aside reveal" data-delay="1">
@@ -360,6 +384,8 @@
           <h2 class="vt-strategy">Strategy you <em>own outright</em></h2>
           <p class="practice__one mt-md">A $3,000, one-time engagement: your positioning, your people, a sharp offer, and a 90-day plan you could run without us. The answer to &ldquo;what should we do first?&rdquo;</p>
           <p class="mt-sm">This is the step people skip, and we get why. A document feels less real than an ad. Skip it anyway and the other three practices get more expensive. Some clients take the plan and run it themselves. We count that as a win.</p>
+          <figure class="photo photo--wide photo--amber reveal mt-lg"><img src="/media/photos/services-3-sticky-notes-planning.jpg" alt="Hands arranging colorful sticky notes on a large sheet of paper during a planning session" width="1600" height="1000" loading="lazy" decoding="async" /></figure>
+<!-- Photo: UX Indonesia / Unsplash — https://unsplash.com/photos/team-collaborating-with-sticky-notes-w00FkE6e8zE -->
         </div>
         <div class="practice__aside reveal" data-delay="1">
           <p class="practice__num" aria-hidden="true">03</p>
@@ -381,6 +407,8 @@
           <h2 class="vt-coaching">A fractional CMO <em>with hands</em></h2>
           <p class="practice__one mt-md">A fractional CMO for owners and founders at $1,200&ndash;$4,800 a month, with the plan and the hands on one team.</p>
           <p class="mt-sm">Eight clients at a time. That&rsquo;s the cap, and it&rsquo;s why the work stays personal: a team that knows your business, not a pod juggling forty accounts.</p>
+          <figure class="photo photo--wide reveal mt-lg"><img src="/media/photos/services-4-table-laptop-talk.jpg" alt="Two women talking at a table with a laptop" width="1600" height="1000" loading="lazy" decoding="async" /></figure>
+<!-- Photo: Two women talking at a table with a laptop / Unsplash — https://unsplash.com/photos/L3Wp59t2KlQ -->
         </div>
         <div class="practice__aside reveal" data-delay="1">
           <p class="practice__num" aria-hidden="true">04</p>
@@ -400,7 +428,7 @@
     <div class="wrap">
       <div class="sec-head reveal">
         <h2>Every service, <em>one screen</em></h2>
-        <p class="sec-head__intro">The seven specialist pages, filed under their practice. Strategy and coaching &amp; growth don&rsquo;t split into specialties; each is one engagement, described above.</p>
+        <p class="sec-head__intro">The seven specialist pages, filed under their practice, plus the two single engagements: strategy, and coaching &amp; growth.</p>
       </div>
       <div class="idx-grid">
         <div class="idx-group reveal">
@@ -415,6 +443,14 @@
           <a class="idx-item" href="/services/ai-automation"><span class="idx-item__t">AI &amp; automation</span><span class="idx-item__d">Agents that answer leads in minutes, human-approved.</span></a>
           <a class="idx-item" href="/services/crm-gohighlevel"><span class="idx-item__t">GoHighLevel &amp; CRM</span><span class="idx-item__d">One system for follow-up and booking.</span></a>
           <a class="idx-item" href="/services/analytics"><span class="idx-item__t">GA4 &amp; analytics</span><span class="idx-item__d">Numbers you can read without a translator.</span></a>
+        </div>
+        <div class="idx-group reveal">
+          <h3>Strategy</h3>
+          <a class="idx-item" href="/services/strategy"><span class="idx-item__t">The $3,000 strategy engagement</span><span class="idx-item__d">Positioning, your people, a sharp offer, and a 90-day plan you own.</span></a>
+        </div>
+        <div class="idx-group reveal" data-delay="1">
+          <h3>Coaching &amp; growth</h3>
+          <a class="idx-item" href="/services/coaching"><span class="idx-item__t">A fractional CMO with hands</span><span class="idx-item__d">Marketing leadership at $1,200&ndash;$4,800 a month, with the build team attached.</span></a>
         </div>
       </div>
     </div>
@@ -475,6 +511,12 @@
     </div>
   </section>
 
+  <section class="next-strip"><div class="wrap"><h2 class="next-strip__title reveal">Where to next</h2><div class="next-grid">
+    <a class="next-card reveal" href="/for/local-businesses"><strong>Start with your situation</strong><span>Not sure which practice? Pick the page written for people like you, and read it from the top.</span><span class="arr-link">Find your page →</span></a>
+    <a class="next-card reveal" href="/tools/marketing-budget"><strong>Budget Calculator</strong><span>Put in your revenue and see what a sensible marketing budget looks like before you talk to anyone.</span><span class="arr-link">Run the numbers →</span></a>
+    <a class="next-card reveal" href="/investment"><strong>Retainers and projects, priced</strong><span>Retainers run $1,200&ndash;$4,800 a month. Projects start at $350 for a half-day photo shoot.</span><span class="arr-link">See the prices →</span></a>
+  </div></div></section>
+
   <!-- CLOSING CTA -->
   <section class="closing">
     <div class="closing__inner">
@@ -521,7 +563,7 @@
           <li><a href="/for/local-businesses">Local businesses</a></li>
           <li><a href="/for/founders">Founders &amp; startups</a></li>
           <li><a href="/for/nonprofits">Nonprofits</a></li>
-          <li><a href="/work">Client results</a></li>
+          <li><a href="/work">Work</a></li>
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
@@ -551,6 +593,7 @@
           <li><a href="/about">About</a></li>
           <li><a href="/method">Method</a></li>
           <li><a href="/investment">Pricing</a></li>
+          <li><a href="/investment#projects">Project pricing</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
       </div>

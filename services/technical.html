@@ -14,8 +14,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
 <link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
-<link rel="stylesheet" href="/styles.css?v=20261008-2" />
-<script defer src="/site.js?v=20261008-2"></script>
+<link rel="stylesheet" href="/styles.css?v=20261008-5" />
+<script defer src="/site.js?v=20261008-3"></script>
 <style>
   /* Technical pathway — page-specific layout */
   .vt-technical { view-transition-name: practice-technical; }
@@ -196,17 +196,31 @@
     <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
     <nav class="nav__links" aria-label="Primary">
       <div class="nav__item has-drop">
-        <a href="/services">Services</a>
-        <div class="nav__drop" aria-label="Services">
-          <a href="/services/marketing">Marketing</a>
-          <a href="/services/technical">Technical</a>
-          <a href="/services/strategy">Strategy</a>
-          <a href="/services/coaching">Coaching &amp; growth</a>
-          <a class="nav__drop-all" href="/services">All services</a>
+        <a href="/services" class="nav__top">Services</a>
+        <div class="nav__drop nav__drop--wide" aria-label="Services">
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/marketing">Marketing</a>
+            <a class="nav__drop-sub" href="/services/local-seo">Local SEO</a>
+            <a class="nav__drop-sub" href="/services/google-ad-grants">Google Ad Grants</a>
+            <a class="nav__drop-head" href="/services/strategy">Strategy</a>
+            <a class="nav__drop-head" href="/services/coaching">Coaching &amp; growth</a>
+          </div>
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/technical">Technical</a>
+            <a class="nav__drop-sub" href="/services/websites">Websites &amp; web apps</a>
+            <a class="nav__drop-sub" href="/services/ai-automation">AI &amp; automation</a>
+            <a class="nav__drop-sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+            <a class="nav__drop-sub" href="/services/google-ads">Google Ads</a>
+            <a class="nav__drop-sub" href="/services/analytics">GA4 &amp; analytics</a>
+          </div>
+          <div class="nav__drop-foot">
+            <a href="/services">All services</a>
+            <a href="/investment#projects">Project pricing</a>
+          </div>
         </div>
       </div>
       <div class="nav__item has-drop">
-        <a href="/#who-we-help">Who we help</a>
+        <button type="button" class="nav__top nav__toggle" aria-expanded="false">Who we help</button>
         <div class="nav__drop" aria-label="Who we help">
           <a href="/for/local-businesses">Local businesses</a>
           <a href="/for/founders">Founders &amp; startups</a>
@@ -215,8 +229,8 @@
       </div>
       <a href="/method">Method</a>
       <a href="/investment">Pricing</a>
-      <a href="/work">Work</a>
       <a href="/resources">Resources</a>
+      <a href="/about">About</a>
       <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
     </nav>
     <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -225,7 +239,14 @@
 <div class="mobile-menu" aria-hidden="true">
   <span class="mobile-menu__group">Services</span>
   <a href="/services/marketing">Marketing</a>
+  <a class="mobile-menu__sub" href="/services/local-seo">Local SEO</a>
+  <a class="mobile-menu__sub" href="/services/google-ad-grants">Google Ad Grants</a>
   <a href="/services/technical">Technical</a>
+  <a class="mobile-menu__sub" href="/services/websites">Websites &amp; web apps</a>
+  <a class="mobile-menu__sub" href="/services/ai-automation">AI &amp; automation</a>
+  <a class="mobile-menu__sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+  <a class="mobile-menu__sub" href="/services/google-ads">Google Ads</a>
+  <a class="mobile-menu__sub" href="/services/analytics">GA4 &amp; analytics</a>
   <a href="/services/strategy">Strategy</a>
   <a href="/services/coaching">Coaching &amp; growth</a>
   <span class="mobile-menu__group">Who we help</span>
@@ -235,7 +256,6 @@
   <span class="mobile-menu__group">Explore</span>
   <a href="/method">Method</a>
   <a href="/investment">Pricing</a>
-  <a href="/work">Work</a>
   <a href="/resources">Resources</a>
   <a href="/about">About</a>
   <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
@@ -271,16 +291,22 @@
 
   <!-- WHY THIS PRACTICE EXISTS -->
   <section class="section">
-    <div class="wrap wrap--narrow">
+    <div class="wrap">
       <div class="sec-head">
         <h2 class="reveal" data-delay="1">Eleven tabs, none of them talking</h2>
       </div>
-      <div class="mt-lg">
+      <div class="photo-split mt-lg">
+        <div>
         <p class="reveal">Here&rsquo;s the owner we meet most weeks. The booking tool doesn&rsquo;t talk to the invoicing tool. The customer list lives in three places and none of them agree. A lead comes in at 4pm Friday and gets a reply Tuesday, if the sticky note survives the weekend. Nothing is broken, exactly. It&rsquo;s all just separate.</p>
         <p class="mt-md reveal">Founders arrive from the other direction. You&rsquo;d rather build the product than the ops, and you want one person doing the work of three. The honest route there is plumbing: follow-up that runs itself and numbers that are right the first time.</p>
         <p class="mt-md reveal">That&rsquo;s this practice. If you&rsquo;ve been searching for a marketing automation consultant, you&rsquo;re in the right place: we connect the tools you already own, build whatever&rsquo;s missing, and keep a person in charge of anything a customer will ever see.</p>
         <p class="mt-md reveal">And it travels. Marketing and local SEO are Indianapolis work; the technical practice runs nationwide, over a screen share. A CRM doesn&rsquo;t care what state you&rsquo;re in.</p>
         <p class="mt-md reveal">One opinion before the list below. We think most small businesses buy new software about a year before they need it. The real problem is usually the handoff between the tools they already pay for, so we check that first. It&rsquo;s cheaper, and it&rsquo;s often enough.</p>
+        </div>
+        <figure class="photo photo--wide photo--cobalt reveal"><img src="/media/photos/technical-1-desk-laptop-iphone.jpg" alt="A woman at a desk with a laptop and an iPhone" width="1600" height="1000" decoding="async" /></figure>
+<!-- Photo: A woman at a desk with a laptop and an iPhone / Unsplash — https://unsplash.com/photos/3uKEDMU5J7k -->
+      </div>
+      <div style="max-width:60ch">
         <p class="pull mt-xl reveal">We build what the plan needs, <em>not what&rsquo;s shiny</em>.</p>
       </div>
     </div>
@@ -315,7 +341,7 @@
           <p class="svc__body">Tracking set up so the numbers mean something, and a one-page monthly report an owner can read without a glossary. If a number is uncertain, we&rsquo;d rather show you a blank than a guess. <a class="tlink" href="/services/analytics">How we fix analytics <span aria-hidden="true">→</span></a></p>
         </article>
       </div>
-      <p class="mt-xl reveal">Web design and development and product design are also available as project work, quoted on their own on the <a class="tlink" href="/investment">pricing page</a>. Retainer clients can add a project anytime.</p>
+      <p class="mt-xl reveal">Web design and development and product design are also available as project work, quoted on their own on the <a class="tlink" href="/investment#projects">pricing page</a>. Retainer clients can add a project anytime.</p>
     </div>
   </section>
 
@@ -329,8 +355,12 @@
           <p class="mt-md reveal" data-delay="2">So we run it differently. One task first. Mapped before it&rsquo;s built. And nothing reaches a customer without a person approving the send, not a text, not a review request. Slower on day one. Much better by month three.</p>
           <p class="mt-md reveal" data-delay="2">The other difference is where the builds come from. The plan comes first, whether that&rsquo;s the <a class="tlink" href="/services/strategy">$3,000 strategy engagement</a> or the five steps inside a retainer, and this practice builds what the plan calls for. If the shiny tool isn&rsquo;t on the plan, we don&rsquo;t buy it. Neither should you.</p>
         </div>
-        <div class="motion-frame motion-frame--light reveal" data-delay="2">
+        <div>
+          <figure class="photo photo--square photo--amber reveal" style="max-width:380px"><img src="/media/photos/technical-2-man-outdoors-phone.jpg" alt="A man sitting outdoors reading his phone" width="1200" height="1500" loading="lazy" decoding="async" /></figure>
+<!-- Photo: A man sitting outdoors reading his phone / Unsplash — https://unsplash.com/photos/OJ8VqSTeqdw -->
+          <div class="motion-frame motion-frame--light reveal" data-delay="2">
           <video class="motion-loop" muted loop playsinline preload="none" poster="/media/motion/one-roof.jpg" width="960" height="800" aria-hidden="true"><source src="/media/motion/one-roof.webm" type="video/webm" /><source src="/media/motion/one-roof.mp4" type="video/mp4" /></video>
+        </div>
         </div>
       </div>
     </div>
@@ -374,6 +404,12 @@
         <h2 class="reveal" data-delay="1">Projects or retainers, same numbers</h2>
         <p class="sec-head__intro reveal" data-delay="2">Ongoing technical work runs on the same retainers as every practice here: $1,200, $2,400, or $4,800 a month, published with what each month includes. A one-off build, such as a website or a CRM setup, gets a fixed quote in writing before any work starts. Nonprofits get the reduced rate. If you start with the <a class="tlink" href="/services/strategy">$3,000 strategy engagement</a> and move to a retainer, half of that fee ($1,500) is credited toward it.</p>
       </div>
+      <div class="proj-group mt-lg reveal" data-delay="2">
+        <div class="proj-group__head"><h3>Project work: websites</h3><a href="/investment#projects">All project prices &rarr;</a></div>
+        <div class="proj-row"><h4>Starter site</h4><span class="proj-price"><small>from</small>$900</span><p>A focused site for one business that needs to be found and called.</p></div>
+        <div class="proj-row"><h4>Business site</h4><span class="proj-price"><small>from</small>$2,500</span><p>A fuller site with room for every service, with forms and booking built in.</p></div>
+        <div class="proj-row"><h4>Web app</h4><span class="proj-price"><small>from</small>$6,000</span><p>A custom tool for the job off-the-shelf software won&rsquo;t bend far enough to do.</p></div>
+      </div>
       <div class="stat-row reveal" data-delay="2">
         <div><div class="stat__num">$1,200&ndash;$4,800</div><div class="stat__lbl">A month, on the pricing page</div></div>
         <div><div class="stat__num">3 months</div><div class="stat__lbl">Retainer minimum, then monthly</div></div>
@@ -416,6 +452,12 @@
       </div>
     </div>
   </section>
+
+  <section class="next-strip"><div class="wrap"><h2 class="next-strip__title reveal">Where to next</h2><div class="next-grid">
+    <a class="next-card reveal" href="/services/websites"><strong>Websites &amp; web apps</strong><span>The most common first build: a fast site you own, built to book work.</span><span class="arr-link">See the website page →</span></a>
+    <a class="next-card reveal" href="/tools/ai-opportunity-finder"><strong>AI Opportunity Finder</strong><span>Check the tasks you still do by hand and see which one to automate first.</span><span class="arr-link">Find your first task →</span></a>
+    <a class="next-card reveal" href="/investment#projects"><strong>Website prices, in the open</strong><span>A starter site from $900, a business site from $2,500, a web app from $6,000.</span><span class="arr-link">See project prices →</span></a>
+  </div></div></section>
 
   <!-- CLOSING -->
   <section class="closing">
@@ -462,7 +504,7 @@
           <li><a href="/for/local-businesses">Local businesses</a></li>
           <li><a href="/for/founders">Founders &amp; startups</a></li>
           <li><a href="/for/nonprofits">Nonprofits</a></li>
-          <li><a href="/work">Client results</a></li>
+          <li><a href="/work">Work</a></li>
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
@@ -492,6 +534,7 @@
           <li><a href="/about">About</a></li>
           <li><a href="/method">Method</a></li>
           <li><a href="/investment">Pricing</a></li>
+          <li><a href="/investment#projects">Project pricing</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
       </div>

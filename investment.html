@@ -14,9 +14,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
 <link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
-<link rel="stylesheet" href="/styles.css?v=20261008-2" />
+<link rel="stylesheet" href="/styles.css?v=20261008-5" />
 <link rel="stylesheet" href="/motion-b.css?v=20261008-1" />
-<script defer src="/site.js?v=20261008-2"></script>
+<script defer src="/site.js?v=20261008-3"></script>
 <style>
   /* Pricing page: page-specific layout */
   .hero__pointer { font-size: 0.98rem; }
@@ -166,6 +166,110 @@
           "seller": {
             "@id": "https://carsonpoore.com/#org"
           }
+        },
+        {
+          "@type": "Offer",
+          "name": "Starter site",
+          "description": "Website project, starting price.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": 900,
+            "priceCurrency": "USD"
+          },
+          "seller": {
+            "@id": "https://carsonpoore.com/#org"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Business site",
+          "description": "Website project, starting price.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": 2500,
+            "priceCurrency": "USD"
+          },
+          "seller": {
+            "@id": "https://carsonpoore.com/#org"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Web app",
+          "description": "Web app project, starting price.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": 6000,
+            "priceCurrency": "USD"
+          },
+          "seller": {
+            "@id": "https://carsonpoore.com/#org"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Logo & identity",
+          "description": "Branding project, starting price.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": 750,
+            "priceCurrency": "USD"
+          },
+          "seller": {
+            "@id": "https://carsonpoore.com/#org"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Full brand system",
+          "description": "Branding project, starting price.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": 2000,
+            "priceCurrency": "USD"
+          },
+          "seller": {
+            "@id": "https://carsonpoore.com/#org"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Brand video",
+          "description": "Video project, starting price.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": 1200,
+            "priceCurrency": "USD"
+          },
+          "seller": {
+            "@id": "https://carsonpoore.com/#org"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Short-form video pack",
+          "description": "Video project, starting price.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": 750,
+            "priceCurrency": "USD"
+          },
+          "seller": {
+            "@id": "https://carsonpoore.com/#org"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Photo shoot",
+          "description": "Half-day photo shoot, starting price.",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": 350,
+            "priceCurrency": "USD"
+          },
+          "seller": {
+            "@id": "https://carsonpoore.com/#org"
+          }
         }
       ]
     }
@@ -180,17 +284,31 @@
     <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
     <nav class="nav__links" aria-label="Primary">
       <div class="nav__item has-drop">
-        <a href="/services">Services</a>
-        <div class="nav__drop" aria-label="Services">
-          <a href="/services/marketing">Marketing</a>
-          <a href="/services/technical">Technical</a>
-          <a href="/services/strategy">Strategy</a>
-          <a href="/services/coaching">Coaching &amp; growth</a>
-          <a class="nav__drop-all" href="/services">All services</a>
+        <a href="/services" class="nav__top">Services</a>
+        <div class="nav__drop nav__drop--wide" aria-label="Services">
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/marketing">Marketing</a>
+            <a class="nav__drop-sub" href="/services/local-seo">Local SEO</a>
+            <a class="nav__drop-sub" href="/services/google-ad-grants">Google Ad Grants</a>
+            <a class="nav__drop-head" href="/services/strategy">Strategy</a>
+            <a class="nav__drop-head" href="/services/coaching">Coaching &amp; growth</a>
+          </div>
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/technical">Technical</a>
+            <a class="nav__drop-sub" href="/services/websites">Websites &amp; web apps</a>
+            <a class="nav__drop-sub" href="/services/ai-automation">AI &amp; automation</a>
+            <a class="nav__drop-sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+            <a class="nav__drop-sub" href="/services/google-ads">Google Ads</a>
+            <a class="nav__drop-sub" href="/services/analytics">GA4 &amp; analytics</a>
+          </div>
+          <div class="nav__drop-foot">
+            <a href="/services">All services</a>
+            <a href="/investment#projects">Project pricing</a>
+          </div>
         </div>
       </div>
       <div class="nav__item has-drop">
-        <a href="/#who-we-help">Who we help</a>
+        <button type="button" class="nav__top nav__toggle" aria-expanded="false">Who we help</button>
         <div class="nav__drop" aria-label="Who we help">
           <a href="/for/local-businesses">Local businesses</a>
           <a href="/for/founders">Founders &amp; startups</a>
@@ -199,8 +317,8 @@
       </div>
       <a href="/method">Method</a>
       <a href="/investment">Pricing</a>
-      <a href="/work">Work</a>
       <a href="/resources">Resources</a>
+      <a href="/about">About</a>
       <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
     </nav>
     <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -209,7 +327,14 @@
 <div class="mobile-menu" aria-hidden="true">
   <span class="mobile-menu__group">Services</span>
   <a href="/services/marketing">Marketing</a>
+  <a class="mobile-menu__sub" href="/services/local-seo">Local SEO</a>
+  <a class="mobile-menu__sub" href="/services/google-ad-grants">Google Ad Grants</a>
   <a href="/services/technical">Technical</a>
+  <a class="mobile-menu__sub" href="/services/websites">Websites &amp; web apps</a>
+  <a class="mobile-menu__sub" href="/services/ai-automation">AI &amp; automation</a>
+  <a class="mobile-menu__sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+  <a class="mobile-menu__sub" href="/services/google-ads">Google Ads</a>
+  <a class="mobile-menu__sub" href="/services/analytics">GA4 &amp; analytics</a>
   <a href="/services/strategy">Strategy</a>
   <a href="/services/coaching">Coaching &amp; growth</a>
   <span class="mobile-menu__group">Who we help</span>
@@ -219,7 +344,6 @@
   <span class="mobile-menu__group">Explore</span>
   <a href="/method">Method</a>
   <a href="/investment">Pricing</a>
-  <a href="/work">Work</a>
   <a href="/resources">Resources</a>
   <a href="/about">About</a>
   <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
@@ -320,6 +444,17 @@
 
       <video class="motion-loop b-loop b-retainer-cadence" muted loop playsinline preload="none" width="1920" height="240" poster="/media/motion/b-retainer-cadence.png" data-webm="/media/motion/b-retainer-cadence.webm" data-hevc="/media/motion/b-retainer-cadence-hevc.mp4" aria-hidden="true"></video>
 
+      <!-- WHO PICKS WHICH -->
+      <div class="photo-split mt-lg" style="margin-bottom: clamp(32px, 5vw, 56px);">
+        <div class="reveal">
+          <h3>Which tier fits whom</h3>
+          <p class="mt-sm" style="max-width: 54ch;"><strong>Lane</strong> usually suits an owner with one clear priority, like getting found on Google, who wants it done well. <strong>System</strong> suits a business that already runs a few channels and wants them working together. <strong>Partner</strong> suits a founder or director who wants the whole function off their desk.</p>
+          <p class="mt-sm" style="max-width: 54ch;">Not sure? Start where it feels right and move up or down after the three-month minimum.</p>
+        </div>
+        <figure class="photo photo--tall photo--amber reveal" data-delay="1"><img src="/media/photos/investment-2-owner-wrapping.jpg" alt="A shopkeeper wrapping an item in newspaper at a wooden counter" width="1200" height="1500" loading="lazy" decoding="async" /></figure>
+<!-- Photo: Danial Dezfouli / Unsplash — https://unsplash.com/photos/9dSTAMv_be0 -->
+      </div>
+
       <!-- WHAT EVERY RETAINER INCLUDES -->
       <div class="every-tier reveal">
         <div class="every-tier__head">
@@ -401,24 +536,51 @@
   </section>
 
   <!-- PROJECTS -->
-  <section class="section section--tight">
+  <section class="section section--tight" id="projects" style="scroll-margin-top: 96px;">
     <div class="wrap">
       <div class="sec-head">
-        <div>
-          <h2 class="reveal mt-md" data-delay="1">Bigger builds, quoted <em>on their own.</em></h2>
-        </div>
-        <p class="sec-head__intro reveal" data-delay="2">
-          Project work never gets folded into a monthly number, because that muddies both. Retainer clients can add a project anytime.
-        </p>
+        <h2 class="reveal">Project work, priced <em>up front.</em></h2>
+        <p class="sec-head__intro reveal" data-delay="1">One-time builds, quoted on their own and never folded into a monthly number. These are starting prices. You&rsquo;ll get a fixed quote before any work starts, and retainer clients can add a project anytime.</p>
       </div>
 
-      <ul class="projects-list reveal">
-        <li>Web design and development</li>
-        <li>Brand identity</li>
-        <li>Product design</li>
-        <li>Photography</li>
-        <li>Video production</li>
-      </ul>
+      <div class="proj-groups">
+        <div class="proj-group reveal">
+          <div class="proj-group__head"><h3>Websites &amp; web apps</h3><a href="/services/websites">How we build sites &rarr;</a></div>
+          <div class="proj-row"><h4>Starter site</h4><span class="proj-price"><small>from</small>$900</span><p>Up to five pages, built for phones first, with a contact form and your Google Business Profile connected. The domain and hosting are in your name.</p></div>
+          <div class="proj-row"><h4>Business site</h4><span class="proj-price"><small>from</small>$2,500</span><p>A larger site with a booking or quote flow, your CRM and email connected, and local search basics set up from day one.</p></div>
+          <div class="proj-row"><h4>Web app</h4><span class="proj-price"><small>from</small>$6,000</span><p>Custom tools, customer portals, and dashboards. We scope it with you before quoting.</p></div>
+        </div>
+
+        <div class="proj-group reveal">
+          <div class="proj-group__head"><h3>Branding</h3><a href="/services/marketing">The marketing practice &rarr;</a></div>
+          <div class="proj-row"><h4>Logo &amp; identity</h4><span class="proj-price"><small>from</small>$750</span><p>A logo suite, colors, and type, plus a one-page brand sheet your team and vendors can follow.</p></div>
+          <div class="proj-row"><h4>Full brand system</h4><span class="proj-price"><small>from</small>$2,000</span><p>Positioning and messaging, the visual identity, your brand voice, and guidelines that keep it consistent.</p></div>
+        </div>
+
+        <div class="proj-group reveal">
+          <div class="proj-group__head"><h3>Video &amp; photo</h3><a href="/services/marketing">The marketing practice &rarr;</a></div>
+          <div class="proj-row"><h4>Brand video</h4><span class="proj-price"><small>from</small>$1,200</span><p>A short film about your business, planned and scripted with you.</p></div>
+          <div class="proj-row"><h4>Short-form video pack</h4><span class="proj-price"><small>from</small>$750</span><p>A set of vertical clips cut for Reels, TikTok, and YouTube Shorts.</p></div>
+          <div class="proj-row"><h4>Photo shoot</h4><span class="proj-price"><small>from</small>$350</span><p>A half-day shoot with edited photos for your site and social.</p></div>
+        </div>
+      </div>
+
+      <p class="tier-note reveal mt-lg">Product design and anything outside this list is quoted per project. Partner-tier clients get project work at partner rates.</p>
+    </div>
+  </section>
+
+  <!-- HOW A PROJECT RUNS -->
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="photo-split photo-split--flip">
+        <div class="reveal">
+          <h2>How a project <em>runs.</em></h2>
+          <p class="mt-md" style="max-width: 52ch;">You get a written quote first, with the scope, the price and the timeline. Nothing starts until you say yes. Then one person runs it, and you see the work as it takes shape.</p>
+          <p class="mt-sm" style="max-width: 52ch;">Want details on a website, a brand or a video? <a href="/services/websites" class="tlink">How we build sites</a> or <a href="/services/marketing" class="tlink">the marketing practice</a>.</p>
+        </div>
+        <figure class="photo photo--wide reveal" data-delay="1"><img src="/media/photos/investment-1-video-camera.jpg" alt="A videographer checking the monitor on a camera rig during a studio shoot" width="1600" height="1000" loading="lazy" decoding="async" /></figure>
+<!-- Photo: Kyle Loftus / Unsplash — https://unsplash.com/photos/FJK2EY52jTw -->
+      </div>
     </div>
   </section>
 
@@ -437,9 +599,15 @@
   <!-- NONPROFIT NOTE -->
   <section class="wrap">
     <p class="nonprofit-note reveal">
-      Nonprofit or mission-driven business? We take on a few each quarter at a reduced rate. <a href="/contact" class="tlink">Let&rsquo;s talk.</a>
+      Nonprofit or mission-driven business? We take on a few each quarter at a reduced rate. <a href="/for/nonprofits" class="tlink">See how the nonprofit rate works</a>.
     </p>
   </section>
+
+  <section class="next-strip"><div class="wrap"><h2 class="next-strip__title reveal">Where to next</h2><div class="next-grid">
+    <a class="next-card reveal" href="/services/websites"><strong>Websites: what&rsquo;s included</strong><span>A closer look at the Starter site, Business site and Web app, and what ships with each one.</span><span class="arr-link">See how we build sites →</span></a>
+    <a class="next-card reveal" data-delay="1" href="/tools/marketing-budget"><strong>Check your budget first</strong><span>Revenue in, a defensible monthly marketing range out, with the math shown. About a minute.</span><span class="arr-link">Run the calculator →</span></a>
+    <a class="next-card reveal" data-delay="2" href="/for/nonprofits"><strong>The nonprofit rate</strong><span>We take a few mission-driven clients each quarter at a reduced rate. Here is how it works.</span><span class="arr-link">See how it works →</span></a>
+  </div></div></section>
 
   <!-- CLOSING CTA: full-bleed cobalt band -->
   <section class="closing">
@@ -486,7 +654,7 @@
           <li><a href="/for/local-businesses">Local businesses</a></li>
           <li><a href="/for/founders">Founders &amp; startups</a></li>
           <li><a href="/for/nonprofits">Nonprofits</a></li>
-          <li><a href="/work">Client results</a></li>
+          <li><a href="/work">Work</a></li>
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
@@ -516,6 +684,7 @@
           <li><a href="/about">About</a></li>
           <li><a href="/method">Method</a></li>
           <li><a href="/investment">Pricing</a></li>
+          <li><a href="/investment#projects">Project pricing</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
       </div>

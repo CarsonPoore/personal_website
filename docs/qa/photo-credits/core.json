@@ -1,0 +1,66 @@
+[
+ {
+  "file": "/media/photos/method-1-cafe-notebook.jpg",
+  "unsplash_id": "XuAZaT0Lh6c",
+  "photographer": "Gorilla ROI Data Connector",
+  "unsplash_url": "https://unsplash.com/photos/cafe-table-with-laptop-notebook-and-coffee-mug-XuAZaT0Lh6c",
+  "page": "/method",
+  "alt": "A laptop, notebook, pen and black coffee mug on a wooden table in a cafe"
+ },
+ {
+  "file": "media/photos/method-2-coffee-counter.jpg",
+  "unsplash_id": "F2eHfMwIOxA",
+  "photographer": "Robert Bye",
+  "unsplash_url": "https://unsplash.com/photos/F2eHfMwIOxA",
+  "page": "/method",
+  "alt": "A busy coffee shop with staff behind a wooden counter and customers standing in line"
+ },
+ {
+  "file": "media/photos/method-3-table-chat.jpg",
+  "unsplash_id": "T9Mhnglfunw",
+  "photographer": "Melody Zimmerman",
+  "unsplash_url": "https://unsplash.com/photos/T9Mhnglfunw",
+  "page": "/method",
+  "alt": "A group of people talking over coffee at a white table"
+ },
+ {
+  "file": "media/photos/resources-1-laptop.jpg",
+  "unsplash_id": "WHWYBmtn3_0",
+  "photographer": "Brooke Cagle",
+  "unsplash_url": "https://unsplash.com/photos/WHWYBmtn3_0",
+  "page": "/resources",
+  "alt": "A woman smiling at her laptop at a table in a coffee shop"
+ },
+ {
+  "file": "media/photos/work-1-main-street.jpg",
+  "unsplash_id": "MjehgL_zflA",
+  "photographer": "J Dean",
+  "unsplash_url": "https://unsplash.com/photos/MjehgL_zflA",
+  "page": "/work",
+  "alt": "A row of small brick storefronts along a main street"
+ },
+ {
+  "file": "media/photos/investment-1-video-camera.jpg",
+  "unsplash_id": "FJK2EY52jTw",
+  "photographer": "Kyle Loftus",
+  "unsplash_url": "https://unsplash.com/photos/FJK2EY52jTw",
+  "page": "/investment",
+  "alt": "A videographer checking the monitor on a camera rig during a studio shoot"
+ },
+ {
+  "file": "media/photos/investment-2-owner-wrapping.jpg",
+  "unsplash_id": "9dSTAMv_be0",
+  "photographer": "Danial Dezfouli",
+  "unsplash_url": "https://unsplash.com/photos/9dSTAMv_be0",
+  "page": "/investment",
+  "alt": "A shopkeeper wrapping an item in newspaper at a wooden counter"
+ },
+ {
+  "file": "media/photos/contact-1-carson.jpg",
+  "unsplash_id": null,
+  "photographer": "Carson Poore (own photo, brand/carson-headshot.png)",
+  "unsplash_url": null,
+  "page": "/contact",
+  "alt": "Carson Poore, founder of Carson Poore Consulting"
+ }
+]

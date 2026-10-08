@@ -1,0 +1,114 @@
+[
+ {
+  "file": "/media/photos/websites-1-phone-cafe.jpg",
+  "unsplash_id": "t8OuU12Wt7o",
+  "photographer": "Marco Palumbo",
+  "unsplash_url": "https://unsplash.com/photos/person-using-a-smartphone-with-a-cup-of-coffee-t8OuU12Wt7o",
+  "page": "/services/websites",
+  "alt": "A hand tapping a smartphone screen on a cafe table next to a red coffee cup"
+ },
+ {
+  "file": "/media/photos/websites-2-laptop-desk.jpg",
+  "unsplash_id": "1SAnrIxw5OY",
+  "photographer": "Kari Shea",
+  "unsplash_url": "https://unsplash.com/photos/1SAnrIxw5OY",
+  "page": "/services/websites",
+  "alt": "A laptop open on a brown wooden table"
+ },
+ {
+  "file": "/media/photos/ai-automation-1-laptop-work.jpg",
+  "unsplash_id": "9yCYGgPe5Kg",
+  "photographer": "Luke Southern",
+  "unsplash_url": "https://unsplash.com/photos/9yCYGgPe5Kg",
+  "page": "/services/ai-automation",
+  "alt": "A woman in a blue long-sleeve shirt working on a laptop"
+ },
+ {
+  "file": "/media/photos/ai-automation-2-phone.jpg",
+  "unsplash_id": "Dilfan21P8o",
+  "photographer": "charlesdeluvio",
+  "unsplash_url": "https://unsplash.com/photos/Dilfan21P8o",
+  "page": "/services/ai-automation",
+  "alt": "A man in a white top holding a phone"
+ },
+ {
+  "file": "/media/photos/crm-gohighlevel-1-pickup-truck.jpg",
+  "unsplash_id": "t3Dm_84Gdy4",
+  "photographer": "Stephanie Valencia",
+  "unsplash_url": "https://unsplash.com/photos/man-in-brown-jacket-standing-in-front-of-white-crew-cab-pickup-truck-t3Dm_84Gdy4",
+  "page": "/services/crm-gohighlevel",
+  "alt": "A man in a brown jacket and cap walking beside a silver pickup truck, looking down at his hands"
+ },
+ {
+  "file": "/media/photos/crm-gohighlevel-2-appointments.jpg",
+  "unsplash_id": "WutyX2VHREg",
+  "photographer": "Vagaro",
+  "unsplash_url": "https://unsplash.com/photos/WutyX2VHREg",
+  "page": "/services/crm-gohighlevel",
+  "alt": "A digital display showing appointments and the day's schedule at a salon front desk"
+ },
+ {
+  "file": "/media/photos/analytics-1-laptop-chart.jpg",
+  "unsplash_id": "rqMWNKRLVuw",
+  "photographer": "dlxmedia.hu",
+  "unsplash_url": "https://unsplash.com/photos/rqMWNKRLVuw",
+  "page": "/services/analytics",
+  "alt": "A person at a laptop showing a colorful chart"
+ },
+ {
+  "file": "/media/photos/analytics-2-team-table.jpg",
+  "unsplash_id": "faEfWCdOKIg",
+  "photographer": "Christina @ wocintechchat.com M",
+  "unsplash_url": "https://unsplash.com/photos/faEfWCdOKIg",
+  "page": "/services/analytics",
+  "alt": "A group of people sitting around a wooden table with laptops"
+ },
+ {
+  "file": "/media/photos/local-seo-1-philadelphia-bakery.jpg",
+  "unsplash_id": "qqL1y15xQ9w",
+  "photographer": "Ruben Mavarez",
+  "unsplash_url": "https://unsplash.com/photos/people-stand-outside-a-small-tartes-bakery-qqL1y15xQ9w",
+  "page": "/services/local-seo",
+  "alt": "Two customers standing outside a small neighborhood bakery storefront with an awning"
+ },
+ {
+  "file": "/media/photos/local-seo-2-indy-aerial.jpg",
+  "unsplash_id": "DXiR18__75c",
+  "photographer": "Ryan De Hamer",
+  "unsplash_url": "https://unsplash.com/photos/DXiR18__75c",
+  "page": "/services/local-seo",
+  "alt": "Aerial view of downtown Indianapolis buildings and Lucas Oil Stadium"
+ },
+ {
+  "file": "/media/photos/google-ads-1-van.jpg",
+  "unsplash_id": "h60tsArJPH4",
+  "photographer": "Matthew LeJune",
+  "unsplash_url": "https://unsplash.com/photos/h60tsArJPH4",
+  "page": "/services/google-ads",
+  "alt": "An open white van"
+ },
+ {
+  "file": "/media/photos/google-ads-2-ladder-phone.jpg",
+  "unsplash_id": "PIns0mvaF0Q",
+  "photographer": "Aleksei Zhivilov",
+  "unsplash_url": "https://unsplash.com/photos/PIns0mvaF0Q",
+  "page": "/services/google-ads",
+  "alt": "A worker in a yellow hard hat on a ladder talking on a phone"
+ },
+ {
+  "file": "/media/photos/google-ad-grants-1-volunteers.jpg",
+  "unsplash_id": "Nz72KoTqpbI",
+  "photographer": "saad ali",
+  "unsplash_url": "https://unsplash.com/photos/Nz72KoTqpbI",
+  "page": "/services/google-ad-grants",
+  "alt": "A group of people, some in orange shirts, gathered together"
+ },
+ {
+  "file": "/media/photos/google-ad-grants-2-community-garden.jpg",
+  "unsplash_id": "b7wzLHZJ8-A",
+  "photographer": "Zoshua Colah",
+  "unsplash_url": "https://unsplash.com/photos/people-tending-to-community-garden-b7wzLHZJ8-A",
+  "page": "/services/google-ad-grants",
+  "alt": "Two people in blue shirts tending a community garden with wooden raised beds"
+ }
+]

@@ -14,8 +14,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
 <link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
-<link rel="stylesheet" href="/styles.css?v=20261008-2" />
-<script defer src="/site.js?v=20261008-2"></script>
+<link rel="stylesheet" href="/styles.css?v=20261008-5" />
+<script defer src="/site.js?v=20261008-3"></script>
 <style>
   /* GA4 & analytics page — layout tweaks on top of the shared system */
   .answer-note { max-width: 62ch; }
@@ -173,6 +173,12 @@
         {
           "@type": "ListItem",
           "position": 3,
+          "name": "Technical",
+          "item": "https://carsonpoore.com/services/technical"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
           "name": "GA4 & analytics"
         }
       ]
@@ -233,17 +239,31 @@
     <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
     <nav class="nav__links" aria-label="Primary">
       <div class="nav__item has-drop">
-        <a href="/services">Services</a>
-        <div class="nav__drop" aria-label="Services">
-          <a href="/services/marketing">Marketing</a>
-          <a href="/services/technical">Technical</a>
-          <a href="/services/strategy">Strategy</a>
-          <a href="/services/coaching">Coaching &amp; growth</a>
-          <a class="nav__drop-all" href="/services">All services</a>
+        <a href="/services" class="nav__top">Services</a>
+        <div class="nav__drop nav__drop--wide" aria-label="Services">
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/marketing">Marketing</a>
+            <a class="nav__drop-sub" href="/services/local-seo">Local SEO</a>
+            <a class="nav__drop-sub" href="/services/google-ad-grants">Google Ad Grants</a>
+            <a class="nav__drop-head" href="/services/strategy">Strategy</a>
+            <a class="nav__drop-head" href="/services/coaching">Coaching &amp; growth</a>
+          </div>
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/technical">Technical</a>
+            <a class="nav__drop-sub" href="/services/websites">Websites &amp; web apps</a>
+            <a class="nav__drop-sub" href="/services/ai-automation">AI &amp; automation</a>
+            <a class="nav__drop-sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+            <a class="nav__drop-sub" href="/services/google-ads">Google Ads</a>
+            <a class="nav__drop-sub" href="/services/analytics">GA4 &amp; analytics</a>
+          </div>
+          <div class="nav__drop-foot">
+            <a href="/services">All services</a>
+            <a href="/investment#projects">Project pricing</a>
+          </div>
         </div>
       </div>
       <div class="nav__item has-drop">
-        <a href="/#who-we-help">Who we help</a>
+        <button type="button" class="nav__top nav__toggle" aria-expanded="false">Who we help</button>
         <div class="nav__drop" aria-label="Who we help">
           <a href="/for/local-businesses">Local businesses</a>
           <a href="/for/founders">Founders &amp; startups</a>
@@ -252,8 +272,8 @@
       </div>
       <a href="/method">Method</a>
       <a href="/investment">Pricing</a>
-      <a href="/work">Work</a>
       <a href="/resources">Resources</a>
+      <a href="/about">About</a>
       <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
     </nav>
     <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -262,7 +282,14 @@
 <div class="mobile-menu" aria-hidden="true">
   <span class="mobile-menu__group">Services</span>
   <a href="/services/marketing">Marketing</a>
+  <a class="mobile-menu__sub" href="/services/local-seo">Local SEO</a>
+  <a class="mobile-menu__sub" href="/services/google-ad-grants">Google Ad Grants</a>
   <a href="/services/technical">Technical</a>
+  <a class="mobile-menu__sub" href="/services/websites">Websites &amp; web apps</a>
+  <a class="mobile-menu__sub" href="/services/ai-automation">AI &amp; automation</a>
+  <a class="mobile-menu__sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+  <a class="mobile-menu__sub" href="/services/google-ads">Google Ads</a>
+  <a class="mobile-menu__sub" href="/services/analytics">GA4 &amp; analytics</a>
   <a href="/services/strategy">Strategy</a>
   <a href="/services/coaching">Coaching &amp; growth</a>
   <span class="mobile-menu__group">Who we help</span>
@@ -272,7 +299,6 @@
   <span class="mobile-menu__group">Explore</span>
   <a href="/method">Method</a>
   <a href="/investment">Pricing</a>
-  <a href="/work">Work</a>
   <a href="/resources">Resources</a>
   <a href="/about">About</a>
   <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
@@ -287,6 +313,7 @@
         <ol>
           <li><a href="/">Home</a></li>
           <li><a href="/services">Services</a></li>
+          <li><a href="/services/technical">Technical</a></li>
           <li aria-current="page">GA4 &amp; analytics</li>
         </ol>
       </nav>
@@ -331,6 +358,8 @@
         <div class="opinion-split__copy reveal">
           <h2 class="mt-md">Most dashboards exist to <em>look busy.</em></h2>
           <p class="mt-md">Forty tiles and a live map of strangers in Ohio. We think dashboards like that are built to look like work, and yours should do something smaller and harder: answer three questions, then get out of the way.</p>
+          <figure class="photo photo--wide reveal" style="margin-block:28px"><img src="/media/photos/analytics-1-laptop-chart.jpg" alt="A person at a laptop showing a colorful chart" width="1600" height="1000" loading="lazy" decoding="async" /></figure>
+          <!-- Photo: dlxmedia.hu / Unsplash — https://unsplash.com/photos/rqMWNKRLVuw -->
           <p>Owners have noticed. A vcita survey found that 60% of small business owners who dropped their marketing agency named a lack of return as the reason. Our guess is that some of them were getting a return. Nobody could show them where.</p>
           <p>So the report isn&rsquo;t an extra. Our <a class="tlink" href="/investment">pricing page</a> promises every retainer client &ldquo;a monthly report that says what happened and what it means for you,&rdquo; and this is the page that keeps that promise.</p>
         </div>
@@ -432,16 +461,22 @@
 
   <!-- NONPROFIT BOARD REPORTING -->
   <section class="section section--stone">
-    <div class="wrap wrap--narrow">
-      <div class="sec-head reveal">
-        <h2>Your board wants <em>one page.</em></h2>
-      </div>
-      <div class="board-note reveal mt-md">
-        <p>Your board will never open GA4, and shouldn&rsquo;t have to. They want to know whether the spring appeal worked and what the website did for giving. We build the same tracking foundation, then a one-page monthly summary written in board language: gifts, volunteer sign-ups, <a class="tlink" href="/services/google-ad-grants">Ad Grant</a> traffic, and what we&rsquo;d try next.</p>
-        <p>It runs at our reduced nonprofit rate. The budgets are smaller, and the work matters.</p>
-      </div>
-      <div class="row-cta reveal mt-lg" data-delay="1">
-        <a class="btn btn--ghost" href="/for/nonprofits">How we work with nonprofits <span class="arr">→</span></a>
+    <div class="wrap">
+      <div class="photo-split">
+        <div>
+          <div class="sec-head reveal">
+          <h2>Your board wants <em>one page.</em></h2>
+        </div>
+        <div class="board-note reveal mt-md">
+          <p>Your board will never open GA4, and shouldn&rsquo;t have to. They want to know whether the spring appeal worked and what the website did for giving. We build the same tracking foundation, then a one-page monthly summary written in board language: gifts, volunteer sign-ups, <a class="tlink" href="/services/google-ad-grants">Ad Grant</a> traffic, and what we&rsquo;d try next.</p>
+          <p>It runs at our reduced nonprofit rate. The budgets are smaller, and the work matters.</p>
+        </div>
+        <div class="row-cta reveal mt-lg" data-delay="1">
+          <a class="btn btn--ghost" href="/for/nonprofits">How we work with nonprofits <span class="arr">→</span></a>
+        </div>
+        </div>
+        <figure class="photo photo--wide photo--navy reveal"><img src="/media/photos/analytics-2-team-table.jpg" alt="A group of people sitting around a wooden table with laptops" width="1500" height="938" loading="lazy" decoding="async" /></figure>
+        <!-- Photo: Christina @ wocintechchat.com M / Unsplash — https://unsplash.com/photos/faEfWCdOKIg -->
       </div>
     </div>
   </section>
@@ -476,6 +511,13 @@
       </div>
     </div>
   </section>
+
+  <!-- WHERE TO NEXT -->
+  <section class="next-strip"><div class="wrap"><h2 class="next-strip__title reveal">Where to next</h2><div class="next-grid">
+    <a class="next-card reveal" href="/services/google-ads"><strong>Google Ads, tracked properly</strong><span>Ads that report in calls and booked jobs, not clicks.</span><span class="arr-link">See Google Ads →</span></a>
+    <a class="next-card reveal" href="/tools/checkup"><strong>Check what you can see</strong><span>The Five-Step Check-Up shows where your numbers stop telling the truth.</span><span class="arr-link">Take the check-up →</span></a>
+    <a class="next-card reveal" href="/investment"><strong>Reporting comes with every retainer</strong><span>Retainers run $1,200, $2,400, or $4,800 a month, with a three-month minimum.</span><span class="arr-link">See the rate card →</span></a>
+  </div></div></section>
 
   <!-- CLOSING CTA -->
   <section class="closing">
@@ -522,7 +564,7 @@
           <li><a href="/for/local-businesses">Local businesses</a></li>
           <li><a href="/for/founders">Founders &amp; startups</a></li>
           <li><a href="/for/nonprofits">Nonprofits</a></li>
-          <li><a href="/work">Client results</a></li>
+          <li><a href="/work">Work</a></li>
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
@@ -552,6 +594,7 @@
           <li><a href="/about">About</a></li>
           <li><a href="/method">Method</a></li>
           <li><a href="/investment">Pricing</a></li>
+          <li><a href="/investment#projects">Project pricing</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
       </div>

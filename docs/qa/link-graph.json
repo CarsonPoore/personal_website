@@ -1,0 +1,557 @@
+{
+ "/about": {
+  "out": [
+   "/",
+   "/contact",
+   "/services"
+  ],
+  "imgs": 1,
+  "videos": 6,
+  "closing_ctas": [
+   "/contact"
+  ]
+ },
+ "/articles/ai-agents-for-small-business": {
+  "out": [
+   "/about",
+   "/articles/is-gohighlevel-worth-it",
+   "/contact",
+   "/investment",
+   "/services/ai-automation",
+   "/tools/ai-opportunity-finder"
+  ],
+  "imgs": 1,
+  "videos": 1,
+  "closing_ctas": [
+   "/contact"
+  ]
+ },
+ "/articles/fractional-cmo-cost": {
+  "out": [
+   "/about",
+   "/articles/fractional-cmo-vs-marketing-agency",
+   "/contact",
+   "/investment",
+   "/services/coaching",
+   "/tools/marketing-budget"
+  ],
+  "imgs": 1,
+  "videos": 1,
+  "closing_ctas": [
+   "/contact"
+  ]
+ },
+ "/articles/fractional-cmo-vs-marketing-agency": {
+  "out": [
+   "/about",
+   "/articles/fractional-cmo-cost",
+   "/contact",
+   "/for/founders",
+   "/investment",
+   "/method",
+   "/services/coaching",
+   "/services/marketing"
+  ],
+  "imgs": 1,
+  "videos": 1,
+  "closing_ctas": [
+   "/contact"
+  ]
+ },
+ "/articles/is-gohighlevel-worth-it": {
+  "out": [
+   "/about",
+   "/contact",
+   "/for/local-businesses",
+   "/investment",
+   "/services/ai-automation",
+   "/services/crm-gohighlevel",
+   "/tools/checkup"
+  ],
+  "imgs": 1,
+  "videos": 1,
+  "closing_ctas": [
+   "/contact"
+  ]
+ },
+ "/articles/nonprofit-google-ad-grant": {
+  "out": [
+   "/about",
+   "/for/nonprofits",
+   "/services/analytics",
+   "/services/google-ad-grants"
+  ],
+  "imgs": 1,
+  "videos": 1,
+  "closing_ctas": [
+   "/services/google-ad-grants"
+  ]
+ },
+ "/articles/not-showing-up-on-google": {
+  "out": [
+   "/about",
+   "/contact",
+   "/for/local-businesses",
+   "/services/local-seo",
+   "/tools/local-visibility"
+  ],
+  "imgs": 1,
+  "videos": 1,
+  "closing_ctas": [
+   "/contact",
+   "/tools/local-visibility"
+  ]
+ },
+ "/articles/small-business-marketing-budget": {
+  "out": [
+   "/about",
+   "/articles/not-showing-up-on-google",
+   "/contact",
+   "/for/local-businesses",
+   "/investment",
+   "/tools/marketing-budget"
+  ],
+  "imgs": 1,
+  "videos": 1,
+  "closing_ctas": [
+   "/contact"
+  ]
+ },
+ "/contact": {
+  "out": [
+   "/investment",
+   "/tools/checkup"
+  ],
+  "imgs": 0,
+  "videos": 3,
+  "closing_ctas": [
+   "/tools/checkup"
+  ]
+ },
+ "/for/founders": {
+  "out": [
+   "/articles/fractional-cmo-vs-marketing-agency",
+   "/contact",
+   "/investment",
+   "/method",
+   "/services/ai-automation",
+   "/services/coaching",
+   "/services/strategy",
+   "/services/technical",
+   "/tools/90-day-plan",
+   "/tools/checkup",
+   "/work"
+  ],
+  "imgs": 0,
+  "videos": 2,
+  "closing_ctas": [
+   "/contact"
+  ]
+ },
+ "/for/local-businesses": {
+  "out": [
+   "/articles/not-showing-up-on-google",
+   "/contact",
+   "/investment",
+   "/services/ai-automation",
+   "/services/crm-gohighlevel",
+   "/services/google-ads",
+   "/services/local-seo",
+   "/tools/checkup",
+   "/tools/local-visibility",
+   "/work"
+  ],
+  "imgs": 0,
+  "videos": 1,
+  "closing_ctas": [
+   "/contact"
+  ]
+ },
+ "/for/nonprofits": {
+  "out": [
+   "/articles/nonprofit-google-ad-grant",
+   "/contact",
+   "/investment",
+   "/services/analytics",
+   "/services/crm-gohighlevel",
+   "/services/google-ad-grants",
+   "/services/marketing",
+   "/tools/checkup"
+  ],
+  "imgs": 0,
+  "videos": 2,
+  "closing_ctas": [
+   "/contact"
+  ]
+ },
+ "/": {
+  "out": [
+   "/contact",
+   "/for/founders",
+   "/for/local-businesses",
+   "/for/nonprofits",
+   "/investment",
+   "/method",
+   "/resources",
+   "/services",
+   "/services/coaching",
+   "/services/marketing",
+   "/services/strategy",
+   "/services/technical",
+   "/tools/checkup",
+   "/work"
+  ],
+  "imgs": 1,
+  "videos": 4,
+  "closing_ctas": [
+   "/contact",
+   "/tools/checkup"
+  ]
+ },
+ "/investment": {
+  "out": [
+   "/contact",
+   "/services/coaching",
+   "/services/strategy",
+   "/services/technical",
+   "/tools/marketing-budget"
+  ],
+  "imgs": 0,
+  "videos": 3,
+  "closing_ctas": [
+   "/contact"
+  ]
+ },
+ "/method": {
+  "out": [
+   "/contact",
+   "/for/founders",
+   "/for/local-businesses",
+   "/for/nonprofits",
+   "/investment",
+   "/services/crm-gohighlevel",
+   "/services/local-seo",
+   "/services/strategy",
+   "/services/websites",
+   "/tools/checkup"
+  ],
+  "imgs": 0,
+  "videos": 2,
+  "closing_ctas": [
+   "/contact"
+  ]
+ },
+ "/resources": {
+  "out": [
+   "/articles/ai-agents-for-small-business",
+   "/articles/fractional-cmo-cost",
+   "/articles/fractional-cmo-vs-marketing-agency",
+   "/articles/is-gohighlevel-worth-it",
+   "/articles/nonprofit-google-ad-grant",
+   "/articles/not-showing-up-on-google",
+   "/articles/small-business-marketing-budget",
+   "/contact",
+   "/tools/90-day-plan",
+   "/tools/ai-opportunity-finder",
+   "/tools/checkup",
+   "/tools/local-visibility",
+   "/tools/marketing-budget"
+  ],
+  "imgs": 0,
+  "videos": 0,
+  "closing_ctas": [
+   "/contact",
+   "/tools/checkup"
+  ]
+ },
+ "/services": {
+  "out": [
+   "/contact",
+   "/for/founders",
+   "/for/local-businesses",
+   "/for/nonprofits",
+   "/investment",
+   "/services/ai-automation",
+   "/services/analytics",
+   "/services/coaching",
+   "/services/crm-gohighlevel",
+   "/services/google-ad-grants",
+   "/services/google-ads",
+   "/services/local-seo",
+   "/services/marketing",
+   "/services/strategy",
+   "/services/technical",
+   "/services/websites",
+   "/tools/checkup"
+  ],
+  "imgs": 0,
+  "videos": 2,
+  "closing_ctas": [
+   "/contact",
+   "/tools/checkup"
+  ]
+ },
+ "/services/ai-automation": {
+  "out": [
+   "/articles/ai-agents-for-small-business",
+   "/contact",
+   "/for/founders",
+   "/for/local-businesses",
+   "/investment",
+   "/services/crm-gohighlevel",
+   "/tools/ai-opportunity-finder"
+  ],
+  "imgs": 0,
+  "videos": 1,
+  "closing_ctas": [
+   "/contact"
+  ]
+ },
+ "/services/analytics": {
+  "out": [
+   "/contact",
+   "/for/nonprofits",
+   "/investment",
+   "/services/crm-gohighlevel",
+   "/services/google-ad-grants",
+   "/services/google-ads"
+  ],
+  "imgs": 0,
+  "videos": 1,
+  "closing_ctas": [
+   "/contact"
+  ]
+ },
+ "/services/coaching": {
+  "out": [
+   "/articles/fractional-cmo-cost",
+   "/articles/fractional-cmo-vs-marketing-agency",
+   "/contact",
+   "/for/founders",
+   "/for/local-businesses",
+   "/investment",
+   "/services/strategy",
+   "/services/technical",
+   "/work"
+  ],
+  "imgs": 0,
+  "videos": 2,
+  "closing_ctas": [
+   "/contact"
+  ]
+ },
+ "/services/crm-gohighlevel": {
+  "out": [
+   "/articles/is-gohighlevel-worth-it",
+   "/contact",
+   "/for/local-businesses",
+   "/investment",
+   "/services/ai-automation",
+   "/services/analytics"
+  ],
+  "imgs": 0,
+  "videos": 1,
+  "closing_ctas": [
+   "/contact"
+  ]
+ },
+ "/services/google-ad-grants": {
+  "out": [
+   "/articles/nonprofit-google-ad-grant",
+   "/contact",
+   "/for/nonprofits",
+   "/investment",
+   "/services/analytics"
+  ],
+  "imgs": 0,
+  "videos": 1,
+  "closing_ctas": [
+   "/contact"
+  ]
+ },
+ "/services/google-ads": {
+  "out": [
+   "/contact",
+   "/for/local-businesses",
+   "/investment",
+   "/services/analytics",
+   "/services/local-seo",
+   "/services/strategy",
+   "/tools/marketing-budget"
+  ],
+  "imgs": 0,
+  "videos": 1,
+  "closing_ctas": [
+   "/contact"
+  ]
+ },
+ "/services/local-seo": {
+  "out": [
+   "/articles/not-showing-up-on-google",
+   "/contact",
+   "/for/local-businesses",
+   "/investment",
+   "/services/google-ads",
+   "/tools/local-visibility"
+  ],
+  "imgs": 0,
+  "videos": 1,
+  "closing_ctas": [
+   "/contact"
+  ]
+ },
+ "/services/marketing": {
+  "out": [
+   "/articles/not-showing-up-on-google",
+   "/contact",
+   "/for/founders",
+   "/for/local-businesses",
+   "/for/nonprofits",
+   "/investment",
+   "/services/coaching",
+   "/services/google-ad-grants",
+   "/services/google-ads",
+   "/services/local-seo",
+   "/services/strategy",
+   "/services/technical",
+   "/work"
+  ],
+  "imgs": 0,
+  "videos": 2,
+  "closing_ctas": [
+   "/contact"
+  ]
+ },
+ "/services/strategy": {
+  "out": [
+   "/contact",
+   "/for/founders",
+   "/investment",
+   "/services/coaching",
+   "/services/marketing",
+   "/services/technical",
+   "/tools/90-day-plan"
+  ],
+  "imgs": 0,
+  "videos": 2,
+  "closing_ctas": [
+   "/contact"
+  ]
+ },
+ "/services/technical": {
+  "out": [
+   "/contact",
+   "/for/founders",
+   "/for/local-businesses",
+   "/investment",
+   "/services",
+   "/services/ai-automation",
+   "/services/analytics",
+   "/services/crm-gohighlevel",
+   "/services/google-ads",
+   "/services/strategy",
+   "/services/websites",
+   "/tools/ai-opportunity-finder"
+  ],
+  "imgs": 0,
+  "videos": 2,
+  "closing_ctas": [
+   "/contact"
+  ]
+ },
+ "/services/websites": {
+  "out": [
+   "/contact",
+   "/for/local-businesses",
+   "/investment",
+   "/services/analytics",
+   "/services/local-seo",
+   "/work"
+  ],
+  "imgs": 0,
+  "videos": 1,
+  "closing_ctas": [
+   "/contact"
+  ]
+ },
+ "/ticket": {
+  "out": [],
+  "imgs": 1,
+  "videos": 2,
+  "closing_ctas": []
+ },
+ "/tools/90-day-plan": {
+  "out": [
+   "/contact",
+   "/for/founders",
+   "/method",
+   "/services/strategy"
+  ],
+  "imgs": 0,
+  "videos": 0,
+  "closing_ctas": [
+   "/contact"
+  ]
+ },
+ "/tools/ai-opportunity-finder": {
+  "out": [
+   "/articles/ai-agents-for-small-business",
+   "/contact",
+   "/services/ai-automation",
+   "/services/crm-gohighlevel"
+  ],
+  "imgs": 0,
+  "videos": 0,
+  "closing_ctas": [
+   "/contact"
+  ]
+ },
+ "/tools/checkup": {
+  "out": [
+   "/contact",
+   "/method"
+  ],
+  "imgs": 0,
+  "videos": 0,
+  "closing_ctas": [
+   "/contact"
+  ]
+ },
+ "/tools/local-visibility": {
+  "out": [
+   "/articles/not-showing-up-on-google",
+   "/contact",
+   "/services/local-seo"
+  ],
+  "imgs": 0,
+  "videos": 0,
+  "closing_ctas": [
+   "/contact"
+  ]
+ },
+ "/tools/marketing-budget": {
+  "out": [
+   "/articles/small-business-marketing-budget",
+   "/contact",
+   "/investment"
+  ],
+  "imgs": 0,
+  "videos": 0,
+  "closing_ctas": [
+   "/contact"
+  ]
+ },
+ "/work": {
+  "out": [
+   "/articles/fractional-cmo-cost",
+   "/articles/not-showing-up-on-google",
+   "/contact",
+   "/tools/checkup"
+  ],
+  "imgs": 0,
+  "videos": 2,
+  "closing_ctas": [
+   "/contact"
+  ]
+ }
+}

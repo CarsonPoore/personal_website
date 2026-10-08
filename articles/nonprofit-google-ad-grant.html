@@ -14,8 +14,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
 <link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
-<link rel="stylesheet" href="/styles.css?v=20261008-2" />
-<script defer src="/site.js?v=20261008-2"></script>
+<link rel="stylesheet" href="/styles.css?v=20261008-5" />
+<script defer src="/site.js?v=20261008-3"></script>
 <style>
   /* Article template: page-specific layout on top of shared .article styles */
   .article .byline { margin: 0 0 26px; }
@@ -172,17 +172,31 @@
     <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
     <nav class="nav__links" aria-label="Primary">
       <div class="nav__item has-drop">
-        <a href="/services">Services</a>
-        <div class="nav__drop" aria-label="Services">
-          <a href="/services/marketing">Marketing</a>
-          <a href="/services/technical">Technical</a>
-          <a href="/services/strategy">Strategy</a>
-          <a href="/services/coaching">Coaching &amp; growth</a>
-          <a class="nav__drop-all" href="/services">All services</a>
+        <a href="/services" class="nav__top">Services</a>
+        <div class="nav__drop nav__drop--wide" aria-label="Services">
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/marketing">Marketing</a>
+            <a class="nav__drop-sub" href="/services/local-seo">Local SEO</a>
+            <a class="nav__drop-sub" href="/services/google-ad-grants">Google Ad Grants</a>
+            <a class="nav__drop-head" href="/services/strategy">Strategy</a>
+            <a class="nav__drop-head" href="/services/coaching">Coaching &amp; growth</a>
+          </div>
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/technical">Technical</a>
+            <a class="nav__drop-sub" href="/services/websites">Websites &amp; web apps</a>
+            <a class="nav__drop-sub" href="/services/ai-automation">AI &amp; automation</a>
+            <a class="nav__drop-sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+            <a class="nav__drop-sub" href="/services/google-ads">Google Ads</a>
+            <a class="nav__drop-sub" href="/services/analytics">GA4 &amp; analytics</a>
+          </div>
+          <div class="nav__drop-foot">
+            <a href="/services">All services</a>
+            <a href="/investment#projects">Project pricing</a>
+          </div>
         </div>
       </div>
       <div class="nav__item has-drop">
-        <a href="/#who-we-help">Who we help</a>
+        <button type="button" class="nav__top nav__toggle" aria-expanded="false">Who we help</button>
         <div class="nav__drop" aria-label="Who we help">
           <a href="/for/local-businesses">Local businesses</a>
           <a href="/for/founders">Founders &amp; startups</a>
@@ -191,8 +205,8 @@
       </div>
       <a href="/method">Method</a>
       <a href="/investment">Pricing</a>
-      <a href="/work">Work</a>
       <a href="/resources">Resources</a>
+      <a href="/about">About</a>
       <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
     </nav>
     <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -201,7 +215,14 @@
 <div class="mobile-menu" aria-hidden="true">
   <span class="mobile-menu__group">Services</span>
   <a href="/services/marketing">Marketing</a>
+  <a class="mobile-menu__sub" href="/services/local-seo">Local SEO</a>
+  <a class="mobile-menu__sub" href="/services/google-ad-grants">Google Ad Grants</a>
   <a href="/services/technical">Technical</a>
+  <a class="mobile-menu__sub" href="/services/websites">Websites &amp; web apps</a>
+  <a class="mobile-menu__sub" href="/services/ai-automation">AI &amp; automation</a>
+  <a class="mobile-menu__sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+  <a class="mobile-menu__sub" href="/services/google-ads">Google Ads</a>
+  <a class="mobile-menu__sub" href="/services/analytics">GA4 &amp; analytics</a>
   <a href="/services/strategy">Strategy</a>
   <a href="/services/coaching">Coaching &amp; growth</a>
   <span class="mobile-menu__group">Who we help</span>
@@ -211,7 +232,6 @@
   <span class="mobile-menu__group">Explore</span>
   <a href="/method">Method</a>
   <a href="/investment">Pricing</a>
-  <a href="/work">Work</a>
   <a href="/resources">Resources</a>
   <a href="/about">About</a>
   <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
@@ -251,6 +271,9 @@
           <span>By <a href="/about">Carson Poore</a></span>
           <span class="updated">Last updated: October 2026</span>
         </div>
+
+        <figure class="article-photo reveal"><img src="/media/photos/nonprofit-grant-1-team-table.jpg" alt="People sitting at a wooden table holding pens and notebooks during a meeting" width="1600" height="1000" decoding="async" /></figure>
+        <!-- Photo: Dylan Gillis / Unsplash — https://unsplash.com/photos/people-sitting-on-chair-in-front-of-table-while-holding-pens-during-daytime-KdeqA3aTnBY -->
 
         <p class="answer reveal" data-delay="1">Through its Ad Grants program, Google gives verified 501(c)(3) nonprofits up to <strong>$10,000 a month</strong> in free Google Search ads, with no cap on how many organizations take part. Most self-managed accounts use <strong>a few hundred dollars</strong> of it. Ad Grants agencies put the average near $300. The rest doesn&rsquo;t roll over.</p>
 
@@ -400,6 +423,13 @@
     </div>
   </section>
 
+  <!-- WHERE TO NEXT -->
+  <section class="next-strip"><div class="wrap"><h2 class="next-strip__title reveal">Where to next</h2><div class="next-grid">
+      <a class="next-card reveal" href="/for/nonprofits"><strong>How we work with nonprofits</strong><span>One donor list, clear stories, and numbers your board can read.</span><span class="arr-link">See the nonprofit page →</span></a>
+      <a class="next-card reveal" href="/tools/90-day-plan"><strong>90-Day Plan Starter</strong><span>Sketch your next three months of outreach in a few minutes. Free, no email.</span><span class="arr-link">Build the plan →</span></a>
+      <a class="next-card reveal" href="/investment"><strong>The nonprofit rate</strong><span>Ad Grant management fits the $1,200-a-month tier, and nonprofits pay a reduced rate.</span><span class="arr-link">See pricing →</span></a>
+  </div></div></section>
+
   <!-- CLOSING CTA -->
   <section class="closing">
     <div class="closing__inner">
@@ -407,8 +437,9 @@
         <h2>How much of last month&rsquo;s $10,000 did you <em>actually use?</em></h2>
         <p>Ask for a free Ad Grant checkup. We&rsquo;ll tell you whether you&rsquo;re eligible and what the account actually spent. If running it yourself is the right call, we&rsquo;ll say that too.</p>
       </div>
-      <div class="reveal" data-delay="1">
+      <div class="reveal row-cta" data-delay="1">
         <a href="/services/google-ad-grants" class="btn btn--primary">Get a free Ad Grant checkup <span class="arr">→</span></a>
+        <a href="/contact" class="btn btn--ghost-light">Talk it through with Carson</a>
       </div>
     </div>
   </section>
@@ -445,7 +476,7 @@
           <li><a href="/for/local-businesses">Local businesses</a></li>
           <li><a href="/for/founders">Founders &amp; startups</a></li>
           <li><a href="/for/nonprofits">Nonprofits</a></li>
-          <li><a href="/work">Client results</a></li>
+          <li><a href="/work">Work</a></li>
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
@@ -475,6 +506,7 @@
           <li><a href="/about">About</a></li>
           <li><a href="/method">Method</a></li>
           <li><a href="/investment">Pricing</a></li>
+          <li><a href="/investment#projects">Project pricing</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
       </div>

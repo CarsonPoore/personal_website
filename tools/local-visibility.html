@@ -14,8 +14,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
 <link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
-<link rel="stylesheet" href="/styles.css?v=20261008-2" />
-<script defer src="/site.js?v=20261008-2"></script>
+<link rel="stylesheet" href="/styles.css?v=20261008-5" />
+<script defer src="/site.js?v=20261008-3"></script>
 <style>
   /* Local visibility check: layout on top of the shared tool primitives */
   .lv { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, 380px); gap: clamp(24px, 4vw, 56px); align-items: start; }
@@ -172,17 +172,31 @@
     <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
     <nav class="nav__links" aria-label="Primary">
       <div class="nav__item has-drop">
-        <a href="/services">Services</a>
-        <div class="nav__drop" aria-label="Services">
-          <a href="/services/marketing">Marketing</a>
-          <a href="/services/technical">Technical</a>
-          <a href="/services/strategy">Strategy</a>
-          <a href="/services/coaching">Coaching &amp; growth</a>
-          <a class="nav__drop-all" href="/services">All services</a>
+        <a href="/services" class="nav__top">Services</a>
+        <div class="nav__drop nav__drop--wide" aria-label="Services">
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/marketing">Marketing</a>
+            <a class="nav__drop-sub" href="/services/local-seo">Local SEO</a>
+            <a class="nav__drop-sub" href="/services/google-ad-grants">Google Ad Grants</a>
+            <a class="nav__drop-head" href="/services/strategy">Strategy</a>
+            <a class="nav__drop-head" href="/services/coaching">Coaching &amp; growth</a>
+          </div>
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/technical">Technical</a>
+            <a class="nav__drop-sub" href="/services/websites">Websites &amp; web apps</a>
+            <a class="nav__drop-sub" href="/services/ai-automation">AI &amp; automation</a>
+            <a class="nav__drop-sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+            <a class="nav__drop-sub" href="/services/google-ads">Google Ads</a>
+            <a class="nav__drop-sub" href="/services/analytics">GA4 &amp; analytics</a>
+          </div>
+          <div class="nav__drop-foot">
+            <a href="/services">All services</a>
+            <a href="/investment#projects">Project pricing</a>
+          </div>
         </div>
       </div>
       <div class="nav__item has-drop">
-        <a href="/#who-we-help">Who we help</a>
+        <button type="button" class="nav__top nav__toggle" aria-expanded="false">Who we help</button>
         <div class="nav__drop" aria-label="Who we help">
           <a href="/for/local-businesses">Local businesses</a>
           <a href="/for/founders">Founders &amp; startups</a>
@@ -191,8 +205,8 @@
       </div>
       <a href="/method">Method</a>
       <a href="/investment">Pricing</a>
-      <a href="/work">Work</a>
       <a href="/resources">Resources</a>
+      <a href="/about">About</a>
       <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
     </nav>
     <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -201,7 +215,14 @@
 <div class="mobile-menu" aria-hidden="true">
   <span class="mobile-menu__group">Services</span>
   <a href="/services/marketing">Marketing</a>
+  <a class="mobile-menu__sub" href="/services/local-seo">Local SEO</a>
+  <a class="mobile-menu__sub" href="/services/google-ad-grants">Google Ad Grants</a>
   <a href="/services/technical">Technical</a>
+  <a class="mobile-menu__sub" href="/services/websites">Websites &amp; web apps</a>
+  <a class="mobile-menu__sub" href="/services/ai-automation">AI &amp; automation</a>
+  <a class="mobile-menu__sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+  <a class="mobile-menu__sub" href="/services/google-ads">Google Ads</a>
+  <a class="mobile-menu__sub" href="/services/analytics">GA4 &amp; analytics</a>
   <a href="/services/strategy">Strategy</a>
   <a href="/services/coaching">Coaching &amp; growth</a>
   <span class="mobile-menu__group">Who we help</span>
@@ -211,7 +232,6 @@
   <span class="mobile-menu__group">Explore</span>
   <a href="/method">Method</a>
   <a href="/investment">Pricing</a>
-  <a href="/work">Work</a>
   <a href="/resources">Resources</a>
   <a href="/about">About</a>
   <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
@@ -229,14 +249,18 @@
           <li aria-current="page">Can Indianapolis Find You?</li>
         </ol>
       </nav>
+      <div class="page-hero__grid">
       <div class="page-hero__copy">
-        <h1 class="reveal mt-md" data-delay="1">Can Indianapolis <em>Find You?</em></h1>
-        <p class="hero__sub reveal mt-md" data-delay="2">Eighteen checks on your Google Business Profile, your reviews, and your website basics. Tick what&rsquo;s true today, get a letter grade, and see the three fixes worth doing first. Almost every one is free.</p>
-        <p class="hero__sub reveal mt-sm" data-delay="2">Free. No email. No login. Nothing to download. Allow about 30 minutes with your Google profile open.</p>
-        <div class="row-cta reveal mt-lg" data-delay="3">
-          <a class="btn btn--primary" href="#check">Start the check <span class="arr">↓</span></a>
-          <a class="tlink" href="/services/local-seo">or see how we do local SEO</a>
+          <h1 class="reveal mt-md" data-delay="1">Can Indianapolis <em>Find You?</em></h1>
+          <p class="hero__sub reveal mt-md" data-delay="2">Eighteen checks on your Google Business Profile, your reviews, and your website basics. Tick what&rsquo;s true today, get a letter grade, and see the three fixes worth doing first. Almost every one is free.</p>
+          <p class="hero__sub reveal mt-sm" data-delay="2">Free. No email. No login. Nothing to download. Allow about 30 minutes with your Google profile open.</p>
+          <div class="row-cta reveal mt-lg" data-delay="3">
+            <a class="btn btn--primary" href="#check">Start the check <span class="arr">↓</span></a>
+            <a class="tlink" href="/services/local-seo">or see how we do local SEO</a>
+          </div>
         </div>
+        <figure class="photo photo--wide photo--amber page-hero__motion reveal" data-delay="2"><img src="/media/photos/tool-lv-1-storefronts.jpg" alt="Brick storefronts on a small-town main street seen across a landscaped plaza" width="1200" height="750" decoding="async" fetchpriority="high" /></figure>
+        <!-- Photo: Michael Hart / Unsplash — https://unsplash.com/photos/a-brick-building-with-a-clock-on-the-front-of-it-H1qRuRIV2kE -->
       </div>
     </div>
   </section>
@@ -553,6 +577,7 @@
             <div class="row-cta mt-md">
               <a class="btn btn--primary" id="lv-cta-link" href="/contact">Book 30 minutes <span class="arr">→</span></a>
             </div>
+            <p class="mt-md" id="lv-low" hidden>A grade below B usually means the fixes are worth handing off. <a class="tlink" href="/services/local-seo">See how local SEO works here <span class="arr">→</span></a> Retainers start at $1,200 a month, with a three-month minimum.</p>
           </div>
         </div>
       </div>
@@ -584,6 +609,13 @@
       </div>
     </div>
   </section>
+
+  <!-- WHERE TO NEXT -->
+  <section class="next-strip"><div class="wrap"><h2 class="next-strip__title reveal">Where to next</h2><div class="next-grid">
+      <a class="next-card reveal" href="/services/local-seo"><strong>How local SEO works here</strong><span>Profile upkeep and review requests, handled every month so the fixes keep getting done.</span><span class="arr-link">See local SEO →</span></a>
+      <a class="next-card reveal" href="/tools/checkup"><strong>Take the five-step check-up</strong><span>Find out whether the weak spot is Google, your offer, or something earlier.</span><span class="arr-link">Take the check-up →</span></a>
+      <a class="next-card reveal" href="/investment"><strong>Local SEO starts at $1,200 a month</strong><span>Three-month minimum, then month to month. Every price is printed.</span><span class="arr-link">See the pricing →</span></a>
+  </div></div></section>
 
   <!-- CLOSING CTA -->
   <section class="closing">
@@ -632,7 +664,7 @@
           <li><a href="/for/local-businesses">Local businesses</a></li>
           <li><a href="/for/founders">Founders &amp; startups</a></li>
           <li><a href="/for/nonprofits">Nonprofits</a></li>
-          <li><a href="/work">Client results</a></li>
+          <li><a href="/work">Work</a></li>
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
@@ -662,6 +694,7 @@
           <li><a href="/about">About</a></li>
           <li><a href="/method">Method</a></li>
           <li><a href="/investment">Pricing</a></li>
+          <li><a href="/investment#projects">Project pricing</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
@@ -692,6 +725,7 @@
   var clearBtn = document.getElementById("lv-clear");
   var savedEl = document.getElementById("lv-saved");
   var ctaLink = document.getElementById("lv-cta-link");
+  var lowEl = document.getElementById("lv-low");
   var mini = document.getElementById("lv-mini");
   var miniG = document.getElementById("lv-mini-g");
   var miniN = document.getElementById("lv-mini-n");
@@ -869,6 +903,7 @@
       setText(c, on + " of " + boxes.length);
     });
 
+    if (lowEl) { lowEl.hidden = (lvl.g === "A" || lvl.g === "B"); }
     setText(miniG, lvl.g);
     setText(miniN, String(n));
     if (ctaLink) { ctaLink.setAttribute("href", "/contact?from=local-visibility&grade=" + lvl.g + "&checked=" + n); }

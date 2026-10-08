@@ -58,8 +58,46 @@
     const href = norm(raw);
     if (href === seg1 && seg1 !== "/") a.classList.add("is-active");
     if ((seg1 === "/tools" || seg1 === "/articles") && href === "/resources") a.classList.add("is-active");
-    if (seg1 === "/for" && (a.textContent || "").trim().toLowerCase().startsWith("who we help")) a.classList.add("is-active");
   });
+  if (seg1 === "/for") document.querySelectorAll(".nav__toggle").forEach(b => b.classList.add("is-active"));
+
+  // Dropdowns: hover/focus opens them (CSS); click/tap toggles; Escape and outside clicks close
+  const items = document.querySelectorAll(".nav__item.has-drop");
+  const closeAll = except => items.forEach(it => {
+    if (it === except) return;
+    it.classList.remove("is-open");
+    const b = it.querySelector(".nav__toggle"); if (b) b.setAttribute("aria-expanded", "false");
+  });
+  document.querySelectorAll(".nav__toggle").forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.stopPropagation();
+      const it = btn.closest(".nav__item");
+      const open = !it.classList.contains("is-open");
+      closeAll(it);
+      it.classList.toggle("is-open", open);
+      btn.setAttribute("aria-expanded", String(open));
+    });
+  });
+  document.addEventListener("click", e => { if (!e.target.closest(".nav__item.has-drop")) closeAll(); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape") closeAll(); });
+
+  // Sticky mobile booking bar: after the hero, hidden while the closing band shows,
+  // never on contact, ticket, or pages without a closing band (404)
+  (function () {
+    const closing = document.querySelector(".closing");
+    const hero = document.querySelector(".hero, .page-hero");
+    if (!closing || !hero || /^\/(contact|ticket)(\.html)?$/.test(location.pathname)) return;
+    const bar = document.createElement("div");
+    bar.className = "mbar";
+    bar.innerHTML = '<span>30 minutes, no pitch.</span><a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>';
+    document.body.appendChild(bar);
+    document.body.classList.add("has-mbar");
+    if (!("IntersectionObserver" in window)) { bar.classList.add("is-on"); return; }
+    let pastHero = false, closingOn = false;
+    const sync = () => bar.classList.toggle("is-on", pastHero && !closingOn);
+    new IntersectionObserver(([e]) => { pastHero = !e.isIntersecting && e.boundingClientRect.top < 0; sync(); }).observe(hero);
+    new IntersectionObserver(([e]) => { closingOn = e.isIntersecting; sync(); }).observe(closing);
+  })();
 
   // Contact: scheduling mock
   const cal = document.querySelector("[data-sched]");

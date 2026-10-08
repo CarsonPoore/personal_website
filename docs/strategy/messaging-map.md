@@ -36,6 +36,10 @@ Carson Poore Consulting is a small Indianapolis team that plans the work and the
 - Tool names are Title Case: The Five-Step Check-Up, Can Indy Find You?, AI Opportunity Finder, Budget Calculator, 90-Day Plan Starter.
 - LinkedIn (personal): https://www.linkedin.com/in/carson-poore/ (in footer + schema sameAs). No Google Business Profile yet.
 
+- **Project prices (published Oct 8, 2026 — Carson asked for leaner than lean; web anchor $900 is his number, the rest scaled by Claude, flagged for his review):** Starter site from $900 · Business site from $2,500 · Web app from $6,000 · Logo & identity from $750 · Full brand system from $2,000 · Brand video from $1,200 · Short-form video pack from $750 · Half-day photo shoot from $350. Product design quoted. Section lives at /investment#projects.
+- **Navigation (Oct 8):** top nav = Services▾ (two columns, leaf services under practices) · Who we help▾ (button) · Method · Pricing · Resources · About · Book a free call. Work is footer-only until real case studies exist; never link /work as proof.
+- **Practice → service mapping:** Marketing: Local SEO, Google Ad Grants · Technical: Websites & web apps, AI & automation, GoHighLevel & CRM, Google Ads, GA4 & analytics · Strategy and Coaching & growth are single engagements.
+
 ## Guardrails (from research risks — binding)
 - /services/coaching never uses "business coach" language; always "fractional CMO / marketing advisor."
 - Never publish: $5.7B fractional-market figure, $26B automation-market figure, 61%-no-ROI AI stat as a number, vendor Indy CPC claims. The $8,650 managed-Ad-Grant average = "industry-reported." Every on-page statistic needs its named source inline.

@@ -14,8 +14,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
 <link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
-<link rel="stylesheet" href="/styles.css?v=20261008-2" />
-<script defer src="/site.js?v=20261008-2"></script>
+<link rel="stylesheet" href="/styles.css?v=20261008-5" />
+<script defer src="/site.js?v=20261008-3"></script>
 <style>
   /* Local businesses pathway — page-specific layout */
   .hero-facts {
@@ -169,12 +169,6 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Who we help",
-          "item": "https://carsonpoore.com/#who-we-help"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
           "name": "Local businesses"
         }
       ]
@@ -243,17 +237,31 @@
     <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
     <nav class="nav__links" aria-label="Primary">
       <div class="nav__item has-drop">
-        <a href="/services">Services</a>
-        <div class="nav__drop" aria-label="Services">
-          <a href="/services/marketing">Marketing</a>
-          <a href="/services/technical">Technical</a>
-          <a href="/services/strategy">Strategy</a>
-          <a href="/services/coaching">Coaching &amp; growth</a>
-          <a class="nav__drop-all" href="/services">All services</a>
+        <a href="/services" class="nav__top">Services</a>
+        <div class="nav__drop nav__drop--wide" aria-label="Services">
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/marketing">Marketing</a>
+            <a class="nav__drop-sub" href="/services/local-seo">Local SEO</a>
+            <a class="nav__drop-sub" href="/services/google-ad-grants">Google Ad Grants</a>
+            <a class="nav__drop-head" href="/services/strategy">Strategy</a>
+            <a class="nav__drop-head" href="/services/coaching">Coaching &amp; growth</a>
+          </div>
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/technical">Technical</a>
+            <a class="nav__drop-sub" href="/services/websites">Websites &amp; web apps</a>
+            <a class="nav__drop-sub" href="/services/ai-automation">AI &amp; automation</a>
+            <a class="nav__drop-sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+            <a class="nav__drop-sub" href="/services/google-ads">Google Ads</a>
+            <a class="nav__drop-sub" href="/services/analytics">GA4 &amp; analytics</a>
+          </div>
+          <div class="nav__drop-foot">
+            <a href="/services">All services</a>
+            <a href="/investment#projects">Project pricing</a>
+          </div>
         </div>
       </div>
       <div class="nav__item has-drop">
-        <a href="/#who-we-help">Who we help</a>
+        <button type="button" class="nav__top nav__toggle" aria-expanded="false">Who we help</button>
         <div class="nav__drop" aria-label="Who we help">
           <a href="/for/local-businesses">Local businesses</a>
           <a href="/for/founders">Founders &amp; startups</a>
@@ -262,8 +270,8 @@
       </div>
       <a href="/method">Method</a>
       <a href="/investment">Pricing</a>
-      <a href="/work">Work</a>
       <a href="/resources">Resources</a>
+      <a href="/about">About</a>
       <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
     </nav>
     <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -272,7 +280,14 @@
 <div class="mobile-menu" aria-hidden="true">
   <span class="mobile-menu__group">Services</span>
   <a href="/services/marketing">Marketing</a>
+  <a class="mobile-menu__sub" href="/services/local-seo">Local SEO</a>
+  <a class="mobile-menu__sub" href="/services/google-ad-grants">Google Ad Grants</a>
   <a href="/services/technical">Technical</a>
+  <a class="mobile-menu__sub" href="/services/websites">Websites &amp; web apps</a>
+  <a class="mobile-menu__sub" href="/services/ai-automation">AI &amp; automation</a>
+  <a class="mobile-menu__sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+  <a class="mobile-menu__sub" href="/services/google-ads">Google Ads</a>
+  <a class="mobile-menu__sub" href="/services/analytics">GA4 &amp; analytics</a>
   <a href="/services/strategy">Strategy</a>
   <a href="/services/coaching">Coaching &amp; growth</a>
   <span class="mobile-menu__group">Who we help</span>
@@ -282,7 +297,6 @@
   <span class="mobile-menu__group">Explore</span>
   <a href="/method">Method</a>
   <a href="/investment">Pricing</a>
-  <a href="/work">Work</a>
   <a href="/resources">Resources</a>
   <a href="/about">About</a>
   <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
@@ -296,7 +310,6 @@
       <nav class="crumbs" aria-label="Breadcrumb">
         <ol>
           <li><a href="/">Home</a></li>
-          <li><a href="/#who-we-help">Who we help</a></li>
           <li aria-current="page">Local businesses</li>
         </ol>
       </nav>
@@ -324,26 +337,44 @@
 
   <!-- THEIR WORLD -->
   <section class="section">
+    <div class="wrap">
+      <div class="photo-split photo-split--flip">
+        <figure class="photo photo--wide photo--amber reveal"><img src="/media/photos/lb-1-plumber.jpg" alt="A plumber tightening a fitting on the pipes under a sink" width="1600" height="1000" loading="lazy" decoding="async" /></figure>
+<!-- Photo: Timur Shakerzianov / Unsplash — https://unsplash.com/photos/a-man-working-on-a-pipe-in-a-wall-c314Gh8dXAo -->
+        <div>
+          <div class="sec-head">
+            <h2 class="reveal" data-delay="1">Busy every day. Somehow not growing.</h2>
+          </div>
+          <div class="mt-lg">
+            <p class="reveal">You&rsquo;ve put in fifteen years of good work, and your customers still send their sister-in-law your way. That&rsquo;s how most of the local businesses we meet got here. For a long time it was plenty.</p>
+            <p class="mt-md reveal">Then word of mouth stopped scaling. The customers are the same and so is the revenue, but the costs keep climbing. A homeowner in Carmel searches &ldquo;AC repair near me&rdquo; and three companies show up before you, one of them two years old. Your work didn&rsquo;t get worse. Google simply has more names to show than it used to, and yours isn&rsquo;t near the top.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="photo-split">
+        <div class="verticals" style="grid-template-columns:1fr;margin-block:0">
+          <div class="vertical reveal">
+            <h3>Trades &amp; home services</h3>
+            <p>HVAC, plumbing, electrical, roofing, landscaping. The calls come in bursts and the jobs are worth real money. You&rsquo;re on a ladder when the phone rings, and by the time you call back, they&rsquo;ve booked somebody else. Then there are the lead sites, where you pay per lead and find out the same homeowner went to four other contractors.</p>
+          </div>
+          <div class="vertical reveal" data-delay="1">
+            <h3>Restaurants, shops &amp; salons</h3>
+            <p>Here it sounds different. Nobody wants a quote; they&rsquo;re deciding where to eat tonight or who cuts their hair next. That decision happens fast, and it usually starts with a phone search for &ldquo;near me.&rdquo; Meanwhile your Instagram is gathering dust because you&rsquo;re on the floor all day, and Tuesdays in Fountain Square are slower than they should be.</p>
+          </div>
+        </div>
+        <figure class="photo photo--tall photo--navy reveal" data-delay="1"><img src="/media/photos/lb-2-kitchen.jpg" alt="Cooks in aprons preparing food at a cutting board in a busy restaurant kitchen" width="1000" height="1250" loading="lazy" decoding="async" /></figure>
+        <!-- Photo: Daniel / Unsplash — https://unsplash.com/photos/a-group-of-men-working-in-a-kitchen-preparing-doughnuts-GfVYwJUziVE -->
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
     <div class="wrap wrap--narrow">
-      <div class="sec-head">
-        <h2 class="reveal" data-delay="1">Busy every day. Somehow not growing.</h2>
-      </div>
-      <div class="mt-lg">
-        <p class="reveal">You&rsquo;ve put in fifteen years of good work, and your customers still send their sister-in-law your way. That&rsquo;s how most of the local businesses we meet got here. For a long time it was plenty.</p>
-        <p class="mt-md reveal">Then word of mouth stopped scaling. The customers are the same and so is the revenue, but the costs keep climbing. A homeowner in Carmel searches &ldquo;AC repair near me&rdquo; and three companies show up before you, one of them two years old. Your work didn&rsquo;t get worse. Google simply has more names to show than it used to, and yours isn&rsquo;t near the top.</p>
-      </div>
-
-      <div class="verticals">
-        <div class="vertical reveal">
-          <h3>Trades &amp; home services</h3>
-          <p>HVAC, plumbing, electrical, roofing, landscaping. The calls come in bursts and the jobs are worth real money. You&rsquo;re on a ladder when the phone rings, and by the time you call back, they&rsquo;ve booked somebody else. Then there are the lead sites, where you pay per lead and find out the same homeowner went to four other contractors.</p>
-        </div>
-        <div class="vertical reveal" data-delay="1">
-          <h3>Restaurants, shops &amp; salons</h3>
-          <p>Here it sounds different. Nobody wants a quote; they&rsquo;re deciding where to eat tonight or who cuts their hair next. That decision happens fast, and it usually starts with a phone search for &ldquo;near me.&rdquo; Meanwhile your Instagram is gathering dust because you&rsquo;re on the floor all day, and Tuesdays in Fountain Square are slower than they should be.</p>
-        </div>
-      </div>
-
       <div>
         <p class="reveal">Maybe you already tried to fix it. Paid an agency every month, got a PDF full of charts and words like &ldquo;reach,&rdquo; and couldn&rsquo;t point to one extra job. You&rsquo;re in a big club. When vcita surveyed small-business owners in April 2025, 40% had dropped or switched their marketing agency, and most gave the same reason: they couldn&rsquo;t see a return.</p>
         <p class="mt-md reveal">So we set this up around the parts that burned you. The price is printed on our pricing page. You commit to three months, then it&rsquo;s month to month. The report counts calls and booked jobs. And everything we set up is in your name, so leaving never costs you your phone number.</p>
@@ -394,12 +425,16 @@
         </article>
       </div>
 
-      <div class="first-steps__notes">
-        <div class="reveal">
-          <p>Most local businesses buy ads too early. If your Google profile has eleven reviews and no photos, an ad budget pays to send strangers to a listing that doesn&rsquo;t convince them. Fix the listing first. It&rsquo;s cheaper, and it keeps working after you stop paying anyone, us included.</p>
-        </div>
-        <div class="reveal" data-delay="1">
-          <p>The first month is setup, and honestly, it&rsquo;s boring. Profile fixes, call tracking, a review request that actually sends. You won&rsquo;t feel much yet. That&rsquo;s why the minimum is three months: the listing and the reviews need that long to show up in your call log. Your part stays small, a call with us each month and a quick reply when we need a photo. And if you&rsquo;ve wondered whether an <a class="tlink" href="/services/ai-automation">AI assistant</a> could handle the after-hours questions, ask. Sometimes it&rsquo;s worth building. Often a plain auto-text does the job.</p>
+      <div class="photo-split photo-split--flip mt-xl">
+        <figure class="photo photo--wide photo--cobalt reveal"><img src="/media/photos/lb-3-coffee-counter.jpg" alt="A barista chatting with a customer at a coffee shop counter" width="1600" height="1000" loading="lazy" decoding="async" /></figure>
+<!-- Photo: Vitaly Gariev / Unsplash — https://unsplash.com/photos/customer-pays-at-a-coffee-shop-MAGhG3x_AII -->
+        <div class="first-steps__notes" style="grid-template-columns:1fr;margin-top:0">
+          <div class="reveal">
+            <p>Most local businesses buy ads too early. If your Google profile has eleven reviews and no photos, an ad budget pays to send strangers to a listing that doesn&rsquo;t convince them. Fix the listing first. It&rsquo;s cheaper, and it keeps working after you stop paying anyone, us included.</p>
+          </div>
+          <div class="reveal" data-delay="1">
+            <p>The first month is setup, and honestly, it&rsquo;s boring. Profile fixes, call tracking, a review request that actually sends. You won&rsquo;t feel much yet. That&rsquo;s why the minimum is three months: the listing and the reviews need that long to show up in your call log. Your part stays small, a call with us each month and a quick reply when we need a photo. And if you&rsquo;ve wondered whether an <a class="tlink" href="/services/ai-automation">AI assistant</a> could handle the after-hours questions, ask. Sometimes it&rsquo;s worth building. Often a plain auto-text does the job.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -440,7 +475,7 @@
       </div>
       <div class="row-cta mt-xl reveal">
         <a class="btn btn--dark" href="/investment">Read the pricing page <span class="arr">→</span></a>
-        <a class="tlink" href="/work">How we report results <span aria-hidden="true">→</span></a>
+        <a class="tlink" href="/method">How we report: the five steps <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
@@ -466,6 +501,13 @@
       </div>
     </div>
   </section>
+
+  <!-- WHERE TO NEXT -->
+  <section class="next-strip"><div class="wrap"><h2 class="next-strip__title reveal">Where to next</h2><div class="next-grid">
+      <a class="next-card reveal" href="/services/local-seo"><strong>How local SEO works</strong><span>Your Google profile, your reviews, and the map box that decides who gets the call.</span><span class="arr-link">See local SEO →</span></a>
+      <a class="next-card reveal" href="/tools/local-visibility"><strong>Can Indy Find You?</strong><span>A five-minute checklist that scores your profile, reviews, and website basics.</span><span class="arr-link">Run the check →</span></a>
+      <a class="next-card reveal" href="/investment"><strong>Retainers start at $1,200 a month</strong><span>Three tiers, three-month minimum, nonprofits pay less. Every price is printed.</span><span class="arr-link">See the pricing →</span></a>
+  </div></div></section>
 
   <!-- CLOSING -->
   <section class="closing">
@@ -512,7 +554,7 @@
           <li><a href="/for/local-businesses">Local businesses</a></li>
           <li><a href="/for/founders">Founders &amp; startups</a></li>
           <li><a href="/for/nonprofits">Nonprofits</a></li>
-          <li><a href="/work">Client results</a></li>
+          <li><a href="/work">Work</a></li>
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
@@ -542,6 +584,7 @@
           <li><a href="/about">About</a></li>
           <li><a href="/method">Method</a></li>
           <li><a href="/investment">Pricing</a></li>
+          <li><a href="/investment#projects">Project pricing</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
       </div>

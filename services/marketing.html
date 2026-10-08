@@ -14,8 +14,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
 <link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
-<link rel="stylesheet" href="/styles.css?v=20261008-2" />
-<script defer src="/site.js?v=20261008-2"></script>
+<link rel="stylesheet" href="/styles.css?v=20261008-5" />
+<script defer src="/site.js?v=20261008-3"></script>
 <style>
   /* Marketing pathway — page-specific layout (template for the other three pathways) */
   .tiles-2x2 { grid-template-columns: repeat(2, 1fr); }
@@ -190,17 +190,31 @@
     <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
     <nav class="nav__links" aria-label="Primary">
       <div class="nav__item has-drop">
-        <a href="/services">Services</a>
-        <div class="nav__drop" aria-label="Services">
-          <a href="/services/marketing">Marketing</a>
-          <a href="/services/technical">Technical</a>
-          <a href="/services/strategy">Strategy</a>
-          <a href="/services/coaching">Coaching &amp; growth</a>
-          <a class="nav__drop-all" href="/services">All services</a>
+        <a href="/services" class="nav__top">Services</a>
+        <div class="nav__drop nav__drop--wide" aria-label="Services">
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/marketing">Marketing</a>
+            <a class="nav__drop-sub" href="/services/local-seo">Local SEO</a>
+            <a class="nav__drop-sub" href="/services/google-ad-grants">Google Ad Grants</a>
+            <a class="nav__drop-head" href="/services/strategy">Strategy</a>
+            <a class="nav__drop-head" href="/services/coaching">Coaching &amp; growth</a>
+          </div>
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/technical">Technical</a>
+            <a class="nav__drop-sub" href="/services/websites">Websites &amp; web apps</a>
+            <a class="nav__drop-sub" href="/services/ai-automation">AI &amp; automation</a>
+            <a class="nav__drop-sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+            <a class="nav__drop-sub" href="/services/google-ads">Google Ads</a>
+            <a class="nav__drop-sub" href="/services/analytics">GA4 &amp; analytics</a>
+          </div>
+          <div class="nav__drop-foot">
+            <a href="/services">All services</a>
+            <a href="/investment#projects">Project pricing</a>
+          </div>
         </div>
       </div>
       <div class="nav__item has-drop">
-        <a href="/#who-we-help">Who we help</a>
+        <button type="button" class="nav__top nav__toggle" aria-expanded="false">Who we help</button>
         <div class="nav__drop" aria-label="Who we help">
           <a href="/for/local-businesses">Local businesses</a>
           <a href="/for/founders">Founders &amp; startups</a>
@@ -209,8 +223,8 @@
       </div>
       <a href="/method">Method</a>
       <a href="/investment">Pricing</a>
-      <a href="/work">Work</a>
       <a href="/resources">Resources</a>
+      <a href="/about">About</a>
       <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
     </nav>
     <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -219,7 +233,14 @@
 <div class="mobile-menu" aria-hidden="true">
   <span class="mobile-menu__group">Services</span>
   <a href="/services/marketing">Marketing</a>
+  <a class="mobile-menu__sub" href="/services/local-seo">Local SEO</a>
+  <a class="mobile-menu__sub" href="/services/google-ad-grants">Google Ad Grants</a>
   <a href="/services/technical">Technical</a>
+  <a class="mobile-menu__sub" href="/services/websites">Websites &amp; web apps</a>
+  <a class="mobile-menu__sub" href="/services/ai-automation">AI &amp; automation</a>
+  <a class="mobile-menu__sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+  <a class="mobile-menu__sub" href="/services/google-ads">Google Ads</a>
+  <a class="mobile-menu__sub" href="/services/analytics">GA4 &amp; analytics</a>
   <a href="/services/strategy">Strategy</a>
   <a href="/services/coaching">Coaching &amp; growth</a>
   <span class="mobile-menu__group">Who we help</span>
@@ -229,7 +250,6 @@
   <span class="mobile-menu__group">Explore</span>
   <a href="/method">Method</a>
   <a href="/investment">Pricing</a>
-  <a href="/work">Work</a>
   <a href="/resources">Resources</a>
   <a href="/about">About</a>
   <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
@@ -265,16 +285,22 @@
 
   <!-- THE PROBLEM WE SOLVE -->
   <section class="section">
-    <div class="wrap wrap--narrow">
+    <div class="wrap">
       <div class="sec-head">
         <h2 class="reveal" data-delay="1">The work is still good. The phone got quiet.</h2>
       </div>
-      <div class="mt-lg">
+      <div class="photo-split mt-lg">
+        <div>
         <p class="reveal">Word of mouth built your business. Years of solid jobs, neighbors telling neighbors. Then it stopped scaling. Now the company down the road shows up first on Google and you don&rsquo;t show up at all.</p>
         <p class="mt-md reveal">Maybe you&rsquo;ve paid for marketing before. A thousand a month, a report full of charts and buzzwords, and no more jobs than the month before. That wound is common enough to measure: in vcita&rsquo;s April 2025 survey of 500 small-business owners, 40% had dropped or switched their marketing agency, and six in ten of those left because they couldn&rsquo;t see what the money bought.</p>
         <p class="mt-md reveal">So here is how we run things, plainly. Prices are published on this site. Three months minimum, then month to month. Eight clients at a time. If you ever leave, you keep everything: the website, the Google Business Profile, the ad accounts. They&rsquo;re registered to you from day one.</p>
         <p class="mt-md reveal">And the promise is concrete. When Indianapolis searches for what you do, you show up. When someone calls, they get an answer. If that first part isn&rsquo;t happening today, start with <a class="tlink" href="/articles/not-showing-up-on-google">why your business isn&rsquo;t showing up on Google</a>.</p>
         <p class="mt-md reveal">One opinion up front: most local businesses get sold social media management far too early. If your Google Business Profile is thin, fix that first. It&rsquo;s free. And it&rsquo;s where your customers actually look.</p>
+        </div>
+        <figure class="photo photo--wide photo--cobalt reveal"><img src="/media/photos/marketing-1-barber-at-work.jpg" alt="A barber cutting a client&rsquo;s hair" width="1600" height="1000" decoding="async" /></figure>
+<!-- Photo: A barber cutting a client&rsquo;s hair / Unsplash — https://unsplash.com/photos/Q82AM6BWBPM -->
+      </div>
+      <div style="max-width:60ch">
         <p class="pull mt-xl reveal">Half of this job is telling you where <em>not</em> to spend.</p>
       </div>
     </div>
@@ -318,8 +344,15 @@
         </div>
       </div>
 
-      <p class="mt-xl reveal">Brand identity, photography, and video production are available as project work, quoted on their own on the <a class="tlink" href="/investment">pricing page</a>. Retainer clients can add a project anytime.</p>
-
+      <div class="photo-split photo-split--flip mt-xl">
+        <figure class="photo photo--square photo--amber reveal" style="max-width:420px"><img src="/media/photos/marketing-3-cupcake-photo.jpg" alt="A woman photographing cupcakes on a table with a phone" width="1200" height="1500" loading="lazy" decoding="async" /></figure>
+<!-- Photo: A woman photographing cupcakes on a table with a phone / Unsplash — https://unsplash.com/photos/yQjtMb_CXEM -->
+        <div>
+          <h3 class="reveal">Most of your content starts on a phone</h3>
+          <p class="mt-sm reveal">A finished cake, a clean install, the crew at the shop. A good photo of the real thing, written up with the neighborhood in it, beats a stock graphic every time. We shoot it, write it, and post it, and the same photos feed your Google profile and your email.</p>
+        </div>
+      </div>
+      
       <div class="who-strip">
         <div class="who-card reveal">
           <h3>Local businesses</h3>
@@ -335,6 +368,28 @@
           <h3>Nonprofits</h3>
           <p>Marketing falls to whoever has ten spare minutes.</p>
           <a class="tlink" href="/for/nonprofits">How we work with nonprofits <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT WORK -->
+  <section class="section" id="project-work">
+    <div class="wrap">
+      <div class="photo-split photo-split--flip">
+        <figure class="photo photo--wide photo--navy reveal"><img src="/media/photos/marketing-2-video-shoot-bar.jpg" alt="A filmmaker holding a video camera on a gimbal" width="1600" height="1000" loading="lazy" decoding="async" /></figure>
+<!-- Photo: A filmmaker holding a video camera on a gimbal / Unsplash — https://unsplash.com/photos/Z1SsSLILqkY -->
+        <div>
+          <h2 class="reveal" data-delay="1">Project work: brand, video, and photo</h2>
+          <p class="mt-sm reveal" data-delay="2">Not ready for a retainer? Buy the piece you need, once. Prices start here, and every project is quoted on what it takes.</p>
+          <div class="proj-group mt-lg reveal" data-delay="2">
+            <div class="proj-group__head"><h3>Brand, video &amp; photo</h3><a href="/investment#projects">All project prices &rarr;</a></div>
+            <div class="proj-row"><h4>Logo &amp; identity</h4><span class="proj-price"><small>from</small>$750</span></div>
+            <div class="proj-row"><h4>Full brand system</h4><span class="proj-price"><small>from</small>$2,000</span></div>
+            <div class="proj-row"><h4>Brand video</h4><span class="proj-price"><small>from</small>$1,200</span></div>
+            <div class="proj-row"><h4>Short-form video pack</h4><span class="proj-price"><small>from</small>$750</span></div>
+            <div class="proj-row"><h4>Half-day photo shoot</h4><span class="proj-price"><small>from</small>$350</span></div>
+          </div>
         </div>
       </div>
     </div>
@@ -392,7 +447,7 @@
       </div>
       <div class="row-cta mt-xl reveal" data-delay="3">
         <a class="btn btn--primary" href="/investment">See the full pricing page <span class="arr">→</span></a>
-        <a class="tlink" href="/work">Browse client work <span aria-hidden="true">→</span></a>
+        <a class="tlink" href="/method">See the five steps we run <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
@@ -427,6 +482,12 @@
       </div>
     </div>
   </section>
+
+  <section class="next-strip"><div class="wrap"><h2 class="next-strip__title reveal">Where to next</h2><div class="next-grid">
+    <a class="next-card reveal" href="/services/local-seo"><strong>How local SEO works</strong><span>The first thing most owners need: showing up when Indianapolis searches for what you do.</span><span class="arr-link">Read the local SEO page →</span></a>
+    <a class="next-card reveal" href="/tools/checkup"><strong>The Five-Step Check-Up</strong><span>Two minutes, no email. See which step of your marketing is the weakest.</span><span class="arr-link">Take the check-up →</span></a>
+    <a class="next-card reveal" href="/investment#projects"><strong>Brand, video, and photo prices</strong><span>A logo and identity from $750, a brand video from $1,200, a half-day photo shoot from $350.</span><span class="arr-link">See project prices →</span></a>
+  </div></div></section>
 
   <!-- CLOSING -->
   <section class="closing">
@@ -473,7 +534,7 @@
           <li><a href="/for/local-businesses">Local businesses</a></li>
           <li><a href="/for/founders">Founders &amp; startups</a></li>
           <li><a href="/for/nonprofits">Nonprofits</a></li>
-          <li><a href="/work">Client results</a></li>
+          <li><a href="/work">Work</a></li>
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
@@ -503,6 +564,7 @@
           <li><a href="/about">About</a></li>
           <li><a href="/method">Method</a></li>
           <li><a href="/investment">Pricing</a></li>
+          <li><a href="/investment#projects">Project pricing</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
       </div>

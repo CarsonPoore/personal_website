@@ -14,8 +14,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
 <link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
-<link rel="stylesheet" href="/styles.css?v=20261008-2" />
-<script defer src="/site.js?v=20261008-2"></script>
+<link rel="stylesheet" href="/styles.css?v=20261008-5" />
+<script defer src="/site.js?v=20261008-3"></script>
 <style>
   /* Founders & startups pathway — page-specific layout */
   .hero-facts {
@@ -210,12 +210,6 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Who we help",
-          "item": "https://carsonpoore.com/#who-we-help"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
           "name": "Founders & startups"
         }
       ]
@@ -276,17 +270,31 @@
     <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
     <nav class="nav__links" aria-label="Primary">
       <div class="nav__item has-drop">
-        <a href="/services">Services</a>
-        <div class="nav__drop" aria-label="Services">
-          <a href="/services/marketing">Marketing</a>
-          <a href="/services/technical">Technical</a>
-          <a href="/services/strategy">Strategy</a>
-          <a href="/services/coaching">Coaching &amp; growth</a>
-          <a class="nav__drop-all" href="/services">All services</a>
+        <a href="/services" class="nav__top">Services</a>
+        <div class="nav__drop nav__drop--wide" aria-label="Services">
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/marketing">Marketing</a>
+            <a class="nav__drop-sub" href="/services/local-seo">Local SEO</a>
+            <a class="nav__drop-sub" href="/services/google-ad-grants">Google Ad Grants</a>
+            <a class="nav__drop-head" href="/services/strategy">Strategy</a>
+            <a class="nav__drop-head" href="/services/coaching">Coaching &amp; growth</a>
+          </div>
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/technical">Technical</a>
+            <a class="nav__drop-sub" href="/services/websites">Websites &amp; web apps</a>
+            <a class="nav__drop-sub" href="/services/ai-automation">AI &amp; automation</a>
+            <a class="nav__drop-sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+            <a class="nav__drop-sub" href="/services/google-ads">Google Ads</a>
+            <a class="nav__drop-sub" href="/services/analytics">GA4 &amp; analytics</a>
+          </div>
+          <div class="nav__drop-foot">
+            <a href="/services">All services</a>
+            <a href="/investment#projects">Project pricing</a>
+          </div>
         </div>
       </div>
       <div class="nav__item has-drop">
-        <a href="/#who-we-help">Who we help</a>
+        <button type="button" class="nav__top nav__toggle" aria-expanded="false">Who we help</button>
         <div class="nav__drop" aria-label="Who we help">
           <a href="/for/local-businesses">Local businesses</a>
           <a href="/for/founders">Founders &amp; startups</a>
@@ -295,8 +303,8 @@
       </div>
       <a href="/method">Method</a>
       <a href="/investment">Pricing</a>
-      <a href="/work">Work</a>
       <a href="/resources">Resources</a>
+      <a href="/about">About</a>
       <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
     </nav>
     <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -305,7 +313,14 @@
 <div class="mobile-menu" aria-hidden="true">
   <span class="mobile-menu__group">Services</span>
   <a href="/services/marketing">Marketing</a>
+  <a class="mobile-menu__sub" href="/services/local-seo">Local SEO</a>
+  <a class="mobile-menu__sub" href="/services/google-ad-grants">Google Ad Grants</a>
   <a href="/services/technical">Technical</a>
+  <a class="mobile-menu__sub" href="/services/websites">Websites &amp; web apps</a>
+  <a class="mobile-menu__sub" href="/services/ai-automation">AI &amp; automation</a>
+  <a class="mobile-menu__sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+  <a class="mobile-menu__sub" href="/services/google-ads">Google Ads</a>
+  <a class="mobile-menu__sub" href="/services/analytics">GA4 &amp; analytics</a>
   <a href="/services/strategy">Strategy</a>
   <a href="/services/coaching">Coaching &amp; growth</a>
   <span class="mobile-menu__group">Who we help</span>
@@ -315,7 +330,6 @@
   <span class="mobile-menu__group">Explore</span>
   <a href="/method">Method</a>
   <a href="/investment">Pricing</a>
-  <a href="/work">Work</a>
   <a href="/resources">Resources</a>
   <a href="/about">About</a>
   <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
@@ -329,7 +343,6 @@
       <nav class="crumbs" aria-label="Breadcrumb">
         <ol>
           <li><a href="/">Home</a></li>
-          <li><a href="/#who-we-help">Who we help</a></li>
           <li aria-current="page">Founders &amp; startups</li>
         </ol>
       </nav>
@@ -357,14 +370,22 @@
 
   <!-- THEIR WORLD -->
   <section class="section">
-    <div class="wrap wrap--narrow">
-      <div class="sec-head">
+    <div class="wrap">
+      <div class="photo-split">
+        <div>
+          <div class="sec-head">
         <h2 class="reveal" data-delay="1">The product works. Not enough people know it exists.</h2>
       </div>
       <div class="mt-lg">
         <p class="reveal">You spent a year getting the thing right. You launched, posted about it, told everyone you know. And then the signups came in at a trickle, or not at all. Plenty of founders launch to zero paying customers and decide, months later, that distribution was the real problem all along. It usually is.</p>
         <p class="mt-md reveal">That&rsquo;s the first gap. The second one shows up later, and it&rsquo;s sneakier.</p>
       </div>
+        </div>
+        <figure class="photo photo--wide photo--navy reveal"><img src="/media/photos/fnd-1-laptop.jpg" alt="A man typing on a laptop at a wooden table beside a brick wall" width="1600" height="1000" loading="lazy" decoding="async" /></figure>
+<!-- Photo: Bench Accounting / Unsplash — https://unsplash.com/photos/man-operating-laptop-on-top-of-table-C3V88BOoRoM -->
+      </div>
+    </div>
+    <div class="wrap wrap--narrow">
 
       <div class="stuck">
         <div class="stuck__item reveal">
@@ -422,13 +443,17 @@
         </article>
       </div>
 
-      <div class="path__notes">
+      <div class="photo-split photo-split--flip mt-xl">
+        <figure class="photo photo--wide photo--amber reveal"><img src="/media/photos/fnd-2-whiteboard.jpg" alt="Three men with laptops watching a colleague talk beside a whiteboard" width="1400" height="875" loading="lazy" decoding="async" /></figure>
+<!-- Photo: Austin Distel / Unsplash — https://unsplash.com/photos/three-men-sitting-while-using-laptops-and-watching-man-beside-whiteboard-wD1LRb9OeEo -->
+        <div class="path__notes" style="grid-template-columns:1fr;margin-top:0">
         <div class="reveal">
           <p>Don&rsquo;t hire your first marketer before the playbook exists. The most common way that hire fails is simple: the founder never wrote down what works, so the new person guesses. Buy the playbook first, then hire against it. A full-time marketer at your stage costs more than any of our tiers and still needs someone to set direction.</p>
         </div>
         <div class="reveal" data-delay="1">
           <p>The retainer has a three-month minimum, then it&rsquo;s month to month. We take eight clients in total, so you get people who know your product, not a rotating account team. Your ad accounts, analytics, and CRM stay in your name from day one. If you leave, nothing gets switched off. You can read every tier on the <a class="tlink" href="/investment">pricing page</a>.</p>
         </div>
+      </div>
       </div>
     </div>
   </section>
@@ -441,7 +466,7 @@
           <div class="sec-head">
                 <h2 class="reveal" data-delay="1">No founder case studies yet. Here&rsquo;s what we can show you.</h2>
           </div>
-          <p class="mt-lg reveal">You&rsquo;ll want someone who&rsquo;s done this at your stage, and you should. So here&rsquo;s the honest version. Our client work so far has been with local businesses and nonprofits, and that&rsquo;s what you&rsquo;ll find on our <a class="tlink" href="/work">work page</a>. We haven&rsquo;t published a startup case study, and we won&rsquo;t make one up.</p>
+          <p class="mt-lg reveal">You&rsquo;ll want someone who&rsquo;s done this at your stage, and you should. So here&rsquo;s the honest version. Our client work so far has been with local businesses and nonprofits, and that&rsquo;s the work behind the <a class="tlink" href="/method">method page</a>. We haven&rsquo;t published a startup case study, and we won&rsquo;t make one up.</p>
           <p class="mt-md reveal">What carries over is the method. Every engagement runs on the same five steps. For a founder they translate like this: why this product, said clearly. Who it&rsquo;s actually for. Positioning and the first channel that repeats. Onboarding that keeps the people you worked to get. Then referrals from customers who&rsquo;d tell a friend. The <a class="tlink" href="/method">method page</a> walks through each one.</p>
           <p class="mt-md reveal">And you can judge us fast. Early in the three-week strategy engagement you&rsquo;ll see a one-sentence answer to who it&rsquo;s for, the positioning draft, and the channel we&rsquo;d bet on, with our reasons. If that work doesn&rsquo;t make sense to you, stop there.</p>
         </div>
@@ -541,6 +566,13 @@
     </div>
   </section>
 
+  <!-- WHERE TO NEXT -->
+  <section class="next-strip"><div class="wrap"><h2 class="next-strip__title reveal">Where to next</h2><div class="next-grid">
+      <a class="next-card reveal" href="/services/strategy"><strong>What&rsquo;s in the strategy engagement</strong><span>Three weeks, one plan: who it&rsquo;s for, the offer, and the first channel to repeat.</span><span class="arr-link">See the engagement →</span></a>
+      <a class="next-card reveal" href="/tools/90-day-plan"><strong>Draft a 90-day plan</strong><span>Pick a goal, an audience, and two channels. Get a dated one-page plan.</span><span class="arr-link">Start the plan →</span></a>
+      <a class="next-card reveal" href="/investment"><strong>$3,000 once, then $1,200 a month and up</strong><span>Strategy first, then a retainer if the plan holds. Prices are printed.</span><span class="arr-link">See every price →</span></a>
+  </div></div></section>
+
   <!-- CLOSING -->
   <section class="closing">
     <div class="closing__inner">
@@ -586,7 +618,7 @@
           <li><a href="/for/local-businesses">Local businesses</a></li>
           <li><a href="/for/founders">Founders &amp; startups</a></li>
           <li><a href="/for/nonprofits">Nonprofits</a></li>
-          <li><a href="/work">Client results</a></li>
+          <li><a href="/work">Work</a></li>
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
@@ -616,6 +648,7 @@
           <li><a href="/about">About</a></li>
           <li><a href="/method">Method</a></li>
           <li><a href="/investment">Pricing</a></li>
+          <li><a href="/investment#projects">Project pricing</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
       </div>

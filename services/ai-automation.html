@@ -14,8 +14,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
 <link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
-<link rel="stylesheet" href="/styles.css?v=20261008-2" />
-<script defer src="/site.js?v=20261008-2"></script>
+<link rel="stylesheet" href="/styles.css?v=20261008-5" />
+<script defer src="/site.js?v=20261008-3"></script>
 <style>
   /* AI & automation page: layout pieces on top of the shared system */
 
@@ -205,6 +205,12 @@
         {
           "@type": "ListItem",
           "position": 3,
+          "name": "Technical",
+          "item": "https://carsonpoore.com/services/technical"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
           "name": "AI & automation"
         }
       ]
@@ -265,17 +271,31 @@
     <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
     <nav class="nav__links" aria-label="Primary">
       <div class="nav__item has-drop">
-        <a href="/services">Services</a>
-        <div class="nav__drop" aria-label="Services">
-          <a href="/services/marketing">Marketing</a>
-          <a href="/services/technical">Technical</a>
-          <a href="/services/strategy">Strategy</a>
-          <a href="/services/coaching">Coaching &amp; growth</a>
-          <a class="nav__drop-all" href="/services">All services</a>
+        <a href="/services" class="nav__top">Services</a>
+        <div class="nav__drop nav__drop--wide" aria-label="Services">
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/marketing">Marketing</a>
+            <a class="nav__drop-sub" href="/services/local-seo">Local SEO</a>
+            <a class="nav__drop-sub" href="/services/google-ad-grants">Google Ad Grants</a>
+            <a class="nav__drop-head" href="/services/strategy">Strategy</a>
+            <a class="nav__drop-head" href="/services/coaching">Coaching &amp; growth</a>
+          </div>
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/technical">Technical</a>
+            <a class="nav__drop-sub" href="/services/websites">Websites &amp; web apps</a>
+            <a class="nav__drop-sub" href="/services/ai-automation">AI &amp; automation</a>
+            <a class="nav__drop-sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+            <a class="nav__drop-sub" href="/services/google-ads">Google Ads</a>
+            <a class="nav__drop-sub" href="/services/analytics">GA4 &amp; analytics</a>
+          </div>
+          <div class="nav__drop-foot">
+            <a href="/services">All services</a>
+            <a href="/investment#projects">Project pricing</a>
+          </div>
         </div>
       </div>
       <div class="nav__item has-drop">
-        <a href="/#who-we-help">Who we help</a>
+        <button type="button" class="nav__top nav__toggle" aria-expanded="false">Who we help</button>
         <div class="nav__drop" aria-label="Who we help">
           <a href="/for/local-businesses">Local businesses</a>
           <a href="/for/founders">Founders &amp; startups</a>
@@ -284,8 +304,8 @@
       </div>
       <a href="/method">Method</a>
       <a href="/investment">Pricing</a>
-      <a href="/work">Work</a>
       <a href="/resources">Resources</a>
+      <a href="/about">About</a>
       <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
     </nav>
     <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -294,7 +314,14 @@
 <div class="mobile-menu" aria-hidden="true">
   <span class="mobile-menu__group">Services</span>
   <a href="/services/marketing">Marketing</a>
+  <a class="mobile-menu__sub" href="/services/local-seo">Local SEO</a>
+  <a class="mobile-menu__sub" href="/services/google-ad-grants">Google Ad Grants</a>
   <a href="/services/technical">Technical</a>
+  <a class="mobile-menu__sub" href="/services/websites">Websites &amp; web apps</a>
+  <a class="mobile-menu__sub" href="/services/ai-automation">AI &amp; automation</a>
+  <a class="mobile-menu__sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+  <a class="mobile-menu__sub" href="/services/google-ads">Google Ads</a>
+  <a class="mobile-menu__sub" href="/services/analytics">GA4 &amp; analytics</a>
   <a href="/services/strategy">Strategy</a>
   <a href="/services/coaching">Coaching &amp; growth</a>
   <span class="mobile-menu__group">Who we help</span>
@@ -304,7 +331,6 @@
   <span class="mobile-menu__group">Explore</span>
   <a href="/method">Method</a>
   <a href="/investment">Pricing</a>
-  <a href="/work">Work</a>
   <a href="/resources">Resources</a>
   <a href="/about">About</a>
   <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
@@ -319,6 +345,7 @@
         <ol>
           <li><a href="/">Home</a></li>
           <li><a href="/services">Services</a></li>
+          <li><a href="/services/technical">Technical</a></li>
           <li aria-current="page">AI &amp; automation</li>
         </ol>
       </nav>
@@ -377,9 +404,13 @@
   <!-- FIVE JOBS -->
   <section class="section section--stone">
     <div class="wrap">
-      <div class="sec-head reveal">
+      <div class="photo-split">
+        <div class="sec-head reveal">
         <h2>Five jobs worth <em>handing to an agent.</em></h2>
         <p class="sec-head__intro">Small-business owners mostly ask AI for the plain stuff: content, and fast replies to inquiries. Our list looks a lot like that. Each job below shows what the agent does and what a person still does. Both columns matter.</p>
+      </div>
+        <figure class="photo photo--wide reveal"><img src="/media/photos/ai-automation-1-laptop-work.jpg" alt="A woman in a blue long-sleeve shirt working on a laptop" width="1500" height="938" loading="lazy" decoding="async" /></figure>
+        <!-- Photo: Luke Southern / Unsplash — https://unsplash.com/photos/9yCYGgPe5Kg -->
       </div>
 
       <div class="jobs reveal">
@@ -427,16 +458,16 @@
   <!-- WHERE WE STAND -->
   <section class="section section--navy">
     <div class="wrap">
-      <div class="stance">
+      <div class="photo-split">
         <div class="reveal">
           <h2>Your name is on it, <em>so you sign off.</em></h2>
           <p class="mt-md">Here&rsquo;s our opinion, plainly. An agent should sort and draft on its own, and anything a customer reads gets a human yes first.</p>
           <p>Some AI shops sell full autopilot because it demos well. We think that&rsquo;s backwards for a small business. One strange automated text to a ten-year customer costs more trust than a hundred fast replies earn back. Approval takes a single tap on your phone, so you keep the speed.</p>
         </div>
-        <div class="reveal" data-delay="1">
-          <p class="pull">The agent drafts. <em>You press send.</em></p>
-        </div>
+        <figure class="photo photo--tall photo--amber reveal" style="max-width:380px;justify-self:center;width:100%"><img src="/media/photos/ai-automation-2-phone.jpg" alt="A man in a white top holding a phone" width="1600" height="2000" loading="lazy" decoding="async" /></figure>
+        <!-- Photo: charlesdeluvio / Unsplash — https://unsplash.com/photos/Dilfan21P8o -->
       </div>
+      <div class="reveal mt-lg" data-delay="1"><p class="pull">The agent drafts. <em>You press send.</em></p></div>
     </div>
   </section>
 
@@ -551,6 +582,13 @@
     </div>
   </section>
 
+  <!-- WHERE TO NEXT -->
+  <section class="next-strip"><div class="wrap"><h2 class="next-strip__title reveal">Where to next</h2><div class="next-grid">
+    <a class="next-card reveal" href="/services/crm-gohighlevel"><strong>GoHighLevel setup</strong><span>The CRM where agents draft and you approve, set up so it sticks.</span><span class="arr-link">See GoHighLevel setup →</span></a>
+    <a class="next-card reveal" href="/tools/ai-opportunity-finder"><strong>Find your first automation</strong><span>The AI Opportunity Finder ranks your chores by what's worth handing off.</span><span class="arr-link">Open the finder →</span></a>
+    <a class="next-card reveal" href="/investment"><strong>Automation sits in the retainer</strong><span>Retainers run $1,200, $2,400, or $4,800 a month, with a three-month minimum.</span><span class="arr-link">See the rate card →</span></a>
+  </div></div></section>
+
   <!-- CLOSING CTA -->
   <section class="closing">
     <div class="closing__inner">
@@ -596,7 +634,7 @@
           <li><a href="/for/local-businesses">Local businesses</a></li>
           <li><a href="/for/founders">Founders &amp; startups</a></li>
           <li><a href="/for/nonprofits">Nonprofits</a></li>
-          <li><a href="/work">Client results</a></li>
+          <li><a href="/work">Work</a></li>
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
@@ -626,6 +664,7 @@
           <li><a href="/about">About</a></li>
           <li><a href="/method">Method</a></li>
           <li><a href="/investment">Pricing</a></li>
+          <li><a href="/investment#projects">Project pricing</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
       </div>

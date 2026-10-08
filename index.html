@@ -14,12 +14,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
 <link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
-<link rel="stylesheet" href="/styles.css?v=20261008-2" />
+<link rel="stylesheet" href="/styles.css?v=20261008-5" />
 <link rel="stylesheet" href="/motion-a.css?v=20261008-1" />
-<script defer src="/site.js?v=20261008-2"></script>
+<script defer src="/site.js?v=20261008-3"></script>
 <style>
   /* Home v2 — page layout on top of shared components (precedent: method.html) */
   #who-we-help { scroll-margin-top: 96px; }
+  .icon-tile { position: relative; }
+  .icon-tile .card-photo { margin: 0 0 6px; width: 100%; border-radius: 4px; }
+  .icon-tile p { max-width: none; }
+  .icon-tile .tlink::after { content: ""; position: absolute; inset: 0; }
+  .icon-tile:hover .card-photo img { transform: scale(1.03); }
+  .team-strip .portrait { max-width: 340px; }
   .icon-tile .tlink { display: inline-block; margin-top: 10px; }
 
   /* Four practices: narrow sticky lede beside a staggered 2×2 card grid */
@@ -148,17 +154,31 @@
     <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
     <nav class="nav__links" aria-label="Primary">
       <div class="nav__item has-drop">
-        <a href="/services">Services</a>
-        <div class="nav__drop" aria-label="Services">
-          <a href="/services/marketing">Marketing</a>
-          <a href="/services/technical">Technical</a>
-          <a href="/services/strategy">Strategy</a>
-          <a href="/services/coaching">Coaching &amp; growth</a>
-          <a class="nav__drop-all" href="/services">All services</a>
+        <a href="/services" class="nav__top">Services</a>
+        <div class="nav__drop nav__drop--wide" aria-label="Services">
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/marketing">Marketing</a>
+            <a class="nav__drop-sub" href="/services/local-seo">Local SEO</a>
+            <a class="nav__drop-sub" href="/services/google-ad-grants">Google Ad Grants</a>
+            <a class="nav__drop-head" href="/services/strategy">Strategy</a>
+            <a class="nav__drop-head" href="/services/coaching">Coaching &amp; growth</a>
+          </div>
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/technical">Technical</a>
+            <a class="nav__drop-sub" href="/services/websites">Websites &amp; web apps</a>
+            <a class="nav__drop-sub" href="/services/ai-automation">AI &amp; automation</a>
+            <a class="nav__drop-sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+            <a class="nav__drop-sub" href="/services/google-ads">Google Ads</a>
+            <a class="nav__drop-sub" href="/services/analytics">GA4 &amp; analytics</a>
+          </div>
+          <div class="nav__drop-foot">
+            <a href="/services">All services</a>
+            <a href="/investment#projects">Project pricing</a>
+          </div>
         </div>
       </div>
       <div class="nav__item has-drop">
-        <a href="/#who-we-help">Who we help</a>
+        <button type="button" class="nav__top nav__toggle" aria-expanded="false">Who we help</button>
         <div class="nav__drop" aria-label="Who we help">
           <a href="/for/local-businesses">Local businesses</a>
           <a href="/for/founders">Founders &amp; startups</a>
@@ -167,8 +187,8 @@
       </div>
       <a href="/method">Method</a>
       <a href="/investment">Pricing</a>
-      <a href="/work">Work</a>
       <a href="/resources">Resources</a>
+      <a href="/about">About</a>
       <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
     </nav>
     <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -177,7 +197,14 @@
 <div class="mobile-menu" aria-hidden="true">
   <span class="mobile-menu__group">Services</span>
   <a href="/services/marketing">Marketing</a>
+  <a class="mobile-menu__sub" href="/services/local-seo">Local SEO</a>
+  <a class="mobile-menu__sub" href="/services/google-ad-grants">Google Ad Grants</a>
   <a href="/services/technical">Technical</a>
+  <a class="mobile-menu__sub" href="/services/websites">Websites &amp; web apps</a>
+  <a class="mobile-menu__sub" href="/services/ai-automation">AI &amp; automation</a>
+  <a class="mobile-menu__sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+  <a class="mobile-menu__sub" href="/services/google-ads">Google Ads</a>
+  <a class="mobile-menu__sub" href="/services/analytics">GA4 &amp; analytics</a>
   <a href="/services/strategy">Strategy</a>
   <a href="/services/coaching">Coaching &amp; growth</a>
   <span class="mobile-menu__group">Who we help</span>
@@ -187,7 +214,6 @@
   <span class="mobile-menu__group">Explore</span>
   <a href="/method">Method</a>
   <a href="/investment">Pricing</a>
-  <a href="/work">Work</a>
   <a href="/resources">Resources</a>
   <a href="/about">About</a>
   <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
@@ -242,6 +268,7 @@
       <div class="icon-tiles a-svc">
         <video class="motion-loop a-layer a-svc-link" muted loop playsinline preload="none" poster="/media/motion/a-services-link.png" data-webm="/media/motion/a-services-link.webm" data-hevc="/media/motion/a-services-link-hevc.mp4" width="2000" height="200" aria-hidden="true"></video>
         <div class="icon-tile reveal">
+          <div class="card-photo"><img src="/media/photos/home-1-local-shop.jpg" alt="A customer paying at the counter of a plant-filled shop while a clerk smiles" width="1200" height="750" loading="lazy" decoding="async" /></div><!-- Photo: Christiann Koepke / Unsplash — https://unsplash.com/photos/dQyS2pMYtok -->
           <span class="icon-tile__icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
           </span>
@@ -250,6 +277,7 @@
           <a href="/for/local-businesses" class="tlink">For local businesses <span aria-hidden="true">→</span></a>
         </div>
         <div class="icon-tile reveal" data-delay="1">
+          <div class="card-photo"><img src="/media/photos/home-2-founders-whiteboard.jpg" alt="Two people sketching ideas on a whiteboard" width="1200" height="750" loading="lazy" decoding="async" /></div><!-- Photo: Kaleidico / Unsplash — https://unsplash.com/photos/26MJGnCM0Wc -->
           <span class="icon-tile__icon icon-tile__icon--amber" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 7 13.5 15.5 8.5 10.5 2 17"/><path d="M16 7h6v6"/></svg>
           </span>
@@ -258,6 +286,7 @@
           <a href="/for/founders" class="tlink">For founders <span aria-hidden="true">→</span></a>
         </div>
         <div class="icon-tile reveal" data-delay="2">
+          <div class="card-photo"><img src="/media/photos/home-3-nonprofit-volunteers.jpg" alt="Volunteers sorting canned food donations at a long table" width="1200" height="750" loading="lazy" decoding="async" /></div><!-- Photo: Joel Muniz / Unsplash — https://unsplash.com/photos/3k3l2brxmwQ -->
           <span class="icon-tile__icon icon-tile__icon--navy" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.51 4.04 3 5.5l7 7Z"/></svg>
           </span>
@@ -342,6 +371,24 @@
     </div>
   </section>
 
+  <!-- TEAM STRIP -->
+  <section class="section section--stone team-strip">
+    <div class="wrap">
+      <div class="photo-split photo-split--flip">
+        <div>
+          <h2 class="reveal mt-md">The people behind <em>&ldquo;we.&rdquo;</em></h2>
+          <p class="reveal mt-md" style="color: var(--ink-2); line-height: 1.65; max-width: 52ch;">Carson Poore started this because good businesses kept getting ordinary marketing. A small team plans the work and builds it, and you talk to the same people from the first call to the last report.</p>
+          <div class="row-cta mt-lg reveal">
+            <a href="/about" class="tlink">Meet the team <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <figure class="photo photo--amber reveal">
+          <img src="/brand/carson-headshot.png" alt="Carson Poore, founder of Carson Poore Consulting" width="800" height="1000" loading="lazy" decoding="async" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- THE MODEL — published pricing, cap, exit terms -->
   <section class="section section--navy">
     <div class="wrap">
@@ -352,7 +399,7 @@
           <p class="reveal mt-md" data-delay="3" style="line-height: 1.65; max-width: 46ch;">We&rsquo;d rather you compare in the open. Ours are on the right.</p>
           <div class="row-cta mt-lg reveal" data-delay="3">
             <a href="/investment" class="btn btn--amber">See the full rate card <span class="arr">→</span></a>
-            <a href="/work" class="btn btn--ghost-light">Client results</a>
+            <a href="/tools/marketing-budget" class="btn btn--ghost-light">Not sure which tier? Run the Budget Calculator</a>
           </div>
         </div>
         <div class="reveal" data-delay="1">
@@ -417,6 +464,22 @@
     </div>
   </section>
 
+  <!-- INDY BAND -->
+  <section class="section section--tight">
+    <div class="wrap">
+      <figure class="photo photo--cinema photo--navy reveal">
+        <img src="/media/photos/home-4-indy-monument.jpg" alt="The monument at the center of downtown Indianapolis, ringed by city buildings" width="1600" height="686" loading="lazy" decoding="async" />
+      </figure><!-- Photo: Bryan Dickerson / Unsplash — https://unsplash.com/photos/FX8oOCS0xAo -->
+    </div>
+  </section>
+
+  <!-- WHERE TO NEXT -->
+  <section class="next-strip"><div class="wrap"><h2 class="next-strip__title reveal">Where to next</h2><div class="next-grid">
+    <a class="next-card reveal" href="/method"><strong>See how we work</strong><span>Five steps, in plain English, in the same order every time.</span><span class="arr-link">Read the five steps →</span></a>
+    <a class="next-card reveal" href="/tools/local-visibility"><strong>Can Indy find you?</strong><span>A free check of how your business shows up when people search nearby.</span><span class="arr-link">Run the check →</span></a>
+    <a class="next-card reveal" href="/investment#projects"><strong>Know the price first</strong><span>Retainers run $1,200 to $4,800 a month, and one-time strategy is $3,000.</span><span class="arr-link">See every price →</span></a>
+  </div></div></section>
+
   <!-- CLOSING -->
   <section class="closing">
     <video class="motion-loop a-layer a-closing-bg" autoplay muted loop playsinline preload="none" poster="/media/motion/a-closing-field.jpg?v=20261008b" aria-hidden="true"><source src="/media/motion/a-closing-field.webm?v=20261008b" type="video/webm" /><source src="/media/motion/a-closing-field.mp4?v=20261008b" type="video/mp4" /></video>
@@ -464,7 +527,7 @@
           <li><a href="/for/local-businesses">Local businesses</a></li>
           <li><a href="/for/founders">Founders &amp; startups</a></li>
           <li><a href="/for/nonprofits">Nonprofits</a></li>
-          <li><a href="/work">Client results</a></li>
+          <li><a href="/work">Work</a></li>
         </ul>
         <h4 class="footer__h4-gap">Free tools</h4>
         <ul>
@@ -494,6 +557,7 @@
           <li><a href="/about">About</a></li>
           <li><a href="/method">Method</a></li>
           <li><a href="/investment">Pricing</a></li>
+          <li><a href="/investment#projects">Project pricing</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
