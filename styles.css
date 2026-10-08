@@ -2199,3 +2199,32 @@ input[type="number"]:focus, input[type="text"]:focus, select.tool-select:focus {
   .nav, .mobile-menu, .footer, .closing, .crumbs, .no-print { display: none !important; }
   body { background: #fff; }
 }
+
+/* ============================================================
+   v2.1 — heading proportions (Oct 2026)
+   With eyebrows removed, section headings were hero-sized (step-5)
+   and squeezed into the narrow left column of .sec-head grids that
+   were laid out for an eyebrow. These rules restore a readable measure.
+   ============================================================ */
+
+/* Section headings: one step down from hero scale */
+h2 { font-size: var(--step-4); line-height: 0.98; letter-spacing: -0.026em; }
+.closing h2 { font-size: var(--step-5); max-width: 24ch; }
+
+/* Section heads always stack: heading, then intro beneath */
+body .sec-head {
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: clamp(14px, 1.6vw, 22px);
+  align-items: start;
+}
+body .sec-head h2 { max-width: 24ch; margin-top: 0; }
+body .sec-head > p, body .sec-head .sec-head__intro { max-width: 60ch; }
+
+/* Hero headlines: a little smaller, a wider measure */
+.hero h1 { font-size: clamp(3.1rem, 2.3rem + 4vw, 6.2rem); max-width: 14ch; }
+.page-hero h1 { font-size: clamp(2.6rem, 1.9rem + 3vw, 4.6rem); max-width: 22ch; }
+
+/* Service rows that lost their index number: title + body, not 3 columns */
+.svc:not(:has(> .svc__idx)) { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr); }
+@media (max-width: 900px) { .svc:not(:has(> .svc__idx)) { grid-template-columns: 1fr; } }
+.svc__title, .svc > h3 { max-width: 20ch; }
