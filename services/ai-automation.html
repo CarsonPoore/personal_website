@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI Agents &amp; Automation for Small Business | Carson Poore</title>
+<meta name="description" content="Practical AI for a five-person business, nationwide: lead follow-up in minutes, intake, review requests, reports. One task first. You approve what goes out." />
+<link rel="canonical" href="https://carsonpoore.com/services/ai-automation" />
+<meta property="og:title" content="AI Agents &amp; Automation for Small Business | Carson Poore" />
+<meta property="og:description" content="Practical AI for a five-person business, nationwide: lead follow-up in minutes, intake, review requests, reports. One task first. You approve what goes out." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://carsonpoore.com/services/ai-automation" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
+<link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
+<link rel="stylesheet" href="/styles.css?v=20261008-1" />
+<script defer src="/site.js?v=20261008-1"></script>
+<style>
+  /* AI & automation page: layout pieces on top of the shared system */
+
+  /* Hero: an example approval queue, the page's argument in one picture */
+  .queue {
+    background: var(--navy-2);
+    border: 1px solid var(--navy-3);
+    border-radius: var(--r-3);
+    padding: clamp(20px, 2.6vw, 30px);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+  }
+  .queue__head {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 12px;
+    padding-bottom: 14px; border-bottom: 1px solid var(--navy-3);
+  }
+  .queue__head .label { color: var(--cream-2); }
+  .queue__count { color: var(--amber); font-weight: 700; font-size: 0.82rem; letter-spacing: 0.04em; white-space: nowrap; }
+  .queue__item { padding: 16px 0; border-bottom: 1px solid var(--navy-3); }
+  .queue__meta { display: block; font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted-on-navy); font-weight: 700; }
+  .queue__text { margin-top: 6px; color: #fff; font-size: 0.95rem; line-height: 1.45; }
+  .queue__actions { display: flex; gap: 8px; margin-top: 12px; }
+  .queue__chip {
+    display: inline-block; font-size: 0.76rem; font-weight: 700; letter-spacing: 0.02em;
+    padding: 6px 14px; border-radius: 999px; border: 1px solid var(--navy-3); color: var(--cream-2);
+  }
+  .queue__chip--go { background: var(--cobalt); border-color: var(--cobalt); color: #fff; }
+  .queue__foot { margin-top: 14px; font-size: 0.82rem; color: var(--muted-on-navy); }
+
+  /* Short answer band */
+  .answer { max-width: 64ch; }
+  .answer p + p { margin-top: 18px; }
+  .answer__lead { font-size: var(--step-1); color: var(--ink); font-weight: 500; line-height: 1.5; }
+
+  /* Five jobs: what the agent does vs. what a person does */
+  .jobs { margin-top: clamp(32px, 4vw, 52px); border-bottom: 1px solid var(--line-soft); }
+  .jobs__row {
+    display: grid;
+    grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: clamp(18px, 3vw, 44px);
+    padding: clamp(22px, 2.6vw, 32px) 0;
+    border-top: 1px solid var(--line-soft);
+  }
+  .jobs__row--head { padding: 0 0 12px; border-top: 0; }
+  .jobs__row--head .label { color: var(--muted); }
+  .jobs__idx { display: block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; color: var(--cobalt); }
+  .jobs__name { margin-top: 6px; font-size: var(--step-1); line-height: 1.25; }
+  .jobs__cell p { color: var(--ink-2); line-height: 1.6; }
+  .jobs__cell .label { display: none; margin-bottom: 6px; color: var(--muted); }
+  .jobs__you p { color: var(--ink); font-weight: 500; }
+  @media (max-width: 820px) {
+    .jobs__row { grid-template-columns: 1fr; gap: 14px; }
+    .jobs__row--head { display: none; }
+    .jobs__cell .label { display: block; }
+  }
+  .jobs-note { margin-top: clamp(22px, 3vw, 34px); max-width: 64ch; color: var(--ink-2); }
+
+  /* Opinion band */
+  .stance {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: clamp(32px, 5vw, 80px);
+    align-items: center;
+  }
+  @media (max-width: 860px) { .stance { grid-template-columns: 1fr; } }
+  .stance p + p { margin-top: 18px; }
+  .stance .pull { margin: 0; color: #fff; }
+
+  /* How we start */
+  .start-copy { max-width: 64ch; }
+  .start-copy p + p { margin-top: 18px; }
+
+  /* Decorative seam between two light sections */
+  .q-seam { position: relative; height: 0; z-index: 2; pointer-events: none; }
+  .q-seam .motion-loop { position: absolute; left: 0; top: 0; width: 100%; height: auto; transform: translateY(-50%); }
+  @media (max-width: 640px) { .q-seam { display: none; } }
+
+  /* Free scoping tool */
+  .finder {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+    gap: clamp(28px, 4vw, 72px);
+    align-items: center;
+  }
+  @media (max-width: 860px) { .finder { grid-template-columns: 1fr; } }
+  .finder__card { background: var(--navy); border-radius: var(--r-3); padding: clamp(28px, 4vw, 48px); }
+  .finder__card .label { color: var(--amber); display: block; margin-bottom: 16px; }
+  .finder__card ol { list-style: none; counter-reset: step; margin: 0; padding: 0; }
+  .finder__card li {
+    counter-increment: step;
+    display: flex; gap: 16px; align-items: baseline;
+    color: var(--cream-2); padding: 13px 0; border-top: 1px solid var(--navy-3);
+  }
+  .finder__card li::before { content: counter(step, decimal-leading-zero); color: #fff; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.06em; }
+  .finder__foot { margin-top: 18px; color: var(--muted-on-navy); font-size: 0.85rem; }
+
+  /* Who asks us for this */
+  .who {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(24px, 4vw, 56px);
+    margin-top: clamp(28px, 4vw, 48px);
+  }
+  @media (max-width: 760px) { .who { grid-template-columns: 1fr; } }
+  .who__col { border-top: 2px solid var(--cobalt); padding-top: 20px; }
+  .who__col p { margin-top: 10px; color: var(--ink-2); }
+  .who-note { margin-top: clamp(28px, 4vw, 44px); max-width: 64ch; color: var(--ink-2); }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://carsonpoore.com/#org",
+      "name": "Carson Poore Consulting",
+      "url": "https://carsonpoore.com/",
+      "logo": "https://carsonpoore.com/brand/cpc-mark-royalblue.svg",
+      "image": "https://carsonpoore.com/brand/carson-headshot.png",
+      "email": "carson@carsonpoore.com",
+      "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
+      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "areaServed": [
+        { "@type": "City", "name": "Indianapolis" },
+        { "@type": "State", "name": "Indiana" },
+        { "@type": "Country", "name": "United States" }
+      ],
+      "priceRange": "$1,200–$4,800/month",
+      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carsonpoore.com/services/ai-automation#service",
+      "name": "AI agents and automation",
+      "serviceType": "AI automation consulting for small business",
+      "description": "Scoping and building one practical AI agent or automation at a time for small businesses and founders: lead follow-up within minutes, intake, review requests, weekly reporting, and content drafts, with a person approving anything a customer reads. Ongoing work runs inside published monthly retainers; one-off builds get a fixed written quote.",
+      "provider": { "@id": "https://carsonpoore.com/#org" },
+      "areaServed": [
+        { "@type": "City", "name": "Indianapolis" },
+        { "@type": "State", "name": "Indiana" },
+        { "@type": "Country", "name": "United States" }
+      ],
+      "url": "https://carsonpoore.com/services/ai-automation"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carsonpoore.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://carsonpoore.com/services" },
+        { "@type": "ListItem", "position": 3, "name": "AI & automation" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does an AI automation consultant cost for a small business?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Independent consultants typically charge $150 to $250 an hour, and a defined small-business project usually runs $1,500 to $6,000, per published rate guides from Bushe, Rapid Developers, and Kamyar Shah. With us, ongoing automation work is part of the published monthly retainer: $1,200, $2,400, or $4,800, with a three-month minimum. A one-off build gets a fixed written quote before any work starts." }
+        },
+        {
+          "@type": "Question",
+          "name": "What can an AI agent actually do in a five-person business?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Less than the ads suggest, and that’s fine. The dependable jobs are replying to new leads within minutes, running intake by text or form, sending review requests, assembling a weekly report, and drafting emails and posts. Each one works best on a task you already do the same way every day." }
+        },
+        {
+          "@type": "Question",
+          "name": "Will the AI send messages to my customers without me seeing them?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Not one we build. You approve the wording of routine replies up front, and anything unusual waits for a person to tap approve. Content drafts never publish on their own. If you want to loosen that rule later, it’s your call." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to buy new software first?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Usually not. We build on the inbox and calendar you already use. If your leads are scattered across texts and sticky notes, the better first move may be a proper CRM, and we’ll say so. That’s a GoHighLevel setup, and it has its own page." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with businesses outside Indianapolis?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. We’re based in Indianapolis, and the AI and automation practice is national. Builds happen over calls and shared screens, so a shop in Fishers and a startup in Denver get the same process." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="page">
+
+<header class="nav">
+  <div class="nav__inner">
+    <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
+    <nav class="nav__links" aria-label="Primary">
+      <div class="nav__item has-drop">
+        <a href="/services">Services</a>
+        <div class="nav__drop" aria-label="Services">
+          <a href="/services/marketing">Marketing</a>
+          <a href="/services/technical">Technical</a>
+          <a href="/services/strategy">Strategy</a>
+          <a href="/services/coaching">Coaching &amp; growth</a>
+          <a class="nav__drop-all" href="/services">All services</a>
+        </div>
+      </div>
+      <div class="nav__item has-drop">
+        <a href="/#who-we-help">Who we help</a>
+        <div class="nav__drop" aria-label="Who we help">
+          <a href="/for/local-businesses">Local businesses</a>
+          <a href="/for/founders">Founders &amp; startups</a>
+          <a href="/for/nonprofits">Nonprofits</a>
+        </div>
+      </div>
+      <a href="/method">Method</a>
+      <a href="/investment">Pricing</a>
+      <a href="/work">Work</a>
+      <a href="/resources">Resources</a>
+      <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
+    </nav>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" aria-hidden="true">
+  <span class="mobile-menu__group">Services</span>
+  <a href="/services/marketing">Marketing</a>
+  <a href="/services/technical">Technical</a>
+  <a href="/services/strategy">Strategy</a>
+  <a href="/services/coaching">Coaching &amp; growth</a>
+  <span class="mobile-menu__group">Who we help</span>
+  <a href="/for/local-businesses">Local businesses</a>
+  <a href="/for/founders">Founders &amp; startups</a>
+  <a href="/for/nonprofits">Nonprofits</a>
+  <span class="mobile-menu__group">Explore</span>
+  <a href="/method">Method</a>
+  <a href="/investment">Pricing</a>
+  <a href="/work">Work</a>
+  <a href="/resources">Resources</a>
+  <a href="/about">About</a>
+  <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero page-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/services">Services</a></li>
+          <li aria-current="page">AI &amp; automation</li>
+        </ol>
+      </nav>
+      <div class="page-hero__grid">
+        <div class="page-hero__copy">
+          <span class="eyebrow reveal">AI agents &amp; automation &middot; Nationwide</span>
+          <h1 class="reveal mt-md" data-delay="1">AI automation that asks <em>before it sends.</em></h1>
+          <p class="hero__sub reveal mt-md" data-delay="2">A new lead fills out your form at 9:40 on a Tuesday night. You&rsquo;re at your kid&rsquo;s game. We&rsquo;re an AI automation consultant for small businesses, and that moment is the whole brief: an agent drafts the reply within minutes, and you approve it with one tap. We find the one repetitive task worth handing off first, then build it on software you already pay for. Based in Indianapolis, building for clients anywhere in the country.</p>
+          <div class="row-cta reveal mt-lg" data-delay="3">
+            <a class="btn btn--primary" href="/tools/ai-opportunity-finder">Find your first automation <span class="arr">→</span></a>
+            <a class="tlink" href="/contact">or talk it through on a free call</a>
+          </div>
+        </div>
+        <div class="page-hero__motion reveal" data-delay="2">
+          <div class="queue" role="img" aria-label="Example approval queue: an AI agent has drafted a reply to a new lead, a review request, and a weekly report, and each one waits for a person to approve it.">
+            <div class="queue__head">
+              <span class="label">Example &middot; approval queue</span>
+              <span class="queue__count">3 waiting</span>
+            </div>
+            <div class="queue__item">
+              <span class="queue__meta">New lead &middot; web form &middot; 9:40 PM</span>
+              <p class="queue__text">&ldquo;Hi Dana, yes, we cover Carmel. Two openings Thursday: 10 or 2. Which works better?&rdquo;</p>
+              <div class="queue__actions"><span class="queue__chip queue__chip--go">Approve</span><span class="queue__chip">Edit</span></div>
+            </div>
+            <div class="queue__item">
+              <span class="queue__meta">Review request &middot; job closed today</span>
+              <p class="queue__text">One text, one link to your Google profile.</p>
+            </div>
+            <div class="queue__item">
+              <span class="queue__meta">Monday numbers &middot; 7:00 AM</span>
+              <p class="queue__text">Calls and booked jobs on one page.</p>
+            </div>
+            <p class="queue__foot">Nothing goes out until someone taps approve.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE SHORT ANSWER -->
+  <section class="section">
+    <div class="wrap wrap--narrow">
+      <div class="sec-head reveal">
+        <span class="eyebrow">The short answer</span>
+        <h2>What an AI consultant does, <em>and what it costs.</em></h2>
+      </div>
+      <div class="answer reveal mt-md">
+        <p class="answer__lead">An AI automation consultant builds software that takes one repeated job off your plate. Answering new leads. Asking intake questions. Sending review requests. Pulling Monday&rsquo;s numbers. A good one also tells you which jobs to leave alone.</p>
+        <p>Independent AI consultants typically charge $150 to $250 an hour, and a defined small-business project usually runs $1,500 to $6,000, according to published rate guides from Bushe, Rapid Developers, and Kamyar Shah.</p>
+        <p>We price this the way we price everything. Ongoing automation work sits inside our published retainers of $1,200, $2,400, or $4,800 a month, with a three-month minimum. A one-off build gets a fixed quote in writing before any work starts. Nonprofits get the reduced rate listed on the pricing page. If you ever leave, every automation and account we built stays with you, along with your data.</p>
+      </div>
+      <div class="row-cta reveal mt-lg" data-delay="1">
+        <a class="btn btn--ghost" href="/investment">See the full rate card <span class="arr">→</span></a>
+        <a class="tlink" href="/articles/ai-agents-for-small-business">How AI agents work, in plain English</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIVE JOBS -->
+  <section class="section section--stone">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">What we build</span>
+        <h2>Five jobs worth <em>handing to an agent.</em></h2>
+        <p class="sec-head__intro">When vcita surveyed 500 small-business owners in 2025, the AI help they asked for was refreshingly plain: content, and fast replies to inquiries. Our list looks a lot like theirs. Each job below shows what the agent does and what a person still does. Both columns matter.</p>
+      </div>
+
+      <div class="jobs reveal">
+        <div class="jobs__row jobs__row--head" aria-hidden="true">
+          <span class="label">The job</span>
+          <span class="label">What the agent does</span>
+          <span class="label">What a person does</span>
+        </div>
+
+        <div class="jobs__row">
+          <div><span class="jobs__idx">01</span><h3 class="jobs__name">Lead follow-up in minutes</h3></div>
+          <div class="jobs__cell"><span class="label">The agent</span><p>A form or a missed call comes in. Within minutes the lead gets a reply that answers the question they actually asked, plus two open times from your real calendar. Speed matters more than polish here.</p></div>
+          <div class="jobs__cell jobs__you"><span class="label">A person</span><p>Approves the wording once. Anything off-script, like a complaint or a big commercial bid, waits for a tap.</p></div>
+        </div>
+
+        <div class="jobs__row">
+          <div><span class="jobs__idx">02</span><h3 class="jobs__name">Intake without phone tag</h3></div>
+          <div class="jobs__cell"><span class="label">The agent</span><p>Asks the same dozen questions you would, by text or on a form that talks back. It collects the address and photos, then books the visit.</p></div>
+          <div class="jobs__cell jobs__you"><span class="label">A person</span><p>Reads a one-paragraph brief before walking in. Takes over any thread the agent flags.</p></div>
+        </div>
+
+        <div class="jobs__row">
+          <div><span class="jobs__idx">03</span><h3 class="jobs__name">Review requests</h3></div>
+          <div class="jobs__cell"><span class="label">The agent</span><p>The day a job closes, it sends one text with one link to your Google profile. One reminder. Then it stops.</p></div>
+          <div class="jobs__cell jobs__you"><span class="label">A person</span><p>Approves the message. Replies to new reviews from drafts the agent writes in your voice.</p></div>
+        </div>
+
+        <div class="jobs__row">
+          <div><span class="jobs__idx">04</span><h3 class="jobs__name">Reporting you don&rsquo;t assemble</h3></div>
+          <div class="jobs__cell"><span class="label">The agent</span><p>Every Monday at 7 a.m., it pulls calls, booked jobs, ad spend, and new reviews onto one page. No more five logins on a Sunday night.</p></div>
+          <div class="jobs__cell jobs__you"><span class="label">A person</span><p>Reads it in two minutes. Makes the decision it points to.</p></div>
+        </div>
+
+        <div class="jobs__row">
+          <div><span class="jobs__idx">05</span><h3 class="jobs__name">Content drafts</h3></div>
+          <div class="jobs__cell"><span class="label">The agent</span><p>Drafts the monthly customer email and the quote follow-up you keep forgetting, written from your real work in your voice.</p></div>
+          <div class="jobs__cell jobs__you"><span class="label">A person</span><p>Edits, then publishes. Nothing posts itself. Ever.</p></div>
+        </div>
+      </div>
+
+      <p class="jobs-note reveal">Already running a CRM? Review requests and missed-call text-back are often a <a class="tlink" href="/services/crm-gohighlevel">GoHighLevel setup</a> job, no custom agent required. We&rsquo;ll tell you which one you need.</p>
+    </div>
+  </section>
+
+  <!-- WHERE WE STAND -->
+  <section class="section section--navy">
+    <div class="wrap">
+      <div class="stance">
+        <div class="reveal">
+          <span class="eyebrow">Where we stand</span>
+          <h2>Your name is on it, <em>so you sign off.</em></h2>
+          <p class="mt-md">Here&rsquo;s our opinion, plainly. An agent should sort and draft on its own, and anything a customer reads gets a human yes first.</p>
+          <p>Some AI shops sell full autopilot because it demos well. We think that&rsquo;s backwards for a small business. One strange automated text to a ten-year customer costs more trust than a hundred fast replies earn back. Approval takes a single tap on your phone, so you keep the speed.</p>
+        </div>
+        <div class="reveal" data-delay="1">
+          <p class="pull">The agent drafts. <em>You press send.</em></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE START -->
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">How we start</span>
+        <h2>One automation first. <em>Then we talk.</em></h2>
+      </div>
+      <div class="start-copy reveal mt-md">
+        <p>Every engagement opens with a scoping pass. We list the tasks you repeat and put your own hours next to each one. Then we pick the single build where being slow costs you real money. Usually that&rsquo;s lead follow-up. It ships on software you already pay for, then runs for a few weeks with you approving everything before we propose a second build.</p>
+        <p>Now the candid part. Plenty of AI projects shouldn&rsquo;t exist. The same rate guides that publish consultant prices pass along a sobering pattern: most small-business AI engagements don&rsquo;t pay for themselves in the first year (as reported by Rapid Developers and Kamyar Shah). The usual cause is building something big before anyone mapped the chore. So sometimes our scoping verdict is &ldquo;keep the spreadsheet,&rdquo; and we&rsquo;d rather say that than bill you for a robot.</p>
+        <p>One more admission. The first week of any agent is a little clumsy. Expect to correct it. That&rsquo;s what the approval step is for.</p>
+      </div>
+
+      <div class="fit-grid mt-xl">
+        <div class="fit-card fit-card__yes reveal">
+          <span class="label">Worth building when</span>
+          <ul>
+            <li>You do the task the same way almost every time.</li>
+            <li>Being slow costs money. Lead follow-up is the classic case.</li>
+            <li>Someone can check the output in seconds.</li>
+            <li>The information already lives in a tool you own.</li>
+          </ul>
+        </div>
+        <div class="fit-card fit-card__no reveal" data-delay="1">
+          <span class="label">Don&rsquo;t hire anyone for it (us included) when</span>
+          <ul>
+            <li>It happens twice a month. A checklist is cheaper.</li>
+            <li>Nobody will own the approvals. Unwatched automations drift.</li>
+            <li>The real problem is your offer or your price. No agent fixes that, and we&rsquo;ll tell you so on the call.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="q-seam" aria-hidden="true"><video class="motion-loop" muted loop playsinline preload="none" poster="/media/motion/c-handoff.png" data-webm="/media/motion/c-handoff.webm" data-hevc="/media/motion/c-handoff-hevc.mp4" width="1920" height="200" aria-hidden="true"></video></div>
+
+  <!-- FREE SCOPING TOOL -->
+  <section class="section section--stone">
+    <div class="wrap">
+      <div class="finder">
+        <div class="reveal">
+          <span class="eyebrow">Free &middot; no email, no login</span>
+          <h2>Scope your first build <em>tonight.</em></h2>
+          <p class="mt-md">The AI opportunity finder is our scoping pass with us taken out. Pick your business type and check the tasks you still do by hand. Then set how many hours each one eats. It names your best first automation and adds up your own hours. No invented savings figures. Just your numbers, back to you.</p>
+          <p class="mt-md">If it says you don&rsquo;t need an agent yet, believe it. We built the tool, and it&rsquo;s also a fair sample of how we build.</p>
+          <div class="row-cta mt-lg">
+            <a class="btn btn--primary" href="/tools/ai-opportunity-finder">Open the opportunity finder <span class="arr">→</span></a>
+            <a class="tlink" href="/articles/ai-agents-for-small-business">Or read our guide to AI agents first</a>
+          </div>
+        </div>
+        <div class="finder__card reveal" data-delay="1">
+          <span class="label">AI opportunity finder &middot; 4 steps</span>
+          <ol>
+            <li>Pick your business type</li>
+            <li>Check the tasks you still do by hand</li>
+            <li>Set the hours each one takes</li>
+            <li>Get your first automation, named</li>
+          </ol>
+          <p class="finder__foot">Each task gets a plain verdict: an agent, a simple automation, or a better-connected CRM.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO ASKS -->
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Who asks us for this</span>
+        <h2>Indianapolis-based. <em>Built for anywhere.</em></h2>
+      </div>
+      <div class="who">
+        <div class="who__col reveal">
+          <h3>Local service businesses</h3>
+          <p>Trades, clinics, salons, shops. The leak is usually the lead nobody answered while the owner was up a ladder. If that&rsquo;s you, our page for <a class="tlink" href="/for/local-businesses">local businesses</a> shows how this pairs with getting found on Google in the first place.</p>
+        </div>
+        <div class="who__col reveal" data-delay="1">
+          <h3>Founders and small teams</h3>
+          <p>You&rsquo;re the bottleneck for intake and every follow-up. Automation buys back hours you&rsquo;d otherwise hire for. Our page for <a class="tlink" href="/for/founders">founders</a> covers the strategy work we pair it with.</p>
+        </div>
+      </div>
+      <p class="who-note reveal">Automation travels well, so this practice is national and runs over calls and shared screens. Our local marketing stays rooted in central Indiana. The technical work goes wherever you are.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--stone">
+    <div class="wrap wrap--narrow">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Fair questions</span>
+        <h2>Before you hand anything <em>to a machine.</em></h2>
+      </div>
+      <div class="faq mt-lg reveal">
+        <details>
+          <summary>How much does an AI automation consultant cost for a small business?</summary>
+          <p>Independent consultants typically charge $150 to $250 an hour, and a defined small-business project usually runs $1,500 to $6,000, per published rate guides from Bushe, Rapid Developers, and Kamyar Shah. With us, ongoing automation work is part of the published monthly retainer: $1,200, $2,400, or $4,800, with a three-month minimum. A one-off build gets a fixed written quote before any work starts.</p>
+        </details>
+        <details>
+          <summary>What can an AI agent actually do in a five-person business?</summary>
+          <p>Less than the ads suggest, and that&rsquo;s fine. The dependable jobs are replying to new leads within minutes, running intake by text or form, sending review requests, assembling a weekly report, and drafting emails and posts. Each one works best on a task you already do the same way every day.</p>
+        </details>
+        <details>
+          <summary>Will the AI send messages to my customers without me seeing them?</summary>
+          <p>Not one we build. You approve the wording of routine replies up front, and anything unusual waits for a person to tap approve. Content drafts never publish on their own. If you want to loosen that rule later, it&rsquo;s your call.</p>
+        </details>
+        <details>
+          <summary>Do I need to buy new software first?</summary>
+          <p>Usually not. We build on the inbox and calendar you already use. If your leads are scattered across texts and sticky notes, the better first move may be a proper CRM, and we&rsquo;ll say so. That&rsquo;s a <a class="tlink" href="/services/crm-gohighlevel">GoHighLevel setup</a>, and it has its own page.</p>
+        </details>
+        <details>
+          <summary>Do you work with businesses outside Indianapolis?</summary>
+          <p>Yes. We&rsquo;re based in Indianapolis, and the AI and automation practice is national. Builds happen over calls and shared screens, so a shop in Fishers and a startup in Denver get the same process.</p>
+        </details>
+      </div>
+      <p class="updated mt-lg">Last updated: October 2026</p>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="closing">
+    <div class="closing__inner">
+      <div class="reveal">
+        <span class="eyebrow">Your next step</span>
+        <h2>Name the chore. <em>We&rsquo;ll scope it.</em></h2>
+        <p>On a free 30-minute call, we&rsquo;ll pick the one task worth automating first and sketch how it would run, approvals included. The sketch is yours to keep, hire us or not. We take eight clients total, so if we&rsquo;re full, we&rsquo;ll say that too.</p>
+      </div>
+      <div class="reveal" data-delay="1">
+        <a href="/contact" class="btn btn--primary">Book a scoping call <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer footer--v2">
+  <div class="wrap">
+    <div class="footer__grid footer__grid--v2">
+      <div class="footer__brand">
+        <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
+        <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/marketing">Marketing</a></li>
+          <li><a href="/services/technical">Technical</a></li>
+          <li><a href="/services/strategy">Strategy</a></li>
+          <li><a href="/services/coaching">Coaching &amp; growth</a></li>
+          <li><a href="/services/local-seo">Local SEO</a></li>
+          <li><a href="/services/google-ads">Google Ads</a></li>
+          <li><a href="/services/websites">Websites &amp; web apps</a></li>
+          <li><a href="/services/ai-automation">AI &amp; automation</a></li>
+          <li><a href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a></li>
+          <li><a href="/services/analytics">GA4 &amp; analytics</a></li>
+          <li><a href="/services/google-ad-grants">Google Ad Grants</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Who we help</h4>
+        <ul>
+          <li><a href="/for/local-businesses">Local businesses</a></li>
+          <li><a href="/for/founders">Founders &amp; startups</a></li>
+          <li><a href="/for/nonprofits">Nonprofits</a></li>
+          <li><a href="/work">Client results</a></li>
+        </ul>
+        <h4 class="footer__h4-gap">Free tools</h4>
+        <ul>
+          <li><a href="/tools/checkup">The five-step check-up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Articles</h4>
+        <ul>
+          <li><a href="/articles/fractional-cmo-cost">Fractional CMO cost</a></li>
+          <li><a href="/articles/fractional-cmo-vs-marketing-agency">CMO vs. agency</a></li>
+          <li><a href="/articles/is-gohighlevel-worth-it">Is GoHighLevel worth it?</a></li>
+          <li><a href="/articles/ai-agents-for-small-business">AI agents, explained</a></li>
+          <li><a href="/articles/not-showing-up-on-google">Not showing up on Google</a></li>
+          <li><a href="/articles/small-business-marketing-budget">What marketing should cost</a></li>
+          <li><a href="/articles/nonprofit-google-ad-grant">The nonprofit Ad Grant</a></li>
+          <li><a href="/resources" class="tlink">All resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/method">Method</a></li>
+          <li><a href="/investment">Pricing</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__meta">
+      <span>© 2026 Carson Poore Consulting · Indianapolis, Indiana · carson@carsonpoore.com</span>
+      <span class="footer__towns">Serving Indianapolis, Carmel, Fishers, Zionsville, Noblesville, Westfield, Greenwood, Brownsburg, Avon, and all of central Indiana — technical and coaching work nationwide.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

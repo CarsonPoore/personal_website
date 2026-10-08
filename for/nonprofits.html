@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Marketing for Nonprofits in Indianapolis | Carson Poore</title>
+<meta name="description" content="For the ED wearing five hats: a free Ad Grant checkup, one donor list you can trust, and stories people understand. A reduced rate, because the work matters." />
+<link rel="canonical" href="https://carsonpoore.com/for/nonprofits" />
+<meta property="og:title" content="Marketing for Nonprofits in Indianapolis | Carson Poore" />
+<meta property="og:description" content="For the ED wearing five hats: a free Ad Grant checkup, one donor list you can trust, and stories people understand. A reduced rate, because the work matters." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://carsonpoore.com/for/nonprofits" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
+<link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
+<link rel="stylesheet" href="/styles.css?v=20261008-1" />
+<script defer src="/site.js?v=20261008-1"></script>
+<style>
+  /* Nonprofits pathway — page-specific layout */
+  .np-grant {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: clamp(32px, 5vw, 72px);
+    align-items: start;
+  }
+  @media (max-width: 900px) { .np-grant { grid-template-columns: 1fr; } }
+  .np-grant__checks {
+    border: 1px solid rgba(248, 247, 244, 0.16);
+    border-radius: var(--r-3, 10px);
+    padding: clamp(24px, 3vw, 36px);
+    background: var(--navy-2);
+  }
+  .np-grant__checks h3 { font-size: 1.2rem; font-weight: 800; color: #fff; }
+  .np-grant__checks ol {
+    list-style: none; margin: 18px 0 0; padding: 0;
+    display: flex; flex-direction: column; gap: 14px;
+    counter-reset: chk;
+  }
+  .np-grant__checks li {
+    counter-increment: chk;
+    display: grid; grid-template-columns: 30px 1fr; gap: 10px;
+    color: var(--cream-2); line-height: 1.55; font-size: 0.98rem;
+  }
+  .np-grant__checks li::before {
+    content: counter(chk, decimal-leading-zero);
+    font-weight: 800; font-size: 0.8rem; letter-spacing: 0.06em;
+    color: var(--cream-2); opacity: 0.7; padding-top: 3px;
+  }
+  .np-grant__checks .btn { margin-top: 26px; }
+
+  .np-board {
+    margin-top: clamp(36px, 5vw, 60px);
+    padding-top: clamp(28px, 4vw, 44px);
+    border-top: 1px solid var(--line);
+  }
+  .np-board .label { display: block; margin-bottom: 14px; }
+
+  .connect-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: clamp(32px, 5vw, 72px);
+    align-items: center;
+  }
+  @media (max-width: 900px) { .connect-grid { grid-template-columns: 1fr; } }
+  .connect-grid .motion-frame { max-width: 480px; justify-self: end; width: 100%; }
+  @media (max-width: 900px) { .connect-grid .motion-frame { justify-self: start; } }
+
+  .icon-tile .tlink { display: inline-block; margin-top: 14px; font-size: 0.92rem; }
+
+  .np-rate .stat-row { margin-top: clamp(28px, 4vw, 44px); }
+  .np-fund {
+    margin-top: clamp(36px, 5vw, 56px);
+    background: var(--stone-2);
+    border-radius: var(--r-3, 10px);
+    padding: clamp(24px, 3.5vw, 40px);
+  }
+  .np-fund h3 { font-size: var(--step-2); font-weight: 800; }
+  .np-fund p { color: var(--ink-2); line-height: 1.65; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://carsonpoore.com/#org",
+      "name": "Carson Poore Consulting",
+      "url": "https://carsonpoore.com/",
+      "logo": "https://carsonpoore.com/brand/cpc-mark-royalblue.svg",
+      "image": "https://carsonpoore.com/brand/carson-headshot.png",
+      "email": "carson@carsonpoore.com",
+      "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
+      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "areaServed": [
+        { "@type": "City", "name": "Indianapolis" },
+        { "@type": "State", "name": "Indiana" },
+        { "@type": "Country", "name": "United States" }
+      ],
+      "priceRange": "$1,200–$4,800/month",
+      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://carsonpoore.com/for/nonprofits#webpage",
+      "url": "https://carsonpoore.com/for/nonprofits",
+      "name": "Marketing for Nonprofits in Indianapolis | Carson Poore",
+      "description": "For the ED wearing five hats: a free Ad Grant checkup, one donor list you can trust, and stories people understand. A reduced rate, because the work matters.",
+      "about": { "@id": "https://carsonpoore.com/for/nonprofits#service" },
+      "publisher": { "@id": "https://carsonpoore.com/#org" },
+      "dateModified": "2026-10-08",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carsonpoore.com/for/nonprofits#service",
+      "name": "Nonprofit marketing in Indianapolis",
+      "serviceType": "Nonprofit marketing",
+      "description": "Marketing help for nonprofits and mission-driven organizations in central Indiana: a free Google Ad Grant checkup, donor list and email cleanup, storytelling, and analytics a board can read, at a reduced nonprofit rate.",
+      "provider": { "@id": "https://carsonpoore.com/#org" },
+      "audience": { "@type": "Audience", "audienceType": "Nonprofits and mission-driven organizations" },
+      "areaServed": [
+        { "@type": "City", "name": "Indianapolis" },
+        { "@type": "State", "name": "Indiana" }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carsonpoore.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Who we help", "item": "https://carsonpoore.com/#who-we-help" },
+        { "@type": "ListItem", "position": 3, "name": "Nonprofits" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does a nonprofit get the Google Ad Grant?",
+          "acceptedAnswer": { "@type": "Answer", "text": "First you verify your 501(c)(3) through Google for Nonprofits, then you apply for Ad Grants inside that account. Once approved, you get up to $10,000 a month in search ads, as long as the account follows Google’s rules. Faith-based organizations have their own verification path, so we confirm eligibility during the free checkup instead of promising it up front." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why did Google suspend our Ad Grant account?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Usually one of three things: the account fell below the 5% click-through rate, nobody logged in for a month, or conversion tracking was never set up. All three are fixable. We look at which one it was during the checkup and tell you what reactivation takes." }
+        },
+        {
+          "@type": "Question",
+          "name": "How much is the nonprofit rate?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It’s a reduced version of our published retainers, which are $1,200, $2,400, or $4,800 a month. We hold it for a few organizations each quarter. The exact number depends on which tier fits, and you’ll hear it on the first call, before anyone writes a proposal." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a capacity-building grant pay for marketing help?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Often, yes. United Way of Central Indiana awards capacity-building grants of up to $50,000, and a community foundation serves every one of Indiana’s 92 counties. We can’t promise a grant comes through, but we’ll help you write the case for the engagement if you decide to apply." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I explain marketing spend to my board?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Tie it to the people you serve. A donor found in October is a family served in March. We also build a one-page monthly report showing new donors and where they came from, Ad Grant traffic included, so the board sees the work instead of taking it on faith." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="page">
+
+<header class="nav">
+  <div class="nav__inner">
+    <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
+    <nav class="nav__links" aria-label="Primary">
+      <div class="nav__item has-drop">
+        <a href="/services">Services</a>
+        <div class="nav__drop" aria-label="Services">
+          <a href="/services/marketing">Marketing</a>
+          <a href="/services/technical">Technical</a>
+          <a href="/services/strategy">Strategy</a>
+          <a href="/services/coaching">Coaching &amp; growth</a>
+          <a class="nav__drop-all" href="/services">All services</a>
+        </div>
+      </div>
+      <div class="nav__item has-drop">
+        <a href="/#who-we-help">Who we help</a>
+        <div class="nav__drop" aria-label="Who we help">
+          <a href="/for/local-businesses">Local businesses</a>
+          <a href="/for/founders">Founders &amp; startups</a>
+          <a href="/for/nonprofits">Nonprofits</a>
+        </div>
+      </div>
+      <a href="/method">Method</a>
+      <a href="/investment">Pricing</a>
+      <a href="/work">Work</a>
+      <a href="/resources">Resources</a>
+      <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
+    </nav>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" aria-hidden="true">
+  <span class="mobile-menu__group">Services</span>
+  <a href="/services/marketing">Marketing</a>
+  <a href="/services/technical">Technical</a>
+  <a href="/services/strategy">Strategy</a>
+  <a href="/services/coaching">Coaching &amp; growth</a>
+  <span class="mobile-menu__group">Who we help</span>
+  <a href="/for/local-businesses">Local businesses</a>
+  <a href="/for/founders">Founders &amp; startups</a>
+  <a href="/for/nonprofits">Nonprofits</a>
+  <span class="mobile-menu__group">Explore</span>
+  <a href="/method">Method</a>
+  <a href="/investment">Pricing</a>
+  <a href="/work">Work</a>
+  <a href="/resources">Resources</a>
+  <a href="/about">About</a>
+  <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero page-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#who-we-help">Who we help</a></li>
+          <li aria-current="page">Nonprofits</li>
+        </ol>
+      </nav>
+      <div class="page-hero__grid">
+        <div class="page-hero__copy">
+          <span class="eyebrow reveal">For nonprofits &amp; mission-driven orgs</span>
+          <h1 class="reveal mt-md" data-delay="1">Nonprofit marketing for the person already wearing <em>five hats</em>.</h1>
+          <p class="hero__sub reveal mt-md" data-delay="2">For executive and development directors across central Indiana. We start with the free money Google already sets aside for you, then build the donor list, the stories, and the board numbers that let a small staff work like a bigger one.</p>
+          <div class="row-cta mt-lg reveal" data-delay="3">
+            <a class="btn btn--primary" href="/contact">Ask for the free Ad Grant checkup <span class="arr">→</span></a>
+            <a class="btn btn--ghost-light" href="#nonprofit-rate">How the nonprofit rate works</a>
+          </div>
+        </div>
+        <div class="motion-frame motion-frame--hero page-hero__motion reveal" data-delay="2">
+          <video class="motion-loop" muted loop playsinline preload="none" poster="/media/motion/central-indiana.jpg" width="960" height="800" aria-hidden="true"><source src="/media/motion/central-indiana.webm" type="video/webm" /><source src="/media/motion/central-indiana.mp4" type="video/mp4" /></video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THEIR WORLD -->
+  <section class="section">
+    <div class="wrap wrap--narrow">
+      <div class="sec-head">
+        <span class="eyebrow reveal">Sound familiar?</span>
+        <h2 class="reveal" data-delay="1">Marketing falls to whoever has ten spare minutes.</h2>
+      </div>
+      <div class="mt-lg">
+        <p class="reveal">You&rsquo;re the executive director. You&rsquo;re also the development director, the volunteer coordinator, the grant writer, and on Thursdays, the entire marketing department. Nobody on staff has marketing as their actual job. So it happens in the gaps between a site visit and a grant report, when it happens at all.</p>
+        <p class="mt-md reveal">We hear the same few sentences from almost every small nonprofit we sit down with:</p>
+      </div>
+      <ul class="q-list mt-lg reveal" data-delay="1">
+        <li>The newsletter goes out when someone has time.</li>
+        <li>Our donor data is in three spreadsheets, and nobody trusts any of them.</li>
+        <li>We have the Google Grant. Honestly, nobody&rsquo;s touched it in months.</li>
+        <li>Our development director left, and everything lived in her head.</li>
+      </ul>
+      <div class="mt-lg">
+        <p class="reveal">None of that is a character flaw. It&rsquo;s math. The Fundraising Effectiveness Project&rsquo;s 2025 data shows total giving up about 5% while the number of donors fell 3.6%, and the smallest givers ($1 to $100) dropped 11.1% year over year in the first quarter. Fewer people are carrying more of the load. Community-sized organizations feel that first, because those small gifts are their base.</p>
+        <p class="mt-md reveal">Not sure where your gaps are? The <a class="tlink" href="/tools/checkup">five-step check-up</a> scores you in a few minutes. No email, no login.</p>
+      </div>
+
+      <div class="np-board">
+        <span class="label reveal">For the board packet</span>
+        <p class="reveal">Some board members want every dollar on programs. A few are openly wary of mixing marketing with mission. That&rsquo;s a fair instinct, and you&rsquo;ll need an answer for it. Here&rsquo;s the one we&rsquo;d hand them:</p>
+        <p class="pull mt-lg reveal" data-delay="1">A donor found in October is <em>a family served</em> in March.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- START HERE: AD GRANT -->
+  <section class="section section--navy">
+    <div class="wrap">
+      <div class="np-grant">
+        <div>
+          <span class="eyebrow reveal">Start here. It&rsquo;s free.</span>
+          <h2 class="reveal mt-sm" data-delay="1">Google sets aside <em>$10,000</em> a month in ads for you.</h2>
+          <p class="mt-md reveal" data-delay="2">Through Google for Nonprofits, verified 501(c)(3) organizations can get up to $10,000 a month in free search ads. That&rsquo;s Google&rsquo;s figure, and the program is still running in 2026. Most organizations that have it use a sliver. Industry-reported numbers from Getting Attention put the average self-managed account at roughly $300 a month.</p>
+          <p class="mt-md reveal">The rules are why. Ads have to hold a 5% click-through rate. Someone has to log in every month. Conversion tracking has to be set up, and single-word keywords aren&rsquo;t allowed. Miss one and Google suspends the account, usually without anyone on staff noticing for weeks.</p>
+          <p class="mt-md reveal">We think the Ad Grant is the most overlooked free resource a small nonprofit has. It&rsquo;s also the right first step because it costs you nothing to find out where you stand. Read <a class="tlink" href="/articles/nonprofit-google-ad-grant">how the Ad Grant works</a>, or see <a class="tlink" href="/services/google-ad-grants">how we manage it</a>.</p>
+        </div>
+        <aside class="np-grant__checks reveal" data-delay="2">
+          <h3>What the checkup answers</h3>
+          <ol>
+            <li>Are you eligible? Faith-based and community organizations are welcome; Google has its own verification path there, so we confirm it with you instead of promising it here.</li>
+            <li>Is your account active, or quietly suspended?</li>
+            <li>How much of the $10,000 did you actually use last month?</li>
+            <li>What would it take to use more of it, and point it at donors or volunteers?</li>
+          </ol>
+          <a class="btn btn--amber" href="/contact">Ask for the checkup <span class="arr">→</span></a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- THEN: THE WORK -->
+  <section class="section section--stone">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow reveal">After the grant</span>
+        <h2 class="reveal" data-delay="1">Then the work that keeps a small staff from drowning</h2>
+        <p class="sec-head__intro reveal" data-delay="2">Our opinion, for what it&rsquo;s worth: most small nonprofits should fix their donor list before they touch their logo. So that&rsquo;s the order we work in.</p>
+      </div>
+      <div class="icon-tiles mt-xl">
+        <div class="icon-tile reveal">
+          <span class="icon-tile__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </span>
+          <h3>One donor list everyone trusts</h3>
+          <p>Your donors live in spreadsheets, an email tool, the payment processor, and whatever the event platform exported last spring. We pull them into one CRM, clean out the duplicates, and tag gifts by fund and campaign. Then the thank-you notes and lapsed-donor emails go out on schedule, whether or not anyone remembers. This part is tedious. We do it first anyway, because every email and every report reads from this list.</p>
+          <a class="tlink" href="/services/crm-gohighlevel">Donor CRM and email <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="icon-tile reveal" data-delay="1">
+          <span class="icon-tile__icon icon-tile__icon--amber" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </span>
+          <h3>Tell people what you actually do</h3>
+          <p>People give to what they understand. We write your case for support and the website copy that explains your work in a sentence a neighbor could repeat. A donor and a volunteer need different sentences from you, and we write both. Email is worth the effort here: M+R Benchmarks 2025 puts the average nonprofit open rate around 28.6%.</p>
+          <a class="tlink" href="/services/marketing">Brand and storytelling <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="icon-tile reveal" data-delay="2">
+          <span class="icon-tile__icon icon-tile__icon--navy" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>
+          </span>
+          <h3>Numbers your board can read</h3>
+          <p>A one-page monthly report built on GA4 and your CRM. New donors this quarter, and where they came from. Which appeal worked. How many people the Ad Grant sent to your volunteer page. Plain English, ready to drop into the board packet before GivingTuesday planning starts.</p>
+          <a class="tlink" href="/services/analytics">GA4 and reporting <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VOLUNTEERS -->
+  <section class="section">
+    <div class="wrap">
+      <div class="connect-grid">
+        <div>
+          <span class="eyebrow reveal">Volunteers count too</span>
+          <h2 class="reveal mt-sm" data-delay="1">The same system recruits the people who show up on Saturday</h2>
+          <p class="mt-md reveal" data-delay="2">Most agencies only talk about donors. Your volunteers matter just as much: in Bloomerang&rsquo;s 2025 research, 75% of nonprofits called volunteers essential to operations. And they&rsquo;re harder to find. Census and AmeriCorps data show the share of Americans who volunteer slipping from about 30% before COVID to about 28% in 2023.</p>
+          <p class="mt-md reveal" data-delay="2">So we build for both. Ad Grant campaigns can point at your volunteer sign-up page. The CRM remembers who came to the spring build and invites them back for the fall one. A small team can keep track of hundreds of relationships that way, while the human part (the handshake, the thank-you call) stays with you.</p>
+        </div>
+        <div class="motion-frame motion-frame--light reveal" data-delay="2">
+          <video class="motion-loop" muted loop playsinline preload="none" poster="/media/motion/tactics-to-system.jpg" width="960" height="800" aria-hidden="true"><source src="/media/motion/tactics-to-system.webm" type="video/webm" /><source src="/media/motion/tactics-to-system.mp4" type="video/mp4" /></video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NONPROFIT RATE -->
+  <section class="section section--stone np-rate" id="nonprofit-rate">
+    <div class="wrap wrap--narrow">
+      <div class="sec-head">
+        <span class="eyebrow reveal">The nonprofit rate</span>
+        <h2 class="reveal" data-delay="1">A reduced rate, offered plainly</h2>
+        <p class="sec-head__intro reveal" data-delay="2">Nonprofits pay less. The budgets are smaller, and the work matters.</p>
+      </div>
+      <div class="mt-lg">
+        <p class="reveal">You get the same scope and the same team as any other client. The same terms apply too: three months minimum, then month to month, and every account we set up is registered to you. Our published retainers are $1,200, $2,400, or $4,800 a month, and the nonprofit rate is a reduced version of those. We hold it for a few organizations each quarter, because the whole consultancy is capped at eight clients. You&rsquo;ll hear the exact number on the first call, before anyone writes a proposal.</p>
+      </div>
+      <div class="stat-row reveal" data-delay="1">
+        <div><div class="stat__num">Free</div><div class="stat__lbl">The Ad Grant checkup</div></div>
+        <div><div class="stat__num">3 months</div><div class="stat__lbl">Minimum, then month to month</div></div>
+        <div><div class="stat__num">8</div><div class="stat__lbl">Clients, total</div></div>
+      </div>
+
+      <div class="np-fund reveal" data-delay="1">
+        <h3>This may already be fundable</h3>
+        <p class="mt-sm">If everything you raise is restricted, look at capacity money. United Way of Central Indiana awards capacity-building grants of up to $50,000. A community foundation serves every one of Indiana&rsquo;s 92 counties, and many of them fund this kind of work. If you decide to apply, we&rsquo;ll help you write the case for the engagement. We can&rsquo;t promise a grant comes through. We can make the application clearer.</p>
+      </div>
+
+      <div class="row-cta mt-xl reveal" data-delay="2">
+        <a class="btn btn--primary" href="/investment">See all published pricing <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="wrap wrap--narrow">
+      <div class="sec-head">
+        <span class="eyebrow reveal">Before you call</span>
+        <h2 class="reveal" data-delay="1">What EDs and development directors ask us</h2>
+      </div>
+      <div class="faq mt-xl reveal" data-delay="2">
+        <details>
+          <summary>How does a nonprofit get the Google Ad Grant?</summary>
+          <p>First you verify your 501(c)(3) through Google for Nonprofits, then you apply for Ad Grants inside that account. Once approved, you get up to $10,000 a month in search ads, as long as the account follows Google&rsquo;s rules. Faith-based organizations have their own verification path, so we confirm eligibility during the free checkup instead of promising it up front.</p>
+        </details>
+        <details>
+          <summary>Why did Google suspend our Ad Grant account?</summary>
+          <p>Usually one of three things: the account fell below the 5% click-through rate, nobody logged in for a month, or conversion tracking was never set up. All three are fixable. We look at which one it was during the checkup and tell you what reactivation takes.</p>
+        </details>
+        <details>
+          <summary>How much is the nonprofit rate?</summary>
+          <p>It&rsquo;s a reduced version of our published retainers, which are $1,200, $2,400, or $4,800 a month. We hold it for a few organizations each quarter. The exact number depends on which tier fits, and you&rsquo;ll hear it on the first call, before anyone writes a proposal.</p>
+        </details>
+        <details>
+          <summary>Can a capacity-building grant pay for marketing help?</summary>
+          <p>Often, yes. United Way of Central Indiana awards capacity-building grants of up to $50,000, and a community foundation serves every one of Indiana&rsquo;s 92 counties. We can&rsquo;t promise a grant comes through, but we&rsquo;ll help you write the case for the engagement if you decide to apply.</p>
+        </details>
+        <details>
+          <summary>How do I explain marketing spend to my board?</summary>
+          <p>Tie it to the people you serve. A donor found in October is a family served in March. We also build a one-page monthly report showing new donors and where they came from, Ad Grant traffic included, so the board sees the work instead of taking it on faith.</p>
+        </details>
+      </div>
+      <p class="updated mt-lg">Last updated: October 2026</p>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing">
+    <div class="closing__inner">
+      <div class="reveal">
+        <span class="eyebrow">One small next step</span>
+        <h2>Find out how much of the <em>$10,000</em> you&rsquo;re using.</h2>
+        <p>Talk it through with Carson. Bring your Ad Grant login if you have one, or just your questions. You&rsquo;ll leave with the answer either way, and nobody will send you a proposal you didn&rsquo;t ask for.</p>
+      </div>
+      <div class="reveal" data-delay="1">
+        <a href="/contact" class="btn btn--primary">Talk it through with Carson <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer footer--v2">
+  <div class="wrap">
+    <div class="footer__grid footer__grid--v2">
+      <div class="footer__brand">
+        <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
+        <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/marketing">Marketing</a></li>
+          <li><a href="/services/technical">Technical</a></li>
+          <li><a href="/services/strategy">Strategy</a></li>
+          <li><a href="/services/coaching">Coaching &amp; growth</a></li>
+          <li><a href="/services/local-seo">Local SEO</a></li>
+          <li><a href="/services/google-ads">Google Ads</a></li>
+          <li><a href="/services/websites">Websites &amp; web apps</a></li>
+          <li><a href="/services/ai-automation">AI &amp; automation</a></li>
+          <li><a href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a></li>
+          <li><a href="/services/analytics">GA4 &amp; analytics</a></li>
+          <li><a href="/services/google-ad-grants">Google Ad Grants</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Who we help</h4>
+        <ul>
+          <li><a href="/for/local-businesses">Local businesses</a></li>
+          <li><a href="/for/founders">Founders &amp; startups</a></li>
+          <li><a href="/for/nonprofits">Nonprofits</a></li>
+          <li><a href="/work">Client results</a></li>
+        </ul>
+        <h4 class="footer__h4-gap">Free tools</h4>
+        <ul>
+          <li><a href="/tools/checkup">The five-step check-up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Articles</h4>
+        <ul>
+          <li><a href="/articles/fractional-cmo-cost">Fractional CMO cost</a></li>
+          <li><a href="/articles/fractional-cmo-vs-marketing-agency">CMO vs. agency</a></li>
+          <li><a href="/articles/is-gohighlevel-worth-it">Is GoHighLevel worth it?</a></li>
+          <li><a href="/articles/ai-agents-for-small-business">AI agents, explained</a></li>
+          <li><a href="/articles/not-showing-up-on-google">Not showing up on Google</a></li>
+          <li><a href="/articles/small-business-marketing-budget">What marketing should cost</a></li>
+          <li><a href="/articles/nonprofit-google-ad-grant">The nonprofit Ad Grant</a></li>
+          <li><a href="/resources" class="tlink">All resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/method">Method</a></li>
+          <li><a href="/investment">Pricing</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__meta">
+      <span>© 2026 Carson Poore Consulting · Indianapolis, Indiana · carson@carsonpoore.com</span>
+      <span class="footer__towns">Serving Indianapolis, Carmel, Fishers, Zionsville, Noblesville, Westfield, Greenwood, Brownsburg, Avon, and all of central Indiana — technical and coaching work nationwide.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

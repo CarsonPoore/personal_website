@@ -3,34 +3,115 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Contact — Carson Poore Consulting</title>
-<meta name="description" content="Book a discovery call. A real conversation about your business — no pitch, no pressure." />
-<meta property="og:title" content="Contact — Carson Poore Consulting" />
-<meta property="og:description" content="Thirty minutes, one real conversation about your business. No pitch, no pressure." />
+<title>Book a free call | Carson Poore Consulting</title>
+<meta name="description" content="Book a free 30-minute call with Carson Poore Consulting. A real conversation about marketing, technical work, strategy, or coaching. No pitch, no pressure." />
+<link rel="canonical" href="https://carsonpoore.com/contact" />
+<meta property="og:title" content="Book a free call | Carson Poore Consulting" />
+<meta property="og:description" content="Book a free 30-minute call with Carson Poore Consulting. A real conversation about marketing, technical work, strategy, or coaching. No pitch, no pressure." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://carsonpoore.com/contact" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
-<link rel="icon" type="image/svg+xml" href="brand/cpc-mark-royalblue.svg" />
-<link rel="stylesheet" href="styles.css?v=20261004-1" />
-<link rel="stylesheet" href="motion-c.css?v=20261004-1" />
+<link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
+<link rel="stylesheet" href="/styles.css?v=20261008-1" />
+<link rel="stylesheet" href="/motion-c.css?v=20261008-1" />
+<script defer src="/site.js?v=20261008-1"></script>
+<style>
+  /* Contact page: page-specific bits */
+  .hero__pointer { font-size: 0.98rem; }
+  .page-hero .hero__pointer .tlink { color: #fff; }
+  .c-note { margin-top: 28px; max-width: 62ch; color: var(--ink-2); line-height: 1.7; }
+  .c-email { margin-top: 16px; color: var(--ink-2); font-size: 0.98rem; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://carsonpoore.com/#org",
+      "name": "Carson Poore Consulting",
+      "url": "https://carsonpoore.com/",
+      "logo": "https://carsonpoore.com/brand/cpc-mark-royalblue.svg",
+      "image": "https://carsonpoore.com/brand/carson-headshot.png",
+      "email": "carson@carsonpoore.com",
+      "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
+      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "areaServed": [
+        { "@type": "City", "name": "Indianapolis" },
+        { "@type": "State", "name": "Indiana" },
+        { "@type": "Country", "name": "United States" }
+      ],
+      "priceRange": "$1,200–$4,800/month",
+      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+    },
+    {
+      "@type": "ContactPage",
+      "@id": "https://carsonpoore.com/contact#page",
+      "url": "https://carsonpoore.com/contact",
+      "name": "Book a free call",
+      "description": "Book a free 30-minute call with Carson Poore Consulting. A real conversation about marketing, technical work, strategy, or coaching. No pitch, no pressure.",
+      "inLanguage": "en-US",
+      "dateModified": "2026-10-08",
+      "about": { "@id": "https://carsonpoore.com/#org" },
+      "mainEntity": { "@id": "https://carsonpoore.com/#org" }
+    }
+  ]
+}
+</script>
 </head>
 <body class="page">
 
 <header class="nav">
   <div class="nav__inner">
-    <a href="index.html" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
+    <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
     <nav class="nav__links" aria-label="Primary">
-      <a href="index.html">Home</a><a href="services.html">Services</a><a href="method.html">Method</a>
-      <a href="investment.html">Investment</a>
-      <a href="about.html">About</a><a href="contact.html">Contact</a>
-      <a class="btn btn--primary nav__cta" href="contact.html">Book a call <span class="arr">→</span></a>
+      <div class="nav__item has-drop">
+        <a href="/services">Services</a>
+        <div class="nav__drop" aria-label="Services">
+          <a href="/services/marketing">Marketing</a>
+          <a href="/services/technical">Technical</a>
+          <a href="/services/strategy">Strategy</a>
+          <a href="/services/coaching">Coaching &amp; growth</a>
+          <a class="nav__drop-all" href="/services">All services</a>
+        </div>
+      </div>
+      <div class="nav__item has-drop">
+        <a href="/#who-we-help">Who we help</a>
+        <div class="nav__drop" aria-label="Who we help">
+          <a href="/for/local-businesses">Local businesses</a>
+          <a href="/for/founders">Founders &amp; startups</a>
+          <a href="/for/nonprofits">Nonprofits</a>
+        </div>
+      </div>
+      <a href="/method">Method</a>
+      <a href="/investment">Pricing</a>
+      <a href="/work">Work</a>
+      <a href="/resources">Resources</a>
+      <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
     </nav>
-    <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
-<div class="mobile-menu"><a href="index.html">Home</a><a href="services.html">Services</a><a href="method.html">Method</a>
-      <a href="investment.html">Investment</a>
-      <a href="about.html">About</a><a href="contact.html">Contact</a><a class="btn btn--primary" href="contact.html">Book a call <span class="arr">→</span></a></div>
+<div class="mobile-menu" aria-hidden="true">
+  <span class="mobile-menu__group">Services</span>
+  <a href="/services/marketing">Marketing</a>
+  <a href="/services/technical">Technical</a>
+  <a href="/services/strategy">Strategy</a>
+  <a href="/services/coaching">Coaching &amp; growth</a>
+  <span class="mobile-menu__group">Who we help</span>
+  <a href="/for/local-businesses">Local businesses</a>
+  <a href="/for/founders">Founders &amp; startups</a>
+  <a href="/for/nonprofits">Nonprofits</a>
+  <span class="mobile-menu__group">Explore</span>
+  <a href="/method">Method</a>
+  <a href="/investment">Pricing</a>
+  <a href="/work">Work</a>
+  <a href="/resources">Resources</a>
+  <a href="/about">About</a>
+  <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
+</div>
 
 <main>
 
@@ -40,9 +121,10 @@
         <div class="page-hero__copy">
           <span class="eyebrow reveal">Contact</span>
           <h1 class="reveal mt-md" data-delay="1">Let&rsquo;s talk about <em>your business.</em></h1>
-          <p class="hero__sub reveal mt-md" data-delay="2">Thirty minutes, one real conversation. We&rsquo;ll talk about where things stand, what&rsquo;s in the way, and whether we&rsquo;re the right fit to help. No pitch, no pressure. Pick a time that works below.</p>
+          <p class="hero__sub reveal mt-md" data-delay="2">Thirty minutes, one real conversation, no pitch. Marketing, a technical build, strategy, coaching and growth: any of our four practices can be the topic, and so can &ldquo;I don&rsquo;t know what to ask for.&rdquo; We&rsquo;ll go over where things stand and what&rsquo;s in the way. Then we&rsquo;ll tell you straight whether we&rsquo;re the right fit. Pick a time below.</p>
+          <p class="hero__pointer reveal mt-md" data-delay="3">Come prepared if you like. Bring your score if you&rsquo;ve taken the <a href="/tools/checkup" class="tlink">five-step check-up</a>.</p>
         </div>
-        <div class="c-contact-path reveal" data-delay="2" aria-hidden="true"><video class="motion-loop " muted loop playsinline preload="none" poster="media/motion/c-contact-path.png" data-webm="media/motion/c-contact-path.webm" data-hevc="media/motion/c-contact-path-hevc.mp4" width="1040" height="460" aria-hidden="true"></video></div>
+        <div class="c-contact-path reveal" data-delay="2" aria-hidden="true"><video class="motion-loop " muted loop playsinline preload="none" poster="/media/motion/c-contact-path.png" data-webm="/media/motion/c-contact-path.webm" data-hevc="/media/motion/c-contact-path-hevc.mp4" width="1040" height="460" aria-hidden="true"></video></div>
       </div>
     </div>
   </section>
@@ -51,7 +133,7 @@
     <div class="wrap">
 
       <!-- SCHEDULING — Cal.com embed (the ruler above measures the 30-minute call) -->
-      <div class="c-ruler" aria-hidden="true"><video class="motion-loop " muted loop playsinline preload="none" poster="media/motion/c-cal-ruler.png" data-webm="media/motion/c-cal-ruler.webm" data-hevc="media/motion/c-cal-ruler-hevc.mp4" width="1600" height="120" aria-hidden="true"></video></div>
+      <div class="c-ruler" aria-hidden="true"><video class="motion-loop " muted loop playsinline preload="none" poster="/media/motion/c-cal-ruler.png" data-webm="/media/motion/c-cal-ruler.webm" data-hevc="/media/motion/c-cal-ruler-hevc.mp4" width="1600" height="120" aria-hidden="true"></video></div>
       <div class="cal-embed reveal">
         <!-- Cal inline embed code begins -->
         <div style="width:100%;min-height:660px;overflow:hidden" id="my-cal-inline-30min"></div>
@@ -68,7 +150,9 @@
         <!-- Cal inline embed code ends -->
       </div>
 
-      <p style="margin-top: 28px; color: var(--ink-2); font-size: 0.98rem;">
+      <p class="c-note">We think a first call should commit you to nothing, including us. Candidly, we can&rsquo;t help everyone. Eight clients is our cap, so we turn some people away, and sometimes the honest answer is &ldquo;not yet.&rdquo; Every price is on the <a href="/investment" class="tlink">pricing page</a>, so the call isn&rsquo;t where you hear a number.</p>
+
+      <p class="c-email">
         Prefer email? <a href="mailto:carson@carsonpoore.com" class="tlink">carson@carsonpoore.com</a>
       </p>
     </div>
@@ -92,30 +176,100 @@
         <li class="reveal" data-delay="3">Are you open to being a little visible in your own marketing?</li>
         <li class="reveal" data-delay="4">A year from now, what would make you say this worked?</li>
       </ol>
+
+      <p class="updated mt-lg">Last updated: October 2026</p>
     </div>
   </section>
 
-  <!-- Seam band: straddles the section above and the footer -->
-  <div class="c-seam" aria-hidden="true"><video class="motion-loop " muted loop playsinline preload="none" poster="media/motion/c-handoff.png" data-webm="media/motion/c-handoff.webm" data-hevc="media/motion/c-handoff-hevc.mp4" width="1920" height="200" aria-hidden="true"></video></div>
+  <!-- Seam band: straddles the section above and the closing band -->
+  <div class="c-seam" aria-hidden="true"><video class="motion-loop " muted loop playsinline preload="none" poster="/media/motion/c-handoff.png" data-webm="/media/motion/c-handoff.webm" data-hevc="/media/motion/c-handoff-hevc.mp4" width="1920" height="200" aria-hidden="true"></video></div>
+
+  <!-- CLOSING CTA: for the reader who isn't ready to talk yet -->
+  <section class="closing">
+    <div class="closing__inner">
+      <div class="reveal">
+        <span class="eyebrow">Not ready to talk yet?</span>
+        <h2>Start with a <em>score</em> instead.</h2>
+        <p>The five-step check-up is free, asks for no email or login, and scores you on the spot. Come back when you have a number to bring.</p>
+      </div>
+      <div class="reveal" data-delay="1">
+        <a href="/tools/checkup" class="btn btn--primary">Take the check-up <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
 
 </main>
 
-<footer class="footer">
+<footer class="footer footer--v2">
   <div class="wrap">
-    <div class="footer__grid">
-      <div>
-        <div class="footer__lockup"><img src="brand/cpc-lockup-white.svg" alt="Carson Poore Consulting" width="232" height="63" /></div>
-        <p class="footer__tag">Full-service marketing for central Indiana small businesses ready to be the obvious choice.</p>
-        <p>Indianapolis, Indiana<br/><a href="mailto:carson@carsonpoore.com" class="tlink">carson@carsonpoore.com</a></p>
+    <div class="footer__grid footer__grid--v2">
+      <div class="footer__brand">
+        <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
+        <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
       </div>
-      <div><h4>Explore</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="method.html">Method</a></li><li><a href="investment.html">Investment</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div><h4>Get started</h4><ul><li><a href="contact.html">Book a discovery call</a></li><li><a href="mailto:carson@carsonpoore.com">Email Carson</a></li><li><a href="work.html">Work</a></li></ul></div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/marketing">Marketing</a></li>
+          <li><a href="/services/technical">Technical</a></li>
+          <li><a href="/services/strategy">Strategy</a></li>
+          <li><a href="/services/coaching">Coaching &amp; growth</a></li>
+          <li><a href="/services/local-seo">Local SEO</a></li>
+          <li><a href="/services/google-ads">Google Ads</a></li>
+          <li><a href="/services/websites">Websites &amp; web apps</a></li>
+          <li><a href="/services/ai-automation">AI &amp; automation</a></li>
+          <li><a href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a></li>
+          <li><a href="/services/analytics">GA4 &amp; analytics</a></li>
+          <li><a href="/services/google-ad-grants">Google Ad Grants</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Who we help</h4>
+        <ul>
+          <li><a href="/for/local-businesses">Local businesses</a></li>
+          <li><a href="/for/founders">Founders &amp; startups</a></li>
+          <li><a href="/for/nonprofits">Nonprofits</a></li>
+          <li><a href="/work">Client results</a></li>
+        </ul>
+        <h4 class="footer__h4-gap">Free tools</h4>
+        <ul>
+          <li><a href="/tools/checkup">The five-step check-up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Articles</h4>
+        <ul>
+          <li><a href="/articles/fractional-cmo-cost">Fractional CMO cost</a></li>
+          <li><a href="/articles/fractional-cmo-vs-marketing-agency">CMO vs. agency</a></li>
+          <li><a href="/articles/is-gohighlevel-worth-it">Is GoHighLevel worth it?</a></li>
+          <li><a href="/articles/ai-agents-for-small-business">AI agents, explained</a></li>
+          <li><a href="/articles/not-showing-up-on-google">Not showing up on Google</a></li>
+          <li><a href="/articles/small-business-marketing-budget">What marketing should cost</a></li>
+          <li><a href="/articles/nonprofit-google-ad-grant">The nonprofit Ad Grant</a></li>
+          <li><a href="/resources" class="tlink">All resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/method">Method</a></li>
+          <li><a href="/investment">Pricing</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="footer__meta"><span>© 2026 Carson Poore Consulting</span><span>Indianapolis · Central Indiana</span></div>
+    <div class="footer__meta">
+      <span>© 2026 Carson Poore Consulting · Indianapolis, Indiana · carson@carsonpoore.com</span>
+      <span class="footer__towns">Serving Indianapolis, Carmel, Fishers, Zionsville, Noblesville, Westfield, Greenwood, Brownsburg, Avon, and all of central Indiana — technical and coaching work nationwide.</span>
+    </div>
   </div>
 </footer>
 
-<script src="site.js?v=20261004-1"></script>
-<script src="motion.js?v=20261003-1"></script>
 </body>
 </html>

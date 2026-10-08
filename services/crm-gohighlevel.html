@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GoHighLevel Consultant &amp; CRM Setup | Carson Poore</title>
+<meta name="description" content="GoHighLevel set up so it actually gets used: pipelines, missed-call text-back, reminders, review requests. Setup that sticks, with a human who answers." />
+<link rel="canonical" href="https://carsonpoore.com/services/crm-gohighlevel" />
+<meta property="og:title" content="GoHighLevel Consultant &amp; CRM Setup | Carson Poore" />
+<meta property="og:description" content="GoHighLevel set up so it actually gets used: pipelines, missed-call text-back, reminders, review requests. Setup that sticks, with a human who answers." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://carsonpoore.com/services/crm-gohighlevel" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
+<link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
+<link rel="stylesheet" href="/styles.css?v=20261008-1" />
+<script defer src="/site.js?v=20261008-1"></script>
+<style>
+  /* GoHighLevel & CRM page — layout tweaks on top of the shared system */
+  .money-split {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: clamp(28px, 4vw, 72px);
+    align-items: start;
+  }
+  @media (max-width: 860px) { .money-split { grid-template-columns: 1fr; } }
+  .money-split .cost-note p + p { margin-top: 18px; }
+  .math-card {
+    background: var(--navy);
+    border-radius: var(--r-3);
+    padding: clamp(28px, 4vw, 48px);
+  }
+  .math-card .label { color: var(--amber); display: block; margin-bottom: 16px; }
+  .math-card ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+  .math-card li {
+    display: flex; justify-content: space-between; gap: 18px; align-items: baseline;
+    color: var(--cream-2); padding: 13px 0; border-top: 1px solid var(--navy-3, rgba(255,255,255,0.12));
+  }
+  .math-card li span:last-child { color: #fff; font-weight: 700; white-space: nowrap; }
+  .math-card__foot { margin-top: 18px; color: var(--muted-on-navy); font-size: 0.85rem; }
+  .timeline-note { max-width: 62ch; }
+  .timeline-note p + p { margin-top: 18px; }
+  .candor-note { max-width: 68ch; margin-top: clamp(28px, 4vw, 44px); }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://carsonpoore.com/#org",
+      "name": "Carson Poore Consulting",
+      "url": "https://carsonpoore.com/",
+      "logo": "https://carsonpoore.com/brand/cpc-mark-royalblue.svg",
+      "image": "https://carsonpoore.com/brand/carson-headshot.png",
+      "email": "carson@carsonpoore.com",
+      "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
+      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "areaServed": [
+        { "@type": "City", "name": "Indianapolis" },
+        { "@type": "State", "name": "Indiana" },
+        { "@type": "Country", "name": "United States" }
+      ],
+      "priceRange": "$1,200–$4,800/month",
+      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carsonpoore.com/services/crm-gohighlevel#service",
+      "name": "GoHighLevel & CRM Setup",
+      "serviceType": "CRM implementation and marketing automation",
+      "description": "GoHighLevel setup and CRM migration for service businesses nationwide: sales pipelines, missed-call text-back, appointment reminders, review requests, email and SMS flows, and clean contact data, inside published monthly retainers.",
+      "provider": { "@id": "https://carsonpoore.com/#org" },
+      "areaServed": [
+        { "@type": "City", "name": "Indianapolis" },
+        { "@type": "State", "name": "Indiana" },
+        { "@type": "Country", "name": "United States" }
+      ],
+      "url": "https://carsonpoore.com/services/crm-gohighlevel"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carsonpoore.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://carsonpoore.com/services" },
+        { "@type": "ListItem", "position": 3, "name": "GoHighLevel & CRM" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does a GoHighLevel consultant cost?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Independent GoHighLevel consultants publish setup rates from about $300 for a basic install to $5,000 and up for a full build. We price it differently: setup, migration, and ongoing automation live inside our monthly retainers of $1,200, $2,400, or $4,800, three months minimum, then month to month. There is no separate setup invoice." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is GoHighLevel worth it for a small business?",
+          "acceptedAnswer": { "@type": "Answer", "text": "If you run a service business, leads reach you by phone and by form, and you're paying for five or more separate tools, usually yes. If you're a solo handling under about 50 leads a month, usually no; the subscription outruns the benefit. We wrote the full cost math, usage fees included, in our article \"Is GoHighLevel worth it?\" Read it before you buy anything." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does GoHighLevel setup take?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Five to seven days to functional: pipelines, calendars, missed-call text-back, and your booking links live. Six to eight weeks to humming, because the follow-up sequences need real leads flowing through them before they can be trusted. Anyone promising a complete build in a weekend is selling you a template." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you migrate us from HubSpot or another CRM?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. We export the data, map the fields, dedupe, and spot-check against the old system before anything gets switched off. And if that review shows your current CRM is doing its job, we'll tell you to keep it and build the automation around it instead. Switching has a real cost in attention; we don't recommend it casually." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work outside Indianapolis?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. CRM and automation work is fully remote, and we run it for clients nationwide. Indianapolis is home, so local trades and home-services businesses also get us in person. Either way, the same team that writes your plan builds your account — we cap the roster at eight clients so that stays true." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="page">
+
+<header class="nav">
+  <div class="nav__inner">
+    <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
+    <nav class="nav__links" aria-label="Primary">
+      <div class="nav__item has-drop">
+        <a href="/services">Services</a>
+        <div class="nav__drop" aria-label="Services">
+          <a href="/services/marketing">Marketing</a>
+          <a href="/services/technical">Technical</a>
+          <a href="/services/strategy">Strategy</a>
+          <a href="/services/coaching">Coaching &amp; growth</a>
+          <a class="nav__drop-all" href="/services">All services</a>
+        </div>
+      </div>
+      <div class="nav__item has-drop">
+        <a href="/#who-we-help">Who we help</a>
+        <div class="nav__drop" aria-label="Who we help">
+          <a href="/for/local-businesses">Local businesses</a>
+          <a href="/for/founders">Founders &amp; startups</a>
+          <a href="/for/nonprofits">Nonprofits</a>
+        </div>
+      </div>
+      <a href="/method">Method</a>
+      <a href="/investment">Pricing</a>
+      <a href="/work">Work</a>
+      <a href="/resources">Resources</a>
+      <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
+    </nav>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" aria-hidden="true">
+  <span class="mobile-menu__group">Services</span>
+  <a href="/services/marketing">Marketing</a>
+  <a href="/services/technical">Technical</a>
+  <a href="/services/strategy">Strategy</a>
+  <a href="/services/coaching">Coaching &amp; growth</a>
+  <span class="mobile-menu__group">Who we help</span>
+  <a href="/for/local-businesses">Local businesses</a>
+  <a href="/for/founders">Founders &amp; startups</a>
+  <a href="/for/nonprofits">Nonprofits</a>
+  <span class="mobile-menu__group">Explore</span>
+  <a href="/method">Method</a>
+  <a href="/investment">Pricing</a>
+  <a href="/work">Work</a>
+  <a href="/resources">Resources</a>
+  <a href="/about">About</a>
+  <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero page-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/services">Services</a></li>
+          <li aria-current="page">GoHighLevel &amp; CRM</li>
+        </ol>
+      </nav>
+      <div class="page-hero__grid">
+        <div class="page-hero__copy">
+          <span class="eyebrow reveal">GoHighLevel &amp; CRM · Nationwide</span>
+          <h1 class="reveal mt-md" data-delay="1">GoHighLevel, set up so it <em>sticks.</em></h1>
+          <p class="hero__sub reveal mt-md" data-delay="2">A GoHighLevel consultant takes the platform from blank account to the system your business runs on: pipelines, automations, email and SMS flows, and contact data you can trust. Setup help on the open market runs $300 to $5,000-plus, per rates published by independent GoHighLevel consultants. Ours lives inside a published monthly retainer, we work nationwide, and if the CRM you already have is doing its job, we'll tell you to keep it.</p>
+          <div class="row-cta reveal mt-lg" data-delay="3">
+            <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
+            <a class="tlink" href="/articles/is-gohighlevel-worth-it">First: is GoHighLevel even worth it?</a>
+          </div>
+        </div>
+        <div class="motion-frame motion-frame--hero page-hero__motion reveal" data-delay="2">
+          <video class="motion-loop" muted loop playsinline preload="none" poster="/media/motion/tactics-to-system.jpg" width="1120" height="700" aria-hidden="true"><source src="/media/motion/tactics-to-system.webm" type="video/webm" /><source src="/media/motion/tactics-to-system.mp4" type="video/mp4" /></video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE REAL PROBLEM -->
+  <section class="section section--stone">
+    <div class="wrap wrap--narrow">
+      <div class="sec-head reveal">
+        <span class="eyebrow">The real problem</span>
+        <h2>Everything starts <em>blank.</em></h2>
+      </div>
+      <div class="cost-note reveal mt-md">
+        <p>The demo looks incredible. Then you sign up, log in, and there's nothing there. No pipelines, no sequences, no templates that match how you sell. GoHighLevel can replace your scheduler, your email platform, your forms, your review software, and your business texting, but on day one it replaces nothing. It just sits there, billing you.</p>
+        <p>That's the gap we close. Most owners who abandon a CRM didn't pick bad software. They got to week three with leads still living in text threads and a legal pad, and went back to what they knew. The fix is unglamorous: someone has to wire the thing to your actual business, test it on real leads, and stay around while your team learns to trust it.</p>
+      </div>
+      <p class="pull reveal mt-xl">We think most CRM projects die in the import, not the demo. <em>Wire the boring parts first.</em></p>
+    </div>
+  </section>
+
+  <!-- THE WORK -->
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">The work</span>
+        <h2>What a setup engagement <em>covers.</em></h2>
+        <p class="sec-head__intro">Four jobs. Each one gets finished, tested on live leads, and handed over documented, so the system keeps working on the day nobody's thinking about it.</p>
+      </div>
+
+      <div class="svc-list mt-lg">
+
+        <article class="svc reveal">
+          <span class="svc__idx">01 / Setup &amp; migration</span>
+          <h3 class="svc__title">From your old stack to one account</h3>
+          <p class="svc__body">Account, domains, calendars, phone and A2P text registration, and the import. Coming from HubSpot, Keap, Jobber, or a spreadsheet? We export everything, map the fields, and spot-check against the old system before anything gets turned off. Nothing goes dark mid-switch. Your phones keep ringing the whole time.</p>
+        </article>
+
+        <article class="svc reveal">
+          <span class="svc__idx">02 / Pipelines</span>
+          <h3 class="svc__title">Stages that match how you really sell</h3>
+          <p class="svc__body">Not the default template. One pipeline per line of business, stages named in your words, so a ten-second glance on a Tuesday morning tells you exactly who needs a call today and which quotes have gone quiet. If a stage doesn't change what you do next, it doesn't exist.</p>
+        </article>
+
+        <article class="svc reveal">
+          <span class="svc__idx">03 / Email &amp; SMS flows</span>
+          <h3 class="svc__title">Follow-up that happens without you</h3>
+          <p class="svc__body">New-lead replies that go out in under a minute. Quote follow-ups that nudge twice and then stop. Win-back messages to customers you haven't seen in a year. We write them in your voice, you approve every word, and the sequences do the remembering so nobody has to.</p>
+        </article>
+
+        <article class="svc reveal">
+          <span class="svc__idx">04 / Data hygiene</span>
+          <h3 class="svc__title">The unsexy part that makes it all true</h3>
+          <p class="svc__body">Duplicates merged, tags that mean one thing, dead contacts archived, text consent recorded properly. It's tedious and nobody puts it in a sales deck, but it decides whether your reports can be believed. Clean data here is also what makes <a class="tlink" href="/services/analytics">our GA4 and analytics work</a> worth reading later.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- THE THREE AUTOMATIONS -->
+  <section class="section section--navy">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Where the payoff is</span>
+        <h2>Three automations carry <em>most of the weight.</em></h2>
+        <p class="sec-head__intro">You could build a hundred workflows in GoHighLevel. In a service business, three of them do roughly 80% of the work, so they go live in week one.</p>
+      </div>
+      <div class="cards mt-lg">
+        <article class="card reveal">
+          <span class="card__num">01</span>
+          <h3>Missed-call text-back</h3>
+          <p>You're mid-job, a call rolls to voicemail, and within seconds the caller gets a text: sorry we missed you, want a call back or a text? Most people won't leave a voicemail anymore. Nearly all of them will answer a text. This one automation pays for the whole platform.</p>
+        </article>
+        <article class="card reveal" data-delay="1">
+          <span class="card__num">02</span>
+          <h3>Appointment reminders</h3>
+          <p>A confirmation when the job is booked and a nudge the day before, by text. No-shows drop, reschedules happen before the slot is wasted, and nobody on your team spends Friday afternoon making reminder calls.</p>
+        </article>
+        <article class="card reveal" data-delay="2">
+          <span class="card__num">03</span>
+          <h3>Review requests</h3>
+          <p>The job closes, the customer gets one text with one link, at the moment they're happiest. A steady flow of recent Google reviews, with no begging and no awkward asks at the door. Set once, runs forever.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOME SERVICES -->
+  <section class="section section--stone">
+    <div class="wrap wrap--narrow">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Trades &amp; home services</span>
+        <h2>Built for people who answer <em>from the truck.</em></h2>
+      </div>
+      <div class="cost-note reveal mt-md">
+        <p>GoHighLevel earns its keep fastest in the trades. When you're on a roof or under a sink, you physically cannot answer the phone, and the caller is already dialing your competitor. Missed-call text-back exists for exactly that moment. We set it up for Indianapolis-area contractors we can sit across a table from, and for home-services businesses anywhere in the country.</p>
+        <p>If that's you, there's a whole page in your language: <a class="tlink" href="/for/local-businesses">how we work with local businesses</a>, published prices included.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE MONEY -->
+  <section class="section">
+    <div class="wrap">
+      <div class="money-split">
+        <div class="reveal">
+          <div class="sec-head">
+            <span class="eyebrow">What it costs</span>
+            <h2>The numbers, all of them.</h2>
+          </div>
+          <div class="cost-note mt-md">
+            <p>GoHighLevel's published plans run $97 to $497 a month. Metered usage for email, text, and AI features typically adds $30 to $300 on top. That's the real monthly range, and anyone quoting you only the plan price is leaving part of it out.</p>
+            <p>The case for it is consolidation. A service business paying separately for a scheduler, an email platform, forms, review software, and business texting often spends more on the pile than on the one platform that replaces it. At 5,000 contacts, GoHighLevel works out to about $3,564 a year; a comparable HubSpot setup is about $14,880, per both platforms' published pricing.</p>
+            <p>Our part: setup, migration, and ongoing automation live inside our monthly retainers of $1,200, $2,400, or $4,800, three months minimum, then month to month. No separate setup invoice. If you ever leave, the account, the contacts, and every workflow go with you.</p>
+            <p>We put the full cost math, usage fees and all, in one article. Read it before you buy anything, including us.</p>
+          </div>
+          <div class="row-cta mt-lg">
+            <a class="btn btn--ghost" href="/articles/is-gohighlevel-worth-it">Read: Is GoHighLevel worth it? <span class="arr">→</span></a>
+            <a class="tlink" href="/investment">See the full rate card</a>
+          </div>
+        </div>
+        <div class="math-card reveal" data-delay="1">
+          <span class="label">The platform math</span>
+          <ul>
+            <li><span>GoHighLevel plans</span><span>$97–$497/mo</span></li>
+            <li><span>Typical usage fees</span><span>$30–$300/mo</span></li>
+            <li><span>GoHighLevel at 5,000 contacts</span><span>≈ $3,564/yr</span></li>
+            <li><span>Comparable HubSpot stack</span><span>≈ $14,880/yr</span></li>
+            <li><span>Separate tools it replaces</span><span>5–8</span></li>
+          </ul>
+          <p class="math-card__foot">Per GoHighLevel's and HubSpot's published pricing, October 2026. Full breakdown in the article above.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO SHOULD SKIP IT -->
+  <section class="section section--stone">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Straight answer</span>
+        <h2>Right for some. <em>Wrong for plenty.</em></h2>
+      </div>
+
+      <div class="fit-grid mt-lg">
+        <div class="fit-card fit-card__yes reveal">
+          <span class="label">Worth it if</span>
+          <ul>
+            <li>You run a service business and leads arrive by phone, text, and form, and some of them slip.</li>
+            <li>You're paying for five or more separate tools that don't talk to each other.</li>
+            <li>A team touches your customers, so follow-up can't live in one person's head.</li>
+            <li>You'll actually let the automations run instead of turning them off in week two.</li>
+          </ul>
+        </div>
+        <div class="fit-card fit-card__no reveal" data-delay="1">
+          <span class="label">Skip it if</span>
+          <ul>
+            <li>You're solo with under about 50 leads a month. A shared inbox and a calendar app cover you, free.</li>
+            <li>Your current CRM works and the team uses it. Software churn is a tax, and we won't charge it.</li>
+            <li>You want a platform to fix a sales problem. It schedules follow-up; it can't close for you.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="candor-note reveal" data-delay="1">
+        <p>Already have a CRM your team opens every day? Keep it. We build around whatever you run — the <a class="tlink" href="/services/ai-automation">AI and automation work</a> doesn't care whose logo is on the login screen, and neither do we.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="section section--tight">
+    <div class="wrap wrap--narrow">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Timeline, honestly</span>
+        <h2>Days to functional. <em>Weeks to humming.</em></h2>
+      </div>
+      <div class="timeline-note reveal mt-md">
+        <p>The skeleton goes live fast: pipelines, calendars, missed-call text-back, and your booking links, usually inside five to seven days. The part nobody advertises is weeks two through eight, when we watch real leads move through the system and keep adjusting. A follow-up sequence tuned on live responses behaves differently than one written in a vacuum.</p>
+        <p>Fair warning: that middle stretch feels slow, and we'd rather tell you now than have you wonder in week four. By week eight it hums. That rhythm is also why the three-month minimum exists.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="wrap wrap--narrow">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Fair questions</span>
+        <h2>Asked before the first <em>call.</em></h2>
+      </div>
+      <div class="faq mt-lg reveal">
+        <details>
+          <summary>What does a GoHighLevel consultant cost?</summary>
+          <p>Independent GoHighLevel consultants publish setup rates from about $300 for a basic install to $5,000 and up for a full build. We price it differently: setup, migration, and ongoing automation live inside our monthly retainers of $1,200, $2,400, or $4,800, three months minimum, then month to month. There is no separate setup invoice.</p>
+        </details>
+        <details>
+          <summary>Is GoHighLevel worth it for a small business?</summary>
+          <p>If you run a service business, leads reach you by phone and by form, and you're paying for five or more separate tools, usually yes. If you're a solo handling under about 50 leads a month, usually no; the subscription outruns the benefit. We wrote the full cost math, usage fees included, in our article <a class="tlink" href="/articles/is-gohighlevel-worth-it">&ldquo;Is GoHighLevel worth it?&rdquo;</a> Read it before you buy anything.</p>
+        </details>
+        <details>
+          <summary>How long does GoHighLevel setup take?</summary>
+          <p>Five to seven days to functional: pipelines, calendars, missed-call text-back, and your booking links live. Six to eight weeks to humming, because the follow-up sequences need real leads flowing through them before they can be trusted. Anyone promising a complete build in a weekend is selling you a template.</p>
+        </details>
+        <details>
+          <summary>Can you migrate us from HubSpot or another CRM?</summary>
+          <p>Yes. We export the data, map the fields, dedupe, and spot-check against the old system before anything gets switched off. And if that review shows your current CRM is doing its job, we'll tell you to keep it and build the automation around it instead. Switching has a real cost in attention; we don't recommend it casually.</p>
+        </details>
+        <details>
+          <summary>Do you work outside Indianapolis?</summary>
+          <p>Yes. CRM and automation work is fully remote, and we run it for clients nationwide. Indianapolis is home, so local trades and home-services businesses also get us in person. Either way, the same team that writes your plan builds your account &mdash; we cap the roster at eight clients so that stays true.</p>
+        </details>
+      </div>
+      <p class="updated mt-lg">Last updated: October 2026</p>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="closing">
+    <div class="closing__inner">
+      <div class="reveal">
+        <span class="eyebrow">The next step</span>
+        <h2>Your next missed call doesn&rsquo;t have to <em>stay missed.</em></h2>
+        <p>Bring your current stack to a free call. We&rsquo;ll tell you what to keep, what to cancel, and whether GoHighLevel belongs in the picture at all. If the answer is no, you&rsquo;ll hear it from us first.</p>
+      </div>
+      <div class="reveal" data-delay="1">
+        <a href="/contact" class="btn btn--primary">Talk it through on a free call <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer footer--v2">
+  <div class="wrap">
+    <div class="footer__grid footer__grid--v2">
+      <div class="footer__brand">
+        <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
+        <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/marketing">Marketing</a></li>
+          <li><a href="/services/technical">Technical</a></li>
+          <li><a href="/services/strategy">Strategy</a></li>
+          <li><a href="/services/coaching">Coaching &amp; growth</a></li>
+          <li><a href="/services/local-seo">Local SEO</a></li>
+          <li><a href="/services/google-ads">Google Ads</a></li>
+          <li><a href="/services/websites">Websites &amp; web apps</a></li>
+          <li><a href="/services/ai-automation">AI &amp; automation</a></li>
+          <li><a href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a></li>
+          <li><a href="/services/analytics">GA4 &amp; analytics</a></li>
+          <li><a href="/services/google-ad-grants">Google Ad Grants</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Who we help</h4>
+        <ul>
+          <li><a href="/for/local-businesses">Local businesses</a></li>
+          <li><a href="/for/founders">Founders &amp; startups</a></li>
+          <li><a href="/for/nonprofits">Nonprofits</a></li>
+          <li><a href="/work">Client results</a></li>
+        </ul>
+        <h4 class="footer__h4-gap">Free tools</h4>
+        <ul>
+          <li><a href="/tools/checkup">The five-step check-up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Articles</h4>
+        <ul>
+          <li><a href="/articles/fractional-cmo-cost">Fractional CMO cost</a></li>
+          <li><a href="/articles/fractional-cmo-vs-marketing-agency">CMO vs. agency</a></li>
+          <li><a href="/articles/is-gohighlevel-worth-it">Is GoHighLevel worth it?</a></li>
+          <li><a href="/articles/ai-agents-for-small-business">AI agents, explained</a></li>
+          <li><a href="/articles/not-showing-up-on-google">Not showing up on Google</a></li>
+          <li><a href="/articles/small-business-marketing-budget">What marketing should cost</a></li>
+          <li><a href="/articles/nonprofit-google-ad-grant">The nonprofit Ad Grant</a></li>
+          <li><a href="/resources" class="tlink">All resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/method">Method</a></li>
+          <li><a href="/investment">Pricing</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__meta">
+      <span>© 2026 Carson Poore Consulting · Indianapolis, Indiana · carson@carsonpoore.com</span>
+      <span class="footer__towns">Serving Indianapolis, Carmel, Fishers, Zionsville, Noblesville, Westfield, Greenwood, Brownsburg, Avon, and all of central Indiana — technical and coaching work nationwide.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

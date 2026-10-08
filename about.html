@@ -3,34 +3,126 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>About — Carson Poore Consulting</title>
-<meta name="description" content="Meet Carson Poore Consulting. Central Indiana marketers helping founders build businesses worth talking about." />
-<meta property="og:title" content="About — Carson Poore Consulting" />
-<meta property="og:description" content="Marketing that reflects the real quality of what you've built." />
+<title>About Carson Poore Consulting | Indianapolis Growth Team</title>
+<meta name="description" content="Meet the Indianapolis team behind Carson Poore Consulting: four practices, eight clients at a time, prices on the site, and a habit of saying what we think." />
+<link rel="canonical" href="https://carsonpoore.com/about" />
+<meta property="og:title" content="About Carson Poore Consulting | Indianapolis Growth Team" />
+<meta property="og:description" content="Meet the Indianapolis team behind Carson Poore Consulting: four practices, eight clients at a time, prices on the site, and a habit of saying what we think." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://carsonpoore.com/about" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
-<link rel="icon" type="image/svg+xml" href="brand/cpc-mark-royalblue.svg" />
-<link rel="stylesheet" href="styles.css?v=20261004-1" />
-<link rel="stylesheet" href="motion-c.css?v=20261004-1" />
+<link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
+<link rel="stylesheet" href="/styles.css?v=20261008-1" />
+<link rel="stylesheet" href="/motion-c.css?v=20261008-1" />
+<script defer src="/site.js?v=20261008-1"></script>
+<style>
+  /* About — page-specific layout */
+  .about-more {
+    margin-top: clamp(56px, 8vw, 104px);
+    padding-top: clamp(40px, 6vw, 64px);
+    border-top: 1px solid var(--line-soft);
+  }
+  .about-more h2 { max-width: 14ch; margin-top: 18px; }
+  .about-more .about-card__copy a { color: var(--ink); }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://carsonpoore.com/#org",
+      "name": "Carson Poore Consulting",
+      "url": "https://carsonpoore.com/",
+      "logo": "https://carsonpoore.com/brand/cpc-mark-royalblue.svg",
+      "image": "https://carsonpoore.com/brand/carson-headshot.png",
+      "email": "carson@carsonpoore.com",
+      "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
+      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "areaServed": [
+        { "@type": "City", "name": "Indianapolis" },
+        { "@type": "State", "name": "Indiana" },
+        { "@type": "Country", "name": "United States" }
+      ],
+      "priceRange": "$1,200–$4,800/month",
+      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://carsonpoore.com/about#carson",
+      "name": "Carson Poore",
+      "jobTitle": "Founder",
+      "worksFor": { "@id": "https://carsonpoore.com/#org" },
+      "image": "https://carsonpoore.com/brand/carson-headshot.png",
+      "knowsAbout": ["Marketing strategy", "Local SEO", "Google Ads", "Marketing automation", "AI agents", "GoHighLevel", "GA4", "Fractional CMO services", "Nonprofit marketing"]
+    },
+    {
+      "@type": "AboutPage",
+      "@id": "https://carsonpoore.com/about#webpage",
+      "url": "https://carsonpoore.com/about",
+      "name": "About Carson Poore Consulting | Indianapolis Growth Team",
+      "description": "Meet the Indianapolis team behind Carson Poore Consulting: four practices, eight clients at a time, prices on the site, and a habit of saying what we think.",
+      "about": { "@id": "https://carsonpoore.com/#org" },
+      "mainEntity": { "@id": "https://carsonpoore.com/about#carson" },
+      "dateModified": "2026-10-08"
+    }
+  ]
+}
+</script>
 </head>
 <body class="page">
 
 <header class="nav">
   <div class="nav__inner">
-    <a href="index.html" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
+    <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
     <nav class="nav__links" aria-label="Primary">
-      <a href="index.html">Home</a><a href="services.html">Services</a><a href="method.html">Method</a>
-      <a href="investment.html">Investment</a>
-      <a href="about.html">About</a><a href="contact.html">Contact</a>
-      <a class="btn btn--primary nav__cta" href="contact.html">Book a call <span class="arr">→</span></a>
+      <div class="nav__item has-drop">
+        <a href="/services">Services</a>
+        <div class="nav__drop" aria-label="Services">
+          <a href="/services/marketing">Marketing</a>
+          <a href="/services/technical">Technical</a>
+          <a href="/services/strategy">Strategy</a>
+          <a href="/services/coaching">Coaching &amp; growth</a>
+          <a class="nav__drop-all" href="/services">All services</a>
+        </div>
+      </div>
+      <div class="nav__item has-drop">
+        <a href="/#who-we-help">Who we help</a>
+        <div class="nav__drop" aria-label="Who we help">
+          <a href="/for/local-businesses">Local businesses</a>
+          <a href="/for/founders">Founders &amp; startups</a>
+          <a href="/for/nonprofits">Nonprofits</a>
+        </div>
+      </div>
+      <a href="/method">Method</a>
+      <a href="/investment">Pricing</a>
+      <a href="/work">Work</a>
+      <a href="/resources">Resources</a>
+      <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
     </nav>
-    <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
-<div class="mobile-menu"><a href="index.html">Home</a><a href="services.html">Services</a><a href="method.html">Method</a>
-      <a href="investment.html">Investment</a>
-      <a href="about.html">About</a><a href="contact.html">Contact</a><a class="btn btn--primary" href="contact.html">Book a call <span class="arr">→</span></a></div>
+<div class="mobile-menu" aria-hidden="true">
+  <span class="mobile-menu__group">Services</span>
+  <a href="/services/marketing">Marketing</a>
+  <a href="/services/technical">Technical</a>
+  <a href="/services/strategy">Strategy</a>
+  <a href="/services/coaching">Coaching &amp; growth</a>
+  <span class="mobile-menu__group">Who we help</span>
+  <a href="/for/local-businesses">Local businesses</a>
+  <a href="/for/founders">Founders &amp; startups</a>
+  <a href="/for/nonprofits">Nonprofits</a>
+  <span class="mobile-menu__group">Explore</span>
+  <a href="/method">Method</a>
+  <a href="/investment">Pricing</a>
+  <a href="/work">Work</a>
+  <a href="/resources">Resources</a>
+  <a href="/about">About</a>
+  <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
+</div>
 
 <main>
 
@@ -41,10 +133,10 @@
         <div class="page-hero__copy">
           <span class="eyebrow reveal">About</span>
           <h1 class="reveal mt-md" data-delay="1">The team behind <em>CPC.</em></h1>
-          <p class="hero__sub reveal mt-md" data-delay="2">Central Indiana marketers in the corner of founders who care about what they&rsquo;ve built.</p>
+          <p class="hero__sub reveal mt-md" data-delay="2">We&rsquo;re a small Indianapolis team that plans the work and then builds it, across four practices: marketing, technical, strategy, and coaching.</p>
         </div>
         <div class="motion-frame motion-frame--hero page-hero__motion reveal" data-delay="2">
-          <video class="motion-loop" autoplay muted loop playsinline preload="none" poster="media/motion/central-indiana.jpg" width="960" height="800" aria-hidden="true"><source src="media/motion/central-indiana.webm" type="video/webm" /><source src="media/motion/central-indiana.mp4" type="video/mp4" /></video>
+          <video class="motion-loop" muted loop playsinline preload="none" poster="/media/motion/central-indiana.jpg" width="960" height="800" aria-hidden="true"><source src="/media/motion/central-indiana.webm" type="video/webm" /><source src="/media/motion/central-indiana.mp4" type="video/mp4" /></video>
         </div>
       </div>
     </div>
@@ -56,7 +148,7 @@
       <div class="about-card">
         <div class="reveal">
           <div class="portrait">
-            <img src="brand/carson-headshot.png" alt="Carson Poore, founder of Carson Poore Consulting" width="800" height="1000" />
+            <img src="/brand/carson-headshot.png" alt="Carson Poore, founder of Carson Poore Consulting" width="800" height="1000" />
           </div>
           <p class="label" style="margin-top: 14px;">Carson Poore · Founder · Indianapolis, IN</p>
         </div>
@@ -66,12 +158,24 @@
           <p class="reveal" data-delay="2">We work with you, not at you. We&rsquo;ll ask a lot of questions. We&rsquo;ll tell you what we really think, even when it isn&rsquo;t the easy answer. And we&rsquo;ll treat your business with the same care we&rsquo;d want for our own.</p>
         </div>
       </div>
+
+      <!-- WHAT WE ACTUALLY DO -->
+      <div class="about-card about-more">
+        <div class="reveal">
+          <span class="eyebrow">The work</span>
+          <h2>So what do we <em>actually</em> do?</h2>
+        </div>
+        <div class="about-card__copy">
+          <p class="reveal">More than the old &ldquo;marketing agency&rdquo; label let on. Marketing is still part of it. So is the technical work most marketing shops hand off: websites, AI automation, GoHighLevel, Google Ads, GA4. Strategy is a one-time $3,000 engagement that ends with a 90-day plan you could run without us, and coaching is us sitting in as your fractional CMO. Ongoing work runs $1,200, $2,400, or $4,800 a month, with a three-month minimum and then month to month. The full list lives on <a class="tlink" href="/services">our services page</a>, or start with <a class="tlink" href="/#who-we-help">who we help</a> if you&rsquo;d rather find yourself first.</p>
+          <p class="reveal" data-delay="1">Here&rsquo;s what we believe: most small businesses don&rsquo;t need more marketing. They need the marketing they already have to be finished. That&rsquo;s why we cap it at eight clients. The honest catch is that eight means we&rsquo;re sometimes full. When we are, we&rsquo;ll say so on the first call instead of squeezing you in.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- MISSION -->
   <section class="section section--stone c-roads">
-    <video class="motion-loop c-roads__bg" muted loop playsinline preload="none" poster="media/motion/c-mission-roads.png" data-webm="media/motion/c-mission-roads.webm" data-hevc="media/motion/c-mission-roads-hevc.mp4" width="1920" height="900" aria-hidden="true"></video>
+    <video class="motion-loop c-roads__bg" muted loop playsinline preload="none" poster="/media/motion/c-mission-roads.png" data-webm="/media/motion/c-mission-roads.webm" data-hevc="/media/motion/c-mission-roads-hevc.mp4" width="1920" height="900" aria-hidden="true"></video>
     <div class="wrap">
       <div class="sec-head">
         <div>
@@ -113,24 +217,26 @@
 
       <div class="values">
         <div class="value reveal">
-          <span class="value__name c-glyph-name"><video class="motion-loop c-glyph c-glyph--1" muted loop playsinline preload="none" poster="media/motion/c-values-glyphs.png" data-webm="media/motion/c-values-glyphs.webm" data-hevc="media/motion/c-values-glyphs-hevc.mp4" width="480" height="120" aria-hidden="true"></video>Build It Better</span>
+          <span class="value__name c-glyph-name"><video class="motion-loop c-glyph c-glyph--1" muted loop playsinline preload="none" poster="/media/motion/c-values-glyphs.png" data-webm="/media/motion/c-values-glyphs.webm" data-hevc="/media/motion/c-values-glyphs-hevc.mp4" width="480" height="120" aria-hidden="true"></video>Build It Better</span>
           <p>We are never satisfied with work that simply functions. There is always a sharper version of what we just made, and we go looking for it before anyone thinks to ask us. Getting comfortable is the only real failure available to us.</p>
         </div>
         <div class="value reveal" data-delay="1">
-          <span class="value__name c-glyph-name"><video class="motion-loop c-glyph c-glyph--2" muted loop playsinline preload="none" poster="media/motion/c-values-glyphs.png" data-webm="media/motion/c-values-glyphs.webm" data-hevc="media/motion/c-values-glyphs-hevc.mp4" width="480" height="120" aria-hidden="true"></video>Kind and Candid</span>
+          <span class="value__name c-glyph-name"><video class="motion-loop c-glyph c-glyph--2" muted loop playsinline preload="none" poster="/media/motion/c-values-glyphs.png" data-webm="/media/motion/c-values-glyphs.webm" data-hevc="/media/motion/c-values-glyphs-hevc.mp4" width="480" height="120" aria-hidden="true"></video>Kind and Candid</span>
           <p>We tell people the truth, and we do it with genuine care for the person hearing it. Directness without kindness is just ego wearing a business casual outfit, and kindness without directness is avoidance pretending to be manners. We hold ourselves to both at the same time.</p>
         </div>
         <div class="value reveal" data-delay="2">
-          <span class="value__name c-glyph-name"><video class="motion-loop c-glyph c-glyph--3" muted loop playsinline preload="none" poster="media/motion/c-values-glyphs.png" data-webm="media/motion/c-values-glyphs.webm" data-hevc="media/motion/c-values-glyphs-hevc.mp4" width="480" height="120" aria-hidden="true"></video>Nothing Half-Checked</span>
+          <span class="value__name c-glyph-name"><video class="motion-loop c-glyph c-glyph--3" muted loop playsinline preload="none" poster="/media/motion/c-values-glyphs.png" data-webm="/media/motion/c-values-glyphs.webm" data-hevc="/media/motion/c-values-glyphs-hevc.mp4" width="480" height="120" aria-hidden="true"></video>Nothing Half-Checked</span>
           <p>We finish what we start, all the way down to the details nobody notices. Thoroughness does not get abandoned because a deadline is close, and it is never treated as someone else&rsquo;s responsibility. If our name is attached to something, it has been looked at more than once.</p>
         </div>
         <div class="value reveal" data-delay="3">
-          <span class="value__name c-glyph-name"><video class="motion-loop c-glyph c-glyph--4" muted loop playsinline preload="none" poster="media/motion/c-values-glyphs.png" data-webm="media/motion/c-values-glyphs.webm" data-hevc="media/motion/c-values-glyphs-hevc.mp4" width="480" height="120" aria-hidden="true"></video>Founders Over Funnels</span>
+          <span class="value__name c-glyph-name"><video class="motion-loop c-glyph c-glyph--4" muted loop playsinline preload="none" poster="/media/motion/c-values-glyphs.png" data-webm="/media/motion/c-values-glyphs.webm" data-hevc="/media/motion/c-values-glyphs-hevc.mp4" width="480" height="120" aria-hidden="true"></video>Founders Over Funnels</span>
           <p>The person always matters more than the pipeline. We are here for the health of the entrepreneur we work with, not only the growth of the business they built, and when those two things pull in opposite directions we choose the person.</p>
         </div>
       </div>
 
       <p class="faith reveal">Our faith shapes how we work more than anything we&rsquo;d put on a marquee. It shows up as these values, in the day to day of the work, not as a label.</p>
+
+      <p class="updated mt-lg reveal" data-delay="1">Last updated: October 2026</p>
     </div>
   </section>
 
@@ -143,29 +249,83 @@
         <p>It starts with a 30-minute discovery call. A real conversation, no pitch.</p>
       </div>
       <div class="reveal" data-delay="1">
-        <a href="contact.html" class="btn btn--primary">Book a discovery call <span class="arr">→</span></a>
+        <a href="/contact" class="btn btn--primary">Book a discovery call <span class="arr">→</span></a>
       </div>
     </div>
   </section>
 
 </main>
 
-<footer class="footer">
+<footer class="footer footer--v2">
   <div class="wrap">
-    <div class="footer__grid">
-      <div>
-        <div class="footer__lockup"><img src="brand/cpc-lockup-white.svg" alt="Carson Poore Consulting" width="232" height="63" /></div>
-        <p class="footer__tag">Full-service marketing for central Indiana small businesses ready to be the obvious choice.</p>
-        <p>Indianapolis, Indiana<br/><a href="mailto:carson@carsonpoore.com" class="tlink">carson@carsonpoore.com</a></p>
+    <div class="footer__grid footer__grid--v2">
+      <div class="footer__brand">
+        <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
+        <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
       </div>
-      <div><h4>Explore</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="method.html">Method</a></li><li><a href="investment.html">Investment</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div><h4>Get started</h4><ul><li><a href="contact.html">Book a discovery call</a></li><li><a href="mailto:carson@carsonpoore.com">Email Carson</a></li><li><a href="work.html">Work</a></li></ul></div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/marketing">Marketing</a></li>
+          <li><a href="/services/technical">Technical</a></li>
+          <li><a href="/services/strategy">Strategy</a></li>
+          <li><a href="/services/coaching">Coaching &amp; growth</a></li>
+          <li><a href="/services/local-seo">Local SEO</a></li>
+          <li><a href="/services/google-ads">Google Ads</a></li>
+          <li><a href="/services/websites">Websites &amp; web apps</a></li>
+          <li><a href="/services/ai-automation">AI &amp; automation</a></li>
+          <li><a href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a></li>
+          <li><a href="/services/analytics">GA4 &amp; analytics</a></li>
+          <li><a href="/services/google-ad-grants">Google Ad Grants</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Who we help</h4>
+        <ul>
+          <li><a href="/for/local-businesses">Local businesses</a></li>
+          <li><a href="/for/founders">Founders &amp; startups</a></li>
+          <li><a href="/for/nonprofits">Nonprofits</a></li>
+          <li><a href="/work">Client results</a></li>
+        </ul>
+        <h4 class="footer__h4-gap">Free tools</h4>
+        <ul>
+          <li><a href="/tools/checkup">The five-step check-up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Articles</h4>
+        <ul>
+          <li><a href="/articles/fractional-cmo-cost">Fractional CMO cost</a></li>
+          <li><a href="/articles/fractional-cmo-vs-marketing-agency">CMO vs. agency</a></li>
+          <li><a href="/articles/is-gohighlevel-worth-it">Is GoHighLevel worth it?</a></li>
+          <li><a href="/articles/ai-agents-for-small-business">AI agents, explained</a></li>
+          <li><a href="/articles/not-showing-up-on-google">Not showing up on Google</a></li>
+          <li><a href="/articles/small-business-marketing-budget">What marketing should cost</a></li>
+          <li><a href="/articles/nonprofit-google-ad-grant">The nonprofit Ad Grant</a></li>
+          <li><a href="/resources" class="tlink">All resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/method">Method</a></li>
+          <li><a href="/investment">Pricing</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="footer__meta"><span>© 2026 Carson Poore Consulting</span><span>Indianapolis · Central Indiana</span></div>
+    <div class="footer__meta">
+      <span>© 2026 Carson Poore Consulting · Indianapolis, Indiana · carson@carsonpoore.com</span>
+      <span class="footer__towns">Serving Indianapolis, Carmel, Fishers, Zionsville, Noblesville, Westfield, Greenwood, Brownsburg, Avon, and all of central Indiana — technical and coaching work nationwide.</span>
+    </div>
   </div>
 </footer>
 
-<script src="site.js?v=20261004-1"></script>
-<script src="motion.js?v=20261003-1"></script>
 </body>
 </html>

@@ -3,37 +3,174 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Pricing · Carson Poore Consulting</title>
-<meta name="description" content="Published pricing for marketing retainers in Indianapolis. Three monthly tiers, one strategy engagement, projects quoted separately. No onboarding fees." />
-<meta property="og:title" content="Pricing · Carson Poore Consulting" />
-<meta property="og:description" content="Real numbers, right here. Three monthly tiers, one strategy engagement, projects quoted separately." />
+<title>Pricing: what the work costs · Carson Poore Consulting</title>
+<meta name="description" content="Published prices, because you shouldn't book a call to hear a number: $1,200, $2,400, or $4,800 a month, a $3,000 strategy engagement, a nonprofit rate." />
+<link rel="canonical" href="https://carsonpoore.com/investment" />
+<meta property="og:title" content="Pricing: what the work costs · Carson Poore Consulting" />
+<meta property="og:description" content="Published prices, because you shouldn't book a call to hear a number: $1,200, $2,400, or $4,800 a month, a $3,000 strategy engagement, a nonprofit rate." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://carsonpoore.com/investment" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
-<link rel="icon" type="image/svg+xml" href="brand/cpc-mark-royalblue.svg" />
-<link rel="stylesheet" href="styles.css?v=20261004-1" />
-<link rel="stylesheet" href="motion-b.css?v=20261004-1" />
+<link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
+<link rel="stylesheet" href="/styles.css?v=20261008-1" />
+<link rel="stylesheet" href="/motion-b.css?v=20261008-1" />
+<script defer src="/site.js?v=20261008-1"></script>
+<style>
+  /* Pricing page: page-specific layout */
+  .hero__pointer { font-size: 0.98rem; }
+  .page-hero .hero__pointer .tlink { color: #fff; }
+
+  .practice-home {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: clamp(28px, 5vw, 72px);
+    align-items: start;
+    border-top: 1px solid var(--line);
+    padding-top: clamp(32px, 5vw, 56px);
+  }
+  @media (max-width: 860px) { .practice-home { grid-template-columns: 1fr; } }
+  .practice-home h2 { max-width: 18ch; }
+  .practice-home__body p { color: var(--ink-2); line-height: 1.7; max-width: 60ch; }
+  .practice-home__body p + p { margin-top: 1.1em; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://carsonpoore.com/#org",
+      "name": "Carson Poore Consulting",
+      "url": "https://carsonpoore.com/",
+      "logo": "https://carsonpoore.com/brand/cpc-mark-royalblue.svg",
+      "image": "https://carsonpoore.com/brand/carson-headshot.png",
+      "email": "carson@carsonpoore.com",
+      "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
+      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "areaServed": [
+        { "@type": "City", "name": "Indianapolis" },
+        { "@type": "State", "name": "Indiana" },
+        { "@type": "Country", "name": "United States" }
+      ],
+      "priceRange": "$1,200–$4,800/month",
+      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://carsonpoore.com/investment#webpage",
+      "url": "https://carsonpoore.com/investment",
+      "name": "Pricing: what the work costs · Carson Poore Consulting",
+      "description": "Published prices, because you shouldn't book a call to hear a number: $1,200, $2,400, or $4,800 a month, a $3,000 strategy engagement, a nonprofit rate.",
+      "isPartOf": { "@id": "https://carsonpoore.com/#website" },
+      "about": { "@id": "https://carsonpoore.com/#org" },
+      "mainEntity": { "@id": "https://carsonpoore.com/investment#catalog" },
+      "dateModified": "2026-10-08"
+    },
+    {
+      "@type": "OfferCatalog",
+      "@id": "https://carsonpoore.com/investment#catalog",
+      "name": "Carson Poore Consulting pricing",
+      "url": "https://carsonpoore.com/investment",
+      "provider": { "@id": "https://carsonpoore.com/#org" },
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "@id": "https://carsonpoore.com/investment#lane",
+          "name": "Lane",
+          "description": "Monthly partnership, $1,200 /month. One channel, run properly: full strategy and positioning direction, one executed channel of your choice, a monthly strategy call, and a monthly performance report. Three-month minimum, then month to month. We take on eight retainer clients at a time.",
+          "price": "1200",
+          "priceCurrency": "USD",
+          "priceSpecification": { "@type": "UnitPriceSpecification", "price": "1200", "priceCurrency": "USD", "unitText": "MONTH" },
+          "seller": { "@id": "https://carsonpoore.com/#org" }
+        },
+        {
+          "@type": "Offer",
+          "@id": "https://carsonpoore.com/investment#system",
+          "name": "System",
+          "description": "Monthly partnership, $2,400 /month. Your marketing, running as one thing: everything in Lane, plus multi-channel execution, marketing systems and automation, twice-monthly strategy calls, and a quarterly strategy reset. Three-month minimum, then month to month. We take on eight retainer clients at a time.",
+          "price": "2400",
+          "priceCurrency": "USD",
+          "priceSpecification": { "@type": "UnitPriceSpecification", "price": "2400", "priceCurrency": "USD", "unitText": "MONTH" },
+          "seller": { "@id": "https://carsonpoore.com/#org" }
+        },
+        {
+          "@type": "Offer",
+          "@id": "https://carsonpoore.com/investment#partner",
+          "name": "Partner",
+          "description": "Monthly partnership, $4,800 /month. Full ownership of the marketing function: everything in System, plus dedicated team capacity, weekly access and priority turnaround, and project work at partner rates. Three-month minimum, then month to month. We take on eight retainer clients at a time.",
+          "price": "4800",
+          "priceCurrency": "USD",
+          "priceSpecification": { "@type": "UnitPriceSpecification", "price": "4800", "priceCurrency": "USD", "unitText": "MONTH" },
+          "seller": { "@id": "https://carsonpoore.com/#org" }
+        },
+        {
+          "@type": "Offer",
+          "@id": "https://carsonpoore.com/investment#strategy",
+          "name": "Strategy engagement",
+          "description": "Strategy engagement, $3,000 one time. A standalone engagement with no monthly commitment, so the three-month minimum does not apply: a defined best-fit customer, positioning and messaging, a structured and priced core offer, and a prioritized 90-day plan with a live walkthrough. Retainer work stays capped at eight clients at a time.",
+          "price": "3000",
+          "priceCurrency": "USD",
+          "url": "https://carsonpoore.com/services/strategy",
+          "seller": { "@id": "https://carsonpoore.com/#org" }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body class="page">
 
 <header class="nav">
   <div class="nav__inner">
-    <a href="index.html" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
+    <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
     <nav class="nav__links" aria-label="Primary">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="method.html">Method</a>
-      <a href="investment.html">Investment</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a class="btn btn--primary nav__cta" href="contact.html">Book a call <span class="arr">→</span></a>
+      <div class="nav__item has-drop">
+        <a href="/services">Services</a>
+        <div class="nav__drop" aria-label="Services">
+          <a href="/services/marketing">Marketing</a>
+          <a href="/services/technical">Technical</a>
+          <a href="/services/strategy">Strategy</a>
+          <a href="/services/coaching">Coaching &amp; growth</a>
+          <a class="nav__drop-all" href="/services">All services</a>
+        </div>
+      </div>
+      <div class="nav__item has-drop">
+        <a href="/#who-we-help">Who we help</a>
+        <div class="nav__drop" aria-label="Who we help">
+          <a href="/for/local-businesses">Local businesses</a>
+          <a href="/for/founders">Founders &amp; startups</a>
+          <a href="/for/nonprofits">Nonprofits</a>
+        </div>
+      </div>
+      <a href="/method">Method</a>
+      <a href="/investment">Pricing</a>
+      <a href="/work">Work</a>
+      <a href="/resources">Resources</a>
+      <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
     </nav>
-    <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
-<div class="mobile-menu">
-  <a href="index.html">Home</a><a href="services.html">Services</a><a href="method.html">Method</a><a href="investment.html">Investment</a><a href="about.html">About</a><a href="contact.html">Contact</a>
-  <a class="btn btn--primary" href="contact.html">Book a call <span class="arr">→</span></a>
+<div class="mobile-menu" aria-hidden="true">
+  <span class="mobile-menu__group">Services</span>
+  <a href="/services/marketing">Marketing</a>
+  <a href="/services/technical">Technical</a>
+  <a href="/services/strategy">Strategy</a>
+  <a href="/services/coaching">Coaching &amp; growth</a>
+  <span class="mobile-menu__group">Who we help</span>
+  <a href="/for/local-businesses">Local businesses</a>
+  <a href="/for/founders">Founders &amp; startups</a>
+  <a href="/for/nonprofits">Nonprofits</a>
+  <span class="mobile-menu__group">Explore</span>
+  <a href="/method">Method</a>
+  <a href="/investment">Pricing</a>
+  <a href="/work">Work</a>
+  <a href="/resources">Resources</a>
+  <a href="/about">About</a>
+  <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
 </div>
 
 <main>
@@ -46,9 +183,10 @@
           <span class="eyebrow reveal">Pricing</span>
           <h1 class="reveal mt-md" data-delay="1">Real numbers, <em>right here.</em></h1>
           <p class="hero__sub reveal mt-md" data-delay="2">Most agencies make you book a call just to find out if you can afford them. Not us. Here&rsquo;s everything: three monthly partnerships, a one-time strategy engagement, and project work quoted on its own.</p>
+          <p class="hero__pointer reveal mt-md" data-delay="3">Want a sanity check before you look at tiers? <a href="/tools/marketing-budget" class="tlink">Try the free budget calculator <span class="arr">→</span></a></p>
         </div>
         <div class="motion-frame motion-frame--hero page-hero__motion reveal" data-delay="2">
-          <video class="motion-loop" autoplay muted loop playsinline preload="none" poster="media/motion/tier-stack.jpg" width="960" height="800" aria-hidden="true"><source src="media/motion/tier-stack.webm" type="video/webm" /><source src="media/motion/tier-stack.mp4" type="video/mp4" /></video>
+          <video class="motion-loop" muted loop playsinline preload="none" poster="/media/motion/tier-stack.jpg" width="960" height="800" aria-hidden="true"><source src="/media/motion/tier-stack.webm" type="video/webm" /><source src="/media/motion/tier-stack.mp4" type="video/mp4" /></video>
         </div>
       </div>
     </div>
@@ -63,7 +201,7 @@
           <h2 class="reveal mt-md" data-delay="1">Pick how much of it you want <em>off your plate.</em></h2>
         </div>
         <p class="sec-head__intro reveal" data-delay="2">
-          Every tier includes the strategy. What changes is how much of the doing runs through us. We take on eight retainer clients at a time, because eight is the number we can be genuinely involved in.<video class="motion-loop b-loop b-eight-seats" muted loop playsinline preload="none" width="200" height="28" poster="media/motion/b-eight-seats.png" data-webm="media/motion/b-eight-seats.webm" data-hevc="media/motion/b-eight-seats-hevc.mp4" aria-hidden="true"></video>
+          Every tier includes the strategy. What changes is how much of the doing runs through us. We take on eight retainer clients at a time, because eight is the number we can be genuinely involved in.<video class="motion-loop b-loop b-eight-seats" muted loop playsinline preload="none" width="200" height="28" poster="/media/motion/b-eight-seats.png" data-webm="/media/motion/b-eight-seats.webm" data-hevc="/media/motion/b-eight-seats-hevc.mp4" aria-hidden="true"></video>
         </p>
       </div>
 
@@ -136,7 +274,7 @@
 
       <p class="tier-note reveal">Three-month minimum, because real marketing needs room to work. Month to month after that. No onboarding fee, no setup charge, no surprise line items.</p>
 
-      <video class="motion-loop b-loop b-retainer-cadence" muted loop playsinline preload="none" width="1920" height="240" poster="media/motion/b-retainer-cadence.png" data-webm="media/motion/b-retainer-cadence.webm" data-hevc="media/motion/b-retainer-cadence-hevc.mp4" aria-hidden="true"></video>
+      <video class="motion-loop b-loop b-retainer-cadence" muted loop playsinline preload="none" width="1920" height="240" poster="/media/motion/b-retainer-cadence.png" data-webm="/media/motion/b-retainer-cadence.webm" data-hevc="/media/motion/b-retainer-cadence-hevc.mp4" aria-hidden="true"></video>
 
       <!-- WHAT EVERY RETAINER INCLUDES -->
       <div class="every-tier reveal">
@@ -145,11 +283,27 @@
           <p class="every-tier__title">What every retainer includes.</p>
         </div>
         <ul class="every-tier__list">
-          <li>Strategic direction across everything you&rsquo;re doing, not just the parts we run.</li>
+          <li>Strategic direction across everything you&rsquo;re doing, including the parts we don&rsquo;t run.</li>
           <li>A monthly report that says what happened and what it means for you.</li>
           <li>One person to call about all of it.</li>
           <li>Straight answers, even when the answer is &ldquo;don&rsquo;t spend that money.&rdquo;</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHERE COACHING AND TECHNICAL WORK LIVE -->
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="practice-home">
+        <div>
+          <span class="eyebrow reveal">The other practices</span>
+          <h2 class="reveal mt-md" data-delay="1">Where coaching and technical work <em>live.</em></h2>
+        </div>
+        <div class="practice-home__body reveal" data-delay="2">
+          <p>If you want us as your fractional CMO or marketing advisor, that runs inside the same three tiers above. There&rsquo;s no separate advisory price. The tier you pick sets how much of our time and hands you get each month, and the advisory work comes with it. <a href="/services/coaching" class="tlink">How the coaching practice works</a></p>
+          <p>Technical builds land in one of two places. Ongoing work, like keeping automations running or managing an ad account, sits inside a tier. A one-off build, like a new website or a CRM setup, gets a written quote before anything starts. Some jobs could honestly go either way. When that happens, we&rsquo;ll tell you which we&rsquo;d pick and why. <a href="/services/technical" class="tlink">What the technical practice builds</a></p>
+        </div>
       </div>
     </div>
   </section>
@@ -201,7 +355,7 @@
         </li>
       </ol>
 
-      <p class="tier-note reveal" style="max-width: 60ch;">It stands on its own. Plenty of owners take the plan and run with it themselves, and that&rsquo;s a win too.</p>
+      <p class="tier-note reveal" style="max-width: 60ch;">It stands on its own. Plenty of owners take the plan and run with it themselves, and that&rsquo;s a win too. <a href="/services/strategy" class="tlink">What the strategy engagement covers</a></p>
     </div>
   </section>
 
@@ -244,8 +398,9 @@
   <!-- NONPROFIT NOTE -->
   <section class="wrap">
     <p class="nonprofit-note reveal">
-      Nonprofit or mission-driven business? We take on a few each quarter at a reduced rate. <a href="contact.html" class="tlink">Let&rsquo;s talk.</a>
+      Nonprofit or mission-driven business? We take on a few each quarter at a reduced rate. <a href="/contact" class="tlink">Let&rsquo;s talk.</a>
     </p>
+    <p class="updated mt-lg">Last updated: October 2026</p>
   </section>
 
   <!-- CLOSING CTA: full-bleed cobalt band -->
@@ -257,29 +412,83 @@
         <p>Thirty minutes, a real conversation about your business, and an honest answer about which tier fits. No pitch, no pressure.</p>
       </div>
       <div class="reveal" data-delay="1">
-        <a href="contact.html" class="btn btn--primary">Book a discovery call <span class="arr">→</span></a>
+        <a href="/contact" class="btn btn--primary">Book a discovery call <span class="arr">→</span></a>
       </div>
     </div>
   </section>
 
 </main>
 
-<footer class="footer">
+<footer class="footer footer--v2">
   <div class="wrap">
-    <div class="footer__grid">
-      <div>
-        <div class="footer__lockup"><img src="brand/cpc-lockup-white.svg" alt="Carson Poore Consulting" width="232" height="63" /></div>
-        <p class="footer__tag">Full-service marketing for central Indiana small businesses ready to be the obvious choice.</p>
-        <p>Indianapolis, Indiana<br/><a href="mailto:carson@carsonpoore.com" class="tlink">carson@carsonpoore.com</a></p>
+    <div class="footer__grid footer__grid--v2">
+      <div class="footer__brand">
+        <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
+        <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
       </div>
-      <div><h4>Explore</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="method.html">Method</a></li><li><a href="investment.html">Investment</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div><h4>Get started</h4><ul><li><a href="contact.html">Book a discovery call</a></li><li><a href="mailto:carson@carsonpoore.com">Email Carson</a></li><li><a href="work.html">Work</a></li></ul></div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/marketing">Marketing</a></li>
+          <li><a href="/services/technical">Technical</a></li>
+          <li><a href="/services/strategy">Strategy</a></li>
+          <li><a href="/services/coaching">Coaching &amp; growth</a></li>
+          <li><a href="/services/local-seo">Local SEO</a></li>
+          <li><a href="/services/google-ads">Google Ads</a></li>
+          <li><a href="/services/websites">Websites &amp; web apps</a></li>
+          <li><a href="/services/ai-automation">AI &amp; automation</a></li>
+          <li><a href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a></li>
+          <li><a href="/services/analytics">GA4 &amp; analytics</a></li>
+          <li><a href="/services/google-ad-grants">Google Ad Grants</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Who we help</h4>
+        <ul>
+          <li><a href="/for/local-businesses">Local businesses</a></li>
+          <li><a href="/for/founders">Founders &amp; startups</a></li>
+          <li><a href="/for/nonprofits">Nonprofits</a></li>
+          <li><a href="/work">Client results</a></li>
+        </ul>
+        <h4 class="footer__h4-gap">Free tools</h4>
+        <ul>
+          <li><a href="/tools/checkup">The five-step check-up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Articles</h4>
+        <ul>
+          <li><a href="/articles/fractional-cmo-cost">Fractional CMO cost</a></li>
+          <li><a href="/articles/fractional-cmo-vs-marketing-agency">CMO vs. agency</a></li>
+          <li><a href="/articles/is-gohighlevel-worth-it">Is GoHighLevel worth it?</a></li>
+          <li><a href="/articles/ai-agents-for-small-business">AI agents, explained</a></li>
+          <li><a href="/articles/not-showing-up-on-google">Not showing up on Google</a></li>
+          <li><a href="/articles/small-business-marketing-budget">What marketing should cost</a></li>
+          <li><a href="/articles/nonprofit-google-ad-grant">The nonprofit Ad Grant</a></li>
+          <li><a href="/resources" class="tlink">All resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/method">Method</a></li>
+          <li><a href="/investment">Pricing</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="footer__meta"><span>© 2026 Carson Poore Consulting</span><span>Indianapolis · Central Indiana</span></div>
+    <div class="footer__meta">
+      <span>© 2026 Carson Poore Consulting · Indianapolis, Indiana · carson@carsonpoore.com</span>
+      <span class="footer__towns">Serving Indianapolis, Carmel, Fishers, Zionsville, Noblesville, Westfield, Greenwood, Brownsburg, Avon, and all of central Indiana — technical and coaching work nationwide.</span>
+    </div>
   </div>
 </footer>
 
-<script src="site.js?v=20261004-1"></script>
-<script src="motion.js?v=20261003-1"></script>
 </body>
 </html>

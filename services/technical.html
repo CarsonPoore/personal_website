@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Technical Practice — AI, Websites, CRM | Carson Poore</title>
+<meta name="description" content="AI agents, automation, websites, GoHighLevel, Google Ads, and analytics — the builds most marketing people can't do, at small-business prices." />
+<link rel="canonical" href="https://carsonpoore.com/services/technical" />
+<meta property="og:title" content="Technical Practice — AI, Websites, CRM | Carson Poore" />
+<meta property="og:description" content="AI agents, automation, websites, GoHighLevel, Google Ads, and analytics — the builds most marketing people can't do, at small-business prices." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://carsonpoore.com/services/technical" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
+<link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
+<link rel="stylesheet" href="/styles.css?v=20261008-1" />
+<script defer src="/site.js?v=20261008-1"></script>
+<style>
+  /* Technical pathway — page-specific layout */
+  .vt-technical { view-transition-name: practice-technical; }
+
+  .connect-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: clamp(32px, 5vw, 72px);
+    align-items: center;
+  }
+  @media (max-width: 900px) { .connect-grid { grid-template-columns: 1fr; } }
+  .connect-grid .motion-frame { max-width: 480px; justify-self: end; }
+  @media (max-width: 900px) { .connect-grid .motion-frame { justify-self: start; } }
+
+  .duo-strip {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(24px, 4vw, 56px);
+    margin-top: clamp(32px, 5vw, 56px);
+  }
+  @media (max-width: 860px) { .duo-strip { grid-template-columns: 1fr; } }
+  .duo-card {
+    border-left: 3px solid var(--line);
+    padding-left: clamp(16px, 2vw, 24px);
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .duo-card h3 { font-size: 1.2rem; font-weight: 800; letter-spacing: -0.01em; }
+  .duo-card p { color: var(--ink-2); line-height: 1.65; }
+  .duo-card .tlink { margin-top: auto; align-self: flex-start; font-size: 0.92rem; }
+
+  .proof-note { border: 1px solid var(--line); padding: clamp(24px, 4vw, 44px); }
+  .proof-note p { max-width: 62ch; }
+
+  .price-fit .stat-row { margin-top: clamp(28px, 4vw, 44px); }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://carsonpoore.com/#org",
+      "name": "Carson Poore Consulting",
+      "url": "https://carsonpoore.com/",
+      "logo": "https://carsonpoore.com/brand/cpc-mark-royalblue.svg",
+      "image": "https://carsonpoore.com/brand/carson-headshot.png",
+      "email": "carson@carsonpoore.com",
+      "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
+      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "areaServed": [
+        { "@type": "City", "name": "Indianapolis" },
+        { "@type": "State", "name": "Indiana" },
+        { "@type": "Country", "name": "United States" }
+      ],
+      "priceRange": "$1,200–$4,800/month",
+      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carsonpoore.com/services/technical#service",
+      "name": "Technical builds and marketing automation",
+      "serviceType": "Marketing automation consulting",
+      "description": "AI agents and automation, websites and web apps, GoHighLevel and CRM setup, Google Ads, and GA4 analytics for small businesses and founders — human-approved and priced for small budgets, nationwide.",
+      "provider": { "@id": "https://carsonpoore.com/#org" },
+      "areaServed": [
+        { "@type": "City", "name": "Indianapolis" },
+        { "@type": "State", "name": "Indiana" },
+        { "@type": "Country", "name": "United States" }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carsonpoore.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://carsonpoore.com/services" },
+        { "@type": "ListItem", "position": 3, "name": "Technical" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does a marketing automation consultant do?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Connects the tools a business already uses (CRM, calendar, phones, email, website) so leads get followed up automatically and nobody retypes a name they already have. We also build the missing pieces: AI agents for inbox triage and scheduling, missed-call text-back, review requests. Every automated message is approved by a person before it sends." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with businesses outside Indianapolis?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Marketing and local SEO are Indianapolis-area work, but the technical practice runs nationwide. CRM setups, websites, automations, and analytics all happen over a screen share, and most technical clients never need us in the room." }
+        },
+        {
+          "@type": "Question",
+          "name": "Will AI send messages to my customers without me seeing them?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. That's the rule the whole practice is built on: a person approves anything a customer will see before it goes out. Automation does the drafting and the remembering. People do the sending." }
+        },
+        {
+          "@type": "Question",
+          "name": "What does technical work cost?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Ongoing work runs on the same published retainers as everything we do: $1,200, $2,400, or $4,800 a month, with a three-month minimum and the whole consultancy capped at eight clients. One-off builds get a fixed written quote before work starts. Nonprofits get the reduced rate listed on the pricing page." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do we have to use GoHighLevel?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. When your current stack works, we build on it. We recommend GoHighLevel when a business is paying for five or more tools that don't talk to each other, because consolidating usually costs less and breaks less. If what you have is fine, we'll say so." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="page">
+
+<header class="nav">
+  <div class="nav__inner">
+    <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
+    <nav class="nav__links" aria-label="Primary">
+      <div class="nav__item has-drop">
+        <a href="/services">Services</a>
+        <div class="nav__drop" aria-label="Services">
+          <a href="/services/marketing">Marketing</a>
+          <a href="/services/technical">Technical</a>
+          <a href="/services/strategy">Strategy</a>
+          <a href="/services/coaching">Coaching &amp; growth</a>
+          <a class="nav__drop-all" href="/services">All services</a>
+        </div>
+      </div>
+      <div class="nav__item has-drop">
+        <a href="/#who-we-help">Who we help</a>
+        <div class="nav__drop" aria-label="Who we help">
+          <a href="/for/local-businesses">Local businesses</a>
+          <a href="/for/founders">Founders &amp; startups</a>
+          <a href="/for/nonprofits">Nonprofits</a>
+        </div>
+      </div>
+      <a href="/method">Method</a>
+      <a href="/investment">Pricing</a>
+      <a href="/work">Work</a>
+      <a href="/resources">Resources</a>
+      <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
+    </nav>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" aria-hidden="true">
+  <span class="mobile-menu__group">Services</span>
+  <a href="/services/marketing">Marketing</a>
+  <a href="/services/technical">Technical</a>
+  <a href="/services/strategy">Strategy</a>
+  <a href="/services/coaching">Coaching &amp; growth</a>
+  <span class="mobile-menu__group">Who we help</span>
+  <a href="/for/local-businesses">Local businesses</a>
+  <a href="/for/founders">Founders &amp; startups</a>
+  <a href="/for/nonprofits">Nonprofits</a>
+  <span class="mobile-menu__group">Explore</span>
+  <a href="/method">Method</a>
+  <a href="/investment">Pricing</a>
+  <a href="/work">Work</a>
+  <a href="/resources">Resources</a>
+  <a href="/about">About</a>
+  <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero page-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/services">Services</a></li>
+          <li aria-current="page">Technical</li>
+        </ol>
+      </nav>
+      <div class="page-hero__grid">
+        <div class="page-hero__copy">
+          <span class="eyebrow reveal">Technical practice</span>
+          <h1 class="vt-technical reveal mt-md" data-delay="1">The builds most marketing shops <em>can&rsquo;t do</em>.</h1>
+          <p class="hero__sub reveal mt-md" data-delay="2">AI agents and automation, websites and web apps, GoHighLevel, Google Ads, GA4. Built by the same team that writes your plan, approved by a human before anything sends, and priced for small businesses anywhere in the country.</p>
+          <div class="row-cta mt-lg reveal" data-delay="3">
+            <a class="btn btn--primary" href="/tools/ai-opportunity-finder">See what to automate first <span class="arr">→</span></a>
+            <a class="btn btn--ghost-light" href="/contact">Book a free call</a>
+          </div>
+        </div>
+        <div class="motion-frame motion-frame--hero page-hero__motion reveal" data-delay="2">
+          <video class="motion-loop" muted loop playsinline preload="none" poster="/media/motion/tactics-to-system.jpg" width="1120" height="700" aria-hidden="true"><source src="/media/motion/tactics-to-system.webm" type="video/webm" /><source src="/media/motion/tactics-to-system.mp4" type="video/mp4" /></video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY THIS PRACTICE EXISTS -->
+  <section class="section">
+    <div class="wrap wrap--narrow">
+      <div class="sec-head">
+        <span class="eyebrow reveal">Why this practice exists</span>
+        <h2 class="reveal" data-delay="1">Eleven tabs, none of them talking</h2>
+      </div>
+      <div class="mt-lg">
+        <p class="reveal">Here&rsquo;s the owner we meet most weeks. The booking tool doesn&rsquo;t talk to the invoicing tool. The customer list lives in three places and none of them agree. A lead comes in at 4pm Friday and gets a reply Tuesday, if the sticky note survives the weekend. Nothing is broken, exactly. It&rsquo;s all just separate.</p>
+        <p class="mt-md reveal">Founders arrive from the other direction. You&rsquo;d rather build the product than the ops, and you want one person doing the work of three. The honest route there is plumbing: follow-up that runs itself and numbers that are right the first time.</p>
+        <p class="mt-md reveal">That&rsquo;s this practice. If you&rsquo;ve been searching for a marketing automation consultant, you&rsquo;re in the right place: we connect the tools you already own, build whatever&rsquo;s missing, and keep a person in charge of anything a customer will ever see.</p>
+        <p class="mt-md reveal">And it travels. Marketing and local SEO are Indianapolis work; the technical practice runs nationwide, over a screen share. A CRM doesn&rsquo;t care what state you&rsquo;re in.</p>
+        <p class="mt-md reveal">One opinion before the list below. We think most small businesses buy new software about a year before they need it. The real problem is usually the handoff between the tools they already pay for, so we check that first. It&rsquo;s cheaper, and it&rsquo;s often enough.</p>
+        <p class="pull mt-xl reveal">We build what the plan needs, <em>not what&rsquo;s shiny</em>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE FIVE BUILDS -->
+  <section class="section section--stone">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow reveal">The work</span>
+        <h2 class="reveal" data-delay="1">Five things we build</h2>
+        <p class="sec-head__intro reveal" data-delay="2">Each one has its own page with prices, timelines, and the cases where you shouldn&rsquo;t buy it. Start wherever it hurts.</p>
+      </div>
+      <div class="svc-list mt-xl">
+        <article class="svc reveal">
+          <span class="svc__idx">01 / Technical</span>
+          <h3 class="svc__title">AI agents &amp; automation</h3>
+          <p class="svc__body">Inbox triage, lead follow-up, scheduling, review requests. We start with one task you already do the same way every day, map it, then automate it, with a person approving every message before it goes out. <a class="tlink" href="/services/ai-automation">How we build AI for small businesses <span aria-hidden="true">→</span></a></p>
+        </article>
+        <article class="svc reveal">
+          <span class="svc__idx">02 / Technical</span>
+          <h3 class="svc__title">GoHighLevel &amp; CRM</h3>
+          <p class="svc__body">Everything starts blank in GoHighLevel. That&rsquo;s why the accounts we inherit usually sit half-used. We set up the pipelines, missed-call text-back, appointment reminders, and review requests so the system runs the follow-up while your team runs the jobs. <a class="tlink" href="/services/crm-gohighlevel">What a working CRM setup looks like <span aria-hidden="true">→</span></a></p>
+        </article>
+        <article class="svc reveal">
+          <span class="svc__idx">03 / Technical</span>
+          <h3 class="svc__title">Websites &amp; web apps</h3>
+          <p class="svc__body">Fast pages that say what you do and get the phone to ring, plus small web apps where off-the-shelf won&rsquo;t bend far enough. The domain, the hosting, and every file are registered to you from day one. <a class="tlink" href="/services/websites">How we build websites <span aria-hidden="true">→</span></a></p>
+        </article>
+        <article class="svc reveal">
+          <span class="svc__idx">04 / Technical</span>
+          <h3 class="svc__title">Google Ads</h3>
+          <p class="svc__body">Paid search with conversion tracking installed before the first dollar spends. The message comes from our marketing practice; the account lives here, run by the people who built your landing page. <a class="tlink" href="/services/google-ads">How we run Google Ads <span aria-hidden="true">→</span></a></p>
+        </article>
+        <article class="svc reveal">
+          <span class="svc__idx">05 / Technical</span>
+          <h3 class="svc__title">GA4 &amp; analytics</h3>
+          <p class="svc__body">Tracking set up so the numbers mean something, and a one-page monthly report an owner can read without a glossary. If a number is uncertain, we&rsquo;d rather show you a blank than a guess. <a class="tlink" href="/services/analytics">How we fix analytics <span aria-hidden="true">→</span></a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- HUMAN IN THE LOOP -->
+  <section class="section">
+    <div class="wrap">
+      <div class="connect-grid">
+        <div>
+          <span class="eyebrow reveal">The honest part</span>
+          <h2 class="reveal mt-sm" data-delay="1">A human approves every send</h2>
+          <p class="mt-md reveal" data-delay="2">We&rsquo;ll say the quiet part first: plenty of small-business AI projects fail, and the ones we&rsquo;ve seen share a pattern. Someone automated a process nobody had mapped, then let it talk to customers unsupervised.</p>
+          <p class="mt-md reveal" data-delay="2">So we run it differently. One task first. Mapped before it&rsquo;s built. And nothing reaches a customer without a person approving the send, not a text, not a review request. Slower on day one. Much better by month three.</p>
+          <p class="mt-md reveal" data-delay="2">The other difference is where the builds come from. The plan comes first, whether that&rsquo;s the <a class="tlink" href="/services/strategy">$3,000 strategy engagement</a> or the five steps inside a retainer, and this practice builds what the plan calls for. If the shiny tool isn&rsquo;t on the plan, we don&rsquo;t buy it. Neither should you.</p>
+        </div>
+        <div class="motion-frame motion-frame--light reveal" data-delay="2">
+          <video class="motion-loop" muted loop playsinline preload="none" poster="/media/motion/one-roof.jpg" width="960" height="800" aria-hidden="true"><source src="/media/motion/one-roof.webm" type="video/webm" /><source src="/media/motion/one-roof.mp4" type="video/mp4" /></video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO THIS IS FOR -->
+  <section class="section section--stone">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow reveal">Who buys this</span>
+        <h2 class="reveal" data-delay="1">Two kinds of people land on this page</h2>
+      </div>
+      <div class="duo-strip">
+        <div class="duo-card reveal">
+          <h3>Owners drowning in disconnected tools</h3>
+          <p>For a plumber in Greenwood or a salon in Fishers, the win is speed to lead: a missed call gets a text back in seconds, and every call, text, and form is answered in minutes. Jobs stop slipping through the Friday-afternoon crack. One recovered job covers a good part of a month.</p>
+          <a class="tlink" href="/for/local-businesses">How we work with local businesses <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="duo-card reveal" data-delay="1">
+          <h3>Founders who want time back</h3>
+          <p>You&rsquo;re the bottleneck and you know it. We build the ops that stop that: lead qualification, outreach follow-up, onboarding that runs without you, analytics you can trust in a board update. Your strategist and your builder are the same team, which is rarer than it should be.</p>
+          <a class="tlink" href="/for/founders">How we work with founders <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF OF CRAFT -->
+  <section class="section section--tight">
+    <div class="wrap wrap--narrow">
+      <div class="proof-note reveal">
+        <span class="eyebrow">Proof you can click</span>
+        <h2 class="mt-sm">The free tools on this site are samples of this practice</h2>
+        <p class="mt-md">The <a class="tlink" href="/tools/ai-opportunity-finder">AI opportunity finder</a> is a working build: pick your business type, check the tasks you still do by hand, and it names your best first automation. We built it. We build things like it for clients. No email wall, so try it before you ever talk to us.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING FIT -->
+  <section class="section price-fit">
+    <div class="wrap wrap--narrow">
+      <div class="sec-head">
+        <span class="eyebrow reveal">Investment</span>
+        <h2 class="reveal" data-delay="1">Projects or retainers, same numbers</h2>
+        <p class="sec-head__intro reveal" data-delay="2">Ongoing technical work runs on the same retainers as every practice here: $1,200, $2,400, or $4,800 a month, published with what each month includes. A one-off build, such as a website or a CRM setup, gets a fixed quote in writing before any work starts. Nonprofits get the reduced rate.</p>
+      </div>
+      <div class="stat-row reveal" data-delay="2">
+        <div><div class="stat__num">$1,200&ndash;$4,800</div><div class="stat__lbl">A month, on the pricing page</div></div>
+        <div><div class="stat__num">3 months</div><div class="stat__lbl">Retainer minimum, then monthly</div></div>
+        <div><div class="stat__num">8</div><div class="stat__lbl">Clients across all four practices</div></div>
+      </div>
+      <div class="row-cta mt-xl reveal" data-delay="3">
+        <a class="btn btn--primary" href="/investment">Read the full pricing page <span class="arr">→</span></a>
+        <a class="tlink" href="/services">See all four practices <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--stone">
+    <div class="wrap wrap--narrow">
+      <div class="sec-head">
+        <span class="eyebrow reveal">Fair questions</span>
+        <h2 class="reveal" data-delay="1">What people ask before they buy builds</h2>
+      </div>
+      <div class="faq mt-xl reveal" data-delay="2">
+        <details>
+          <summary>What does a marketing automation consultant do?</summary>
+          <p>Connects the tools a business already uses (CRM, calendar, phones, email, website) so leads get followed up automatically and nobody retypes a name they already have. We also build the missing pieces: AI agents for inbox triage and scheduling, missed-call text-back, review requests. Every automated message is approved by a person before it sends.</p>
+        </details>
+        <details>
+          <summary>Do you work with businesses outside Indianapolis?</summary>
+          <p>Yes. Marketing and local SEO are Indianapolis-area work, but the technical practice runs nationwide. CRM setups, websites, automations, and analytics all happen over a screen share, and most technical clients never need us in the room.</p>
+        </details>
+        <details>
+          <summary>Will AI send messages to my customers without me seeing them?</summary>
+          <p>No. That&rsquo;s the rule the whole practice is built on: a person approves anything a customer will see before it goes out. Automation does the drafting and the remembering. People do the sending.</p>
+        </details>
+        <details>
+          <summary>What does technical work cost?</summary>
+          <p>Ongoing work runs on the same published retainers as everything we do: $1,200, $2,400, or $4,800 a month, with a three-month minimum and the whole consultancy capped at eight clients. One-off builds get a fixed written quote before work starts. Nonprofits get the reduced rate listed on the pricing page.</p>
+        </details>
+        <details>
+          <summary>Do we have to use GoHighLevel?</summary>
+          <p>No. When your current stack works, we build on it. We recommend GoHighLevel when a business is paying for five or more tools that don&rsquo;t talk to each other, because consolidating usually costs less and breaks less. If what you have is fine, we&rsquo;ll say so.</p>
+        </details>
+      </div>
+      <p class="updated mt-lg">Last updated: October 2026</p>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="closing">
+    <div class="closing__inner">
+      <div class="reveal">
+        <span class="eyebrow">The next step</span>
+        <h2>Bring us the part held together with <em>duct tape</em>.</h2>
+        <p>A free 30-minute call, from anywhere. Tell us which tool you&rsquo;re fighting and we&rsquo;ll tell you whether to connect it or stop paying for it. If the fix is an afternoon of your own time, we&rsquo;ll just explain how.</p>
+      </div>
+      <div class="reveal" data-delay="1">
+        <a href="/contact" class="btn btn--primary">Book a free call <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer footer--v2">
+  <div class="wrap">
+    <div class="footer__grid footer__grid--v2">
+      <div class="footer__brand">
+        <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
+        <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/marketing">Marketing</a></li>
+          <li><a href="/services/technical">Technical</a></li>
+          <li><a href="/services/strategy">Strategy</a></li>
+          <li><a href="/services/coaching">Coaching &amp; growth</a></li>
+          <li><a href="/services/local-seo">Local SEO</a></li>
+          <li><a href="/services/google-ads">Google Ads</a></li>
+          <li><a href="/services/websites">Websites &amp; web apps</a></li>
+          <li><a href="/services/ai-automation">AI &amp; automation</a></li>
+          <li><a href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a></li>
+          <li><a href="/services/analytics">GA4 &amp; analytics</a></li>
+          <li><a href="/services/google-ad-grants">Google Ad Grants</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Who we help</h4>
+        <ul>
+          <li><a href="/for/local-businesses">Local businesses</a></li>
+          <li><a href="/for/founders">Founders &amp; startups</a></li>
+          <li><a href="/for/nonprofits">Nonprofits</a></li>
+          <li><a href="/work">Client results</a></li>
+        </ul>
+        <h4 class="footer__h4-gap">Free tools</h4>
+        <ul>
+          <li><a href="/tools/checkup">The five-step check-up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Articles</h4>
+        <ul>
+          <li><a href="/articles/fractional-cmo-cost">Fractional CMO cost</a></li>
+          <li><a href="/articles/fractional-cmo-vs-marketing-agency">CMO vs. agency</a></li>
+          <li><a href="/articles/is-gohighlevel-worth-it">Is GoHighLevel worth it?</a></li>
+          <li><a href="/articles/ai-agents-for-small-business">AI agents, explained</a></li>
+          <li><a href="/articles/not-showing-up-on-google">Not showing up on Google</a></li>
+          <li><a href="/articles/small-business-marketing-budget">What marketing should cost</a></li>
+          <li><a href="/articles/nonprofit-google-ad-grant">The nonprofit Ad Grant</a></li>
+          <li><a href="/resources" class="tlink">All resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/method">Method</a></li>
+          <li><a href="/investment">Pricing</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__meta">
+      <span>© 2026 Carson Poore Consulting · Indianapolis, Indiana · carson@carsonpoore.com</span>
+      <span class="footer__towns">Serving Indianapolis, Carmel, Fishers, Zionsville, Noblesville, Westfield, Greenwood, Brownsburg, Avon, and all of central Indiana — technical and coaching work nationwide.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

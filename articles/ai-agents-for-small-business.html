@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>How to use AI agents in a small business (one task first)</title>
+<meta name="description" content="Start with one task you do the same way every day, and keep a person approving what goes out. Five jobs AI agents handle well, and what each takes to set up." />
+<link rel="canonical" href="https://carsonpoore.com/articles/ai-agents-for-small-business" />
+<meta property="og:title" content="How to use AI agents in a small business (one task first)" />
+<meta property="og:description" content="Start with one task you do the same way every day, and keep a person approving what goes out. Five jobs AI agents handle well, and what each takes to set up." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://carsonpoore.com/articles/ai-agents-for-small-business" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
+<link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
+<link rel="stylesheet" href="/styles.css?v=20261008-1" />
+<script defer src="/site.js?v=20261008-1"></script>
+<style>
+  /* Article: AI agents in a small business. Page-specific layout on top of shared .article styles */
+  .article .byline { margin: 0 0 26px; }
+  .article .answer strong { color: var(--ink); font-weight: 800; }
+  .article .faq { margin-top: 10px; }
+  .article h3 { max-width: 30ch; }
+  .setup {
+    margin: 18px 0 8px; padding: 14px 0 0;
+    border-top: 1px solid var(--line);
+  }
+  .setup__label {
+    display: block; margin-bottom: 6px;
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--cobalt);
+  }
+  .setup p { margin: 0; }
+  .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 24px 0 0; }
+  .table-scroll table { margin: 0; min-width: 620px; }
+  .next-reads { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 10px; }
+  .next-reads li { margin: 0; padding: 0; }
+  .next-reads a { font-weight: 600; }
+  .next-reads .next-reads__kind {
+    display: inline-block; min-width: 64px; margin-right: 10px;
+    font-size: 0.66rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--muted);
+  }
+  .article .updated { margin-top: clamp(40px, 6vw, 60px); }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://carsonpoore.com/#org",
+      "name": "Carson Poore Consulting",
+      "url": "https://carsonpoore.com/",
+      "logo": "https://carsonpoore.com/brand/cpc-mark-royalblue.svg",
+      "image": "https://carsonpoore.com/brand/carson-headshot.png",
+      "email": "carson@carsonpoore.com",
+      "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
+      "address": { "@type": "PostalAddress", "addressLocality": "Indianapolis", "addressRegion": "IN", "addressCountry": "US" },
+      "areaServed": [
+        { "@type": "City", "name": "Indianapolis" },
+        { "@type": "State", "name": "Indiana" },
+        { "@type": "Country", "name": "United States" }
+      ],
+      "priceRange": "$1,200–$4,800/month",
+      "founder": { "@id": "https://carsonpoore.com/about#carson" }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://carsonpoore.com/articles/ai-agents-for-small-business#article",
+      "headline": "How to use AI agents in a small business",
+      "description": "Start with one task you do the same way every day, and keep a person approving what goes out. Five jobs AI agents handle well, and what each takes to set up.",
+      "author": { "@id": "https://carsonpoore.com/about#carson" },
+      "publisher": { "@id": "https://carsonpoore.com/#org" },
+      "datePublished": "2026-10-08",
+      "dateModified": "2026-10-08",
+      "mainEntityOfPage": "https://carsonpoore.com/articles/ai-agents-for-small-business"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need to be technical to use AI agents?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. You need to know how you do the task today, step by step, and be willing to approve drafts from your phone. The wiring is the technical part, and it’s the piece you can hand to someone else."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it safe to let an AI agent text my customers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It’s safe when a person approves what goes out, which is how we think every small business should start. Keep customer data in tools you already trust, give the agent access to only what the task needs, and never paste sensitive records into a free chatbot."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What’s the difference between an AI agent and a chatbot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A chatbot waits for someone to type to it. An agent works in the background: it notices a new form, a missed call, or a finished job, and does or drafts the next step. Some agents chat. Most of the useful ones in a small business never talk to a customer directly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How soon will I know if an AI agent is working?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you picked a task that happens every day, within a few weeks. You’ll be approving drafts instead of writing replies, and you’ll feel it. If you can’t tell after a month, the task was probably the wrong pick. Swap it for a better one before you add a second."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a nonprofit use AI agents the same way?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, and plenty already are. Bitcot’s 2025 nonprofit tech trends report found 58% of nonprofits implementing AI, up from 44% the year before, mostly for donor management and admin work. Donor thank-yous and volunteer intake make good first tasks. Our nonprofit rate applies to this work too."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://carsonpoore.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://carsonpoore.com/resources" },
+        { "@type": "ListItem", "position": 3, "name": "AI agents in a small business", "item": "https://carsonpoore.com/articles/ai-agents-for-small-business" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="page">
+
+<header class="nav">
+  <div class="nav__inner">
+    <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
+    <nav class="nav__links" aria-label="Primary">
+      <div class="nav__item has-drop">
+        <a href="/services">Services</a>
+        <div class="nav__drop" aria-label="Services">
+          <a href="/services/marketing">Marketing</a>
+          <a href="/services/technical">Technical</a>
+          <a href="/services/strategy">Strategy</a>
+          <a href="/services/coaching">Coaching &amp; growth</a>
+          <a class="nav__drop-all" href="/services">All services</a>
+        </div>
+      </div>
+      <div class="nav__item has-drop">
+        <a href="/#who-we-help">Who we help</a>
+        <div class="nav__drop" aria-label="Who we help">
+          <a href="/for/local-businesses">Local businesses</a>
+          <a href="/for/founders">Founders &amp; startups</a>
+          <a href="/for/nonprofits">Nonprofits</a>
+        </div>
+      </div>
+      <a href="/method">Method</a>
+      <a href="/investment">Pricing</a>
+      <a href="/work">Work</a>
+      <a href="/resources">Resources</a>
+      <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
+    </nav>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" aria-hidden="true">
+  <span class="mobile-menu__group">Services</span>
+  <a href="/services/marketing">Marketing</a>
+  <a href="/services/technical">Technical</a>
+  <a href="/services/strategy">Strategy</a>
+  <a href="/services/coaching">Coaching &amp; growth</a>
+  <span class="mobile-menu__group">Who we help</span>
+  <a href="/for/local-businesses">Local businesses</a>
+  <a href="/for/founders">Founders &amp; startups</a>
+  <a href="/for/nonprofits">Nonprofits</a>
+  <span class="mobile-menu__group">Explore</span>
+  <a href="/method">Method</a>
+  <a href="/investment">Pricing</a>
+  <a href="/work">Work</a>
+  <a href="/resources">Resources</a>
+  <a href="/about">About</a>
+  <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
+</div>
+
+<main>
+
+  <!-- ARTICLE HERO -->
+  <section class="hero page-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li aria-current="page">AI agents in a small business</li>
+        </ol>
+      </nav>
+      <div class="page-hero__grid">
+        <div class="page-hero__copy">
+          <span class="eyebrow reveal">Articles</span>
+          <h1 class="reveal mt-md" data-delay="1">How to use AI agents in a <em>small</em> business</h1>
+          <p class="hero__sub reveal mt-md" data-delay="2">One task first, a person on final approval, and the five jobs where agents earn their keep. Plus the part most AI pitches leave out.</p>
+        </div>
+        <div class="motion-frame motion-frame--hero page-hero__motion reveal" data-delay="2">
+          <video class="motion-loop" autoplay muted loop playsinline preload="none" poster="/media/motion/tactics-to-system.jpg" width="1120" height="700" aria-hidden="true"><source src="/media/motion/tactics-to-system.webm" type="video/webm" /><source src="/media/motion/tactics-to-system.mp4" type="video/mp4" /></video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <section class="section">
+    <div class="wrap">
+      <article class="article">
+
+        <div class="byline reveal">
+          <img src="/brand/carson-headshot.png" alt="Carson Poore" width="34" height="34" />
+          <span>By <a href="/about">Carson Poore</a></span>
+          <span class="updated">Last updated: October 2026</span>
+        </div>
+
+        <p class="answer reveal" data-delay="1"><strong>Start with one task you already do the same way every day</strong>, like replying to new web leads, and have an AI agent draft or handle it inside tools you already use. <strong>Keep a person approving anything a customer will read.</strong> Let it run a few weeks. If it holds up, pick the next task. That&rsquo;s the method. Everything below is what it takes to do it well.</p>
+
+        <p>Most advice on this question stops at a list of apps. This page covers the five jobs agents handle reliably, what each takes to set up, and the caution that rarely makes the sales deck.</p>
+
+        <h2>What is an AI agent, in small-business terms?</h2>
+
+        <p>An AI agent is software that watches for something to come in, like a form or a finished job, then decides what should happen next and does it or drafts it for you. Plain automation follows a fixed script. If this, then that. An agent can read the message and write a reply that fits.</p>
+
+        <p>In practice the line blurs. Plenty of what gets sold as an &ldquo;agent&rdquo; is ordinary automation with a language model handling one step. That&rsquo;s fine. The label matters less than the task getting done right.</p>
+
+        <h2>Why start with one task instead of a plan for everything?</h2>
+
+        <p>Because most of the setup is figuring out how you actually do the thing. Which leads get a call and which get a text. What you say when someone asks about price. You only learn that by building one.</p>
+
+        <p>Pick a task that happens daily and follows the same steps nearly every time. Daily is where the hours pile up. Same steps matters because an agent copies a pattern, and if there isn&rsquo;t one, it copies the mess. Can&rsquo;t decide which task is yours? Our free <a href="/tools/ai-opportunity-finder">AI opportunity finder</a> ranks the chores you still do by hand and adds up your own hours. No email, no login.</p>
+
+        <p>The person on final approval isn&rsquo;t a training-wheels phase. It&rsquo;s the design. The agent sorts and drafts; a human presses send on anything with your name on it, usually with one tap.</p>
+
+        <h2>Which jobs can AI agents actually do in a small business?</h2>
+
+        <p>Five, reliably: lead follow-up, intake, review requests, reporting, and content drafts. They&rsquo;re also the five owners ask us about most. Side by side first, then one at a time.</p>
+
+        <div class="table-scroll reveal">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Job</th>
+                <th scope="col">What starts it</th>
+                <th scope="col">What the agent does</th>
+                <th scope="col">What a person approves</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Lead follow-up</th>
+                <td>A web form or a missed call</td>
+                <td>Drafts a reply with an answer and two times to talk</td>
+                <td>The text, in one tap</td>
+              </tr>
+              <tr>
+                <th scope="row">Intake</th>
+                <td>A new inquiry</td>
+                <td>Asks your standard questions, checks the calendar</td>
+                <td>The booking</td>
+              </tr>
+              <tr>
+                <th scope="row">Review requests</th>
+                <td>A job marked done</td>
+                <td>Sends one text with your Google review link</td>
+                <td>The wording, once, up front</td>
+              </tr>
+              <tr>
+                <th scope="row">Reporting</th>
+                <td>Monday morning</td>
+                <td>Pulls your numbers onto one page</td>
+                <td>Nothing; it never reaches a customer</td>
+              </tr>
+              <tr>
+                <th scope="row">Content drafts</th>
+                <td>Your week&rsquo;s photos and questions</td>
+                <td>Writes first drafts in your voice</td>
+                <td>Every word, before it posts</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Can an agent follow up with new leads for me?</h3>
+
+        <p>Yes, and it&rsquo;s where we&rsquo;d start almost every time. Picture a roofing crew in Fishers. A homeowner fills out the quote form at 8:50 on a Tuesday night, mid-dinner for the owner. The agent drafts a text that answers their question and offers two times to talk, then pings the owner&rsquo;s phone. One tap sends it. The homeowner hears back in minutes, not tomorrow.</p>
+
+        <p>Phone calls work the same way. GoHighLevel guides written for home-service businesses (Ecosire, Contractor Tool Stack) name missed-call text-back as the most-used automation in the trades.</p>
+
+        <p>We think most small businesses should fix their follow-up before they spend another dollar on ads. Paying for leads you answer the next day is an expensive habit.</p>
+
+        <div class="setup">
+          <span class="setup__label">What setup takes</span>
+          <p>A form or phone line that can trigger a text. Somewhere for leads to land, which can be a CRM or, to start, a shared spreadsheet. Your real answers to the five questions people ask most. One person who owns the approvals. Writing those answers down is the hard part.</p>
+        </div>
+
+        <h3>What about intake and scheduling?</h3>
+
+        <p>Intake is the same dozen questions every time, which makes it a natural fit. A house-cleaning company in Westfield needs square footage, pets, frequency, and a preferred day before it can quote. An agent asks those by text, checks the real calendar, and holds two open slots. Someone at the office reviews the summary and confirms. No phone tag.</p>
+
+        <div class="setup">
+          <span class="setup__label">What setup takes</span>
+          <p>Your intake questions in order, the answers that change the next question (no pets versus two large dogs), calendar access, and a clear rule for when the agent stops and hands the thread to a person. A paper planner has to go online first.</p>
+        </div>
+
+        <h3>How do review requests get automated?</h3>
+
+        <p>This is the most boring build on the list. It may also pay off the most. When a job gets marked done, the customer gets one text with one link to your Google review page. Then nothing. People are happiest the day the work wraps, so timing does the heavy lifting.</p>
+
+        <p>BrightLocal&rsquo;s local search research found that Google Business Profiles with 40 or more reviews and a 4.5-star average appear in the local map results about 3.7 times as often as profiles with fewer than 10 reviews.</p>
+
+        <div class="setup">
+          <span class="setup__label">What setup takes</span>
+          <p>A clear &ldquo;job done&rdquo; moment in some system (an invoice paid, a status changed, a box ticked), your Google review link, and one message you&rsquo;d be happy to send a thousand times. You approve that wording once; here the template is the approval, because a person marked the job done.</p>
+        </div>
+
+        <h3>Can it build my weekly report?</h3>
+
+        <p>Yes. The report never touches a customer, so it&rsquo;s the safest first build if you&rsquo;re nervous. The agent pulls calls, booked jobs, ad spend, and new reviews onto one page every Monday. You read it with your coffee instead of logging into four dashboards.</p>
+
+        <div class="setup">
+          <span class="setup__label">What setup takes</span>
+          <p>Access to the accounts where the numbers live (Google Business Profile, your ad account, GA4, your booking or invoicing tool) and a decision about which five or six numbers actually matter. That decision is the real work.</p>
+        </div>
+
+        <h3>Should AI write my emails and posts?</h3>
+
+        <p>It should write the first draft. You should write the last one. In vcita&rsquo;s 2025 survey of 500 small-business owners, creating content and auto-replying to inquiries were among the jobs owners most wanted AI to take on, The trick is feeding the agent your real material: this week&rsquo;s job photos, the questions customers asked, the email people actually replied to. It drafts in your voice and queues it for you. Nothing publishes on its own.</p>
+
+        <div class="setup">
+          <span class="setup__label">What setup takes</span>
+          <p>Ten or so examples of writing you&rsquo;re proud of, a short list of things you&rsquo;d never say, and a standing 20 minutes a week to edit and approve. Skip those and the drafts stack up unread.</p>
+        </div>
+
+        <h2>What does it cost to set up an AI agent?</h2>
+
+        <p>On the open market, independent AI consultants charge $150 to $250 an hour, and a defined small-business project usually lands between $1,500 and $6,000, per the published price guides at Bushe, Rapid Developers, and Kamyar Shah. Starter retainers in those same guides run $800 to $1,500 a month. Toward the top, OptiWork.ai publishes $4,500 for an AI roadmap, automations from $12,000, and agents from $20,000.</p>
+
+        <p>Software is a separate line. If a build runs on GoHighLevel, its plans cost $97 to $497 a month plus $30 to $300 in usage fees, according to reviews at Automate the Journey and Builts.ai. The home-service guides from Ecosire and Contractor Tool Stack put a GoHighLevel build at 5 to 7 days to working and 6 to 8 weeks to running smoothly. Many first builds need no new software at all.</p>
+
+        <p>Our pricing works differently. We don&rsquo;t invoice per build. AI and automation work runs inside our published monthly retainers of $1,200, $2,400, or $4,800, alongside the rest of your work. Three months minimum, then month to month. We take eight clients total, and if you leave, the automations, the accounts, and the data stay yours. Full terms are on the <a href="/investment">pricing page</a>, and how we scope and build is on our <a href="/services/ai-automation">AI and automation page</a>.</p>
+
+        <p class="src">Sources: published price guides from Bushe, Rapid Developers, Kamyar Shah, and OptiWork.ai; GoHighLevel reviews at Automate the Journey and Builts.ai; GoHighLevel home-service guides from Ecosire and Contractor Tool Stack. Ranges current as of October 2026.</p>
+
+        <h2>Why do so many AI projects fail to pay off?</h2>
+
+        <p>Mostly because they automate the wrong thing. Even firms that sell this work say so: the AI-consulting price guides from Rapid Developers and Kamyar Shah report that most small-business AI engagements show no measurable return in their first year. They cite a specific figure. We couldn&rsquo;t trace it back to an original study, so we&rsquo;re not repeating it here, but the direction rings true.</p>
+
+        <p>The failures follow a pattern. The task happened twice a month, so the build never earned back its setup. Nobody owned the approvals, and the owner quietly switched it off. Or the business bought a platform first and went hunting for a use. Worst case, the real problem was the offer or the price. No agent fixes that.</p>
+
+        <p>An admission, since we sell this: the first week of any new build is clumsy. Ours too. A reply comes out stiffer than you&rsquo;d say it, or a reminder fires twice. That&rsquo;s why a person approves what goes out.</p>
+
+        <h2>What should a small business skip entirely?</h2>
+
+        <p>First on the list: any chatbot that answers customers while nobody&rsquo;s watching. It saves a few minutes and risks a screenshot you&rsquo;ll be explaining for a year.</p>
+
+        <p>Skip the &ldquo;AI transformation&rdquo; plan until one task works. Same for automated quotes on complex jobs: an agent can gather the details, but the price should come from someone who has seen the roof.</p>
+
+        <p>And don&rsquo;t buy new software for AI&rsquo;s sake. If your leads already live in a tool, build there first.</p>
+
+        <h2>What else do owners ask before the first build?</h2>
+
+        <div class="faq reveal">
+          <details>
+            <summary>Do I need to be technical to use AI agents?</summary>
+            <p>No. You need to know how you do the task today, step by step, and be willing to approve drafts from your phone. The wiring is the technical part, and it&rsquo;s the piece you can hand to someone else.</p>
+          </details>
+          <details>
+            <summary>Is it safe to let an AI agent text my customers?</summary>
+            <p>It&rsquo;s safe when a person approves what goes out, which is how we think every small business should start. Keep customer data in tools you already trust, give the agent access to only what the task needs, and never paste sensitive records into a free chatbot.</p>
+          </details>
+          <details>
+            <summary>What&rsquo;s the difference between an AI agent and a chatbot?</summary>
+            <p>A chatbot waits for someone to type to it. An agent works in the background: it notices a new form, a missed call, or a finished job, and does or drafts the next step. Some agents chat. Most of the useful ones in a small business never talk to a customer directly.</p>
+          </details>
+          <details>
+            <summary>How soon will I know if an AI agent is working?</summary>
+            <p>If you picked a task that happens every day, within a few weeks. You&rsquo;ll be approving drafts instead of writing replies, and you&rsquo;ll feel it. If you can&rsquo;t tell after a month, the task was probably the wrong pick. Swap it for a better one before you add a second.</p>
+          </details>
+          <details>
+            <summary>Can a nonprofit use AI agents the same way?</summary>
+            <p>Yes, and plenty already are. Bitcot&rsquo;s 2025 nonprofit tech trends report found 58% of nonprofits implementing AI, up from 44% the year before, mostly for donor management and admin work. Donor thank-yous and volunteer intake make good first tasks. Our nonprofit rate applies to this work too.</p>
+          </details>
+        </div>
+
+        <div class="article-note">
+          <strong>Keep reading</strong>
+          <ul class="next-reads">
+            <li><span class="next-reads__kind">Tool</span><a href="/tools/ai-opportunity-finder">AI opportunity finder: what to automate first (free, no email)</a></li>
+            <li><span class="next-reads__kind">Service</span><a href="/services/ai-automation">AI &amp; automation: how we scope and build</a></li>
+            <li><span class="next-reads__kind">Article</span><a href="/articles/is-gohighlevel-worth-it">Is GoHighLevel worth it for a small business?</a></li>
+          </ul>
+        </div>
+
+        <p class="updated">We update the market prices on this page when the source guides change theirs.</p>
+
+      </article>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="closing">
+    <div class="closing__inner">
+      <div class="reveal">
+        <span class="eyebrow">For owners with one chore too many</span>
+        <h2>Name the task you&rsquo;d hand off <em>first.</em></h2>
+        <p>Thirty minutes on a call. We&rsquo;ll tell you whether it&rsquo;s worth automating, what it would run on, and how it fits a retainer. Sometimes the right answer is to leave it alone, and we&rsquo;ll say that too.</p>
+      </div>
+      <div class="reveal" data-delay="1">
+        <a href="/contact" class="btn btn--primary">Book a 30-minute call <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer footer--v2">
+  <div class="wrap">
+    <div class="footer__grid footer__grid--v2">
+      <div class="footer__brand">
+        <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
+        <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a></p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/marketing">Marketing</a></li>
+          <li><a href="/services/technical">Technical</a></li>
+          <li><a href="/services/strategy">Strategy</a></li>
+          <li><a href="/services/coaching">Coaching &amp; growth</a></li>
+          <li><a href="/services/local-seo">Local SEO</a></li>
+          <li><a href="/services/google-ads">Google Ads</a></li>
+          <li><a href="/services/websites">Websites &amp; web apps</a></li>
+          <li><a href="/services/ai-automation">AI &amp; automation</a></li>
+          <li><a href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a></li>
+          <li><a href="/services/analytics">GA4 &amp; analytics</a></li>
+          <li><a href="/services/google-ad-grants">Google Ad Grants</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Who we help</h4>
+        <ul>
+          <li><a href="/for/local-businesses">Local businesses</a></li>
+          <li><a href="/for/founders">Founders &amp; startups</a></li>
+          <li><a href="/for/nonprofits">Nonprofits</a></li>
+          <li><a href="/work">Client results</a></li>
+        </ul>
+        <h4 class="footer__h4-gap">Free tools</h4>
+        <ul>
+          <li><a href="/tools/checkup">The five-step check-up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy find you?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI opportunity finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-day plan starter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Articles</h4>
+        <ul>
+          <li><a href="/articles/fractional-cmo-cost">Fractional CMO cost</a></li>
+          <li><a href="/articles/fractional-cmo-vs-marketing-agency">CMO vs. agency</a></li>
+          <li><a href="/articles/is-gohighlevel-worth-it">Is GoHighLevel worth it?</a></li>
+          <li><a href="/articles/ai-agents-for-small-business">AI agents, explained</a></li>
+          <li><a href="/articles/not-showing-up-on-google">Not showing up on Google</a></li>
+          <li><a href="/articles/small-business-marketing-budget">What marketing should cost</a></li>
+          <li><a href="/articles/nonprofit-google-ad-grant">The nonprofit Ad Grant</a></li>
+          <li><a href="/resources" class="tlink">All resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/method">Method</a></li>
+          <li><a href="/investment">Pricing</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__meta">
+      <span>© 2026 Carson Poore Consulting · Indianapolis, Indiana · carson@carsonpoore.com</span>
+      <span class="footer__towns">Serving Indianapolis, Carmel, Fishers, Zionsville, Noblesville, Westfield, Greenwood, Brownsburg, Avon, and all of central Indiana — technical and coaching work nationwide.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

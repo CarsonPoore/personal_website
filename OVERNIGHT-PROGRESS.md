@@ -18,10 +18,10 @@ Started: Oct 7, 2026, 8:30pm ET · Target: done before morning · Deploys to mai
 | A | Research sweep (10 agents, 160 web lookups, 0 errors) | ✅ done 9:10pm | docs/research/* (10 files) |
 | B | Strategy: 36-page blueprint, messaging map, canonical chrome, schema base, copy-QA gates, v2 CSS/JS layer | ✅ done 9:40pm | docs/strategy/*, styles.css v2 layer, site.js |
 | C | Template batch: 5 pages + ICP deliverable, builder+QA all passed | ✅ done | index, services, services/marketing, services/local-seo, articles/fractional-cmo-cost, docs/deliverables/icp-profiles.md |
-| D | 3 pathways + 6 services + 3 client pages + 5 tools + resources hub | ⏳ running | 18 pages |
-| E | Lead magnets + resources hub | queued | ~6 pages |
-| F | SEO/AEO articles | queued | ~7 pages |
-| G | Sitewide QA (links, schema, mobile, voice pass), sitemap.xml, robots.txt, llms.txt, final deploy | queued | — |
+| D | Pathways, services, client pages | ✅ 12/13 built | founders + 5 tools + resources in final wave |
+| E | Core rewrites (method, pricing, about, contact, work, ticket, 404) | ✅ built | 7 pages |
+| F | Articles | ✅ 7/7 built | articles/* |
+| G | Final wave: 7 pages + batched voice QA + 1 gated Fable review; sitemap/robots/llms done | ⏳ running | 29/36 pass scripted audit |
 
 ETA per stage: A ~30–45m · B ~20m · C ~60–90m · D ~90m · E ~60m · F ~60m · G ~45m.
 
@@ -38,3 +38,6 @@ ETA per stage: A ~30–45m · B ~20m · C ~60–90m · D ~90m · E ~60m · F ~60
 - Decision: tools link to /contact with a plain link (no score-param gimmick). No NEW pricing published anywhere: coaching/advisory presented inside the existing $1,200/$2,400/$4,800 tiers.
 - 10:05am — Phase C QA green (5/5). Canon fix: coaching category range reconciled to the sourced $3,000–$15,000 (MarketerHire/GoFractional) in messaging-map + index; crumbs-in-hero declared canonical. Morning TODOs: home hero photo still hot-links Unsplash (v1 pattern — self-host later?); spot-check BrightLocal 93% figure; footer h4 heading-skip accepted for launch.
 - 10:05am — Carson (live): tier agent models by task. E/F/G waves run Sonnet (mechanical/template work), Opus (writing-heavy), Fable only for hardest judgment. D was already in flight.
+- ~10:40am — Second spend-limit stall mid-D (5 of 18 built) and at E+F start (0 of 13). Carson cleared it; resumed both with model tiering on everything not yet cached (opus writers, sonnet QA).
+- ~3:55pm — Carson: Fable gated to ~5% (one final review). All agents now carry explicit models: Opus for checkup + founders, Sonnet for 4 tools/resources/all QA, Fable for one 6-page review. Per-page QA agents replaced by docs/qa/audit.js (free scripted checks) + 6 batched Sonnet voice-QA agents.
+- ~3:55pm — Scripted audit: 29/29 existing pages pass (chrome, schema, links, assets, one h1, no truncation). sitemap.xml (34 URLs, ticket+404 excluded), robots.txt (AI crawlers allowed), llms.txt written.
