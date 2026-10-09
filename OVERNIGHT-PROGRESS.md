@@ -65,3 +65,10 @@ ETA per stage: A ~30–45m · B ~20m · C ~60–90m · D ~90m · E ~60m · F ~60
 8. Tool names Title Case everywhere.
 - Grey text: 250 items cut (eyebrows, side notes, source captions, labels); Blueprint Ref/Sec/coordinate labels removed from site.js; hero coordinates removed; "Last updated" kept on articles only; 7 motion loops re-rendered without burned-in Ref./Fig./coordinate captions.
 - Still yours: verify Google Search Console + Bing Webmaster Tools and submit /sitemap.xml (needs your Google/Microsoft logins).
+
+## Round 4 — competitor report applied (Oct 9)
+- Competitor research: 9 Sonnet agents + 1 Opus synthesis → docs/deliverables/competitor-report.md, raw files in docs/research/competitors-v2/.
+- Repriced/rescoped: Simple web tool from $6,000 (was "Web app"; larger apps quoted) · Intro video from $1,200 (was "Brand video") · Photo shoot from $500 (was $350) · Full brand system $2,000 now excludes positioning · Business site capped at 8-10 pages (booking/CRM quoted with build) · scopes published for starter site and short-form pack (6 videos).
+- Accuracy: Ad Grants "monthly login" rule removed (never supported by Google); "up to $10,000"; "Most fractional CMOs" → "Many".
+- New page /ownership ("You keep everything"), linked from every footer, sitemap (39 URLs), llms.txt.
+- NOT done / needs Carson: nonprofit rate number + Ad Grants-only price · $1,200 tier label (fractional CMO vs one channel) · ownership page facts to confirm (hand-over fee, notice period, CRM sub-accounts, GBP roles) · LinkedIn still lists Vertical Studios + Copperleaf · "dedicated team capacity" claim left as-is per earlier decision · GBP, Clutch/Manifest listings, reviews · fractional-CMO page rebuild for "fractional CMO indianapolis".

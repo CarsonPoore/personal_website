@@ -11,10 +11,10 @@
 
 ## Services
 
-- [Branding](https://carsonpoore.com/services/branding): Logo and identity from $750; full brand system (positioning, messaging, identity, voice, guidelines) from $2,000.
+- [Branding](https://carsonpoore.com/services/branding): Logo and identity from $750; full brand system (identity, brand voice, guidelines) from $2,000. Positioning comes from the strategy engagement.
 - [Content marketing](https://carsonpoore.com/services/content-marketing): Articles that answer customer questions, email newsletters, and guides, run inside the monthly retainers.
 - [Social media](https://carsonpoore.com/services/social-media): Planning, posting, short-form video, and replies on the platforms customers use, run inside the monthly retainers.
-- [Video & photo](https://carsonpoore.com/services/video-photo): Brand video from $1,200, short-form video pack from $750, half-day photo shoot from $350, shot on location in central Indiana.
+- [Video & photo](https://carsonpoore.com/services/video-photo): Intro video from $1,200, short-form video pack (6 vertical videos) from $750, half-day photo shoot from $500, shot on location in central Indiana.
 - [Local SEO](https://carsonpoore.com/services/local-seo): Google Business Profile, reviews, and local search visibility in Indianapolis and central Indiana.
 - [Google Ads management](https://carsonpoore.com/services/google-ads): Search ads with tracking set up first; the client owns the account and the leads.
 - [Web design & development](https://carsonpoore.com/services/websites): Fast small-business websites and web apps the client fully owns.
@@ -31,8 +31,9 @@
 
 ## Pricing and method
 
+- [You keep everything](https://carsonpoore.com/ownership): What clients own (domain, site, Google profile, ad accounts, data) and how leaving works.
 - [Pricing](https://carsonpoore.com/investment): All published prices, terms, and what every retainer includes.
-- [Project pricing](https://carsonpoore.com/investment#projects): Starting prices for one-time projects: starter website from $900, business site from $2,500, web app from $6,000, logo and identity from $750, full brand system from $2,000, brand video from $1,200, short-form video pack from $750, half-day photo shoot from $350.
+- [Project pricing](https://carsonpoore.com/investment#projects): Starting prices for one-time projects: starter website from $900, business site from $2,500, simple web tool from $6,000 (larger custom web apps quoted per project), logo and identity from $750, full brand system from $2,000, intro video from $1,200, short-form video pack from $750, half-day photo shoot from $500.
 - [The method](https://carsonpoore.com/method): Five steps: Conviction, Your people, A sharp offer, The experience, Word of mouth.
 - [About](https://carsonpoore.com/about): Founder Carson Poore, mission, vision, and values.
 

@@ -1147,6 +1147,26 @@
         "/services/marketing",
         "/contact"
       ]
+    },
+    {
+      "path": "/ownership",
+      "file": "ownership.html",
+      "title_tag": "You keep everything | Carson Poore Consulting",
+      "meta_description": "",
+      "primary_keyword": "",
+      "page_type": "core",
+      "purpose": "What clients own and how leaving works.",
+      "key_sections": [],
+      "schema_types": [
+        "WebPage",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "links_to": [
+        "/investment",
+        "/services/websites",
+        "/contact"
+      ]
     }
   ],
   "messaging_map": {
