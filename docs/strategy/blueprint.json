@@ -1167,6 +1167,27 @@
         "/services/websites",
         "/contact"
       ]
+    },
+    {
+      "path": "/services/seo",
+      "file": "services/seo.html",
+      "title_tag": "SEO & AI Search for Small Business | Carson Poore",
+      "meta_description": "",
+      "primary_keyword": "seo for small business indianapolis",
+      "page_type": "service",
+      "purpose": "General SEO + AI answer optimization (Marketing practice), distinct from local SEO.",
+      "key_sections": [],
+      "schema_types": [
+        "Service",
+        "BreadcrumbList",
+        "FAQPage"
+      ],
+      "links_to": [
+        "/services/local-seo",
+        "/investment",
+        "/ownership",
+        "/contact"
+      ]
     }
   ],
   "messaging_map": {

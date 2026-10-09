@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Small Business SEO in Indianapolis | Carson Poore Consulting</title>
+<meta name="description" content="Small business SEO in Indianapolis: fast, readable pages that answer what customers ask, plus honest work to get you cited in ChatGPT and AI Overviews." />
+<link rel="canonical" href="https://carsonpoore.com/services/seo" />
+<meta property="og:title" content="Small Business SEO in Indianapolis | Carson Poore Consulting" />
+<meta property="og:description" content="Small business SEO in Indianapolis: fast, readable pages that answer what customers ask, plus honest work to get you cited in ChatGPT and AI Overviews." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://carsonpoore.com/services/seo" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
+<link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
+<link rel="stylesheet" href="/styles.css?v=20261008-5" />
+<script defer src="/site.js?v=20261008-3"></script>
+<style>
+  /* SEO & AI search page — layout tweaks on top of the shared system */
+  .ai-note { max-width: 64ch; }
+  .ai-note p + p { margin-top: 18px; }
+  .tool-split {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+    gap: clamp(28px, 4vw, 72px);
+    align-items: center;
+  }
+  @media (max-width: 860px) { .tool-split { grid-template-columns: 1fr; } }
+  .tool-card {
+    background: var(--navy);
+    border-radius: var(--r-3);
+    padding: clamp(28px, 4vw, 48px);
+  }
+  .tool-card ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+  .tool-card li {
+    display: flex; justify-content: space-between; gap: 18px; align-items: baseline;
+    color: var(--cream-2); padding: 13px 0; border-top: 1px solid var(--navy-3, rgba(255,255,255,0.12));
+  }
+  .tool-card li span:last-child { color: #fff; font-weight: 700; white-space: nowrap; }
+  .tool-card__foot { margin-top: 18px; color: var(--muted-on-navy); font-size: 0.85rem; }
+  .cost-note { max-width: 62ch; }
+  .cost-note p + p { margin-top: 18px; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://carsonpoore.com/#org",
+      "name": "Carson Poore Consulting",
+      "url": "https://carsonpoore.com/",
+      "logo": "https://carsonpoore.com/brand/cpc-mark-royalblue.svg",
+      "image": "https://carsonpoore.com/brand/carson-headshot.png",
+      "email": "carson@carsonpoore.com",
+      "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
+      ],
+      "priceRange": "$1,200–$4,800/month",
+      "founder": {
+        "@type": "Person",
+        "@id": "https://carsonpoore.com/about#carson",
+        "name": "Carson Poore",
+        "sameAs": [
+          "https://www.linkedin.com/in/carson-poore/"
+        ]
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://carsonpoore.com/services/seo#service",
+      "name": "SEO & AI search",
+      "serviceType": "Search engine optimization",
+      "description": "Website SEO and AI search optimization for small businesses: technical foundations, structured data, answer-first pages, internal linking, Search Console and Bing setup, and monthly reporting on rankings and AI answers, inside published monthly retainers.",
+      "provider": {
+        "@id": "https://carsonpoore.com/#org"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
+      ],
+      "url": "https://carsonpoore.com/services/seo"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://carsonpoore.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://carsonpoore.com/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Marketing",
+          "item": "https://carsonpoore.com/services/marketing"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "SEO & AI search"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long until SEO works?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Expect months, not weeks. Technical fixes can show up in Search Console within a few weeks, and new pages usually need a few months to settle into rankings. Crowded categories take longer. We report every month, so you’ll see the early signs, like more pages indexed and more searches showing your site, before the calls pick up."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you guarantee rankings?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Google itself says nobody can guarantee a top ranking, and we agree. What we stand behind is the work: what we changed and what moved, in a plain report every month. If someone promises you page one, ask them which search, and how many people actually type it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is AI search optimization, and does it work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It’s making your business easy for tools like ChatGPT, Perplexity, and Google’s AI Overviews to find and quote. In practice that means answer-first pages, the same business details everywhere, schema markup, and listings on the directories those tools cite. Does it work? It makes a citation more likely. Nobody can promise one. We test a fixed set of real prompts each month and show you what changed, including when nothing did."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is this different from local SEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Local SEO is your Google Business Profile, your reviews, and the map results. This is your website: speed, structure, and pages that answer real questions. They feed each other, and most local businesses need both. If you’re not sure where you stand, run Can Indy Find You?, our free visibility check, first."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a blog?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Probably not the way you’re picturing it. You don’t need a post every week. You need pages that answer what customers ask before they buy, and those can live as service pages, an FAQ, or a few solid articles. If writing them turns into a regular job, that’s content marketing, and we do that too."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="page">
+
+<header class="nav">
+  <div class="nav__inner">
+    <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
+    <nav class="nav__links" aria-label="Primary">
+      <div class="nav__item has-drop">
+        <a href="/services" class="nav__top">Services</a>
+        <div class="nav__drop nav__drop--wide" aria-label="Services">
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/marketing">Marketing</a>
+            <a class="nav__drop-sub" href="/services/branding">Branding</a>
+            <a class="nav__drop-sub" href="/services/content-marketing">Content marketing</a>
+            <a class="nav__drop-sub" href="/services/social-media">Social media</a>
+            <a class="nav__drop-sub" href="/services/video-photo">Video &amp; photo</a>
+            <a class="nav__drop-sub" href="/services/seo">SEO &amp; AI search</a>
+            <a class="nav__drop-sub" href="/services/local-seo">Local SEO</a>
+            <a class="nav__drop-sub" href="/services/google-ad-grants">Google Ad Grants</a>
+          </div>
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/technical">Technical</a>
+            <a class="nav__drop-sub" href="/services/websites">Web design &amp; development</a>
+            <a class="nav__drop-sub" href="/services/ai-automation">AI &amp; automation</a>
+            <a class="nav__drop-sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+            <a class="nav__drop-sub" href="/services/google-ads">Google Ads</a>
+            <a class="nav__drop-sub" href="/services/analytics">GA4 &amp; analytics</a>
+            <a class="nav__drop-head" href="/services/strategy">Strategy &amp; planning</a>
+            <a class="nav__drop-head" href="/services/coaching">Coaching &amp; growth</a>
+          </div>
+          <div class="nav__drop-foot">
+            <a href="/services">All services</a>
+            <a href="/investment#projects">Project pricing</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav__item has-drop">
+        <button type="button" class="nav__top nav__toggle" aria-expanded="false">Who we help</button>
+        <div class="nav__drop" aria-label="Who we help">
+          <a href="/for/local-businesses">Local businesses</a>
+          <a href="/for/founders">Founders &amp; startups</a>
+          <a href="/for/nonprofits">Nonprofits</a>
+        </div>
+      </div>
+      <a href="/method">Method</a>
+      <a href="/investment">Pricing</a>
+      <a href="/resources">Resources</a>
+      <a href="/about">About</a>
+      <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
+    </nav>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" aria-hidden="true">
+  <span class="mobile-menu__group">Services</span>
+  <a href="/services/marketing">Marketing</a>
+  <a class="mobile-menu__sub" href="/services/branding">Branding</a>
+  <a class="mobile-menu__sub" href="/services/content-marketing">Content marketing</a>
+  <a class="mobile-menu__sub" href="/services/social-media">Social media</a>
+  <a class="mobile-menu__sub" href="/services/video-photo">Video &amp; photo</a>
+  <a class="mobile-menu__sub" href="/services/seo">SEO &amp; AI search</a>
+  <a class="mobile-menu__sub" href="/services/local-seo">Local SEO</a>
+  <a class="mobile-menu__sub" href="/services/google-ad-grants">Google Ad Grants</a>
+  <a href="/services/technical">Technical</a>
+  <a class="mobile-menu__sub" href="/services/websites">Web design &amp; development</a>
+  <a class="mobile-menu__sub" href="/services/ai-automation">AI &amp; automation</a>
+  <a class="mobile-menu__sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+  <a class="mobile-menu__sub" href="/services/google-ads">Google Ads</a>
+  <a class="mobile-menu__sub" href="/services/analytics">GA4 &amp; analytics</a>
+  <a href="/services/strategy">Strategy &amp; planning</a>
+  <a href="/services/coaching">Coaching &amp; growth</a>
+  <span class="mobile-menu__group">Who we help</span>
+  <a href="/for/local-businesses">Local businesses</a>
+  <a href="/for/founders">Founders &amp; startups</a>
+  <a href="/for/nonprofits">Nonprofits</a>
+  <span class="mobile-menu__group">Explore</span>
+  <a href="/method">Method</a>
+  <a href="/investment">Pricing</a>
+  <a href="/resources">Resources</a>
+  <a href="/about">About</a>
+  <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero page-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/services/marketing">Marketing</a></li>
+          <li aria-current="page">SEO &amp; AI search</li>
+        </ol>
+      </nav>
+      <div class="page-hero__grid">
+        <div class="page-hero__copy">
+          <h1 class="reveal mt-md" data-delay="1">Be the answer when customers <em>search or ask.</em></h1>
+          <p class="hero__sub reveal mt-md" data-delay="2">SEO for a small business is simpler than the industry makes it sound. Your site has to load fast and be readable by Google. Then it has to answer the questions your customers actually type. We do that work for small businesses in Indianapolis, plus the newer piece: making it more likely your business gets named when someone asks ChatGPT or Perplexity who to call.</p>
+          <div class="row-cta reveal mt-lg" data-delay="3">
+            <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
+            <a class="tlink" href="/tools/local-visibility">or run the free visibility check</a>
+          </div>
+        </div>
+        <div class="motion-frame motion-frame--hero page-hero__motion reveal" data-delay="2">
+          <video class="motion-loop" muted loop playsinline preload="none" poster="/media/motion/proof-line.jpg?v=20261008b" width="960" height="800" aria-hidden="true"><source src="/media/motion/proof-line.webm?v=20261008b" type="video/webm" /><source src="/media/motion/proof-line.mp4?v=20261008b" type="video/mp4" /></video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PHOTO BAND -->
+  <section class="section section--tight"><div class="wrap">
+    <figure class="photo photo--cinema photo--amber reveal"><img src="/media/photos/seo-1-laptop-analytics.jpg" alt="Hands typing on a laptop showing a website analytics dashboard with traffic charts, next to a white coffee mug and two pens" width="1600" height="1000" decoding="async" /></figure>
+    <!-- Photo: Myriam Jessier / Unsplash — https://unsplash.com/photos/person-using-macbook-pro-on-black-table-eveI7MOcSmw -->
+  </div></section>
+
+  <!-- WHAT SEO IS -->
+  <section class="section section--stone">
+    <div class="wrap">
+      <div class="photo-split">
+        <div class="sec-head reveal">
+          <h2>Here&rsquo;s what SEO actually <em>is.</em></h2>
+          <p class="sec-head__intro">Search engine optimization means making your website easy for Google to find and trust, so it shows up when someone types a question you can answer. That&rsquo;s it. Most of the job is housekeeping and honest writing. What&rsquo;s changed is where people ask. Some of your customers now type the question into ChatGPT instead of Google, and those tools read the web much the way Google does. They look for a page that answers the question directly.</p>
+        </div>
+        <figure class="photo photo--wide photo--flip reveal"><img src="/media/photos/seo-2-owner-phone.jpg" alt="A smiling woman in a tan sweater looks at her phone at a wooden table in a room with painted brick walls" width="1600" height="1000" loading="lazy" decoding="async" /></figure>
+        <!-- Photo: Brooke Cagle / Unsplash — https://unsplash.com/photos/a-woman-sitting-at-a-table-looking-at-her-cell-phone-eL4xIEuHzzk -->
+      </div>
+
+      <div class="fit-grid mt-lg">
+        <div class="fit-card fit-card__yes reveal">
+          <span class="label">This is your lane if</span>
+          <ul>
+            <li>Your site launched a few years ago and nobody has looked under the hood since.</li>
+            <li>Customers ask the same questions before they buy, and your site answers none of them.</li>
+            <li>You&rsquo;ve searched for your own service and found weaker competitors ranked above you.</li>
+            <li>You can wait a few months for results that keep paying after.</li>
+          </ul>
+        </div>
+        <div class="fit-card fit-card__no reveal" data-delay="1">
+          <span class="label">Probably not, if</span>
+          <ul>
+            <li>You need calls this month. SEO won&rsquo;t get you there. Ads will.</li>
+            <li>Your Google Business Profile is still half-empty. Fix that first with <a class="tlink" href="/services/local-seo">local SEO</a>. It&rsquo;s the quicker win.</li>
+            <li>You want a guaranteed ranking. We don&rsquo;t sell one.</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="pull reveal mt-xl">We think most small-business websites don&rsquo;t need more pages. They need the pages they have to <em>answer the question.</em></p>
+    </div>
+  </section>
+
+  <!-- WHAT WE DO -->
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2>The work, in the order <em>we do it.</em></h2>
+        <p class="sec-head__intro">Foundations first, then writing, then the steady upkeep. You see every piece of it in a monthly report.</p>
+      </div>
+
+      <div class="svc-list mt-lg">
+
+        <article class="svc reveal">
+          <h3 class="svc__title">Make sure Google can get in</h3>
+          <p class="svc__body">Before anyone writes a word, we check the plumbing. How fast the site loads on a phone. Broken links. Pages accidentally hidden from search. A clean sitemap. Redirects left over from your last redesign. Then we add structured data, a bit of code that hands search engines your business name, services, hours, and service area in a format they read without guessing. It isn&rsquo;t glamorous. It&rsquo;s often the reason a decent site never shows up.</p>
+        </article>
+
+        <article class="svc reveal">
+          <h3 class="svc__title">Pages that answer what customers ask</h3>
+          <p class="svc__body">We start with the questions you hear on the phone. What does it cost? How long does it take? Do you come out to Fishers? Each one gets a page or a section that answers in the first two sentences and then shows the detail. People read that way, and it&rsquo;s the shape Google and the AI tools tend to quote. No keyword stuffing. No 2,000-word filler written for robots.</p>
+        </article>
+
+        <article class="svc reveal">
+          <h3 class="svc__title">Links between your pages that make sense</h3>
+          <p class="svc__body">Your pages should point to each other the way a good employee points a customer: from the service to the price, from one question to the next one they&rsquo;ll have. Visitors find what they need, and Google learns which pages matter most.</p>
+        </article>
+
+        <article class="svc reveal">
+          <h3 class="svc__title">Search Console, Bing, and a monthly report</h3>
+          <p class="svc__body">We set up Google Search Console and Bing Webmaster Tools in your name and submit your sitemap to both. Bing is worth the ten minutes, because its index feeds Microsoft Copilot and is one of the sources behind ChatGPT&rsquo;s search. Each month you get a short report in plain English: the searches that brought people in, the pages that led to calls or form fills, and what we&rsquo;re changing next.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- AI ANSWERS -->
+  <section class="section section--navy">
+    <div class="wrap">
+      <div class="ai-note">
+        <div class="reveal">
+          <h2>Getting named in AI answers, <em>honestly.</em></h2>
+          <p class="mt-md">Nobody can guarantee that ChatGPT, Perplexity, or Google&rsquo;s AI Overviews will cite your business. Anyone who promises it is guessing. What we can tell you is what these tools tend to pull from. When we ran a set of Indianapolis questions through Perplexity this fall, the &ldquo;who should I hire&rdquo; answers leaned almost entirely on directories and review sites like Clutch, BBB, and Thumbtack. The &ldquo;how much does it cost&rdquo; answers quoted small firms&rsquo; own pages, the ones written to answer one question with a number up top.</p>
+          <p>So the work is plain. Answer-first pages on your own site. The same business name, address, and phone everywhere you&rsquo;re listed. Schema markup, so machines read your details correctly. An llms.txt file, a short plain-text guide to your site for AI crawlers. (It&rsquo;s cheap to add, and honestly, nobody knows yet how much it helps.) And listings on the directories those answers draw from. Then every month we run a fixed set of real prompts your customers might type and report what changed: whether you showed up, who did instead, and which page got quoted.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCAL VS WEBSITE -->
+  <section class="section section--stone">
+    <div class="wrap">
+      <div class="tool-split">
+        <div class="reveal">
+          <h2>Local SEO is the map. This is <em>your website.</em></h2>
+          <p class="mt-md">Local SEO covers your Google Business Profile, your reviews, and the handful of businesses Google pins on the map when someone searches nearby. This page covers the site itself: whether it loads, gets read, and answers questions well enough to rank and be quoted. Most local businesses need both. Local usually comes first, because it moves faster.</p>
+          <p class="mt-md">Not sure which half needs work? Run Can Indy Find You?, our free check. It grades you as you go and never asks for your email.</p>
+          <div class="row-cta mt-lg">
+            <a class="btn btn--primary" href="/tools/local-visibility">Run the visibility check <span class="arr">→</span></a>
+            <a class="tlink" href="/services/local-seo">See local SEO</a>
+          </div>
+        </div>
+        <div class="tool-card reveal" data-delay="1">
+          <ul>
+            <li><span>Google Business Profile</span><span>Local SEO</span></li>
+            <li><span>Reviews and replies</span><span>Local SEO</span></li>
+            <li><span>Site speed and crawlability</span><span>This page</span></li>
+            <li><span>Answer-first pages</span><span>This page</span></li>
+            <li><span>Schema and directory listings</span><span>Both</span></li>
+          </ul>
+          <p class="tool-card__foot">We run whichever half you need, or both, inside one retainer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW LONG -->
+  <section class="section">
+    <div class="wrap wrap--narrow">
+      <div class="sec-head reveal">
+        <h2>SEO is the slowest channel <em>we run.</em></h2>
+      </div>
+      <div class="cost-note reveal mt-md">
+        <p>We&rsquo;d rather say that now than in month two. Technical fixes can show up in Search Console within a few weeks. New pages usually take a few months to settle into rankings, and longer in a crowded category. AI answers move on their own schedule, since each tool re-reads the web when it decides to. If you need booked work this quarter, <a class="tlink" href="/services/google-ads">Google Ads</a> is faster, and we&rsquo;ll tell you so.</p>
+        <p>The payoff for waiting is real, though. A page that earns its spot keeps bringing people in for years, with no charge per click. And if you suspect Google can&rsquo;t see you at all, start with <a class="tlink" href="/articles/not-showing-up-on-google">why businesses vanish from Google</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RED FLAGS -->
+  <section class="section section--stone">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2>Red flags when you hire anyone <em>for SEO.</em></h2>
+        <p class="sec-head__intro">Including us. If you hear any of these on a sales call, keep your wallet closed.</p>
+      </div>
+
+      <div class="svc-list mt-lg">
+
+        <article class="svc reveal">
+          <h3 class="svc__title">A guaranteed ranking</h3>
+          <p class="svc__body">Google&rsquo;s own guidance says no one can guarantee a top spot in its results. A firm that promises page one is guessing, or planning to rank you for a phrase nobody searches. Ask which search, and how many people actually type it.</p>
+        </article>
+
+        <article class="svc reveal">
+          <h3 class="svc__title">A secret method</h3>
+          <p class="svc__body">Real SEO is explainable. If someone can&rsquo;t tell you what they&rsquo;ll change on your site this month, in words you understand, assume it&rsquo;s nothing. Or worse, something that gets your site penalized.</p>
+        </article>
+
+        <article class="svc reveal">
+          <h3 class="svc__title">A year-long contract with no way out</h3>
+          <p class="svc__body">Long lock-ins protect the agency. We ask for three months, because that&rsquo;s the shortest stretch in which this work can show anything, and after that it&rsquo;s month to month.</p>
+        </article>
+
+        <article class="svc reveal">
+          <h3 class="svc__title">Accounts held in their name</h3>
+          <p class="svc__body">Your Search Console, your analytics, your domain, and your website should belong to you, with the agency added as a user. If they own the accounts, leaving means starting over. We set everything up in your name from day one. Here&rsquo;s <a class="tlink" href="/ownership">everything you keep if you leave</a>.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT IT COSTS -->
+  <section class="section">
+    <div class="wrap wrap--narrow">
+      <div class="sec-head reveal">
+        <h2>It runs inside the retainer, <em>with no separate fee.</em></h2>
+      </div>
+      <div class="cost-note reveal mt-md">
+        <p>SEO doesn&rsquo;t have its own price tag here. It runs inside our published monthly retainers: $1,200, $2,400, or $4,800 a month. At $1,200 we run one channel properly, and SEO can be that channel. The higher tiers add more alongside it, like local SEO, content, or ads. Three months minimum, then month to month.</p>
+        <p>If you&rsquo;re still working out what you should spend on marketing at all, our article on <a class="tlink" href="/articles/small-business-marketing-budget">small business marketing budgets</a> walks through the math.</p>
+      </div>
+      <div class="row-cta reveal mt-lg" data-delay="1">
+        <a class="btn btn--ghost" href="/investment">See the full rate card <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--stone">
+    <div class="wrap wrap--narrow">
+      <div class="sec-head reveal">
+        <h2>Questions we get about <em>SEO and AI search.</em></h2>
+      </div>
+      <div class="faq mt-lg reveal">
+        <details>
+          <summary>How long until SEO works?</summary>
+          <p>Expect months, not weeks. Technical fixes can show up in Search Console within a few weeks, and new pages usually need a few months to settle into rankings. Crowded categories take longer. We report every month, so you&rsquo;ll see the early signs, like more pages indexed and more searches showing your site, before the calls pick up.</p>
+        </details>
+        <details>
+          <summary>Do you guarantee rankings?</summary>
+          <p>No. Google itself says nobody can guarantee a top ranking, and we agree. What we stand behind is the work: what we changed and what moved, in a plain report every month. If someone promises you page one, ask them which search, and how many people actually type it.</p>
+        </details>
+        <details>
+          <summary>What is AI search optimization, and does it work?</summary>
+          <p>It&rsquo;s making your business easy for tools like ChatGPT, Perplexity, and Google&rsquo;s AI Overviews to find and quote. In practice that means answer-first pages, the same business details everywhere, schema markup, and listings on the directories those tools cite. Does it work? It makes a citation more likely. Nobody can promise one. We test a fixed set of real prompts each month and show you what changed, including when nothing did.</p>
+        </details>
+        <details>
+          <summary>How is this different from local SEO?</summary>
+          <p>Local SEO is your Google Business Profile, your reviews, and the map results. This is your website: speed, structure, and pages that answer real questions. They feed each other, and most local businesses need both. If you&rsquo;re not sure where you stand, run <a class="tlink" href="/tools/local-visibility">Can Indy Find You?</a>, our free visibility check, first.</p>
+        </details>
+        <details>
+          <summary>Do I need a blog?</summary>
+          <p>Probably not the way you&rsquo;re picturing it. You don&rsquo;t need a post every week. You need pages that answer what customers ask before they buy, and those can live as service pages, an FAQ, or a few solid articles. If writing them turns into a regular job, that&rsquo;s <a class="tlink" href="/services/content-marketing">content marketing</a>, and we do that too.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHERE TO NEXT -->
+  <section class="next-strip"><div class="wrap"><h2 class="next-strip__title reveal">Where to next</h2><div class="next-grid">
+    <a class="next-card reveal" href="/services/local-seo"><strong>Local SEO, the other half</strong><span>Your Google Business Profile, reviews, and the map results.</span><span class="arr-link">See local SEO →</span></a>
+    <a class="next-card reveal" href="/services/content-marketing"><strong>Content that answers questions</strong><span>Articles and newsletters written answer-first, in your voice.</span><span class="arr-link">See content marketing →</span></a>
+    <a class="next-card reveal" href="/investment"><strong>SEO sits in the retainer</strong><span>$1,200 a month runs one channel properly, and SEO can be it.</span><span class="arr-link">See the rate card →</span></a>
+  </div></div></section>
+
+  <!-- CLOSING CTA -->
+  <section class="closing">
+    <div class="closing__inner">
+      <div class="reveal">
+        <h2>Let&rsquo;s see what your customers <em>find today.</em></h2>
+        <p>Book a free call. We&rsquo;ll look at your site the way Google does, then ask ChatGPT a few of your customers&rsquo; questions together. You&rsquo;ll leave knowing what&rsquo;s broken and what to fix first, whether or not you hire us.</p>
+      </div>
+      <div class="reveal" data-delay="1">
+        <a href="/contact" class="btn btn--primary">Book a free call <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<footer class="footer footer--v2">
+  <div class="wrap">
+    <div class="footer__grid footer__grid--v2">
+      <div class="footer__brand">
+        <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
+        <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/marketing">Marketing</a></li>
+          <li><a href="/services/technical">Technical</a></li>
+          <li><a href="/services/strategy">Strategy &amp; planning</a></li>
+          <li><a href="/services/coaching">Coaching &amp; growth</a></li>
+          <li><a href="/services/branding">Branding</a></li>
+          <li><a href="/services/content-marketing">Content marketing</a></li>
+          <li><a href="/services/social-media">Social media</a></li>
+          <li><a href="/services/video-photo">Video &amp; photo</a></li>
+          <li><a href="/services/websites">Web design &amp; development</a></li>
+          <li><a href="/services/seo">SEO &amp; AI search</a></li>
+          <li><a href="/services/local-seo">Local SEO</a></li>
+          <li><a href="/services/google-ads">Google Ads</a></li>
+          <li><a href="/services/ai-automation">AI &amp; automation</a></li>
+          <li><a href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a></li>
+          <li><a href="/services/analytics">GA4 &amp; analytics</a></li>
+          <li><a href="/services/google-ad-grants">Google Ad Grants</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Who we help</h4>
+        <ul>
+          <li><a href="/for/local-businesses">Local businesses</a></li>
+          <li><a href="/for/founders">Founders &amp; startups</a></li>
+          <li><a href="/for/nonprofits">Nonprofits</a></li>
+          <li><a href="/work">Work</a></li>
+        </ul>
+        <h4 class="footer__h4-gap">Free tools</h4>
+        <ul>
+          <li><a href="/tools/checkup">The Five-Step Check-Up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy Find You?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI Opportunity Finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget Calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-Day Plan Starter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Articles</h4>
+        <ul>
+          <li><a href="/articles/fractional-cmo-cost">Fractional CMO cost</a></li>
+          <li><a href="/articles/fractional-cmo-vs-marketing-agency">CMO vs. agency</a></li>
+          <li><a href="/articles/is-gohighlevel-worth-it">Is GoHighLevel worth it?</a></li>
+          <li><a href="/articles/ai-agents-for-small-business">AI agents, explained</a></li>
+          <li><a href="/articles/not-showing-up-on-google">Not showing up on Google</a></li>
+          <li><a href="/articles/small-business-marketing-budget">What marketing should cost</a></li>
+          <li><a href="/articles/nonprofit-google-ad-grant">The nonprofit Ad Grant</a></li>
+          <li><a href="/resources" class="tlink">All resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/method">Method</a></li>
+          <li><a href="/investment">Pricing</a></li>
+          <li><a href="/investment#projects">Project pricing</a></li>
+          <li><a href="/ownership">You keep everything</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__meta">
+      <span>© 2026 Carson Poore Consulting · Indianapolis, Indiana · carson@carsonpoore.com</span>
+      <span class="footer__towns">Serving Indianapolis, Carmel, Fishers, Zionsville, Noblesville, Westfield, Greenwood, Brownsburg, Avon, and all of central Indiana — technical and coaching work nationwide.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
