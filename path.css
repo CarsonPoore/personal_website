@@ -1,0 +1,48 @@
+/* Client pathways. Spec: docs/superpowers/specs/2026-10-09-client-pathways-design.md
+   Everything is inert without html.cpp-js (set by the inline head snippet). */
+
+/* Copy variants: generic copy shows by default; a path shows its own variant instead. */
+html:not([data-path="local"]) [data-path-copy="local"],
+html:not([data-path="founders"]) [data-path-copy="founders"],
+html:not([data-path="nonprofits"]) [data-path-copy="nonprofits"] { display: none !important; }
+html[data-path="local"] [data-path-generic],
+html[data-path="founders"] [data-path-generic],
+html[data-path="nonprofits"] [data-path-generic] { display: none !important; }
+.cpp-set { display: contents; }
+
+/* Path bar: height reserved from first paint so nothing shifts when path.js fills it. */
+.cpp-bar { display: none; }
+html.cpp-js:not([data-path="none"]):not([data-loader]) .cpp-bar {
+  display: block; min-height: 44px;
+  background: var(--navy-2); color: var(--cream-2);
+  border-top: 1px solid var(--navy-3); border-bottom: 1px solid var(--navy-3);
+  font: 500 var(--step--1)/1.3 var(--sans);
+}
+.cpp-bar__inner { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; min-height: 44px; padding-block: 6px; }
+.cpp-bar strong { color: var(--cream); font-weight: 700; }
+.cpp-bar a { color: var(--cream); text-decoration: underline; text-underline-offset: 3px; }
+.cpp-chip, .cpp-btn {
+  font: inherit; cursor: pointer; border-radius: 999px; padding: 5px 12px;
+  border: 1px solid var(--navy-3); background: transparent; color: var(--cream);
+  transition: background .2s var(--ease), border-color .2s var(--ease);
+}
+.cpp-chip:hover, .cpp-btn:hover { border-color: var(--cobalt-3); background: rgba(59,107,255,.14); }
+.cpp-btn--solid { background: var(--cobalt); border-color: var(--cobalt); }
+.cpp-x { margin-left: auto; background: none; border: 0; color: var(--cream-2); font-size: 20px; line-height: 1; cursor: pointer; padding: 4px 8px; }
+.cpp-chip:focus-visible, .cpp-btn:focus-visible, .cpp-x:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
+@media (max-width: 640px) { .cpp-bar__inner { gap: 6px 10px; } .cpp-bar__lead { flex-basis: 100%; } }
+
+/* "Other …" collapse used by data-path-sort lists */
+.cpp-more { grid-column: 1 / -1; margin-top: 12px; }
+.cpp-more > summary { cursor: pointer; font: 600 var(--step--1)/1.4 var(--sans); color: var(--ink-2); padding: 8px 0; }
+.cpp-more__body { margin-top: 12px; }
+
+/* Nav marks */
+.nav__drop a.is-path { font-weight: 700; }
+.nav__drop a.is-path::before, .nav__drop-sub.cpp-dot::after {
+  content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--amber); margin: 0 8px 2px 0; vertical-align: middle;
+}
+.nav__drop-sub.cpp-dot::after { margin: 0 0 2px 8px; }
+.cpp-mobile-pin { font-weight: 700; color: var(--amber) !important; }
+.cpp-footer-link { background: none; border: 0; padding: 0; color: inherit; text-decoration: underline; cursor: pointer; font: inherit; margin-top: 8px; }

@@ -12,6 +12,7 @@
 <meta property="og:url" content="https://carsonpoore.com/services/google-ad-grants" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<!-- cp-path:head --><script>(function(d,w){d.classList.add("cpp-js");var k=["local","founders","nonprofits","none"],u=null,s=null;try{u=new URLSearchParams(w.location.search).get("path")}catch(e){}try{s=w.localStorage.getItem("cp.path")}catch(e){}if(k.indexOf(u)>-1){try{w.localStorage.setItem("cp.path",u)}catch(e){}s=u}if(k.indexOf(s)>-1){d.setAttribute("data-path",s)}else if((w.location.pathname==="/"||w.location.pathname==="/index.html")&&!/bot|crawl|spider|slurp|preview/i.test(w.navigator.userAgent)){d.setAttribute("data-loader","pending");w.setTimeout(function(){if(d.getAttribute("data-loader")==="pending"&&!w.CPPath)d.removeAttribute("data-loader")},4000)}})(document.documentElement,window)</script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
 <link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
 <link rel="stylesheet" href="/styles.css?v=20261008-5" />
@@ -267,6 +268,8 @@
   ]
 }
 </script>
+<link rel="stylesheet" href="/path.css?v=20261009-1" />
+<script defer src="/path.js?v=20261009-1"></script>
 </head>
 <body class="page">
 
@@ -326,6 +329,7 @@
     <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
+<div class="cpp-bar" role="region" aria-label="Your path"></div>
 <div class="mobile-menu" aria-hidden="true">
   <span class="mobile-menu__group">Services</span>
   <a href="/services/marketing">Marketing</a>
