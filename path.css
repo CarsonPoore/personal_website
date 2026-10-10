@@ -142,3 +142,7 @@ html[data-path]:not([data-path="none"]) .icon-tiles .a-svc-link { display: none;
 .cpp-next__list a { display: block; height: 100%; padding: 16px; border: 1px solid var(--line); border-radius: 6px; color: var(--ink); text-decoration: none; font-weight: 600; background: var(--bone); }
 .cpp-next__list a:hover, .cpp-next__list a:focus-visible { border-color: var(--cobalt); }
 @media (max-width: 760px) { .cpp-next__list { grid-template-columns: 1fr; } }
+
+/* ---- Pricing callouts ---- */
+.cpp-callout { margin: 0 0 24px; padding: 14px 18px; border-left: 3px solid var(--amber); background: var(--bone-2); color: var(--ink); border-radius: 0 6px 6px 0; }
+.cpp-badge { display: inline-block; white-space: nowrap; font: 700 var(--step--1)/1.1 var(--sans); color: var(--navy); background: var(--amber); border-radius: 999px; padding: 5px 10px; }
