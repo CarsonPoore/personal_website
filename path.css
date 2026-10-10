@@ -117,3 +117,20 @@ html[data-path]:not([data-path="none"]) .icon-tiles .a-svc-link { display: none;
   html[data-path] .icon-tile[data-for] { grid-template-columns: 1fr !important; }
   html[data-path] .icon-tile .card-photo { grid-row: auto !important; }
 }
+
+/* ---- Hub "Your next steps" rail (static; always visible) ---- */
+.cpp-rail { background: var(--stone-2); border-bottom: 1px solid var(--line); padding: 20px 0; }
+.cpp-rail__h { font: 700 var(--step--1)/1 var(--sans); text-transform: uppercase; letter-spacing: .08em; color: var(--ink-2); margin: 0 0 12px; }
+.cpp-rail__list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; counter-reset: cpp; }
+.cpp-rail__list li { counter-increment: cpp; }
+.cpp-rail__list a {
+  display: grid; gap: 4px; height: 100%; padding: 12px 14px 12px 44px; position: relative;
+  background: var(--bone); border: 1px solid var(--line); border-radius: 6px;
+  color: var(--ink); text-decoration: none; font: 600 var(--step--1)/1.35 var(--sans);
+  transition: border-color .2s var(--ease), transform .2s var(--ease);
+}
+.cpp-rail__list a::before { content: counter(cpp, decimal-leading-zero); position: absolute; left: 14px; top: 12px; color: var(--amber); font-weight: 800; }
+.cpp-rail__list a span { font-weight: 500; color: var(--ink-2); font-size: .85em; }
+.cpp-rail__list a:hover, .cpp-rail__list a:focus-visible { border-color: var(--cobalt); transform: translateY(-2px); }
+@media (max-width: 960px) { .cpp-rail__list { grid-template-columns: 1fr; } }
+#problem, #nonprofit-rate { scroll-margin-top: 96px; }
