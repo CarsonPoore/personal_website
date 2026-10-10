@@ -91,5 +91,168 @@
 
   if (typeof module === "object" && module.exports) { module.exports = api; return; }
   root.CPPath = api;
-  /* BROWSER LAYER: added in Task 3 */
+  var html = document.documentElement;
+  var dismissedHub = false;
+
+  function readStore() { try { return localStorage.getItem(STORE); } catch (e) { return null; } }
+  function writeStore(v) { try { if (v == null) localStorage.removeItem(STORE); else localStorage.setItem(STORE, v); } catch (e) {} }
+  function get() { return norm(html.getAttribute("data-path")); }
+  function on() { var k = get(); return k && k !== "none" ? k : null; }
+  function emit() { document.dispatchEvent(new CustomEvent("cp:path", { detail: { path: get() } })); }
+  function set(k) {
+    k = norm(k); if (!k) return;
+    writeStore(k); html.setAttribute("data-path", k); html.removeAttribute("data-loader");
+    render(); emit();
+  }
+  function clear() { writeStore(null); html.removeAttribute("data-path"); render(); emit(); }
+
+  function h(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    return e;
+  }
+  function button(cls, text, fn) { var b = h("button", cls, text); b.type = "button"; b.addEventListener("click", fn); return b; }
+  function focusBar() { var f = document.querySelector(".cpp-bar button, .cpp-bar a"); if (f) f.focus({ preventScroll: true }); }
+
+  /* ---- Path bar ---- */
+  function chips(exclude) {
+    return KEYS.filter(function (k) { return k !== exclude; }).map(function (k) {
+      return button("cpp-chip", CHIP[k], function () { set(k); focusBar(); });
+    });
+  }
+  function renderBar(switching) {
+    var bar = document.querySelector(".cpp-bar"); if (!bar) return;
+    var k = on(), hub = hubKey(location.pathname), inner = h("div", "wrap cpp-bar__inner");
+    bar.textContent = "";
+    if (k && switching) {
+      inner.appendChild(h("span", "cpp-bar__lead", "Switch to:"));
+      chips(k).forEach(function (c) { inner.appendChild(c); });
+      inner.appendChild(button("cpp-btn", "Show everything", function () { set("none"); }));
+      inner.appendChild(button("cpp-btn", "Cancel", function () { renderBar(false); focusBar(); }));
+    } else if (k && hub && hub !== k && !dismissedHub) {
+      inner.appendChild(h("span", "cpp-bar__lead", "You’re reading the " + LABEL[hub] + " page."));
+      inner.appendChild(button("cpp-btn cpp-btn--solid", "Switch to this path", function () { set(hub); focusBar(); }));
+      inner.appendChild(button("cpp-btn", "Stay on " + LABEL[k], function () { dismissedHub = true; renderBar(false); focusBar(); }));
+    } else if (k) {
+      var lead = h("span", "cpp-bar__lead"); lead.appendChild(document.createTextNode("You’re on the "));
+      lead.appendChild(h("strong", null, LABEL[k])); lead.appendChild(document.createTextNode(" path"));
+      inner.appendChild(lead);
+      if (hub !== k) { var a = h("a", null, "See your next steps →"); a.href = HUB[k]; inner.appendChild(a); }
+      inner.appendChild(button("cpp-btn", "Switch", function () { renderBar(true); focusBar(); }));
+    } else if (!get()) {
+      inner.appendChild(h("span", "cpp-bar__lead", "Who are you here for?"));
+      chips(null).forEach(function (c) { inner.appendChild(c); });
+      var x = button("cpp-x", "×", function () { set("none"); }); x.setAttribute("aria-label", "Hide this");
+      inner.appendChild(x);
+    }
+    bar.appendChild(inner);
+  }
+
+  /* ---- Lists ---- */
+  function itemPaths(it) {
+    if (it.getAttribute && it.getAttribute("data-for")) return it.getAttribute("data-for").split(/\s+/);
+    var a = it.matches && it.matches("a[href]") ? it : (it.querySelector ? it.querySelector("a[href]") : null);
+    return a ? pathsFor(a.getAttribute("href")) : null;
+  }
+  function sortList(list, k) {
+    if (!list._cppOrig) list._cppOrig = [].slice.call(list.children);
+    var old = list.querySelector(":scope > .cpp-more"); if (old) list.removeChild(old);
+    var parts = k ? partition(list._cppOrig, k, itemPaths) : { mine: list._cppOrig, other: [] };
+    if (list.hasAttribute("data-path-sort-keep")) { parts = { mine: parts.mine.concat(parts.other), other: [] }; }
+    parts.mine.forEach(function (n) { list.appendChild(n); });
+    if (!parts.other.length) return;
+    var more = h("details", "cpp-more");
+    more.appendChild(h("summary", null, (list.getAttribute("data-path-sort") || "Other options") + " (" + parts.other.length + ")"));
+    var keep = list.className.split(/\s+/).filter(function (c) { return c && c !== "reveal" && c.indexOf("a-") !== 0; }).join(" ");
+    var body = h("div", "cpp-more__body " + keep);
+    parts.other.forEach(function (n) { if (n.classList) n.classList.add("in"); body.appendChild(n); });
+    more.appendChild(body); list.appendChild(more);
+  }
+  // Within a nav column, keep each head in place and sort only the run of sub-links that follows it.
+  function sortRuns(container, subCls, k) {
+    if (!container._cppOrig) container._cppOrig = [].slice.call(container.children);
+    var out = [], run = [];
+    function flush() {
+      if (!run.length) return;
+      var p = k ? partition(run, k, itemPaths) : { mine: run, other: [] };
+      out = out.concat(p.mine, p.other); run = [];
+    }
+    container._cppOrig.forEach(function (n) { if (n.classList.contains(subCls)) run.push(n); else { flush(); out.push(n); } });
+    flush();
+    out.forEach(function (n) { container.appendChild(n); });
+  }
+
+  /* ---- Nav ---- */
+  function tailorNav(k) {
+    var drop = document.querySelector('.nav__drop[aria-label="Who we help"]');
+    if (drop) {
+      var t = drop.previousElementSibling;
+      if (t && !t.hasAttribute("data-cpp-text")) t.setAttribute("data-cpp-text", t.textContent);
+      if (t) t.textContent = k ? "Your path" : t.getAttribute("data-cpp-text");
+      sortList(drop, null);
+      if (k) { var hubA = drop.querySelector('a[href="' + HUB[k] + '"]'); if (hubA) drop.insertBefore(hubA, drop.firstChild); }
+      [].forEach.call(drop.querySelectorAll("a"), function (a) { a.classList.toggle("is-path", !!k && cleanHref(a.getAttribute("href")) === HUB[k]); });
+    }
+    [].forEach.call(document.querySelectorAll(".nav__drop--wide .nav__col"), function (col) {
+      sortRuns(col, "nav__drop-sub", k);
+      [].forEach.call(col.querySelectorAll(".nav__drop-sub"), function (a) {
+        var p = pathsFor(a.getAttribute("href"));
+        a.classList.toggle("cpp-dot", !!k && !!p && p.length < 3 && p.indexOf(k) > -1);
+      });
+    });
+    var mm = document.querySelector(".mobile-menu");
+    if (mm) {
+      var pin = mm.querySelector(".cpp-mobile-pin"); if (pin) mm.removeChild(pin);
+      sortRuns(mm, "mobile-menu__sub", k);
+      if (k) { pin = h("a", "cpp-mobile-pin", "Your path: " + LABEL[k] + " →"); pin.href = HUB[k]; mm.insertBefore(pin, mm.firstChild); }
+    }
+  }
+
+  /* ---- Contact / ticket: carry the path into the email subject ---- */
+  function tailorMailto(k) {
+    if (!/^\/(contact|ticket)(\.html)?$/.test(location.pathname)) return;
+    [].forEach.call(document.querySelectorAll('main a[href^="mailto:"]'), function (a) {
+      if (!a.hasAttribute("data-cpp-href")) a.setAttribute("data-cpp-href", a.getAttribute("href"));
+      var base = a.getAttribute("data-cpp-href");
+      if (!k) { a.setAttribute("href", base); return; }
+      var tag = "(" + LABEL[k] + " path)";
+      a.setAttribute("href", /[?&]subject=/.test(base)
+        ? base.replace(/([?&]subject=)([^&]*)/, function (m, p, s) { return p + s + encodeURIComponent(" " + tag); })
+        : base + (base.indexOf("?") > -1 ? "&" : "?") + "subject=" + encodeURIComponent("Free call " + tag));
+    });
+  }
+
+  /* ---- Footer: way back to the question after "Just looking" ---- */
+  function renderFooterLink() {
+    var brand = document.querySelector(".footer__brand"); if (!brand) return;
+    var b = brand.querySelector(".cpp-footer-link"); if (b) brand.removeChild(b);
+    if (get() !== "none") return;
+    brand.appendChild(button("cpp-footer-link", "Choose your path", function () { clear(); window.scrollTo(0, 0); focusBar(); }));
+  }
+
+  /* ---- Article pages: "Next for you" (filled in Task 7) ---- */
+  function renderNextFor(k) {}
+
+  function render() {
+    var k = on();
+    renderBar(false); tailorNav(k);
+    [].forEach.call(document.querySelectorAll("[data-path-sort]"), function (l) { sortList(l, k); });
+    tailorMailto(k); renderFooterLink(); renderNextFor(k);
+  }
+
+  /* ---- Loader (filled in Task 4) ---- */
+  function initLoader() {}
+
+  api.get = get; api.set = set; api.clear = clear;
+  if (/[?&]path=/.test(location.search)) {
+    try { var u = new URL(location.href); u.searchParams.delete("path"); history.replaceState(history.state, "", u.pathname + u.search + u.hash); } catch (e) {}
+  }
+  initLoader(); render();
+  window.addEventListener("pageshow", function (e) {
+    if (!e.persisted) return;
+    var s = norm(readStore());
+    if (s) html.setAttribute("data-path", s); else html.removeAttribute("data-path");
+    render();
+  });
 })(this);
