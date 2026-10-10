@@ -252,8 +252,18 @@
     if (anchor) anchor.parentNode.insertBefore(sec, anchor);
   }
 
+  /* ---- Headline swaps: alternates live in data-alt-* attributes so raw-HTML crawlers read one h1 ---- */
+  function swapCopy(k) {
+    [].forEach.call(document.querySelectorAll("[data-path-swap]"), function (e) {
+      if (!e.hasAttribute("data-generic")) e.setAttribute("data-generic", e.innerHTML);
+      var next = (k && e.getAttribute("data-alt-" + k)) || e.getAttribute("data-generic");
+      if (e.innerHTML !== next) e.innerHTML = next;
+    });
+  }
+
   function render() {
     var k = on();
+    swapCopy(k);
     renderBar(false); tailorNav(k);
     [].forEach.call(document.querySelectorAll("[data-path-sort]"), function (l) { sortList(l, k); });
     tailorMailto(k); renderFooterLink(); renderNextFor(k);

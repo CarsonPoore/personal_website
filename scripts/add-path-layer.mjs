@@ -5,7 +5,7 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const EXCLUDE = new Set(["docs", "dist", "motion", "node_modules", ".superpowers", "screenshots", "uploads", "media", "src", "scripts", "tests", ".git", ".claude"]);
-const ASSETS = '<link rel="stylesheet" href="/path.css?v=20261009-1" />\n<script defer src="/path.js?v=20261009-1"></script>\n';
+const ASSETS = '<link rel="stylesheet" href="/path.css?v=20261010-1" />\n<script defer src="/path.js?v=20261010-1"></script>\n';
 const BAR = '<div class="cpp-bar" role="region" aria-label="Your path"></div>';
 
 export function injectPathLayer(html, snippet) {

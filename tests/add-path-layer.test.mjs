@@ -13,7 +13,7 @@ test("injects snippet before first stylesheet, assets before </head>, bar after 
   const r = injectPathLayer(PAGE, SNIP);
   assert.ok(r.changed);
   assert.ok(r.html.indexOf("cp-path:head") < r.html.indexOf('href="/styles.css"'));
-  assert.match(r.html, /<link rel="stylesheet" href="\/path\.css\?v=20261009-1" \/>\n<script defer src="\/path\.js\?v=20261009-1"><\/script>\n<\/head>/);
+  assert.match(r.html, /<link rel="stylesheet" href="\/path\.css\?v=20261010-1" \/>\n<script defer src="\/path\.js\?v=20261010-1"><\/script>\n<\/head>/);
   assert.match(r.html, /<\/header>\n<div class="cpp-bar" role="region" aria-label="Your path"><\/div>/);
 });
 test("idempotent", () => {
