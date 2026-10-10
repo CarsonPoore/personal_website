@@ -33,6 +33,17 @@ Static multi-page marketing site for Carson Poore Consulting. Built as plain HTM
     └── letterhead.png
 ```
 
+## Client pathways
+
+Visitors pick who the work is for (local business, founder, nonprofit, or "just looking"), and every page leads with that path. Spec: `docs/superpowers/specs/2026-10-09-client-pathways-design.md`.
+
+- `path.js` holds the audience mapping (`MAP`, `ARTICLES`) and all path behaviour: the path bar, nav tailoring, `data-path-sort` lists, "Next for you" on articles, and the homepage loader. Add a new service, tool, or article to `MAP`/`ARTICLES` or the mapping test fails.
+- `path.css` holds the copy variants (`data-path-generic` / `data-path-copy="founders"`), the bar, the loader, and per-page styles.
+- Every page carries an inline head snippet (`scripts/path-snippet.html`) that sets `<html data-path>` before first paint, plus a `.cpp-bar` slot after the nav. On a new page, run `node scripts/add-path-layer.mjs`; it is idempotent.
+- Link to a path directly with `?path=local|founders|nonprofits`, for ads, emails, and QR codes.
+- Tests: `node --test "tests/*.test.mjs"`.
+- Bump the `?v=` on `path.css` / `path.js` in `scripts/add-path-layer.mjs` and across pages whenever either file changes. Vercel caches them as immutable.
+
 ## Local preview
 
 Any static server. The simplest:
