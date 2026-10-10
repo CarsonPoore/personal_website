@@ -2356,3 +2356,27 @@ a:hover .card-photo img, .practice-card:hover .card-photo img { transform: scale
 /* Let aspect-ratio win over the <img height> attribute */
 .card-photo img, .article-photo img, .photo img { height: auto; }
 .photo--fill img { height: 100%; }
+
+/* Custom cursor (see site.js) */
+.cursor-dot, .cursor-ring {
+  position: fixed; top: 0; left: 0; z-index: 10000;
+  pointer-events: none; border-radius: 50%;
+  will-change: transform;
+}
+.cursor-dot { width: 6px; height: 6px; background: var(--cobalt); transition: opacity .2s, width .2s, height .2s; }
+.cursor-ring {
+  width: 32px; height: 32px; border: 1.5px solid var(--navy);
+  transition: width .25s ease, height .25s ease, border-color .25s, background-color .25s, opacity .2s;
+}
+html.has-cursor, html.has-cursor * { cursor: none; }
+html.has-cursor input, html.has-cursor textarea, html.has-cursor [contenteditable="true"] { cursor: text; }
+html.cursor-hover .cursor-ring { width: 52px; height: 52px; border-color: var(--amber); background: rgba(224, 160, 48, .12); }
+html.cursor-hover .cursor-dot { background: var(--amber); }
+html.cursor-down .cursor-ring { width: 24px; height: 24px; }
+html.cursor-text .cursor-dot, html.cursor-text .cursor-ring,
+html.cursor-out .cursor-dot, html.cursor-out .cursor-ring { opacity: 0; }
+/* Stay visible on dark sections */
+html.cursor-dark .cursor-ring { border-color: var(--cream); }
+html.cursor-dark .cursor-dot { background: var(--cobalt-3); }
+html.cursor-dark.cursor-hover .cursor-ring { border-color: var(--amber); }
+html.cursor-dark.cursor-hover .cursor-dot { background: var(--amber); }

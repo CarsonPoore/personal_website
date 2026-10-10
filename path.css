@@ -49,7 +49,7 @@ html.cpp-js:not([data-path="none"]):not([data-loader]) .cpp-bar {
 
 /* ---- First-visit loader (homepage) ---- */
 html[data-loader="pending"] { background: var(--navy); }
-html[data-loader="pending"] body > *:not(.cpp-loader) { visibility: hidden; }
+html[data-loader="pending"] body > *:not(.cpp-loader):not(.cursor-dot):not(.cursor-ring) { visibility: hidden; }
 html[data-loader="pending"] .cpp-loader, .cpp-loader.is-leaving { display: grid !important; }
 .cpp-loader {
   /* Top-anchored, not centered: re-centering when the question reveals (or fonts swap) registered as a 0.57 layout shift. */

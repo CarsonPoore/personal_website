@@ -294,3 +294,58 @@
   if (mq.addEventListener) mq.addEventListener("change", onChange);
   else if (mq.addListener) mq.addListener(onChange);
 })();
+
+/* Custom cursor: cobalt dot + trailing ring. Fine pointers only; off for reduced motion. */
+(function () {
+  if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  const dot = document.createElement("div");
+  const ring = document.createElement("div");
+  dot.className = "cursor-dot";
+  ring.className = "cursor-ring";
+  dot.setAttribute("aria-hidden", "true");
+  ring.setAttribute("aria-hidden", "true");
+  document.body.append(ring, dot);
+  document.documentElement.classList.add("has-cursor");
+
+  const HOVER = "a, button, [role='button'], label, summary, select, .btn";
+  // Dark = nearest opaque background is dark. Cached per element.
+  const darkCache = new WeakMap();
+  const isDark = el => {
+    for (let n = el; n && n !== document.documentElement; n = n.parentElement) {
+      if (darkCache.has(n)) return darkCache.get(n);
+      const m = getComputedStyle(n).backgroundColor.match(/[\d.]+/g);
+      if (m && (m[3] === undefined || +m[3] > 0.5)) {
+        const dark = 0.299 * m[0] + 0.587 * m[1] + 0.114 * m[2] < 110;
+        darkCache.set(el, dark);
+        return dark;
+      }
+    }
+    return false;
+  };
+  const TEXT = "input, textarea, [contenteditable='true']";
+  let x = -100, y = -100, rx = x, ry = y, raf = 0;
+
+  const tick = () => {
+    rx += (x - rx) * 0.2;
+    ry += (y - ry) * 0.2;
+    ring.style.transform = `translate3d(${rx}px, ${ry}px, 0) translate(-50%, -50%)`;
+    raf = Math.abs(x - rx) + Math.abs(y - ry) > 0.1 ? requestAnimationFrame(tick) : 0;
+  };
+
+  document.addEventListener("mousemove", e => {
+    x = e.clientX; y = e.clientY;
+    dot.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%)`;
+    document.documentElement.classList.remove("cursor-out");
+    const t = e.target instanceof Element ? e.target : null;
+    document.documentElement.classList.toggle("cursor-hover", !!(t && t.closest(HOVER)));
+    document.documentElement.classList.toggle("cursor-text", !!(t && t.closest(TEXT)));
+    document.documentElement.classList.toggle("cursor-dark", !!(t && isDark(t)));
+    if (!raf) raf = requestAnimationFrame(tick);
+  }, { passive: true });
+
+  document.addEventListener("mouseleave", () => document.documentElement.classList.add("cursor-out"));
+  document.addEventListener("mousedown", () => document.documentElement.classList.add("cursor-down"));
+  document.addEventListener("mouseup", () => document.documentElement.classList.remove("cursor-down"));
+})();
