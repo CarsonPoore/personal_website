@@ -19,7 +19,7 @@ function run({ search = "", pathname = "/", stored = null, ua = "Mozilla/5.0", t
     setItem: (k, v) => { if (throwStorage) throw new Error("blocked"); store[k] = v; },
   };
   const win = { location: { search, pathname }, localStorage: ls, navigator: { userAgent: ua },
-    setTimeout: (fn) => timers.push(fn), CPPath: cpPath ? {} : undefined };
+    setTimeout: (fn) => timers.push(fn), CPPathLoader: cpPath ? true : undefined };
   vm.runInNewContext(src, { document: { documentElement: de }, window: win, URLSearchParams });
   return { attrs, classes, store, timers };
 }

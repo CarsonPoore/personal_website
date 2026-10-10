@@ -236,7 +236,7 @@
     brand.appendChild(button("cpp-footer-link", "Choose your path", function () { clear(); window.scrollTo(0, 0); focusBar(); }));
   }
 
-  /* ---- Article pages: "Next for you" (filled in Task 7) ---- */
+  /* ---- Article pages: "Next for you" ---- */
   function renderNextFor(k) {
     var old = document.querySelector(".cpp-next"); if (old) old.parentNode.removeChild(old);
     var here = cleanHref(location.pathname);
@@ -259,10 +259,13 @@
     tailorMailto(k); renderFooterLink(); renderNextFor(k);
   }
 
-  /* ---- Loader (filled in Task 4) ---- */
+  /* ---- Loader ---- */
   function initLoader() {
     var box = document.querySelector(".cpp-loader");
-    if (!box || html.getAttribute("data-loader") !== "pending") return;
+    if (html.getAttribute("data-loader") !== "pending") return;
+    // No dialog to show (missing markup or path.css failed): never leave the page hidden or inert.
+    if (!box || getComputedStyle(box).display === "none") { html.removeAttribute("data-loader"); return; }
+    window.CPPathLoader = true;
     var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
     var others = [].filter.call(document.body.children, function (n) { return n !== box && n.tagName !== "SCRIPT"; });
     others.forEach(function (n) { n.inert = true; });
@@ -294,6 +297,6 @@
     if (!e.persisted) return;
     var s = norm(readStore());
     if (s) html.setAttribute("data-path", s); else html.removeAttribute("data-path");
-    render();
+    render(); emit();
   });
 })(this);
