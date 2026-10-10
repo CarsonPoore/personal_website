@@ -159,12 +159,17 @@
     if (!list._cppOrig) list._cppOrig = [].slice.call(list.children);
     var old = list.querySelector(":scope > .cpp-more"); if (old) list.removeChild(old);
     var parts = k ? partition(list._cppOrig, k, itemPaths) : { mine: list._cppOrig, other: [] };
+    // Keep everything in place when the list has nothing for this path; a heading over an empty list reads as broken.
+    var anyMine = parts.mine.some(function (n) { return !!itemPaths(n); });
+    if (!anyMine) parts = { mine: list._cppOrig, other: [] };
     if (list.hasAttribute("data-path-sort-keep")) { parts = { mine: parts.mine.concat(parts.other), other: [] }; }
     parts.mine.forEach(function (n) { list.appendChild(n); });
     if (!parts.other.length) return;
     var more = h("details", "cpp-more");
     more.appendChild(h("summary", null, (list.getAttribute("data-path-sort") || "Other options") + " (" + parts.other.length + ")"));
-    var keep = list.className.split(/\s+/).filter(function (c) { return c && c !== "reveal" && c.indexOf("a-") !== 0; }).join(" ");
+    // Grid/flex lists lend their layout classes to the collapsed body; block lists (cards with their own chrome) don't.
+    var keep = /grid|flex/.test(getComputedStyle(list).display)
+      ? list.className.split(/\s+/).filter(function (c) { return c && c !== "reveal" && c.indexOf("a-") !== 0; }).join(" ") : "";
     var body = h("div", "cpp-more__body " + keep);
     parts.other.forEach(function (n) { if (n.classList) n.classList.add("in"); body.appendChild(n); });
     more.appendChild(body); list.appendChild(more);
@@ -232,7 +237,20 @@
   }
 
   /* ---- Article pages: "Next for you" (filled in Task 7) ---- */
-  function renderNextFor(k) {}
+  function renderNextFor(k) {
+    var old = document.querySelector(".cpp-next"); if (old) old.parentNode.removeChild(old);
+    var here = cleanHref(location.pathname);
+    if (!k || here.indexOf("/articles/") !== 0 || here === "/articles/") return;
+    var picks = nextFor(k, here, 3); if (!picks.length) return;
+    var sec = h("section", "cpp-next"), wrap = h("div", "wrap"), list = h("ul", "cpp-next__list");
+    wrap.appendChild(h("h2", "cpp-next__h", "Next for you"));
+    picks.forEach(function (p) { var li = h("li"), a = h("a", null, p.title); a.href = p.href; li.appendChild(a); list.appendChild(li); });
+    wrap.appendChild(list);
+    var hub = h("a", "tlink", "Everything for the " + LABEL[k] + " path →"); hub.href = HUB[k]; wrap.appendChild(hub);
+    sec.appendChild(wrap);
+    var anchor = document.querySelector(".next-strip") || document.querySelector("footer");
+    if (anchor) anchor.parentNode.insertBefore(sec, anchor);
+  }
 
   function render() {
     var k = on();

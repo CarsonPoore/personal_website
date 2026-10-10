@@ -134,3 +134,11 @@ html[data-path]:not([data-path="none"]) .icon-tiles .a-svc-link { display: none;
 .cpp-rail__list a:hover, .cpp-rail__list a:focus-visible { border-color: var(--cobalt); transform: translateY(-2px); }
 @media (max-width: 960px) { .cpp-rail__list { grid-template-columns: 1fr; } }
 #problem, #nonprofit-rate { scroll-margin-top: 96px; }
+
+/* ---- Article pages: Next for you ---- */
+.cpp-next { padding: clamp(32px, 5vw, 56px) 0; border-top: 1px solid var(--line); }
+.cpp-next__h { font: 800 var(--step-2, 1.5rem)/1.1 var(--sans); margin: 0 0 16px; }
+.cpp-next__list { list-style: none; padding: 0; margin: 0 0 16px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.cpp-next__list a { display: block; height: 100%; padding: 16px; border: 1px solid var(--line); border-radius: 6px; color: var(--ink); text-decoration: none; font-weight: 600; background: var(--bone); }
+.cpp-next__list a:hover, .cpp-next__list a:focus-visible { border-color: var(--cobalt); }
+@media (max-width: 760px) { .cpp-next__list { grid-template-columns: 1fr; } }

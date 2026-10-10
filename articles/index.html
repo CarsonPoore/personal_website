@@ -431,7 +431,7 @@
 
   <div class="topic-bar" role="toolbar" aria-label="Filter articles by topic">
     <div class="wrap"><div class="topic-bar__row">
-      <button type="button" class="topic-chip is-active" data-topic="all" aria-pressed="true">All <span>31</span></button><button type="button" class="topic-chip" data-topic="local" aria-pressed="false">Local search &amp; Google <span>5</span></button><button type="button" class="topic-chip" data-topic="websites" aria-pressed="false">Websites <span>3</span></button><button type="button" class="topic-chip" data-topic="ads" aria-pressed="false">Ads &amp; analytics <span>4</span></button><button type="button" class="topic-chip" data-topic="content" aria-pressed="false">Content, email &amp; social <span>3</span></button><button type="button" class="topic-chip" data-topic="crm-ai" aria-pressed="false">CRM, AI &amp; automation <span>6</span></button><button type="button" class="topic-chip" data-topic="strategy" aria-pressed="false">Strategy &amp; budget <span>4</span></button><button type="button" class="topic-chip" data-topic="hiring" aria-pressed="false">Hiring marketing help <span>4</span></button><button type="button" class="topic-chip" data-topic="nonprofits" aria-pressed="false">Nonprofits <span>2</span></button>
+      <button type="button" class="topic-chip" data-topic="foryou" aria-pressed="false" hidden>For you</button><button type="button" class="topic-chip is-active" data-topic="all" aria-pressed="true">All <span>31</span></button><button type="button" class="topic-chip" data-topic="local" aria-pressed="false">Local search &amp; Google <span>5</span></button><button type="button" class="topic-chip" data-topic="websites" aria-pressed="false">Websites <span>3</span></button><button type="button" class="topic-chip" data-topic="ads" aria-pressed="false">Ads &amp; analytics <span>4</span></button><button type="button" class="topic-chip" data-topic="content" aria-pressed="false">Content, email &amp; social <span>3</span></button><button type="button" class="topic-chip" data-topic="crm-ai" aria-pressed="false">CRM, AI &amp; automation <span>6</span></button><button type="button" class="topic-chip" data-topic="strategy" aria-pressed="false">Strategy &amp; budget <span>4</span></button><button type="button" class="topic-chip" data-topic="hiring" aria-pressed="false">Hiring marketing help <span>4</span></button><button type="button" class="topic-chip" data-topic="nonprofits" aria-pressed="false">Nonprofits <span>2</span></button>
     </div></div>
   </div>
 
@@ -545,14 +545,16 @@
   var empty = document.querySelector('.blog-empty');
   var topic = 'all';
 
+  function pathOn() { var k = window.CPPath && CPPath.get(); return k && k !== 'none' ? k : null; }
+  function forYou(c) { var k = pathOn(); return !!k && CPPath.isFor(CPPath.pathsFor(c.getAttribute('href')), k); }
   function apply() {
     var term = q.value.trim().toLowerCase();
     var shown = 0;
     secs.forEach(function (s) {
-      var inTopic = topic === 'all' || s.dataset.topic === topic;
+      var inTopic = topic === 'all' || topic === 'foryou' || s.dataset.topic === topic;
       var n = 0;
       [].forEach.call(s.querySelectorAll('.blog-card'), function (c) {
-        var hit = inTopic && (!term || c.dataset.search.indexOf(term) !== -1);
+        var hit = inTopic && (topic !== 'foryou' || forYou(c)) && (!term || c.dataset.search.indexOf(term) !== -1);
         c.hidden = !hit; if (hit) { n++; c.classList.add('in'); }
       });
       s.hidden = n === 0; shown += n;
@@ -560,10 +562,11 @@
     feat.hidden = topic !== 'all' || !!term;
     empty.classList.toggle('is-on', shown === 0);
     status.textContent = term ? shown + (shown === 1 ? ' article' : ' articles') + ' match “' + q.value.trim() + '”'
-      : (topic === 'all' ? '' : shown + (shown === 1 ? ' article' : ' articles') + ' in this topic');
+      : topic === 'all' ? '' : topic === 'foryou' ? shown + ' articles picked for your path. Choose All to see every article.'
+      : shown + (shown === 1 ? ' article' : ' articles') + ' in this topic';
   }
   function setTopic(t, push) {
-    topic = chips.some(function (c) { return c.dataset.topic === t; }) ? t : 'all';
+    topic = chips.some(function (c) { return !c.hidden && c.dataset.topic === t; }) ? t : 'all';
     chips.forEach(function (c) { var on = c.dataset.topic === topic; c.classList.toggle('is-active', on); c.setAttribute('aria-pressed', on); });
     apply();
     if (push) history.replaceState(null, '', topic === 'all' ? location.pathname : '#' + topic);
@@ -577,7 +580,13 @@
   });
   q.addEventListener('input', apply);
   window.addEventListener('hashchange', function () { setTopic(location.hash.slice(1) || 'all', false); });
-  setTopic(location.hash.slice(1) || 'all', false);
+  var fy = document.querySelector('.topic-chip[data-topic="foryou"]');
+  function boot() {
+    fy.hidden = !pathOn();
+    setTopic(location.hash.slice(1) || (pathOn() ? 'foryou' : 'all'), false);
+  }
+  document.addEventListener('cp:path', boot);
+  if (window.CPPath) boot(); else document.addEventListener('DOMContentLoaded', boot);
 })();
 </script>
 
