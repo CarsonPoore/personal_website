@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>How to measure marketing ROI for a small business</title>
+<meta name="description" content="One formula, two numbers to track, and an honest look at attribution. How to count calls and booked jobs, and when tracking isn't worth the trouble." />
+<link rel="canonical" href="https://carsonpoore.com/articles/measure-marketing-roi" />
+<meta property="og:title" content="How to measure marketing ROI for a small business" />
+<meta property="og:description" content="One formula, two numbers to track, and an honest look at attribution. How to count calls and booked jobs, and when tracking isn't worth the trouble." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://carsonpoore.com/articles/measure-marketing-roi" />
+<meta property="og:image" content="https://carsonpoore.com/media/photos/analytics-1-laptop-chart.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
+<link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
+<link rel="stylesheet" href="/styles.css?v=20261008-5" />
+<script defer src="/site.js?v=20261008-3"></script>
+<style>
+  /* Article: measure marketing ROI — page-specific layout on top of shared .article styles */
+  .article .byline { margin: 0 0 26px; }
+  .article .answer strong { color: var(--ink); font-weight: 800; }
+  .article .faq { margin-top: 10px; }
+
+  /* Comparison table: scrolls inside its own box on narrow screens, never the page */
+  .cmp-table { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 24px 0 8px; }
+  .cmp-table table { margin: 0; min-width: 560px; }
+  .cmp-table th[scope="row"] { white-space: nowrap; }
+
+  /* Tool handoff band: flat navy panel inside the article column */
+  .tool-handoff {
+    margin: 36px 0 8px; padding: clamp(24px, 4vw, 36px);
+    background: var(--navy); border-radius: var(--r-2);
+    position: relative;
+  }
+  .tool-handoff .eyebrow { color: var(--cream-2); }
+  .article .tool-handoff h3 { color: #fff; margin: 14px 0 10px; max-width: 24ch; }
+  .article .tool-handoff p { color: var(--cream-2); max-width: 54ch; }
+  .tool-handoff .row-cta { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 12px; }
+  .article .tool-handoff .btn { text-decoration: none; }
+  .tool-handoff__corner {
+    position: absolute; top: 14px; right: 16px;
+    font-size: 0.62rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--cream-2); opacity: 0.55;
+  }
+
+  .next-reads { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 10px; }
+  .next-reads li { margin: 0; padding: 0; }
+  .next-reads a { font-weight: 600; }
+  .next-reads .next-reads__kind {
+    display: inline-block; min-width: 64px; margin-right: 10px;
+    font-size: 0.66rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .closing .row-cta { display: flex; flex-wrap: wrap; gap: 12px; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://carsonpoore.com/#org",
+      "name": "Carson Poore Consulting",
+      "url": "https://carsonpoore.com/",
+      "logo": "https://carsonpoore.com/brand/cpc-mark-royalblue.svg",
+      "image": "https://carsonpoore.com/brand/carson-headshot.png",
+      "email": "carson@carsonpoore.com",
+      "description": "A growth consultancy in Indianapolis with four practices — marketing, technical, strategy, and coaching — for small businesses, founders, and nonprofits. Prices published on the site.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Indianapolis",
+        "addressRegion": "IN",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Indianapolis"
+        },
+        {
+          "@type": "State",
+          "name": "Indiana"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
+      ],
+      "priceRange": "$1,200–$4,800/month",
+      "founder": {
+        "@type": "Person",
+        "@id": "https://carsonpoore.com/about#carson",
+        "name": "Carson Poore",
+        "sameAs": [
+          "https://www.linkedin.com/in/carson-poore/"
+        ]
+      }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://carsonpoore.com/articles/measure-marketing-roi#article",
+      "headline": "How do I measure marketing ROI for a small business?",
+      "description": "One formula, two numbers to track, and an honest look at attribution. How to count calls and booked jobs, and when tracking isn't worth the trouble.",
+      "author": {
+        "@id": "https://carsonpoore.com/about#carson"
+      },
+      "publisher": {
+        "@id": "https://carsonpoore.com/#org"
+      },
+      "image": "https://carsonpoore.com/media/photos/analytics-1-laptop-chart.jpg",
+      "datePublished": "2026-10-09",
+      "dateModified": "2026-10-09",
+      "mainEntityOfPage": "https://carsonpoore.com/articles/measure-marketing-roi"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a good marketing ROI for a small business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There’s no single good number. Zero is break-even, and anything above it earns money, but margins matter more than the percentage. A 50% return on revenue can still be a loss once the cost of the work is counted. Set your own target from the profit on an average customer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I measure ROI if customers call instead of buying online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Track the call. Use a separate tracking number for each channel, ask every caller how they found you, and log the booked job afterward. GA4 alone sees a tap on a phone number, not whether a call connected, so calls need their own tracking."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I measure ROI on social media or branding?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Partly. You can count messages, calls, and “how did you hear about us” answers that mention social. You can’t price every impression, and we wouldn’t try. Judge it over 90 days by whether customers name it, and don’t hold it to the same math as paid search."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should I review marketing results?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Look at the numbers monthly and judge over 90 days. Weekly checks are fine for catching broken tracking or a missed-call problem, but week-to-week swings are noise. Pick a review date three months out and compare against what you wrote down at the start."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need paid software to track marketing ROI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. GA4 and Google Ads are free, and a spreadsheet with date, source, job, and payment covers a lot. Pay for call tracking once phone calls are your main lead source and you can’t tell which ones come from marketing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does Carson Poore Consulting’s monthly report include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every retainer includes a one-page monthly report: calls and form fills, booked work, spend on ads and on us, search terms we cut, and the one change for next month. Retainers are $1,200, $2,400, or $4,800 a month, three months minimum, then month to month."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://carsonpoore.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles", "item": "https://carsonpoore.com/articles"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Measure marketing ROI",
+          "item": "https://carsonpoore.com/articles/measure-marketing-roi"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="page">
+
+<header class="nav">
+  <div class="nav__inner">
+    <a href="/" class="brand" aria-label="Carson Poore Consulting home"><span class="brand__mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="30" height="30" /></span><span class="brand__name"><span>Carson Poore</span><span class="brand__desc">Consulting</span></span></a>
+    <nav class="nav__links" aria-label="Primary">
+      <div class="nav__item has-drop">
+        <a href="/services" class="nav__top">Services</a>
+        <div class="nav__drop nav__drop--wide" aria-label="Services">
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/marketing">Marketing</a>
+            <a class="nav__drop-sub" href="/services/branding">Branding</a>
+            <a class="nav__drop-sub" href="/services/content-marketing">Content marketing</a>
+            <a class="nav__drop-sub" href="/services/social-media">Social media</a>
+            <a class="nav__drop-sub" href="/services/video-photo">Video &amp; photo</a>
+            <a class="nav__drop-sub" href="/services/seo">SEO &amp; AI search</a>
+            <a class="nav__drop-sub" href="/services/local-seo">Local SEO</a>
+            <a class="nav__drop-sub" href="/services/google-ad-grants">Google Ad Grants</a>
+          </div>
+          <div class="nav__col">
+            <a class="nav__drop-head" href="/services/technical">Technical</a>
+            <a class="nav__drop-sub" href="/services/websites">Web design &amp; development</a>
+            <a class="nav__drop-sub" href="/services/ai-automation">AI &amp; automation</a>
+            <a class="nav__drop-sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+            <a class="nav__drop-sub" href="/services/google-ads">Google Ads</a>
+            <a class="nav__drop-sub" href="/services/analytics">GA4 &amp; analytics</a>
+            <a class="nav__drop-head" href="/services/strategy">Strategy &amp; planning</a>
+            <a class="nav__drop-head" href="/services/coaching">Coaching &amp; growth</a>
+          </div>
+          <div class="nav__drop-foot">
+            <a href="/services">All services</a>
+            <a href="/investment#projects">Project pricing</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav__item has-drop">
+        <button type="button" class="nav__top nav__toggle" aria-expanded="false">Who we help</button>
+        <div class="nav__drop" aria-label="Who we help">
+          <a href="/for/local-businesses">Local businesses</a>
+          <a href="/for/founders">Founders &amp; startups</a>
+          <a href="/for/nonprofits">Nonprofits</a>
+        </div>
+      </div>
+      <a href="/method">Method</a>
+      <a href="/investment">Pricing</a>
+      <div class="nav__item has-drop">
+        <a href="/resources" class="nav__top">Resources</a>
+        <div class="nav__drop" aria-label="Resources">
+          <a href="/articles">Articles</a>
+          <a href="/resources#tools">Free tools</a>
+        </div>
+      </div>
+      <a href="/about">About</a>
+      <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
+    </nav>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" aria-hidden="true">
+  <span class="mobile-menu__group">Services</span>
+  <a href="/services/marketing">Marketing</a>
+  <a class="mobile-menu__sub" href="/services/branding">Branding</a>
+  <a class="mobile-menu__sub" href="/services/content-marketing">Content marketing</a>
+  <a class="mobile-menu__sub" href="/services/social-media">Social media</a>
+  <a class="mobile-menu__sub" href="/services/video-photo">Video &amp; photo</a>
+  <a class="mobile-menu__sub" href="/services/seo">SEO &amp; AI search</a>
+  <a class="mobile-menu__sub" href="/services/local-seo">Local SEO</a>
+  <a class="mobile-menu__sub" href="/services/google-ad-grants">Google Ad Grants</a>
+  <a href="/services/technical">Technical</a>
+  <a class="mobile-menu__sub" href="/services/websites">Web design &amp; development</a>
+  <a class="mobile-menu__sub" href="/services/ai-automation">AI &amp; automation</a>
+  <a class="mobile-menu__sub" href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a>
+  <a class="mobile-menu__sub" href="/services/google-ads">Google Ads</a>
+  <a class="mobile-menu__sub" href="/services/analytics">GA4 &amp; analytics</a>
+  <a href="/services/strategy">Strategy &amp; planning</a>
+  <a href="/services/coaching">Coaching &amp; growth</a>
+  <span class="mobile-menu__group">Who we help</span>
+  <a href="/for/local-businesses">Local businesses</a>
+  <a href="/for/founders">Founders &amp; startups</a>
+  <a href="/for/nonprofits">Nonprofits</a>
+  <span class="mobile-menu__group">Explore</span>
+  <a href="/method">Method</a>
+  <a href="/investment">Pricing</a>
+  <a href="/resources">Resources</a>
+  <a class="mobile-menu__sub" href="/articles">Articles</a>
+  <a href="/about">About</a>
+  <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
+</div>
+
+<main>
+
+  <!-- ARTICLE HERO -->
+  <section class="hero page-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/articles">Articles</a></li>
+          <li aria-current="page">Measure marketing ROI</li>
+        </ol>
+      </nav>
+      <div class="page-hero__grid">
+        <div class="page-hero__copy">
+          <h1 class="reveal" data-delay="1">How do I measure marketing ROI for a <em>small business?</em></h1>
+          <p class="hero__sub reveal mt-md" data-delay="2">One simple formula, the two numbers worth tracking every month, and a straight answer on why no tool can tell you exactly which dollar did the work.</p>
+        </div>
+        <div class="motion-frame motion-frame--hero page-hero__motion reveal" data-delay="2">
+          <video class="motion-loop" autoplay muted loop playsinline preload="none" poster="/media/motion/proof-line.jpg?v=20261008b" width="960" height="800" aria-hidden="true"><source src="/media/motion/proof-line.webm?v=20261008b" type="video/webm" /><source src="/media/motion/proof-line.mp4?v=20261008b" type="video/mp4" /></video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <section class="section">
+    <div class="wrap">
+      <article class="article">
+
+        <div class="byline reveal">
+          <img src="/brand/carson-headshot.png" alt="Carson Poore" width="34" height="34" />
+          <span>By <a href="/about">Carson Poore</a></span>
+          <span class="updated">Last updated: Oct 9, 2026</span>
+        </div>
+
+        <figure class="article-photo reveal"><img src="/media/photos/analytics-1-laptop-chart.jpg" alt="A person at a laptop showing a colorful chart" width="1600" height="1000" decoding="async" /></figure>
+        <!-- Photo: dlxmedia.hu / Unsplash — https://unsplash.com/photos/rqMWNKRLVuw -->
+
+        <p class="answer reveal" data-delay="1">Take what the marketing earned you, subtract what it cost, and divide by the cost: <strong>(profit &minus; spend) &divide; spend</strong>. Then track <strong>cost per lead</strong> and <strong>cost per customer</strong>, which are easier to act on. Count calls and booked jobs, not clicks, and ask every new customer how they found you.</p>
+
+        <p>That&rsquo;s the whole method. The rest of this page is the part that makes it honest: which profit number to use, what to count, and why no tool will ever tell you exactly which dollar did the work. For a small business, a rough answer you trust beats a precise answer you don&rsquo;t.</p>
+
+        <h2>What&rsquo;s the simple formula for marketing ROI?</h2>
+
+        <p>ROI is the return on a dollar you spent. Use gross profit, meaning what&rsquo;s left after the cost of delivering the work, not revenue. Revenue flatters you, and marketing doesn&rsquo;t pay the bills until the costs are covered.</p>
+
+        <p>Here&rsquo;s an example with made-up numbers. You spend $2,000 in a month. It brings in 4 new customers who each pay $900, so $3,600 in revenue. Your margin is 40%. That&rsquo;s $1,440 in gross profit. The result:</p>
+
+        <div class="cmp-table reveal">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Measure</th>
+                <th scope="col">Formula</th>
+                <th scope="col">Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">ROI on revenue</th><td>(revenue &minus; spend) &divide; spend</td><td>($3,600 &minus; $2,000) &divide; $2,000 = +80%</td></tr>
+              <tr><th scope="row">ROI on gross profit</th><td>(gross profit &minus; spend) &divide; spend</td><td>($1,440 &minus; $2,000) &divide; $2,000 = &minus;28%</td></tr>
+              <tr><th scope="row">Cost per lead</th><td>spend &divide; leads</td><td>$2,000 &divide; 40 leads = $50</td></tr>
+              <tr><th scope="row">Cost per customer</th><td>spend &divide; new customers</td><td>$2,000 &divide; 4 = $500</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Same month, same marketing. On revenue it looks like a win. On profit it lost money. That gap is why we always start with margin. There&rsquo;s one fair exception: if those customers come back, the first sale isn&rsquo;t the whole story. A heating customer who signs a yearly tune-up plan is worth more than $900. Count repeat work when you know it&rsquo;s real, and say so in the math.</p>
+
+        <h2>What are cost per lead and cost per customer?</h2>
+
+        <p>They&rsquo;re the two numbers you&rsquo;ll use every month. Cost per lead is spend divided by the calls and forms that came in. Cost per customer is spend divided by the people who actually paid. The second one is the one that matters. A cheap lead who never books is just noise.</p>
+
+        <p>It helps to know what&rsquo;s typical. LocaliQ&rsquo;s 2026 benchmarks put the average Google Ads cost per lead at <a href="https://www.localiq.com/blog/search-advertising-benchmarks/">$66.69, and $90.92 for home and home improvement</a>. On Facebook, <a href="https://localiq.com/blog/facebook-advertising-benchmarks/">lead campaigns average $27.39</a>. (We compare the two in our article on <a href="/articles/google-ads-vs-facebook-ads">Google Ads vs Facebook Ads</a>.) Use those as a sanity check, not a target. If you&rsquo;re paying $200 a lead for work that earns you $150, something&rsquo;s off. If you&rsquo;re paying $91 for work that earns you $600, you&rsquo;re fine.</p>
+
+        <p>The ceiling you can afford is simple. Take the gross profit on an average customer, and decide how much of it you&rsquo;re willing to spend to get that customer. That&rsquo;s your maximum cost per customer. If you don&rsquo;t know it yet, a three-line spreadsheet fixes that.</p>
+
+        <h2>What should you actually count?</h2>
+
+        <p>Count outcomes, not activity. Clicks and impressions feel like progress and rarely pay rent. Three things do:</p>
+
+        <ul>
+          <li>Calls and form fills that came in.</li>
+          <li>Which of them turned into booked work.</li>
+          <li>What each cost, ads and management included.</li>
+        </ul>
+
+        <p>Two traps catch most owners. First, GA4 records a form submission but won&rsquo;t treat it as a conversion until someone marks it as a key event. Until then, your report can read zero in a month when the phone never stopped. Second, GA4 can see a tap on a phone number but not whether the call connected, so calls need their own tracking. Our <a href="/services/analytics">GA4 and analytics</a> work fixes both and puts the answer on one page.</p>
+
+        <p>That one page is the point. Marketing reports full of impressions and reach are how owners end up disappointed. In vcita&rsquo;s 2025 survey of 500 US small businesses, <a href="https://www.vcita.com/press/smb-survey-highlights-marketing-agency-churn">40% of those who outsource marketing had dropped or switched their agency, and 60% named a lack of return</a> as a reason. vcita sells software to agencies, so weigh it accordingly. But the pattern fits what we hear: people don&rsquo;t leave over bad results nearly as often as over results they can&rsquo;t see.</p>
+
+        <h2>How honest can attribution be for a small business?</h2>
+
+        <p>Less precise than any dashboard suggests. Attribution means deciding which marketing gets credit for a customer. The trouble is that customers don&rsquo;t take one road. BrightLocal&rsquo;s 2026 research found <a href="https://www.brightlocal.com/research/local-seo-statistics/">75% of consumers used more than one channel</a> in their most recent local business search. Someone sees your truck, searches your name, reads your reviews, then calls. Which one gets the credit?</p>
+
+        <p>The tools make a call anyway. Google made data-driven attribution the default in Google Ads and GA4, and retired first-click, linear, time-decay, and position-based models. Google said those older models accounted for <a href="https://support.google.com/google-ads/answer/13427716">less than 3% of Google Ads web conversions</a>. Data-driven attribution is a model&rsquo;s best estimate, and a small account gives a model little to work with. We&rsquo;d treat it as a guess.</p>
+
+        <p>So here&rsquo;s the practical version. We think small businesses should triangulate, not trust one number:</p>
+
+        <ul>
+          <li>Ask &ldquo;How did you hear about us?&rdquo; on every form and in every phone call. Write down the answer.</li>
+          <li>Use call tracking so each channel has its own number.</li>
+          <li>Compare your tool&rsquo;s answer with what customers said. If they agree, trust it. If not, trust the customers.</li>
+          <li>Judge in 90-day windows, not by single weeks or by single channels.</li>
+        </ul>
+
+        <p>Self-reported answers are imperfect too. People forget, or say &ldquo;Google&rdquo; when they mean your van. But two imperfect sources that agree beat one confident dashboard.</p>
+
+        <h2>How long before you can judge the results?</h2>
+
+        <p>Longer than a month. Paid ads need weeks of tuning, and search optimization takes a few months to move. That&rsquo;s why our <a href="/investment">retainers</a> carry a three-month minimum. A 30-day sample mostly measures setup. Pick a review date three months out, write down what you expect, and look then. Reviewing weekly just teaches you to panic.</p>
+
+        <h2>When is measuring ROI more work than it&rsquo;s worth?</h2>
+
+        <p>When the volume is tiny. If you book fewer than about 10 new customers a month, percentages swing wildly on one job, and a notebook beats a dashboard. Keep a simple sheet: date, source, what they bought, what it paid. Also, some marketing can&rsquo;t be priced per dollar. Word of mouth built most local businesses, and nobody can invoice a referral. Don&rsquo;t kill it because it won&rsquo;t fit in a cell.</p>
+
+        <p>And if the real question is &ldquo;what should we be doing at all?&rdquo;, measurement won&rsquo;t answer it. That&rsquo;s a strategy question. Our <a href="/services/strategy">$3,000 strategy engagement</a> gives you positioning, your best-fit customer, a sharp offer, and a 90-day plan, so there&rsquo;s something worth measuring. Our article on <a href="/articles/small-business-marketing-budget">what a small business should spend on marketing</a> covers the budget side, and <a href="/articles/google-ads-cost-small-business">what Google Ads cost</a> covers one common line item.</p>
+
+        <div class="tool-handoff reveal">
+          <span class="tool-handoff__corner" aria-hidden="true">Free tool</span>
+          <h3>Get your 90-day plan on one page</h3>
+          <p>One goal, one audience, one offer, two channels, and a weekly rhythm. The 90-Day Plan Starter is printable, free, and needs no email. It gives you something to measure.</p>
+          <div class="row-cta">
+            <a class="btn btn--amber" href="/tools/90-day-plan">Start the 90-day plan <span class="arr">→</span></a>
+          </div>
+        </div>
+
+        <p>Rather have someone read the numbers for you? Every retainer includes a monthly report that says what happened and what it means. It counts calls and booked work, shows what you spent on ads and on us, and ends with the one thing we&rsquo;re changing next month. See how it works on our <a href="/services/analytics">GA4 and analytics page</a>.</p>
+
+
+        <h2>What else do owners ask about measuring marketing results?</h2>
+
+        <div class="faq reveal">
+          <details>
+            <summary>What is a good marketing ROI for a small business?</summary>
+            <p>There&rsquo;s no single good number. Zero is break-even, and anything above it earns money, but margins matter more than the percentage. A 50% return on revenue can still be a loss once the cost of the work is counted. Set your own target from the profit on an average customer.</p>
+          </details>
+          <details>
+            <summary>How do I measure ROI if customers call instead of buying online?</summary>
+            <p>Track the call. Use a separate tracking number for each channel, ask every caller how they found you, and log the booked job afterward. GA4 alone sees a tap on a phone number, not whether a call connected, so calls need their own tracking.</p>
+          </details>
+          <details>
+            <summary>Can I measure ROI on social media or branding?</summary>
+            <p>Partly. You can count messages, calls, and &ldquo;how did you hear about us&rdquo; answers that mention social. You can&rsquo;t price every impression, and we wouldn&rsquo;t try. Judge it over 90 days by whether customers name it, and don&rsquo;t hold it to the same math as paid search.</p>
+          </details>
+          <details>
+            <summary>How often should I review marketing results?</summary>
+            <p>Look at the numbers monthly and judge over 90 days. Weekly checks are fine for catching broken tracking or a missed-call problem, but week-to-week swings are noise. Pick a review date three months out and compare against what you wrote down at the start.</p>
+          </details>
+          <details>
+            <summary>Do I need paid software to track marketing ROI?</summary>
+            <p>No. GA4 and Google Ads are free, and a spreadsheet with date, source, job, and payment covers a lot. Pay for call tracking once phone calls are your main lead source and you can&rsquo;t tell which ones come from marketing.</p>
+          </details>
+          <details>
+            <summary>What does Carson Poore Consulting&rsquo;s monthly report include?</summary>
+            <p>Every retainer includes a one-page monthly report: calls and form fills, booked work, spend on ads and on us, search terms we cut, and the one change for next month. Retainers are $1,200, $2,400, or $4,800 a month, three months minimum, then month to month.</p>
+          </details>
+        </div>
+
+        <div class="article-note">
+          <strong>Keep reading</strong>
+          <ul class="next-reads">
+            <li><span class="next-reads__kind">Tool</span><a href="/tools/90-day-plan">90-Day Plan Starter (free, no email)</a></li>
+            <li><span class="next-reads__kind">Service</span><a href="/services/analytics">GA4 and analytics that answer "is this working?"</a></li>
+            <li><span class="next-reads__kind">Service</span><a href="/services/strategy">Strategy and planning: the $3,000 engagement</a></li>
+            <li><span class="next-reads__kind">Article</span><a href="/articles/google-ads-cost-small-business">How much do Google Ads cost a small business?</a></li>
+          </ul>
+        </div>
+
+      </article>
+    </div>
+  </section>
+
+  <!-- WHERE TO NEXT -->
+  <section class="next-strip"><div class="wrap"><h2 class="next-strip__title reveal">Where to next</h2><div class="next-grid">
+      <a class="next-card reveal" href="/services/analytics"><strong>GA4 & analytics</strong><span>Tracking fixed, calls and booked jobs counted, one page you can read in a few minutes.</span><span class="arr-link">See analytics →</span></a>
+      <a class="next-card reveal" href="/services/strategy"><strong>Strategy & planning</strong><span>A $3,000 engagement: positioning, your people, a sharp offer, and a 90-day plan.</span><span class="arr-link">See the engagement →</span></a>
+      <a class="next-card reveal" href="/investment"><strong>Reporting is in every retainer</strong><span>Retainers start at $1,200 a month, three months minimum, then month to month.</span><span class="arr-link">See pricing →</span></a>
+  </div></div></section>
+
+  <!-- CLOSING CTA -->
+  <section class="closing">
+    <div class="closing__inner">
+      <div class="reveal">
+        <h2>Want to know what your marketing is <em>really</em> doing?</h2>
+        <p>Book a free 30-minute call. Bring your last few months of leads, or just your best guess. We&rsquo;ll work out your cost per lead and cost per customer together and show you what to count next. You&rsquo;ll leave with the first fix whether or not you hire us.</p>
+      </div>
+      <div class="reveal row-cta" data-delay="1">
+        <a href="/contact" class="btn btn--primary">Book a free call <span class="arr">→</span></a>
+        <a href="/tools/90-day-plan" class="btn btn--ghost-light">Start the free 90-day plan</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer footer--v2">
+  <div class="wrap">
+    <div class="footer__grid footer__grid--v2">
+      <div class="footer__brand">
+        <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
+        <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
+        <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services/marketing">Marketing</a></li>
+          <li><a href="/services/technical">Technical</a></li>
+          <li><a href="/services/strategy">Strategy &amp; planning</a></li>
+          <li><a href="/services/coaching">Coaching &amp; growth</a></li>
+          <li><a href="/services/branding">Branding</a></li>
+          <li><a href="/services/content-marketing">Content marketing</a></li>
+          <li><a href="/services/social-media">Social media</a></li>
+          <li><a href="/services/video-photo">Video &amp; photo</a></li>
+          <li><a href="/services/websites">Web design &amp; development</a></li>
+          <li><a href="/services/seo">SEO &amp; AI search</a></li>
+          <li><a href="/services/local-seo">Local SEO</a></li>
+          <li><a href="/services/google-ads">Google Ads</a></li>
+          <li><a href="/services/ai-automation">AI &amp; automation</a></li>
+          <li><a href="/services/crm-gohighlevel">GoHighLevel &amp; CRM</a></li>
+          <li><a href="/services/analytics">GA4 &amp; analytics</a></li>
+          <li><a href="/services/google-ad-grants">Google Ad Grants</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Who we help</h4>
+        <ul>
+          <li><a href="/for/local-businesses">Local businesses</a></li>
+          <li><a href="/for/founders">Founders &amp; startups</a></li>
+          <li><a href="/for/nonprofits">Nonprofits</a></li>
+          <li><a href="/work">Work</a></li>
+        </ul>
+        <h4 class="footer__h4-gap">Free tools</h4>
+        <ul>
+          <li><a href="/tools/checkup">The Five-Step Check-Up</a></li>
+          <li><a href="/tools/local-visibility">Can Indy Find You?</a></li>
+          <li><a href="/tools/ai-opportunity-finder">AI Opportunity Finder</a></li>
+          <li><a href="/tools/marketing-budget">Budget Calculator</a></li>
+          <li><a href="/tools/90-day-plan">90-Day Plan Starter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Articles</h4>
+        <ul>
+          <li><a href="/articles/small-business-website-cost">What a website costs</a></li>
+          <li><a href="/articles/get-recommended-by-chatgpt">Getting found in ChatGPT</a></li>
+          <li><a href="/articles/small-business-marketing-budget">What marketing should cost</a></li>
+          <li><a href="/articles/fractional-cmo-cost">Fractional CMO cost</a></li>
+          <li><a href="/articles/how-to-get-more-google-reviews">Getting more Google reviews</a></li>
+          <li><a href="/articles">All articles &rarr;</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/method">Method</a></li>
+          <li><a href="/investment">Pricing</a></li>
+          <li><a href="/investment#projects">Project pricing</a></li>
+          <li><a href="/ownership">You keep everything</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__meta">
+      <span>© 2026 Carson Poore Consulting · Indianapolis, Indiana · carson@carsonpoore.com</span>
+      <span class="footer__towns">Serving Indianapolis, Carmel, Fishers, Zionsville, Noblesville, Westfield, Greenwood, Brownsburg, Avon, and all of central Indiana — technical and coaching work nationwide.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

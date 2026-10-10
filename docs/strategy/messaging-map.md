@@ -31,7 +31,7 @@ Carson Poore Consulting is a small Indianapolis team that plans the work and the
 - The 8-client cap counts every client: retainer, strategy, and project work.
 - /investment tier claims ("Most clients start here", "full team behind it") stay; a fee chart is coming.
 - Project work (brand identity, photography, video, product design, web) stays on the rate card AND is named inside the Marketing and Technical practices.
-- Stats: few. Max 2 external stats on non-article pages, 4 on articles, short inline attribution, no "Sources:" captions.
+- Stats: few. Max 2 external stats on non-article pages; articles 5–8 (raised Oct 9 2026 for AEO — stats + citations are the top GEO lever). Short inline attribution, no "Sources:" captions.
 - Little grey text: cut when irrelevant, ambiguous, or redundant. No Blueprint annotation labels, no coordinates, "Last updated" on articles only.
 - Tool names are Title Case: The Five-Step Check-Up, Can Indy Find You?, AI Opportunity Finder, Budget Calculator, 90-Day Plan Starter.
 - LinkedIn (personal): https://www.linkedin.com/in/carson-poore/ (in footer + schema sameAs). No Google Business Profile yet.
