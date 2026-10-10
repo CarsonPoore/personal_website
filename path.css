@@ -94,3 +94,26 @@ html[data-loader="pending"] .cpp-loader, .cpp-loader.is-leaving { display: grid 
   .cpp-loader__ring circle { stroke-dashoffset: 0; }
   .cpp-loader__ask { opacity: 1; transform: none; }
 }
+
+/* ---- Homepage: the chosen door spans the row, the other two shrink to links ---- */
+html[data-path="local"] .icon-tile[data-for="local"],
+html[data-path="founders"] .icon-tile[data-for="founders"],
+html[data-path="nonprofits"] .icon-tile[data-for="nonprofits"] {
+  order: -1; grid-column: 1 / -1;
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); column-gap: clamp(20px, 3vw, 40px); align-content: center;
+}
+html[data-path="local"] .icon-tile[data-for="local"] .card-photo,
+html[data-path="founders"] .icon-tile[data-for="founders"] .card-photo,
+html[data-path="nonprofits"] .icon-tile[data-for="nonprofits"] .card-photo { grid-row: 1 / span 5; margin: 0; }
+html[data-path="local"] .icon-tile:not([data-for="local"]) :is(.card-photo, p, .icon-tile__icon),
+html[data-path="founders"] .icon-tile:not([data-for="founders"]) :is(.card-photo, p, .icon-tile__icon),
+html[data-path="nonprofits"] .icon-tile:not([data-for="nonprofits"]) :is(.card-photo, p, .icon-tile__icon) { display: none; }
+html[data-path="local"] .icon-tiles,
+html[data-path="founders"] .icon-tiles,
+html[data-path="nonprofits"] .icon-tiles { grid-template-columns: repeat(2, 1fr); }
+html[data-path]:not([data-path="none"]) .icon-tiles .a-svc-link { display: none; }
+@media (max-width: 780px) {
+  html[data-path] .icon-tiles { grid-template-columns: 1fr; }
+  html[data-path] .icon-tile[data-for] { grid-template-columns: 1fr !important; }
+  html[data-path] .icon-tile .card-photo { grid-row: auto !important; }
+}
