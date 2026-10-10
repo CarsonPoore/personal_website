@@ -46,3 +46,51 @@ html.cpp-js:not([data-path="none"]):not([data-loader]) .cpp-bar {
 .nav__drop-sub.cpp-dot::after { margin: 0 0 2px 8px; }
 .cpp-mobile-pin { font-weight: 700; color: var(--amber) !important; }
 .cpp-footer-link { background: none; border: 0; padding: 0; color: inherit; text-decoration: underline; cursor: pointer; font: inherit; margin-top: 8px; }
+
+/* ---- First-visit loader (homepage) ---- */
+html[data-loader="pending"] { background: var(--navy); }
+html[data-loader="pending"] body > *:not(.cpp-loader) { visibility: hidden; }
+html[data-loader="pending"] .cpp-loader, .cpp-loader.is-leaving { display: grid !important; }
+.cpp-loader {
+  position: fixed; inset: 0; z-index: 200; place-items: center; overflow-y: auto;
+  background: var(--navy); color: var(--cream); padding: 24px 16px;
+}
+.cpp-loader.is-leaving { animation: cpp-fade .3s var(--ease) forwards; }
+.cpp-loader__inner { width: min(1040px, 100%); display: grid; justify-items: center; gap: 28px; }
+.cpp-loader__mark { position: relative; width: 104px; height: 104px; display: grid; place-items: center; }
+.cpp-loader__mark img { animation: cpp-pop .5s .25s var(--ease) both; }
+.cpp-loader__ring { position: absolute; inset: 0; transform: rotate(-90deg); }
+.cpp-loader__ring circle { fill: none; stroke: var(--amber); stroke-width: 2; stroke-dasharray: 290; stroke-dashoffset: 290; animation: cpp-draw .8s var(--ease) forwards; }
+.cpp-loader__ask { display: grid; justify-items: center; gap: 14px; text-align: center; opacity: 0; transform: translateY(12px); transition: opacity .4s var(--ease), transform .4s var(--ease); }
+.cpp-loader.is-asking .cpp-loader__ask { opacity: 1; transform: none; }
+.cpp-loader.is-asking .cpp-loader__mark { width: 64px; height: 64px; transition: width .4s var(--ease), height .4s var(--ease); }
+.cpp-loader h2 { font: 800 var(--step-4, 2.4rem)/1.05 var(--sans); color: var(--cream); margin: 0; }
+.cpp-loader p { color: var(--cream-2); margin: 0; }
+.cpp-loader__cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; width: 100%; margin-top: 10px; }
+.cpp-card {
+  display: grid; gap: 8px; text-align: left; cursor: pointer; padding: 0 0 16px; overflow: hidden;
+  background: var(--navy-2); border: 1px solid var(--navy-3); border-radius: 8px; color: var(--cream-2); font: inherit;
+  transition: transform .2s var(--ease), border-color .2s var(--ease);
+}
+.cpp-card img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; display: block; }
+.cpp-card strong { color: var(--cream); font-size: var(--step-1, 1.2rem); padding: 4px 16px 0; }
+.cpp-card span { padding: 0 16px; font-size: var(--step--1); line-height: 1.45; }
+.cpp-card:hover, .cpp-card:focus-visible { transform: translateY(-3px); border-color: var(--amber); outline: none; }
+.cpp-loader__skip { background: none; border: 0; color: var(--cream-2); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; font: inherit; padding: 8px; }
+.cpp-loader__skip:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
+@media (max-width: 760px) {
+  .cpp-loader { place-items: start center; }
+  .cpp-loader__cards { grid-template-columns: 1fr; }
+  .cpp-card { grid-template-columns: 96px 1fr; grid-template-rows: auto 1fr; padding: 0; align-items: center; }
+  .cpp-card img { grid-row: 1 / 3; height: 100%; aspect-ratio: auto; }
+  .cpp-card strong { padding: 12px 12px 0; }
+  .cpp-card span { padding: 0 12px 12px; }
+}
+@keyframes cpp-draw { to { stroke-dashoffset: 0; } }
+@keyframes cpp-pop { from { opacity: 0; transform: scale(.85); } to { opacity: 1; transform: none; } }
+@keyframes cpp-fade { to { opacity: 0; visibility: hidden; } }
+@media (prefers-reduced-motion: reduce) {
+  .cpp-loader *, .cpp-loader { animation: none !important; transition: none !important; }
+  .cpp-loader__ring circle { stroke-dashoffset: 0; }
+  .cpp-loader__ask { opacity: 1; transform: none; }
+}

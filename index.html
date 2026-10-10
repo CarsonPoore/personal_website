@@ -247,7 +247,7 @@
     <div class="wrap">
       <div class="hero__grid">
         <div class="hero__copy">
-          <h1 class="reveal" data-delay="1">Let&rsquo;s make your business <em>impossible to overlook.</em></h1>
+          <h1 class="reveal" data-delay="1" tabindex="-1">Let&rsquo;s make your business <em>impossible to overlook.</em></h1>
           <p class="hero__sub reveal" data-delay="2">We&rsquo;re Carson Poore Consulting, a small Indianapolis team that plans the work and then builds it. Four practices: marketing, technical, strategy, and coaching &mdash; for local businesses, founders, and nonprofits, with every price on the site. We stop at eight clients.</p>
           <div class="hero__cta reveal" data-delay="3">
             <a href="/contact" class="btn btn--primary">Book a free call <span class="arr">→</span></a>
@@ -593,5 +593,35 @@
     </div>
   </div>
 </footer>
+<div class="cpp-loader" role="dialog" aria-modal="true" aria-labelledby="cpp-q" hidden>
+  <div class="cpp-loader__inner">
+    <div class="cpp-loader__mark" aria-hidden="true">
+      <svg viewBox="0 0 100 100" class="cpp-loader__ring"><circle cx="50" cy="50" r="46" /></svg>
+      <img src="/brand/cpc-mark-offwhite.svg" alt="" width="56" height="56" />
+    </div>
+    <div class="cpp-loader__ask">
+      <h2 id="cpp-q">Who&rsquo;s the work for?</h2>
+      <p>Pick one and the site leads with what matters to you. Switch any time.</p>
+      <div class="cpp-loader__cards">
+        <button type="button" class="cpp-card" data-pick="local">
+          <img src="/media/photos/home-1-local-shop.jpg" alt="" width="600" height="375" />
+          <strong>Local business</strong>
+          <span>Shops, trades, salons, and restaurants that need the neighbors to find them.</span>
+        </button>
+        <button type="button" class="cpp-card" data-pick="founders">
+          <img src="/media/photos/home-2-founders-whiteboard.jpg" alt="" width="600" height="375" />
+          <strong>Founder or startup</strong>
+          <span>You built the thing. Now it needs people.</span>
+        </button>
+        <button type="button" class="cpp-card" data-pick="nonprofits">
+          <img src="/media/photos/home-3-nonprofit-volunteers.jpg" alt="" width="600" height="375" />
+          <strong>Nonprofit</strong>
+          <span>A small staff, a big mission, and up to $10,000 a month in free Google ads to use.</span>
+        </button>
+      </div>
+      <button type="button" class="cpp-loader__skip" data-pick="none">Just looking around</button>
+    </div>
+  </div>
+</div>
 </body>
 </html>

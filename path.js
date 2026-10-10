@@ -242,7 +242,30 @@
   }
 
   /* ---- Loader (filled in Task 4) ---- */
-  function initLoader() {}
+  function initLoader() {
+    var box = document.querySelector(".cpp-loader");
+    if (!box || html.getAttribute("data-loader") !== "pending") return;
+    var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var others = [].filter.call(document.body.children, function (n) { return n !== box && n.tagName !== "SCRIPT"; });
+    others.forEach(function (n) { n.inert = true; });
+    setTimeout(function () {
+      box.classList.add("is-asking");
+      var first = box.querySelector(".cpp-card"); if (first) first.focus({ preventScroll: true });
+    }, reduce ? 0 : 900);
+    function close(k) {
+      box.classList.add("is-leaving");
+      others.forEach(function (n) { n.inert = false; });
+      set(k);
+      setTimeout(function () {
+        box.classList.remove("is-leaving", "is-asking");
+        var h1 = document.querySelector("main h1"); if (h1) h1.focus({ preventScroll: true });
+      }, reduce ? 0 : 300);
+    }
+    box.addEventListener("click", function (e) { var b = e.target.closest("[data-pick]"); if (b) close(b.getAttribute("data-pick")); });
+    document.addEventListener("keydown", function esc(e) {
+      if (e.key === "Escape" && html.getAttribute("data-loader") === "pending") { document.removeEventListener("keydown", esc); close("none"); }
+    });
+  }
 
   api.get = get; api.set = set; api.clear = clear;
   if (/[?&]path=/.test(location.search)) {
