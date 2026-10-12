@@ -4,10 +4,10 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Marketing Budget Calculator | Carson Poore Consulting</title>
-<meta name="description" content="Enter your revenue, pick your stage, and get a monthly marketing range with the math shown. SBA guidance as the anchor. Free, no email, no login." />
+<meta name="description" content="Enter your revenue, pick your stage, and see a monthly marketing budget range with the math written out. SBA guidance is the anchor. Free, no email, no login." />
 <link rel="canonical" href="https://carsonpoore.com/tools/marketing-budget" />
 <meta property="og:title" content="Marketing Budget Calculator | Carson Poore Consulting" />
-<meta property="og:description" content="Enter your revenue, pick your stage, and get a monthly marketing range with the math shown. SBA guidance as the anchor. Free, no email, no login." />
+<meta property="og:description" content="Enter your revenue, pick your stage, and see a monthly marketing budget range with the math written out. SBA guidance is the anchor. Free, no email, no login." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://carsonpoore.com/tools/marketing-budget" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,8 +15,8 @@
 <!-- cp-path:head --><script>(function(d,w){d.classList.add("cpp-js");var k=["local","founders","nonprofits","none"],u=null,s=null;try{u=new URLSearchParams(w.location.search).get("path")}catch(e){}try{s=w.localStorage.getItem("cp.path")}catch(e){}if(k.indexOf(u)>-1){try{w.localStorage.setItem("cp.path",u)}catch(e){}s=u}if(k.indexOf(s)>-1){d.setAttribute("data-path",s)}else if((w.location.pathname==="/"||w.location.pathname==="/index.html")&&!/bot|crawl|spider|slurp|preview/i.test(w.navigator.userAgent)){d.setAttribute("data-loader","pending");w.setTimeout(function(){if(d.getAttribute("data-loader")==="pending"&&!w.CPPathLoader)d.removeAttribute("data-loader")},4000)}})(document.documentElement,window)</script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" />
 <link rel="icon" type="image/svg+xml" href="/brand/cpc-mark-royalblue.svg" />
-<link rel="stylesheet" href="/styles.css?v=20261010-2" />
-<script defer src="/site.js?v=20261010-2"></script>
+<link rel="stylesheet" href="/styles.css?v=20261012-1" />
+<script defer src="/site.js?v=20261012-1"></script>
 <style>
   /* Budget calculator: page-specific layout */
   .mb-form { display: grid; gap: clamp(20px, 3vw, 28px); }
@@ -140,7 +140,7 @@
   ]
 }
 </script>
-<link rel="stylesheet" href="/path.css?v=20261010-2" />
+<link rel="stylesheet" href="/path.css?v=20261012-1" />
 <script defer src="/path.js?v=20261010-1"></script>
 </head>
 <body class="page">
@@ -196,7 +196,7 @@
         </div>
       </div>
       <a href="/about">About</a>
-      <a class="btn btn--primary nav__cta" href="/contact">Book a free call <span class="arr">→</span></a>
+      <a class="btn btn--primary nav__cta" href="/contact">Book a discovery call <span class="arr">→</span></a>
     </nav>
     <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
@@ -230,7 +230,7 @@
   <a href="/resources">Resources</a>
   <a class="mobile-menu__sub" href="/articles">Articles</a>
   <a href="/about">About</a>
-  <a class="btn btn--primary" href="/contact">Book a free call <span class="arr">→</span></a>
+  <a class="btn btn--primary" href="/contact">Book a discovery call <span class="arr">→</span></a>
 </div>
 
 <main>
@@ -247,7 +247,7 @@
       </nav>
       <div class="page-hero__copy">
         <h1 class="reveal mt-md" data-delay="1">What should marketing <em>cost</em>?</h1>
-        <p class="hero__sub reveal mt-md" data-delay="2">Type in your revenue and pick your stage. You get a monthly range with the math written out, so you can check it yourself. Free. No email. No login. Nothing you type leaves this page.</p>
+        <p class="hero__sub reveal mt-md" data-delay="2">You want a straight answer, not a shrug and an &ldquo;it depends.&rdquo; Type in your revenue and pick your stage. You&rsquo;ll get a monthly range with the math written out, so you can check it yourself. Free. No email. No login. Nothing you type leaves this page.</p>
       </div>
     </div>
   </section>
@@ -261,7 +261,7 @@
           <noscript>
             <div class="result-card">
               <h2 class="tool__q">This calculator needs JavaScript.</h2>
-              <p>Here is the math without it. Take your annual revenue, multiply it by 5&ndash;12% depending on your stage, then divide by 12 for a monthly number. The U.S. Small Business Administration&rsquo;s guidance for businesses under $5 million is 7&ndash;8% of gross revenue. Turn JavaScript on to see it worked out for you, or <a class="tlink" href="/contact">book a free call</a> and we&rsquo;ll do it together. Published prices are on the <a class="tlink" href="/investment">pricing page</a>.</p>
+              <p>Here&rsquo;s the math without it. Take your annual revenue, multiply it by 5&ndash;12% depending on your stage, then divide by 12 for a monthly number. The U.S. Small Business Administration&rsquo;s guidance for businesses under $5 million is 7&ndash;8% of gross revenue. Turn JavaScript on to see it worked out for you, or <a class="tlink" href="/contact">book a discovery call</a> and we&rsquo;ll work it out together. Published prices are on the <a class="tlink" href="/investment">pricing page</a>.</p>
             </div>
           </noscript>
 
@@ -275,7 +275,7 @@
               </div>
 
               <div class="mb-field" role="group" aria-labelledby="mb-stage-legend">
-                <span class="mb-legend" id="mb-stage-legend">Where is the business right now?</span>
+                <span class="mb-legend" id="mb-stage-legend">Where&rsquo;s the business right now?</span>
                 <div class="toggle-row mb-stage" id="mb-stage">
                   <button type="button" data-stage="steady" aria-pressed="false">Steady<span class="mb-pct">5&ndash;7%</span></button>
                   <button type="button" data-stage="growing" class="is-on" aria-pressed="true">Growing<span class="mb-pct">8&ndash;10%</span></button>
@@ -311,8 +311,8 @@
       <div class="mt-lg">
         <p class="reveal"><cite>The anchor is SBA guidance.</cite> The U.S. Small Business Administration recommends that businesses with under $5 million in annual revenue put 7&ndash;8% of gross revenue into marketing. Every result above is compared against it.</p>
         <p class="reveal">The stage bands are ours: steady is 5&ndash;7%, growing is 8&ndash;10%, new or turnaround is 10&ndash;12%. That&rsquo;s a judgment call set around the SBA anchor, not a published standard.</p>
-        <p class="reveal">What counts as marketing? All of it. Our fee if you hire us, ad spend, software, photography, printing, sponsorships, and the slice of someone&rsquo;s salary spent on it. This part is boring. Do it anyway, because owners tend to compare a retainer against a budget that never included the other half.</p>
-        <p class="reveal">One opinion: we think most small businesses should start at the low end of their range and move up only when the calls and booked jobs show it&rsquo;s paying back.</p>
+        <p class="reveal">What counts as marketing? All of it. Our fee if you hire us, ad spend, software, photography, printing, sponsorships, and the slice of someone&rsquo;s salary spent on it. Don&rsquo;t get us wrong, this part is boring. Do it anyway, because owners tend to compare a retainer against a budget that never included the other half.</p>
+        <p class="reveal">Here at CPC, we aren&rsquo;t afraid of a hot take: most small businesses should start at the low end of their range and move up only when the calls and booked jobs show it&rsquo;s paying back.</p>
       </div>
     </div>
   </section>
@@ -331,7 +331,7 @@
         </div>
         <div class="reveal" data-delay="1">
           <h3>What working with us costs</h3>
-          <p>Three monthly retainers, a one-time strategy engagement, and a nonprofit rate. All published, with what each month includes.</p>
+          <p>Three monthly retainers, a one-time strategy engagement, and a nonprofit rate. All published on the site, with what each month includes.</p>
           <a class="tlink" href="/investment">See the pricing page <span aria-hidden="true">→</span></a>
         </div>
       </div>
@@ -350,10 +350,10 @@
     <div class="closing__inner">
       <div class="reveal">
         <h2>The number takes a minute. <em>Where it goes</em> is the work.</h2>
-        <p>Bring your range to a free 30-minute call and we&rsquo;ll talk through a first-pass split. If the honest answer is &ldquo;spend less, or do it yourself for now,&rdquo; we&rsquo;ll say so.</p>
+        <p>Bring your range to a 30-minute discovery call and we&rsquo;ll sketch a first-pass split together. And if the honest answer is &ldquo;spend less, or do it yourself for now,&rdquo; we&rsquo;ll tell you plainly.</p>
       </div>
       <div class="reveal" data-delay="1">
-        <a href="/contact" class="btn btn--primary">Book a free call <span class="arr">→</span></a>
+        <a href="/contact" class="btn btn--primary">Book a discovery call <span class="arr">→</span></a>
       </div>
     </div>
   </section>
@@ -365,7 +365,7 @@
     <div class="footer__grid footer__grid--v2">
       <div class="footer__brand">
         <div class="footer__brand-mark"><img src="/brand/cpc-mark-offwhite.svg" alt="" width="48" height="48" /></div>
-        <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. Four practices, one team, prices on the site.</p>
+        <p class="footer__tag">A growth consultancy for small businesses, founders, and nonprofits. 4 practices, one team, prices on the site.</p>
         <p>Indianapolis, Indiana<br /><a href="mailto:carson@carsonpoore.com">carson@carsonpoore.com</a><br /><a href="https://www.linkedin.com/in/carson-poore/" rel="me">LinkedIn</a></p>
       </div>
       <div>
